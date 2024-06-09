@@ -103,9 +103,51 @@ async function displayFooter() {
   postsContainer.appendChild(footerElement);
 }
 
+function getCurrentTimeString() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+  const seconds = String(now.getSeconds()).padStart(2, '0');
+
+  return `${year}-${month}-${day}-${hours}-${minutes}-${seconds}`;
+};
+
+async function saveVisitData() {
+  const formattedTime = getCurrentTimeString();
+  const userAgent = navigator.userAgent;
+  const visitData = {
+    timestamp: formattedTime,
+    userAgent: userAgent
+  };
+  const endpoint = `https://nice.runasp.net/Analytics/SaveAnalytics?key=visit${formattedTime}&data=${encodeURIComponent(JSON.stringify(visitData))}`;
+  fetch(endpoint, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(visitData)
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.text();
+    })
+    .then(result => {
+      console.log('Visit data saved:', result);
+    })
+    .catch(error => {
+      console.error('Error saving visit data:', error);
+    });
+};
+
 async function main() {
   await fetchAndDisplayHeader();
   await fetchAndDisplayPosts();
   await displayFooter();
+  await saveVisitData();
 }
 main();
