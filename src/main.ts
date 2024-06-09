@@ -103,6 +103,9 @@ async function displayFooter() {
   postsContainer.appendChild(footerElement);
 }
 
-await fetchAndDisplayHeader();
-await fetchAndDisplayPosts();
-await displayFooter();
+async function main() {
+  await fetchAndDisplayHeader();
+  await fetchAndDisplayPosts();
+  await displayFooter();
+}
+main();
