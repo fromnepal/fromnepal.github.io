@@ -99,7 +99,7 @@ async function displayFooter() {
     <p>Not responsible for any relationships ruined by our dating advice, but we'll take credit for the ones that work out.<p>
     <p>Our website is not intended for use by anyone under the age of 13, but let's be real, kids are way more tech-savvy than we are.<p>
     
-    Also available as a <code>json</code> file at <a href="/posts.json">/posts.json</a>`;
+    Posts are also available as a <code>json</code> file at <a href="/posts.json">/posts.json</a>`;
   postsContainer.appendChild(footerElement);
 }
 
