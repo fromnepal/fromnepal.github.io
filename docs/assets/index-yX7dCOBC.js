@@ -1,8 +1,0 @@
-(function(){const n=document.createElement("link").relList;if(n&&n.supports&&n.supports("modulepreload"))return;for(const t of document.querySelectorAll('link[rel="modulepreload"]'))o(t);new MutationObserver(t=>{for(const r of t)if(r.type==="childList")for(const c of r.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&o(c)}).observe(document,{childList:!0,subtree:!0});function s(t){const r={};return t.integrity&&(r.integrity=t.integrity),t.referrerPolicy&&(r.referrerPolicy=t.referrerPolicy),t.crossOrigin==="use-credentials"?r.credentials="include":t.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function o(t){if(t.ep)return;t.ep=!0;const r=s(t);fetch(t.href,r)}})();function i(){const e=document.createElement("header");return e.innerHTML="<header><h1>from Nepal</h1></header>",e}function a(e){const n=document.createElement("article"),s=e.tags.map(o=>`<span class="tag"><kbd>${o}</kbd></span>`).join(" ");return n.innerHTML=`
-    <h2>${e.title}</h2>
-    <!--<h3>${e.slug}</h3>-->
-    <div class="tags">${s}</div>
-    <p>Created: <kbd>${e.createdAt}</kbd> | Modified: <kbd>${e.modifiedAt}</kbd></p>
-    <p class="notice">${e.lede}</p>
-    ${e.paragraphs.map(o=>`<p>${o}</p>`).join("")}
-  `,n}async function d(){try{const n=await(await fetch("/posts.json")).json(),s=document.getElementById("app");if(!s)throw new Error("App container not found");n.posts.forEach(o=>{const t=a(o);s.appendChild(t)})}catch(e){console.error("Error fetching posts:",e)}}async function l(){const e=document.getElementById("app");if(!e)throw new Error("App container not found");const n=i();e.appendChild(n)}l();d();

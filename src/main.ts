@@ -13,7 +13,7 @@ interface BlogPost {
 
 function createHeader() {
   const headerElement = document.createElement(`header`);
-  headerElement.innerHTML = `<header><h1>from Nepal</h1></header>`;
+  headerElement.innerHTML = `<h1>from Nepal</h1>`;
   return headerElement;
 }
 
