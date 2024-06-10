@@ -122,8 +122,10 @@ async function saveVisitData() {
     timestamp: formattedTime,
     userAgent: userAgent
   };
-  const endpoint = `https://nice.runasp.net/Analytics/SaveAnalytics?key=visit${formattedTime}&data=${encodeURIComponent(JSON.stringify(visitData))}`;
-  fetch(endpoint, {
+  const saveEndpoint = `https://nice.runasp.net/Analytics/SaveAnalytics?key=visit${formattedTime}&data=${encodeURIComponent(JSON.stringify(visitData))}`;
+  const getEndpoint = `https://nice.runasp.net/Analytics/GetAnalyticsData?key=visit${formattedTime}`;
+
+  fetch(saveEndpoint, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -136,13 +138,30 @@ async function saveVisitData() {
       }
       return response.text();
     })
-    .then(result => {
-      console.log('Visit data saved:', result);
+    .then(() => {
+      // Make the GET request to verify the data
+      fetch(getEndpoint, {
+        method: 'GET',
+        headers: {
+          'accept': '*/*'
+        }
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Verified visit data:', data);
+          if (JSON.stringify(data) !== JSON.stringify(visitData)) {
+            console.error('Verified data does not match saved data');
+          }
+        })
+        .catch(error => {
+          console.error('Error verifying visit data:', error);
+        });
     })
     .catch(error => {
       console.error('Error saving visit data:', error);
     });
-};
+}
+
 
 async function main() {
   await fetchAndDisplayHeader();
