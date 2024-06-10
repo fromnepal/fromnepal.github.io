@@ -122,45 +122,37 @@ async function saveVisitData() {
     timestamp: formattedTime,
     userAgent: userAgent
   };
-  const saveEndpoint = `https://nice.runasp.net/Analytics/SaveAnalytics?key=visit${formattedTime}&data=${encodeURIComponent(JSON.stringify(visitData))}`;
-  const getEndpoint = `https://nice.runasp.net/Analytics/GetAnalyticsData?key=visit${formattedTime}`;
-
-  fetch(saveEndpoint, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(visitData)
-  })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.text();
-    })
-    .then(() => {
-      // Make the GET request to verify the data
-      fetch(getEndpoint, {
-        method: 'GET',
-        headers: {
-          'accept': '*/*'
-        }
-      })
-        .then(response => response.json())
-        .then(data => {
-          console.log('Verified visit data:', data);
-          if (JSON.stringify(data) !== JSON.stringify(visitData)) {
-            console.error('Verified data does not match saved data');
-          }
-        })
-        .catch(error => {
-          console.error('Error verifying visit data:', error);
-        });
-    })
-    .catch(error => {
-      console.error('Error saving visit data:', error);
+  const postEndpoint = `https://nice.runasp.net/Analytics/SaveAnalytics?key=visit${formattedTime}&data=${encodeURIComponent(JSON.stringify(visitData))}`;
+  
+  try {
+    const postResponse = await fetch(postEndpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(visitData)
     });
-}
+
+    if (!postResponse.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    console.log('Visit data saved:', await postResponse.text());
+
+    // If the POST request is successful, make the GET request
+    const getEndpoint = `https://nice.runasp.net/Analytics/GetAnalyticsData?key=visit${formattedTime}`;
+    const getResponse = await fetch(getEndpoint);
+    const data = await getResponse.json();
+
+    if (getResponse.ok) {
+      console.log('Verification successful, retrieved data:', data);
+    } else {
+      console.error('Verification failed, response was not ok');
+    }
+  } catch (error) {
+    console.error('Error saving or verifying visit data:', error);
+  }
+};
 
 
 async function main() {
