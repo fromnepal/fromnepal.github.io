@@ -1,157 +1,38 @@
 PowerShell 7.4.2
 PS C:\Users\kushal>
-PS C:\Users\kushal> date; scoop status; date; scoop bucket rm main; date; scoop bucket add main; date; scoop bucket rm extras; date; scoop bucket add extras; date; scoop status; date; scoop update; date; scoop update *; date; scoop cache show; date; scoop cache rm *; date; scoopstatus; date;
+PS C:\Users\kushal> date; scoop status; date; scoop bucket rm main; date; scoop bucket add main; date; scoop bucket rm extras; date; scoop bucket add extras; date; scoop status; date; scoop update; date; scoop update *; date; scoop cache show; date; scoop cache rm *; date; scoop status; date;
 
-Saturday, June 15, 2024 9:09:24 AM
+Sunday, June 16, 2024 7:50:23 AM
 WARN  Scoop bucket(s) out of date. Run 'scoop update' to get the latest changes.
-Saturday, June 15, 2024 9:09:26 AM
-Saturday, June 15, 2024 9:09:27 AM
+Sunday, June 16, 2024 7:50:25 AM
+Sunday, June 16, 2024 7:50:26 AM
 Checking repo... OK
 The main bucket was added successfully.
-Saturday, June 15, 2024 9:09:38 AM
-Saturday, June 15, 2024 9:09:38 AM
+Sunday, June 16, 2024 7:50:32 AM
+Sunday, June 16, 2024 7:50:33 AM
 Checking repo... OK
 The extras bucket was added successfully.
-Saturday, June 15, 2024 9:09:49 AM
+Sunday, June 16, 2024 7:50:42 AM
 Scoop is up to date.
-
-Name                 : git
-Installed Version    : 2.45.1
-Latest Version       : 2.45.2
-Missing Dependencies :
-Info                 :
-
-
-Name                 : podman
-Installed Version    : 5.0.3
-Latest Version       : 5.1.1
-Missing Dependencies :
-Info                 :
-
-
-Name                 : vlc
-Installed Version    : 3.0.20
-Latest Version       : 3.0.21
-Missing Dependencies :
-Info                 :
-
-Saturday, June 15, 2024 9:09:50 AM
+Everything is ok!
+Sunday, June 16, 2024 7:50:43 AM
 Updating Scoop...
 Updating Buckets...
 Scoop was updated successfully!
-Saturday, June 15, 2024 9:09:51 AM
-git: 2.45.1 -> 2.45.2
-podman: 5.0.3 -> 5.1.1
-vlc: 3.0.20 -> 3.0.21
-Updating 3 outdated apps:
-Updating 'git' (2.45.1 -> 2.45.2)
-Downloading new version
-PortableGit-2.45.2-64-bit.7z.exe (60.1 MB) [==================================================================================================================================================================================================================================] 100%
-Checking hash of PortableGit-2.45.2-64-bit.7z.exe ... ok.
-Uninstalling 'git' (2.45.1)
-Removing shim 'sh.shim'.
-Removing shim 'sh.exe'.
-Removing shim 'bash.shim'.
-Removing shim 'bash.exe'.
-Removing shim 'git.shim'.
-Removing shim 'git.exe'.
-Removing shim 'gitk.shim'.
-Removing shim 'gitk.exe'.
-Removing shim 'git-gui.shim'.
-Removing shim 'git-gui.exe'.
-Removing shim 'scalar.shim'.
-Removing shim 'scalar.exe'.
-Removing shim 'tig.shim'.
-Removing shim 'tig.exe'.
-Removing shim 'git-bash.shim'.
-Removing shim 'git-bash.exe'.
-Unlinking ~\scoop\apps\git\current
-Installing 'git' (2.45.2) [64bit] from 'main' bucket
-Loading PortableGit-2.45.2-64-bit.7z.exe from cache
-Extracting dl.7z ... done.
-Linking ~\scoop\apps\git\current => ~\scoop\apps\git\2.45.2
-Creating shim for 'sh'.
-Creating shim for 'bash'.
-Creating shim for 'git'.
-Creating shim for 'gitk'.
-Making C:\Users\kushal\scoop\shims\gitk.exe a GUI binary.
-Creating shim for 'git-gui'.
-Making C:\Users\kushal\scoop\shims\git-gui.exe a GUI binary.
-Creating shim for 'scalar'.
-Creating shim for 'tig'.
-Creating shim for 'git-bash'.
-Making C:\Users\kushal\scoop\shims\git-bash.exe a GUI binary.
-Creating shortcut for Git Bash (git-bash.exe)
-Creating shortcut for Git GUI (git-gui.exe)
-Running post_install script...
-'git' (2.45.2) was installed successfully!
-Notes
------
-Set Git Credential Manager Core by running: "git config --global credential.helper manager"
-
-To add context menu entries, run 'C:\Users\kushal\scoop\apps\git\current\install-context.reg'
-
-To create file-associations for .git* and .sh files, run 'C:\Users\kushal\scoop\apps\git\current\install-file-associations.reg'
-Updating 'podman' (5.0.3 -> 5.1.1)
-Downloading new version
-podman-5.1.1-setup.exe (32.2 MB) [============================================================================================================================================================================================================================================] 100%
-Checking hash of podman-5.1.1-setup.exe ... ok.
-Uninstalling 'podman' (5.0.3)
-Removing shim 'podman.shim'.
-Removing shim 'podman.exe'.
-Unlinking ~\scoop\apps\podman\current
-Installing 'podman' (5.1.1) [64bit] from 'main' bucket
-Loading podman-5.1.1-setup.exe from cache
-Running installer script...
-Linking ~\scoop\apps\podman\current => ~\scoop\apps\podman\5.1.1
-Creating shim for 'podman'.
-'podman' (5.1.1) was installed successfully!
-Updating 'vlc' (3.0.20 -> 3.0.21)
-Downloading new version
-vlc-3.0.21-win64.7z (37.1 MB) [===============================================================================================================================================================================================================================================] 100%
-Checking hash of vlc-3.0.21-win64.7z ... ok.
-Uninstalling 'vlc' (3.0.20)
-Removing shim 'vlc.shim'.
-Removing shim 'vlc.exe'.
-Unlinking ~\scoop\apps\vlc\current
-Installing 'vlc' (3.0.21) [64bit] from 'extras' bucket
-Loading vlc-3.0.21-win64.7z from cache
-Extracting vlc-3.0.21-win64.7z ... done.
-Running pre_install script...
-Linking ~\scoop\apps\vlc\current => ~\scoop\apps\vlc\3.0.21
-Creating shim for 'vlc'.
-Making C:\Users\kushal\scoop\shims\vlc.exe a GUI binary.
-Creating shortcut for VLC media player (vlc.exe)
-Persisting portable
-'vlc' (3.0.21) was installed successfully!
-Saturday, June 15, 2024 9:10:49 AM
-
-Name    : git
-Version : 2.45.2
-Length  : 63004032
-URL     : https_github.com_git-for-windows_git_releases_download_v2.45.2.windows.1_PortableGit-2.45.2-64-bit.7z.exe_dl.7z
-
-
-Name    : podman
-Version : 5.1.1
-Length  : 33760880
-URL     : https_github.com_containers_podman_releases_download_v5.1.1_podman-5.1.1-setup.exe
-
-
-Name    : vlc
-Version : 3.0.21
-Length  : 38914921
-URL     : https_download.videolan.org_pub_vlc_3.0.21_win64_vlc-3.0.21-win64.7z
-
-Total: 3 files, 129.4 MB
-Saturday, June 15, 2024 9:10:49 AM
-Removing https_github.com_git-for-windows_git_releases_download_v2.45.2.windows.1_PortableGit-2.45.2-64-bit.7z.exe_dl.7z...
-Removing https_github.com_containers_podman_releases_download_v5.1.1_podman-5.1.1-setup.exe...
-Removing https_download.videolan.org_pub_vlc_3.0.21_win64_vlc-3.0.21-win64.7z...
-Deleted: 3 files, 129.4 MB
-Saturday, June 15, 2024 9:10:49 AM
+Sunday, June 16, 2024 7:50:52 AM
+Latest versions for all apps are installed! For more information try 'scoop status'
+Sunday, June 16, 2024 7:50:52 AM
+Total: 0 files, 0 B
+Sunday, June 16, 2024 7:50:52 AM
+Deleted: 0 files, 0 B
+Sunday, June 16, 2024 7:50:52 AM
 Scoop is up to date.
 Everything is ok!
-Saturday, June 15, 2024 9:10:50 AM
+Sunday, June 16, 2024 7:50:53 AM
 
 PS C:\Users\kushal>
+PS C:\Users\kushal> date; C:\src\omnibus.ps1; date;
+
+Sunday, June 16, 2024 8:00:46 AM
+Sunday, June 16, 2024 8:00:46 AM
+home: 127.0.0.1
