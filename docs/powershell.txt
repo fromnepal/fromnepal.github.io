@@ -4,14 +4,15 @@ PowerShell 7.4.2
    Upgrade now, or check out the release page at:
      https://aka.ms/PowerShell-Release?tag=v7.4.3
 
+Loading personal and system profiles took 557ms.
 PS C:\Users\kushal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-Thursday, June 20, 2024 6:25:05 AM
+Thursday, June 20, 2024 2:46:04 PM
 yarn install v1.22.21
 [1/4] Resolving packages...
 success Already up-to-date.
-Done in 0.09s.
-Thursday, June 20, 2024 6:25:06 AM
+Done in 0.15s.
+Thursday, June 20, 2024 2:46:05 PM
 yarn run v1.22.21
 $ tsc && vite build
 vite v5.2.13 building for production...
@@ -19,99 +20,91 @@ vite v5.2.13 building for production...
 docs/index.html                 0.53 kB │ gzip: 0.32 kB
 docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
 docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 116ms
-Done in 2.34s.
-Thursday, June 20, 2024 6:25:09 AM
+✓ built in 123ms
+Done in 2.38s.
+Thursday, June 20, 2024 2:46:07 PM
 warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Thursday, June 20, 2024 6:25:09 AM
-[main 82b9fd2] build application
- 2 files changed, 2 insertions(+), 26 deletions(-)
-Thursday, June 20, 2024 6:25:09 AM
+Thursday, June 20, 2024 2:46:08 PM
+[main 2334216] build application
+ 2 files changed, 80 insertions(+)
+Thursday, June 20, 2024 2:46:08 PM
 From github.com:fromnepal/fromnepal.github.io
  * branch            main       -> FETCH_HEAD
 Current branch main is up to date.
-Thursday, June 20, 2024 6:25:10 AM
+Thursday, June 20, 2024 2:46:09 PM
 Enumerating objects: 9, done.
 Counting objects: 100% (9/9), done.
 Delta compression using up to 16 threads
 Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 484 bytes | 484.00 KiB/s, done.
+Writing objects: 100% (5/5), 690 bytes | 690.00 KiB/s, done.
 Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
 To github.com:fromnepal/fromnepal.github.io.git
-   03c2f15..82b9fd2  main -> main
-Thursday, June 20, 2024 6:25:11 AM
+   6ef2fdc..2334216  main -> main
+Thursday, June 20, 2024 2:46:10 PM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> date; scoop status; date; scoop bucket rm main; date; scoop bucket add main; date; scoop bucket rm extras; date; scoop bucket add extras; date; scoop status; date; scoop update; date; scoop update *; date; scoop cache show; date; scoop cache rm *; date; scoop status; date;
 
-Thursday, June 20, 2024 6:25:16 AM
+Thursday, June 20, 2024 2:46:14 PM
 WARN  Scoop bucket(s) out of date. Run 'scoop update' to get the latest changes.
-Thursday, June 20, 2024 6:25:18 AM
-Thursday, June 20, 2024 6:25:18 AM
+Thursday, June 20, 2024 2:46:16 PM
+Thursday, June 20, 2024 2:46:16 PM
 Checking repo... OK
 The main bucket was added successfully.
-Thursday, June 20, 2024 6:25:25 AM
-Thursday, June 20, 2024 6:25:26 AM
+Thursday, June 20, 2024 2:46:23 PM
+Thursday, June 20, 2024 2:46:23 PM
 Checking repo... OK
 The extras bucket was added successfully.
-Thursday, June 20, 2024 6:25:35 AM
+Thursday, June 20, 2024 2:46:34 PM
 Scoop is up to date.
-Everything is ok!
-Thursday, June 20, 2024 6:25:36 AM
+
+Name                 : nodejs-lts
+Installed Version    : 20.14.0
+Latest Version       : 20.15.0
+Missing Dependencies :
+Info                 :
+
+Thursday, June 20, 2024 2:46:35 PM
 Updating Scoop...
 Updating Buckets...
 Scoop was updated successfully!
-Thursday, June 20, 2024 6:25:43 AM
-Latest versions for all apps are installed! For more information try 'scoop status'
-Thursday, June 20, 2024 6:25:43 AM
-Total: 0 files, 0 B
-Thursday, June 20, 2024 6:25:43 AM
-Deleted: 0 files, 0 B
-Thursday, June 20, 2024 6:25:43 AM
+Thursday, June 20, 2024 2:46:42 PM
+nodejs-lts: 20.14.0 -> 20.15.0
+Updating one outdated app:
+Updating 'nodejs-lts' (20.14.0 -> 20.15.0)
+Downloading new version
+node-v20.15.0-win-x64.7z (18.0 MB) [==========================================================================================================================================================================================================================================] 100%
+Checking hash of node-v20.15.0-win-x64.7z ... ok.
+Uninstalling 'nodejs-lts' (20.14.0)
+Unlinking ~\scoop\apps\nodejs-lts\current
+Removing ~\scoop\apps\nodejs-lts\current\bin from your path.
+Removing ~\scoop\apps\nodejs-lts\current from your path.
+Installing 'nodejs-lts' (20.15.0) [64bit] from 'main' bucket
+Loading node-v20.15.0-win-x64.7z from cache
+Extracting node-v20.15.0-win-x64.7z ... done.
+Linking ~\scoop\apps\nodejs-lts\current => ~\scoop\apps\nodejs-lts\20.15.0
+Adding ~\scoop\apps\nodejs-lts\current\bin to your path.
+Adding ~\scoop\apps\nodejs-lts\current to your path.
+Persisting bin
+Persisting cache
+Running post_install script...
+'nodejs-lts' (20.15.0) was installed successfully!
+Thursday, June 20, 2024 2:46:57 PM
+
+Name    : nodejs-lts
+Version : 20.15.0
+Length  : 18842459
+URL     : https_nodejs.org_dist_v20.15.0_node-v20.15.0-win-x64.7z
+
+Total: 1 file, 18.0 MB
+Thursday, June 20, 2024 2:46:57 PM
+Removing https_nodejs.org_dist_v20.15.0_node-v20.15.0-win-x64.7z...
+Deleted: 1 file, 18.0 MB
+Thursday, June 20, 2024 2:46:57 PM
 Scoop is up to date.
 Everything is ok!
-Thursday, June 20, 2024 6:25:44 AM
-
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
-
-Thursday, June 20, 2024 6:29:56 AM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.06s.
-Thursday, June 20, 2024 6:29:56 AM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.2.13 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 82ms
-Done in 0.80s.
-Thursday, June 20, 2024 6:29:57 AM
-warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Thursday, June 20, 2024 6:29:57 AM
-[main 6ef2fdc] build application
- 2 files changed, 152 insertions(+), 58 deletions(-)
-Thursday, June 20, 2024 6:29:57 AM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Current branch main is up to date.
-Thursday, June 20, 2024 6:29:58 AM
-Enumerating objects: 9, done.
-Counting objects: 100% (9/9), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 1.63 KiB | 1.63 MiB/s, done.
-Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   82b9fd2..6ef2fdc  main -> main
-Thursday, June 20, 2024 6:29:59 AM
+Thursday, June 20, 2024 2:46:58 PM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
