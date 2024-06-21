@@ -7106,4 +7106,623 @@ ninja: no work to do.
 real    0m0.425s
 user    0m0.130s
 sys     0m0.075s
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y;
+[sudo] password for kushal:
+Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+
+real    0m6.557s
+user    0m0.030s
+sys     0m0.000s
+Listing... Done
+
+real    0m0.148s
+user    0m0.147s
+sys     0m0.001s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+real    0m0.307s
+user    0m0.005s
+sys     0m0.000s
+kushal@kus2023:~/src/ladybird$ cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.024s
+user    0m0.014s
+sys     0m0.007s
+
+real    0m0.165s
+user    0m0.030s
+sys     0m0.000s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Already up to date.
+
+real    0m0.186s
+user    0m0.032s
+sys     0m0.001s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.013s
+user    0m0.000s
+sys     0m0.013s
+Fri Jun 21 08:05:19 EDT 2024
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
+qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
+qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
+2794.759 WebContent(61361): step=(0) url=(about:srcdoc) is-active=(true)
+
+2821.519 WebContent(61361): #document
+  #doctype
+  <html>
+    <head>
+      "
+    "
+      <meta name=color-scheme content=dark light>
+      <title>
+        "View Source - about:blank"
+      <style type=text/css>
+        "
+    .html {
+        font-size: 10pt;
+        font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    .tag {
+        font-weight: 600;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        /* FIXME: We should be able to remove the HTML style when "color-scheme" is supported */
+        html {
+            background-color: rgb(30, 30, 30);
+            color: white;
+        }
+        .comment {
+            color: lightgreen;
+        }
+        .tag {
+            color: orangered;
+        }
+        .attribute-name {
+            color: orange;
+        }
+        .attribute-value {
+            color: deepskyblue;
+        }
+        .internal {
+            color: darkgrey;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        .comment {
+            color: green;
+        }
+        .tag {
+            color: red;
+        }
+        .attribute-name {
+            color: darkorange;
+        }
+        .attribute-value {
+            color: blue;
+        }
+        .internal {
+            color: dimgray;
+        }
+    }
+"
+      "
+"
+    "
+"
+    <body>
+      "
+"
+      <pre class=html>
+        "
+"
+      "
+
+
+"
+
+2843.929 WebContent(61310): ResourceLoader: Failed load of: "https://content.production.cdn.art19.com/validation=1719058028,af9f1d9b-82aa-55a9-98b3-9310dd40fe76,HsIL4fFvHjp22jh1PRBPu2wiBv8/episodes/aa4cf52c-5593-4cb0-99e0-b02a8129f011/f9916976e8ef7b96c0ffa79f3f4b5cade3ccf28f5eedfa697c571c87dae9ee85375ec1441e9e5725377cbcb956f1d4ebb75be2ce4bb84c929c42349c317ef6f1/Thursday%2C%20June%2020%2C%202024.mp3", Error: Load failed: 403, Duration: 550ms
+No audio device detected
+2873.769 WebContent(61310): Potential FIXME: Removing unsupported PerformanceEntry type 'paint' from list of observed types in PerformanceObserver::observe()
+2873.769 WebContent(61310): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support any of the specified types (or none was specified).
+2873.769 WebContent(61310): Potential FIXME: Removing unsupported PerformanceEntry type 'largest-contentful-paint' from list of observed types in PerformanceObserver::observe()
+2873.769 WebContent(61310): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support any of the specified types (or none was specified).
+2873.769 WebContent(61310): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'layout-shift'
+2873.779 RequestServer(61276:61297): EnsureConnection: Pre-connect to https://fonts.gstatic.com/
+2873.829 RequestServer(61276:61307): ConnectionCache: Connection to https://gc.zgo.at/count.js failed: connect: Connection refused (errno=111)
+2873.829 RequestServer(61276:61307): Request with a null socket finished for URL https://gc.zgo.at/count.js
+2873.829 WebContent(61310): ResourceLoader: Failed load of: "https://gc.zgo.at/count.js", Error: Load failed, Duration: 40ms
+2873.829 WebContent(61310): HTMLScriptElement: Refusing to run script because the element's result is null.
+2874.059 WebContent(61310): (js error) [ReferenceError] 'IDBIndex' is not defined
+2874.059 WebContent(61310): Unhandled JavaScript exception: [Error] Cannot instantiate firebase-analytics.js - be sure to load firebase-app.js first.
+2874.059 WebContent(61310):     at Error
+    at https://coloradoquiz.web.app/__/firebase/8.6.3/firebase-analytics.js:1:229
+    at https://coloradoquiz.web.app/__/firebase/8.6.3/firebase-analytics.js:1:229
+    at https://coloradoquiz.web.app/__/firebase/8.6.3/firebase-analytics.js:1:229
+
+2875.589 WebContent(61310): FIXME: Unimplemented IDL interface: 'IntersectionObserverPrototype.rootMargin'
+2875.589 WebContent(61310): FIXME: Unimplemented IDL interface: 'IntersectionObserverPrototype.rootMargin'
+2875.589 WebContent(61310): FIXME: Unimplemented IDL interface: 'IntersectionObserverPrototype.rootMargin'
+2875.589 WebContent(61310): FIXME: Unimplemented IDL interface: 'IDBRequestPrototype.onsuccess'
+2875.589 WebContent(61310): FIXME: Unimplemented IDL interface: 'IDBRequestPrototype.onsuccess'
+2875.589 WebContent(61310): FIXME: Unimplemented IDL interface: 'IDBRequestPrototype.onerror'
+2875.589 WebContent(61310): FIXME: Unimplemented IDL interface: 'IDBRequestPrototype.onerror'
+2875.589 WebContent(61310): FIXME: Unimplemented IDL interface: 'IDBOpenDBRequestPrototype.onblocked'
+2875.589 WebContent(61310): FIXME: Unimplemented IDL interface: 'IDBOpenDBRequestPrototype.onblocked'
+2875.589 WebContent(61310): FIXME: Unimplemented IDL interface: 'IDBOpenDBRequestPrototype.onupgradeneeded'
+2875.589 WebContent(61310): FIXME: Unimplemented IDL interface: 'IDBOpenDBRequestPrototype.onupgradeneeded'
+2875.689 WebContent(61310): No property (from 3 properties) matched Token: Comma
+2875.689 WebContent(61310):     animation-direction
+2875.689 WebContent(61310):     animation-play-state
+2875.689 WebContent(61310):     animation-delay
+2875.699 WebContent(61310): No property (from 3 properties) matched Token: Comma
+2875.699 WebContent(61310):     animation-direction
+2875.699 WebContent(61310):     animation-play-state
+2875.699 WebContent(61310):     animation-delay
+2875.699 WebContent(61310): No property (from 3 properties) matched Token: Comma
+2875.699 WebContent(61310):     animation-direction
+2875.699 WebContent(61310):     animation-play-state
+2875.699 WebContent(61310):     animation-delay
+2875.699 WebContent(61310): No property (from 3 properties) matched Token: Comma
+2875.699 WebContent(61310):     animation-direction
+2875.699 WebContent(61310):     animation-play-state
+2875.699 WebContent(61310):     animation-delay
+2875.759 WebContent(61310): No property (from 4 properties) matched Token: Dimension: -1px (number_type: Integer)
+2875.759 WebContent(61310):     border-top-width
+2875.759 WebContent(61310):     border-right-width
+2875.759 WebContent(61310):     border-bottom-width
+2875.759 WebContent(61310):     border-left-width
+2875.779 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+2875.779 Ladybird(61275): Notified about console message we already have
+2876.029 WebContent(61310): ResourceLoader: Failed load of: "https://js-agent.newrelic.com/nr-1208.min.js", Error: URL was filtered, Duration: 0ms
+2876.099 WebContent(61310): HTMLScriptElement: Refusing to run script because the element's result is null.
+2879.519 WebContent(61310): (js log) Object{ "title": "us-history" }
+2879.519 Ladybird(61275): Notified about console message we already have
+2879.519 WebContent(61310): (js log) Object{ "title": "us-history" }
+2879.539 WebContent(61310): No property (from 3 properties) matched Token: Comma
+2879.539 WebContent(61310):     animation-direction
+2879.539 WebContent(61310):     animation-play-state
+2879.539 WebContent(61310):     animation-delay
+2879.539 WebContent(61310): No property (from 3 properties) matched Token: Comma
+2879.539 WebContent(61310):     animation-direction
+2879.539 WebContent(61310):     animation-play-state
+2879.539 WebContent(61310):     animation-delay
+2879.539 WebContent(61310): No property (from 3 properties) matched Token: Comma
+2879.539 WebContent(61310):     animation-direction
+2879.539 WebContent(61310):     animation-play-state
+2879.539 WebContent(61310):     animation-delay
+2879.539 WebContent(61310): No property (from 3 properties) matched Token: Comma
+2879.539 WebContent(61310):     animation-direction
+2879.539 WebContent(61310):     animation-play-state
+2879.539 WebContent(61310):     animation-delay
+2879.729 WebContent(61310): FIXME: Unimplemented IDL interface: 'BaseAudioContextPrototype.decodeAudioData'
+2879.999 WebContent(61310): (js error) "ERROR" Object{ "headers": Object{ "normalizedNames": [Map] {}, "lazyUpdate": null, "headers": [Map] {} }, "status": 0, "statusText": "Unknown Error", "url": "https://honeynutcheerios.2w7sp317.workers.dev/", "ok": false, "name": "HttpErrorResponse", "message": "Http failure response for https://honeynutcheerios.2w7sp317.workers.dev/: 0 Unknown Error", "error": ProgressEvent{ "lengthComputable": true, "loaded": 0, "total": 0, "type": "error", "target": XMLHttpRequest{ "__zone_symbol__xhrSync": false, "__zone_symbol__xhrURL": "https://honeynutcheerios.2w7sp317.workers.dev/", "__zone_symbol__loadfalse": null, "__zone_symbol__errorfalse": null, "__zone_symbol__timeoutfalse": null, "__zone_symbol__abortfalse": null, "__zone_symbol__xhrScheduled": true, "__zone_symbol__xhrErrorBeforeScheduled": false, "__zone_symbol__xhrListener": [Function] , "__zone_symbol__xhrTask": Object{ "_zone": Object{ "_parent": Object{ "_parent": null, "_name": "<root>", "_properties": Object{}, "_zoneDelegate": Object{ "_taskCounts": Object{ "microTask": 0, "macroTask": 0, "eventTask": 0 }, "zone": <already printed Object 0x00007f5193af1d30>, "_parentDelegate": null, "_forkZS": null, "_forkDlgt": null, "_forkCurrZone": null, "_interceptZS": null, "_interceptDlgt": null, "_interceptCurrZone": null, "_invokeZS": null, "_invokeDlgt": null, "_invokeCurrZone": null, "_handleErrorZS": null, "_handleErrorDlgt": null, "_handleErrorCurrZone": null, "_scheduleTaskZS": null, "_scheduleTaskDlgt": null, "_scheduleTaskCurrZone": null, "_invokeTaskZS": null, "_invokeTaskDlgt": null, "_invokeTaskCurrZone": null, "_cancelTaskZS": null, "_cancelTaskDlgt": null, "_cancelTaskCurrZone": null, "_hasTaskZS": null, "_hasTaskDlgt": null, "_hasTaskDlgtOwner": null, "_hasTaskCurrZone": null }, "parent": null, "name": "<root>" }, "_name": "angular", "_properties": Object{ "isAngularZone": true }, "_zoneDelegate": Object{ "_taskCounts": Object{ "microTask": 0, "macroTask": 3, "eventTask": 75 }, "zone": <already printed Object 0x00007f5193211358>, "_parentDelegate": <already printed Object 0x00007f5193af1dc0>, "_forkZS": null, "_forkDlgt": null, "_forkCurrZone": null, "_interceptZS": null, "_interceptDlgt": null, "_interceptCurrZone": null, "_invokeZS": Object{ "name": "angular", "properties": <already printed Object 0x00007f5193211310>, "onInvokeTask": [Function] onInvokeTask, "onInvoke": [Function] onInvoke, "onHasTask": [Function] onHasTask, "onHandleError": [Function] onHandleError }, "_invokeDlgt": <already printed Object 0x00007f5193af1dc0>, "_invokeCurrZone": <already printed Object 0x00007f5193211358>, "_handleErrorZS": <already printed Object 0x00007f51932112c8>, "_handleErrorDlgt": <already printed Object 0x00007f5193af1dc0>, "_handleErrorCurrZone": <already printed Object 0x00007f5193211358>, "_scheduleTaskZS": Object{ "name": "", "onHasTask": [Function] onHasTask, "onScheduleTask": [Function] onScheduleTask, "onInvokeTask": [Function] onInvokeTask, "onCancelTask": [Function] onCancelTask }, "_scheduleTaskDlgt": <already printed Object 0x00007f5193af1dc0>, "_scheduleTaskCurrZone": <already printed Object 0x00007f5193211358>, "_invokeTaskZS": <already printed Object 0x00007f51932112c8>, "_invokeTaskDlgt": <already printed Object 0x00007f5193af1dc0>, "_invokeTaskCurrZone": <already printed Object 0x00007f5193211358>, "_cancelTaskZS": <already printed Object 0x00007f5193af1628>, "_cancelTaskDlgt": <already printed Object 0x00007f5193af1dc0>, "_cancelTaskCurrZone": <already printed Object 0x00007f5193211358>, "_hasTaskZS": <already printed Object 0x00007f51932112c8>, "_hasTaskDlgt": <already printed Object 0x00007f5193af1dc0>, "_hasTaskDlgtOwner": <already printed Object 0x00007f51932113a0>, "_hasTaskCurrZone": <already printed Object 0x00007f5193211358> }, "parent": <already printed Object 0x00007f5193af1d30>, "name": "angular" }, "runCount": 0, "_zoneDelegates": null, "_state": "notScheduled", "type": "macroTask", "source": "XMLHttpRequest.send", "data": Object{ "target": <already printed Object 0x00007f5192d44628>, "url": "https://honeynutcheerios.2w7sp317.workers.dev/", "isPeriodic": false, "args": Object{ "0": "{"ipaddress":"70.104.195.206","country":"US","currentUrl":"/quiz/us-history","referringUrl":"https://techmeme.com/","data":{"ipinfo":{"ip":"70.104.195.206","hostname":"pool-70-104-195-206.nrflva.fios.verizon.net","city":"Newport News","region":"Virginia","country":"US","loc":"36.9804,-76.4297","org":"AS701 Verizon Business","postal":"23607","timezone":"America/New_York","lastupdated":"2024-06-21T12:07:42.232Z"},"mydata":"arrived at page us-history"}}" }, "aborted": false }, "scheduleFn": [Function] te
+2880.129 WebContent(61310): (js error) "ERROR" Object{ "headers": Object{ "normalizedNames": [Map] {}, "lazyUpdate": null, "headers": [Map] {} }, "status": 0, "statusText": "Unknown Error", "url": "https://honeynutcheerios.2w7sp317.workers.dev/", "ok": false, "name": "HttpErrorResponse", "message": "Http failure response for https://honeynutcheerios.2w7sp317.workers.dev/: 0 Unknown Error", "error": ProgressEvent{ "lengthComputable": true, "loaded": 0, "total": 0, "type": "error", "target": XMLHttpRequest{ "__zone_symbol__xhrSync": false, "__zone_symbol__xhrURL": "https://honeynutcheerios.2w7sp317.workers.dev/", "__zone_symbol__loadfalse": null, "__zone_symbol__errorfalse": null, "__zone_symbol__timeoutfalse": null, "__zone_symbol__abortfalse": null, "__zone_symbol__xhrScheduled": true, "__zone_symbol__xhrErrorBeforeScheduled": false, "__zone_symbol__xhrListener": [Function] , "__zone_symbol__xhrTask": Object{ "_zone": Object{ "_parent": Object{ "_parent": null, "_name": "<root>", "_properties": Object{}, "_zoneDelegate": Object{ "_taskCounts": Object{ "microTask": 0, "macroTask": 0, "eventTask": 0 }, "zone": <already printed Object 0x00007f5193af1d30>, "_parentDelegate": null, "_forkZS": null, "_forkDlgt": null, "_forkCurrZone": null, "_interceptZS": null, "_interceptDlgt": null, "_interceptCurrZone": null, "_invokeZS": null, "_invokeDlgt": null, "_invokeCurrZone": null, "_handleErrorZS": null, "_handleErrorDlgt": null, "_handleErrorCurrZone": null, "_scheduleTaskZS": null, "_scheduleTaskDlgt": null, "_scheduleTaskCurrZone": null, "_invokeTaskZS": null, "_invokeTaskDlgt": null, "_invokeTaskCurrZone": null, "_cancelTaskZS": null, "_cancelTaskDlgt": null, "_cancelTaskCurrZone": null, "_hasTaskZS": null, "_hasTaskDlgt": null, "_hasTaskDlgtOwner": null, "_hasTaskCurrZone": null }, "parent": null, "name": "<root>" }, "_name": "angular", "_properties": Object{ "isAngularZone": true }, "_zoneDelegate": Object{ "_taskCounts": Object{ "microTask": 0, "macroTask": 2, "eventTask": 75 }, "zone": <already printed Object 0x00007f5193211358>, "_parentDelegate": <already printed Object 0x00007f5193af1dc0>, "_forkZS": null, "_forkDlgt": null, "_forkCurrZone": null, "_interceptZS": null, "_interceptDlgt": null, "_interceptCurrZone": null, "_invokeZS": Object{ "name": "angular", "properties": <already printed Object 0x00007f5193211310>, "onInvokeTask": [Function] onInvokeTask, "onInvoke": [Function] onInvoke, "onHasTask": [Function] onHasTask, "onHandleError": [Function] onHandleError }, "_invokeDlgt": <already printed Object 0x00007f5193af1dc0>, "_invokeCurrZone": <already printed Object 0x00007f5193211358>, "_handleErrorZS": <already printed Object 0x00007f51932112c8>, "_handleErrorDlgt": <already printed Object 0x00007f5193af1dc0>, "_handleErrorCurrZone": <already printed Object 0x00007f5193211358>, "_scheduleTaskZS": Object{ "name": "", "onHasTask": [Function] onHasTask, "onScheduleTask": [Function] onScheduleTask, "onInvokeTask": [Function] onInvokeTask, "onCancelTask": [Function] onCancelTask }, "_scheduleTaskDlgt": <already printed Object 0x00007f5193af1dc0>, "_scheduleTaskCurrZone": <already printed Object 0x00007f5193211358>, "_invokeTaskZS": <already printed Object 0x00007f51932112c8>, "_invokeTaskDlgt": <already printed Object 0x00007f5193af1dc0>, "_invokeTaskCurrZone": <already printed Object 0x00007f5193211358>, "_cancelTaskZS": <already printed Object 0x00007f5193af1628>, "_cancelTaskDlgt": <already printed Object 0x00007f5193af1dc0>, "_cancelTaskCurrZone": <already printed Object 0x00007f5193211358>, "_hasTaskZS": <already printed Object 0x00007f51932112c8>, "_hasTaskDlgt": <already printed Object 0x00007f5193af1dc0>, "_hasTaskDlgtOwner": <already printed Object 0x00007f51932113a0>, "_hasTaskCurrZone": <already printed Object 0x00007f5193211358> }, "parent": <already printed Object 0x00007f5193af1d30>, "name": "angular" }, "runCount": 0, "_zoneDelegates": null, "_state": "notScheduled", "type": "macroTask", "source": "XMLHttpRequest.send", "data": Object{ "target": <already printed Object 0x00007f5192d44a18>, "url": "https://honeynutcheerios.2w7sp317.workers.dev/", "isPeriodic": false, "args": Object{ "0": "{"ipaddress":"70.104.195.206","country":"US","currentUrl":"/quiz/us-history","referringUrl":"https://techmeme.com/","data":{"ipinfo":{"ip":"70.104.195.206","hostname":"pool-70-104-195-206.nrflva.fios.verizon.net","city":"Newport News","region":"Virginia","country":"US","loc":"36.9804,-76.4297","org":"AS701 Verizon Business","postal":"23607","timezone":"America/New_York","lastupdated":"2024-06-21T12:07:42.232Z"},"mydata":"arrived at page us-history"}}" }, "aborted": false }, "scheduleFn": [Function] te
+2935.719 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+2995.739 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+3055.749 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+3115.879 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+3120.279 RequestServer(61276:61302): EnsureConnection: Pre-connect to https://fonts.gstatic.com/
+3120.289 WebContent(61310): Potential FIXME: Removing unsupported PerformanceEntry type 'paint' from list of observed types in PerformanceObserver::observe()
+3120.289 WebContent(61310): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support any of the specified types (or none was specified).
+3120.289 WebContent(61310): Potential FIXME: Removing unsupported PerformanceEntry type 'largest-contentful-paint' from list of observed types in PerformanceObserver::observe()
+3120.289 WebContent(61310): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support any of the specified types (or none was specified).
+3120.289 WebContent(61310): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'layout-shift'
+3120.329 RequestServer(61276:61306): Request with a null socket finished for URL https://gc.zgo.at/count.js
+3120.329 WebContent(61310): ResourceLoader: Failed load of: "https://gc.zgo.at/count.js", Error: Load failed, Duration: 30ms
+3120.329 WebContent(61310): HTMLScriptElement: Refusing to run script because the element's result is null.
+3121.969 WebContent(61310): (js error) [ReferenceError] 'IDBIndex' is not defined
+3121.969 WebContent(61310): Unhandled JavaScript exception: [Error] Cannot instantiate firebase-analytics.js - be sure to load firebase-app.js first.
+3121.969 WebContent(61310):     at Error
+    at https://coloradoquiz.web.app/__/firebase/8.6.3/firebase-analytics.js:1:229
+    at https://coloradoquiz.web.app/__/firebase/8.6.3/firebase-analytics.js:1:229
+    at https://coloradoquiz.web.app/__/firebase/8.6.3/firebase-analytics.js:1:229
+
+3121.979 Ladybird(61275): Notified about console message we already have
+3121.979 Ladybird(61275): Notified about console message we already have
+3122.279 WebContent(61310): FIXME: Unimplemented IDL interface: 'IntersectionObserverPrototype.rootMargin'
+3122.279 WebContent(61310): FIXME: Unimplemented IDL interface: 'IntersectionObserverPrototype.rootMargin'
+3122.279 WebContent(61310): FIXME: Unimplemented IDL interface: 'IntersectionObserverPrototype.rootMargin'
+3122.289 WebContent(61310): FIXME: Unimplemented IDL interface: 'IDBRequestPrototype.onsuccess'
+3122.289 WebContent(61310): FIXME: Unimplemented IDL interface: 'IDBRequestPrototype.onsuccess'
+3122.289 WebContent(61310): FIXME: Unimplemented IDL interface: 'IDBRequestPrototype.onerror'
+3122.289 WebContent(61310): FIXME: Unimplemented IDL interface: 'IDBRequestPrototype.onerror'
+3122.289 WebContent(61310): FIXME: Unimplemented IDL interface: 'IDBOpenDBRequestPrototype.onblocked'
+3122.289 WebContent(61310): FIXME: Unimplemented IDL interface: 'IDBOpenDBRequestPrototype.onblocked'
+3122.289 WebContent(61310): FIXME: Unimplemented IDL interface: 'IDBOpenDBRequestPrototype.onupgradeneeded'
+3122.289 WebContent(61310): FIXME: Unimplemented IDL interface: 'IDBOpenDBRequestPrototype.onupgradeneeded'
+3123.299 WebContent(61310): No property (from 4 properties) matched Token: Dimension: -1px (number_type: Integer)
+3123.299 WebContent(61310):     border-top-width
+3123.299 WebContent(61310):     border-right-width
+3123.299 WebContent(61310):     border-bottom-width
+3123.299 WebContent(61310):     border-left-width
+3123.309 WebContent(61310): (js log) Object{ "title": "us-history" }
+3123.309 Ladybird(61275): Notified about console message we're already aware of
+3123.309 WebContent(61310): (js log) Object{ "title": "us-history" }
+3123.309 Ladybird(61275): Notified about console message we're already aware of
+3123.339 WebContent(61310): No property (from 3 properties) matched Token: Comma
+3123.339 WebContent(61310):     animation-direction
+3123.339 WebContent(61310):     animation-play-state
+3123.339 WebContent(61310):     animation-delay
+3123.339 WebContent(61310): No property (from 3 properties) matched Token: Comma
+3123.339 WebContent(61310):     animation-direction
+3123.339 WebContent(61310):     animation-play-state
+3123.339 WebContent(61310):     animation-delay
+3123.339 WebContent(61310): No property (from 3 properties) matched Token: Comma
+3123.339 WebContent(61310):     animation-direction
+3123.339 WebContent(61310):     animation-play-state
+3123.339 WebContent(61310):     animation-delay
+3123.339 WebContent(61310): No property (from 3 properties) matched Token: Comma
+3123.339 WebContent(61310):     animation-direction
+3123.339 WebContent(61310):     animation-play-state
+3123.339 WebContent(61310):     animation-delay
+3123.359 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+3123.359 Ladybird(61275): Notified about console message we're already aware of
+3123.459 WebContent(61310): ResourceLoader: Failed load of: "https://js-agent.newrelic.com/nr-1208.min.js", Error: URL was filtered, Duration: 0ms
+3123.509 WebContent(61310): HTMLScriptElement: Refusing to run script because the element's result is null.
+3123.839 WebContent(61310): (js error) "ERROR" Object{ "headers": Object{ "normalizedNames": [Map] {}, "lazyUpdate": null, "headers": [Map] {} }, "status": 0, "statusText": "Unknown Error", "url": "https://honeynutcheerios.2w7sp317.workers.dev/", "ok": false, "name": "HttpErrorResponse", "message": "Http failure response for https://honeynutcheerios.2w7sp317.workers.dev/: 0 Unknown Error", "error": ProgressEvent{ "lengthComputable": true, "loaded": 0, "total": 0, "type": "error", "target": XMLHttpRequest{ "__zone_symbol__xhrSync": false, "__zone_symbol__xhrURL": "https://honeynutcheerios.2w7sp317.workers.dev/", "__zone_symbol__loadfalse": null, "__zone_symbol__errorfalse": null, "__zone_symbol__timeoutfalse": null, "__zone_symbol__abortfalse": null, "__zone_symbol__xhrScheduled": true, "__zone_symbol__xhrErrorBeforeScheduled": false, "__zone_symbol__xhrListener": [Function] , "__zone_symbol__xhrTask": Object{ "_zone": Object{ "_parent": Object{ "_parent": null, "_name": "<root>", "_properties": Object{}, "_zoneDelegate": Object{ "_taskCounts": Object{ "microTask": 0, "macroTask": 0, "eventTask": 0 }, "zone": <already printed Object 0x00007f517dcbdbc8>, "_parentDelegate": null, "_forkZS": null, "_forkDlgt": null, "_forkCurrZone": null, "_interceptZS": null, "_interceptDlgt": null, "_interceptCurrZone": null, "_invokeZS": null, "_invokeDlgt": null, "_invokeCurrZone": null, "_handleErrorZS": null, "_handleErrorDlgt": null, "_handleErrorCurrZone": null, "_scheduleTaskZS": null, "_scheduleTaskDlgt": null, "_scheduleTaskCurrZone": null, "_invokeTaskZS": null, "_invokeTaskDlgt": null, "_invokeTaskCurrZone": null, "_cancelTaskZS": null, "_cancelTaskDlgt": null, "_cancelTaskCurrZone": null, "_hasTaskZS": null, "_hasTaskDlgt": null, "_hasTaskDlgtOwner": null, "_hasTaskCurrZone": null }, "parent": null, "name": "<root>" }, "_name": "angular", "_properties": Object{ "isAngularZone": true }, "_zoneDelegate": Object{ "_taskCounts": Object{ "microTask": 0, "macroTask": 3, "eventTask": 79 }, "zone": <already printed Object 0x00007f517d5bf118>, "_parentDelegate": <already printed Object 0x00007f517dcbdc58>, "_forkZS": null, "_forkDlgt": null, "_forkCurrZone": null, "_interceptZS": null, "_interceptDlgt": null, "_interceptCurrZone": null, "_invokeZS": Object{ "name": "angular", "properties": <already printed Object 0x00007f517d5bf0d0>, "onInvokeTask": [Function] onInvokeTask, "onInvoke": [Function] onInvoke, "onHasTask": [Function] onHasTask, "onHandleError": [Function] onHandleError }, "_invokeDlgt": <already printed Object 0x00007f517dcbdc58>, "_invokeCurrZone": <already printed Object 0x00007f517d5bf118>, "_handleErrorZS": <already printed Object 0x00007f517d5bf088>, "_handleErrorDlgt": <already printed Object 0x00007f517dcbdc58>, "_handleErrorCurrZone": <already printed Object 0x00007f517d5bf118>, "_scheduleTaskZS": Object{ "name": "", "onHasTask": [Function] onHasTask, "onScheduleTask": [Function] onScheduleTask, "onInvokeTask": [Function] onInvokeTask, "onCancelTask": [Function] onCancelTask }, "_scheduleTaskDlgt": <already printed Object 0x00007f517dcbdc58>, "_scheduleTaskCurrZone": <already printed Object 0x00007f517d5bf118>, "_invokeTaskZS": <already printed Object 0x00007f517d5bf088>, "_invokeTaskDlgt": <already printed Object 0x00007f517dcbdc58>, "_invokeTaskCurrZone": <already printed Object 0x00007f517d5bf118>, "_cancelTaskZS": <already printed Object 0x00007f517dcbd4c0>, "_cancelTaskDlgt": <already printed Object 0x00007f517dcbdc58>, "_cancelTaskCurrZone": <already printed Object 0x00007f517d5bf118>, "_hasTaskZS": <already printed Object 0x00007f517d5bf088>, "_hasTaskDlgt": <already printed Object 0x00007f517dcbdc58>, "_hasTaskDlgtOwner": <already printed Object 0x00007f517d5bf160>, "_hasTaskCurrZone": <already printed Object 0x00007f517d5bf118> }, "parent": <already printed Object 0x00007f517dcbdbc8>, "name": "angular" }, "runCount": 0, "_zoneDelegates": null, "_state": "notScheduled", "type": "macroTask", "source": "XMLHttpRequest.send", "data": Object{ "target": <already printed Object 0x00007f517dd3f820>, "url": "https://honeynutcheerios.2w7sp317.workers.dev/", "isPeriodic": false, "args": Object{ "0": "{"ipaddress":"70.104.195.206","country":"US","currentUrl":"/quiz/us-history","referringUrl":"https://coloradoquiz.web.app/quiz/us-history","data":{"ipinfo":{"ip":"70.104.195.206","hostname":"pool-70-104-195-206.nrflva.fios.verizon.net","city":"Newport News","region":"Virginia","country":"US","loc":"36.9804,-76.4297","org":"AS701 Verizon Business","postal":"23607","timezone":"America/New_York","lastupdated":"2024-06-21T12:07:42.232Z"},"mydata":"arrived at page us-history"}}" }, "aborted": false }, "scheduleFn": [Function] te
+3123.839 Ladybird(61275): Notified about console message we're already aware of
+3123.879 WebContent(61310): (js error) "ERROR" Object{ "headers": Object{ "normalizedNames": [Map] {}, "lazyUpdate": null, "headers": [Map] {} }, "status": 0, "statusText": "Unknown Error", "url": "https://honeynutcheerios.2w7sp317.workers.dev/", "ok": false, "name": "HttpErrorResponse", "message": "Http failure response for https://honeynutcheerios.2w7sp317.workers.dev/: 0 Unknown Error", "error": ProgressEvent{ "lengthComputable": true, "loaded": 0, "total": 0, "type": "error", "target": XMLHttpRequest{ "__zone_symbol__xhrSync": false, "__zone_symbol__xhrURL": "https://honeynutcheerios.2w7sp317.workers.dev/", "__zone_symbol__loadfalse": null, "__zone_symbol__errorfalse": null, "__zone_symbol__timeoutfalse": null, "__zone_symbol__abortfalse": null, "__zone_symbol__xhrScheduled": true, "__zone_symbol__xhrErrorBeforeScheduled": false, "__zone_symbol__xhrListener": [Function] , "__zone_symbol__xhrTask": Object{ "_zone": Object{ "_parent": Object{ "_parent": null, "_name": "<root>", "_properties": Object{}, "_zoneDelegate": Object{ "_taskCounts": Object{ "microTask": 0, "macroTask": 0, "eventTask": 0 }, "zone": <already printed Object 0x00007f517dcbdbc8>, "_parentDelegate": null, "_forkZS": null, "_forkDlgt": null, "_forkCurrZone": null, "_interceptZS": null, "_interceptDlgt": null, "_interceptCurrZone": null, "_invokeZS": null, "_invokeDlgt": null, "_invokeCurrZone": null, "_handleErrorZS": null, "_handleErrorDlgt": null, "_handleErrorCurrZone": null, "_scheduleTaskZS": null, "_scheduleTaskDlgt": null, "_scheduleTaskCurrZone": null, "_invokeTaskZS": null, "_invokeTaskDlgt": null, "_invokeTaskCurrZone": null, "_cancelTaskZS": null, "_cancelTaskDlgt": null, "_cancelTaskCurrZone": null, "_hasTaskZS": null, "_hasTaskDlgt": null, "_hasTaskDlgtOwner": null, "_hasTaskCurrZone": null }, "parent": null, "name": "<root>" }, "_name": "angular", "_properties": Object{ "isAngularZone": true }, "_zoneDelegate": Object{ "_taskCounts": Object{ "microTask": 0, "macroTask": 2, "eventTask": 75 }, "zone": <already printed Object 0x00007f517d5bf118>, "_parentDelegate": <already printed Object 0x00007f517dcbdc58>, "_forkZS": null, "_forkDlgt": null, "_forkCurrZone": null, "_interceptZS": null, "_interceptDlgt": null, "_interceptCurrZone": null, "_invokeZS": Object{ "name": "angular", "properties": <already printed Object 0x00007f517d5bf0d0>, "onInvokeTask": [Function] onInvokeTask, "onInvoke": [Function] onInvoke, "onHasTask": [Function] onHasTask, "onHandleError": [Function] onHandleError }, "_invokeDlgt": <already printed Object 0x00007f517dcbdc58>, "_invokeCurrZone": <already printed Object 0x00007f517d5bf118>, "_handleErrorZS": <already printed Object 0x00007f517d5bf088>, "_handleErrorDlgt": <already printed Object 0x00007f517dcbdc58>, "_handleErrorCurrZone": <already printed Object 0x00007f517d5bf118>, "_scheduleTaskZS": Object{ "name": "", "onHasTask": [Function] onHasTask, "onScheduleTask": [Function] onScheduleTask, "onInvokeTask": [Function] onInvokeTask, "onCancelTask": [Function] onCancelTask }, "_scheduleTaskDlgt": <already printed Object 0x00007f517dcbdc58>, "_scheduleTaskCurrZone": <already printed Object 0x00007f517d5bf118>, "_invokeTaskZS": <already printed Object 0x00007f517d5bf088>, "_invokeTaskDlgt": <already printed Object 0x00007f517dcbdc58>, "_invokeTaskCurrZone": <already printed Object 0x00007f517d5bf118>, "_cancelTaskZS": <already printed Object 0x00007f517dcbd4c0>, "_cancelTaskDlgt": <already printed Object 0x00007f517dcbdc58>, "_cancelTaskCurrZone": <already printed Object 0x00007f517d5bf118>, "_hasTaskZS": <already printed Object 0x00007f517d5bf088>, "_hasTaskDlgt": <already printed Object 0x00007f517dcbdc58>, "_hasTaskDlgtOwner": <already printed Object 0x00007f517d5bf160>, "_hasTaskCurrZone": <already printed Object 0x00007f517d5bf118> }, "parent": <already printed Object 0x00007f517dcbdbc8>, "name": "angular" }, "runCount": 0, "_zoneDelegates": null, "_state": "notScheduled", "type": "macroTask", "source": "XMLHttpRequest.send", "data": Object{ "target": <already printed Object 0x00007f517dd3fa18>, "url": "https://honeynutcheerios.2w7sp317.workers.dev/", "isPeriodic": false, "args": Object{ "0": "{"ipaddress":"70.104.195.206","country":"US","currentUrl":"/quiz/us-history","referringUrl":"https://coloradoquiz.web.app/quiz/us-history","data":{"ipinfo":{"ip":"70.104.195.206","hostname":"pool-70-104-195-206.nrflva.fios.verizon.net","city":"Newport News","region":"Virginia","country":"US","loc":"36.9804,-76.4297","org":"AS701 Verizon Business","postal":"23607","timezone":"America/New_York","lastupdated":"2024-06-21T12:07:42.232Z"},"mydata":"arrived at page us-history"}}" }, "aborted": false }, "scheduleFn": [Function] te
+3123.879 Ladybird(61275): Notified about console message we're already aware of
+3183.279 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+3183.279 Ladybird(61275): Notified about console message we're already aware of
+3243.299 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+3243.299 Ladybird(61275): Notified about console message we're already aware of
+3303.329 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+3363.339 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+3423.349 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+3483.369 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+3543.399 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+3603.429 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+3663.449 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+3723.469 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+3783.499 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+3802.109 WebContent(61310): FIXME: Unimplemented IDL interface: 'BaseAudioContextPrototype.decodeAudioData'
+3843.519 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+3903.539 WebContent(61310): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+3959.519 RequestServer(61276:61301): We were alerted of a critical error: 70 (PROTOCOL_VERSION)
+3959.519 RequestServer(61276:61301): Possible failure cause(s):
+3959.519 RequestServer(61276:61301): - The server refused to negotiate with TLS 1.2 :(
+3959.519 RequestServer(61276:61301): - The protocol version the client has attempted to negotiate is recognized but not supported. (For example, old protocol versions might be avoided for security reasons). This message is always fatal.
+3959.519 RequestServer(61276:61301): Possible failure cause(s):
+3959.519 RequestServer(61276:61301): - The server refused to negotiate with TLS 1.2 :(
+3959.519 RequestServer(61276:61301): - The protocol version the client has attempted to negotiate is recognized but not supported. (For example, old protocol versions might be avoided for security reasons). This message is always fatal.
+3959.519 RequestServer(61276:61301): Consumed an error: -1
+3959.519 RequestServer(61276:61301): consume error: -1
+3959.519 RequestServer(61276:61301): ConnectionCache: Connection to https://forum.level1techs.com/ failed: PROTOCOL_VERSION
+3959.519 RequestServer(61276:61301): Request with a null socket finished for URL https://forum.level1techs.com/
+3959.539 WebContent(61310): ResourceLoader: Failed load of: "https://forum.level1techs.com/", Error: Load failed, Duration: 110ms
+3973.069 WebContent(61310): ResourceLoader: Failed load of: "https://www.googleoptimize.com/optimize.js?id=GTM-PKXVVQT", Error: URL was filtered, Duration: 0ms
+3973.069 WebContent(61310): ResourceLoader: Failed load of: "https://www.googletagmanager.com/gtm.js?id=GTM-TQLSFWJ&l=znodeDataLayer", Error: URL was filtered, Duration: 0ms
+3973.079 WebContent(61310): HTMLScriptElement: Refusing to run script because the element's result is null.
+3973.079 WebContent(61310): Unhandled JavaScript exception: [TypeError] Cannot access property "end" on undefined object "znodeDataLayer.hide"
+3973.079 WebContent(61310):     at error
+    at <unknown>
+    at <unknown>
+
+3973.079 WebContent(61310): HTMLScriptElement: Refusing to run script because the element's result is null.
+3976.339 WebContent(61310): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
+3976.339 WebContent(61310): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
+3976.339 WebContent(61310): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
+3976.339 WebContent(61310): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
+3976.599 WebContent(61310): Potential FIXME: Creating unknown generic element 'pattern' in namespace 'http://www.w3.org/2000/svg'
+3976.609 WebContent(61310): Potential FIXME: Creating unknown generic element 'image' in namespace 'http://www.w3.org/2000/svg'
+3976.779 WebContent(61310): HTMLScriptElement: Refusing to run script because it has already started.
+3976.779 WebContent(61310): HTMLScriptElement: Refusing to run script because it has already started.
+3976.779 WebContent(61310): HTMLScriptElement: Refusing to run script because it has already started.
+3976.779 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+3976.779 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+3976.909 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+3976.979 WebContent(61310): HTMLScriptElement: Refusing to run script because the src attribute is empty.
+3977.009 WebContent(61310): ResourceLoader: Failed load of: "https://consent.cookiebot.com/uc.js", Error: URL was filtered, Duration: 0ms
+3977.109 WebContent(61310): HTMLScriptElement: Refusing to run script because the element's result is null.
+3977.219 WebContent(61310): Potential FIXME: Creating unknown generic element 'image' in namespace 'http://www.w3.org/2000/svg'
+3978.398 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLIFrameElementPrototype.sandbox'
+3978.458 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLIFrameElementPrototype.sandbox'
+3979.348 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+3979.358 WebContent(61310): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'longtask'
+3979.368 WebContent(61310): ImageDecoderClient: Failed to decode image with ID 72: Decoding failed: Could not find suitable image decoder plugin for data
+3980.148 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+3980.148 WebContent(61310): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'longtask'
+3980.378 WebContent(61310): ImageDecoderClient: Failed to decode image with ID 74: Decoding failed: Could not find suitable image decoder plugin for data
+3980.428 WebContent(61310): (js log) "Invalid function name PCNAHome.Init"
+3980.428 Ladybird(61275): Notified about console message we're already aware of
+3980.538 WebContent(61310): ResourceLoader: Failed load of: "https://zneigxrvrmufgxlqu-pcna.siteintercept.qualtrics.com/SIE/?Q_ZID=ZN_eIGXRVrmUfgXlqu", Error: URL was filtered, Duration: 0ms
+3980.658 WebContent(61310): HTMLScriptElement: Refusing to run script because the element's result is null.
+3980.818 WebContent(61310): HTMLScriptElement: Refusing to run script because it has already started.
+3980.818 WebContent(61310): HTMLScriptElement: Refusing to run script because it has already started.
+3980.818 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+3980.818 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+3981.118 WebContent(61310): HTMLScriptElement: Refusing to run script because it has already started.
+3981.118 WebContent(61310): HTMLScriptElement: Refusing to run script because it has already started.
+3981.118 WebContent(61310): HTMLScriptElement: Refusing to run script because it has already started.
+3981.118 WebContent(61310): HTMLScriptElement: Refusing to run script because it has already started.
+3981.118 WebContent(61310): HTMLScriptElement: Refusing to run script because it has already started.
+3981.118 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+3981.118 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+3981.118 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+3981.118 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+3981.118 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+3988.018 WebContent(61310): (js log) "Element loaded: " "IMG"
+3988.018 Ladybird(61275): Notified about console message we're already aware of
+3988.018 WebContent(61310): (js log) "Element loaded: " "IMG"
+3988.058 WebContent(61310): (js log) "Element loaded: " "IMG"
+3988.058 WebContent(61310): (js log) "Element loaded: " "IMG"
+3988.088 WebContent(61310): (js log) "Element loaded: " "IMG"
+3988.088 WebContent(61310): (js log) "Element loaded: " "IMG"
+3988.108 WebContent(61310): (js log) "Element loaded: " "IMG"
+3988.108 WebContent(61310): (js log) "Element loaded: " "IMG"
+3988.168 WebContent(61310): (js log) "Element loaded: " "IMG"
+3988.168 WebContent(61310): (js log) "Element loaded: " "IMG"
+3988.198 WebContent(61310): (js log) "Element loaded: " "IMG"
+3988.198 WebContent(61310): (js log) "Element loaded: " "IMG"
+3992.528 WebContent(61310): MessagePort::read_from_socket(): Failed to receive message: recvmsg: Connection reset by peer (errno=104)
+3992.528 WebContent(61310): MessagePort::read_from_socket(): Failed to receive message: recvmsg: Connection reset by peer (errno=104)
+3994.358 WebContent(61310): Unhandled JavaScript exception (in promise): Timeout (z)
+3994.358 Ladybird(61275): Notified about console message we're already aware of
+3995.158 WebContent(61310): Unhandled JavaScript exception (in promise): Timeout (z)
+3995.158 Ladybird(61275): Notified about console message we're already aware of
+3998.438 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLIFrameElementPrototype.sandbox'
+3998.588 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLIFrameElementPrototype.sandbox'
+3999.498 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+3999.508 WebContent(61310): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'longtask'
+3999.718 WebContent(61310): ImageDecoderClient: Failed to decode image with ID 86: Decoding failed: Could not find suitable image decoder plugin for data
+4000.808 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+4000.818 WebContent(61310): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'longtask'
+4000.838 WebContent(61310): ImageDecoderClient: Failed to decode image with ID 88: Decoding failed: Could not find suitable image decoder plugin for data
+4007.698 WebContent(61310): HTMLScriptElement: Refusing to run script because it has already started.
+4007.698 WebContent(61310): HTMLScriptElement: Refusing to run script because it has already started.
+4007.698 WebContent(61310): HTMLScriptElement: Refusing to run script because it has already started.
+4007.928 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+4008.898 WebContent(61310): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
+4008.898 WebContent(61310): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
+4008.898 WebContent(61310): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
+4008.898 WebContent(61310): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
+4008.898 WebContent(61310): Potential FIXME: Creating unknown generic element 'pattern' in namespace 'http://www.w3.org/2000/svg'
+4008.908 WebContent(61310): Potential FIXME: Creating unknown generic element 'image' in namespace 'http://www.w3.org/2000/svg'
+4009.548 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLIFrameElementPrototype.sandbox'
+4009.608 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLIFrameElementPrototype.sandbox'
+4010.558 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+4010.568 WebContent(61310): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'longtask'
+4010.908 WebContent(61310): ImageDecoderClient: Failed to decode image with ID 91: Decoding failed: Could not find suitable image decoder plugin for data
+4012.208 WebContent(61310): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+4012.208 WebContent(61310): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'longtask'
+4012.228 WebContent(61310): ImageDecoderClient: Failed to decode image with ID 93: Decoding failed: Could not find suitable image decoder plugin for data
+4014.508 WebContent(61310): Unhandled JavaScript exception (in promise): Timeout (z)
+4014.508 Ladybird(61275): Notified about console message we're already aware of
+4015.818 WebContent(61310): Unhandled JavaScript exception (in promise): Timeout (z)
+4015.818 Ladybird(61275): Notified about console message we're already aware of
+4018.618 WebContent(61310): Unhandled JavaScript exception (in promise): Timeout
+4018.618 Ladybird(61275): Notified about console message we're already aware of
+4018.838 WebContent(61310): Unhandled JavaScript exception (in promise): Timeout
+4018.838 Ladybird(61275): Notified about console message we're already aware of
+4020.298 WebContent(61310): ResourceLoader: Failed load of: "https://www.googleoptimize.com/optimize.js?id=GTM-PKXVVQT", Error: URL was filtered, Duration: 0ms
+4020.298 WebContent(61310): ResourceLoader: Failed load of: "https://www.googletagmanager.com/gtm.js?id=GTM-TQLSFWJ&l=znodeDataLayer", Error: URL was filtered, Duration: 0ms
+4020.308 WebContent(61310): HTMLScriptElement: Refusing to run script because the element's result is null.
+4020.308 WebContent(61310): Unhandled JavaScript exception: [TypeError] Cannot access property "end" on undefined object "znodeDataLayer.hide"
+4020.308 WebContent(61310):     at error
+    at <unknown>
+    at <unknown>
+
+4020.308 WebContent(61310): HTMLScriptElement: Refusing to run script because the element's result is null.
+4023.788 WebContent(61310): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
+4023.788 WebContent(61310): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
+4023.788 WebContent(61310): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
+4023.788 WebContent(61310): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
+4023.948 WebContent(61310): Potential FIXME: Creating unknown generic element 'pattern' in namespace 'http://www.w3.org/2000/svg'
+4023.958 WebContent(61310): Potential FIXME: Creating unknown generic element 'image' in namespace 'http://www.w3.org/2000/svg'
+4024.198 WebContent(61310): HTMLScriptElement: Refusing to run classic script because it has the nomodule attribute.
+VERIFICATION FAILED: m_ptr at /home/kushal/src/ladybird/Userland/Libraries/LibJS/Heap/GCPtr.h:168
+VERIFICATION FAILED: m_ptr at /home/kushal/src/ladybird/Userland/Libraries/LibJS/Heap/GCPtr.h:168
+VERIFICATION FAILED: m_ptr at /home/kushal/src/ladybird/Userland/Libraries/LibJS/Heap/GCPtr.h:168
+4024.278 Ladybird(61275): WebContent process crashed!
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-ak.so.0(ak_verification_failed+0xef) [0x7f9511fa2eff]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-ak.so.0(ak_verification_failed+0xef) [0x7f1fc02dfeff]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-ak.so.0(ak_verification_failed+0xef) [0x7efebdf66eff]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::HTML::fetch_a_classic_worker_imported_script(URL::URL const&, Web::HTML::EnvironmentSettingsObject&, JS::GCPtr<JS::HeapFunction<Web::WebIDL::ExceptionOr<void> (JS::NonnullGCPtr<Web::Fetch::Infrastructure::Request>, Web::HTML::TopLevelModule, AK::Function<void (JS::NonnullGCPtr<Web::Fetch::Infrastructure::Response>, AK::Variant<AK::Empty, Web::Fetch::Infrastructure::FetchAlgorithms::ConsumeBodyFailureTag, AK::Detail::ByteBuffer<32ul> >)>)> >) 0x8b2) [0x7f9515362292]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::HTML::fetch_a_classic_worker_imported_script(URL::URL const&, Web::HTML::EnvironmentSettingsObject&, JS::GCPtr<JS::HeapFunction<Web::WebIDL::ExceptionOr<void> (JS::NonnullGCPtr<Web::Fetch::Infrastructure::Request>, Web::HTML::TopLevelModule, AK::Function<void (JS::NonnullGCPtr<Web::Fetch::Infrastructure::Response>, AK::Variant<AK::Empty, Web::Fetch::Infrastructure::FetchAlgorithms::ConsumeBodyFailureTag, AK::Detail::ByteBuffer<32ul> >)>)> >) 0x8b2) [0x7efec1326292]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::HTML::fetch_a_classic_worker_imported_script(URL::URL const&, Web::HTML::EnvironmentSettingsObject&, JS::GCPtr<JS::HeapFunction<Web::WebIDL::ExceptionOr<void> (JS::NonnullGCPtr<Web::Fetch::Infrastructure::Request>, Web::HTML::TopLevelModule, AK::Function<void (JS::NonnullGCPtr<Web::Fetch::Infrastructure::Response>, AK::Variant<AK::Empty, Web::Fetch::Infrastructure::FetchAlgorithms::ConsumeBodyFailureTag, AK::Detail::ByteBuffer<32ul> >)>)> >) 0x8b2) [0x7f1fc369f292]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::HTML::WorkerGlobalScope::import_scripts(AK::Vector<AK::String, 0ul> const&, JS::GCPtr<JS::HeapFunction<Web::WebIDL::ExceptionOr<void> (JS::NonnullGCPtr<Web::Fetch::Infrastructure::Request>, Web::HTML::TopLevelModule, AK::Function<void (JS::NonnullGCPtr<Web::Fetch::Infrastructure::Response>, AK::Variant<AK::Empty, Web::Fetch::Infrastructure::FetchAlgorithms::ConsumeBodyFailureTag, AK::Detail::ByteBuffer<32ul> >)>)> >) 0x156) [0x7f95153b8f06]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::HTML::WorkerGlobalScope::import_scripts(AK::Vector<AK::String, 0ul> const&, JS::GCPtr<JS::HeapFunction<Web::WebIDL::ExceptionOr<void> (JS::NonnullGCPtr<Web::Fetch::Infrastructure::Request>, Web::HTML::TopLevelModule, AK::Function<void (JS::NonnullGCPtr<Web::Fetch::Infrastructure::Response>, AK::Variant<AK::Empty, Web::Fetch::Infrastructure::FetchAlgorithms::ConsumeBodyFailureTag, AK::Detail::ByteBuffer<32ul> >)>)> >) 0x156) [0x7efec137cf06]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::Bindings::WorkerGlobalScopePrototype::import_scripts(JS::VM&) 0x196) [0x7f9515932a66]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::HTML::WorkerGlobalScope::import_scripts(AK::Vector<AK::String, 0ul> const&, JS::GCPtr<JS::HeapFunction<Web::WebIDL::ExceptionOr<void> (JS::NonnullGCPtr<Web::Fetch::Infrastructure::Request>, Web::HTML::TopLevelModule, AK::Function<void (JS::NonnullGCPtr<Web::Fetch::Infrastructure::Response>, AK::Variant<AK::Empty, Web::Fetch::Infrastructure::FetchAlgorithms::ConsumeBodyFailureTag, AK::Detail::ByteBuffer<32ul> >)>)> >) 0x156) [0x7f1fc36f5f06]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-js.so.0(+0x2ebb5b) [0x7f9514867b5b]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::Bindings::WorkerGlobalScopePrototype::import_scripts(JS::VM&) 0x196) [0x7efec18f6a66]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::Bindings::WorkerGlobalScopePrototype::import_scripts(JS::VM&) 0x196) [0x7f1fc3c6fa66]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-js.so.0 JS::NativeFunction::internal_call(JS::Value, AK::Span<JS::Value const>) 0x191) [0x7f95148676b1]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-js.so.0(+0x2ebb5b) [0x7efec082bb5b]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-js.so.0(+0x2ebb5b) [0x7f1fc2ba4b5b]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-js.so.0(+0x1967c1) [0x7f95147127c1]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-js.so.0 JS::NativeFunction::internal_call(JS::Value, AK::Span<JS::Value const>) 0x191) [0x7efec082b6b1]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-js.so.0 JS::NativeFunction::internal_call(JS::Value, AK::Span<JS::Value const>) 0x191) [0x7f1fc2ba46b1]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-js.so.0 JS::Bytecode::Interpreter::run_bytecode(unsigned long) 0x2f97) [0x7f95146edd77]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-js.so.0(+0x1967c1) [0x7efec06d67c1]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-js.so.0(+0x1967c1) [0x7f1fc2a4f7c1]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-js.so.0 JS::Bytecode::Interpreter::run_executable(JS::Bytecode::Executable&, AK::Optional<unsigned long>, JS::Value) 0x21d) [0x7f95146eaaed]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-js.so.0 JS::Bytecode::Interpreter::run_bytecode(unsigned long) 0x2f97) [0x7efec06b1d77]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-js.so.0 JS::Bytecode::Interpreter::run_bytecode(unsigned long) 0x2f97) [0x7f1fc2a2ad77]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-js.so.0 JS::Bytecode::Interpreter::run(JS::Script&, JS::GCPtr<JS::Environment>) 0x241) [0x7f95146ea611]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-js.so.0 JS::Bytecode::Interpreter::run_executable(JS::Bytecode::Executable&, AK::Optional<unsigned long>, JS::Value) 0x21d) [0x7efec06aeaed]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::HTML::ClassicScript::run(Web::HTML::ClassicScript::RethrowErrors, JS::GCPtr<JS::Environment>) 0xa5) [0x7f951535c975]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-js.so.0 JS::Bytecode::Interpreter::run(JS::Script&, JS::GCPtr<JS::Environment>) 0x241) [0x7efec06ae611]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebWorker(+0x149be) [0x556bc07929be]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x85b52f) [0x7f951536652f]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::HTML::ClassicScript::run(Web::HTML::ClassicScript::RethrowErrors, JS::GCPtr<JS::Environment>) 0xa5) [0x7efec1320975]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x859f84) [0x7f9515364f84]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebWorker(+0x149be) [0x560fec46d9be]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebWorker(+0x15cd7) [0x556bc0793cd7]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x85b52f) [0x7efec132a52f]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebWorker(+0x145c9) [0x556bc07925c9]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x859f84) [0x7efec1328f84]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x726677) [0x7f9515231677]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebWorker(+0x15cd7) [0x560fec46ecd7]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x71ed66) [0x7f9515229d66]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebWorker(+0x145c9) [0x560fec46d5c9]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-js.so.0 JS::Bytecode::Interpreter::run_executable(JS::Bytecode::Executable&, AK::Optional<unsigned long>, JS::Value) 0x21d) [0x7f1fc2a27aed]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x70fb08) [0x7f951521ab08]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x726677) [0x7efec11f5677]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x72ef89) [0x7f9515239f89]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-js.so.0 JS::Bytecode::Interpreter::run(JS::Script&, JS::GCPtr<JS::Environment>) 0x241) [0x7f1fc2a27611]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x71ed66) [0x7efec11edd66]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x5450ef) [0x7f95150500ef]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x70fb08) [0x7efec11deb08]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::HTML::ClassicScript::run(Web::HTML::ClassicScript::RethrowErrors, JS::GCPtr<JS::Environment>) 0xa5) [0x7f1fc3699975]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::HTML::EventLoop::process() 0x4f) [0x7f951528e85f]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x72ef89) [0x7efec11fdf89]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebWorker(+0x149be) [0x55f4b3bca9be]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x997600) [0x7f95154a2600]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x5450ef) [0x7efec10140ef]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x85b52f) [0x7f1fc36a352f]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0(+0x3035f) [0x7f9513dbd35f]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::HTML::EventLoop::process() 0x4f) [0x7efec125285f]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x859f84) [0x7f1fc36a1f84]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x997600) [0x7efec1466600]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::EventReceiver::dispatch_event(Core::Event&, Core::EventReceiver*) 0x75) [0x7f9513dbc8b5]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebWorker(+0x15cd7) [0x55f4b3bcbcd7]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::ThreadEventQueue::process() 0x1fa) [0x7f9513dcedfa]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0(+0x3035f) [0x7efebfd8135f]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebWorker(+0x145c9) [0x55f4b3bca5c9]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::EventLoopImplementationUnix::exec() 0x2c) [0x7f9513db6b7c]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x726677) [0x7f1fc356e677]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::EventReceiver::dispatch_event(Core::Event&, Core::EventReceiver*) 0x75) [0x7efebfd808b5]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::EventLoop::exec() 0x23) [0x7f9513db5883]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x71ed66) [0x7f1fc3566d66]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::ThreadEventQueue::process() 0x1fa) [0x7efebfd92dfa]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebWorker(+0xe3b9) [0x556bc078c3b9]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x70fb08) [0x7f1fc3557b08]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::EventLoopImplementationUnix::exec() 0x2c) [0x7efebfd7ab7c]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebWorker(+0x19f12) [0x556bc0797f12]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::EventLoop::exec() 0x23) [0x7efebfd79883]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x72ef89) [0x7f1fc3576f89]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7f9511a52d90]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebWorker(+0xe3b9) [0x560fec4673b9]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x5450ef) [0x7f1fc338d0ef]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7f9511a52e40]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebWorker(+0x19f12) [0x560fec472f12]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::HTML::EventLoop::process() 0x4f) [0x7f1fc35cb85f]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebWorker(+0xe065) [0x556bc078c065]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7efebda16d90]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x997600) [0x7f1fc37df600]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7efebda16e40]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0(+0x3035f) [0x7f1fc20fa35f]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebWorker(+0xe065) [0x560fec467065]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::EventReceiver::dispatch_event(Core::Event&, Core::EventReceiver*) 0x75) [0x7f1fc20f98b5]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::ThreadEventQueue::process() 0x1fa) [0x7f1fc210bdfa]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::EventLoopImplementationUnix::exec() 0x2c) [0x7f1fc20f3b7c]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::EventLoop::exec() 0x23) [0x7f1fc20f2883]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebWorker(+0xe3b9) [0x55f4b3bc43b9]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebWorker(+0x19f12) [0x55f4b3bcff12]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7f1fbfd8fd90]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7f1fbfd8fe40]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebWorker(+0xe065) [0x55f4b3bc4065]
+VERIFICATION FAILED: !is_error() at /home/kushal/src/ladybird/AK/Error.h:180
+Lost connection to RequestServer
+Lost connection to RequestServer
+VERIFICATION FAILED: false at /home/kushal/src/ladybird/Userland/Libraries/LibProtocol/RequestClient.cpp:23
+VERIFICATION FAILED: false at /home/kushal/src/ladybird/Userland/Libraries/LibProtocol/RequestClient.cpp:23
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-ak.so.0(ak_verification_failed+0xef) [0x7f9a5dedceff]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-protocol.so.0(+0xea0f) [0x7f9a60027a0f]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0(+0x3035f) [0x7f9a5fcf735f]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-ak.so.0(ak_verification_failed+0xef) [0x7f001dc31eff]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-protocol.so.0(+0xea0f) [0x7f001fd7ca0f]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::ThreadEventQueue::process() 0x197) [0x7f9a5fd08d97]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0(+0x3035f) [0x7f001fa4c35f]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebContent(+0x45f1f) [0x56308fa11f1f]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebContent(+0x46b3b) [0x56308fa12b3b]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::ThreadEventQueue::process() 0x197) [0x7f001fa5dd97]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QCoreApplication::notifyInternal2(QObject*, QEvent*) 0xfd) [0x7f9a6465da2d]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebContent(+0x45f1f) [0x559022cf0f1f]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) 0x19a) [0x7f9a6466136a]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebContent(+0x46b3b) [0x559022cf1b3b]
+/lib/x86_64-linux-gnu/libQt6Core.so.6(+0x37c637) [0x7f9a64886637]
+/home/kushal/src/ladybird/Build/ladybird/bin/../lib/liblagom-ak.so.0(ak_verification_failed+0xef) [0x7fa8de4f1eff]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QCoreApplication::notifyInternal2(QObject*, QEvent*) 0xfd) [0x7f00243b2a2d]
+/lib/x86_64-linux-gnu/libglib-2.0.so.0(g_main_context_dispatch+0x26b) [0x7f9a5d794d3b]
+/home/kushal/src/ladybird/Build/ladybird/bin/Ladybird(+0x53d4c) [0x55ee3aef1d4c]
+/lib/x86_64-linux-gnu/libglib-2.0.so.0(+0xab2b8) [0x7f9a5d7ea2b8]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) 0x19a) [0x7f00243b636a]
+/lib/x86_64-linux-gnu/libglib-2.0.so.0(g_main_context_iteration+0x33) [0x7f9a5d7923e3]
+/lib/x86_64-linux-gnu/libQt6Core.so.6(+0x37c637) [0x7f00245db637]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) 0x6e) [0x7f9a64885eae]
+/home/kushal/src/ladybird/Build/ladybird/bin/../lib/liblagom-webview.so.0 WebView::ViewImplementation::handle_web_content_process_crash() 0xe2) [0x7fa8e40fc9b2]
+/lib/x86_64-linux-gnu/libglib-2.0.so.0(g_main_context_dispatch+0x26b) [0x7f001d4e9d3b]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) 0x17b) [0x7f9a6466aadb]
+/home/kushal/src/ladybird/Build/ladybird/bin/../lib/liblagom-core.so.0(+0x3035f) [0x7fa8e030c35f]
+/lib/x86_64-linux-gnu/libglib-2.0.so.0(+0xab2b8) [0x7f001d53f2b8]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::EventLoop::exec() 0x23) [0x7f9a5fcef883]
+/lib/x86_64-linux-gnu/libglib-2.0.so.0(g_main_context_iteration+0x33) [0x7f001d4e73e3]
+/home/kushal/src/ladybird/Build/ladybird/bin/../lib/liblagom-core.so.0 Core::ThreadEventQueue::process() 0x197) [0x7fa8e031dd97]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebContent(+0x4f5f5) [0x56308fa1b5f5]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) 0x6e) [0x7f00245daeae]
+/home/kushal/src/ladybird/Build/ladybird/bin/Ladybird(+0x3d96f) [0x55ee3aedb96f]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebContent(+0xe4da2) [0x56308fab0da2]
+/home/kushal/src/ladybird/Build/ladybird/bin/Ladybird(+0x3e58b) [0x55ee3aedc58b]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) 0x17b) [0x7f00243bfadb]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7f9a5d998d90]
+/lib/x86_64-linux-gnu/libQt6Widgets.so.6 QApplicationPrivate::notify_helper(QObject*, QEvent*) 0x86) [0x7fa8e3833d36]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7f9a5d998e40]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::EventLoop::exec() 0x23) [0x7f001fa44883]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebContent(+0x44e45) [0x56308fa10e45]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QCoreApplication::notifyInternal2(QObject*, QEvent*) 0x128) [0x7fa8e2b4ba58]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebContent(+0x4f5f5) [0x559022cfa5f5]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebContent(+0xe4da2) [0x559022d8fda2]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QCoreApplicationPrivate::sendPostedEvents(QObject*, int, QThreadData*) 0x19a) [0x7fa8e2b4f36a]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7f001d6edd90]
+/lib/x86_64-linux-gnu/libQt6Core.so.6(+0x37c637) [0x7fa8e2d74637]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7f001d6ede40]
+/lib/x86_64-linux-gnu/libglib-2.0.so.0(g_main_context_dispatch+0x26b) [0x7fa8dd8c5d3b]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebContent(+0x44e45) [0x559022cefe45]
+/lib/x86_64-linux-gnu/libglib-2.0.so.0(+0xab2b8) [0x7fa8dd91b2b8]
+/lib/x86_64-linux-gnu/libglib-2.0.so.0(g_main_context_iteration+0x33) [0x7fa8dd8c33e3]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) 0x6e) [0x7fa8e2d73eae]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) 0x17b) [0x7fa8e2b58adb]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QCoreApplication::exec() 0x93) [0x7fa8e2b540f3]
+/home/kushal/src/ladybird/Build/ladybird/bin/../lib/liblagom-core.so.0 Core::EventLoop::exec() 0x23) [0x7fa8e0304883]
+/home/kushal/src/ladybird/Build/ladybird/bin/Ladybird(+0x596ea) [0x55ee3aef76ea]
+/home/kushal/src/ladybird/Build/ladybird/bin/Ladybird(+0x5a6d2) [0x55ee3aef86d2]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7fa8ddfadd90]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7fa8ddfade40]
+/home/kushal/src/ladybird/Build/ladybird/bin/Ladybird(+0x26c75) [0x55ee3aec4c75]
+./Meta/ladybird.sh: line 171: 61275 Illegal instruction     "$BUILD_DIR/bin/$lagom_bin" "${lagom_args[@]}"
+
+real    21m30.928s
+user    3m30.737s
+sys     0m4.953s
+Fri Jun 21 08:26:50 EDT 2024
 kushal@kus2023:~/src/ladybird$
