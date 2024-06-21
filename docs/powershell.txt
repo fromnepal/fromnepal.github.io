@@ -1,454 +1,3 @@
-kushal@kus2023:~$ time sudo apt install autoconf autoconf-archive automake build-essential cmake libgl1-mesa-dev ninja-build qt6-base-dev qt6-tools-dev-tools qt6-multimedia-dev ccache fonts-liberation2 zip unzip curl tar
-[sudo] password for kushal:
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-curl is already the newest version (7.81.0-1ubuntu1.16).
-curl set to manually installed.
-tar is already the newest version (1.34+dfsg-1ubuntu0.1.22.04.2).
-tar set to manually installed.
-The following additional packages will be installed:
-  at-spi2-core autotools-dev bzip2 cmake-data cpp cpp-11 dh-elpa-helper dpkg-dev fakeroot g++ g++-11 gcc gcc-11 gcc-11-base gstreamer1.0-gl gstreamer1.0-plugins-base libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl
-  libarchive13 libasan6 libatk-bridge2.0-0 libatk1.0-0 libatk1.0-data libatomic1 libatspi2.0-0 libb2-1 libblkid-dev libc-dev-bin libc-devtools libc6-dev libcc1-0 libcdparanoia0 libcrypt-dev libdouble-conversion3 libdpkg-perl libdrm-amdgpu1
-  libdrm-intel1 libdrm-nouveau2 libdrm-radeon1 libegl-dev libegl-mesa0 libegl1 libevdev2 libfakeroot libffi-dev libfile-fcntllock-perl libgbm1 libgcc-11-dev libgd3 libgl-dev libgl1 libgl1-amber-dri libgl1-mesa-dri libglapi-mesa libgles-dev libgles1
-  libgles2 libglib2.0-dev libglib2.0-dev-bin libglvnd-core-dev libglvnd-dev libglvnd0 libglx-dev libglx-mesa0 libglx0 libgomp1 libgstreamer-gl1.0-0 libgstreamer-plugins-base1.0-0 libgtk-3-0 libgtk-3-bin libgtk-3-common libgudev-1.0-0 libhiredis0.14
-  libice6 libinput-bin libinput10 libisl23 libitm1 libjsoncpp25 libllvm15 liblsan0 libmd4c0 libmount-dev libmpc3 libmtdev1 libnsl-dev libogg0 libopengl-dev libopengl0 libopus0 liborc-0.4-0 libpciaccess0 libpcre16-3 libpcre2-16-0 libpcre2-32-0
-  libpcre2-dev libpcre2-posix3 libpcre3-dev libpcre32-3 libpcrecpp0v5 libproxy1v5 libpthread-stubs0-dev libqt6concurrent6 libqt6core6 libqt6dbus6 libqt6gui6 libqt6multimedia6 libqt6multimediaquick6 libqt6multimediawidgets6 libqt6network6
-  libqt6opengl6 libqt6opengl6-dev libqt6openglwidgets6 libqt6printsupport6 libqt6qml6 libqt6qmlmodels6 libqt6quick6 libqt6sql6 libqt6sql6-sqlite libqt6test6 libqt6widgets6 libqt6xml6 libquadmath0 librhash0 libselinux1-dev libsensors-config
-  libsensors5 libsepol-dev libsm6 libstdc++-11-dev libtheora0 libtirpc-dev libts0 libtsan0 libubsan1 libvisual-0.4-0 libvorbis0a libvorbisenc2 libwacom-bin libwacom-common libwacom9 libwayland-cursor0 libwayland-server0 libx11-dev libx11-xcb1
-  libxau-dev libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-present0 libxcb-randr0 libxcb-render-util0 libxcb-shape0 libxcb-sync1 libxcb-util1 libxcb-xfixes0 libxcb-xinput0 libxcb-xkb1 libxcb1-dev
-  libxcomposite1 libxdmcp-dev libxkbcommon-x11-0 libxpm4 libxshmfence1 libxtst6 libxxf86vm1 linux-libc-dev lto-disabled-list m4 make manpages-dev pkg-config python3-distutils python3-lib2to3 qmake6 qmake6-bin qt6-base-dev-tools qt6-gtk-platformtheme
-  qt6-qpa-plugins qtchooser rpcsvc-proto uuid-dev x11-common x11proto-dev xorg-sgml-doctools xtrans-dev zlib1g-dev
-Suggested packages:
-  gnu-standards autoconf-doc libtool gettext bzip2-doc distcc | icecc cmake-doc cmake-format cpp-doc gcc-11-locales debian-keyring g++-multilib g++-11-multilib gcc-11-doc gcc-multilib flex bison gdb gcc-doc gcc-11-multilib gvfs lrzip glibc-doc bzr
-  libgd-tools libgirepository1.0-dev libglib2.0-doc libxml2-utils libvisual-0.4-plugins opus-tools qt6-qmltooling-plugins lm-sensors libstdc++-11-doc libx11-doc libxcb-doc m4-doc make-doc
-The following NEW packages will be installed:
-  at-spi2-core autoconf autoconf-archive automake autotools-dev build-essential bzip2 ccache cmake cmake-data cpp cpp-11 dh-elpa-helper dpkg-dev fakeroot fonts-liberation2 g++ g++-11 gcc gcc-11 gcc-11-base gstreamer1.0-gl gstreamer1.0-plugins-base
-  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libarchive13 libasan6 libatk-bridge2.0-0 libatk1.0-0 libatk1.0-data libatomic1 libatspi2.0-0 libb2-1 libblkid-dev libc-dev-bin libc-devtools libc6-dev libcc1-0 libcdparanoia0
-  libcrypt-dev libdouble-conversion3 libdpkg-perl libdrm-amdgpu1 libdrm-intel1 libdrm-nouveau2 libdrm-radeon1 libegl-dev libegl-mesa0 libegl1 libevdev2 libfakeroot libffi-dev libfile-fcntllock-perl libgbm1 libgcc-11-dev libgd3 libgl-dev libgl1
-  libgl1-amber-dri libgl1-mesa-dev libgl1-mesa-dri libglapi-mesa libgles-dev libgles1 libgles2 libglib2.0-dev libglib2.0-dev-bin libglvnd-core-dev libglvnd-dev libglvnd0 libglx-dev libglx-mesa0 libglx0 libgomp1 libgstreamer-gl1.0-0
-  libgstreamer-plugins-base1.0-0 libgtk-3-0 libgtk-3-bin libgtk-3-common libgudev-1.0-0 libhiredis0.14 libice6 libinput-bin libinput10 libisl23 libitm1 libjsoncpp25 libllvm15 liblsan0 libmd4c0 libmount-dev libmpc3 libmtdev1 libnsl-dev libogg0
-  libopengl-dev libopengl0 libopus0 liborc-0.4-0 libpciaccess0 libpcre16-3 libpcre2-16-0 libpcre2-32-0 libpcre2-dev libpcre2-posix3 libpcre3-dev libpcre32-3 libpcrecpp0v5 libproxy1v5 libpthread-stubs0-dev libqt6concurrent6 libqt6core6 libqt6dbus6
-  libqt6gui6 libqt6multimedia6 libqt6multimediaquick6 libqt6multimediawidgets6 libqt6network6 libqt6opengl6 libqt6opengl6-dev libqt6openglwidgets6 libqt6printsupport6 libqt6qml6 libqt6qmlmodels6 libqt6quick6 libqt6sql6 libqt6sql6-sqlite libqt6test6
-  libqt6widgets6 libqt6xml6 libquadmath0 librhash0 libselinux1-dev libsensors-config libsensors5 libsepol-dev libsm6 libstdc++-11-dev libtheora0 libtirpc-dev libts0 libtsan0 libubsan1 libvisual-0.4-0 libvorbis0a libvorbisenc2 libwacom-bin
-  libwacom-common libwacom9 libwayland-cursor0 libwayland-server0 libx11-dev libx11-xcb1 libxau-dev libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-present0 libxcb-randr0 libxcb-render-util0 libxcb-shape0
-  libxcb-sync1 libxcb-util1 libxcb-xfixes0 libxcb-xinput0 libxcb-xkb1 libxcb1-dev libxcomposite1 libxdmcp-dev libxkbcommon-x11-0 libxpm4 libxshmfence1 libxtst6 libxxf86vm1 linux-libc-dev lto-disabled-list m4 make manpages-dev ninja-build pkg-config
-  python3-distutils python3-lib2to3 qmake6 qmake6-bin qt6-base-dev qt6-base-dev-tools qt6-gtk-platformtheme qt6-multimedia-dev qt6-qpa-plugins qt6-tools-dev-tools qtchooser rpcsvc-proto unzip uuid-dev x11-common x11proto-dev xorg-sgml-doctools
-  xtrans-dev zip zlib1g-dev
-0 upgraded, 205 newly installed, 0 to remove and 0 not upgraded.
-Need to get 145 MB of archives.
-After this operation, 560 MB of additional disk space will be used.
-Do you want to continue? [Y/n]
-Get:1 http://archive.ubuntu.com/ubuntu jammy/universe amd64 autoconf-archive all 20210219-2.1 [676 kB]
-Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libatspi2.0-0 amd64 2.44.0-3 [80.9 kB]
-Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 x11-common all 1:7.7+23ubuntu2 [23.4 kB]
-Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxtst6 amd64 2:1.2.3-1build4 [13.4 kB]
-Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 at-spi2-core amd64 2.44.0-3 [54.4 kB]
-Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 m4 amd64 1.4.18-5ubuntu2 [199 kB]
-Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 autoconf all 2.71-2 [338 kB]
-Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 autotools-dev all 20220109.1 [44.9 kB]
-Get:9 http://archive.ubuntu.com/ubuntu jammy/main amd64 automake all 1:1.16.5-1.3 [558 kB]
-Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc-dev-bin amd64 2.35-0ubuntu3.8 [20.3 kB]
-Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 linux-libc-dev amd64 5.15.0-112.122 [1342 kB]
-Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 libcrypt-dev amd64 1:4.4.27-1 [112 kB]
-Get:13 http://archive.ubuntu.com/ubuntu jammy/main amd64 rpcsvc-proto amd64 1.4.2-0ubuntu6 [68.5 kB]
-Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtirpc-dev amd64 1.3.2-2ubuntu0.1 [192 kB]
-Get:15 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnsl-dev amd64 1.3.0-2build2 [71.3 kB]
-Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc6-dev amd64 2.35-0ubuntu3.8 [2100 kB]
-Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-base amd64 11.4.0-1ubuntu1~22.04 [20.2 kB]
-Get:18 http://archive.ubuntu.com/ubuntu jammy/main amd64 libisl23 amd64 0.24-2build1 [727 kB]
-Get:19 http://archive.ubuntu.com/ubuntu jammy/main amd64 libmpc3 amd64 1.2.1-2build1 [46.9 kB]
-Get:20 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 cpp-11 amd64 11.4.0-1ubuntu1~22.04 [10.0 MB]
-Get:21 http://archive.ubuntu.com/ubuntu jammy/main amd64 cpp amd64 4:11.2.0-1ubuntu1 [27.7 kB]
-Get:22 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcc1-0 amd64 12.3.0-1ubuntu1~22.04 [48.3 kB]
-Get:23 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgomp1 amd64 12.3.0-1ubuntu1~22.04 [126 kB]
-Get:24 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libitm1 amd64 12.3.0-1ubuntu1~22.04 [30.2 kB]
-Get:25 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libatomic1 amd64 12.3.0-1ubuntu1~22.04 [10.4 kB]
-Get:26 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libasan6 amd64 11.4.0-1ubuntu1~22.04 [2282 kB]
-Get:27 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 liblsan0 amd64 12.3.0-1ubuntu1~22.04 [1069 kB]
-Get:28 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtsan0 amd64 11.4.0-1ubuntu1~22.04 [2260 kB]
-Get:29 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libubsan1 amd64 12.3.0-1ubuntu1~22.04 [976 kB]
-Get:30 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libquadmath0 amd64 12.3.0-1ubuntu1~22.04 [154 kB]
-Get:31 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgcc-11-dev amd64 11.4.0-1ubuntu1~22.04 [2517 kB]
-Get:32 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11 amd64 11.4.0-1ubuntu1~22.04 [20.1 MB]
-Get:33 http://archive.ubuntu.com/ubuntu jammy/main amd64 gcc amd64 4:11.2.0-1ubuntu1 [5112 B]
-Get:34 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libstdc++-11-dev amd64 11.4.0-1ubuntu1~22.04 [2101 kB]
-Get:35 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 g++-11 amd64 11.4.0-1ubuntu1~22.04 [11.4 MB]
-Get:36 http://archive.ubuntu.com/ubuntu jammy/main amd64 g++ amd64 4:11.2.0-1ubuntu1 [1412 B]
-Get:37 http://archive.ubuntu.com/ubuntu jammy/main amd64 make amd64 4.3-4.1build1 [180 kB]
-Get:38 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libdpkg-perl all 1.21.1ubuntu2.3 [237 kB]
-Get:39 http://archive.ubuntu.com/ubuntu jammy/main amd64 bzip2 amd64 1.0.8-5build1 [34.8 kB]
-Get:40 http://archive.ubuntu.com/ubuntu jammy/main amd64 lto-disabled-list all 24 [12.5 kB]
-Get:41 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 dpkg-dev all 1.21.1ubuntu2.3 [922 kB]
-Get:42 http://archive.ubuntu.com/ubuntu jammy/main amd64 build-essential amd64 12.9ubuntu3 [4744 B]
-Get:43 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libhiredis0.14 amd64 0.14.1-2 [32.8 kB]
-Get:44 http://archive.ubuntu.com/ubuntu jammy/universe amd64 ccache amd64 4.5.1-1 [495 kB]
-Get:45 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libarchive13 amd64 3.6.0-1ubuntu1.1 [369 kB]
-Get:46 http://archive.ubuntu.com/ubuntu jammy/main amd64 libjsoncpp25 amd64 1.9.5-3 [80.0 kB]
-Get:47 http://archive.ubuntu.com/ubuntu jammy/main amd64 librhash0 amd64 1.4.2-1ubuntu1 [125 kB]
-Get:48 http://archive.ubuntu.com/ubuntu jammy/main amd64 dh-elpa-helper all 2.0.9ubuntu1 [7610 B]
-Get:49 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 cmake-data all 3.22.1-1ubuntu1.22.04.2 [1913 kB]
-Get:50 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 cmake amd64 3.22.1-1ubuntu1.22.04.2 [5010 kB]
-Get:51 http://archive.ubuntu.com/ubuntu jammy/main amd64 libfakeroot amd64 1.28-1ubuntu1 [31.5 kB]
-Get:52 http://archive.ubuntu.com/ubuntu jammy/main amd64 fakeroot amd64 1.28-1ubuntu1 [60.4 kB]
-Get:53 http://archive.ubuntu.com/ubuntu jammy/main amd64 fonts-liberation2 all 2.1.5-1 [1614 kB]
-Get:54 http://archive.ubuntu.com/ubuntu jammy/main amd64 libglvnd0 amd64 1.4.0-1 [73.6 kB]
-Get:55 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libwayland-server0 amd64 1.20.0-1ubuntu0.1 [34.3 kB]
-Get:56 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb-randr0 amd64 1.14-3ubuntu3 [18.3 kB]
-Get:57 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgbm1 amd64 23.2.1-1ubuntu3.1~22.04.2 [33.5 kB]
-Get:58 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libglapi-mesa amd64 23.2.1-1ubuntu3.1~22.04.2 [37.1 kB]
-Get:59 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx11-xcb1 amd64 2:1.7.5-1ubuntu0.3 [7802 B]
-Get:60 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb-dri2-0 amd64 1.14-3ubuntu3 [7206 B]
-Get:61 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb-dri3-0 amd64 1.14-3ubuntu3 [6968 B]
-Get:62 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb-present0 amd64 1.14-3ubuntu3 [5734 B]
-Get:63 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb-sync1 amd64 1.14-3ubuntu3 [9416 B]
-Get:64 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb-xfixes0 amd64 1.14-3ubuntu3 [9996 B]
-Get:65 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxshmfence1 amd64 1.3-1build4 [5394 B]
-Get:66 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libegl-mesa0 amd64 23.2.1-1ubuntu3.1~22.04.2 [118 kB]
-Get:67 http://archive.ubuntu.com/ubuntu jammy/main amd64 libegl1 amd64 1.4.0-1 [28.6 kB]
-Get:68 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb-glx0 amd64 1.14-3ubuntu3 [25.9 kB]
-Get:69 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxxf86vm1 amd64 1:1.1.4-1build3 [10.4 kB]
-Get:70 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libdrm-amdgpu1 amd64 2.4.113-2~ubuntu0.22.04.1 [19.9 kB]
-Get:71 http://archive.ubuntu.com/ubuntu jammy/main amd64 libpciaccess0 amd64 0.16-3 [19.1 kB]
-Get:72 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libdrm-intel1 amd64 2.4.113-2~ubuntu0.22.04.1 [66.7 kB]
-Get:73 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libdrm-nouveau2 amd64 2.4.113-2~ubuntu0.22.04.1 [17.5 kB]
-Get:74 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libdrm-radeon1 amd64 2.4.113-2~ubuntu0.22.04.1 [21.6 kB]
-Get:75 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libllvm15 amd64 1:15.0.7-0ubuntu0.22.04.3 [25.4 MB]
-Get:76 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsensors-config all 1:3.6.0-7ubuntu1 [5274 B]
-Get:77 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsensors5 amd64 1:3.6.0-7ubuntu1 [26.3 kB]
-Get:78 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgl1-mesa-dri amd64 23.2.1-1ubuntu3.1~22.04.2 [8860 kB]
-Get:79 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libglx-mesa0 amd64 23.2.1-1ubuntu3.1~22.04.2 [158 kB]
-Get:80 http://archive.ubuntu.com/ubuntu jammy/main amd64 libglx0 amd64 1.4.0-1 [41.0 kB]
-Get:81 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgl1 amd64 1.4.0-1 [110 kB]
-Get:82 http://archive.ubuntu.com/ubuntu jammy/main amd64 liborc-0.4-0 amd64 1:0.4.32-2 [228 kB]
-Get:83 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgstreamer-plugins-base1.0-0 amd64 1.20.1-1ubuntu0.2 [848 kB]
-Get:84 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgudev-1.0-0 amd64 1:237-2build1 [16.3 kB]
-Get:85 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libwayland-cursor0 amd64 1.20.0-1ubuntu0.1 [10.7 kB]
-Get:86 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgstreamer-gl1.0-0 amd64 1.20.1-1ubuntu0.2 [204 kB]
-Get:87 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gstreamer1.0-gl amd64 1.20.1-1ubuntu0.2 [125 kB]
-Get:88 http://archive.ubuntu.com/ubuntu jammy/main amd64 libcdparanoia0 amd64 3.10.2+debian-14build2 [49.3 kB]
-Get:89 http://archive.ubuntu.com/ubuntu jammy/main amd64 libogg0 amd64 1.3.5-0ubuntu3 [22.9 kB]
-Get:90 http://archive.ubuntu.com/ubuntu jammy/main amd64 libopus0 amd64 1.3.1-0.1build2 [203 kB]
-Get:91 http://archive.ubuntu.com/ubuntu jammy/main amd64 libtheora0 amd64 1.1.1+dfsg.1-15ubuntu4 [209 kB]
-Get:92 http://archive.ubuntu.com/ubuntu jammy/main amd64 libvisual-0.4-0 amd64 0.4.0-17build2 [108 kB]
-Get:93 http://archive.ubuntu.com/ubuntu jammy/main amd64 libvorbis0a amd64 1.3.7-1build2 [99.2 kB]
-Get:94 http://archive.ubuntu.com/ubuntu jammy/main amd64 libvorbisenc2 amd64 1.3.7-1build2 [82.6 kB]
-Get:95 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gstreamer1.0-plugins-base amd64 1.20.1-1ubuntu0.2 [712 kB]
-Get:96 http://archive.ubuntu.com/ubuntu jammy/main amd64 libalgorithm-diff-perl all 1.201-1 [41.8 kB]
-Get:97 http://archive.ubuntu.com/ubuntu jammy/main amd64 libalgorithm-diff-xs-perl amd64 0.04-6build3 [11.9 kB]
-Get:98 http://archive.ubuntu.com/ubuntu jammy/main amd64 libalgorithm-merge-perl all 0.08-3 [12.0 kB]
-Get:99 http://archive.ubuntu.com/ubuntu jammy/main amd64 libatk1.0-data all 2.36.0-3build1 [2824 B]
-Get:100 http://archive.ubuntu.com/ubuntu jammy/main amd64 libatk1.0-0 amd64 2.36.0-3build1 [51.9 kB]
-Get:101 http://archive.ubuntu.com/ubuntu jammy/main amd64 libatk-bridge2.0-0 amd64 2.38.0-3 [66.6 kB]
-Get:102 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libb2-1 amd64 0.98.1-1.1 [40.6 kB]
-Get:103 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libxpm4 amd64 1:3.5.12-1ubuntu0.22.04.2 [36.7 kB]
-Get:104 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgd3 amd64 2.3.0-2ubuntu2 [129 kB]
-Get:105 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc-devtools amd64 2.35-0ubuntu3.8 [28.9 kB]
-Get:106 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libdouble-conversion3 amd64 3.1.7-4 [39.0 kB]
-Get:107 http://archive.ubuntu.com/ubuntu jammy/main amd64 xorg-sgml-doctools all 1:1.11-1.1 [10.9 kB]
-Get:108 http://archive.ubuntu.com/ubuntu jammy/main amd64 x11proto-dev all 2021.5-1 [604 kB]
-Get:109 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxau-dev amd64 1:1.0.9-1build5 [9724 B]
-Get:110 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxdmcp-dev amd64 1:1.1.3-0ubuntu5 [26.5 kB]
-Get:111 http://archive.ubuntu.com/ubuntu jammy/main amd64 xtrans-dev all 1.4.0-1 [68.9 kB]
-Get:112 http://archive.ubuntu.com/ubuntu jammy/main amd64 libpthread-stubs0-dev amd64 0.4-1build2 [5516 B]
-Get:113 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb1-dev amd64 1.14-3ubuntu3 [86.5 kB]
-Get:114 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libx11-dev amd64 2:1.7.5-1ubuntu0.3 [744 kB]
-Get:115 http://archive.ubuntu.com/ubuntu jammy/main amd64 libglx-dev amd64 1.4.0-1 [14.1 kB]
-Get:116 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgl-dev amd64 1.4.0-1 [101 kB]
-Get:117 http://archive.ubuntu.com/ubuntu jammy/main amd64 libegl-dev amd64 1.4.0-1 [18.0 kB]
-Get:118 http://archive.ubuntu.com/ubuntu jammy/main amd64 libfile-fcntllock-perl amd64 0.22-3build7 [33.9 kB]
-Get:119 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgl1-amber-dri amd64 21.3.9-0ubuntu1~22.04.1 [4218 kB]
-Get:120 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgles1 amd64 1.4.0-1 [11.5 kB]
-Get:121 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgles2 amd64 1.4.0-1 [18.0 kB]
-Get:122 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgles-dev amd64 1.4.0-1 [49.4 kB]
-Get:123 http://archive.ubuntu.com/ubuntu jammy/main amd64 libffi-dev amd64 3.4.2-4 [63.7 kB]
-Get:124 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-lib2to3 all 3.10.8-1~22.04 [77.6 kB]
-Get:125 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-distutils all 3.10.8-1~22.04 [139 kB]
-Get:126 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libglib2.0-dev-bin amd64 2.72.4-0ubuntu2.3 [117 kB]
-Get:127 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 uuid-dev amd64 2.37.2-4ubuntu3.4 [33.1 kB]
-Get:128 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libblkid-dev amd64 2.37.2-4ubuntu3.4 [185 kB]
-Get:129 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsepol-dev amd64 3.3-1build1 [378 kB]
-Get:130 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpcre2-16-0 amd64 10.39-3ubuntu0.1 [203 kB]
-Get:131 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpcre2-32-0 amd64 10.39-3ubuntu0.1 [194 kB]
-Get:132 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpcre2-posix3 amd64 10.39-3ubuntu0.1 [6130 B]
-Get:133 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpcre2-dev amd64 10.39-3ubuntu0.1 [730 kB]
-Get:134 http://archive.ubuntu.com/ubuntu jammy/main amd64 libselinux1-dev amd64 3.3-1build2 [158 kB]
-Get:135 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libmount-dev amd64 2.37.2-4ubuntu3.4 [14.5 kB]
-Get:136 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpcre16-3 amd64 2:8.39-13ubuntu0.22.04.1 [164 kB]
-Get:137 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpcre32-3 amd64 2:8.39-13ubuntu0.22.04.1 [155 kB]
-Get:138 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpcrecpp0v5 amd64 2:8.39-13ubuntu0.22.04.1 [16.5 kB]
-Get:139 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpcre3-dev amd64 2:8.39-13ubuntu0.22.04.1 [579 kB]
-Get:140 http://archive.ubuntu.com/ubuntu jammy/main amd64 pkg-config amd64 0.29.2-1ubuntu3 [48.2 kB]
-Get:141 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 zlib1g-dev amd64 1:1.2.11.dfsg-2ubuntu9.2 [164 kB]
-Get:142 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libglib2.0-dev amd64 2.72.4-0ubuntu2.3 [1743 kB]
-Get:143 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcomposite1 amd64 1:0.4.5-1build2 [7192 B]
-Get:144 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgtk-3-common all 3.24.33-1ubuntu2.1 [239 kB]
-Get:145 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgtk-3-0 amd64 3.24.33-1ubuntu2.1 [3053 kB]
-Get:146 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgtk-3-bin amd64 3.24.33-1ubuntu2.1 [69.6 kB]
-Get:147 http://archive.ubuntu.com/ubuntu jammy/main amd64 libice6 amd64 2:1.0.10-1build2 [42.6 kB]
-Get:148 http://archive.ubuntu.com/ubuntu jammy/main amd64 libevdev2 amd64 1.12.1+dfsg-1 [39.5 kB]
-Get:149 http://archive.ubuntu.com/ubuntu jammy/main amd64 libwacom-common all 2.2.0-1 [54.3 kB]
-Get:150 http://archive.ubuntu.com/ubuntu jammy/main amd64 libwacom9 amd64 2.2.0-1 [22.0 kB]
-Get:151 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libinput-bin amd64 1.20.0-1ubuntu0.3 [19.9 kB]
-Get:152 http://archive.ubuntu.com/ubuntu jammy/main amd64 libmtdev1 amd64 1.1.6-1build4 [14.5 kB]
-Get:153 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libinput10 amd64 1.20.0-1ubuntu0.3 [131 kB]
-Get:154 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libmd4c0 amd64 0.4.8-1 [42.0 kB]
-Get:155 http://archive.ubuntu.com/ubuntu jammy/main amd64 libopengl0 amd64 1.4.0-1 [36.5 kB]
-Get:156 http://archive.ubuntu.com/ubuntu jammy/main amd64 libopengl-dev amd64 1.4.0-1 [3400 B]
-Get:157 http://archive.ubuntu.com/ubuntu jammy/main amd64 libproxy1v5 amd64 0.4.17-2 [51.9 kB]
-Get:158 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libqt6core6 amd64 6.2.4+dfsg-2ubuntu1.1 [1789 kB]
-Get:159 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libqt6concurrent6 amd64 6.2.4+dfsg-2ubuntu1.1 [33.8 kB]
-Get:160 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libqt6dbus6 amd64 6.2.4+dfsg-2ubuntu1.1 [292 kB]
-Get:161 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libqt6gui6 amd64 6.2.4+dfsg-2ubuntu1.1 [2577 kB]
-Get:162 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libqt6network6 amd64 6.2.4+dfsg-2ubuntu1.1 [645 kB]
-Get:163 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libqt6multimedia6 amd64 6.2.4-1 [348 kB]
-Get:164 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libqt6qml6 amd64 6.2.4+dfsg-3ubuntu1 [1658 kB]
-Get:165 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libqt6opengl6 amd64 6.2.4+dfsg-2ubuntu1.1 [236 kB]
-Get:166 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libqt6qmlmodels6 amd64 6.2.4+dfsg-3ubuntu1 [249 kB]
-Get:167 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libqt6quick6 amd64 6.2.4+dfsg-3ubuntu1 [1963 kB]
-Get:168 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libqt6multimediaquick6 amd64 6.2.4-1 [52.1 kB]
-Get:169 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libqt6widgets6 amd64 6.2.4+dfsg-2ubuntu1.1 [2627 kB]
-Get:170 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libqt6multimediawidgets6 amd64 6.2.4-1 [18.6 kB]
-Get:171 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libqt6openglwidgets6 amd64 6.2.4+dfsg-2ubuntu1.1 [40.6 kB]
-Get:172 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libqt6printsupport6 amd64 6.2.4+dfsg-2ubuntu1.1 [227 kB]
-Get:173 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libqt6sql6 amd64 6.2.4+dfsg-2ubuntu1.1 [145 kB]
-Get:174 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libqt6test6 amd64 6.2.4+dfsg-2ubuntu1.1 [163 kB]
-Get:175 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libqt6xml6 amd64 6.2.4+dfsg-2ubuntu1.1 [80.3 kB]
-Get:176 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 qmake6-bin amd64 6.2.4+dfsg-2ubuntu1.1 [644 kB]
-Get:177 http://archive.ubuntu.com/ubuntu jammy/universe amd64 qtchooser amd64 66-2build1 [24.7 kB]
-Get:178 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 qmake6 amd64 6.2.4+dfsg-2ubuntu1.1 [178 kB]
-Get:179 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 qt6-base-dev-tools amd64 6.2.4+dfsg-2ubuntu1.1 [1074 kB]
-Get:180 http://archive.ubuntu.com/ubuntu jammy/main amd64 libsm6 amd64 2:1.2.3-1build2 [16.7 kB]
-Get:181 http://archive.ubuntu.com/ubuntu jammy/universe amd64 libts0 amd64 1.22-1 [62.0 kB]
-Get:182 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb-icccm4 amd64 0.4.1-1.1build2 [11.5 kB]
-Get:183 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb-util1 amd64 0.4.0-1build2 [11.4 kB]
-Get:184 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb-image0 amd64 0.4.0-2 [11.5 kB]
-Get:185 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb-keysyms1 amd64 0.4.0-1build3 [8746 B]
-Get:186 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb-render-util0 amd64 0.3.9-1build3 [10.3 kB]
-Get:187 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb-shape0 amd64 1.14-3ubuntu3 [6158 B]
-Get:188 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb-xinput0 amd64 1.14-3ubuntu3 [34.3 kB]
-Get:189 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb-xkb1 amd64 1.14-3ubuntu3 [32.8 kB]
-Get:190 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxkbcommon-x11-0 amd64 1.4.0-1 [14.4 kB]
-Get:191 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 qt6-qpa-plugins amd64 6.2.4+dfsg-2ubuntu1.1 [867 kB]
-Get:192 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 qt6-base-dev amd64 6.2.4+dfsg-2ubuntu1.1 [1338 kB]
-Get:193 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libqt6opengl6-dev amd64 6.2.4+dfsg-2ubuntu1.1 [109 kB]
-Get:194 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libqt6sql6-sqlite amd64 6.2.4+dfsg-2ubuntu1.1 [58.6 kB]
-Get:195 http://archive.ubuntu.com/ubuntu jammy/main amd64 libwacom-bin amd64 2.2.0-1 [13.6 kB]
-Get:196 http://archive.ubuntu.com/ubuntu jammy/main amd64 manpages-dev all 5.10-1ubuntu1 [2309 kB]
-Get:197 http://archive.ubuntu.com/ubuntu jammy/universe amd64 ninja-build amd64 1.10.1-1 [111 kB]
-Get:198 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 qt6-gtk-platformtheme amd64 6.2.4+dfsg-2ubuntu1.1 [59.0 kB]
-Get:199 http://archive.ubuntu.com/ubuntu jammy/universe amd64 qt6-multimedia-dev amd64 6.2.4-1 [40.3 kB]
-Get:200 http://archive.ubuntu.com/ubuntu jammy/universe amd64 qt6-tools-dev-tools amd64 6.2.4-1 [310 kB]
-Get:201 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 unzip amd64 6.0-26ubuntu3.2 [175 kB]
-Get:202 http://archive.ubuntu.com/ubuntu jammy/main amd64 zip amd64 3.0-12build2 [176 kB]
-Get:203 http://archive.ubuntu.com/ubuntu jammy/main amd64 libglvnd-core-dev amd64 1.4.0-1 [12.7 kB]
-Get:204 http://archive.ubuntu.com/ubuntu jammy/main amd64 libglvnd-dev amd64 1.4.0-1 [3162 B]
-Get:205 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgl1-mesa-dev amd64 23.2.1-1ubuntu3.1~22.04.2 [6842 B]
-Fetched 145 MB in 9s (16.0 MB/s)
-Extracting templates from packages: 100%
-Selecting previously unselected package autoconf-archive.
-(Reading database ... 39492 files and directories currently installed.)
-Preparing to unpack .../000-autoconf-archive_20210219-2.1_all.deb ...
-Unpacking autoconf-archive (20210219-2.1) ...
-Selecting previously unselected package libatspi2.0-0:amd64.
-Preparing to unpack .../001-libatspi2.0-0_2.44.0-3_amd64.deb ...
-Unpacking libatspi2.0-0:amd64 (2.44.0-3) ...
-Selecting previously unselected package x11-common.
-Preparing to unpack .../002-x11-common_1%3a7.7+23ubuntu2_all.deb ...
-Unpacking x11-common (1:7.7+23ubuntu2) ...
-Selecting previously unselected package libxtst6:amd64.
-Preparing to unpack .../003-libxtst6_2%3a1.2.3-1build4_amd64.deb ...
-Unpacking libxtst6:amd64 (2:1.2.3-1build4) ...
-Selecting previously unselected package at-spi2-core.
-Preparing to unpack .../004-at-spi2-core_2.44.0-3_amd64.deb ...
-Unpacking at-spi2-core (2.44.0-3) ...
-Selecting previously unselected package m4.
-Preparing to unpack .../005-m4_1.4.18-5ubuntu2_amd64.deb ...
-Unpacking m4 (1.4.18-5ubuntu2) ...
-Selecting previously unselected package autoconf.
-Preparing to unpack .../006-autoconf_2.71-2_all.deb ...
-Unpacking autoconf (2.71-2) ...
-Selecting previously unselected package autotools-dev.
-Preparing to unpack .../007-autotools-dev_20220109.1_all.deb ...
-Unpacking autotools-dev (20220109.1) ...
-Selecting previously unselected package automake.
-Preparing to unpack .../008-automake_1%3a1.16.5-1.3_all.deb ...
-Unpacking automake (1:1.16.5-1.3) ...
-Selecting previously unselected package libc-dev-bin.
-Preparing to unpack .../009-libc-dev-bin_2.35-0ubuntu3.8_amd64.deb ...
-Unpacking libc-dev-bin (2.35-0ubuntu3.8) ...
-Selecting previously unselected package linux-libc-dev:amd64.
-Preparing to unpack .../010-linux-libc-dev_5.15.0-112.122_amd64.deb ...
-Unpacking linux-libc-dev:amd64 (5.15.0-112.122) ...
-Selecting previously unselected package libcrypt-dev:amd64.
-Preparing to unpack .../011-libcrypt-dev_1%3a4.4.27-1_amd64.deb ...
-Unpacking libcrypt-dev:amd64 (1:4.4.27-1) ...
-Selecting previously unselected package rpcsvc-proto.
-Preparing to unpack .../012-rpcsvc-proto_1.4.2-0ubuntu6_amd64.deb ...
-Unpacking rpcsvc-proto (1.4.2-0ubuntu6) ...
-Selecting previously unselected package libtirpc-dev:amd64.
-Preparing to unpack .../013-libtirpc-dev_1.3.2-2ubuntu0.1_amd64.deb ...
-Unpacking libtirpc-dev:amd64 (1.3.2-2ubuntu0.1) ...
-Selecting previously unselected package libnsl-dev:amd64.
-Preparing to unpack .../014-libnsl-dev_1.3.0-2build2_amd64.deb ...
-Unpacking libnsl-dev:amd64 (1.3.0-2build2) ...
-Selecting previously unselected package libc6-dev:amd64.
-Preparing to unpack .../015-libc6-dev_2.35-0ubuntu3.8_amd64.deb ...
-Unpacking libc6-dev:amd64 (2.35-0ubuntu3.8) ...
-Selecting previously unselected package gcc-11-base:amd64.
-Preparing to unpack .../016-gcc-11-base_11.4.0-1ubuntu1~22.04_amd64.deb ...
-Unpacking gcc-11-base:amd64 (11.4.0-1ubuntu1~22.04) ...
-Selecting previously unselected package libisl23:amd64.
-Preparing to unpack .../017-libisl23_0.24-2build1_amd64.deb ...
-Unpacking libisl23:amd64 (0.24-2build1) ...
-Selecting previously unselected package libmpc3:amd64.
-Preparing to unpack .../018-libmpc3_1.2.1-2build1_amd64.deb ...
-Unpacking libmpc3:amd64 (1.2.1-2build1) ...
-Selecting previously unselected package cpp-11.
-Preparing to unpack .../019-cpp-11_11.4.0-1ubuntu1~22.04_amd64.deb ...
-Unpacking cpp-11 (11.4.0-1ubuntu1~22.04) ...
-Selecting previously unselected package cpp.
-Preparing to unpack .../020-cpp_4%3a11.2.0-1ubuntu1_amd64.deb ...
-Unpacking cpp (4:11.2.0-1ubuntu1) ...
-Selecting previously unselected package libcc1-0:amd64.
-Preparing to unpack .../021-libcc1-0_12.3.0-1ubuntu1~22.04_amd64.deb ...
-Unpacking libcc1-0:amd64 (12.3.0-1ubuntu1~22.04) ...
-Selecting previously unselected package libgomp1:amd64.
-Preparing to unpack .../022-libgomp1_12.3.0-1ubuntu1~22.04_amd64.deb ...
-Unpacking libgomp1:amd64 (12.3.0-1ubuntu1~22.04) ...
-Selecting previously unselected package libitm1:amd64.
-Preparing to unpack .../023-libitm1_12.3.0-1ubuntu1~22.04_amd64.deb ...
-Unpacking libitm1:amd64 (12.3.0-1ubuntu1~22.04) ...
-Selecting previously unselected package libatomic1:amd64.
-Preparing to unpack .../024-libatomic1_12.3.0-1ubuntu1~22.04_amd64.deb ...
-Unpacking libatomic1:amd64 (12.3.0-1ubuntu1~22.04) ...
-Selecting previously unselected package libasan6:amd64.
-Preparing to unpack .../025-libasan6_11.4.0-1ubuntu1~22.04_amd64.deb ...
-Unpacking libasan6:amd64 (11.4.0-1ubuntu1~22.04) ...
-Selecting previously unselected package liblsan0:amd64.
-Preparing to unpack .../026-liblsan0_12.3.0-1ubuntu1~22.04_amd64.deb ...
-Unpacking liblsan0:amd64 (12.3.0-1ubuntu1~22.04) ...
-Selecting previously unselected package libtsan0:amd64.
-Preparing to unpack .../027-libtsan0_11.4.0-1ubuntu1~22.04_amd64.deb ...
-Unpacking libtsan0:amd64 (11.4.0-1ubuntu1~22.04) ...
-Selecting previously unselected package libubsan1:amd64.
-Preparing to unpack .../028-libubsan1_12.3.0-1ubuntu1~22.04_amd64.deb ...
-Unpacking libubsan1:amd64 (12.3.0-1ubuntu1~22.04) ...
-Selecting previously unselected package libquadmath0:amd64.
-Preparing to unpack .../029-libquadmath0_12.3.0-1ubuntu1~22.04_amd64.deb ...
-Unpacking libquadmath0:amd64 (12.3.0-1ubuntu1~22.04) ...
-Selecting previously unselected package libgcc-11-dev:amd64.
-Preparing to unpack .../030-libgcc-11-dev_11.4.0-1ubuntu1~22.04_amd64.deb ...
-Unpacking libgcc-11-dev:amd64 (11.4.0-1ubuntu1~22.04) ...
-Selecting previously unselected package gcc-11.
-Preparing to unpack .../031-gcc-11_11.4.0-1ubuntu1~22.04_amd64.deb ...
-Unpacking gcc-11 (11.4.0-1ubuntu1~22.04) ...
-Selecting previously unselected package gcc.
-Preparing to unpack .../032-gcc_4%3a11.2.0-1ubuntu1_amd64.deb ...
-Unpacking gcc (4:11.2.0-1ubuntu1) ...
-Selecting previously unselected package libstdc++-11-dev:amd64.
-Preparing to unpack .../033-libstdc++-11-dev_11.4.0-1ubuntu1~22.04_amd64.deb ...
-Unpacking libstdc++-11-dev:amd64 (11.4.0-1ubuntu1~22.04) ...
-Selecting previously unselected package g++-11.
-Preparing to unpack .../034-g++-11_11.4.0-1ubuntu1~22.04_amd64.deb ...
-Unpacking g++-11 (11.4.0-1ubuntu1~22.04) ...
-Selecting previously unselected package g++.
-Preparing to unpack .../035-g++_4%3a11.2.0-1ubuntu1_amd64.deb ...
-Unpacking g++ (4:11.2.0-1ubuntu1) ...
-Selecting previously unselected package make.
-Preparing to unpack .../036-make_4.3-4.1build1_amd64.deb ...
-Unpacking make (4.3-4.1build1) ...
-Selecting previously unselected package libdpkg-perl.
-Preparing to unpack .../037-libdpkg-perl_1.21.1ubuntu2.3_all.deb ...
-Unpacking libdpkg-perl (1.21.1ubuntu2.3) ...
-Selecting previously unselected package bzip2.
-Preparing to unpack .../038-bzip2_1.0.8-5build1_amd64.deb ...
-Unpacking bzip2 (1.0.8-5build1) ...
-Selecting previously unselected package lto-disabled-list.
-Preparing to unpack .../039-lto-disabled-list_24_all.deb ...
-Unpacking lto-disabled-list (24) ...
-Selecting previously unselected package dpkg-dev.
-Preparing to unpack .../040-dpkg-dev_1.21.1ubuntu2.3_all.deb ...
-Unpacking dpkg-dev (1.21.1ubuntu2.3) ...
-Selecting previously unselected package build-essential.
-Preparing to unpack .../041-build-essential_12.9ubuntu3_amd64.deb ...
-Unpacking build-essential (12.9ubuntu3) ...
-Selecting previously unselected package libhiredis0.14:amd64.
-Preparing to unpack .../042-libhiredis0.14_0.14.1-2_amd64.deb ...
-Unpacking libhiredis0.14:amd64 (0.14.1-2) ...
-Selecting previously unselected package ccache.
-Preparing to unpack .../043-ccache_4.5.1-1_amd64.deb ...
-Unpacking ccache (4.5.1-1) ...
-Selecting previously unselected package libarchive13:amd64.
-Preparing to unpack .../044-libarchive13_3.6.0-1ubuntu1.1_amd64.deb ...
-Unpacking libarchive13:amd64 (3.6.0-1ubuntu1.1) ...
-Selecting previously unselected package libjsoncpp25:amd64.
-Preparing to unpack .../045-libjsoncpp25_1.9.5-3_amd64.deb ...
-Unpacking libjsoncpp25:amd64 (1.9.5-3) ...
-Selecting previously unselected package librhash0:amd64.
-Preparing to unpack .../046-librhash0_1.4.2-1ubuntu1_amd64.deb ...
-Unpacking librhash0:amd64 (1.4.2-1ubuntu1) ...
-Selecting previously unselected package dh-elpa-helper.
-Preparing to unpack .../047-dh-elpa-helper_2.0.9ubuntu1_all.deb ...
-Unpacking dh-elpa-helper (2.0.9ubuntu1) ...
-Selecting previously unselected package cmake-data.
-Preparing to unpack .../048-cmake-data_3.22.1-1ubuntu1.22.04.2_all.deb ...
-Unpacking cmake-data (3.22.1-1ubuntu1.22.04.2) ...
-Selecting previously unselected package cmake.
-Preparing to unpack .../049-cmake_3.22.1-1ubuntu1.22.04.2_amd64.deb ...
-Unpacking cmake (3.22.1-1ubuntu1.22.04.2) ...
-Selecting previously unselected package libfakeroot:amd64.
-Preparing to unpack .../050-libfakeroot_1.28-1ubuntu1_amd64.deb ...
-Unpacking libfakeroot:amd64 (1.28-1ubuntu1) ...
-Selecting previously unselected package fakeroot.
-Preparing to unpack .../051-fakeroot_1.28-1ubuntu1_amd64.deb ...
-Unpacking fakeroot (1.28-1ubuntu1) ...
-Selecting previously unselected package fonts-liberation2.
-Preparing to unpack .../052-fonts-liberation2_2.1.5-1_all.deb ...
-Unpacking fonts-liberation2 (2.1.5-1) ...
-Selecting previously unselected package libglvnd0:amd64.
-Preparing to unpack .../053-libglvnd0_1.4.0-1_amd64.deb ...
-Unpacking libglvnd0:amd64 (1.4.0-1) ...
-Selecting previously unselected package libwayland-server0:amd64.
-Preparing to unpack .../054-libwayland-server0_1.20.0-1ubuntu0.1_amd64.deb ...
-Unpacking libwayland-server0:amd64 (1.20.0-1ubuntu0.1) ...
-Selecting previously unselected package libxcb-randr0:amd64.
-Preparing to unpack .../055-libxcb-randr0_1.14-3ubuntu3_amd64.deb ...
-Unpacking libxcb-randr0:amd64 (1.14-3ubuntu3) ...
-Selecting previously unselected package libgbm1:amd64.
-Preparing to unpack .../056-libgbm1_23.2.1-1ubuntu3.1~22.04.2_amd64.deb ...
-Unpacking libgbm1:amd64 (23.2.1-1ubuntu3.1~22.04.2) ...
-Selecting previously unselected package libglapi-mesa:amd64.
-Preparing to unpack .../057-libglapi-mesa_23.2.1-1ubuntu3.1~22.04.2_amd64.deb ...
-Unpacking libglapi-mesa:amd64 (23.2.1-1ubuntu3.1~22.04.2) ...
-Selecting previously unselected package libx11-xcb1:amd64.
-Preparing to unpack .../058-libx11-xcb1_2%3a1.7.5-1ubuntu0.3_amd64.deb ...
-Unpacking libx11-xcb1:amd64 (2:1.7.5-1ubuntu0.3) ...
-Selecting previously unselected package libxcb-dri2-0:amd64.
-Preparing to unpack .../059-libxcb-dri2-0_1.14-3ubuntu3_amd64.deb ...
-Unpacking libxcb-dri2-0:amd64 (1.14-3ubuntu3) ...
-Selecting previously unselected package libxcb-dri3-0:amd64.
-Preparing to unpack .../060-libxcb-dri3-0_1.14-3ubuntu3_amd64.deb ...
-Unpacking libxcb-dri3-0:amd64 (1.14-3ubuntu3) ...
-Selecting previously unselected package libxcb-present0:amd64.
-Preparing to unpack .../061-libxcb-present0_1.14-3ubuntu3_amd64.deb ...
-Unpacking libxcb-present0:amd64 (1.14-3ubuntu3) ...
-Selecting previously unselected package libxcb-sync1:amd64.
-Preparing to unpack .../062-libxcb-sync1_1.14-3ubuntu3_amd64.deb ...
-Unpacking libxcb-sync1:amd64 (1.14-3ubuntu3) ...
-Selecting previously unselected package libxcb-xfixes0:amd64.
-Preparing to unpack .../063-libxcb-xfixes0_1.14-3ubuntu3_amd64.deb ...
-Unpacking libxcb-xfixes0:amd64 (1.14-3ubuntu3) ...
-Selecting previously unselected package libxshmfence1:amd64.
-Preparing to unpack .../064-libxshmfence1_1.3-1build4_amd64.deb ...
-Unpacking libxshmfence1:amd64 (1.3-1build4) ...
-Selecting previously unselected package libegl-mesa0:amd64.
-Preparing to unpack .../065-libegl-mesa0_23.2.1-1ubuntu3.1~22.04.2_amd64.deb ...
-Unpacking libegl-mesa0:amd64 (23.2.1-1ubuntu3.1~22.04.2) ...
-Selecting previously unselected package libegl1:amd64.
-Preparing to unpack .../066-libegl1_1.4.0-1_amd64.deb ...
-Unpacking libegl1:amd64 (1.4.0-1) ...
-Selecting previously unselected package libxcb-glx0:amd64.
 Preparing to unpack .../067-libxcb-glx0_1.14-3ubuntu3_amd64.deb ...
 Unpacking libxcb-glx0:amd64 (1.14-3ubuntu3) ...
 Selecting previously unselected package libxxf86vm1:amd64.
@@ -7725,4 +7274,1104 @@ real    21m30.928s
 user    3m30.737s
 sys     0m4.953s
 Fri Jun 21 08:26:50 EDT 2024
+kushal@kus2023:~/src/ladybird$ cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.323s
+user    0m0.000s
+sys     0m0.352s
+remote: Enumerating objects: 21, done.
+remote: Counting objects: 100% (21/21), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 12 (delta 10), reused 10 (delta 9), pack-reused 0
+Unpacking objects: 100% (12/12), 1.63 KiB | 61.00 KiB/s, done.
+From https://github.com/LadybirdBrowser/ladybird
+   d3a8f9ba9a..a0561ea9b2  master     -> origin/master
+
+real    0m0.624s
+user    0m0.097s
+sys     0m0.166s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Updating d3a8f9ba9a..a0561ea9b2
+Fast-forward
+ Ladybird/AppKit/main.mm                             |  3 +++
+ Userland/Libraries/LibWeb/HTML/HTMLImageElement.cpp | 36 +++++++++++++++++++++++++++++++++++-
+ 2 files changed, 38 insertions(+), 1 deletion(-)
+
+real    0m0.256s
+user    0m0.051s
+sys     0m0.083s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.032s
+user    0m0.011s
+sys     0m0.022s
+Fri Jun 21 13:27:40 EDT 2024
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+[9/9] Linking CXX executable bin/Ladybird
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+Ladybird PID file '/run/user/1000/Ladybird.pid' exists with PID 61275, but process cannot be found
+qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
+22102.361 WebContent(61677): HTMLScriptElement: Refusing to run classic script because it has the nomodule attribute.
+22102.511 WebContent(61677): No property (from 4 properties) matched Function: env(safe-area-inset-top)
+22102.511 WebContent(61677):     padding-top
+22102.511 WebContent(61677):     padding-right
+22102.511 WebContent(61677):     padding-bottom
+22102.511 WebContent(61677):     padding-left
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+22103.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
+22103.641 RequestServer(61643:61675): ConnectionCache: Connection to https://improving.duckduckgo.com/t/page_home_impression?7083067&b=mozilla&d=d&l=en&p=linux&atb=v435-3&pre_va=_&pre_atbva=_&atbi=true&i=false&ak=false&ax=false failed: connect: Connection refused (errno=111)
+22103.641 RequestServer(61643:61675): Request with a null socket finished for URL https://improving.duckduckgo.com/t/page_home_impression?7083067&b=mozilla&d=d&l=en&p=linux&atb=v435-3&pre_va=_&pre_atbva=_&atbi=true&i=false&ak=false&ax=false
+22103.661 WebContent(61677): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/page_home_impression?7083067&b=mozilla&d=d&l=en&p=linux&atb=v435-3&pre_va=_&pre_atbva=_&atbi=true&i=false&ak=false&ax=false", Error: Load failed, Duration: 70ms
+22103.681 RequestServer(61643:61662): Request with a null socket finished for URL https://improving.duckduckgo.com/t/atb_home_sad_impression?6134001&b=mozilla&d=d&l=en&p=linux&atb=v435-3&pre_va=_&pre_atbva=_&atbi=true&i=false
+22103.741 WebContent(61677): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/atb_home_sad_impression?6134001&b=mozilla&d=d&l=en&p=linux&atb=v435-3&pre_va=_&pre_atbva=_&atbi=true&i=false", Error: Load failed, Duration: 150ms
+22111.281 RequestServer(61643:61665): EnsureConnection: Pre-connect to https://links.duckduckgo.com/
+22111.281 WebContent(61677): HTMLScriptElement: Refusing to run classic script because it has the nomodule attribute.
+22112.441 WebContent(61677): HTMLScriptElement: Refusing to run classic script because it has the nomodule attribute.
+22112.441 WebContent(61677): HTMLScriptElement: Refusing to run classic script because it has the nomodule attribute.
+22113.461 WebContent(61677): Failed to parse font: Automatic format detection failed
+22114.781 RequestServer(61643:61669): ConnectionCache: Connection to https://improving.duckduckgo.com/t/ias_products?3749154&timeSincePageLoad=189&timeSinceDeepStarted=0&timeSinceDeepFinished=0&reason=static&q=slickdeals&ct=US&d=d&kl=wt-wt&rl=us-en&isig=about:m&3adexp=d&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=c&localexp=b&locstr_exp=b&msvrtexp=b failed: connect: Connection refused (errno=111)
+22114.781 RequestServer(61643:61669): Request with a null socket finished for URL https://improving.duckduckgo.com/t/ias_products?3749154&timeSincePageLoad=189&timeSinceDeepStarted=0&timeSinceDeepFinished=0&reason=static&q=slickdeals&ct=US&d=d&kl=wt-wt&rl=us-en&isig=about:m&3adexp=d&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=c&localexp=b&locstr_exp=b&msvrtexp=b
+22114.941 RequestServer(61643:61674): Request with a null socket finished for URL https://improving.duckduckgo.com/t/apss_f?8314344&preloaded=1&3adexp=d&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=c&localexp=b&locstr_exp=b&msvrtexp=b
+22114.941 WebContent(61677): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/ias_products?3749154&timeSincePageLoad=189&timeSinceDeepStarted=0&timeSinceDeepFinished=0&reason=static&q=slickdeals&ct=US&d=d&kl=wt-wt&rl=us-en&isig=about:m&3adexp=d&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=c&localexp=b&locstr_exp=b&msvrtexp=b", Error: Load failed, Duration: 180ms
+22114.991 WebContent(61677): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/apss_f?8314344&preloaded=1&3adexp=d&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=c&localexp=b&locstr_exp=b&msvrtexp=b", Error: Load failed, Duration: 90ms
+22115.141 RequestServer(61643:61673): ConnectionCache: Connection to https://improving.duckduckgo.com/t/l2_d_wt?7389411&osl=1&u=bingv7aa&rc=10&oll=en:22&q=slickdeals&ct=US&rl=us-en&serp_return=0&organic_above_fold=1&bing_market=en-US&djsd=0&blay=w7RelatedQnA1w16r1,e1&isig=about:m&3adexp=d&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=c&localexp=b&locstr_exp=b&msvrtexp=b failed: connect: Connection refused (errno=111)
+22115.141 RequestServer(61643:61673): Request with a null socket finished for URL https://improving.duckduckgo.com/t/l2_d_wt?7389411&osl=1&u=bingv7aa&rc=10&oll=en:22&q=slickdeals&ct=US&rl=us-en&serp_return=0&organic_above_fold=1&bing_market=en-US&djsd=0&blay=w7RelatedQnA1w16r1,e1&isig=about:m&3adexp=d&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=c&localexp=b&locstr_exp=b&msvrtexp=b
+22115.151 WebContent(61677): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/l2_d_wt?7389411&osl=1&u=bingv7aa&rc=10&oll=en:22&q=slickdeals&ct=US&rl=us-en&serp_return=0&organic_above_fold=1&bing_market=en-US&djsd=0&blay=w7RelatedQnA1w16r1,e1&isig=about:m&3adexp=d&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=c&localexp=b&locstr_exp=b&msvrtexp=b", Error: Load failed, Duration: 40ms
+22115.181 RequestServer(61643:61671): Request with a null socket finished for URL https://improving.duckduckgo.com/t/dev?23664&fsig=web%3An%2Cimages%3An%2Cvideos%3An%2Cnews%3An%2Cmaps_expanded%3An%2Cproducts%3An%2Cchat%3An%2Cabout%3Am%2Crelated_searches%3An&nerrors=0&ntimeouts=0&nconflicts=0&nextras=0&nsuperseded=0&pole=na&wide=na&extras=na&mainline=w10r1w13&sidebar=about1&nshifts=0&d=related_searches%3Amodule%3Amainline%3Aslotted%3A0%2Cabout%3Amodule%3Asidebar%3Aslotted%3A0&q=slickdeals&serp_return=0&organic_above_fold=1&blay=w7RelatedQnA1w16r1,e1&isig=about:m&3adexp=d&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=c&localexp=b&locstr_exp=b&msvrtexp=b
+22115.191 WebContent(61677): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/dev?23664&fsig=web%3An%2Cimages%3An%2Cvideos%3An%2Cnews%3An%2Cmaps_expanded%3An%2Cproducts%3An%2Cchat%3An%2Cabout%3Am%2Crelated_searches%3An&nerrors=0&ntimeouts=0&nconflicts=0&nextras=0&nsuperseded=0&pole=na&wide=na&extras=na&mainline=w10r1w13&sidebar=about1&nshifts=0&d=related_searches%3Amodule%3Amainline%3Aslotted%3A0%2Cabout%3Amodule%3Asidebar%3Aslotted%3A0&q=slickdeals&serp_return=0&organic_above_fold=1&blay=w7RelatedQnA1w16r1,e1&isig=about:m&3adexp=d&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=c&localexp=b&locstr_exp=b&msvrtexp=b", Error: Load failed, Duration: 80ms
+22115.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'pattern' in namespace 'http://www.w3.org/2000/svg'
+22115.381 WebContent(61677): Potential FIXME: Creating unknown generic element 'image' in namespace 'http://www.w3.org/2000/svg'
+22132.841 RequestServer(61643:61673): ConnectionCache: Connection to https://improving.duckduckgo.com/t/ndeeprequests?5657826&n=1&3adexp=d&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=c&localexp=b&locstr_exp=b&msvrtexp=b failed: connect: Connection refused (errno=111)
+22132.841 RequestServer(61643:61673): Request with a null socket finished for URL https://improving.duckduckgo.com/t/ndeeprequests?5657826&n=1&3adexp=d&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=c&localexp=b&locstr_exp=b&msvrtexp=b
+22132.841 WebContent(61677): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/ndeeprequests?5657826&n=1&3adexp=d&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=c&localexp=b&locstr_exp=b&msvrtexp=b", Error: Load failed, Duration: 60ms
+22135.461 WebContent(61677): ResourceLoader: Refusing to prefetch DNS for 'https://slickdeals-d.openx.net/': URL was filtered
+22135.461 WebContent(61677): ResourceLoader: Refusing to prefetch DNS for 'https://c.amazon-adsystem.com/': URL was filtered
+22135.461 WebContent(61677): ResourceLoader: Refusing to pre-connect to 'https://c.amazon-adsystem.com/': URL was filtered
+22135.461 WebContent(61677): ResourceLoader: Refusing to prefetch DNS for 'https://www.googletagservices.com/': URL was filtered
+22135.481 RequestServer(61643:61670): EnsureConnection: DNS-preload for https://ajax.googleapis.com/ done
+22135.481 RequestServer(61643:61661): EnsureConnection: DNS-preload for https://css.slickdealscdn.com/ done
+22135.481 RequestServer(61643:61667): EnsureConnection: DNS-preload for https://static.slickdealscdn.com/ done
+22135.481 RequestServer(61643:61666): EnsureConnection: DNS-preload for https://js.slickdealscdn.com/ done
+22135.481 RequestServer(61643:61661): EnsureConnection: DNS-preload for css.slickdealscdn.com
+22135.481 RequestServer(61643:61670): EnsureConnection: DNS-preload for ajax.googleapis.com
+22135.481 RequestServer(61643:61667): EnsureConnection: DNS-preload for static.slickdealscdn.com
+22135.481 RequestServer(61643:61666): EnsureConnection: DNS-preload for js.slickdealscdn.com
+22135.481 RequestServer(61643:61662): EnsureConnection: DNS-preload for https://hipchat.slickdealscdn.com/ done
+22135.481 RequestServer(61643:61668): EnsureConnection: DNS-preload for https://odds.optimizely.com/ done
+22135.481 RequestServer(61643:61671): EnsureConnection: Pre-connect to https://fonts.googleapis.com/
+22135.481 RequestServer(61643:61662): EnsureConnection: DNS-preload for hipchat.slickdealscdn.com
+22135.481 RequestServer(61643:61663): EnsureConnection: Pre-connect to https://fonts.gstatic.com/
+22135.481 RequestServer(61643:61668): EnsureConnection: DNS-preload for odds.optimizely.com
+22135.481 RequestServer(61643:61672): EnsureConnection: DNS-preload for https://fonts.gstatic.com/ done
+22135.481 RequestServer(61643:61672): EnsureConnection: DNS-preload for fonts.gstatic.com
+22135.511 RequestServer(61643:61662): EnsureConnection: DNS-preload failed for hipchat.slickdealscdn.com
+22135.511 RequestServer(61643:61668): EnsureConnection: DNS-preload failed for odds.optimizely.com
+22135.521 WebContent(61677): ResourceLoader: Refusing to prefetch DNS for 'https://c.amazon-adsystem.com/': URL was filtered
+22135.521 WebContent(61677): ResourceLoader: Refusing to pre-connect to 'https://c.amazon-adsystem.com/': URL was filtered
+22135.661 WebContent(61677): No property (from 4 properties) matched Token: Ident: inherit
+22135.661 WebContent(61677):     padding-top
+22135.661 WebContent(61677):     padding-right
+22135.661 WebContent(61677):     padding-bottom
+22135.661 WebContent(61677):     padding-left
+22135.661 WebContent(61677): No property (from 4 properties) matched Token: Ident: inherit
+22135.661 WebContent(61677):     padding-top
+22135.661 WebContent(61677):     padding-right
+22135.661 WebContent(61677):     padding-bottom
+22135.661 WebContent(61677):     padding-left
+22135.661 WebContent(61677): No property (from 4 properties) matched Token: Ident: inherit
+22135.661 WebContent(61677):     padding-top
+22135.661 WebContent(61677):     padding-right
+22135.661 WebContent(61677):     padding-bottom
+22135.661 WebContent(61677):     padding-left
+22135.761 WebContent(61677): ResourceLoader: Failed load of: "https://www.googletagmanager.com/gtm.js?id=GTM-5XP5PSM&l=gtmDl", Error: URL was filtered, Duration: 0ms
+22135.761 WebContent(61677): ResourceLoader: Failed load of: "https://slickdeals-net.videoplayerhub.com/videoloader.js", Error: URL was filtered, Duration: 0ms
+22135.761 WebContent(61677): ResourceLoader: Failed load of: "https://securepubads.g.doubleclick.net/tag/js/gpt.js", Error: URL was filtered, Duration: 0ms
+22135.761 WebContent(61677): ResourceLoader: Failed load of: "https://c.amazon-adsystem.com/aax2/apstag.js", Error: URL was filtered, Duration: 0ms
+22135.761 WebContent(61677): ResourceLoader: Failed load of: "https://slickdeals.btttag.com/btt.js", Error: URL was filtered, Duration: 0ms
+22135.781 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22135.781 WebContent(61677):     padding-top
+22135.781 WebContent(61677):     padding-right
+22135.781 WebContent(61677):     padding-bottom
+22135.781 WebContent(61677):     padding-left
+22135.781 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22135.781 WebContent(61677):     padding-top
+22135.781 WebContent(61677):     padding-right
+22135.781 WebContent(61677):     padding-bottom
+22135.781 WebContent(61677):     padding-left
+22135.781 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22135.781 WebContent(61677):     padding-top
+22135.781 WebContent(61677):     padding-right
+22135.781 WebContent(61677):     padding-bottom
+22135.781 WebContent(61677):     padding-left
+22135.781 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22135.781 WebContent(61677):     padding-top
+22135.781 WebContent(61677):     padding-right
+22135.781 WebContent(61677):     padding-bottom
+22135.781 WebContent(61677):     padding-left
+22135.781 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22135.781 WebContent(61677):     padding-top
+22135.781 WebContent(61677):     padding-right
+22135.781 WebContent(61677):     padding-bottom
+22135.781 WebContent(61677):     padding-left
+22135.781 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22135.781 WebContent(61677):     padding-top
+22135.781 WebContent(61677):     padding-right
+22135.781 WebContent(61677):     padding-bottom
+22135.781 WebContent(61677):     padding-left
+22135.781 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22135.781 WebContent(61677):     padding-top
+22135.781 WebContent(61677):     padding-right
+22135.781 WebContent(61677):     padding-bottom
+22135.781 WebContent(61677):     padding-left
+22136.001 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22136.151 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22136.181 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22136.181 WebContent(61677):     padding-top
+22136.181 WebContent(61677):     padding-right
+22136.181 WebContent(61677):     padding-bottom
+22136.181 WebContent(61677):     padding-left
+22136.181 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22136.181 WebContent(61677):     padding-top
+22136.181 WebContent(61677):     padding-right
+22136.181 WebContent(61677):     padding-bottom
+22136.181 WebContent(61677):     padding-left
+22136.181 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22136.181 WebContent(61677):     padding-top
+22136.181 WebContent(61677):     padding-right
+22136.181 WebContent(61677):     padding-bottom
+22136.181 WebContent(61677):     padding-left
+22136.191 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22136.191 WebContent(61677):     padding-top
+22136.191 WebContent(61677):     padding-right
+22136.191 WebContent(61677):     padding-bottom
+22136.191 WebContent(61677):     padding-left
+22136.191 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22136.191 WebContent(61677):     padding-top
+22136.191 WebContent(61677):     padding-right
+22136.191 WebContent(61677):     padding-bottom
+22136.191 WebContent(61677):     padding-left
+22136.191 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22136.191 WebContent(61677):     padding-top
+22136.191 WebContent(61677):     padding-right
+22136.191 WebContent(61677):     padding-bottom
+22136.191 WebContent(61677):     padding-left
+22136.191 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22136.191 WebContent(61677):     padding-top
+22136.191 WebContent(61677):     padding-right
+22136.191 WebContent(61677):     padding-bottom
+22136.191 WebContent(61677):     padding-left
+22136.471 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22136.511 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22136.511 WebContent(61677):     padding-top
+22136.511 WebContent(61677):     padding-right
+22136.511 WebContent(61677):     padding-bottom
+22136.511 WebContent(61677):     padding-left
+22136.511 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22136.511 WebContent(61677):     padding-top
+22136.511 WebContent(61677):     padding-right
+22136.511 WebContent(61677):     padding-bottom
+22136.511 WebContent(61677):     padding-left
+22136.511 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22136.511 WebContent(61677):     padding-top
+22136.511 WebContent(61677):     padding-right
+22136.511 WebContent(61677):     padding-bottom
+22136.511 WebContent(61677):     padding-left
+22136.511 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22136.511 WebContent(61677):     padding-top
+22136.511 WebContent(61677):     padding-right
+22136.511 WebContent(61677):     padding-bottom
+22136.511 WebContent(61677):     padding-left
+22136.511 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22136.511 WebContent(61677):     padding-top
+22136.511 WebContent(61677):     padding-right
+22136.511 WebContent(61677):     padding-bottom
+22136.511 WebContent(61677):     padding-left
+22136.511 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22136.511 WebContent(61677):     padding-top
+22136.511 WebContent(61677):     padding-right
+22136.511 WebContent(61677):     padding-bottom
+22136.511 WebContent(61677):     padding-left
+22136.511 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22136.511 WebContent(61677):     padding-top
+22136.511 WebContent(61677):     padding-right
+22136.511 WebContent(61677):     padding-bottom
+22136.511 WebContent(61677):     padding-left
+22136.671 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22136.871 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22137.021 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22137.161 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22137.201 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22137.241 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22137.271 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22137.271 WebContent(61677):     padding-top
+22137.271 WebContent(61677):     padding-right
+22137.271 WebContent(61677):     padding-bottom
+22137.271 WebContent(61677):     padding-left
+22137.271 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22137.271 WebContent(61677):     padding-top
+22137.271 WebContent(61677):     padding-right
+22137.271 WebContent(61677):     padding-bottom
+22137.271 WebContent(61677):     padding-left
+22137.271 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22137.271 WebContent(61677):     padding-top
+22137.271 WebContent(61677):     padding-right
+22137.271 WebContent(61677):     padding-bottom
+22137.271 WebContent(61677):     padding-left
+22137.271 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22137.271 WebContent(61677):     padding-top
+22137.271 WebContent(61677):     padding-right
+22137.271 WebContent(61677):     padding-bottom
+22137.271 WebContent(61677):     padding-left
+22137.281 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22137.281 WebContent(61677):     padding-top
+22137.281 WebContent(61677):     padding-right
+22137.281 WebContent(61677):     padding-bottom
+22137.281 WebContent(61677):     padding-left
+22137.281 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22137.281 WebContent(61677):     padding-top
+22137.281 WebContent(61677):     padding-right
+22137.281 WebContent(61677):     padding-bottom
+22137.281 WebContent(61677):     padding-left
+22137.281 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22137.281 WebContent(61677):     padding-top
+22137.281 WebContent(61677):     padding-right
+22137.281 WebContent(61677):     padding-bottom
+22137.281 WebContent(61677):     padding-left
+22137.451 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22137.481 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22137.481 WebContent(61677):     padding-top
+22137.481 WebContent(61677):     padding-right
+22137.481 WebContent(61677):     padding-bottom
+22137.481 WebContent(61677):     padding-left
+22137.481 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22137.481 WebContent(61677):     padding-top
+22137.481 WebContent(61677):     padding-right
+22137.481 WebContent(61677):     padding-bottom
+22137.481 WebContent(61677):     padding-left
+22137.481 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22137.481 WebContent(61677):     padding-top
+22137.481 WebContent(61677):     padding-right
+22137.481 WebContent(61677):     padding-bottom
+22137.481 WebContent(61677):     padding-left
+22137.481 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22137.481 WebContent(61677):     padding-top
+22137.481 WebContent(61677):     padding-right
+22137.481 WebContent(61677):     padding-bottom
+22137.481 WebContent(61677):     padding-left
+22137.481 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22137.481 WebContent(61677):     padding-top
+22137.481 WebContent(61677):     padding-right
+22137.481 WebContent(61677):     padding-bottom
+22137.481 WebContent(61677):     padding-left
+22137.481 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22137.481 WebContent(61677):     padding-top
+22137.481 WebContent(61677):     padding-right
+22137.481 WebContent(61677):     padding-bottom
+22137.481 WebContent(61677):     padding-left
+22137.481 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22137.481 WebContent(61677):     padding-top
+22137.481 WebContent(61677):     padding-right
+22137.481 WebContent(61677):     padding-bottom
+22137.481 WebContent(61677):     padding-left
+22137.651 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22137.801 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22137.951 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22138.091 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22138.241 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22138.371 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22138.511 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22138.651 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22138.691 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22138.721 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22138.761 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22138.911 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22139.061 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22139.081 WebContent(61677): HTMLScriptElement: Refusing to run script because the element's result is null.
+22139.211 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22139.231 WebContent(61677): HTMLScriptElement: Refusing to run script because the element's result is null.
+22139.351 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22139.371 WebContent(61677): HTMLScriptElement: Refusing to run script because the element's result is null.
+22139.371 WebContent(61677): HTMLScriptElement: Refusing to run script because the element's result is null.
+22139.491 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22139.511 WebContent(61677): HTMLScriptElement: Refusing to run script because the element's result is null.
+22139.631 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22139.761 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22139.901 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22139.941 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22139.941 WebContent(61677):     padding-top
+22139.941 WebContent(61677):     padding-right
+22139.941 WebContent(61677):     padding-bottom
+22139.941 WebContent(61677):     padding-left
+22139.951 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22139.951 WebContent(61677):     padding-top
+22139.951 WebContent(61677):     padding-right
+22139.951 WebContent(61677):     padding-bottom
+22139.951 WebContent(61677):     padding-left
+22139.951 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22139.951 WebContent(61677):     padding-top
+22139.951 WebContent(61677):     padding-right
+22139.951 WebContent(61677):     padding-bottom
+22139.951 WebContent(61677):     padding-left
+22139.951 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22139.951 WebContent(61677):     padding-top
+22139.951 WebContent(61677):     padding-right
+22139.951 WebContent(61677):     padding-bottom
+22139.951 WebContent(61677):     padding-left
+22139.951 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22139.951 WebContent(61677):     padding-top
+22139.951 WebContent(61677):     padding-right
+22139.951 WebContent(61677):     padding-bottom
+22139.951 WebContent(61677):     padding-left
+22139.951 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22139.951 WebContent(61677):     padding-top
+22139.951 WebContent(61677):     padding-right
+22139.951 WebContent(61677):     padding-bottom
+22139.951 WebContent(61677):     padding-left
+22139.951 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22139.951 WebContent(61677):     padding-top
+22139.951 WebContent(61677):     padding-right
+22139.951 WebContent(61677):     padding-bottom
+22139.951 WebContent(61677):     padding-left
+22140.301 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22140.331 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.331 WebContent(61677):     padding-top
+22140.331 WebContent(61677):     padding-right
+22140.331 WebContent(61677):     padding-bottom
+22140.331 WebContent(61677):     padding-left
+22140.341 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.341 WebContent(61677):     padding-top
+22140.341 WebContent(61677):     padding-right
+22140.341 WebContent(61677):     padding-bottom
+22140.341 WebContent(61677):     padding-left
+22140.341 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.341 WebContent(61677):     padding-top
+22140.341 WebContent(61677):     padding-right
+22140.341 WebContent(61677):     padding-bottom
+22140.341 WebContent(61677):     padding-left
+22140.341 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.341 WebContent(61677):     padding-top
+22140.341 WebContent(61677):     padding-right
+22140.341 WebContent(61677):     padding-bottom
+22140.341 WebContent(61677):     padding-left
+22140.341 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.341 WebContent(61677):     padding-top
+22140.341 WebContent(61677):     padding-right
+22140.341 WebContent(61677):     padding-bottom
+22140.341 WebContent(61677):     padding-left
+22140.341 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.341 WebContent(61677):     padding-top
+22140.341 WebContent(61677):     padding-right
+22140.341 WebContent(61677):     padding-bottom
+22140.341 WebContent(61677):     padding-left
+22140.341 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.341 WebContent(61677):     padding-top
+22140.341 WebContent(61677):     padding-right
+22140.341 WebContent(61677):     padding-bottom
+22140.341 WebContent(61677):     padding-left
+22140.611 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22140.641 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.641 WebContent(61677):     padding-top
+22140.641 WebContent(61677):     padding-right
+22140.641 WebContent(61677):     padding-bottom
+22140.641 WebContent(61677):     padding-left
+22140.641 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.641 WebContent(61677):     padding-top
+22140.641 WebContent(61677):     padding-right
+22140.641 WebContent(61677):     padding-bottom
+22140.641 WebContent(61677):     padding-left
+22140.641 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.641 WebContent(61677):     padding-top
+22140.641 WebContent(61677):     padding-right
+22140.641 WebContent(61677):     padding-bottom
+22140.641 WebContent(61677):     padding-left
+22140.641 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.641 WebContent(61677):     padding-top
+22140.641 WebContent(61677):     padding-right
+22140.641 WebContent(61677):     padding-bottom
+22140.641 WebContent(61677):     padding-left
+22140.641 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.641 WebContent(61677):     padding-top
+22140.641 WebContent(61677):     padding-right
+22140.641 WebContent(61677):     padding-bottom
+22140.641 WebContent(61677):     padding-left
+22140.641 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.641 WebContent(61677):     padding-top
+22140.641 WebContent(61677):     padding-right
+22140.641 WebContent(61677):     padding-bottom
+22140.641 WebContent(61677):     padding-left
+22140.641 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.641 WebContent(61677):     padding-top
+22140.641 WebContent(61677):     padding-right
+22140.641 WebContent(61677):     padding-bottom
+22140.641 WebContent(61677):     padding-left
+22140.811 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22140.841 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.841 WebContent(61677):     padding-top
+22140.841 WebContent(61677):     padding-right
+22140.841 WebContent(61677):     padding-bottom
+22140.841 WebContent(61677):     padding-left
+22140.841 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.841 WebContent(61677):     padding-top
+22140.841 WebContent(61677):     padding-right
+22140.841 WebContent(61677):     padding-bottom
+22140.841 WebContent(61677):     padding-left
+22140.841 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.841 WebContent(61677):     padding-top
+22140.841 WebContent(61677):     padding-right
+22140.841 WebContent(61677):     padding-bottom
+22140.841 WebContent(61677):     padding-left
+22140.841 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.841 WebContent(61677):     padding-top
+22140.841 WebContent(61677):     padding-right
+22140.841 WebContent(61677):     padding-bottom
+22140.841 WebContent(61677):     padding-left
+22140.841 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.841 WebContent(61677):     padding-top
+22140.841 WebContent(61677):     padding-right
+22140.841 WebContent(61677):     padding-bottom
+22140.841 WebContent(61677):     padding-left
+22140.851 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.851 WebContent(61677):     padding-top
+22140.851 WebContent(61677):     padding-right
+22140.851 WebContent(61677):     padding-bottom
+22140.851 WebContent(61677):     padding-left
+22140.851 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22140.851 WebContent(61677):     padding-top
+22140.851 WebContent(61677):     padding-right
+22140.851 WebContent(61677):     padding-bottom
+22140.851 WebContent(61677):     padding-left
+22141.011 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22141.151 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22141.401 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22141.641 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22141.691 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22141.731 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22141.771 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22141.971 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22141.971 WebContent(61677):     padding-top
+22141.971 WebContent(61677):     padding-right
+22141.971 WebContent(61677):     padding-bottom
+22141.971 WebContent(61677):     padding-left
+22141.971 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22141.971 WebContent(61677):     padding-top
+22141.971 WebContent(61677):     padding-right
+22141.971 WebContent(61677):     padding-bottom
+22141.971 WebContent(61677):     padding-left
+22141.971 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22141.971 WebContent(61677):     padding-top
+22141.971 WebContent(61677):     padding-right
+22141.971 WebContent(61677):     padding-bottom
+22141.971 WebContent(61677):     padding-left
+22141.971 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22141.971 WebContent(61677):     padding-top
+22141.971 WebContent(61677):     padding-right
+22141.971 WebContent(61677):     padding-bottom
+22141.971 WebContent(61677):     padding-left
+22141.971 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22141.971 WebContent(61677):     padding-top
+22141.971 WebContent(61677):     padding-right
+22141.971 WebContent(61677):     padding-bottom
+22141.971 WebContent(61677):     padding-left
+22141.981 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22141.981 WebContent(61677):     padding-top
+22141.981 WebContent(61677):     padding-right
+22141.981 WebContent(61677):     padding-bottom
+22141.981 WebContent(61677):     padding-left
+22141.981 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22141.981 WebContent(61677):     padding-top
+22141.981 WebContent(61677):     padding-right
+22141.981 WebContent(61677):     padding-bottom
+22141.981 WebContent(61677):     padding-left
+22142.231 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22142.491 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22142.491 WebContent(61677):     padding-top
+22142.491 WebContent(61677):     padding-right
+22142.491 WebContent(61677):     padding-bottom
+22142.491 WebContent(61677):     padding-left
+22142.491 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22142.491 WebContent(61677):     padding-top
+22142.491 WebContent(61677):     padding-right
+22142.491 WebContent(61677):     padding-bottom
+22142.491 WebContent(61677):     padding-left
+22142.491 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22142.491 WebContent(61677):     padding-top
+22142.491 WebContent(61677):     padding-right
+22142.491 WebContent(61677):     padding-bottom
+22142.491 WebContent(61677):     padding-left
+22142.491 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22142.491 WebContent(61677):     padding-top
+22142.491 WebContent(61677):     padding-right
+22142.491 WebContent(61677):     padding-bottom
+22142.491 WebContent(61677):     padding-left
+22142.501 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22142.501 WebContent(61677):     padding-top
+22142.501 WebContent(61677):     padding-right
+22142.501 WebContent(61677):     padding-bottom
+22142.501 WebContent(61677):     padding-left
+22142.501 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22142.501 WebContent(61677):     padding-top
+22142.501 WebContent(61677):     padding-right
+22142.501 WebContent(61677):     padding-bottom
+22142.501 WebContent(61677):     padding-left
+22142.501 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22142.501 WebContent(61677):     padding-top
+22142.501 WebContent(61677):     padding-right
+22142.501 WebContent(61677):     padding-bottom
+22142.501 WebContent(61677):     padding-left
+22142.841 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22142.971 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22143.101 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22143.151 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22143.291 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22143.531 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22143.661 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22143.811 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22143.941 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22144.081 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22144.221 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22144.371 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22144.531 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22144.681 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22144.701 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22144.741 WebContent(61677): No property (from 4 properties) matched Token: Ident: inherit
+22144.741 WebContent(61677):     padding-top
+22144.741 WebContent(61677):     padding-right
+22144.741 WebContent(61677):     padding-bottom
+22144.741 WebContent(61677):     padding-left
+22144.741 WebContent(61677): No property (from 4 properties) matched Token: Ident: inherit
+22144.741 WebContent(61677):     padding-top
+22144.741 WebContent(61677):     padding-right
+22144.741 WebContent(61677):     padding-bottom
+22144.741 WebContent(61677):     padding-left
+22144.741 WebContent(61677): No property (from 4 properties) matched Token: Ident: inherit
+22144.741 WebContent(61677):     padding-top
+22144.741 WebContent(61677):     padding-right
+22144.741 WebContent(61677):     padding-bottom
+22144.741 WebContent(61677):     padding-left
+22144.761 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22144.761 WebContent(61677):     padding-top
+22144.761 WebContent(61677):     padding-right
+22144.761 WebContent(61677):     padding-bottom
+22144.761 WebContent(61677):     padding-left
+22144.761 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22144.761 WebContent(61677):     padding-top
+22144.761 WebContent(61677):     padding-right
+22144.761 WebContent(61677):     padding-bottom
+22144.761 WebContent(61677):     padding-left
+22144.771 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22144.771 WebContent(61677):     padding-top
+22144.771 WebContent(61677):     padding-right
+22144.771 WebContent(61677):     padding-bottom
+22144.771 WebContent(61677):     padding-left
+22144.771 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22144.771 WebContent(61677):     padding-top
+22144.771 WebContent(61677):     padding-right
+22144.771 WebContent(61677):     padding-bottom
+22144.771 WebContent(61677):     padding-left
+22144.771 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22144.771 WebContent(61677):     padding-top
+22144.771 WebContent(61677):     padding-right
+22144.771 WebContent(61677):     padding-bottom
+22144.771 WebContent(61677):     padding-left
+22144.771 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22144.771 WebContent(61677):     padding-top
+22144.771 WebContent(61677):     padding-right
+22144.771 WebContent(61677):     padding-bottom
+22144.771 WebContent(61677):     padding-left
+22144.771 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22144.771 WebContent(61677):     padding-top
+22144.771 WebContent(61677):     padding-right
+22144.771 WebContent(61677):     padding-bottom
+22144.771 WebContent(61677):     padding-left
+22145.031 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22145.071 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.071 WebContent(61677):     padding-top
+22145.071 WebContent(61677):     padding-right
+22145.071 WebContent(61677):     padding-bottom
+22145.071 WebContent(61677):     padding-left
+22145.071 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.071 WebContent(61677):     padding-top
+22145.071 WebContent(61677):     padding-right
+22145.071 WebContent(61677):     padding-bottom
+22145.071 WebContent(61677):     padding-left
+22145.071 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.071 WebContent(61677):     padding-top
+22145.071 WebContent(61677):     padding-right
+22145.071 WebContent(61677):     padding-bottom
+22145.071 WebContent(61677):     padding-left
+22145.081 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.081 WebContent(61677):     padding-top
+22145.081 WebContent(61677):     padding-right
+22145.081 WebContent(61677):     padding-bottom
+22145.081 WebContent(61677):     padding-left
+22145.081 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.081 WebContent(61677):     padding-top
+22145.081 WebContent(61677):     padding-right
+22145.081 WebContent(61677):     padding-bottom
+22145.081 WebContent(61677):     padding-left
+22145.081 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.081 WebContent(61677):     padding-top
+22145.081 WebContent(61677):     padding-right
+22145.081 WebContent(61677):     padding-bottom
+22145.081 WebContent(61677):     padding-left
+22145.081 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.081 WebContent(61677):     padding-top
+22145.081 WebContent(61677):     padding-right
+22145.081 WebContent(61677):     padding-bottom
+22145.081 WebContent(61677):     padding-left
+22145.411 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22145.441 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.441 WebContent(61677):     padding-top
+22145.441 WebContent(61677):     padding-right
+22145.441 WebContent(61677):     padding-bottom
+22145.441 WebContent(61677):     padding-left
+22145.441 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.441 WebContent(61677):     padding-top
+22145.441 WebContent(61677):     padding-right
+22145.441 WebContent(61677):     padding-bottom
+22145.441 WebContent(61677):     padding-left
+22145.441 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.441 WebContent(61677):     padding-top
+22145.441 WebContent(61677):     padding-right
+22145.441 WebContent(61677):     padding-bottom
+22145.441 WebContent(61677):     padding-left
+22145.441 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.441 WebContent(61677):     padding-top
+22145.441 WebContent(61677):     padding-right
+22145.441 WebContent(61677):     padding-bottom
+22145.441 WebContent(61677):     padding-left
+22145.451 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.451 WebContent(61677):     padding-top
+22145.451 WebContent(61677):     padding-right
+22145.451 WebContent(61677):     padding-bottom
+22145.451 WebContent(61677):     padding-left
+22145.451 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.451 WebContent(61677):     padding-top
+22145.451 WebContent(61677):     padding-right
+22145.451 WebContent(61677):     padding-bottom
+22145.451 WebContent(61677):     padding-left
+22145.451 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.451 WebContent(61677):     padding-top
+22145.451 WebContent(61677):     padding-right
+22145.451 WebContent(61677):     padding-bottom
+22145.451 WebContent(61677):     padding-left
+22145.711 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22145.751 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.751 WebContent(61677):     padding-top
+22145.751 WebContent(61677):     padding-right
+22145.751 WebContent(61677):     padding-bottom
+22145.751 WebContent(61677):     padding-left
+22145.761 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.761 WebContent(61677):     padding-top
+22145.761 WebContent(61677):     padding-right
+22145.761 WebContent(61677):     padding-bottom
+22145.761 WebContent(61677):     padding-left
+22145.761 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.761 WebContent(61677):     padding-top
+22145.761 WebContent(61677):     padding-right
+22145.761 WebContent(61677):     padding-bottom
+22145.761 WebContent(61677):     padding-left
+22145.761 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.761 WebContent(61677):     padding-top
+22145.761 WebContent(61677):     padding-right
+22145.761 WebContent(61677):     padding-bottom
+22145.761 WebContent(61677):     padding-left
+22145.761 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.761 WebContent(61677):     padding-top
+22145.761 WebContent(61677):     padding-right
+22145.761 WebContent(61677):     padding-bottom
+22145.761 WebContent(61677):     padding-left
+22145.761 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.761 WebContent(61677):     padding-top
+22145.761 WebContent(61677):     padding-right
+22145.761 WebContent(61677):     padding-bottom
+22145.761 WebContent(61677):     padding-left
+22145.761 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22145.761 WebContent(61677):     padding-top
+22145.761 WebContent(61677):     padding-right
+22145.761 WebContent(61677):     padding-bottom
+22145.761 WebContent(61677):     padding-left
+22146.011 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22146.081 WebContent(61677): (js error) "Unable to access the BroadcastChannel API"
+22146.131 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22146.131 WebContent(61677):     padding-top
+22146.131 WebContent(61677):     padding-right
+22146.131 WebContent(61677):     padding-bottom
+22146.131 WebContent(61677):     padding-left
+22146.131 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22146.131 WebContent(61677):     padding-top
+22146.131 WebContent(61677):     padding-right
+22146.131 WebContent(61677):     padding-bottom
+22146.131 WebContent(61677):     padding-left
+22146.131 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22146.131 WebContent(61677):     padding-top
+22146.131 WebContent(61677):     padding-right
+22146.131 WebContent(61677):     padding-bottom
+22146.131 WebContent(61677):     padding-left
+22146.131 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22146.131 WebContent(61677):     padding-top
+22146.131 WebContent(61677):     padding-right
+22146.131 WebContent(61677):     padding-bottom
+22146.131 WebContent(61677):     padding-left
+22146.131 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22146.131 WebContent(61677):     padding-top
+22146.131 WebContent(61677):     padding-right
+22146.131 WebContent(61677):     padding-bottom
+22146.131 WebContent(61677):     padding-left
+22146.131 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22146.131 WebContent(61677):     padding-top
+22146.131 WebContent(61677):     padding-right
+22146.131 WebContent(61677):     padding-bottom
+22146.131 WebContent(61677):     padding-left
+22146.131 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22146.131 WebContent(61677):     padding-top
+22146.131 WebContent(61677):     padding-right
+22146.131 WebContent(61677):     padding-bottom
+22146.131 WebContent(61677):     padding-left
+22146.481 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22146.481 WebContent(61677):     padding-top
+22146.481 WebContent(61677):     padding-right
+22146.481 WebContent(61677):     padding-bottom
+22146.481 WebContent(61677):     padding-left
+22146.481 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22146.481 WebContent(61677):     padding-top
+22146.481 WebContent(61677):     padding-right
+22146.481 WebContent(61677):     padding-bottom
+22146.481 WebContent(61677):     padding-left
+22146.481 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22146.481 WebContent(61677):     padding-top
+22146.481 WebContent(61677):     padding-right
+22146.481 WebContent(61677):     padding-bottom
+22146.481 WebContent(61677):     padding-left
+22146.481 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22146.481 WebContent(61677):     padding-top
+22146.481 WebContent(61677):     padding-right
+22146.481 WebContent(61677):     padding-bottom
+22146.481 WebContent(61677):     padding-left
+22146.491 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22146.491 WebContent(61677):     padding-top
+22146.491 WebContent(61677):     padding-right
+22146.491 WebContent(61677):     padding-bottom
+22146.491 WebContent(61677):     padding-left
+22146.491 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22146.491 WebContent(61677):     padding-top
+22146.491 WebContent(61677):     padding-right
+22146.491 WebContent(61677):     padding-bottom
+22146.491 WebContent(61677):     padding-left
+22146.491 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22146.491 WebContent(61677):     padding-top
+22146.491 WebContent(61677):     padding-right
+22146.491 WebContent(61677):     padding-bottom
+22146.491 WebContent(61677):     padding-left
+22146.851 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22147.141 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22147.301 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22147.451 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22147.601 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22147.641 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22147.681 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22147.751 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22147.811 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22147.811 WebContent(61677):     padding-top
+22147.811 WebContent(61677):     padding-right
+22147.811 WebContent(61677):     padding-bottom
+22147.811 WebContent(61677):     padding-left
+22147.811 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22147.811 WebContent(61677):     padding-top
+22147.811 WebContent(61677):     padding-right
+22147.811 WebContent(61677):     padding-bottom
+22147.811 WebContent(61677):     padding-left
+22147.811 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22147.811 WebContent(61677):     padding-top
+22147.811 WebContent(61677):     padding-right
+22147.811 WebContent(61677):     padding-bottom
+22147.811 WebContent(61677):     padding-left
+22147.811 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22147.811 WebContent(61677):     padding-top
+22147.811 WebContent(61677):     padding-right
+22147.811 WebContent(61677):     padding-bottom
+22147.811 WebContent(61677):     padding-left
+22147.811 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22147.811 WebContent(61677):     padding-top
+22147.811 WebContent(61677):     padding-right
+22147.811 WebContent(61677):     padding-bottom
+22147.811 WebContent(61677):     padding-left
+22147.811 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22147.811 WebContent(61677):     padding-top
+22147.811 WebContent(61677):     padding-right
+22147.811 WebContent(61677):     padding-bottom
+22147.811 WebContent(61677):     padding-left
+22147.811 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22147.811 WebContent(61677):     padding-top
+22147.811 WebContent(61677):     padding-right
+22147.811 WebContent(61677):     padding-bottom
+22147.811 WebContent(61677):     padding-left
+22148.221 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22148.221 WebContent(61677):     padding-top
+22148.221 WebContent(61677):     padding-right
+22148.221 WebContent(61677):     padding-bottom
+22148.221 WebContent(61677):     padding-left
+22148.221 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22148.221 WebContent(61677):     padding-top
+22148.221 WebContent(61677):     padding-right
+22148.221 WebContent(61677):     padding-bottom
+22148.221 WebContent(61677):     padding-left
+22148.221 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22148.221 WebContent(61677):     padding-top
+22148.221 WebContent(61677):     padding-right
+22148.221 WebContent(61677):     padding-bottom
+22148.221 WebContent(61677):     padding-left
+22148.221 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22148.221 WebContent(61677):     padding-top
+22148.221 WebContent(61677):     padding-right
+22148.221 WebContent(61677):     padding-bottom
+22148.221 WebContent(61677):     padding-left
+22148.221 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22148.221 WebContent(61677):     padding-top
+22148.221 WebContent(61677):     padding-right
+22148.221 WebContent(61677):     padding-bottom
+22148.221 WebContent(61677):     padding-left
+22148.221 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22148.221 WebContent(61677):     padding-top
+22148.221 WebContent(61677):     padding-right
+22148.221 WebContent(61677):     padding-bottom
+22148.221 WebContent(61677):     padding-left
+22148.221 WebContent(61677): No property (from 4 properties) matched Function: calc( / 10)
+22148.221 WebContent(61677):     padding-top
+22148.221 WebContent(61677):     padding-right
+22148.221 WebContent(61677):     padding-bottom
+22148.221 WebContent(61677):     padding-left
+22149.731 WebContent(61677): (js error) "Hydration completed but contains mismatches."
+22150.531 WebContent(61677): (js error) "Failed to load collections" [Error] frontpageCollections Key does not exist
+22153.521 WebContent(61677): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+22153.551 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22153.791 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22153.811 WebContent(61677): ResourceLoader: Failed load of: "https://accounts.google.com/gsi/client", Error: Load failed: 403, Duration: 250ms
+22153.841 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22153.881 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22154.121 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22154.351 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22154.391 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22154.631 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22154.671 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22154.711 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22154.951 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22154.991 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22155.031 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22155.071 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22155.311 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22155.351 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22155.391 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22155.431 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22155.471 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22155.511 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22155.561 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22155.791 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22155.831 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22155.871 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22155.911 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22155.951 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22155.971 WebContent(61677): Unhandled JavaScript exception (in promise): [TypeError] undefined is not a constructor (evaluated from 'window.BroadcastChannel')
+22155.981 WebContent(61677):     at qi (frontpage--desktop.es.cd2f4638.js:31:27000)
+    at fe (frontpage--desktop.es.cd2f4638.js:29:23972)
+    at he (frontpage--desktop.es.cd2f4638.js:29:23923)
+    at frontpage--desktop.es.cd2f4638.js:29:27927
+    at _e (frontpage--desktop.es.cd2f4638.js:29:27994)
+    at frontpage--desktop.es.cd2f4638.js:29:28347
+    at Ee (frontpage--desktop.es.cd2f4638.js:29:28287)
+    at Ae (frontpage--desktop.es.cd2f4638.js:29:28322)
+    at frontpage--desktop.es.cd2f4638.js:29:23336
+    at frontpage--desktop.es.cd2f4638.js:29:23336
+    at <unknown>
+    at frontpage--desktop.es.cd2f4638.js:29:23313
+    at he (frontpage--desktop.es.cd2f4638.js:29:23569)
+    at frontpage--desktop.es.cd2f4638.js:29:27927
+    at _e (frontpage--desktop.es.cd2f4638.js:29:27994)
+    at frontpage--desktop.es.cd2f4638.js:29:28347
+    at Ee (frontpage--desktop.es.cd2f4638.js:29:28287)
+    at Ae (frontpage--desktop.es.cd2f4638.js:29:28322)
+    at frontpage--desktop.es.cd2f4638.js:29:48722
+    5 more calls
+    at frontpage--desktop.es.cd2f4638.js:31:74459
+    at frontpage--desktop.es.cd2f4638.js:31:74459
+    at frontpage--desktop.es.cd2f4638.js:39:75539
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+22156.001 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22156.041 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22156.081 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22156.131 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22156.361 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22156.421 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22156.461 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22156.691 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22156.741 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22157.481 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22157.531 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22157.561 WebContent(61677): HTMLScriptElement: Refusing to run script because the element's result is null.
+22157.561 WebContent(61677): (js error) "Error in loading the scriptTag."
+22160.071 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22160.131 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22160.721 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22160.771 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22160.821 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22160.871 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22160.931 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22160.981 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22161.031 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22161.081 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22161.131 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22161.181 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22161.241 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22161.301 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22161.351 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22161.401 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22161.441 RequestServer(61643:61675): ConnectionCache: Connection to https://cdn.heapanalytics.com/js/heap-4023737901.js failed: connect: Connection refused (errno=111)
+22161.441 RequestServer(61643:61675): Request with a null socket finished for URL https://cdn.heapanalytics.com/js/heap-4023737901.js
+22162.021 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22162.041 WebContent(61677): ResourceLoader: Failed load of: "https://cdn.heapanalytics.com/js/heap-4023737901.js", Error: Load failed, Duration: 610ms
+22162.091 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22162.471 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22162.531 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22162.601 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22163.001 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22163.061 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22163.461 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22163.851 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22163.921 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22164.341 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22164.411 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22164.491 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22164.521 WebContent(61677): ResourceLoader: Failed load of: "https://dpm.demdex.net/ibs:dpid=375988&dpuuid=b2ca31062ff311efbfbeea10a259d0d4", Error: URL was filtered, Duration: 0ms
+22165.311 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22165.341 WebContent(61677): HTMLScriptElement: Refusing to run script because the element's result is null.
+22166.031 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22166.101 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22166.171 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22166.871 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22166.901 WebContent(61677): ResourceLoader: Failed load of: "https://www.googletagmanager.com/gtag/js?id=AW-935793791&l=gglData", Error: URL was filtered, Duration: 0ms
+22167.531 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22167.561 WebContent(61677): ResourceLoader: Failed load of: "https://secure.quantserve.com/quant.js", Error: URL was filtered, Duration: 0ms
+22167.601 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22167.631 WebContent(61677): HTMLScriptElement: Refusing to run script because the element's result is null.
+22168.261 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22168.291 WebContent(61677): ResourceLoader: Failed load of: "https://connect.facebook.net/en_US/fbds.js", Error: URL was filtered, Duration: 0ms
+22168.291 WebContent(61677): HTMLScriptElement: Refusing to run script because the element's result is null.
+22168.321 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22168.361 WebContent(61677): ResourceLoader: Failed load of: "https://s.pinimg.com/ct/core.js", Error: URL was filtered, Duration: 0ms
+22168.981 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22169.011 WebContent(61677): HTMLScriptElement: Refusing to run script because the element's result is null.
+22169.061 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22169.101 WebContent(61677): HTMLScriptElement: Refusing to run script because the element's result is null.
+22169.141 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22169.241 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22169.331 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22169.611 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22169.691 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22169.791 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22170.681 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22170.791 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22170.891 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22171.011 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22171.141 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22171.271 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22171.791 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22171.901 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22172.341 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22172.791 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22173.231 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22173.641 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22173.821 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22174.261 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22174.711 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22174.821 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22174.941 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22175.051 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22175.161 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22175.271 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22175.401 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22175.511 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22175.951 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22176.101 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22176.601 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22176.891 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22177.731 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22178.721 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22179.721 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22180.011 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22180.201 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22180.371 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22180.981 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22181.061 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22181.651 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22181.801 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22181.941 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22182.201 ImageDecoder(61678): ConnectionFromClient(0x0000561a972bfa90) (id=1) had an error (Too many file descriptors to send), disconnecting.
+22182.591 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22182.641 WebContent(61677): IPC::ConnectionBase (0x0000558ddd4d5280) had an error (IPC::transfer_message: Disconnected from peer), disconnecting.
+22182.641 WebContent(61677): ImageDecoder disconnected trying to decode image
+22184.251 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22184.711 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22185.161 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22185.241 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22189.411 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22189.481 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22189.551 WebContent(61677): FIXME: Painting commands are recorded twice for stacking context: BlockContainer<DIV>
+22189.721 WebContent(61677): ImageDecoderClient: Failed to decode image with ID 1: Decoding failed: Could not find suitable image decoder plugin for data
+libpng warning: iCCP: known incorrect sRGB profile
+22214.300 WebContent(61677): Web::EventHandler: Clicking on a link to https://batteryuniversity.com/article/bu-808-how-to-prolong-lithium-based-batteries
+22215.730 WebContent(61677): ResourceLoader: Failed load of: "https://www.googletagmanager.com/gtag/js?id=G-5LDFFRYXWV", Error: URL was filtered, Duration: 0ms
+22215.740 RequestServer(61643:61674): EnsureConnection: DNS-preload for https://fonts.googleapis.com/ done
+22215.740 RequestServer(61643:61674): EnsureConnection: DNS-preload for fonts.googleapis.com
+22215.830 WebContent(61677): ResourceLoader: Failed load of: "https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0&appId=122862621142853&autoLogAppEvents=1", Error: URL was filtered, Duration: 0ms
+22215.830 WebContent(61677): HTMLScriptElement: Refusing to run script because the element's result is null.
+22215.840 RequestServer(61643:61673): ConnectionCache: Connection to https://d3lcz8vpax4lo2.cloudfront.net/ads-code/ee58f127-1e31-443a-abca-13991c8c698d.js failed: connect: Connection refused (errno=111)
+22215.840 RequestServer(61643:61673): Request with a null socket finished for URL https://d3lcz8vpax4lo2.cloudfront.net/ads-code/ee58f127-1e31-443a-abca-13991c8c698d.js
+22216.020 WebContent(61677): ResourceLoader: Failed load of: "https://d3lcz8vpax4lo2.cloudfront.net/ads-code/ee58f127-1e31-443a-abca-13991c8c698d.js", Error: Load failed, Duration: 190ms
+22216.070 WebContent(61677): HTMLScriptElement: Refusing to run script because the element's result is null.
+22216.270 WebContent(61677): HTMLScriptElement: Refusing to run script because the element's result is null.
+22216.800 WebContent(61677): HTMLScriptElement: Refusing to run classic script because it has the nomodule attribute.
+
+real    5m28.311s
+user    0m10.052s
+sys     0m2.269s
+Fri Jun 21 13:33:09 EDT 2024
 kushal@kus2023:~/src/ladybird$ cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
