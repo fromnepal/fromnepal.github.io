@@ -1,60 +1,614 @@
-PowerShell 7.4.2
+Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_64)
 
-   A new PowerShell stable release is available: v7.4.3
-   Upgrade now, or check out the release page at:
-     https://aka.ms/PowerShell-Release?tag=v7.4.3
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
 
-PS C:\Users\kushal> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --restrict-filenames --add-metadata -i -o "%(title).100s.%(ext)s" "https://youtu.be/TXIwtYq_MuE"; date;
 
-Sunday, June 23, 2024 10:39:41 AM
+This message is shown once a day. To disable it please create the
+/home/kushal/.hushlogin file.
+kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y;
+[sudo] password for kushal:
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:3 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Fetched 257 kB in 0s (637 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
 
-Drive        :
-Provider     : Microsoft.PowerShell.Core\FileSystem
-ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
-Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+real    0m9.398s
+user    0m0.026s
+sys     0m0.000s
+Listing... Done
 
-Sunday, June 23, 2024 10:39:41 AM
-[youtube] Extracting URL: https://youtu.be/TXIwtYq_MuE
-[youtube] TXIwtYq_MuE: Downloading webpage
-[youtube] TXIwtYq_MuE: Downloading ios player API JSON
-[youtube] TXIwtYq_MuE: Downloading player 84314bef
-[youtube] TXIwtYq_MuE: Downloading m3u8 information
-[info] TXIwtYq_MuE: Downloading 1 format(s): 248+251
-[download] Destination: Minimum_Mobility_EV_-_The_Future_of_Urban_Commuting.f248.webm
-[download] 100% of   20.62MiB in 00:00:02 at 7.62MiB/s
-[download] Destination: Minimum_Mobility_EV_-_The_Future_of_Urban_Commuting.f251.webm
-[download] 100% of    2.48MiB in 00:00:00 at 4.69MiB/s
-[Merger] Merging formats into "Minimum_Mobility_EV_-_The_Future_of_Urban_Commuting.webm"
-Deleting original file Minimum_Mobility_EV_-_The_Future_of_Urban_Commuting.f248.webm (pass -k to keep)
-Deleting original file Minimum_Mobility_EV_-_The_Future_of_Urban_Commuting.f251.webm (pass -k to keep)
-[Metadata] Adding metadata to "Minimum_Mobility_EV_-_The_Future_of_Urban_Commuting.webm"
-Sunday, June 23, 2024 10:39:58 AM
+real    0m0.151s
+user    0m0.151s
+sys     0m0.000s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --restrict-filenames --add-metadata -i -o "%(title).100s.%(ext)s" "https://youtu.be/1iKYMh6AlGQ"; date;
+real    0m0.314s
+user    0m0.005s
+sys     0m0.000s
+kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y;
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Fetched 257 kB in 0s (649 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
 
-Sunday, June 23, 2024 10:41:19 AM
+real    0m1.175s
+user    0m0.001s
+sys     0m0.006s
+Listing... Done
 
-Drive        :
-Provider     : Microsoft.PowerShell.Core\FileSystem
-ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
-Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+real    0m0.150s
+user    0m0.130s
+sys     0m0.009s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 
-Sunday, June 23, 2024 10:41:19 AM
-[youtube] Extracting URL: https://youtu.be/1iKYMh6AlGQ
-[youtube] 1iKYMh6AlGQ: Downloading webpage
-[youtube] 1iKYMh6AlGQ: Downloading ios player API JSON
-[youtube] 1iKYMh6AlGQ: Downloading m3u8 information
-[info] 1iKYMh6AlGQ: Downloading 1 format(s): 616+251
-[hlsnative] Downloading m3u8 manifest
-[hlsnative] Total fragments: 295
-[download] Destination: _.f616.mp4
-[download] 100% of  767.89MiB in 00:07:06 at 1.80MiB/s
-[download] Destination: _.f251.webm
-[download] 100% of   21.27MiB in 00:00:06 at 3.19MiB/s
-[Merger] Merging formats into "_.webm"
-Deleting original file _.f616.mp4 (pass -k to keep)
-Deleting original file _.f251.webm (pass -k to keep)
-[Metadata] Adding metadata to "_.webm"
-Sunday, June 23, 2024 10:51:05 AM
+real    0m0.302s
+user    0m0.000s
+sys     0m0.005s
+kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Hit:5 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
 
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message"build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+real    0m1.003s
+user    0m0.006s
+sys     0m0.000s
+Listing... Done
+
+real    0m0.154s
+user    0m0.145s
+sys     0m0.010s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+real    0m0.304s
+user    0m0.004s
+sys     0m0.000s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.071s
+user    0m0.000s
+sys     0m0.075s
+remote: Enumerating objects: 612, done.
+remote: Counting objects: 100% (612/612), done.
+remote: Compressing objects: 100% (257/257), done.
+remote: Total 612 (delta 368), reused 537 (delta 350), pack-reused 0
+Receiving objects: 100% (612/612), 516.84 KiB | 5.81 MiB/s, done.
+Resolving deltas: 100% (368/368), completed with 87 local objects.
+From https://github.com/LadybirdBrowser/ladybird
+   a0561ea9b2..ebdb92eef6  master     -> origin/master
+
+real    0m0.469s
+user    0m0.057s
+sys     0m0.036s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Updating a0561ea9b2..ebdb92eef6
+Fast-forward
+ .github/CODEOWNERS                                                                                               |   1 -
+ .github/actions/cache-restore/action.yml                                                                         |   8 --
+ .github/actions/setup/action.yml                                                                                 |   1 +
+ .github/workflows/dev-container.yml                                                                              |   2 +-
+ .github/workflows/lagom-template.yml                                                                             |   4 +-
+ .github/workflows/libjs-test262.yml                                                                              |  40 +++---
+ .github/workflows/nightly-android.yml                                                                            |   4 +-
+ .github/workflows/wasm.yml                                                                                       | 111 ---------------
+ Base/home/anon/Documents/emoji-serenity.txt                                                                      | 275 -------------------------------------
+ Documentation/BuildInstructionsLadybird.md                                                                       |   2 +-
+ Documentation/QtCreatorConfiguration.md                                                                          |   1 -
+ Ladybird/AppKit/main.mm                                                                                          |   3 +
+ Ladybird/HelperProcess.cpp                                                                                       |   2 +
+ Ladybird/Qt/main.cpp                                                                                             |   3 +
+ Ladybird/Types.h                                                                                                 |   6 +
+ Ladybird/WebContent/main.cpp                                                                                     |  10 ++
+ Ladybird/WebWorker/CMakeLists.txt                                                                                |   2 +-
+ Meta/CMake/common_options.cmake                                                                                  |   1 -
+ Meta/CMake/unicode_data.cmake                                                                                    | 134 +++---------------
+ Meta/Lagom/CMakeLists.txt                                                                                        |  55 +++-----
+ Meta/Lagom/Contrib/VideoPlayerSDL/CMakeLists.txt                                                                 |   8 --
+ Meta/Lagom/Contrib/VideoPlayerSDL/main.cpp                                                                       | 109 ---------------
+ Meta/Lagom/Tools/CodeGenerators/LibUnicode/CMakeLists.txt                                                        |   1 -
+ Meta/Lagom/Tools/CodeGenerators/LibUnicode/GenerateEmojiData.cpp                                                 | 321 +++++++------------------------------------
+ Meta/Lagom/Tools/CodeGenerators/LibUnicode/GenerateUnicodeData.cpp                                               | 987 -----------------------------------------------------------------------------------------------------------------------------------
+ Meta/Lagom/Tools/CodeGenerators/LibUnicode/GeneratorUtil.h                                                       |  55 --------
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/BindingsGenerator/IDLGenerators.cpp                                       |   1 +
+ Meta/Lagom/Wasm/js_repl.cpp                                                                                      | 345 ----------------------------------------------
+ Meta/gn/secondary/Userland/Libraries/LibWeb/HTML/BUILD.gn                                                        |   2 +
+ Meta/gn/secondary/Userland/Libraries/LibWeb/idl_files.gni                                                        |   1 +
+ Meta/ladybird.sh                                                                                                 |   6 +-
+ README.md                                                                                                        |   2 +-
+ Tests/CMakeLists.txt                                                                                             |   1 -
+ Tests/LibJS/CMakeLists.txt                                                                                       |   8 +-
+ Tests/LibLocale/CMakeLists.txt                                                                                   |   9 --
+ Tests/LibLocale/TestDisplayNames.cpp                                                                             |  82 -----------
+ Tests/LibUnicode/CMakeLists.txt                                                                                  |   3 +
+ Tests/LibUnicode/TestDisplayNames.cpp                                                                            |  82 +++++++++++
+ Tests/{LibLocale => LibUnicode}/TestLocale.cpp                                                                   | 156 ++++++++++-----------
+ Tests/{LibLocale => LibUnicode}/TestSegmenter.cpp                                                                |  10 +-
+ Tests/LibUnicode/TestUnicodeCharacterTypes.cpp                                                                   |  24 +---
+ Tests/LibWeb/Layout/expected/css-namespace-tag-name-selector.txt                                                 |   8 +-
+ Tests/LibWeb/Layout/expected/flex/flex-basis-intrinsic-sizing-keywords.txt                                       |  39 ++++++
+ Tests/LibWeb/Layout/expected/flex/no-stretch-fit-width-for-item-that-can-resolve-aspect-ratio-through-height.txt |  14 ++
+ Tests/LibWeb/Layout/expected/treat-intrinsic-sizing-keywords-as-auto-when-aspect-ratio-cant-be-resolved.txt      |  12 ++
+ Tests/LibWeb/Layout/input/flex/flex-basis-intrinsic-sizing-keywords.html                                         |   9 ++
+ Tests/LibWeb/Layout/input/flex/no-stretch-fit-width-for-item-that-can-resolve-aspect-ratio-through-height.html   |  19 +++
+ Tests/LibWeb/Layout/input/treat-intrinsic-sizing-keywords-as-auto-when-aspect-ratio-cant-be-resolved.html        |   3 +
+ Tests/LibWeb/Ref/css-case-insensitive-html-attributes-selector.html                                              |  12 ++
+ Tests/LibWeb/Ref/reference/css-case-insensitive-html-attributes-selector-ref.html                                |   8 ++
+ Tests/LibWeb/Text/expected/UIEvents/auxevent.txt                                                                 |   1 +
+ Tests/LibWeb/Text/input/UIEvents/auxevent.html                                                                   |  22 +++
+ Toolchain/BuildVcpkg.sh                                                                                          |  26 +++-
+ Userland/Libraries/CMakeLists.txt                                                                                |   1 -
+ Userland/Libraries/LibCore/CMakeLists.txt                                                                        |   8 +-
+ Userland/Libraries/LibGfx/Font/Emoji.cpp                                                                         |  15 +-
+ Userland/Libraries/LibGfx/TextLayout.cpp                                                                         |   6 +-
+ Userland/Libraries/LibIDL/CMakeLists.txt                                                                         |   2 +-
+ Userland/Libraries/LibJS/CMakeLists.txt                                                                          |   6 +-
+ Userland/Libraries/LibJS/Lexer.cpp                                                                               |  12 +-
+ Userland/Libraries/LibJS/Print.cpp                                                                               |   4 +-
+ Userland/Libraries/LibJS/Runtime/DatePrototype.cpp                                                               |   6 +-
+ Userland/Libraries/LibJS/Runtime/Intl/AbstractOperations.cpp                                                     |  54 ++++----
+ Userland/Libraries/LibJS/Runtime/Intl/AbstractOperations.h                                                       |   6 +-
+ Userland/Libraries/LibJS/Runtime/Intl/CollatorConstructor.cpp                                                    |   4 +-
+ Userland/Libraries/LibJS/Runtime/Intl/DateTimeFormat.cpp                                                         |   6 +-
+ Userland/Libraries/LibJS/Runtime/Intl/DateTimeFormat.h                                                           |  46 +++----
+ Userland/Libraries/LibJS/Runtime/Intl/DateTimeFormatConstructor.cpp                                              |  28 ++--
+ Userland/Libraries/LibJS/Runtime/Intl/DateTimeFormatPrototype.cpp                                                |  14 +-
+ Userland/Libraries/LibJS/Runtime/Intl/DisplayNames.cpp                                                           |   8 +-
+ Userland/Libraries/LibJS/Runtime/Intl/DisplayNames.h                                                             |  26 ++--
+ Userland/Libraries/LibJS/Runtime/Intl/DisplayNamesConstructor.cpp                                                |   4 +-
+ Userland/Libraries/LibJS/Runtime/Intl/DisplayNamesPrototype.cpp                                                  |  14 +-
+ Userland/Libraries/LibJS/Runtime/Intl/DurationFormat.cpp                                                         |   4 +-
+ Userland/Libraries/LibJS/Runtime/Intl/DurationFormat.h                                                           |   8 +-
+ Userland/Libraries/LibJS/Runtime/Intl/DurationFormatConstructor.cpp                                              |   6 +-
+ Userland/Libraries/LibJS/Runtime/Intl/Intl.cpp                                                                   |  16 +--
+ Userland/Libraries/LibJS/Runtime/Intl/ListFormat.cpp                                                             |   4 +-
+ Userland/Libraries/LibJS/Runtime/Intl/ListFormat.h                                                               |  30 ++--
+ Userland/Libraries/LibJS/Runtime/Intl/ListFormatConstructor.cpp                                                  |   2 +-
+ Userland/Libraries/LibJS/Runtime/Intl/Locale.cpp                                                                 |  50 +++----
+ Userland/Libraries/LibJS/Runtime/Intl/Locale.h                                                                   |   2 +-
+ Userland/Libraries/LibJS/Runtime/Intl/LocaleConstructor.cpp                                                      |  30 ++--
+ Userland/Libraries/LibJS/Runtime/Intl/LocalePrototype.cpp                                                        |  16 +--
+ Userland/Libraries/LibJS/Runtime/Intl/MathematicalValue.cpp                                                      |   8 +-
+ Userland/Libraries/LibJS/Runtime/Intl/MathematicalValue.h                                                        |   4 +-
+ Userland/Libraries/LibJS/Runtime/Intl/NumberFormat.cpp                                                           |  24 ++--
+ Userland/Libraries/LibJS/Runtime/Intl/NumberFormat.h                                                             | 112 +++++++--------
+ Userland/Libraries/LibJS/Runtime/Intl/NumberFormatConstructor.cpp                                                |  36 ++---
+ Userland/Libraries/LibJS/Runtime/Intl/NumberFormatConstructor.h                                                  |   2 +-
+ Userland/Libraries/LibJS/Runtime/Intl/PluralRules.cpp                                                            |   6 +-
+ Userland/Libraries/LibJS/Runtime/Intl/PluralRules.h                                                              |  14 +-
+ Userland/Libraries/LibJS/Runtime/Intl/PluralRulesConstructor.cpp                                                 |   4 +-
+ Userland/Libraries/LibJS/Runtime/Intl/PluralRulesPrototype.cpp                                                   |  10 +-
+ Userland/Libraries/LibJS/Runtime/Intl/RelativeTimeFormat.cpp                                                     |  24 ++--
+ Userland/Libraries/LibJS/Runtime/Intl/RelativeTimeFormat.h                                                       |  36 ++---
+ Userland/Libraries/LibJS/Runtime/Intl/RelativeTimeFormatConstructor.cpp                                          |   6 +-
+ Userland/Libraries/LibJS/Runtime/Intl/SegmentIterator.cpp                                                        |   4 +-
+ Userland/Libraries/LibJS/Runtime/Intl/SegmentIterator.h                                                          |  12 +-
+ Userland/Libraries/LibJS/Runtime/Intl/SegmentIteratorPrototype.cpp                                               |   2 +-
+ Userland/Libraries/LibJS/Runtime/Intl/Segmenter.cpp                                                              |   8 +-
+ Userland/Libraries/LibJS/Runtime/Intl/Segmenter.h                                                                |  22 +--
+ Userland/Libraries/LibJS/Runtime/Intl/SegmenterConstructor.cpp                                                   |   2 +-
+ Userland/Libraries/LibJS/Runtime/Intl/Segments.cpp                                                               |   4 +-
+ Userland/Libraries/LibJS/Runtime/Intl/Segments.h                                                                 |  12 +-
+ Userland/Libraries/LibJS/Runtime/StringPrototype.cpp                                                             |  10 +-
+ Userland/Libraries/LibLine/CMakeLists.txt                                                                        |   2 +-
+ Userland/Libraries/LibLine/Editor.cpp                                                                            |   4 +-
+ Userland/Libraries/LibLocale/CMakeLists.txt                                                                      |  19 ---
+ Userland/Libraries/LibLocale/Forward.h                                                                           |  32 -----
+ Userland/Libraries/LibProtocol/RequestClient.cpp                                                                 |   7 +-
+ Userland/Libraries/LibProtocol/RequestClient.h                                                                   |   2 +-
+ Userland/Libraries/LibRegex/RegexByteCode.cpp                                                                    |   6 +-
+ Userland/Libraries/LibRegex/RegexParser.cpp                                                                      |  38 +++---
+ Userland/Libraries/LibUnicode/CMakeLists.txt                                                                     |  16 ++-
+ Userland/Libraries/LibUnicode/CharacterTypes.cpp                                                                 | 428 +++++++++++++++++++++++++++++++++++++++++++++++----------
+ Userland/Libraries/LibUnicode/CharacterTypes.h                                                                   |  53 +++++--
+ Userland/Libraries/{LibLocale => LibUnicode}/DateTimeFormat.cpp                                                  |  12 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/DateTimeFormat.h                                                    |   4 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/DisplayNames.cpp                                                    |   6 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/DisplayNames.h                                                      |   4 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/DurationFormat.cpp                                                  |   8 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/DurationFormat.h                                                    |   2 +-
+ Userland/Libraries/LibUnicode/Emoji.cpp                                                                          |  28 ++--
+ Userland/Libraries/LibUnicode/Emoji.h                                                                            |  98 +------------
+ Userland/Libraries/LibUnicode/Forward.h                                                                          |  28 +++-
+ Userland/Libraries/{LibLocale => LibUnicode}/ICU.cpp                                                             |   4 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/ICU.h                                                               |   4 +-
+ Userland/Libraries/LibUnicode/IDNA.cpp                                                                           |   8 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/ListFormat.cpp                                                      |   6 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/ListFormat.h                                                        |   4 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/Locale.cpp                                                          |   6 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/Locale.h                                                            |   4 +-
+ Userland/Libraries/LibUnicode/Normalize.cpp                                                                      |   8 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/NumberFormat.cpp                                                    |  10 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/NumberFormat.h                                                      |   6 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/PartitionRange.h                                                    |   2 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/PluralRules.cpp                                                     |   4 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/PluralRules.h                                                       |   2 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/RelativeTimeFormat.cpp                                              |  12 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/RelativeTimeFormat.h                                                |   4 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/Segmenter.cpp                                                       |   8 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/Segmenter.h                                                         |   2 +-
+ Userland/Libraries/LibUnicode/String.cpp                                                                         |  18 +--
+ Userland/Libraries/{LibLocale => LibUnicode}/UnicodeKeywords.cpp                                                 |   8 +-
+ Userland/Libraries/{LibLocale => LibUnicode}/UnicodeKeywords.h                                                   |   2 +-
+ Userland/Libraries/LibWasm/AbstractMachine/BytecodeInterpreter.cpp                                               |  12 +-
+ Userland/Libraries/LibWeb/CMakeLists.txt                                                                         |   5 +-
+ Userland/Libraries/LibWeb/CSS/MediaQuery.cpp                                                                     |  54 --------
+ Userland/Libraries/LibWeb/CSS/MediaQuery.h                                                                       |   2 -
+ Userland/Libraries/LibWeb/CSS/Parser/Parser.h                                                                    |  50 +++++++
+ Userland/Libraries/LibWeb/CSS/Parser/SelectorParsing.cpp                                                         |   7 +-
+ Userland/Libraries/LibWeb/CSS/Properties.json                                                                    |   5 +-
+ Userland/Libraries/LibWeb/DOM/CharacterData.cpp                                                                  |   6 +-
+ Userland/Libraries/LibWeb/DOM/CharacterData.h                                                                    |   6 +-
+ Userland/Libraries/LibWeb/DOM/Element.cpp                                                                        |  20 +--
+ Userland/Libraries/LibWeb/DOM/ElementFactory.cpp                                                                 |   3 +
+ Userland/Libraries/LibWeb/DOM/EventTarget.cpp                                                                    |  13 +-
+ Userland/Libraries/LibWeb/DOM/Position.cpp                                                                       |   2 +-
+ Userland/Libraries/LibWeb/Fetch/Fetching/Fetching.cpp                                                            | 223 +++++++++++++++++++++++++-----
+ Userland/Libraries/LibWeb/Fetch/Infrastructure/HTTP/Responses.cpp                                                |  30 +++-
+ Userland/Libraries/LibWeb/Forward.h                                                                              |   2 +
+ Userland/Libraries/LibWeb/HTML/CanvasRenderingContext2D.cpp                                                      |   4 +-
+ Userland/Libraries/LibWeb/HTML/CloseWatcher.cpp                                                                  | 167 ++++++++++++++++++++++
+ Userland/Libraries/LibWeb/HTML/CloseWatcher.h                                                                    |  49 +++++++
+ Userland/Libraries/LibWeb/HTML/CloseWatcher.idl                                                                  |  19 +++
+ Userland/Libraries/LibWeb/HTML/CloseWatcherManager.cpp                                                           | 120 ++++++++++++++++
+ Userland/Libraries/LibWeb/HTML/CloseWatcherManager.h                                                             |  40 ++++++
+ Userland/Libraries/LibWeb/HTML/EventNames.h                                                                      |   3 +
+ Userland/Libraries/LibWeb/HTML/HTMLDialogElement.cpp                                                             |  59 ++++++--
+ Userland/Libraries/LibWeb/HTML/HTMLDialogElement.h                                                               |   2 +
+ Userland/Libraries/LibWeb/HTML/HTMLStyleElement.cpp                                                              |  28 ++++
+ Userland/Libraries/LibWeb/HTML/HTMLStyleElement.h                                                                |   3 +
+ Userland/Libraries/LibWeb/HTML/HTMLStyleElement.idl                                                              |   2 +-
+ Userland/Libraries/LibWeb/HTML/Navigation.cpp                                                                    |   4 +-
+ Userland/Libraries/LibWeb/HTML/Window.cpp                                                                        |  12 ++
+ Userland/Libraries/LibWeb/HTML/Window.h                                                                          |   2 +
+ Userland/Libraries/LibWeb/IndexedDB/IDBOpenDBRequest.cpp                                                         |  26 ++++
+ Userland/Libraries/LibWeb/IndexedDB/IDBOpenDBRequest.h                                                           |   6 +
+ Userland/Libraries/LibWeb/IndexedDB/IDBOpenDBRequest.idl                                                         |   4 +-
+ Userland/Libraries/LibWeb/IndexedDB/IDBRequest.cpp                                                               |  26 ++++
+ Userland/Libraries/LibWeb/IndexedDB/IDBRequest.h                                                                 |   6 +
+ Userland/Libraries/LibWeb/IndexedDB/IDBRequest.idl                                                               |   4 +-
+ Userland/Libraries/LibWeb/Internals/Internals.cpp                                                                |  14 +-
+ Userland/Libraries/LibWeb/Internals/Internals.h                                                                  |   4 +
+ Userland/Libraries/LibWeb/Internals/Internals.idl                                                                |   1 +
+ Userland/Libraries/LibWeb/Layout/FlexFormattingContext.cpp                                                       |  15 +-
+ Userland/Libraries/LibWeb/Layout/FormattingContext.cpp                                                           |  11 +-
+ Userland/Libraries/LibWeb/Layout/SVGFormattingContext.cpp                                                        |   3 +
+ Userland/Libraries/LibWeb/Page/EditEventHandler.cpp                                                              |   2 +-
+ Userland/Libraries/LibWeb/Page/EventHandler.cpp                                                                  |   8 ++
+ Userland/Libraries/LibWeb/SVG/SVGAElement.cpp                                                                    |  26 ++++
+ Userland/Libraries/LibWeb/SVG/SVGAElement.h                                                                      |  25 ++++
+ Userland/Libraries/LibWeb/SVG/SVGAElement.idl                                                                    |  22 +++
+ Userland/Libraries/LibWeb/SVG/TagNames.h                                                                         |   1 +
+ Userland/Libraries/LibWeb/UIEvents/KeyboardEvent.cpp                                                             |   6 +-
+ Userland/Libraries/LibWeb/idl_files.cmake                                                                        |   2 +
+ Userland/Libraries/LibWebSocket/ConnectionInfo.h                                                                 |  11 +-
+ Userland/Libraries/LibWebSocket/WebSocket.cpp                                                                    |   2 +-
+ Userland/Services/RequestServer/ConnectionFromClient.cpp                                                         |   9 +-
+ Userland/Services/RequestServer/ConnectionFromClient.h                                                           |   2 +-
+ Userland/Services/RequestServer/RequestServer.ipc                                                                |   2 +-
+ Userland/Services/WebContent/CMakeLists.txt                                                                      |   2 +-
+ Userland/Services/WebWorker/CMakeLists.txt                                                                       |   2 +-
+ Userland/Utilities/CMakeLists.txt                                                                                |   2 +-
+ vcpkg.json                                                                                                       |   4 +-
+ 206 files changed, 2463 insertions(+), 3509 deletions(-)
+ delete mode 100644 .github/workflows/wasm.yml
+ delete mode 100644 Base/home/anon/Documents/emoji-serenity.txt
+ delete mode 100644 Meta/Lagom/Contrib/VideoPlayerSDL/CMakeLists.txt
+ delete mode 100644 Meta/Lagom/Contrib/VideoPlayerSDL/main.cpp
+ delete mode 100644 Meta/Lagom/Tools/CodeGenerators/LibUnicode/GenerateUnicodeData.cpp
+ delete mode 100644 Meta/Lagom/Wasm/js_repl.cpp
+ delete mode 100644 Tests/LibLocale/CMakeLists.txt
+ delete mode 100644 Tests/LibLocale/TestDisplayNames.cpp
+ create mode 100644 Tests/LibUnicode/TestDisplayNames.cpp
+ rename Tests/{LibLocale => LibUnicode}/TestLocale.cpp (80%)
+ rename Tests/{LibLocale => LibUnicode}/TestSegmenter.cpp (92%)
+ create mode 100644 Tests/LibWeb/Layout/expected/flex/flex-basis-intrinsic-sizing-keywords.txt
+ create mode 100644 Tests/LibWeb/Layout/expected/flex/no-stretch-fit-width-for-item-that-can-resolve-aspect-ratio-through-height.txt
+ create mode 100644 Tests/LibWeb/Layout/expected/treat-intrinsic-sizing-keywords-as-auto-when-aspect-ratio-cant-be-resolved.txt
+ create mode 100644 Tests/LibWeb/Layout/input/flex/flex-basis-intrinsic-sizing-keywords.html
+ create mode 100644 Tests/LibWeb/Layout/input/flex/no-stretch-fit-width-for-item-that-can-resolve-aspect-ratio-through-height.html
+ create mode 100644 Tests/LibWeb/Layout/input/treat-intrinsic-sizing-keywords-as-auto-when-aspect-ratio-cant-be-resolved.html
+ create mode 100644 Tests/LibWeb/Ref/css-case-insensitive-html-attributes-selector.html
+ create mode 100644 Tests/LibWeb/Ref/reference/css-case-insensitive-html-attributes-selector-ref.html
+ create mode 100644 Tests/LibWeb/Text/expected/UIEvents/auxevent.txt
+ create mode 100644 Tests/LibWeb/Text/input/UIEvents/auxevent.html
+ delete mode 100644 Userland/Libraries/LibLocale/CMakeLists.txt
+ delete mode 100644 Userland/Libraries/LibLocale/Forward.h
+ rename Userland/Libraries/{LibLocale => LibUnicode}/DateTimeFormat.cpp (99%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/DateTimeFormat.h (98%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/DisplayNames.cpp (98%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/DisplayNames.h (95%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/DurationFormat.cpp (95%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/DurationFormat.h (94%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/ICU.cpp (98%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/ICU.h (97%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/ListFormat.cpp (98%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/ListFormat.h (93%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/Locale.cpp (99%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/Locale.h (98%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/NumberFormat.cpp (99%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/NumberFormat.h (97%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/PartitionRange.h (97%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/PluralRules.cpp (96%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/PluralRules.h (96%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/RelativeTimeFormat.cpp (97%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/RelativeTimeFormat.h (95%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/Segmenter.cpp (98%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/Segmenter.h (98%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/UnicodeKeywords.cpp (98%)
+ rename Userland/Libraries/{LibLocale => LibUnicode}/UnicodeKeywords.h (97%)
+ create mode 100644 Userland/Libraries/LibWeb/HTML/CloseWatcher.cpp
+ create mode 100644 Userland/Libraries/LibWeb/HTML/CloseWatcher.h
+ create mode 100644 Userland/Libraries/LibWeb/HTML/CloseWatcher.idl
+ create mode 100644 Userland/Libraries/LibWeb/HTML/CloseWatcherManager.cpp
+ create mode 100644 Userland/Libraries/LibWeb/HTML/CloseWatcherManager.h
+ create mode 100644 Userland/Libraries/LibWeb/SVG/SVGAElement.cpp
+ create mode 100644 Userland/Libraries/LibWeb/SVG/SVGAElement.h
+ create mode 100644 Userland/Libraries/LibWeb/SVG/SVGAElement.idl
+
+real    0m0.539s
+user    0m0.057s
+sys     0m0.033s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.031s
+user    0m0.010s
+sys     0m0.024s
+Sun Jun 23 18:10:51 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+Building vcpkg
+remote: Enumerating objects: 310, done.
+remote: Counting objects: 100% (251/251), done.
+remote: Compressing objects: 100% (124/124), done.
+remote: Total 310 (delta 145), reused 177 (delta 127), pack-reused 59
+Receiving objects: 100% (310/310), 259.53 KiB | 4.40 MiB/s, done.
+Resolving deltas: 100% (150/150), completed with 59 local objects.
+From https://github.com/microsoft/vcpkg
+   2b665df62..c4467cb68  master     -> origin/master
+Previous HEAD position was 01f602195 Patch Tuesday for May 2024 (Again) (#38891)
+HEAD is now at f7423ee18 [caf] Update to 0.19.6 (#39288)
+Downloading vcpkg-glibc...
+vcpkg package management program version 2024-06-10-02590c430e4ed9215d27870138c2e579cc338772
+
+See LICENSE.txt for license information.
+~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+[1/2] Re-running CMake...
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/clang++-17
+The following packages will be rebuilt:
+  * brotli:x64-linux@1.1.0#1 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/brotli/4e5b5ae1ad26c80535c893cc0307121f0398549e
+  * bzip2[core,tool]:x64-linux@1.0.8#5 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/bzip2/92e9a8bbf1abbd89872b48ad82fcf75852de1006
+  * dirent:x64-linux@1.24 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/dirent/bcace8750d2b6080c63877eed432f8b862501012
+  * egl-registry:x64-linux@2024-01-25 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/egl-registry/d883db43133dd223c4ffdbef4193943f6784d43a
+  * expat:x64-linux@2.6.2 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/expat/e75ed0e0697a3049343ccfb52fd11eea6cebc30a
+    fontconfig:x64-linux@2.14.2#1 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/fontconfig/de73339d579963e68fed652ed2e206b307a0c03f
+  * freetype[brotli,bzip2,core,png,zlib]:x64-linux@2.13.2#1 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/freetype/60a5a2596ec865db746a7ea741458322cf0cc2bc
+  * getopt:x64-linux@0#3 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/getopt/ba541c1ce4012fae6dfdf34021b03d7253235b24
+  * gettext:x64-linux@0.22.5 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/gettext/a9e016b098d97663485848b70db782306ecde601
+  * gettext-libintl:x64-linux@0.22.5#1 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/gettext-libintl/ac89519d5ec11430978a4e45619befb7a1c4a062
+  * gperf:x64-linux@3.1#6 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/gperf/590e19515bff5b0abc6d9f73ba20a19a71555a32
+  * harfbuzz[core,freetype]:x64-linux@8.5.0#1 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/harfbuzz/14cae658d3e86c06b7c572997e729376ef93c90f
+    icu[core,tools]:x64-linux@74.2#2 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/icu/a36199768fe1f9676b61d5d28ed9ac36c9f041c0
+  * libiconv:x64-linux@1.17#3 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libiconv/0d6e7ebdbfeca59f047e66f632d1d38c2659fc14
+    libjpeg-turbo:x64-linux@3.0.2 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libjpeg-turbo/6d061c71a48ca2abff5cf471f77ef14d7222aa52
+    libpng[apng,core]:x64-linux@1.6.43#1 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libpng/1b0781214ef5a3497d0e7db2c0ed7f7fae74248b
+  * libuuid:x64-linux@1.0.3#14 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libuuid/09be6774f518692bc418aa03623cc9dbc19e6516
+  * libwebp[core,libwebpmux,nearlossless,simd]:x64-linux@1.4.0#1 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libwebp/9d0c00119dd6ec04488b4e0c926aa3ae73b95847
+  * opengl-registry:x64-linux@2024-02-10#1 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/opengl-registry/22f7aa58ee78c9f0db904b6251e9265f2be26f9d
+  * pkgconf:x64-linux@2.2.0 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/pkgconf/cacd18e2bc70298fcf4665ff6f14238b6071013e
+  * pthread:x64-linux@3.0.0#2 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/pthread/e32a8cb12153277234e7c7e04322bdf90580659a
+  * pthreads:x64-linux@3.0.0#14 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/pthreads/2e0a6df2800d3677b941dc6504f083965b7886d9
+    skia[core,fontconfig,freetype,gl,harfbuzz,icu]:x64-linux@124 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/skia/b993a94ad57f5f651ac7dfa08cf20f17134a1b0d
+    sqlite3[core,json1]:x64-linux@3.45.3 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/sqlite3/e005452807711795772b974b3ba5991a65252343
+  * vcpkg-cmake:x64-linux@2024-04-23 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vcpkg-cmake/e74aa1e8f93278a8e71372f1fa08c3df420eb840
+  * vcpkg-cmake-config:x64-linux@2024-05-23 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vcpkg-cmake-config/97a63e4bc1a17422ffe4eff71da53b4b561a7841
+  * vcpkg-cmake-get-vars:x64-linux@2023-12-31 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vcpkg-cmake-get-vars/725c841810ceb8de33da68ea879eb8f0b4d6c94c
+  * vcpkg-gn:x64-linux@2024-02-22 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vcpkg-gn/c62f882f543760e74e571a2527a9c6050bcf4e91
+  * vcpkg-pkgconfig-get-modules:x64-linux@2024-04-03 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vcpkg-pkgconfig-get-modules/6845369c8cb7d3c318e8e3ae92fd2b7570a756ca
+  * vcpkg-tool-gn:x64-linux@2024-02-22 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vcpkg-tool-gn/2d1a5157488930321ba70a7990971c317dc02548
+  * vcpkg-tool-meson:x64-linux@1.3.2#6 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vcpkg-tool-meson/13f79b5e4c8b4c07b38f9b5a010965433b753bb4
+    woff2:x64-linux@1.0.2#4 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/woff2/fbd2207ad0ad1e7e52b421b86f96deff9ed7ec65
+  * zlib:x64-linux@1.3.1 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/zlib/3f05e04b9aededb96786a911a16193cdb711f0c9
+Additional packages (*) will be modified to complete this operation.
+Restored 0 package(s) from /home/kushal/.cache/vcpkg/archives in 31.6 us. Use --debug to see more details.
+Removing 1/66 woff2:x64-linux
+Elapsed time to handle woff2:x64-linux: 2.71 ms
+Removing 2/66 sqlite3:x64-linux
+Elapsed time to handle sqlite3:x64-linux: 1.14 ms
+Removing 3/66 skia:x64-linux
+Elapsed time to handle skia:x64-linux: 69.8 ms
+Removing 4/66 libwebp:x64-linux
+Elapsed time to handle libwebp:x64-linux: 2 ms
+Removing 5/66 vcpkg-cmake-get-vars:x64-linux
+Elapsed time to handle vcpkg-cmake-get-vars:x64-linux: 800 us
+Removing 6/66 vcpkg-gn:x64-linux
+Elapsed time to handle vcpkg-gn:x64-linux: 618 us
+Removing 7/66 vcpkg-pkgconfig-get-modules:x64-linux
+Elapsed time to handle vcpkg-pkgconfig-get-modules:x64-linux: 611 us
+Removing 8/66 pkgconf:x64-linux
+Elapsed time to handle pkgconf:x64-linux: 2.13 ms
+Removing 9/66 vcpkg-tool-gn:x64-linux
+Elapsed time to handle vcpkg-tool-gn:x64-linux: 994 us
+Removing 10/66 opengl-registry:x64-linux
+Elapsed time to handle opengl-registry:x64-linux: 3.55 ms
+Removing 11/66 egl-registry:x64-linux
+Elapsed time to handle egl-registry:x64-linux: 1.42 ms
+Removing 12/66 harfbuzz:x64-linux
+Elapsed time to handle harfbuzz:x64-linux: 2.34 ms
+Removing 13/66 libjpeg-turbo:x64-linux
+Elapsed time to handle libjpeg-turbo:x64-linux: 1.3 ms
+Removing 14/66 icu:x64-linux
+Elapsed time to handle icu:x64-linux: 5.77 ms
+Removing 15/66 fontconfig:x64-linux
+Elapsed time to handle fontconfig:x64-linux: 4.41 ms
+Removing 16/66 dirent:x64-linux
+Elapsed time to handle dirent:x64-linux: 571 us
+Removing 17/66 expat:x64-linux
+Elapsed time to handle expat:x64-linux: 678 us
+Removing 18/66 freetype:x64-linux
+Elapsed time to handle freetype:x64-linux: 2.35 ms
+Removing 19/66 brotli:x64-linux
+Elapsed time to handle brotli:x64-linux: 1.8 ms
+Removing 20/66 bzip2:x64-linux
+Elapsed time to handle bzip2:x64-linux: 885 us
+Removing 21/66 libpng:x64-linux
+Elapsed time to handle libpng:x64-linux: 1.52 ms
+Removing 22/66 zlib:x64-linux
+Elapsed time to handle zlib:x64-linux: 612 us
+Removing 23/66 getopt:x64-linux
+Elapsed time to handle getopt:x64-linux: 551 us
+Removing 24/66 gettext:x64-linux
+Elapsed time to handle gettext:x64-linux: 1.34 ms
+Removing 25/66 gettext-libintl:x64-linux
+Elapsed time to handle gettext-libintl:x64-linux: 616 us
+Removing 26/66 gperf:x64-linux
+Elapsed time to handle gperf:x64-linux: 696 us
+Removing 27/66 libiconv:x64-linux
+Elapsed time to handle libiconv:x64-linux: 722 us
+Removing 28/66 libuuid:x64-linux
+Elapsed time to handle libuuid:x64-linux: 1.4 ms
+Removing 29/66 vcpkg-cmake:x64-linux
+Elapsed time to handle vcpkg-cmake:x64-linux: 690 us
+Removing 30/66 pthread:x64-linux
+Elapsed time to handle pthread:x64-linux: 539 us
+Removing 31/66 pthreads:x64-linux
+Elapsed time to handle pthreads:x64-linux: 583 us
+Removing 32/66 vcpkg-cmake-config:x64-linux
+Elapsed time to handle vcpkg-cmake-config:x64-linux: 656 us
+Removing 33/66 vcpkg-tool-meson:x64-linux
+Elapsed time to handle vcpkg-tool-meson:x64-linux: 789 us
+Installing 34/66 vcpkg-tool-meson:x64-linux@1.3.2#6...
+Building vcpkg-tool-meson:x64-linux@1.3.2#6...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vcpkg-tool-meson/13f79b5e4c8b4c07b38f9b5a010965433b753bb4: info: installing overlay port from here
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-tool-meson_x64-linux/share/vcpkg-tool-meson/copyright
+-- Using cached meson-614d436232d3a86518164cbe2b8af12db3bde009.tar.gz.
+-- Applying patch /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-tool-meson_x64-linux/share/vcpkg-tool-meson/meson-intl.patch
+-- Applying patch /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-tool-meson_x64-linux/share/vcpkg-tool-meson/adjust-python-dep.patch
+-- Applying patch /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-tool-meson_x64-linux/share/vcpkg-tool-meson/adjust-args.patch
+-- Applying patch /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-tool-meson_x64-linux/share/vcpkg-tool-meson/remove-freebsd-pcfile-specialization.patch
+-- Applying patch /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-tool-meson_x64-linux/share/vcpkg-tool-meson/meson-1.4-llvm-18.diff
+-- Found Python version '3.10.12 at /usr/bin/python3'
+-- Using meson: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/tools/meson-1.3.2-6f83ac/meson.py
+-- Performing post-build validation
+Stored binaries in 1 destinations in 3.4 ms.
+Elapsed time to handle vcpkg-tool-meson:x64-linux: 523 ms
+vcpkg-tool-meson:x64-linux package ABI: e1133e2f1ba4af24f00d12fde2cd0d087433ff7a57b5848b6b08d14afdb6882e
+Installing 35/66 vcpkg-cmake-config:x64-linux@2024-05-23...
+Building vcpkg-cmake-config:x64-linux@2024-05-23...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vcpkg-cmake-config/97a63e4bc1a17422ffe4eff71da53b4b561a7841: info: installing overlay port from here
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-cmake-config_x64-linux/share/vcpkg-cmake-config/vcpkg_cmake_config_fixup.cmake
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-cmake-config_x64-linux/share/vcpkg-cmake-config/vcpkg-port-config.cmake
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-cmake-config_x64-linux/share/vcpkg-cmake-config/copyright
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Stored binaries in 1 destinations in 1.66 ms.
+Elapsed time to handle vcpkg-cmake-config:x64-linux: 12.2 ms
+vcpkg-cmake-config:x64-linux package ABI: 884f3ee37a0fa879e35ac6bbc5b34cd1efa7a6b77764f38095b761be02fd2377
+Installing 36/66 pthreads:x64-linux@3.0.0#14...
+Building pthreads:x64-linux@3.0.0#14...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/pthreads/2e0a6df2800d3677b941dc6504f083965b7886d9: info: installing overlay port from here
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Stored binaries in 1 destinations in 1.57 ms.
+Elapsed time to handle pthreads:x64-linux: 12.1 ms
+pthreads:x64-linux package ABI: 8165e874f5b512fd959f724dd65212882fd4cff6012c54e137723b29fb1671dd
+Installing 37/66 pthread:x64-linux@3.0.0#2...
+Building pthread:x64-linux@3.0.0#2...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/pthread/e32a8cb12153277234e7c7e04322bdf90580659a: info: installing overlay port from here
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Stored binaries in 1 destinations in 1.56 ms.
+Elapsed time to handle pthread:x64-linux: 12.1 ms
+pthread:x64-linux package ABI: 684725d542a4f36305316a8b67c534bec81a547088b59269c9fb67e4ee349f17
+Installing 38/66 vcpkg-cmake:x64-linux@2024-04-23...
+Building vcpkg-cmake:x64-linux@2024-04-23...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vcpkg-cmake/e74aa1e8f93278a8e71372f1fa08c3df420eb840: info: installing overlay port from here
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-cmake_x64-linux/share/vcpkg-cmake/vcpkg_cmake_configure.cmake
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-cmake_x64-linux/share/vcpkg-cmake/vcpkg_cmake_build.cmake
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-cmake_x64-linux/share/vcpkg-cmake/vcpkg_cmake_install.cmake
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-cmake_x64-linux/share/vcpkg-cmake/vcpkg-port-config.cmake
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-cmake_x64-linux/share/vcpkg-cmake/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 1.95 ms.
+Elapsed time to handle vcpkg-cmake:x64-linux: 13.3 ms
+vcpkg-cmake:x64-linux package ABI: 622114877cfdc60376327bd9b43bb319b6f48bf537667e7cb506332e38227756
+Installing 39/66 libuuid:x64-linux@1.0.3#14...
+Building libuuid:x64-linux@1.0.3#14...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libuuid/09be6774f518692bc418aa03623cc9dbc19e6516: info: installing overlay port from here
+-- Using cached libuuid-1.0.3.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libuuid/src/libuuid-1-f5e8f5589c.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/libuuid-1.0.3.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libuuid/src/libuuid-1-f5e8f5589c.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libuuid_x64-linux/lib/pkgconfig/uuid.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libuuid_x64-linux/debug/lib/pkgconfig/uuid.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libuuid_x64-linux/lib/pkgconfig/uuid.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libuuid_x64-linux/debug/lib/pkgconfig/uuid.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libuuid_x64-linux/share/libuuid/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 4.3 ms.
+Elapsed time to handle libuuid:x64-linux: 2.4 s
+libuuid:x64-linux package ABI: 7e6aa6b8834e97c00ba9f4a7a065bc6c05517552cb786c14ddd3e1af43c36299
+Installing 40/66 libiconv:x64-linux@1.17#3...
+Building libiconv:x64-linux@1.17#3...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libiconv/0d6e7ebdbfeca59f047e66f632d1d38c2659fc14: info: installing overlay port from here
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Stored binaries in 1 destinations in 1.51 ms.
+Elapsed time to handle libiconv:x64-linux: 16.7 ms
+libiconv:x64-linux package ABI: ccd0022045500d5c5e0414366831ba4490857663c376b6c2e5e5a5c36b6d2704
+Installing 41/66 gperf:x64-linux@3.1#6...
+Building gperf:x64-linux@3.1#6...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/gperf/590e19515bff5b0abc6d9f73ba20a19a71555a32: info: installing overlay port from here
+-- Using cached gperf-3.1.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/gperf/src/gperf-3-7fd634e44a.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/gperf-3.1.tar.gz
+-- Applying patch remove_register_keyword_cpp17.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/gperf/src/gperf-3-7fd634e44a.clean
+-- Configuring x64-linux
