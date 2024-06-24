@@ -261,3 +261,56 @@ qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
 486.380 WebContent(11380): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/page_home_impression?8844936&b=mozilla&d=d&l=en&p=linux&atb=v435-6&pre_va=_&pre_atbva=_&atbi=true&i=false&ak=false&ax=false", Error: Load failed, Duration: 50ms
 486.400 RequestServer(11345:11365): Request with a null socket finished for URL https://improving.duckduckgo.com/t/atb_home_sad_impression?1356535&b=mozilla&d=d&l=en&p=linux&atb=v435-6&pre_va=_&pre_atbva=_&atbi=true&i=false
 486.410 WebContent(11380): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/atb_home_sad_impression?1356535&b=mozilla&d=d&l=en&p=linux&atb=v435-6&pre_va=_&pre_atbva=_&atbi=true&i=false", Error: Load failed, Duration: 80ms
+1768.800 RequestServer(11345:11373): We were alerted of a critical error: 70 (PROTOCOL_VERSION)
+1768.800 RequestServer(11345:11373): Possible failure cause(s):
+1768.800 RequestServer(11345:11373): - The server refused to negotiate with TLS 1.2 :(
+1768.800 RequestServer(11345:11373): - The protocol version the client has attempted to negotiate is recognized but not supported. (For example, old protocol versions might be avoided for security reasons). This message is always fatal.
+1768.800 RequestServer(11345:11373): Possible failure cause(s):
+1768.800 RequestServer(11345:11373): - The server refused to negotiate with TLS 1.2 :(
+1768.800 RequestServer(11345:11373): - The protocol version the client has attempted to negotiate is recognized but not supported. (For example, old protocol versions might be avoided for security reasons). This message is always fatal.
+1768.800 RequestServer(11345:11373): Consumed an error: -1
+1768.800 RequestServer(11345:11373): consume error: -1
+1768.800 RequestServer(11345:11373): ConnectionCache: Connection to https://www.level1techs.com/ failed: PROTOCOL_VERSION
+1768.800 RequestServer(11345:11373): Request with a null socket finished for URL https://www.level1techs.com/
+1768.800 WebContent(11380): ResourceLoader: Failed load of: "https://www.level1techs.com/", Error: Load failed, Duration: 120ms
+1994.170 RequestServer(11345:11379): EnsureConnection: Pre-connect to https://rsms.me/
+1995.800 WebContent(11380): Web::EventHandler: Clicking on a link to https://discord.gg/nvfjVJ4Svh
+1997.000 WebContent(11380): No property (from 4 properties) matched Token: Ident: null
+1997.000 WebContent(11380):     border-top-color
+1997.000 WebContent(11380):     border-right-color
+1997.000 WebContent(11380):     border-bottom-color
+1997.000 WebContent(11380):     border-left-color
+1997.000 WebContent(11380): No property (from 4 properties) matched Token: Ident: null
+1997.000 WebContent(11380):     border-top-color
+1997.000 WebContent(11380):     border-right-color
+1997.000 WebContent(11380):     border-bottom-color
+1997.000 WebContent(11380):     border-left-color
+1999.120 WebContent(11380): No property (from 4 properties) matched Token: Comma
+1999.120 WebContent(11380):     animation-direction
+1999.120 WebContent(11380):     animation-play-state
+1999.120 WebContent(11380):     animation-delay
+1999.120 WebContent(11380):     animation-fill-mode
+1999.150 WebContent(11380): No property (from 4 properties) matched Token: Comma
+1999.150 WebContent(11380):     animation-direction
+1999.150 WebContent(11380):     animation-play-state
+1999.150 WebContent(11380):     animation-delay
+1999.150 WebContent(11380):     animation-fill-mode
+1999.150 WebContent(11380): No property (from 4 properties) matched Token: Comma
+1999.150 WebContent(11380):     animation-direction
+1999.150 WebContent(11380):     animation-play-state
+1999.150 WebContent(11380):     animation-delay
+1999.150 WebContent(11380):     animation-fill-mode
+1999.150 WebContent(11380): No property (from 7 properties) matched Token: Delim: !
+1999.150 WebContent(11380):     animation-duration
+1999.150 WebContent(11380):     animation-timing-function
+1999.150 WebContent(11380):     animation-iteration-count
+1999.150 WebContent(11380):     animation-direction
+1999.150 WebContent(11380):     animation-play-state
+1999.150 WebContent(11380):     animation-delay
+1999.150 WebContent(11380):     animation-fill-mode
+
+real    35m3.748s
+user    98m15.994s
+sys     4m33.928s
+Mon Jun 24 11:51:56 EDT 2024
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
