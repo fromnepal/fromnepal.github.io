@@ -1,30 +1,59 @@
+Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+
+This message is shown once a day. To disable it please create the
+/home/kushal/.hushlogin file.
 kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
 [sudo] password for kushal:
-Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
 Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
 Hit:3 http://archive.ubuntu.com/ubuntu jammy InRelease
-Hit:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
-Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:4 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1526 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:6 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1735 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [319 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [2000 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [340 kB]
+Fetched 6178 kB in 2s (3963 kB/s)
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
-All packages are up to date.
+1 package can be upgraded. Run 'apt list --upgradable' to see it.
 
-real    0m6.564s
-user    0m0.027s
+real    0m7.807s
+user    0m0.024s
 sys     0m0.000s
 Listing... Done
+libcups2/jammy-updates,jammy-security 2.4.1op1-1ubuntu4.9 amd64 [upgradable from: 2.4.1op1-1ubuntu4.8]
+N: There are 2 additional versions. Please use the '-a' switch to see them.
 
-real    0m0.158s
-user    0m0.146s
+real    0m0.126s
+user    0m0.115s
 sys     0m0.010s
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
 Calculating upgrade... Done
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+The following packages will be upgraded:
+  libcups2
+1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+1 standard LTS security update
+Need to get 263 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcups2 amd64 2.4.1op1-1ubuntu4.9 [263 kB]
+Fetched 263 kB in 1s (423 kB/s)
+(Reading database ... 61117 files and directories currently installed.)
+Preparing to unpack .../libcups2_2.4.1op1-1ubuntu4.9_amd64.deb ...
+Unpacking libcups2:amd64 (2.4.1op1-1ubuntu4.9) over (2.4.1op1-1ubuntu4.8) ...
+Setting up libcups2:amd64 (2.4.1op1-1ubuntu4.9) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
 
-real    0m0.327s
+real    0m1.422s
 user    0m0.005s
 sys     0m0.000s
 On branch master
@@ -36,20 +65,134 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
-real    0m0.016s
+real    0m0.056s
 user    0m0.000s
-sys     0m0.020s
+sys     0m0.062s
+remote: Enumerating objects: 366, done.
+remote: Counting objects: 100% (366/366), done.
+remote: Compressing objects: 100% (163/163), done.
+remote: Total 262 (delta 210), reused 121 (delta 96), pack-reused 0
+Receiving objects: 100% (262/262), 74.82 KiB | 3.12 MiB/s, done.
+Resolving deltas: 100% (210/210), completed with 95 local objects.
+From https://github.com/LadybirdBrowser/ladybird
+   ebdb92eef6..3c23ce9007  master     -> origin/master
 
-real    0m0.143s
-user    0m0.013s
-sys     0m0.017s
+real    0m0.403s
+user    0m0.063s
+sys     0m0.012s
 From https://github.com/LadybirdBrowser/ladybird
  * branch                  master     -> FETCH_HEAD
-Already up to date.
+Updating ebdb92eef6..3c23ce9007
+Fast-forward
+ Ladybird/AppKit/main.mm                                                                   |   6 ++++++
+ Ladybird/HelperProcess.cpp                                                                |   3 +++
+ Ladybird/MachPortServer.cpp                                                               |  41 ++++++++++++++++++++++++++++-------------
+ Ladybird/MachPortServer.h                                                                 |   9 +++++++++
+ Ladybird/Qt/main.cpp                                                                      |   4 ++++
+ Ladybird/WebContent/CMakeLists.txt                                                        |   1 +
+ Ladybird/WebContent/main.cpp                                                              |   3 ++-
+ Meta/Lagom/CMakeLists.txt                                                                 |   7 +------
+ Meta/Lagom/Tools/CodeGenerators/LibTimeZone/GenerateTimeZoneData.cpp                      | 121 +------------------------------------------------------------------------------------------------------------------------
+ Meta/gn/secondary/Userland/Libraries/LibWeb/Painting/BUILD.gn                             |   8 ++++----
+ Tests/LibTimeZone/TestTimeZone.cpp                                                        |  31 +------------------------------
+ Tests/LibWebView/TestWebViewURL.cpp                                                       |  23 ++++++++++++++++-------
+ Userland/Libraries/LibCore/CMakeLists.txt                                                 |   5 +++++
+ Userland/Libraries/LibCore/Forward.h                                                      |   4 ++++
+ Userland/Libraries/LibCore/IOSurface.cpp                                                  | 122 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Userland/Libraries/LibCore/IOSurface.h                                                    |  42 ++++++++++++++++++++++++++++++++++++++++++
+ Userland/Libraries/LibCore/MachPort.h                                                     |   2 +-
+ Userland/Libraries/LibCore/Platform/MachMessageTypes.h                                    |  65 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Userland/Libraries/LibCore/Platform/ProcessStatisticsMach.cpp                             |  11 +++++++----
+ Userland/Libraries/LibCore/Platform/ProcessStatisticsMach.h                               |  17 +----------------
+ Userland/Libraries/LibGfx/Bitmap.cpp                                                      |  16 +++++++++-------
+ Userland/Libraries/LibGfx/Bitmap.h                                                        |   6 +++---
+ Userland/Libraries/LibTimeZone/CMakeLists.txt                                             |  11 ++---------
+ Userland/Libraries/LibTimeZone/TimeZone.cpp                                               |  46 ++--------------------------------------------
+ Userland/Libraries/LibTimeZone/TimeZone.h                                                 |  35 +----------------------------------
+ Userland/Libraries/LibWeb/CMakeLists.txt                                                  |  10 +++++-----
+ Userland/Libraries/LibWeb/CSS/StyleValues/ConicGradientStyleValue.cpp                     |   2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/ImageStyleValue.cpp                             |   4 ++--
+ Userland/Libraries/LibWeb/CSS/StyleValues/LinearGradientStyleValue.cpp                    |   2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/RadialGradientStyleValue.cpp                    |   2 +-
+ Userland/Libraries/LibWeb/DOM/Range.cpp                                                   |   7 ++++---
+ Userland/Libraries/LibWeb/Forward.h                                                       |   2 +-
+ Userland/Libraries/LibWeb/HTML/Navigable.cpp                                              |  10 +++++-----
+ Userland/Libraries/LibWeb/HTML/Navigable.h                                                |   2 +-
+ Userland/Libraries/LibWeb/HTML/TraversableNavigable.cpp                                   |  32 ++++++++++++++++----------------
+ Userland/Libraries/LibWeb/Page/Page.cpp                                                   |  46 ++++++++++++++++++++++++++++++++++++++++------
+ Userland/Libraries/LibWeb/Page/Page.h                                                     |   6 ++++--
+ Userland/Libraries/LibWeb/Painting/AudioPaintable.cpp                                     |   4 ++--
+ Userland/Libraries/LibWeb/Painting/BackgroundPainting.cpp                                 |  10 +++++-----
+ Userland/Libraries/LibWeb/Painting/BorderPainting.cpp                                     |   4 ++--
+ Userland/Libraries/LibWeb/Painting/BorderPainting.h                                       |   4 ++--
+ Userland/Libraries/LibWeb/Painting/BorderRadiusCornerClipper.cpp                          |   4 ++--
+ Userland/Libraries/LibWeb/Painting/CanvasPaintable.cpp                                    |   2 +-
+ Userland/Libraries/LibWeb/Painting/CheckBoxPaintable.cpp                                  |  10 +++++-----
+ Userland/Libraries/LibWeb/Painting/{CommandList.cpp => DisplayList.cpp}                   |  10 +++++-----
+ Userland/Libraries/LibWeb/Painting/{CommandList.h => DisplayList.h}                       |   8 ++++----
+ Userland/Libraries/LibWeb/Painting/{CommandExecutorCPU.cpp => DisplayListPlayerCPU.cpp}   |  68 ++++++++++++++++++++++++++++++++++----------------------------------
+ Userland/Libraries/LibWeb/Painting/{CommandExecutorCPU.h => DisplayListPlayerCPU.h}       |   8 ++++----
+ Userland/Libraries/LibWeb/Painting/{CommandExecutorGPU.cpp => DisplayListPlayerGPU.cpp}   |  70 +++++++++++++++++++++++++++++++++++-----------------------------------
+ Userland/Libraries/LibWeb/Painting/{CommandExecutorGPU.h => DisplayListPlayerGPU.h}       |   8 ++++----
+ Userland/Libraries/LibWeb/Painting/{CommandExecutorSkia.cpp => DisplayListPlayerSkia.cpp} |  70 +++++++++++++++++++++++++++++++++++-----------------------------------
+ Userland/Libraries/LibWeb/Painting/{CommandExecutorSkia.h => DisplayListPlayerSkia.h}     |   8 ++++----
+ Userland/Libraries/LibWeb/Painting/{RecordingPainter.cpp => DisplayListRecorder.cpp}      |  78 +++++++++++++++++++++++++++++++++++++++---------------------------------------
+ Userland/Libraries/LibWeb/Painting/{RecordingPainter.h => DisplayListRecorder.h}          |  24 ++++++++++++------------
+ Userland/Libraries/LibWeb/Painting/FilterPainting.cpp                                     |   2 +-
+ Userland/Libraries/LibWeb/Painting/ImagePaintable.cpp                                     |   6 +++---
+ Userland/Libraries/LibWeb/Painting/InlinePaintable.cpp                                    |  20 ++++++++++----------
+ Userland/Libraries/LibWeb/Painting/MarkerPaintable.cpp                                    |  12 ++++++------
+ Userland/Libraries/LibWeb/Painting/MediaPaintable.cpp                                     |  30 +++++++++++++++---------------
+ Userland/Libraries/LibWeb/Painting/MediaPaintable.h                                       |   2 +-
+ Userland/Libraries/LibWeb/Painting/NestedBrowsingContextPaintable.cpp                     |  12 ++++++------
+ Userland/Libraries/LibWeb/Painting/PaintContext.cpp                                       |   4 ++--
+ Userland/Libraries/LibWeb/Painting/PaintContext.h                                         |  10 +++++-----
+ Userland/Libraries/LibWeb/Painting/PaintableBox.cpp                                       |  64 ++++++++++++++++++++++++++++++++--------------------------------
+ Userland/Libraries/LibWeb/Painting/RadioButtonPaintable.cpp                               |   2 +-
+ Userland/Libraries/LibWeb/Painting/SVGMaskable.cpp                                        |  14 +++++++-------
+ Userland/Libraries/LibWeb/Painting/SVGPathPaintable.cpp                                   |  12 ++++++------
+ Userland/Libraries/LibWeb/Painting/SVGSVGPaintable.cpp                                    |   6 +++---
+ Userland/Libraries/LibWeb/Painting/ShadowPainting.cpp                                     |   6 +++---
+ Userland/Libraries/LibWeb/Painting/StackingContext.cpp                                    |  14 +++++++-------
+ Userland/Libraries/LibWeb/Painting/TableBordersPainting.cpp                               |  10 +++++-----
+ Userland/Libraries/LibWeb/Painting/VideoPaintable.cpp                                     |  12 ++++++------
+ Userland/Libraries/LibWeb/Painting/ViewportPaintable.cpp                                  |   2 +-
+ Userland/Libraries/LibWeb/SVG/SVGDecodedImageData.cpp                                     |  26 +++++++++++++-------------
+ Userland/Libraries/LibWeb/SVG/SVGDecodedImageData.h                                       |   2 +-
+ Userland/Libraries/LibWebView/URL.cpp                                                     |   2 +-
+ Userland/Libraries/LibWebView/ViewImplementation.cpp                                      |  79 ++++++++++++++++++++++++++++++++++---------------------------------------------
+ Userland/Libraries/LibWebView/ViewImplementation.h                                        |  13 ++++++-------
+ Userland/Libraries/LibWebView/WebContentClient.cpp                                        |  30 +++++++++++++++++++++++-------
+ Userland/Libraries/LibWebView/WebContentClient.h                                          |   7 ++++++-
+ Userland/Services/WebContent/BackingStoreManager.cpp                                      | 132 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Userland/Services/WebContent/BackingStoreManager.h                                        |  48 ++++++++++++++++++++++++++++++++++++++++++++++++
+ Userland/Services/WebContent/ConnectionFromClient.cpp                                     |  34 ++--------------------------------
+ Userland/Services/WebContent/ConnectionFromClient.h                                       |   1 -
+ Userland/Services/WebContent/PageClient.cpp                                               |  65 ++++++++++++++++++++++++++++++++++++++++++++---------------------
+ Userland/Services/WebContent/PageClient.h                                                 |  23 +++++++++++++----------
+ Userland/Services/WebContent/WebContentClient.ipc                                         |   3 +--
+ Userland/Services/WebContent/WebContentServer.ipc                                         |   3 ---
+ Userland/Services/WebWorker/PageHost.h                                                    |   2 +-
+ 89 files changed, 1061 insertions(+), 803 deletions(-)
+ create mode 100644 Userland/Libraries/LibCore/IOSurface.cpp
+ create mode 100644 Userland/Libraries/LibCore/IOSurface.h
+ create mode 100644 Userland/Libraries/LibCore/Platform/MachMessageTypes.h
+ rename Userland/Libraries/LibWeb/Painting/{CommandList.cpp => DisplayList.cpp} (97%)
+ rename Userland/Libraries/LibWeb/Painting/{CommandList.h => DisplayList.h} (97%)
+ rename Userland/Libraries/LibWeb/Painting/{CommandExecutorCPU.cpp => DisplayListPlayerCPU.cpp} (86%)
+ rename Userland/Libraries/LibWeb/Painting/{CommandExecutorCPU.h => DisplayListPlayerCPU.h} (94%)
+ rename Userland/Libraries/LibWeb/Painting/{CommandExecutorGPU.cpp => DisplayListPlayerGPU.cpp} (83%)
+ rename Userland/Libraries/LibWeb/Painting/{CommandExecutorGPU.h => DisplayListPlayerGPU.h} (94%)
+ rename Userland/Libraries/LibWeb/Painting/{CommandExecutorSkia.cpp => DisplayListPlayerSkia.cpp} (92%)
+ rename Userland/Libraries/LibWeb/Painting/{CommandExecutorSkia.h => DisplayListPlayerSkia.h} (93%)
+ rename Userland/Libraries/LibWeb/Painting/{RecordingPainter.cpp => DisplayListRecorder.cpp} (69%)
+ rename Userland/Libraries/LibWeb/Painting/{RecordingPainter.h => DisplayListRecorder.h} (92%)
+ create mode 100644 Userland/Services/WebContent/BackingStoreManager.cpp
+ create mode 100644 Userland/Services/WebContent/BackingStoreManager.h
 
-real    0m0.359s
-user    0m0.008s
-sys     0m0.025s
+real    0m0.424s
+user    0m0.050s
+sys     0m0.000s
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -59,31 +202,17 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
-real    0m0.014s
-user    0m0.004s
-sys     0m0.009s
-Sun Jun 23 18:47:51 EDT 2024
+real    0m0.022s
+user    0m0.011s
+sys     0m0.011s
+Mon Jun 24 11:16:53 EDT 2024
 ~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
 ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
 [0/2] Re-checking globbed directories...
-ninja: no work to do.
-QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
-qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
-2569.410 RequestServer(50592:50623): We were alerted of a critical error: 70 (PROTOCOL_VERSION)
-2569.410 RequestServer(50592:50623): Possible failure cause(s):
-2569.410 RequestServer(50592:50623): - The server refused to negotiate with TLS 1.2 :(
-2569.410 RequestServer(50592:50623): - The protocol version the client has attempted to negotiate is recognized but not supported. (For example, old protocol versions might be avoided for security reasons). This message is always fatal.
-2569.410 RequestServer(50592:50623): Possible failure cause(s):
-2569.410 RequestServer(50592:50623): - The server refused to negotiate with TLS 1.2 :(
-2569.410 RequestServer(50592:50623): - The protocol version the client has attempted to negotiate is recognized but not supported. (For example, old protocol versions might be avoided for security reasons). This message is always fatal.
-2569.410 RequestServer(50592:50623): Consumed an error: -1
-2569.410 RequestServer(50592:50623): consume error: -1
-2569.410 RequestServer(50592:50623): ConnectionCache: Connection to https://www.level1techs.com/ failed: PROTOCOL_VERSION
-2569.410 RequestServer(50592:50623): Request with a null socket finished for URL https://www.level1techs.com/
-2569.410 WebContent(50626): ResourceLoader: Failed load of: "https://www.level1techs.com/", Error: Load failed, Duration: 80ms
-
-real    0m35.497s
-user    0m0.240s
-sys     0m0.215s
-Sun Jun 23 18:48:27 EDT 2024
-kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+[1/2] Re-running CMake...
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/clang++-17
+All requested packages are currently installed.
+Total install time: 280 ns
+-- Running vcpkg install - done
