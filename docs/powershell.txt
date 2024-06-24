@@ -314,3 +314,195 @@ user    98m15.994s
 sys     4m33.928s
 Mon Jun 24 11:51:56 EDT 2024
 kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+[sudo] password for kushal:
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Fetched 129 kB in 0s (286 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+
+real    0m6.680s
+user    0m0.015s
+sys     0m0.008s
+Listing... Done
+
+real    0m0.144s
+user    0m0.131s
+sys     0m0.011s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+real    0m0.292s
+user    0m0.004s
+sys     0m0.000s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.023s
+user    0m0.009s
+sys     0m0.009s
+remote: Enumerating objects: 110, done.
+remote: Counting objects: 100% (110/110), done.
+remote: Compressing objects: 100% (43/43), done.
+remote: Total 70 (delta 47), reused 33 (delta 21), pack-reused 0
+Unpacking objects: 100% (70/70), 1.92 MiB | 11.18 MiB/s, done.
+From https://github.com/LadybirdBrowser/ladybird
+   3c23ce9007..71e099c79a  master     -> origin/master
+
+real    0m0.407s
+user    0m0.051s
+sys     0m0.019s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Updating 3c23ce9007..71e099c79a
+Fast-forward
+ .github/CODEOWNERS                                      |   2 --
+ .github/FUNDING.yml                                     |   2 +-
+ AK/Debug.h.in                                           |   4 ----
+ Base/home/anon/Documents/zip/archive.zip                | Bin 1784 -> 0 bytes
+ Base/{home/anon/Videos => res/html/misc}/test-webm.webm | Bin
+ Base/res/html/misc/video-source-children.html           |   2 +-
+ Base/res/html/misc/video-webm.html                      |   2 +-
+ Meta/CMake/all_the_debug_macros.cmake                   |   1 -
+ Meta/CMake/commonmark_spec.cmake                        |   9 ---------
+ Meta/CMake/wasm_spec_tests.cmake                        |   5 -----
+ Meta/gn/secondary/AK/BUILD.gn                           |   1 -
+ Tests/LibWeb/Layout/input/html-dimensions.html          |   4 ++--
+ Tests/LibWeb/Text/data/video-gc-frame.html              |   2 +-
+ Userland/CMakeLists.txt                                 |  29 ---------------------------
+ Userland/Libraries/CMakeLists.txt                       |  40 -------------------------------------
+ Userland/Libraries/LibTLS/HandshakeClient.cpp           |   9 ---------
+ Userland/Libraries/LibWasm/CMakeLists.txt               |   2 --
+ Userland/Services/RequestServer/main.cpp                |  12 ++----------
+ Userland/Utilities/CMakeLists.txt                       |  51 -----------------------------------------------
+ Userland/Utilities/unzip.cpp                            | 203 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Userland/Utilities/zip.cpp                              | 112 --------------------------------------------------------------------------------------------------------
+ 21 files changed, 8 insertions(+), 484 deletions(-)
+ delete mode 100644 Base/home/anon/Documents/zip/archive.zip
+ rename Base/{home/anon/Videos => res/html/misc}/test-webm.webm (100%)
+ delete mode 100644 Meta/CMake/commonmark_spec.cmake
+ delete mode 100644 Userland/CMakeLists.txt
+ delete mode 100644 Userland/Libraries/CMakeLists.txt
+ delete mode 100644 Userland/Utilities/CMakeLists.txt
+ delete mode 100644 Userland/Utilities/unzip.cpp
+ delete mode 100644 Userland/Utilities/zip.cpp
+
+real    0m0.182s
+user    0m0.026s
+sys     0m0.031s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.024s
+user    0m0.008s
+sys     0m0.008s
+Mon Jun 24 11:52:28 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+[1/2] Re-running CMake...
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/clang++-17
+All requested packages are currently installed.
+Total install time: 261 ns
+-- Running vcpkg install - done
+-- Found the following ICU libraries:
+--   data (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicudata.a
+--   i18n (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicui18n.a
+--   uc (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicuuc.a
+-- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+-- Could NOT find WrapVulkanHeaders (missing: Vulkan_INCLUDE_DIR)
+-- Configuring done (58.1s)
+-- Generating done (0.3s)
+-- Build files have been written to: /home/kushal/src/ladybird/Build/ladybird
+[0/2] Re-checking globbed directories...
+[1847/1847] Linking CXX executable bin/Ladybird
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
+2261.030 RequestServer(24777:24809): EnsureConnection: Pre-connect to https://fonts.gstatic.com/
+2261.040 WebContent(24811): Potential FIXME: Removing unsupported PerformanceEntry type 'paint' from list of observed types in PerformanceObserver::observe()
+2261.040 WebContent(24811): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support any of the specified types (or none was specified).
+2261.040 WebContent(24811): Potential FIXME: Removing unsupported PerformanceEntry type 'largest-contentful-paint' from list of observed types in PerformanceObserver::observe()
+2261.040 WebContent(24811): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support any of the specified types (or none was specified).
+2261.040 WebContent(24811): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'layout-shift'
+2261.080 RequestServer(24777:24804): ConnectionCache: Connection to https://gc.zgo.at/count.js failed: connect: Connection refused (errno=111)
+2261.080 RequestServer(24777:24804): Request with a null socket finished for URL https://gc.zgo.at/count.js
+2261.080 WebContent(24811): ResourceLoader: Failed load of: "https://gc.zgo.at/count.js", Error: Load failed, Duration: 20ms
+2261.080 WebContent(24811): HTMLScriptElement: Refusing to run script because the element's result is null.
+2261.560 WebContent(24811): (js error) [ReferenceError] 'IDBIndex' is not defined
+2261.560 WebContent(24811): Unhandled JavaScript exception: [Error] Cannot instantiate firebase-analytics.js - be sure to load firebase-app.js first.
+2261.560 WebContent(24811):     at Error
+    at https://coloradoquiz.web.app/__/firebase/8.6.3/firebase-analytics.js:1:229
+    at https://coloradoquiz.web.app/__/firebase/8.6.3/firebase-analytics.js:1:229
+    at https://coloradoquiz.web.app/__/firebase/8.6.3/firebase-analytics.js:1:229
+
+2261.890 WebContent(24811): FIXME: Unimplemented IDL interface: 'IntersectionObserverPrototype.rootMargin'
+2261.890 WebContent(24811): FIXME: Unimplemented IDL interface: 'IntersectionObserverPrototype.rootMargin'
+2261.890 WebContent(24811): FIXME: Unimplemented IDL interface: 'IntersectionObserverPrototype.rootMargin'
+2263.380 WebContent(24811): No property (from 3 properties) matched Token: Comma
+2263.380 WebContent(24811):     animation-direction
+2263.380 WebContent(24811):     animation-play-state
+2263.380 WebContent(24811):     animation-delay
+2263.380 WebContent(24811): No property (from 3 properties) matched Token: Comma
+2263.380 WebContent(24811):     animation-direction
+2263.380 WebContent(24811):     animation-play-state
+2263.380 WebContent(24811):     animation-delay
+2263.380 WebContent(24811): No property (from 3 properties) matched Token: Comma
+2263.380 WebContent(24811):     animation-direction
+2263.380 WebContent(24811):     animation-play-state
+2263.380 WebContent(24811):     animation-delay
+2263.380 WebContent(24811): No property (from 3 properties) matched Token: Comma
+2263.380 WebContent(24811):     animation-direction
+2263.380 WebContent(24811):     animation-play-state
+2263.380 WebContent(24811):     animation-delay
+2263.410 WebContent(24811): No property (from 4 properties) matched Token: Dimension: -1px (number_type: Integer)
+2263.410 WebContent(24811):     border-top-width
+2263.410 WebContent(24811):     border-right-width
+2263.410 WebContent(24811):     border-bottom-width
+2263.410 WebContent(24811):     border-left-width
+2263.430 WebContent(24811): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
+2264.200 WebContent(24811): ResourceLoader: Failed load of: "https://js-agent.newrelic.com/nr-1208.min.js", Error: URL was filtered, Duration: 0ms
+2264.330 WebContent(24811): HTMLScriptElement: Refusing to run script because the element's result is null.
+2310.940 WebContent(24811): FIXME: Unimplemented IDL interface: 'BaseAudioContextPrototype.decodeAudioData'
+2311.780 WebContent(24811): (js log) Object{ "title": "general-physics" }
+2311.780 WebContent(24811): (js log) Object{ "title": "general-physics" }
+2311.810 WebContent(24811): No property (from 3 properties) matched Token: Comma
+2311.810 WebContent(24811):     animation-direction
+2311.810 WebContent(24811):     animation-play-state
+2311.810 WebContent(24811):     animation-delay
+2311.810 WebContent(24811): No property (from 3 properties) matched Token: Comma
+2311.810 WebContent(24811):     animation-direction
+2311.810 WebContent(24811):     animation-play-state
+2311.810 WebContent(24811):     animation-delay
+2311.810 WebContent(24811): No property (from 3 properties) matched Token: Comma
+2311.810 WebContent(24811):     animation-direction
+2311.810 WebContent(24811):     animation-play-state
+2311.810 WebContent(24811):     animation-delay
+2311.810 WebContent(24811): No property (from 3 properties) matched Token: Comma
+2311.810 WebContent(24811):     animation-direction
+2311.810 WebContent(24811):     animation-play-state
+2311.810 WebContent(24811):     animation-delay
+2312.120 WebContent(24811): (js error) "ERROR" Object{ "headers": Object{ "normalizedNames": [Map] {}, "lazyUpdate": null, "headers": [Map] {} }, "status": 0, "statusText": "Unknown Error", "url": "https://honeynutcheerios.2w7sp317.workers.dev/", "ok": false, "name": "HttpErrorResponse", "message": "Http failure response for https://honeynutcheerios.2w7sp317.workers.dev/: 0 Unknown Error", "error": ProgressEvent{ "lengthComputable": true, "loaded": 0, "total": 0, "type": "error", "target": XMLHttpRequest{ "__zone_symbol__xhrSync": false, "__zone_symbol__xhrURL": "https://honeynutcheerios.2w7sp317.workers.dev/", "__zone_symbol__loadfalse": null, "__zone_symbol__errorfalse": null, "__zone_symbol__timeoutfalse": null, "__zone_symbol__abortfalse": null, "__zone_symbol__xhrScheduled": true, "__zone_symbol__xhrErrorBeforeScheduled": false, "__zone_symbol__xhrListener": [Function] , "__zone_symbol__xhrTask": Object{ "_zone": Object{ "_parent": Object{ "_parent": null, "_name": "<root>", "_properties": Object{}, "_zoneDelegate": Object{ "_taskCounts": Object{ "microTask": 0, "macroTask": 0, "eventTask": 0 }, "zone": <already printed Object 0x00007f2959920d30>, "_parentDelegate": null, "_forkZS": null, "_forkDlgt": null, "_forkCurrZone": null, "_interceptZS": null, "_interceptDlgt": null, "_interceptCurrZone": null, "_invokeZS": null, "_invokeDlgt": null, "_invokeCurrZone": null, "_handleErrorZS": null, "_handleErrorDlgt": null, "_handleErrorCurrZone": null, "_scheduleTaskZS": null, "_scheduleTaskDlgt": null, "_scheduleTaskCurrZone": null, "_invokeTaskZS": null, "_invokeTaskDlgt": null, "_invokeTaskCurrZone": null, "_cancelTaskZS": null, "_cancelTaskDlgt": null, "_cancelTaskCurrZone": null, "_hasTaskZS": null, "_hasTaskDlgt": null, "_hasTaskDlgtOwner": null, "_hasTaskCurrZone": null }, "parent": null, "name": "<root>" }, "_name": "angular", "_properties": Object{ "isAngularZone": true }, "_zoneDelegate": Object{ "_taskCounts": Object{ "microTask": 0, "macroTask": 3, "eventTask": 31 }, "zone": <already printed Object 0x00007f2958327988>, "_parentDelegate": <already printed Object 0x00007f2959920ca0>, "_forkZS": null, "_forkDlgt": null, "_forkCurrZone": null, "_interceptZS": null, "_interceptDlgt": null, "_interceptCurrZone": null, "_invokeZS": Object{ "name": "angular", "properties": <already printed Object 0x00007f2958327940>, "onInvokeTask": [Function] onInvokeTask, "onInvoke": [Function] onInvoke, "onHasTask": [Function] onHasTask, "onHandleError": [Function] onHandleError }, "_invokeDlgt": <already printed Object 0x00007f2959920ca0>, "_invokeCurrZone": <already printed Object 0x00007f2958327988>, "_handleErrorZS": <already printed Object 0x00007f29583278f8>, "_handleErrorDlgt": <already printed Object 0x00007f2959920ca0>, "_handleErrorCurrZone": <already printed Object 0x00007f2958327988>, "_scheduleTaskZS": Object{ "name": "", "onHasTask": [Function] onHasTask, "onScheduleTask": [Function] onScheduleTask, "onInvokeTask": [Function] onInvokeTask, "onCancelTask": [Function] onCancelTask }, "_scheduleTaskDlgt": <already printed Object 0x00007f2959920ca0>, "_scheduleTaskCurrZone": <already printed Object 0x00007f2958327988>, "_invokeTaskZS": <already printed Object 0x00007f29583278f8>, "_invokeTaskDlgt": <already printed Object 0x00007f2959920ca0>, "_invokeTaskCurrZone": <already printed Object 0x00007f2958327988>, "_cancelTaskZS": <already printed Object 0x00007f2959912790>, "_cancelTaskDlgt": <already printed Object 0x00007f2959920ca0>, "_cancelTaskCurrZone": <already printed Object 0x00007f2958327988>, "_hasTaskZS": <already printed Object 0x00007f29583278f8>, "_hasTaskDlgt": <already printed Object 0x00007f2959920ca0>, "_hasTaskDlgtOwner": <already printed Object 0x00007f29583279d0>, "_hasTaskCurrZone": <already printed Object 0x00007f2958327988> }, "parent": <already printed Object 0x00007f2959920d30>, "name": "angular" }, "runCount": 0, "_zoneDelegates": null, "_state": "notScheduled", "type": "macroTask", "source": "XMLHttpRequest.send", "data": Object{ "target": <already printed Object 0x00007f2958168e08>, "url": "https://honeynutcheerios.2w7sp317.workers.dev/", "isPeriodic": false, "args": Object{ "0": "{"ipaddress":"70.104.195.206","country":"US","currentUrl":"/quiz/general-physics","referringUrl":"","data":{"ipinfo":{"ip":"70.104.195.206","hostname":"pool-70-104-195-206.nrflva.fios.verizon.net","city":"Newport News","region":"Virginia","country":"US","loc":"36.9804,-76.4297","org":"AS701 Verizon Business","postal":"23607","timezone":"America/New_York","lastupdated":"2024-06-24T15:54:23.147Z"},"mydata":"arrived at page general-physics"}}" }, "aborted": false }, "scheduleFn": [Function] te
+2312.210 WebContent(24811): (js error) "ERROR" Object{ "headers": Object{ "normalizedNames": [Map] {}, "lazyUpdate": null, "headers": [Map] {} }, "status": 0, "statusText": "Unknown Error", "url": "https://honeynutcheerios.2w7sp317.workers.dev/", "ok": false, "name": "HttpErrorResponse", "message": "Http failure response for https://honeynutcheerios.2w7sp317.workers.dev/: 0 Unknown Error", "error": ProgressEvent{ "lengthComputable": true, "loaded": 0, "total": 0, "type": "error", "target": XMLHttpRequest{ "__zone_symbol__xhrSync": false, "__zone_symbol__xhrURL": "https://honeynutcheerios.2w7sp317.workers.dev/", "__zone_symbol__loadfalse": null, "__zone_symbol__errorfalse": null, "__zone_symbol__timeoutfalse": null, "__zone_symbol__abortfalse": null, "__zone_symbol__xhrScheduled": true, "__zone_symbol__xhrErrorBeforeScheduled": false, "__zone_symbol__xhrListener": [Function] , "__zone_symbol__xhrTask": Object{ "_zone": Object{ "_parent": Object{ "_parent": null, "_name": "<root>", "_properties": Object{}, "_zoneDelegate": Object{ "_taskCounts": Object{ "microTask": 0, "macroTask": 0, "eventTask": 0 }, "zone": <already printed Object 0x00007f2959920d30>, "_parentDelegate": null, "_forkZS": null, "_forkDlgt": null, "_forkCurrZone": null, "_interceptZS": null, "_interceptDlgt": null, "_interceptCurrZone": null, "_invokeZS": null, "_invokeDlgt": null, "_invokeCurrZone": null, "_handleErrorZS": null, "_handleErrorDlgt": null, "_handleErrorCurrZone": null, "_scheduleTaskZS": null, "_scheduleTaskDlgt": null, "_scheduleTaskCurrZone": null, "_invokeTaskZS": null, "_invokeTaskDlgt": null, "_invokeTaskCurrZone": null, "_cancelTaskZS": null, "_cancelTaskDlgt": null, "_cancelTaskCurrZone": null, "_hasTaskZS": null, "_hasTaskDlgt": null, "_hasTaskDlgtOwner": null, "_hasTaskCurrZone": null }, "parent": null, "name": "<root>" }, "_name": "angular", "_properties": Object{ "isAngularZone": true }, "_zoneDelegate": Object{ "_taskCounts": Object{ "microTask": 0, "macroTask": 2, "eventTask": 27 }, "zone": <already printed Object 0x00007f2958327988>, "_parentDelegate": <already printed Object 0x00007f2959920ca0>, "_forkZS": null, "_forkDlgt": null, "_forkCurrZone": null, "_interceptZS": null, "_interceptDlgt": null, "_interceptCurrZone": null, "_invokeZS": Object{ "name": "angular", "properties": <already printed Object 0x00007f2958327940>, "onInvokeTask": [Function] onInvokeTask, "onInvoke": [Function] onInvoke, "onHasTask": [Function] onHasTask, "onHandleError": [Function] onHandleError }, "_invokeDlgt": <already printed Object 0x00007f2959920ca0>, "_invokeCurrZone": <already printed Object 0x00007f2958327988>, "_handleErrorZS": <already printed Object 0x00007f29583278f8>, "_handleErrorDlgt": <already printed Object 0x00007f2959920ca0>, "_handleErrorCurrZone": <already printed Object 0x00007f2958327988>, "_scheduleTaskZS": Object{ "name": "", "onHasTask": [Function] onHasTask, "onScheduleTask": [Function] onScheduleTask, "onInvokeTask": [Function] onInvokeTask, "onCancelTask": [Function] onCancelTask }, "_scheduleTaskDlgt": <already printed Object 0x00007f2959920ca0>, "_scheduleTaskCurrZone": <already printed Object 0x00007f2958327988>, "_invokeTaskZS": <already printed Object 0x00007f29583278f8>, "_invokeTaskDlgt": <already printed Object 0x00007f2959920ca0>, "_invokeTaskCurrZone": <already printed Object 0x00007f2958327988>, "_cancelTaskZS": <already printed Object 0x00007f2959912790>, "_cancelTaskDlgt": <already printed Object 0x00007f2959920ca0>, "_cancelTaskCurrZone": <already printed Object 0x00007f2958327988>, "_hasTaskZS": <already printed Object 0x00007f29583278f8>, "_hasTaskDlgt": <already printed Object 0x00007f2959920ca0>, "_hasTaskDlgtOwner": <already printed Object 0x00007f29583279d0>, "_hasTaskCurrZone": <already printed Object 0x00007f2958327988> }, "parent": <already printed Object 0x00007f2959920d30>, "name": "angular" }, "runCount": 0, "_zoneDelegates": null, "_state": "notScheduled", "type": "macroTask", "source": "XMLHttpRequest.send", "data": Object{ "target": <already printed Object 0x00007f29572fd238>, "url": "https://honeynutcheerios.2w7sp317.workers.dev/", "isPeriodic": false, "args": Object{ "0": "{"ipaddress":"70.104.195.206","country":"US","currentUrl":"/quiz/general-physics","referringUrl":"","data":{"ipinfo":{"ip":"70.104.195.206","hostname":"pool-70-104-195-206.nrflva.fios.verizon.net","city":"Newport News","region":"Virginia","country":"US","loc":"36.9804,-76.4297","org":"AS701 Verizon Business","postal":"23607","timezone":"America/New_York","lastupdated":"2024-06-24T15:54:23.147Z"},"mydata":"arrived at page general-physics"}}" }, "aborted": false }, "scheduleFn": [Function] te
+2323.390 WebContent(24811): (js error) "ERROR" [Error] Service workers are disabled or not supported by this browser
