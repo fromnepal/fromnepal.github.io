@@ -303,3 +303,97 @@ user    0m0.490s
 sys     0m1.089s
 Tue Jun 25 11:40:16 EDT 2024
 kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:3 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Fetched 128 kB in 1s (173 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+
+real    0m1.450s
+user    0m0.007s
+sys     0m0.000s
+Listing... Done
+
+real    0m0.146s
+user    0m0.136s
+sys     0m0.010s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+real    0m0.301s
+user    0m0.005s
+sys     0m0.000s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.014s
+user    0m0.012s
+sys     0m0.000s
+
+real    0m0.154s
+user    0m0.017s
+sys     0m0.011s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Already up to date.
+
+real    0m0.144s
+user    0m0.029s
+sys     0m0.000s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.014s
+user    0m0.011s
+sys     0m0.000s
+Tue Jun 25 11:42:08 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+[1/2] Re-running CMake...
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/clang++-17
+All requested packages are currently installed.
+Total install time: 200 ns
+-- Running vcpkg install - done
+-- Checking for module 'libavcodec'
+--   Package 'libavcodec' not found
+CMake Error at Toolchain/Local/cmake/share/cmake-3.26/Modules/FindPkgConfig.cmake:607 (message):
+  A required package was not found
+Call Stack (most recent call first):
+  Toolchain/Local/cmake/share/cmake-3.26/Modules/FindPkgConfig.cmake:829 (_pkg_check_modules_internal)
+  Userland/Libraries/LibMedia/CMakeLists.txt:16 (pkg_check_modules)
+
+
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja
+/home/kushal/src/ladybird/Toolchain/Local/cmake/bin/cmake --regenerate-during-build -S/home/kushal/src/ladybird -B/home/kushal/src/ladybird/Build/ladybird
+ninja: error: rebuilding 'build.ninja': subcommand failed
+
+real    0m14.358s
+user    0m0.460s
+sys     0m1.038s
+Tue Jun 25 11:42:22 EDT 2024
+kushal@kus2023:~/src/ladybird$
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
