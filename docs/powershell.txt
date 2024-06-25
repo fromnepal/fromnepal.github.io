@@ -8,3 +8,205 @@ Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_
 This message is shown once a day. To disable it please create the
 /home/kushal/.hushlogin file.
 kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+[sudo] password for kushal:
+Sorry, try again.
+[sudo] password for kushal:
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1736 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1088 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [251 kB]
+Fetched 3332 kB in 1s (4394 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+
+real    0m13.349s
+user    0m0.037s
+sys     0m0.039s
+Listing... Done
+
+real    0m0.157s
+user    0m0.146s
+sys     0m0.010s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+real    0m0.321s
+user    0m0.005s
+sys     0m0.000s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.112s
+user    0m0.019s
+sys     0m0.399s
+remote: Enumerating objects: 257, done.
+remote: Counting objects: 100% (257/257), done.
+remote: Compressing objects: 100% (104/104), done.
+remote: Total 257 (delta 148), reused 233 (delta 143), pack-reused 0
+Receiving objects: 100% (257/257), 611.23 KiB | 7.11 MiB/s, done.
+Resolving deltas: 100% (148/148), completed with 19 local objects.
+From https://github.com/LadybirdBrowser/ladybird
+   71e099c79a..637ccbec35  master     -> origin/master
+
+real    0m0.467s
+user    0m0.030s
+sys     0m0.053s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Updating 71e099c79a..637ccbec35
+Fast-forward
+ .github/actions/setup/action.yml                                    |    4 +-
+ AK/Math.h                                                           |   14 +-
+ Documentation/BuildInstructionsLadybird.md                          |    6 +-
+ Ladybird/Qt/LocationEdit.cpp                                        |   18 +-
+ Ladybird/Qt/LocationEdit.h                                          |    1 +
+ Ladybird/Qt/Settings.cpp                                            |    2 +
+ Ladybird/Qt/Settings.h                                              |    2 +
+ Meta/CMake/lagom_compile_options.cmake                              |    4 +
+ Meta/Lagom/Fuzzers/FuzzVP9Decoder.cpp                               |   16 --
+ Meta/Lagom/Fuzzers/fuzzers.cmake                                    |    2 -
+ Tests/AK/TestIntegerMath.cpp                                        |   15 ++
+ Tests/LibMedia/CMakeLists.txt                                       |    6 +-
+ Tests/LibMedia/TestH264Decode.cpp                                   |   19 ++
+ Tests/LibMedia/TestMediaCommon.h                                    |   58 ++++++
+ Tests/LibMedia/TestVP9Decode.cpp                                    |   69 +-----
+ Tests/LibMedia/avc_in_matroska.mkv                                  |  Bin 0 -> 511953 bytes
+ Tests/LibMedia/oss-fuzz-testcase-52630.vp9                          |  Bin 75 -> 0 bytes
+ Tests/LibMedia/oss-fuzz-testcase-53977.vp9                          |  Bin 64 -> 0 bytes
+ Tests/LibMedia/oss-fuzz-testcase-62054.vp9                          |    1 -
+ Tests/LibMedia/oss-fuzz-testcase-63182.vp9                          |  Bin 32 -> 0 bytes
+ Userland/Libraries/LibMedia/CMakeLists.txt                          |   12 +-
+ Userland/Libraries/LibMedia/Color/CodingIndependentCodePoints.h     |   55 ++++-
+ Userland/Libraries/LibMedia/Containers/Matroska/Document.h          |   10 +-
+ Userland/Libraries/LibMedia/Containers/Matroska/MatroskaDemuxer.cpp |   21 +-
+ Userland/Libraries/LibMedia/Containers/Matroska/MatroskaDemuxer.h   |    2 +
+ Userland/Libraries/LibMedia/Containers/Matroska/Reader.cpp          |   77 ++++---
+ Userland/Libraries/LibMedia/Containers/Matroska/Reader.h            |   15 +-
+ Userland/Libraries/LibMedia/Demuxer.h                               |    2 +
+ Userland/Libraries/LibMedia/FFmpeg/FFmpegForward.h                  |   13 ++
+ Userland/Libraries/LibMedia/FFmpeg/FFmpegHelpers.h                  |   48 +++++
+ Userland/Libraries/LibMedia/FFmpeg/FFmpegVideoDecoder.cpp           |  236 +++++++++++++++++++++
+ Userland/Libraries/LibMedia/FFmpeg/FFmpegVideoDecoder.h             |   35 ++++
+ Userland/Libraries/LibMedia/PlaybackManager.cpp                     |   89 ++++----
+ Userland/Libraries/LibMedia/PlaybackManager.h                       |    2 +-
+ Userland/Libraries/LibMedia/Sample.h                                |    5 +-
+ Userland/Libraries/LibMedia/Subsampling.h                           |   46 ++++
+ Userland/Libraries/LibMedia/Video/VP9/BooleanDecoder.h              |   15 --
+ Userland/Libraries/LibMedia/Video/VP9/Context.h                     |  379 ---------------------------------
+ Userland/Libraries/LibMedia/Video/VP9/ContextStorage.h              |  290 --------------------------
+ Userland/Libraries/LibMedia/Video/VP9/Decoder.cpp                   | 2009 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Userland/Libraries/LibMedia/Video/VP9/Decoder.h                     |  150 -------------
+ Userland/Libraries/LibMedia/Video/VP9/Enums.h                       |  177 ----------------
+ Userland/Libraries/LibMedia/Video/VP9/LookupTables.h                |  406 ------------------------------------
+ Userland/Libraries/LibMedia/Video/VP9/MotionVector.h                |   62 ------
+ Userland/Libraries/LibMedia/Video/VP9/Parser.cpp                    | 1782 -----------------------------------------------------------------------------------------------------------------------------------------------------------
+ Userland/Libraries/LibMedia/Video/VP9/Parser.h                      |  147 -------------
+ Userland/Libraries/LibMedia/Video/VP9/ProbabilityTables.cpp         | 1219 ----------------------------------------------------------------------------------------------------------
+ Userland/Libraries/LibMedia/Video/VP9/ProbabilityTables.h           |  127 -----------
+ Userland/Libraries/LibMedia/Video/VP9/Symbols.h                     |   81 --------
+ Userland/Libraries/LibMedia/Video/VP9/SyntaxElementCounter.cpp      |   88 --------
+ Userland/Libraries/LibMedia/Video/VP9/SyntaxElementCounter.h        |   48 -----
+ Userland/Libraries/LibMedia/Video/VP9/TreeParser.cpp                |  733 ----------------------------------------------------------------
+ Userland/Libraries/LibMedia/Video/VP9/TreeParser.h                  |   79 -------
+ Userland/Libraries/LibMedia/Video/VP9/Utilities.h                   |  138 ------------
+ Userland/Libraries/LibMedia/VideoDecoder.h                          |    7 +-
+ Userland/Libraries/LibMedia/VideoFrame.cpp                          |  124 ++++++++---
+ Userland/Libraries/LibMedia/VideoFrame.h                            |   72 +++++--
+ Userland/Libraries/LibMedia/{Video => }/VideoSampleData.h           |    5 +-
+ Userland/Libraries/LibWeb/HTML/Canvas/CanvasPathDrawingStyles.h     |   23 ++
+ Userland/Libraries/LibWeb/HTML/Canvas/CanvasPathDrawingStyles.idl   |    4 +-
+ Userland/Libraries/LibWeb/HTML/Canvas/CanvasState.h                 |    1 +
+ 61 files changed, 882 insertions(+), 8189 deletions(-)
+ delete mode 100644 Meta/Lagom/Fuzzers/FuzzVP9Decoder.cpp
+ create mode 100644 Tests/LibMedia/TestH264Decode.cpp
+ create mode 100644 Tests/LibMedia/TestMediaCommon.h
+ create mode 100644 Tests/LibMedia/avc_in_matroska.mkv
+ delete mode 100644 Tests/LibMedia/oss-fuzz-testcase-52630.vp9
+ delete mode 100644 Tests/LibMedia/oss-fuzz-testcase-53977.vp9
+ delete mode 100644 Tests/LibMedia/oss-fuzz-testcase-62054.vp9
+ delete mode 100644 Tests/LibMedia/oss-fuzz-testcase-63182.vp9
+ create mode 100644 Userland/Libraries/LibMedia/FFmpeg/FFmpegForward.h
+ create mode 100644 Userland/Libraries/LibMedia/FFmpeg/FFmpegHelpers.h
+ create mode 100644 Userland/Libraries/LibMedia/FFmpeg/FFmpegVideoDecoder.cpp
+ create mode 100644 Userland/Libraries/LibMedia/FFmpeg/FFmpegVideoDecoder.h
+ create mode 100644 Userland/Libraries/LibMedia/Subsampling.h
+ delete mode 100644 Userland/Libraries/LibMedia/Video/VP9/BooleanDecoder.h
+ delete mode 100644 Userland/Libraries/LibMedia/Video/VP9/Context.h
+ delete mode 100644 Userland/Libraries/LibMedia/Video/VP9/ContextStorage.h
+ delete mode 100644 Userland/Libraries/LibMedia/Video/VP9/Decoder.cpp
+ delete mode 100644 Userland/Libraries/LibMedia/Video/VP9/Decoder.h
+ delete mode 100644 Userland/Libraries/LibMedia/Video/VP9/Enums.h
+ delete mode 100644 Userland/Libraries/LibMedia/Video/VP9/LookupTables.h
+ delete mode 100644 Userland/Libraries/LibMedia/Video/VP9/MotionVector.h
+ delete mode 100644 Userland/Libraries/LibMedia/Video/VP9/Parser.cpp
+ delete mode 100644 Userland/Libraries/LibMedia/Video/VP9/Parser.h
+ delete mode 100644 Userland/Libraries/LibMedia/Video/VP9/ProbabilityTables.cpp
+ delete mode 100644 Userland/Libraries/LibMedia/Video/VP9/ProbabilityTables.h
+ delete mode 100644 Userland/Libraries/LibMedia/Video/VP9/Symbols.h
+ delete mode 100644 Userland/Libraries/LibMedia/Video/VP9/SyntaxElementCounter.cpp
+ delete mode 100644 Userland/Libraries/LibMedia/Video/VP9/SyntaxElementCounter.h
+ delete mode 100644 Userland/Libraries/LibMedia/Video/VP9/TreeParser.cpp
+ delete mode 100644 Userland/Libraries/LibMedia/Video/VP9/TreeParser.h
+ delete mode 100644 Userland/Libraries/LibMedia/Video/VP9/Utilities.h
+ rename Userland/Libraries/LibMedia/{Video => }/VideoSampleData.h (82%)
+
+real    0m0.458s
+user    0m0.014s
+sys     0m0.046s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.020s
+user    0m0.000s
+sys     0m0.021s
+Tue Jun 25 11:31:05 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+[1/2] Re-running CMake...
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/clang++-17
+All requested packages are currently installed.
+Total install time: 190 ns
+-- Running vcpkg install - done
+-- Checking for module 'libavcodec'
+--   Package 'libavcodec' not found
+CMake Error at Toolchain/Local/cmake/share/cmake-3.26/Modules/FindPkgConfig.cmake:607 (message):
+  A required package was not found
+Call Stack (most recent call first):
+  Toolchain/Local/cmake/share/cmake-3.26/Modules/FindPkgConfig.cmake:829 (_pkg_check_modules_internal)
+  Userland/Libraries/LibMedia/CMakeLists.txt:16 (pkg_check_modules)
+
+
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja
+/home/kushal/src/ladybird/Toolchain/Local/cmake/bin/cmake --regenerate-during-build -S/home/kushal/src/ladybird -B/home/kushal/src/ladybird/Build/ladybird
+ninja: error: rebuilding 'build.ninja': subcommand failed
+
+real    0m15.594s
+user    0m0.501s
+sys     0m1.218s
+Tue Jun 25 11:31:21 EDT 2024
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
