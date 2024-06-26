@@ -1158,3 +1158,87 @@ user    99m10.683s
 sys     4m35.102s
 Wed Jun 26 07:35:40 EDT 2024
 kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+[sudo] password for kushal:
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [873 kB]
+Get:7 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [169 kB]
+Fetched 1299 kB in 1s (1126 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+
+real    0m8.538s
+user    0m0.025s
+sys     0m0.036s
+Listing... Done
+
+real    0m0.179s
+user    0m0.147s
+sys     0m0.029s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
+  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
+  libavfilter7
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+real    0m0.387s
+user    0m0.005s
+sys     0m0.000s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.191s
+user    0m0.030s
+sys     0m0.039s
+
+real    0m0.269s
+user    0m0.008s
+sys     0m0.065s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Already up to date.
+
+real    0m0.208s
+user    0m0.022s
+sys     0m0.041s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.017s
+user    0m0.004s
+sys     0m0.013s
+Wed Jun 26 10:02:08 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
+
+real    0m53.205s
+user    0m0.466s
+sys     0m1.168s
+Wed Jun 26 10:03:01 EDT 2024
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
