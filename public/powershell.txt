@@ -565,3 +565,265 @@ real    0m15.756s
 user    0m0.021s
 sys     0m0.021s
 kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1769 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [322 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [2057 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [350 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1088 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1528 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [251 kB]
+Get:13 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [262 kB]
+Get:14 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [1944 kB]
+Get:15 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [331 kB]
+Get:16 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [860 kB]
+Get:17 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [37.2 kB]
+Fetched 11.1 MB in 2s (6883 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+1 package can be upgraded. Run 'apt list --upgradable' to see it.
+
+real    0m2.412s
+user    0m0.008s
+sys     0m0.000s
+Listing... Done
+linux-libc-dev/jammy-updates 5.15.0-113.123 amd64 [upgradable from: 5.15.0-112.122]
+N: There are 2 additional versions. Please use the '-a' switch to see them.
+
+real    0m0.146s
+user    0m0.128s
+sys     0m0.010s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
+  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
+  libavfilter7
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+The following packages will be upgraded:
+  linux-libc-dev
+1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1342 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 linux-libc-dev amd64 5.15.0-113.123 [1342 kB]
+Fetched 1342 kB in 0s (4606 kB/s)
+(Reading database ... 62497 files and directories currently installed.)
+Preparing to unpack .../linux-libc-dev_5.15.0-113.123_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (5.15.0-113.123) over (5.15.0-112.122) ...
+Setting up linux-libc-dev:amd64 (5.15.0-113.123) ...
+
+real    0m1.193s
+user    0m0.005s
+sys     0m0.000s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.060s
+user    0m0.000s
+sys     0m0.061s
+remote: Enumerating objects: 443, done.
+remote: Counting objects: 100% (443/443), done.
+remote: Compressing objects: 100% (263/263), done.
+remote: Total 443 (delta 239), reused 312 (delta 176), pack-reused 0
+Receiving objects: 100% (443/443), 598.09 KiB | 5.64 MiB/s, done.
+Resolving deltas: 100% (239/239), completed with 46 local objects.
+From https://github.com/LadybirdBrowser/ladybird
+   637ccbec35..e9e195418e  master     -> origin/master
+
+real    0m0.503s
+user    0m0.030s
+sys     0m0.066s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Updating 637ccbec35..e9e195418e
+Fast-forward
+ .github/actions/cache-restore/action.yml                                                                |   8 --
+ .github/workflows/{serenity-js-artifacts.yml => ladybird-js-artifacts.yml}                              |   2 +-
+ AK/OwnPtr.h                                                                                             |   7 ++
+ Ladybird/WebContent/CMakeLists.txt                                                                      |   8 +-
+ Meta/CMake/common_options.cmake                                                                         |   1 -
+ Meta/CMake/time_zone_data.cmake                                                                         |  78 ---------------
+ Meta/CMake/woff2.cmake                                                                                  |  11 ---
+ Meta/Lagom/CMakeLists.txt                                                                               |   8 +-
+ Meta/Lagom/ReadMe.md                                                                                    |   2 +-
+ Meta/Lagom/Tools/CodeGenerators/CMakeLists.txt                                                          |   1 -
+ Meta/Lagom/Tools/CodeGenerators/LibTimeZone/CMakeLists.txt                                              |   1 -
+ Meta/Lagom/Tools/CodeGenerators/LibTimeZone/GenerateTimeZoneData.cpp                                    | 751 --------------------------------------------------------------------------------------------------------------------------------------------
+ Meta/Lagom/Tools/CodeGenerators/LibUnicode/GeneratorUtil.h                                              | 247 ----------------------------------------------
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/BindingsGenerator/IDLGenerators.cpp                              |   2 +
+ Meta/gn/secondary/Userland/Libraries/LibWeb/DOMParsing/BUILD.gn                                         |   5 +-
+ Meta/gn/secondary/Userland/Libraries/LibWeb/HTML/BUILD.gn                                               |   1 +
+ Meta/gn/secondary/Userland/Libraries/LibWeb/idl_files.gni                                               |   1 +
+ Tests/CMakeLists.txt                                                                                    |   1 -
+ Tests/LibCore/CMakeLists.txt                                                                            |   2 +-
+ Tests/LibTimeZone/CMakeLists.txt                                                                        |  10 --
+ Tests/LibTimeZone/TestTimeZone.cpp                                                                      | 203 --------------------------------------
+ Tests/LibUnicode/CMakeLists.txt                                                                         |   1 +
+ Tests/LibUnicode/TestTimeZone.cpp                                                                       | 144 +++++++++++++++++++++++++++
+ Tests/LibWasm/test-wasm.cpp                                                                             |   7 +-
+ Tests/LibWeb/Text/expected/ShadowDOM/declarative-basic.txt                                              |  25 +++++
+ Tests/LibWeb/Text/input/ShadowDOM/declarative-basic.html                                                |  43 ++++++++
+ Userland/Libraries/LibCore/CMakeLists.txt                                                               |   2 +-
+ Userland/Libraries/LibCore/DateTime.cpp                                                                 |  15 ++-
+ Userland/Libraries/LibCore/EventLoopImplementationUnix.cpp                                              |  26 +++--
+ Userland/Libraries/LibCore/ThreadEventQueue.cpp                                                         |  20 +++-
+ Userland/Libraries/LibGfx/CMakeLists.txt                                                                |  20 ++--
+ Userland/Libraries/LibJS/CMakeLists.txt                                                                 |   2 +-
+ Userland/Libraries/LibJS/Runtime/Date.cpp                                                               |  89 +++++------------
+ Userland/Libraries/LibJS/Runtime/Date.h                                                                 |  12 +--
+ Userland/Libraries/LibJS/Runtime/DatePrototype.cpp                                                      |  18 ++--
+ Userland/Libraries/LibJS/Runtime/Intl/AbstractOperations.cpp                                            |  82 +++++++++++++++-
+ Userland/Libraries/LibJS/Runtime/Intl/AbstractOperations.h                                              |   3 +
+ Userland/Libraries/LibJS/Runtime/Intl/DateTimeFormatConstructor.cpp                                     |  20 ++--
+ Userland/Libraries/LibJS/Runtime/Intl/Intl.cpp                                                          |  40 ++++----
+ Userland/Libraries/LibJS/Runtime/Intl/Locale.cpp                                                        |   9 +-
+ Userland/Libraries/LibJS/Runtime/Temporal/AbstractOperations.cpp                                        |   2 +-
+ Userland/Libraries/LibJS/Runtime/Temporal/Instant.cpp                                                   |   2 +-
+ Userland/Libraries/LibJS/Runtime/Temporal/Now.cpp                                                       |   2 +-
+ Userland/Libraries/LibJS/Runtime/Temporal/TimeZone.cpp                                                  |  49 +++++++---
+ Userland/Libraries/LibJS/Runtime/Temporal/TimeZone.h                                                    |   2 +-
+ Userland/Libraries/LibJS/Runtime/Temporal/TimeZoneConstructor.cpp                                       |   2 +-
+ Userland/Libraries/LibJS/Runtime/Temporal/TimeZonePrototype.cpp                                         |   3 +-
+ Userland/Libraries/LibJS/Runtime/Temporal/ZonedDateTime.cpp                                             |   2 +-
+ Userland/Libraries/LibJS/Tests/builtins/Intl/DateTimeFormat/DateTimeFormat.prototype.resolvedOptions.js |   6 +-
+ Userland/Libraries/LibJS/Tests/builtins/Temporal/TimeZone/TimeZone.from.js                              |   2 +-
+ Userland/Libraries/LibJS/Tests/builtins/Temporal/TimeZone/TimeZone.js                                   |   2 +-
+ Userland/Libraries/LibJS/Tests/builtins/Temporal/TimeZone/TimeZone.prototype.getOffsetNanosecondsFor.js |  28 +++---
+ Userland/Libraries/LibJS/Tests/builtins/Temporal/TimeZone/TimeZone.prototype.toString.js                |   2 +-
+ Userland/Libraries/LibMedia/CMakeLists.txt                                                              |   5 +-
+ Userland/Libraries/LibMedia/Containers/Matroska/Reader.cpp                                              |   2 +-
+ Userland/Libraries/LibTimeZone/CMakeLists.txt                                                           |  11 ---
+ Userland/Libraries/LibTimeZone/Forward.h                                                                |  17 ----
+ Userland/Libraries/LibTimeZone/TimeZone.cpp                                                             | 193 ------------------------------------
+ Userland/Libraries/LibTimeZone/TimeZone.h                                                               |  62 ------------
+ Userland/Libraries/LibUnicode/CMakeLists.txt                                                            |   4 +-
+ Userland/Libraries/LibUnicode/DisplayNames.cpp                                                          |   4 +-
+ Userland/Libraries/LibUnicode/DisplayNames.h                                                            |   4 +-
+ Userland/Libraries/LibUnicode/ICU.h                                                                     |  32 ++++++
+ Userland/Libraries/LibUnicode/TimeZone.cpp                                                              | 142 +++++++++++++++++++++++++++
+ Userland/Libraries/LibUnicode/TimeZone.h                                                                |  32 ++++++
+ Userland/Libraries/LibUnicode/UnicodeKeywords.cpp                                                       |  30 ------
+ Userland/Libraries/LibWeb/CMakeLists.txt                                                                |   2 +-
+ Userland/Libraries/LibWeb/DOM/Document.cpp                                                              |  53 +++++++++-
+ Userland/Libraries/LibWeb/DOM/Document.h                                                                |   9 ++
+ Userland/Libraries/LibWeb/DOM/Document.idl                                                              |   3 +
+ Userland/Libraries/LibWeb/DOM/Element.cpp                                                               | 202 ++++++++++++++++++++++++++++++--------
+ Userland/Libraries/LibWeb/DOM/Element.h                                                                 |  22 ++++-
+ Userland/Libraries/LibWeb/DOM/Element.idl                                                               |  23 ++++-
+ Userland/Libraries/LibWeb/DOM/InnerHTML.idl                                                             |   4 -
+ Userland/Libraries/LibWeb/DOM/Node.cpp                                                                  |  67 ++++++++++---
+ Userland/Libraries/LibWeb/DOM/Node.h                                                                    |   6 +-
+ Userland/Libraries/LibWeb/DOM/Range.cpp                                                                 |  78 +++++++--------
+ Userland/Libraries/LibWeb/DOM/Range.idl                                                                 |   5 +-
+ Userland/Libraries/LibWeb/DOM/ShadowRoot.cpp                                                            |  53 +++++++++-
+ Userland/Libraries/LibWeb/DOM/ShadowRoot.h                                                              |  24 ++++-
+ Userland/Libraries/LibWeb/DOM/ShadowRoot.idl                                                            |  14 ++-
+ Userland/Libraries/LibWeb/DOM/Slottable.cpp                                                             |   2 +-
+ Userland/Libraries/LibWeb/DOMParsing/InnerHTML.cpp                                                      |  74 --------------
+ Userland/Libraries/LibWeb/DOMParsing/InnerHTML.h                                                        |  21 ----
+ Userland/Libraries/LibWeb/Dump.cpp                                                                      |   2 +-
+ Userland/Libraries/LibWeb/Forward.h                                                                     |   1 +
+ Userland/Libraries/LibWeb/HTML/AttributeNames.h                                                         |   4 +
+ Userland/Libraries/LibWeb/HTML/BrowsingContext.cpp                                                      |   3 +
+ Userland/Libraries/LibWeb/HTML/DOMParser.cpp                                                            |  20 ++--
+ Userland/Libraries/LibWeb/HTML/ElementInternals.cpp                                                     |  61 ++++++++++++
+ Userland/Libraries/LibWeb/HTML/ElementInternals.h                                                       |  36 +++++++
+ Userland/Libraries/LibWeb/HTML/ElementInternals.idl                                                     |  44 +++++++++
+ Userland/Libraries/LibWeb/HTML/Focus.cpp                                                                |   2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLDetailsElement.cpp                                                   |   6 +-
+ Userland/Libraries/LibWeb/HTML/HTMLElement.cpp                                                          |  37 +++++++
+ Userland/Libraries/LibWeb/HTML/HTMLElement.h                                                            |   5 +
+ Userland/Libraries/LibWeb/HTML/HTMLElement.idl                                                          |   3 +-
+ Userland/Libraries/LibWeb/HTML/HTMLInputElement.cpp                                                     |  87 +++++++++--------
+ Userland/Libraries/LibWeb/HTML/HTMLInputElement.h                                                       |   2 +
+ Userland/Libraries/LibWeb/HTML/HTMLMeterElement.cpp                                                     |   2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLProgressElement.cpp                                                  |   2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLSelectElement.cpp                                                    |   2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLTemplateElement.cpp                                                  |  25 +++--
+ Userland/Libraries/LibWeb/HTML/HTMLTemplateElement.h                                                    |   4 +-
+ Userland/Libraries/LibWeb/HTML/HTMLTemplateElement.idl                                                  |   5 +-
+ Userland/Libraries/LibWeb/HTML/HTMLTextAreaElement.cpp                                                  |   2 +-
+ Userland/Libraries/LibWeb/HTML/Parser/HTMLParser.cpp                                                    | 331 ++++++++++++++++++++++++++++++++++++++++++++++++--------------
+ Userland/Libraries/LibWeb/HTML/Parser/HTMLParser.h                                                      |  21 +++-
+ Userland/Libraries/LibWeb/Layout/TreeBuilder.cpp                                                        |   2 +-
+ Userland/Libraries/LibWeb/SVG/SVGUseElement.cpp                                                         |   8 +-
+ Userland/Libraries/LibWeb/idl_files.cmake                                                               |   1 +
+ Userland/Libraries/LibWebView/CMakeLists.txt                                                            |   4 +-
+ Userland/Services/WebContent/ConnectionFromClient.cpp                                                   |   2 +-
+ Userland/Services/WebContent/WebDriverConnection.cpp                                                    |   2 +-
+ 114 files changed, 1733 insertions(+), 2225 deletions(-)
+ rename .github/workflows/{serenity-js-artifacts.yml => ladybird-js-artifacts.yml} (98%)
+ delete mode 100644 Meta/CMake/time_zone_data.cmake
+ delete mode 100644 Meta/CMake/woff2.cmake
+ delete mode 100644 Meta/Lagom/Tools/CodeGenerators/LibTimeZone/CMakeLists.txt
+ delete mode 100644 Meta/Lagom/Tools/CodeGenerators/LibTimeZone/GenerateTimeZoneData.cpp
+ delete mode 100644 Tests/LibTimeZone/CMakeLists.txt
+ delete mode 100644 Tests/LibTimeZone/TestTimeZone.cpp
+ create mode 100644 Tests/LibUnicode/TestTimeZone.cpp
+ create mode 100644 Tests/LibWeb/Text/expected/ShadowDOM/declarative-basic.txt
+ create mode 100644 Tests/LibWeb/Text/input/ShadowDOM/declarative-basic.html
+ delete mode 100644 Userland/Libraries/LibTimeZone/CMakeLists.txt
+ delete mode 100644 Userland/Libraries/LibTimeZone/Forward.h
+ delete mode 100644 Userland/Libraries/LibTimeZone/TimeZone.cpp
+ delete mode 100644 Userland/Libraries/LibTimeZone/TimeZone.h
+ create mode 100644 Userland/Libraries/LibUnicode/TimeZone.cpp
+ create mode 100644 Userland/Libraries/LibUnicode/TimeZone.h
+ delete mode 100644 Userland/Libraries/LibWeb/DOM/InnerHTML.idl
+ delete mode 100644 Userland/Libraries/LibWeb/DOMParsing/InnerHTML.cpp
+ delete mode 100644 Userland/Libraries/LibWeb/DOMParsing/InnerHTML.h
+ create mode 100644 Userland/Libraries/LibWeb/HTML/ElementInternals.cpp
+ create mode 100644 Userland/Libraries/LibWeb/HTML/ElementInternals.h
+ create mode 100644 Userland/Libraries/LibWeb/HTML/ElementInternals.idl
+
+real    0m0.171s
+user    0m0.057s
+sys     0m0.011s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.021s
+user    0m0.015s
+sys     0m0.000s
+Wed Jun 26 07:22:38 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+[1/2] Re-running CMake...
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/clang++-17
+All requested packages are currently installed.
+Total install time: 240 ns
+-- Running vcpkg install - done
+-- Checking for module 'libavcodec'
+--   Found libavcodec, version 58.134.100
+-- Found the following ICU libraries:
+--   data (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicudata.a
+--   i18n (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicui18n.a
+--   uc (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicuuc.a
+-- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+-- Could NOT find WrapVulkanHeaders (missing: Vulkan_INCLUDE_DIR)
+-- Configuring done (57.1s)
+-- Generating done (0.4s)
+-- Build files have been written to: /home/kushal/src/ladybird/Build/ladybird
+[0/2] Re-checking globbed directories...
+[279/2323] Building CXX object Lagom/Userland/Libraries/LibJS/CMakeFiles/LibJS.dir/Runtime/PromisePrototype.cpp.o
