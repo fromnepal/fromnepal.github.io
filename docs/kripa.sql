@@ -106,3 +106,4 @@ select * from drivers_license where car_make = 'Tesla' and car_model = 'Model S'
 -- 291182	65	66	blue	red	female	08CM64	Tesla	Model S
 -- 918773	48	65	black	red	female	917UU3	Tesla	Model S
 
+select * from facebook_event_checkin where event_name = 'SQL Symphony Concert' and date >= 20171201 and date <=20171231;
