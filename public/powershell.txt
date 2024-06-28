@@ -1,1 +1,117 @@
 kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+[sudo] password for kushal:
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1776 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1092 kB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1568 kB]
+Fetched 4819 kB in 1s (4295 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+1 package can be upgraded. Run 'apt list --upgradable' to see it.
+
+real    0m7.472s
+user    0m0.025s
+sys     0m0.000s
+Listing... Done
+libcups2/jammy-updates,jammy-security 2.4.1op1-1ubuntu4.10 amd64 [upgradable from: 2.4.1op1-1ubuntu4.9]
+N: There are 2 additional versions. Please use the '-a' switch to see them.
+
+real    0m0.161s
+user    0m0.149s
+sys     0m0.010s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
+  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
+  libavfilter7
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+The following packages will be upgraded:
+  libcups2
+1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+1 standard LTS security update
+Need to get 263 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcups2 amd64 2.4.1op1-1ubuntu4.10 [263 kB]
+Fetched 263 kB in 0s (1249 kB/s)
+(Reading database ... 62497 files and directories currently installed.)
+Preparing to unpack .../libcups2_2.4.1op1-1ubuntu4.10_amd64.deb ...
+Unpacking libcups2:amd64 (2.4.1op1-1ubuntu4.10) over (2.4.1op1-1ubuntu4.9) ...
+Setting up libcups2:amd64 (2.4.1op1-1ubuntu4.10) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
+
+real    0m1.128s
+user    0m0.001s
+sys     0m0.005s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.085s
+user    0m0.016s
+sys     0m0.067s
+remote: Enumerating objects: 80, done.
+remote: Counting objects: 100% (80/80), done.
+remote: Compressing objects: 100% (28/28), done.
+remote: Total 58 (delta 41), reused 36 (delta 29), pack-reused 0
+Unpacking objects: 100% (58/58), 8.00 KiB | 227.00 KiB/s, done.
+From https://github.com/LadybirdBrowser/ladybird
+   79acb998e1..cf0912c700  master     -> origin/master
+
+real    0m0.350s
+user    0m0.050s
+sys     0m0.013s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Updating 79acb998e1..cf0912c700
+Fast-forward
+ Tests/LibWeb/Text/expected/SVG/a-element-prototype.txt |   1 +
+ Tests/LibWeb/Text/expected/all-window-properties.txt   | 371 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Tests/LibWeb/Text/input/SVG/a-element-prototype.html   |   7 ++++
+ Tests/LibWeb/Text/input/all-window-properties.html     |  18 ++++++++++
+ Userland/Libraries/LibIPC/Connection.cpp               |  58 ++++++++++++++++++++----------
+ Userland/Libraries/LibIPC/Connection.h                 |  81 +++++++++---------------------------------
+ Userland/Libraries/LibWeb/SVG/SVGAElement.cpp          |   7 ++++
+ Userland/Libraries/LibWeb/SVG/SVGAElement.h            |   6 ++--
+ Userland/Libraries/LibWebView/ViewImplementation.cpp   |   1 +
+ Userland/Services/WebWorker/ConnectionFromClient.cpp   |   1 +
+ 10 files changed, 465 insertions(+), 86 deletions(-)
+ create mode 100644 Tests/LibWeb/Text/expected/SVG/a-element-prototype.txt
+ create mode 100644 Tests/LibWeb/Text/expected/all-window-properties.txt
+ create mode 100644 Tests/LibWeb/Text/input/SVG/a-element-prototype.html
+ create mode 100644 Tests/LibWeb/Text/input/all-window-properties.html
+
+real    0m0.178s
+user    0m0.028s
+sys     0m0.024s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.017s
+user    0m0.002s
+sys     0m0.021s
+Fri Jun 28 11:45:48 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+[80/80] Linking CXX executable bin/Ladybird
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
