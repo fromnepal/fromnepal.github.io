@@ -1,210 +1,501 @@
-kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
-[sudo] password for kushal:
-Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
-Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
-Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
-Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
-Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
-Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1776 kB]
-Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1092 kB]
-Get:8 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1568 kB]
-Fetched 4819 kB in 1s (4295 kB/s)
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-1 package can be upgraded. Run 'apt list --upgradable' to see it.
+PowerShell 7.4.2
 
-real    0m7.472s
-user    0m0.025s
-sys     0m0.000s
-Listing... Done
-libcups2/jammy-updates,jammy-security 2.4.1op1-1ubuntu4.10 amd64 [upgradable from: 2.4.1op1-1ubuntu4.9]
-N: There are 2 additional versions. Please use the '-a' switch to see them.
+   A new PowerShell stable release is available: v7.4.3
+   Upgrade now, or check out the release page at:
+     https://aka.ms/PowerShell-Release?tag=v7.4.3
 
-real    0m0.161s
-user    0m0.149s
-sys     0m0.010s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
-  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
-  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
-  libavfilter7
-Learn more about Ubuntu Pro at https://ubuntu.com/pro
-The following packages will be upgraded:
-  libcups2
-1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-1 standard LTS security update
-Need to get 263 kB of archives.
-After this operation, 0 B of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcups2 amd64 2.4.1op1-1ubuntu4.10 [263 kB]
-Fetched 263 kB in 0s (1249 kB/s)
-(Reading database ... 62497 files and directories currently installed.)
-Preparing to unpack .../libcups2_2.4.1op1-1ubuntu4.10_amd64.deb ...
-Unpacking libcups2:amd64 (2.4.1op1-1ubuntu4.10) over (2.4.1op1-1ubuntu4.9) ...
-Setting up libcups2:amd64 (2.4.1op1-1ubuntu4.10) ...
-Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
+PS C:\Users\kushal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-real    0m1.128s
-user    0m0.001s
-sys     0m0.005s
+Friday, June 28, 2024 11:45:17 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.08s.
+Friday, June 28, 2024 11:45:17 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 122ms
+Done in 2.19s.
+Friday, June 28, 2024 11:45:20 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, June 28, 2024 11:45:20 AM
+[main 528d5ac] build application
+ 4 files changed, 94 insertions(+)
+ create mode 100644 docs/presidents.txt
+ create mode 100644 public/presidents.txt
+Friday, June 28, 2024 11:45:20 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Friday, June 28, 2024 11:45:21 AM
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.27 KiB | 1.27 MiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   52ba25d..528d5ac  main -> main
+Friday, June 28, 2024 11:45:22 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Friday, June 28, 2024 11:45:49 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.13s.
+Friday, June 28, 2024 11:45:49 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 174ms
+Done in 1.73s.
+Friday, June 28, 2024 11:45:51 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, June 28, 2024 11:45:51 AM
+[main bc218a0] build application
+ 2 files changed, 18 deletions(-)
+Friday, June 28, 2024 11:45:51 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Friday, June 28, 2024 11:45:52 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 450 bytes | 450.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   528d5ac..bc218a0  main -> main
+Friday, June 28, 2024 11:45:53 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Friday, June 28, 2024 11:46:51 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Friday, June 28, 2024 11:46:52 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 88ms
+Done in 0.81s.
+Friday, June 28, 2024 11:46:53 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, June 28, 2024 11:46:53 AM
+[main d29a37f] build application
+ 2 files changed, 232 insertions(+)
+Friday, June 28, 2024 11:46:53 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Friday, June 28, 2024 11:46:53 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 2.28 KiB | 2.28 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   bc218a0..d29a37f  main -> main
+Friday, June 28, 2024 11:46:54 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Friday, June 28, 2024 12:02:52 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Friday, June 28, 2024 12:02:52 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 89ms
+Done in 0.83s.
+Friday, June 28, 2024 12:02:53 PM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, June 28, 2024 12:02:53 PM
+[main ed5bdfe] build application
+ 2 files changed, 186 insertions(+)
+Friday, June 28, 2024 12:02:53 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Friday, June 28, 2024 12:02:54 PM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 3.59 KiB | 3.59 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   d29a37f..ed5bdfe  main -> main
+Friday, June 28, 2024 12:02:55 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\angular\angulareighteen\"; date; git fetch; date; git status; date;
+
+Friday, June 28, 2024 12:03:46 PM
+Friday, June 28, 2024 12:03:47 PM
 On branch master
 Your branch is up to date with 'origin/master'.
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
+nothing to commit, working tree clean
+Friday, June 28, 2024 12:03:47 PM
 
-nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\kushal\src\angular\angulareighteen> code .
+PS C:\Users\kushal\src\angular\angulareighteen> cd "C:\Users\kushal\src\angular\angulareighteen\"; date; git fetch; date; git status; date; yarn run ng update; date; yarn run ng build; date; yarn run ng test; date;
 
-real    0m0.085s
-user    0m0.016s
-sys     0m0.067s
-remote: Enumerating objects: 80, done.
-remote: Counting objects: 100% (80/80), done.
-remote: Compressing objects: 100% (28/28), done.
-remote: Total 58 (delta 41), reused 36 (delta 29), pack-reused 0
-Unpacking objects: 100% (58/58), 8.00 KiB | 227.00 KiB/s, done.
-From https://github.com/LadybirdBrowser/ladybird
-   79acb998e1..cf0912c700  master     -> origin/master
-
-real    0m0.350s
-user    0m0.050s
-sys     0m0.013s
-From https://github.com/LadybirdBrowser/ladybird
- * branch                  master     -> FETCH_HEAD
-Updating 79acb998e1..cf0912c700
-Fast-forward
- Tests/LibWeb/Text/expected/SVG/a-element-prototype.txt |   1 +
- Tests/LibWeb/Text/expected/all-window-properties.txt   | 371 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- Tests/LibWeb/Text/input/SVG/a-element-prototype.html   |   7 ++++
- Tests/LibWeb/Text/input/all-window-properties.html     |  18 ++++++++++
- Userland/Libraries/LibIPC/Connection.cpp               |  58 ++++++++++++++++++++----------
- Userland/Libraries/LibIPC/Connection.h                 |  81 +++++++++---------------------------------
- Userland/Libraries/LibWeb/SVG/SVGAElement.cpp          |   7 ++++
- Userland/Libraries/LibWeb/SVG/SVGAElement.h            |   6 ++--
- Userland/Libraries/LibWebView/ViewImplementation.cpp   |   1 +
- Userland/Services/WebWorker/ConnectionFromClient.cpp   |   1 +
- 10 files changed, 465 insertions(+), 86 deletions(-)
- create mode 100644 Tests/LibWeb/Text/expected/SVG/a-element-prototype.txt
- create mode 100644 Tests/LibWeb/Text/expected/all-window-properties.txt
- create mode 100644 Tests/LibWeb/Text/input/SVG/a-element-prototype.html
- create mode 100644 Tests/LibWeb/Text/input/all-window-properties.html
-
-real    0m0.178s
-user    0m0.028s
-sys     0m0.024s
+Friday, June 28, 2024 12:04:55 PM
+Friday, June 28, 2024 12:04:56 PM
 On branch master
 Your branch is up to date with 'origin/master'.
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
+nothing to commit, working tree clean
+Friday, June 28, 2024 12:04:56 PM
+yarn run v1.22.21
+$ ng update
+Using package manager: yarn
+Collecting installed dependencies...
+Found 27 dependencies.
+    We analyzed your package.json, there are some packages to update:
 
-nothing added to commit but untracked files present (use "git add" to track)
+      Name                               Version                  Command to update
+     --------------------------------------------------------------------------------
+      @angular/cdk                       18.0.2 -> 18.0.5         ng update @angular/cdk
+      @angular/cli                       18.0.3 -> 18.0.6         ng update @angular/cli
+      @angular/core                      18.0.2 -> 18.0.5         ng update @angular/core
+      @angular/material                  18.0.2 -> 18.0.5         ng update @angular/material
 
-real    0m0.017s
-user    0m0.002s
-sys     0m0.021s
-Fri Jun 28 11:45:48 EDT 2024
-~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
-ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
-[0/2] Re-checking globbed directories...
-[80/80] Linking CXX executable bin/Ladybird
-QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
-qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
-195.671 WebContent(1606): ResourceLoader: Failed load of: "https://fromnepal.github.io/vite.svg", Error: Load failed: 404, Duration: 140ms
-195.741 WebContent(1606): No property (from 4 properties) matched Token: Ident: auto
-195.741 WebContent(1606):     padding-top
-195.741 WebContent(1606):     padding-right
-195.741 WebContent(1606):     padding-bottom
-195.741 WebContent(1606):     padding-left
-195.861 WebContent(1606): ResourceLoader: Failed load of: "https://fromnepal.github.io/favicon.ico", Error: Load failed: 404, Duration: 120ms
-195.861 WebContent(1606): ImageDecoderClient: Failed to decode image with ID 0: Decoding failed: Could not find suitable image decoder plugin for data
-198.381 WebContent(1606): ResourceLoader: Failed load of: "https://nice.runasp.net/Analytics/SaveAnalytics?key=visit2024-06-28-11-48-41&data=%7B%22timestamp%22%3A%222024-06-28-11-48-41%22%2C%22userAgent%22%3A%22Mozilla%2F5.0%20(Linux%3B%20x86_64)%20Ladybird%2F1.0%22%7D", Error: Load failed: 500, Duration: 760ms
-198.381 WebContent(1606): (js error) "Error saving or verifying visit data:" [TypeError] Request with 'cors' response tainting failed CORS check
-239.031 WebContent(2265): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
-239.571 WebContent(2265): FIXME: Unimplemented Navigator.maxTouchPoints
-239.601 WebContent(2265): (STUBBED) HTMLInputElement::set_selection_range(start=0, end=0, direction='None'). Called on: input.lst
-239.601 WebContent(2265): ResourceLoader: Failed load of: "https://clients1.google.com/generate_204", Error: URL was filtered, Duration: 0ms
-239.611 WebContent(2265): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-239.611 WebContent(2265): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-239.611 WebContent(2265): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
-239.621 WebContent(2265): ResourceLoader: Failed load of: "https://www.google.com/gen_204?atyp=i&ct=psnt&cad=&nt=null&ei=f9t-ZsmPL-2l5NoPqI6ikAg&zx=1719589765334&opi=89978449", Error: URL was filtered, Duration: 0ms
-239.721 WebContent(2265): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-239.721 WebContent(2265): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
-248.531 WebContent(2265): FIXME: Unimplemented IDL interface: 'Window.reportError'
-248.531 WebContent(2265): FIXME: Unimplemented IDL interface: 'Window.reportError'
-248.531 WebContent(2265): FIXME: Unimplemented IDL interface: 'Window.reportError'
-248.541 WebContent(2265): ResourceLoader: Failed load of: "https://www.googletagmanager.com/gtm.js?id=GTM-5P98", Error: URL was filtered, Duration: 0ms
-248.541 WebContent(2265): HTMLScriptElement: Refusing to run script because the element's result is null.
-248.821 WebContent(2265): ImageDecoderClient: Failed to decode image with ID 6: Decoding failed: Could not find suitable image decoder plugin for data
-249.781 WebContent(2265): No property (from 4 properties) matched Function: calc(16px - 1)
-249.781 WebContent(2265):     padding-top
-249.781 WebContent(2265):     padding-right
-249.781 WebContent(2265):     padding-bottom
-249.781 WebContent(2265):     padding-left
-249.781 WebContent(2265): No property (from 4 properties) matched Function: calc(24px - 1)
-249.781 WebContent(2265):     padding-top
-249.781 WebContent(2265):     padding-right
-249.781 WebContent(2265):     padding-bottom
-249.781 WebContent(2265):     padding-left
-249.781 WebContent(2265): No property (from 4 properties) matched Function: calc(32px - 1)
-249.781 WebContent(2265):     padding-top
-249.781 WebContent(2265):     padding-right
-249.781 WebContent(2265):     padding-bottom
-249.781 WebContent(2265):     padding-left
-254.161 WebContent(2265): (js log) "JQMIGRATE: Migrate is installed with logging active, version 3.0.1"
-255.781 WebContent(2265): Potential FIXME: Creating unknown generic element 'animateTransform' in namespace 'http://www.w3.org/2000/svg'
-255.781 WebContent(2265): Potential FIXME: Creating unknown generic element 'animateTransform' in namespace 'http://www.w3.org/2000/svg'
-255.781 WebContent(2265): Potential FIXME: Creating unknown generic element 'animateTransform' in namespace 'http://www.w3.org/2000/svg'
-255.781 WebContent(2265): Potential FIXME: Creating unknown generic element 'animateTransform' in namespace 'http://www.w3.org/2000/svg'
-255.781 WebContent(2265): Potential FIXME: Creating unknown generic element 'animateTransform' in namespace 'http://www.w3.org/2000/svg'
-255.781 WebContent(2265): Potential FIXME: Creating unknown generic element 'animateTransform' in namespace 'http://www.w3.org/2000/svg'
-255.781 WebContent(2265): Potential FIXME: Creating unknown generic element 'animateTransform' in namespace 'http://www.w3.org/2000/svg'
-255.781 WebContent(2265): Potential FIXME: Creating unknown generic element 'animateTransform' in namespace 'http://www.w3.org/2000/svg'
-255.781 WebContent(2265): Potential FIXME: Creating unknown generic element 'animateTransform' in namespace 'http://www.w3.org/2000/svg'
-255.781 WebContent(2265): Potential FIXME: Creating unknown generic element 'animateTransform' in namespace 'http://www.w3.org/2000/svg'
-255.781 WebContent(2265): Potential FIXME: Creating unknown generic element 'animateTransform' in namespace 'http://www.w3.org/2000/svg'
-255.781 WebContent(2265): Potential FIXME: Creating unknown generic element 'animateTransform' in namespace 'http://www.w3.org/2000/svg'
-255.781 WebContent(2265): Potential FIXME: Creating unknown generic element 'animateTransform' in namespace 'http://www.w3.org/2000/svg'
-255.781 WebContent(2265): Potential FIXME: Creating unknown generic element 'animateTransform' in namespace 'http://www.w3.org/2000/svg'
-255.781 WebContent(2265): Potential FIXME: Creating unknown generic element 'animateTransform' in namespace 'http://www.w3.org/2000/svg'
-255.781 WebContent(2265): Potential FIXME: Creating unknown generic element 'animateTransform' in namespace 'http://www.w3.org/2000/svg'
-255.781 WebContent(2265): Potential FIXME: Creating unknown generic element 'animateTransform' in namespace 'http://www.w3.org/2000/svg'
-No audio device detected
-577.061 WebContent(2265): Web::EventHandler: Clicking on a link to https://www.jetbrains.com/rust/download/
-578.121 WebContent(2265): FIXME: Unimplemented IDL interface: 'Window.reportError'
-578.121 WebContent(2265): FIXME: Unimplemented IDL interface: 'Window.reportError'
-578.121 WebContent(2265): FIXME: Unimplemented IDL interface: 'Window.reportError'
-578.121 WebContent(2265): ResourceLoader: Failed load of: "https://www.googletagmanager.com/gtm.js?id=GTM-5P98", Error: URL was filtered, Duration: 0ms
-578.131 WebContent(2265): HTMLScriptElement: Refusing to run script because the element's result is null.
-578.191 WebContent(2265): ImageDecoderClient: Failed to decode image with ID 31: Decoding failed: Could not find suitable image decoder plugin for data
-578.221 WebContent(2265): ImageDecoderClient: Failed to decode image with ID 32: Decoding failed: Could not find suitable image decoder plugin for data
-579.191 WebContent(2265): No property (from 4 properties) matched Function: calc(16px - 1)
-579.191 WebContent(2265):     padding-top
-579.191 WebContent(2265):     padding-right
-579.191 WebContent(2265):     padding-bottom
-579.191 WebContent(2265):     padding-left
-579.191 WebContent(2265): No property (from 4 properties) matched Function: calc(24px - 1)
-579.191 WebContent(2265):     padding-top
-579.191 WebContent(2265):     padding-right
-579.191 WebContent(2265):     padding-bottom
-579.191 WebContent(2265):     padding-left
-579.191 WebContent(2265): No property (from 4 properties) matched Function: calc(32px - 1)
-579.191 WebContent(2265):     padding-top
-579.191 WebContent(2265):     padding-right
-579.191 WebContent(2265):     padding-bottom
-579.191 WebContent(2265):     padding-left
-584.461 WebContent(2265): (js log) "JQMIGRATE: Migrate is installed with logging active, version 3.0.1"
-594.951 WebContent(1606): Web::EventHandler: Clicking on a link to https://fromnepal.github.io/posts.json
-595.151 WebContent(1606): ResourceLoader: Failed load of: "https://fromnepal.github.io/favicon.ico", Error: Load failed: 404, Duration: 40ms
-595.151 WebContent(1606): ImageDecoderClient: Failed to decode image with ID 1: Decoding failed: Could not find suitable image decoder plugin for data
+    There might be additional packages which don't provide 'ng update' capabilities that are outdated.
+    You can update the additional packages by running the update command of your package manager.
+Done in 8.59s.
+Friday, June 28, 2024 12:05:04 PM
+yarn run v1.22.21
+$ ng build
+Initial chunk files   | Names         |  Raw size | Estimated transfer size
+chunk-GNQKSITV.js     | -             | 108.96 kB |                32.16 kB
+main-FKT5TFX6.js      | main          |  98.10 kB |                24.88 kB
+styles-6G2EODFY.css   | styles        |  65.31 kB |                 6.71 kB
+polyfills-6EAL64PA.js | polyfills     |  34.23 kB |                11.13 kB
 
-real    9m44.924s
-user    6m18.535s
-sys     0m16.792s
-Fri Jun 28 11:55:33 EDT 2024
-kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+                      | Initial total | 306.60 kB |                74.89 kB
+
+Lazy chunk files      | Names         |  Raw size | Estimated transfer size
+chunk-SIU75L45.js     | browser       |  67.21 kB |                17.50 kB
+
+Output location: C:\Users\kushal\src\angular\angulareighteen\docs
+
+Application bundle generation complete. [6.074 seconds]
+
+Done in 8.99s.
+Friday, June 28, 2024 12:05:13 PM
+yarn run v1.22.21
+$ ng test
+✔ Browser application bundle generation complete.
+28 06 2024 12:05:27.462:INFO [karma-server]: Karma v6.4.3 server started at http://localhost:9876/
+28 06 2024 12:05:27.464:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
+28 06 2024 12:05:27.525:INFO [launcher]: Starting browser Firefox
+28 06 2024 12:05:28.666:INFO [Firefox 128.0 (Windows 10)]: Connected on socket yhKrfdRZ8sxp_LKlAAAB with id 37793038
+Firefox 128.0 (Windows 10): Executed 3 of 3 SUCCESS (0.048 secs / 0.057 secs)
+TOTAL: 3 SUCCESS
+Done in 15.29s.
+Friday, June 28, 2024 12:05:29 PM
+
+PS C:\Users\kushal\src\angular\angulareighteen> cd "C:\Users\kushal\src\angular\angulareighteen\"; date; git fetch; date; git status; date; yarn run ng update; date; yarn run ng build; date; yarn run ng test; date; yarn run ng update @angular/core @angular/cli @angular/cdk @angular/material; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date;
+
+Friday, June 28, 2024 12:08:11 PM
+Friday, June 28, 2024 12:08:11 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Friday, June 28, 2024 12:08:12 PM
+yarn run v1.22.21
+$ ng update
+Using package manager: yarn
+Collecting installed dependencies...
+Found 27 dependencies.
+    We analyzed your package.json, there are some packages to update:
+
+      Name                               Version                  Command to update
+     --------------------------------------------------------------------------------
+      @angular/cdk                       18.0.2 -> 18.0.5         ng update @angular/cdk
+      @angular/cli                       18.0.3 -> 18.0.6         ng update @angular/cli
+      @angular/core                      18.0.2 -> 18.0.5         ng update @angular/core
+      @angular/material                  18.0.2 -> 18.0.5         ng update @angular/material
+
+    There might be additional packages which don't provide 'ng update' capabilities that are outdated.
+    You can update the additional packages by running the update command of your package manager.
+Done in 1.56s.
+Friday, June 28, 2024 12:08:13 PM
+yarn run v1.22.21
+$ ng build
+Initial chunk files   | Names         |  Raw size | Estimated transfer size
+chunk-GNQKSITV.js     | -             | 108.96 kB |                32.16 kB
+main-FKT5TFX6.js      | main          |  98.10 kB |                24.88 kB
+styles-6G2EODFY.css   | styles        |  65.31 kB |                 6.71 kB
+polyfills-6EAL64PA.js | polyfills     |  34.23 kB |                11.13 kB
+
+                      | Initial total | 306.60 kB |                74.89 kB
+
+Lazy chunk files      | Names         |  Raw size | Estimated transfer size
+chunk-SIU75L45.js     | browser       |  67.21 kB |                17.50 kB
+
+Output location: C:\Users\kushal\src\angular\angulareighteen\docs
+
+Application bundle generation complete. [1.765 seconds]
+
+Done in 2.48s.
+Friday, June 28, 2024 12:08:16 PM
+yarn run v1.22.21
+$ ng test
+✔ Browser application bundle generation complete.
+28 06 2024 12:08:19.432:INFO [karma-server]: Karma v6.4.3 server started at http://localhost:9876/
+28 06 2024 12:08:19.434:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
+28 06 2024 12:08:19.443:INFO [launcher]: Starting browser Firefox
+28 06 2024 12:08:20.302:INFO [Firefox 128.0 (Windows 10)]: Connected on socket faiU8VmH45Zc5lJHAAAB with id 64623665
+Firefox 128.0 (Windows 10): Executed 3 of 3 SUCCESS (0.067 secs / 0.059 secs)
+TOTAL: 3 SUCCESS
+Done in 4.47s.
+Friday, June 28, 2024 12:08:20 PM
+yarn run v1.22.21
+$ ng update @angular/core @angular/cli @angular/cdk @angular/material
+The installed Angular CLI version is outdated.
+Installing a temporary Angular CLI versioned 18.0.6 to perform the update.
+✔ Packages successfully installed.
+Using package manager: yarn
+Collecting installed dependencies...
+Found 27 dependencies.
+Fetching dependency metadata from registry...
+    Updating package.json with dependency @angular-devkit/build-angular @ "18.0.6" (was "18.0.3")...
+    Updating package.json with dependency @angular/cli @ "18.0.6" (was "18.0.3")...
+    Updating package.json with dependency @angular/compiler-cli @ "18.0.5" (was "18.0.2")...
+    Updating package.json with dependency @angular/animations @ "18.0.5" (was "18.0.2")...
+    Updating package.json with dependency @angular/cdk @ "18.0.5" (was "18.0.2")...
+    Updating package.json with dependency @angular/common @ "18.0.5" (was "18.0.2")...
+    Updating package.json with dependency @angular/compiler @ "18.0.5" (was "18.0.2")...
+    Updating package.json with dependency @angular/core @ "18.0.5" (was "18.0.2")...
+    Updating package.json with dependency @angular/forms @ "18.0.5" (was "18.0.2")...
+    Updating package.json with dependency @angular/material @ "18.0.5" (was "18.0.2")...
+    Updating package.json with dependency @angular/platform-browser @ "18.0.5" (was "18.0.2")...
+    Updating package.json with dependency @angular/platform-browser-dynamic @ "18.0.5" (was "18.0.2")...
+    Updating package.json with dependency @angular/router @ "18.0.5" (was "18.0.2")...
+UPDATE package.json (1238 bytes)
+✔ Packages successfully installed.
+Done in 41.28s.
+Friday, June 28, 2024 12:09:02 PM
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+[master 74eb6a5] add all files
+ 2 files changed, 131 insertions(+), 251 deletions(-)
+Friday, June 28, 2024 12:09:02 PM
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Current branch master is up to date.
+Friday, June 28, 2024 12:09:03 PM
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 3.51 KiB | 1.17 MiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote:
+remote: GitHub found 1 vulnerability on angulareighteen/angulareighteen.github.io's default branch (1 high). To find out more, visit:
+remote:      https://github.com/angulareighteen/angulareighteen.github.io/security/dependabot/1
+remote:
+To github.com:angulareighteen/angulareighteen.github.io.git
+   cdaee00..74eb6a5  master -> master
+Friday, June 28, 2024 12:09:04 PM
+
+PS C:\Users\kushal\src\angular\angulareighteen> cd "C:\Users\kushal\src\angular\angulareighteen\"; date; git fetch; date; git status; date; yarn run ng update; date; yarn run ng build; date; yarn run ng test; date; yarn run ng update @angular/core @angular/cli @angular/cdk @angular/material; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date;
+
+Friday, June 28, 2024 12:09:18 PM
+Friday, June 28, 2024 12:09:19 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Friday, June 28, 2024 12:09:19 PM
+yarn run v1.22.21
+$ ng update
+Using package manager: yarn
+Collecting installed dependencies...
+Found 27 dependencies.
+    We analyzed your package.json and everything seems to be in order. Good work!
+Done in 5.44s.
+Friday, June 28, 2024 12:09:24 PM
+yarn run v1.22.21
+$ ng build
+Initial chunk files   | Names         |  Raw size | Estimated transfer size
+chunk-66MZYDBQ.js     | -             | 109.53 kB |                32.35 kB
+main-T2GDPJTR.js      | main          |  98.10 kB |                24.90 kB
+styles-UVTELNMH.css   | styles        |  72.32 kB |                 7.08 kB
+polyfills-6EAL64PA.js | polyfills     |  34.23 kB |                11.13 kB
+
+                      | Initial total | 314.18 kB |                75.47 kB
+
+Lazy chunk files      | Names         |  Raw size | Estimated transfer size
+chunk-6447YNYI.js     | browser       |  67.21 kB |                17.46 kB
+
+Output location: C:\Users\kushal\src\angular\angulareighteen\docs
+
+Application bundle generation complete. [6.513 seconds]
+
+Done in 9.29s.
+Friday, June 28, 2024 12:09:34 PM
+yarn run v1.22.21
+$ ng test
+✔ Browser application bundle generation complete.
+28 06 2024 12:09:56.194:INFO [karma-server]: Karma v6.4.3 server started at http://localhost:9876/
+28 06 2024 12:09:56.197:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
+28 06 2024 12:09:56.251:INFO [launcher]: Starting browser Firefox
+28 06 2024 12:09:57.346:INFO [Firefox 128.0 (Windows 10)]: Connected on socket ewPkvZHy_NoaU0IeAAAB with id 4436743
+Firefox 128.0 (Windows 10): Executed 3 of 3 SUCCESS (0.096 secs / 0.083 secs)
+TOTAL: 3 SUCCESS
+Done in 24.08s.
+Friday, June 28, 2024 12:09:58 PM
+yarn run v1.22.21
+$ ng update @angular/core @angular/cli @angular/cdk @angular/material
+Error: Repository is not clean. Please commit or stash any changes before updating.
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Friday, June 28, 2024 12:09:59 PM
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/chunk-6447YNYI.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/chunk-66MZYDBQ.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/main-T2GDPJTR.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/styles-UVTELNMH.css', LF will be replaced by CRLF the next time Git touches it
+[master 1932f83] add all files
+ 7 files changed, 12 insertions(+), 12 deletions(-)
+ rename docs/{chunk-SIU75L45.js => chunk-6447YNYI.js} (99%)
+ create mode 100644 docs/chunk-66MZYDBQ.js
+ delete mode 100644 docs/chunk-GNQKSITV.js
+ rename docs/{main-FKT5TFX6.js => main-T2GDPJTR.js} (98%)
+ delete mode 100644 docs/styles-6G2EODFY.css
+ create mode 100644 docs/styles-UVTELNMH.css
+Friday, June 28, 2024 12:09:59 PM
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Current branch master is up to date.
+Friday, June 28, 2024 12:10:00 PM
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 91.54 KiB | 2.41 MiB/s, done.
+Total 8 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: GitHub found 1 vulnerability on angulareighteen/angulareighteen.github.io's default branch (1 high). To find out more, visit:
+remote:      https://github.com/angulareighteen/angulareighteen.github.io/security/dependabot/1
+remote:
+To github.com:angulareighteen/angulareighteen.github.io.git
+   74eb6a5..1932f83  master -> master
+Friday, June 28, 2024 12:10:01 PM
+
+PS C:\Users\kushal\src\angular\angulareighteen> cd "C:\Users\kushal\src\angular\angulareighteen\"; date; git fetch; date; git status; date; yarn run ng update; date; yarn run ng build; date; yarn run ng test; date; yarn run ng update @angular/core @angular/cli @angular/cdk @angular/material; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date;
+
+Friday, June 28, 2024 12:10:18 PM
+Friday, June 28, 2024 12:10:18 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Friday, June 28, 2024 12:10:18 PM
+yarn run v1.22.21
+$ ng update
+Using package manager: yarn
+Collecting installed dependencies...
+Found 27 dependencies.
+    We analyzed your package.json and everything seems to be in order. Good work!
+Done in 1.65s.
+Friday, June 28, 2024 12:10:20 PM
+yarn run v1.22.21
+$ ng build
+Initial chunk files   | Names         |  Raw size | Estimated transfer size
+chunk-66MZYDBQ.js     | -             | 109.53 kB |                32.35 kB
+main-T2GDPJTR.js      | main          |  98.10 kB |                24.90 kB
+styles-UVTELNMH.css   | styles        |  72.32 kB |                 7.08 kB
+polyfills-6EAL64PA.js | polyfills     |  34.23 kB |                11.13 kB
+
+                      | Initial total | 314.18 kB |                75.47 kB
+
+Lazy chunk files      | Names         |  Raw size | Estimated transfer size
+chunk-6447YNYI.js     | browser       |  67.21 kB |                17.46 kB
+
+Output location: C:\Users\kushal\src\angular\angulareighteen\docs
+
+Application bundle generation complete. [1.986 seconds]
+
+Done in 2.77s.
+Friday, June 28, 2024 12:10:23 PM
+yarn run v1.22.21
+$ ng test
+✔ Browser application bundle generation complete.
+28 06 2024 12:10:26.855:INFO [karma-server]: Karma v6.4.3 server started at http://localhost:9876/
+28 06 2024 12:10:26.857:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
+28 06 2024 12:10:26.864:INFO [launcher]: Starting browser Firefox
+28 06 2024 12:10:27.717:INFO [Firefox 128.0 (Windows 10)]: Connected on socket Wv8jQe4TiKS5glldAAAB with id 23015477
+Firefox 128.0 (Windows 10): Executed 3 of 3 SUCCESS (0.001 secs / 0.062 secs)
+TOTAL: 3 SUCCESS
+Done in 4.78s.
+Friday, June 28, 2024 12:10:28 PM
+yarn run v1.22.21
+$ ng update @angular/core @angular/cli @angular/cdk @angular/material
+Using package manager: yarn
+Collecting installed dependencies...
+Found 27 dependencies.
+Fetching dependency metadata from registry...
+Package '@angular/core' is already up to date.
+Package '@angular/cli' is already up to date.
+Package '@angular/cdk' is already up to date.
+Package '@angular/material' is already up to date.
+Done in 1.79s.
+Friday, June 28, 2024 12:10:30 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Friday, June 28, 2024 12:10:30 PM
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Friday, June 28, 2024 12:10:31 PM
+Everything up-to-date
+Friday, June 28, 2024 12:10:31 PM
+
+PS C:\Users\kushal\src\angular\angulareighteen> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
