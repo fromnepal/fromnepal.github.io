@@ -8,3 +8,153 @@ Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_
 This message is shown once a day. To disable it please create the
 /home/kushal/.hushlogin file.
 kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+[sudo] password for kushal:
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:5 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1568 kB]
+Hit:6 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1776 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1091 kB]
+Fetched 4692 kB in 1s (3364 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+2 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+real    0m7.664s
+user    0m0.001s
+sys     0m0.022s
+Listing... Done
+libnetplan0/jammy-updates,jammy-security 0.106.1-7ubuntu0.22.04.4 amd64 [upgradable from: 0.106.1-7ubuntu0.22.04.3]
+netplan.io/jammy-updates,jammy-security 0.106.1-7ubuntu0.22.04.4 amd64 [upgradable from: 0.106.1-7ubuntu0.22.04.3]
+
+real    0m0.138s
+user    0m0.126s
+sys     0m0.011s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
+  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
+  libavfilter7
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+The following packages will be upgraded:
+  libnetplan0 netplan.io
+2 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+2 standard LTS security updates
+Need to get 217 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 netplan.io amd64 0.106.1-7ubuntu0.22.04.4 [106 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnetplan0 amd64 0.106.1-7ubuntu0.22.04.4 [111 kB]
+Fetched 217 kB in 1s (341 kB/s)
+(Reading database ... 62497 files and directories currently installed.)
+Preparing to unpack .../netplan.io_0.106.1-7ubuntu0.22.04.4_amd64.deb ...
+Unpacking netplan.io (0.106.1-7ubuntu0.22.04.4) over (0.106.1-7ubuntu0.22.04.3) ...
+Preparing to unpack .../libnetplan0_0.106.1-7ubuntu0.22.04.4_amd64.deb ...
+Unpacking libnetplan0:amd64 (0.106.1-7ubuntu0.22.04.4) over (0.106.1-7ubuntu0.22.04.3) ...
+Setting up libnetplan0:amd64 (0.106.1-7ubuntu0.22.04.4) ...
+Setting up netplan.io (0.106.1-7ubuntu0.22.04.4) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for dbus (1.12.20-2ubuntu4.1) ...
+
+real    0m1.651s
+user    0m0.000s
+sys     0m0.006s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.076s
+user    0m0.000s
+sys     0m0.065s
+remote: Enumerating objects: 73, done.
+remote: Counting objects: 100% (42/42), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 73 (delta 39), reused 39 (delta 39), pack-reused 31
+Unpacking objects: 100% (73/73), 8.76 KiB | 236.00 KiB/s, done.
+From https://github.com/LadybirdBrowser/ladybird
+   cf0912c700..8c09b9a2e9  master     -> origin/master
+
+real    0m0.562s
+user    0m0.055s
+sys     0m0.009s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Updating cf0912c700..8c09b9a2e9
+Fast-forward
+ CMakePresets.json                                            | 27 +++++++++++++++++++--------
+ Meta/CMake/vcpkg/base-triplets/arm64-osx.cmake               |  4 ++++
+ Meta/CMake/vcpkg/base-triplets/x64-linux.cmake               |  3 +++
+ Meta/CMake/vcpkg/base-triplets/x64-osx.cmake                 |  4 ++++
+ Meta/CMake/vcpkg/debug-triplets/arm64-osx.cmake              |  2 ++
+ Meta/CMake/vcpkg/debug-triplets/debug.cmake                  |  3 +++
+ Meta/CMake/vcpkg/debug-triplets/x64-linux.cmake              |  2 ++
+ Meta/CMake/vcpkg/debug-triplets/x64-osx.cmake                |  2 ++
+ Meta/CMake/vcpkg/release-triplets/arm64-osx.cmake            |  2 ++
+ Meta/CMake/vcpkg/release-triplets/release.cmake              |  2 ++
+ Meta/CMake/vcpkg/release-triplets/x64-linux.cmake            |  2 ++
+ Meta/CMake/vcpkg/release-triplets/x64-osx.cmake              |  2 ++
+ Meta/CMake/vcpkg/sanitizer-triplets/arm64-osx.cmake          | 11 ++---------
+ Meta/CMake/vcpkg/sanitizer-triplets/sanitizer.cmake          |  4 ++++
+ Meta/CMake/vcpkg/sanitizer-triplets/x64-linux.cmake          | 10 ++--------
+ Meta/CMake/vcpkg/sanitizer-triplets/x64-osx.cmake            | 11 ++---------
+ Meta/ladybird.sh                                             |  7 +++++++
+ Userland/Libraries/LibWeb/Painting/Command.h                 |  4 ++--
+ Userland/Libraries/LibWeb/Painting/DisplayListPlayerCPU.cpp  | 14 ++++++++++----
+ Userland/Libraries/LibWeb/Painting/DisplayListPlayerGPU.cpp  |  4 ++--
+ Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.cpp | 41 +++++++++++++++++++++++++++--------------
+ Userland/Libraries/LibWeb/Painting/DisplayListRecorder.cpp   |  6 +++---
+ Userland/Libraries/LibWeb/Painting/DisplayListRecorder.h     |  2 +-
+ Userland/Libraries/LibWeb/Painting/ShadowPainting.cpp        | 12 +-----------
+ 24 files changed, 110 insertions(+), 71 deletions(-)
+ create mode 100644 Meta/CMake/vcpkg/base-triplets/arm64-osx.cmake
+ create mode 100644 Meta/CMake/vcpkg/base-triplets/x64-linux.cmake
+ create mode 100644 Meta/CMake/vcpkg/base-triplets/x64-osx.cmake
+ create mode 100644 Meta/CMake/vcpkg/debug-triplets/arm64-osx.cmake
+ create mode 100644 Meta/CMake/vcpkg/debug-triplets/debug.cmake
+ create mode 100644 Meta/CMake/vcpkg/debug-triplets/x64-linux.cmake
+ create mode 100644 Meta/CMake/vcpkg/debug-triplets/x64-osx.cmake
+ create mode 100644 Meta/CMake/vcpkg/release-triplets/arm64-osx.cmake
+ create mode 100644 Meta/CMake/vcpkg/release-triplets/release.cmake
+ create mode 100644 Meta/CMake/vcpkg/release-triplets/x64-linux.cmake
+ create mode 100644 Meta/CMake/vcpkg/release-triplets/x64-osx.cmake
+ create mode 100644 Meta/CMake/vcpkg/sanitizer-triplets/sanitizer.cmake
+
+real    0m0.147s
+user    0m0.044s
+sys     0m0.000s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.016s
+user    0m0.017s
+sys     0m0.000s
+Sat Jun 29 09:02:54 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+[186/186] Linking CXX executable bin/Ladybird
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
+
+real    11m35.536s
+user    14m10.403s
+sys     0m36.169s
+Sat Jun 29 09:14:29 EDT 2024
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
