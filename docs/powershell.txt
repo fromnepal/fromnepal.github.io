@@ -9,174 +9,27 @@ This message is shown once a day. To disable it please create the
 /home/kushal/.hushlogin file.
 kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
 [sudo] password for kushal:
-Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
-Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
-Hit:3 http://archive.ubuntu.com/ubuntu jammy InRelease
-Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
-Get:5 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1568 kB]
-Hit:6 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
-Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1776 kB]
-Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1091 kB]
-Fetched 4692 kB in 1s (3364 kB/s)
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-2 packages can be upgraded. Run 'apt list --upgradable' to see them.
-
-real    0m7.664s
-user    0m0.001s
-sys     0m0.022s
-Listing... Done
-libnetplan0/jammy-updates,jammy-security 0.106.1-7ubuntu0.22.04.4 amd64 [upgradable from: 0.106.1-7ubuntu0.22.04.3]
-netplan.io/jammy-updates,jammy-security 0.106.1-7ubuntu0.22.04.4 amd64 [upgradable from: 0.106.1-7ubuntu0.22.04.3]
-
-real    0m0.138s
-user    0m0.126s
-sys     0m0.011s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
-  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
-  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
-  libavfilter7
-Learn more about Ubuntu Pro at https://ubuntu.com/pro
-The following packages will be upgraded:
-  libnetplan0 netplan.io
-2 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-2 standard LTS security updates
-Need to get 217 kB of archives.
-After this operation, 0 B of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 netplan.io amd64 0.106.1-7ubuntu0.22.04.4 [106 kB]
-Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnetplan0 amd64 0.106.1-7ubuntu0.22.04.4 [111 kB]
-Fetched 217 kB in 1s (341 kB/s)
-(Reading database ... 62497 files and directories currently installed.)
-Preparing to unpack .../netplan.io_0.106.1-7ubuntu0.22.04.4_amd64.deb ...
-Unpacking netplan.io (0.106.1-7ubuntu0.22.04.4) over (0.106.1-7ubuntu0.22.04.3) ...
-Preparing to unpack .../libnetplan0_0.106.1-7ubuntu0.22.04.4_amd64.deb ...
-Unpacking libnetplan0:amd64 (0.106.1-7ubuntu0.22.04.4) over (0.106.1-7ubuntu0.22.04.3) ...
-Setting up libnetplan0:amd64 (0.106.1-7ubuntu0.22.04.4) ...
-Setting up netplan.io (0.106.1-7ubuntu0.22.04.4) ...
-Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
-Processing triggers for man-db (2.10.2-1) ...
-Processing triggers for dbus (1.12.20-2ubuntu4.1) ...
-
-real    0m1.651s
-user    0m0.000s
-sys     0m0.006s
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-real    0m0.076s
-user    0m0.000s
-sys     0m0.065s
-remote: Enumerating objects: 73, done.
-remote: Counting objects: 100% (42/42), done.
-remote: Compressing objects: 100% (3/3), done.
-remote: Total 73 (delta 39), reused 39 (delta 39), pack-reused 31
-Unpacking objects: 100% (73/73), 8.76 KiB | 236.00 KiB/s, done.
-From https://github.com/LadybirdBrowser/ladybird
-   cf0912c700..8c09b9a2e9  master     -> origin/master
-
-real    0m0.562s
-user    0m0.055s
-sys     0m0.009s
-From https://github.com/LadybirdBrowser/ladybird
- * branch                  master     -> FETCH_HEAD
-Updating cf0912c700..8c09b9a2e9
-Fast-forward
- CMakePresets.json                                            | 27 +++++++++++++++++++--------
- Meta/CMake/vcpkg/base-triplets/arm64-osx.cmake               |  4 ++++
- Meta/CMake/vcpkg/base-triplets/x64-linux.cmake               |  3 +++
- Meta/CMake/vcpkg/base-triplets/x64-osx.cmake                 |  4 ++++
- Meta/CMake/vcpkg/debug-triplets/arm64-osx.cmake              |  2 ++
- Meta/CMake/vcpkg/debug-triplets/debug.cmake                  |  3 +++
- Meta/CMake/vcpkg/debug-triplets/x64-linux.cmake              |  2 ++
- Meta/CMake/vcpkg/debug-triplets/x64-osx.cmake                |  2 ++
- Meta/CMake/vcpkg/release-triplets/arm64-osx.cmake            |  2 ++
- Meta/CMake/vcpkg/release-triplets/release.cmake              |  2 ++
- Meta/CMake/vcpkg/release-triplets/x64-linux.cmake            |  2 ++
- Meta/CMake/vcpkg/release-triplets/x64-osx.cmake              |  2 ++
- Meta/CMake/vcpkg/sanitizer-triplets/arm64-osx.cmake          | 11 ++---------
- Meta/CMake/vcpkg/sanitizer-triplets/sanitizer.cmake          |  4 ++++
- Meta/CMake/vcpkg/sanitizer-triplets/x64-linux.cmake          | 10 ++--------
- Meta/CMake/vcpkg/sanitizer-triplets/x64-osx.cmake            | 11 ++---------
- Meta/ladybird.sh                                             |  7 +++++++
- Userland/Libraries/LibWeb/Painting/Command.h                 |  4 ++--
- Userland/Libraries/LibWeb/Painting/DisplayListPlayerCPU.cpp  | 14 ++++++++++----
- Userland/Libraries/LibWeb/Painting/DisplayListPlayerGPU.cpp  |  4 ++--
- Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.cpp | 41 +++++++++++++++++++++++++++--------------
- Userland/Libraries/LibWeb/Painting/DisplayListRecorder.cpp   |  6 +++---
- Userland/Libraries/LibWeb/Painting/DisplayListRecorder.h     |  2 +-
- Userland/Libraries/LibWeb/Painting/ShadowPainting.cpp        | 12 +-----------
- 24 files changed, 110 insertions(+), 71 deletions(-)
- create mode 100644 Meta/CMake/vcpkg/base-triplets/arm64-osx.cmake
- create mode 100644 Meta/CMake/vcpkg/base-triplets/x64-linux.cmake
- create mode 100644 Meta/CMake/vcpkg/base-triplets/x64-osx.cmake
- create mode 100644 Meta/CMake/vcpkg/debug-triplets/arm64-osx.cmake
- create mode 100644 Meta/CMake/vcpkg/debug-triplets/debug.cmake
- create mode 100644 Meta/CMake/vcpkg/debug-triplets/x64-linux.cmake
- create mode 100644 Meta/CMake/vcpkg/debug-triplets/x64-osx.cmake
- create mode 100644 Meta/CMake/vcpkg/release-triplets/arm64-osx.cmake
- create mode 100644 Meta/CMake/vcpkg/release-triplets/release.cmake
- create mode 100644 Meta/CMake/vcpkg/release-triplets/x64-linux.cmake
- create mode 100644 Meta/CMake/vcpkg/release-triplets/x64-osx.cmake
- create mode 100644 Meta/CMake/vcpkg/sanitizer-triplets/sanitizer.cmake
-
-real    0m0.147s
-user    0m0.044s
-sys     0m0.000s
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-real    0m0.016s
-user    0m0.017s
-sys     0m0.000s
-Sat Jun 29 09:02:54 EDT 2024
-~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
-ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
-[0/2] Re-checking globbed directories...
-[186/186] Linking CXX executable bin/Ladybird
-QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
-qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
-
-real    11m35.536s
-user    14m10.403s
-sys     0m36.169s
-Sat Jun 29 09:14:29 EDT 2024
-kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
 Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
-Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
-Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
 Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
-Get:5 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
-Fetched 129 kB in 1s (219 kB/s)
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1776 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1091 kB]
+Fetched 3124 kB in 1s (3410 kB/s)
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
 All packages are up to date.
 
-real    0m1.398s
-user    0m0.007s
-sys     0m0.000s
+real    0m6.610s
+user    0m0.001s
+sys     0m0.055s
 Listing... Done
 
-real    0m0.149s
-user    0m0.138s
-sys     0m0.010s
+real    0m0.132s
+user    0m0.123s
+sys     0m0.000s
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
@@ -188,9 +41,9 @@ Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
 Learn more about Ubuntu Pro at https://ubuntu.com/pro
 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 
-real    0m0.301s
-user    0m0.004s
-sys     0m0.000s
+real    0m0.313s
+user    0m0.001s
+sys     0m0.003s
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -200,20 +53,56 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
-real    0m0.155s
-user    0m0.036s
-sys     0m0.000s
+real    0m0.062s
+user    0m0.011s
+sys     0m0.051s
+remote: Enumerating objects: 114, done.
+remote: Counting objects: 100% (114/114), done.
+remote: Compressing objects: 100% (23/23), done.
+remote: Total 70 (delta 51), reused 61 (delta 46), pack-reused 0
+Unpacking objects: 100% (70/70), 10.93 KiB | 219.00 KiB/s, done.
+From https://github.com/LadybirdBrowser/ladybird
+   8c09b9a2e9..b95c05b611  master     -> origin/master
 
-real    0m0.235s
-user    0m0.031s
-sys     0m0.001s
+real    0m0.443s
+user    0m0.041s
+sys     0m0.025s
 From https://github.com/LadybirdBrowser/ladybird
  * branch                  master     -> FETCH_HEAD
-Already up to date.
+Updating 8c09b9a2e9..b95c05b611
+Fast-forward
+ .github/CODEOWNERS                                                  | 12 ------------
+ Ladybird/Qt/BrowserWindow.cpp                                       |  6 ++++--
+ Meta/gn/secondary/Userland/Libraries/LibGfx/BUILD.gn                |  2 +-
+ Tests/LibWeb/Text/expected/HTML/HTMLTrackElement-kind-attribute.txt |  7 +++++++
+ Tests/LibWeb/Text/input/HTML/HTMLTrackElement-kind-attribute.html   | 20 ++++++++++++++++++++
+ Userland/Libraries/LibGfx/CMakeLists.txt                            |  1 -
+ Userland/Libraries/LibGfx/Font/FontDatabase.cpp                     | 46 ++++++++++++++++++----------------------------
+ Userland/Libraries/LibGfx/Font/FontDatabase.h                       |  2 --
+ Userland/Libraries/LibGfx/Font/OpenType/Font.h                      |  4 ++--
+ Userland/Libraries/LibGfx/Font/ScaledFont.cpp                       |  2 +-
+ Userland/Libraries/LibGfx/Font/ScaledFont.h                         |  6 +++---
+ Userland/Libraries/LibGfx/Font/Typeface.cpp                         | 46 +++++++++++++++++-----------------------------
+ Userland/Libraries/LibGfx/Font/Typeface.h                           | 72 +++++++++++++++++++++++++++++++++++++++++++++++++-----------------------
+ Userland/Libraries/LibGfx/Font/VectorFont.cpp                       | 31 -------------------------------
+ Userland/Libraries/LibGfx/Font/VectorFont.h                         | 72 ------------------------------------------------------------------------
+ Userland/Libraries/LibGfx/Font/WOFF/Font.h                          |  8 ++++----
+ Userland/Libraries/LibGfx/Font/WOFF2/Font.h                         |  8 ++++----
+ Userland/Libraries/LibWeb/CSS/FontFace.cpp                          |  6 +++---
+ Userland/Libraries/LibWeb/CSS/FontFace.h                            |  6 +++---
+ Userland/Libraries/LibWeb/CSS/StyleComputer.cpp                     |  7 +++----
+ Userland/Libraries/LibWeb/CSS/StyleComputer.h                       |  8 ++++----
+ Userland/Libraries/LibWeb/HTML/AttributeNames.h                     |  1 +
+ Userland/Libraries/LibWeb/HTML/HTMLTrackElement.idl                 | 12 +++++++++++-
+ 23 files changed, 155 insertions(+), 230 deletions(-)
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/HTMLTrackElement-kind-attribute.txt
+ create mode 100644 Tests/LibWeb/Text/input/HTML/HTMLTrackElement-kind-attribute.html
+ delete mode 100644 Userland/Libraries/LibGfx/Font/VectorFont.cpp
+ delete mode 100644 Userland/Libraries/LibGfx/Font/VectorFont.h
 
-real    0m0.134s
-user    0m0.014s
-sys     0m0.015s
+real    0m0.228s
+user    0m0.023s
+sys     0m0.028s
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -223,51 +112,40 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
-real    0m0.012s
-user    0m0.000s
-sys     0m0.006s
-Sat Jun 29 09:14:51 EDT 2024
+real    0m0.017s
+user    0m0.010s
+sys     0m0.009s
+Sun Jun 30 07:46:18 EDT 2024
 ~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
 ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
 [0/2] Re-checking globbed directories...
-ninja: no work to do.
+[1/2] Re-running CMake...
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/clang++-17
+All requested packages are currently installed.
+Total install time: 220 ns
+-- Running vcpkg install - done
+-- Found the following ICU libraries:
+--   data (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicudata.a
+--   i18n (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicui18n.a
+--   uc (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicuuc.a
+-- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+-- Could NOT find WrapVulkanHeaders (missing: Vulkan_INCLUDE_DIR)
+-- Configuring done (55.7s)
+-- Generating done (0.4s)
+-- Build files have been written to: /home/kushal/src/ladybird/Build/ladybird
+[0/2] Re-checking globbed directories...
+[995/995] Linking CXX executable bin/Ladybird
 QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
 qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
-779.760 WebContent(5416): ImageDecoderClient: Failed to decode image with ID 0: Decoding failed: Could not find suitable image decoder plugin for data
-779.960 WebContent(5416): FIXME: Unimplemented IDL interface: 'Window.reportError'
-779.960 WebContent(5416): FIXME: Unimplemented IDL interface: 'Window.reportError'
-779.960 WebContent(5416): FIXME: Unimplemented IDL interface: 'Window.reportError'
-780.170 WebContent(5416): ResourceLoader: Failed load of: "https://secretimage.github.io/favicon.ico", Error: Load failed: 404, Duration: 100ms
-780.170 WebContent(5416): ImageDecoderClient: Failed to decode image with ID 1: Decoding failed: Could not find suitable image decoder plugin for data
-782.590 WebContent(5416): ResourceLoader: Failed load of: "https://nice.runasp.net/Analytics/GetAnalyticsData?key=publicchat", Error: Load failed: 500, Duration: 2610ms
-782.590 WebContent(5416): (js error) "Error fetching analytics data:" [TypeError] Request with 'cors' response tainting failed CORS check
-783.190 WebContent(5416): ResourceLoader: Failed load of: "https://nice.runasp.net/Analytics/SaveAnalytics?key=visit2024-06-29-09-15-29&data=%7B%22timestamp%22%3A%222024-06-29-09-15-29%22%2C%22userAgent%22%3A%22Mozilla%2F5.0%20(Linux%3B%20x86_64)%20Ladybird%2F1.0%22%7D", Error: Load failed: 500, Duration: 480ms
-783.190 WebContent(5416): (js error) "Error saving visit data:" [TypeError] Request with 'cors' response tainting failed CORS check
-786.400 WebContent(5416): ResourceLoader: Failed load of: "https://nice.runasp.net/Analytics/SaveAnalytics?key=attemptedPassword2024-06-29-09-15-35&data=o", Error: Load failed: 500, Duration: 470ms
-786.400 WebContent(5416): (js error) "Error saving data:" [TypeError] Request with 'cors' response tainting failed CORS check
-787.010 WebContent(5416): ResourceLoader: Failed load of: "https://nice.runasp.net/Analytics/SaveAnalytics?key=attemptedPassword2024-06-29-09-15-36&data=op", Error: Load failed: 500, Duration: 490ms
-787.010 WebContent(5416): (js error) "Error saving data:" [TypeError] Request with 'cors' response tainting failed CORS check
-787.640 WebContent(5416): ResourceLoader: Failed load of: "https://nice.runasp.net/Analytics/SaveAnalytics?key=attemptedPassword2024-06-29-09-15-36&data=ope", Error: Load failed: 500, Duration: 530ms
-787.640 WebContent(5416): (js error) "Error saving data:" [TypeError] Request with 'cors' response tainting failed CORS check
-788.100 WebContent(5416): ResourceLoader: Failed load of: "https://nice.runasp.net/Analytics/SaveAnalytics?key=attemptedPassword2024-06-29-09-15-36&data=open", Error: Load failed: 500, Duration: 880ms
-788.100 WebContent(5416): (js error) "Error saving data:" [TypeError] Request with 'cors' response tainting failed CORS check
-789.990 WebContent(5416): ResourceLoader: Failed load of: "https://nice.runasp.net/Analytics/SaveAnalytics?key=attemptedPassword2024-06-29-09-15-39&data=opens", Error: Load failed: 500, Duration: 460ms
-789.990 WebContent(5416): (js error) "Error saving data:" [TypeError] Request with 'cors' response tainting failed CORS check
-790.630 WebContent(5416): ResourceLoader: Failed load of: "https://nice.runasp.net/Analytics/SaveAnalytics?key=attemptedPassword2024-06-29-09-15-39&data=opense", Error: Load failed: 500, Duration: 520ms
-790.630 WebContent(5416): (js error) "Error saving data:" [TypeError] Request with 'cors' response tainting failed CORS check
-791.090 WebContent(5416): ResourceLoader: Failed load of: "https://nice.runasp.net/Analytics/SaveAnalytics?key=attemptedPassword2024-06-29-09-15-39&data=openses", Error: Load failed: 500, Duration: 880ms
-791.090 WebContent(5416): (js error) "Error saving data:" [TypeError] Request with 'cors' response tainting failed CORS check
-791.640 WebContent(5416): ResourceLoader: Failed load of: "https://nice.runasp.net/Analytics/SaveAnalytics?key=attemptedPassword2024-06-29-09-15-40&data=opensesa", Error: Load failed: 500, Duration: 440ms
-791.640 WebContent(5416): (js error) "Error saving data:" [TypeError] Request with 'cors' response tainting failed CORS check
-792.200 WebContent(5416): ResourceLoader: Failed load of: "https://nice.runasp.net/Analytics/SaveAnalytics?key=attemptedPassword2024-06-29-09-15-41&data=opensesam", Error: Load failed: 500, Duration: 450ms
-792.200 WebContent(5416): (js error) "Error saving data:" [TypeError] Request with 'cors' response tainting failed CORS check
-799.660 WebContent(5416): ResourceLoader: Failed load of: "https://nice.runasp.net/Analytics/SaveAnalytics?key=attemptedPassword2024-06-29-09-15-48&data=opensesame", Error: Load failed: 500, Duration: 470ms
-799.660 WebContent(5416): (js error) "Error saving data:" [TypeError] Request with 'cors' response tainting failed CORS check
-The Wayland connection broke. Did the Wayland compositor die?
-9033.050 WebContent(5416): ConnectionFromClient(0x0000555859af6a50) (id=1) had an error (IPC::transfer_message: Disconnected from peer), disconnecting.
-
-real    138m11.312s
-user    6m57.900s
-sys     0m14.275s
-Sat Jun 29 11:33:02 EDT 2024
-kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+637.641 WebContent(6490): ResourceLoader: Failed load of: "https://fromnepal.github.io/vite.svg", Error: Load failed: 404, Duration: 50ms
+637.711 WebContent(6490): No property (from 4 properties) matched Token: Ident: auto
+637.711 WebContent(6490):     padding-top
+637.711 WebContent(6490):     padding-right
+637.711 WebContent(6490):     padding-bottom
+637.711 WebContent(6490):     padding-left
+637.801 WebContent(6490): ResourceLoader: Failed load of: "https://fromnepal.github.io/favicon.ico", Error: Load failed: 404, Duration: 90ms
+637.801 WebContent(6490): ImageDecoderClient: Failed to decode image with ID 0: Decoding failed: Could not find suitable image decoder plugin for data
+641.241 WebContent(6490): (js log) "Visit data saved:" ""Message received at 6/30/2024 11:56:33 AM from IP: 70.104.195.206.""
+641.741 WebContent(6490): (js log) "Verification successful, retrieved data:" Object{ "id": 271, "dataKey": "visit2024-06-30-07-56-38", "data": "{"timestamp":"2024-06-30-07-56-38","userAgent":"Mozilla/5.0 (Linux; x86_64) Ladybird/1.0"}", "referer": "https://fromnepal.github.io/", "ipAddress": "70.104.195.206", "createdAt": "2024-06-30T11:56:33.771725Z" }
