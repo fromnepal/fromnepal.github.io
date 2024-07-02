@@ -1,35 +1,33 @@
-Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/pro
-
-
-This message is shown once a day. To disable it please create the
-/home/kushal/.hushlogin file.
 kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
 [sudo] password for kushal:
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
 Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
 Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
 Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
-Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
-Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
-Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1776 kB]
-Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1091 kB]
-Fetched 3124 kB in 1s (3410 kB/s)
+Get:5 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1579 kB]
+Hit:6 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1787 kB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [268 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [2021 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1093 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [345 kB]
+Fetched 7350 kB in 2s (4709 kB/s)
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
-All packages are up to date.
+3 packages can be upgraded. Run 'apt list --upgradable' to see them.
 
-real    0m6.610s
-user    0m0.001s
-sys     0m0.055s
+real    0m9.079s
+user    0m0.005s
+sys     0m0.021s
 Listing... Done
+ubuntu-advantage-tools/jammy-updates 32.3.1~22.04 all [upgradable from: 32.3~22.04]
+ubuntu-pro-client-l10n/jammy-updates 32.3.1~22.04 amd64 [upgradable from: 32.3~22.04]
+ubuntu-pro-client/jammy-updates 32.3.1~22.04 amd64 [upgradable from: 32.3~22.04]
 
-real    0m0.132s
-user    0m0.123s
-sys     0m0.000s
+real    0m0.162s
+user    0m0.149s
+sys     0m0.012s
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
@@ -39,11 +37,18 @@ Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
   libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
   libavfilter7
 Learn more about Ubuntu Pro at https://ubuntu.com/pro
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#
+# OpenSSH CVE-2024-6387 has been fixed for 22.04 LTS, 23.10 and 24.04 LTS.
+# RegreSSHion: Possible RCE Due To A Race Condition In Signal Handling.
+# For more details see: https://ubuntu.com/security/notices/USN-6859-1.
+#
+The following packages have been kept back:
+  ubuntu-advantage-tools ubuntu-pro-client ubuntu-pro-client-l10n
+0 upgraded, 0 newly installed, 0 to remove and 3 not upgraded.
 
-real    0m0.313s
+real    0m0.329s
 user    0m0.001s
-sys     0m0.003s
+sys     0m0.004s
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -53,56 +58,30 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
-real    0m0.062s
-user    0m0.011s
-sys     0m0.051s
-remote: Enumerating objects: 114, done.
-remote: Counting objects: 100% (114/114), done.
-remote: Compressing objects: 100% (23/23), done.
-remote: Total 70 (delta 51), reused 61 (delta 46), pack-reused 0
-Unpacking objects: 100% (70/70), 10.93 KiB | 219.00 KiB/s, done.
+real    0m0.082s
+user    0m0.022s
+sys     0m0.067s
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 1), reused 2 (delta 1), pack-reused 0
+Unpacking objects: 100% (6/6), 3.53 KiB | 902.00 KiB/s, done.
 From https://github.com/LadybirdBrowser/ladybird
-   8c09b9a2e9..b95c05b611  master     -> origin/master
+   5f06594bbd..af90978454  master     -> origin/master
 
-real    0m0.443s
-user    0m0.041s
-sys     0m0.025s
+real    0m0.341s
+user    0m0.020s
+sys     0m0.034s
 From https://github.com/LadybirdBrowser/ladybird
  * branch                  master     -> FETCH_HEAD
-Updating 8c09b9a2e9..b95c05b611
+Updating 5f06594bbd..af90978454
 Fast-forward
- .github/CODEOWNERS                                                  | 12 ------------
- Ladybird/Qt/BrowserWindow.cpp                                       |  6 ++++--
- Meta/gn/secondary/Userland/Libraries/LibGfx/BUILD.gn                |  2 +-
- Tests/LibWeb/Text/expected/HTML/HTMLTrackElement-kind-attribute.txt |  7 +++++++
- Tests/LibWeb/Text/input/HTML/HTMLTrackElement-kind-attribute.html   | 20 ++++++++++++++++++++
- Userland/Libraries/LibGfx/CMakeLists.txt                            |  1 -
- Userland/Libraries/LibGfx/Font/FontDatabase.cpp                     | 46 ++++++++++++++++++----------------------------
- Userland/Libraries/LibGfx/Font/FontDatabase.h                       |  2 --
- Userland/Libraries/LibGfx/Font/OpenType/Font.h                      |  4 ++--
- Userland/Libraries/LibGfx/Font/ScaledFont.cpp                       |  2 +-
- Userland/Libraries/LibGfx/Font/ScaledFont.h                         |  6 +++---
- Userland/Libraries/LibGfx/Font/Typeface.cpp                         | 46 +++++++++++++++++-----------------------------
- Userland/Libraries/LibGfx/Font/Typeface.h                           | 72 +++++++++++++++++++++++++++++++++++++++++++++++++-----------------------
- Userland/Libraries/LibGfx/Font/VectorFont.cpp                       | 31 -------------------------------
- Userland/Libraries/LibGfx/Font/VectorFont.h                         | 72 ------------------------------------------------------------------------
- Userland/Libraries/LibGfx/Font/WOFF/Font.h                          |  8 ++++----
- Userland/Libraries/LibGfx/Font/WOFF2/Font.h                         |  8 ++++----
- Userland/Libraries/LibWeb/CSS/FontFace.cpp                          |  6 +++---
- Userland/Libraries/LibWeb/CSS/FontFace.h                            |  6 +++---
- Userland/Libraries/LibWeb/CSS/StyleComputer.cpp                     |  7 +++----
- Userland/Libraries/LibWeb/CSS/StyleComputer.h                       |  8 ++++----
- Userland/Libraries/LibWeb/HTML/AttributeNames.h                     |  1 +
- Userland/Libraries/LibWeb/HTML/HTMLTrackElement.idl                 | 12 +++++++++++-
- 23 files changed, 155 insertions(+), 230 deletions(-)
- create mode 100644 Tests/LibWeb/Text/expected/HTML/HTMLTrackElement-kind-attribute.txt
- create mode 100644 Tests/LibWeb/Text/input/HTML/HTMLTrackElement-kind-attribute.html
- delete mode 100644 Userland/Libraries/LibGfx/Font/VectorFont.cpp
- delete mode 100644 Userland/Libraries/LibGfx/Font/VectorFont.h
+ Ladybird/AppKit/UI/TabController.mm | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
 
-real    0m0.228s
-user    0m0.023s
-sys     0m0.028s
+real    0m0.158s
+user    0m0.030s
+sys     0m0.029s
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -112,44 +91,440 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
-real    0m0.017s
-user    0m0.010s
-sys     0m0.009s
-Sun Jun 30 07:46:18 EDT 2024
+real    0m0.019s
+user    0m0.000s
+sys     0m0.014s
+Tue Jul  2 13:25:15 EDT 2024
 ~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
 ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
 [0/2] Re-checking globbed directories...
-[1/2] Re-running CMake...
--- Running vcpkg install
-Detecting compiler hash for triplet x64-linux...
-Compiler found: /usr/bin/clang++-17
-All requested packages are currently installed.
-Total install time: 220 ns
--- Running vcpkg install - done
--- Found the following ICU libraries:
---   data (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicudata.a
---   i18n (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicui18n.a
---   uc (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicuuc.a
--- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
--- Could NOT find WrapVulkanHeaders (missing: Vulkan_INCLUDE_DIR)
--- Configuring done (55.7s)
--- Generating done (0.4s)
--- Build files have been written to: /home/kushal/src/ladybird/Build/ladybird
-[0/2] Re-checking globbed directories...
-[995/995] Linking CXX executable bin/Ladybird
+ninja: no work to do.
 QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
 qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
-637.641 WebContent(6490): ResourceLoader: Failed load of: "https://fromnepal.github.io/vite.svg", Error: Load failed: 404, Duration: 50ms
-637.711 WebContent(6490): No property (from 4 properties) matched Token: Ident: auto
-637.711 WebContent(6490):     padding-top
-637.711 WebContent(6490):     padding-right
-637.711 WebContent(6490):     padding-bottom
-637.711 WebContent(6490):     padding-left
-637.801 WebContent(6490): ResourceLoader: Failed load of: "https://fromnepal.github.io/favicon.ico", Error: Load failed: 404, Duration: 90ms
-637.801 WebContent(6490): ImageDecoderClient: Failed to decode image with ID 0: Decoding failed: Could not find suitable image decoder plugin for data
-641.241 WebContent(6490): (js log) "Visit data saved:" ""Message received at 6/30/2024 11:56:33 AM from IP: 70.104.195.206.""
-641.741 WebContent(6490): (js log) "Verification successful, retrieved data:" Object{ "id": 271, "dataKey": "visit2024-06-30-07-56-38", "data": "{"timestamp":"2024-06-30-07-56-38","userAgent":"Mozilla/5.0 (Linux; x86_64) Ladybird/1.0"}", "referer": "https://fromnepal.github.io/", "ipAddress": "70.104.195.206", "createdAt": "2024-06-30T11:56:33.771725Z" }
-683.531 WebContent(7798): ResourceLoader: Failed load of: "https://fromnepal.github.io/favicon.ico", Error: Load failed: 404, Duration: 90ms
-683.531 WebContent(7798): ImageDecoderClient: Failed to decode image with ID 0: Decoding failed: Could not find suitable image decoder plugin for data
-730.921 WebContent(8005): ResourceLoader: Failed load of: "https://fromnepal.github.io/favicon.ico", Error: Load failed: 404, Duration: 21ms
-730.921 WebContent(8005): ImageDecoderClient: Failed to decode image with ID 0: Decoding failed: Could not find suitable image decoder plugin for data
+33.161 WebContent(1028): ResourceLoader: Failed load of: "https://fromnepal.github.io/vite.svg", Error: Load failed: 404, Duration: 70ms
+33.231 WebContent(1028): No property (from 4 properties) matched Token: Ident: auto
+33.231 WebContent(1028):     padding-top
+33.231 WebContent(1028):     padding-right
+33.231 WebContent(1028):     padding-bottom
+33.231 WebContent(1028):     padding-left
+34.491 WebContent(1028): (js log) "Visit data saved:" ""Message received at 7/2/2024 5:25:33 PM from IP: 70.104.195.206.""
+35.101 WebContent(1028): (js log) "Verification successful, retrieved data:" Object{ "id": 278, "dataKey": "visit2024-07-02-13-25-32", "data": "{"timestamp":"2024-07-02-13-25-32","userAgent":"Mozilla/5.0 (Linux; x86_64) Ladybird/1.0"}", "referer": "https://fromnepal.github.io/", "ipAddress": "70.104.195.206", "createdAt": "2024-07-02T17:25:33.019538Z" }
+67.351 WebContent(1028): Unhandled JavaScript exception (in promise): [ReferenceError] 'TextDecoderStream' is not defined
+67.351 WebContent(1028):     at https://asd.runasp.net/_framework/blazor.web.js:1:175227
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+91.691 WebContent(1028): Unhandled JavaScript exception (in promise): [ReferenceError] 'TextDecoderStream' is not defined
+91.691 WebContent(1028):     at https://asd.runasp.net/_framework/blazor.web.js:1:175227
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+97.561 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+97.561 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+100.141 WebContent(1028): (js error) "MONO_WASM: instantiate_wasm_module() failed" [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+100.141 WebContent(1028): (js error) "MONO_WASM: Error: Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features\n    at Error\n    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)\n    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488\n    at <unknown>\n    at <unknown>\n    at <unknown>\n"
+100.141 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+100.141 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+100.141 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+100.141 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+100.141 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+100.141 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+100.141 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+100.141 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+100.141 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+100.141 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+100.141 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+100.141 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+100.141 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+100.141 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+100.141 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+100.141 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+100.261 WebContent(1028): (js info) "[2024-07-02T17:26:39.835Z] Information: Normalizing '_blazor' to 'https://asd.runasp.net/_blazor'."
+100.371 WebContent(1028): (js error) "Error in mono_download_assets: Error: Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features"
+100.371 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+100.371 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+101.091 WebContent(1028): (js info) "[2024-07-02T17:26:40.681Z] Information: WebSocket connected to wss://asd.runasp.net/_blazor?id=JBUH2blS-XNgUbgQx4itNQ."
+106.621 RequestServer(993): TLS Socket read failed, error: recv: Connection reset by peer (errno=104)
+106.621 WebContent(1028): (js info) "[2024-07-02T17:26:46.201Z] Information: Connection disconnected."
+106.621 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Invocation canceled due to the underlying connection being closed.
+106.621 WebContent(1028):     at Error
+    at _connectionClosed (https://asd.runasp.net/_framework/blazor.web.js:1:64019)
+    at https://asd.runasp.net/_framework/blazor.web.js:1:54030
+    at _stopConnection (https://asd.runasp.net/_framework/blazor.web.js:1:93869)
+    at https://asd.runasp.net/_framework/blazor.web.js:1:91562
+    at _close (https://asd.runasp.net/_framework/blazor.web.js:1:83297)
+    at https://asd.runasp.net/_framework/blazor.web.js:1:82188
+    at <unknown>
+    at <unknown>
+
+110.341 WebContent(1028): Unhandled JavaScript exception (in promise): [ReferenceError] 'TextDecoderStream' is not defined
+110.341 WebContent(1028):     at https://asd.runasp.net/_framework/blazor.web.js:1:175227
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+136.051 WebContent(1028): Unhandled JavaScript exception (in promise): [ReferenceError] 'TextDecoderStream' is not defined
+136.051 WebContent(1028):     at https://asd.runasp.net/_framework/blazor.web.js:1:175227
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+159.031 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+159.031 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+161.671 WebContent(1028): (js error) "MONO_WASM: instantiate_wasm_module() failed" [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+161.671 WebContent(1028): (js error) "MONO_WASM: Error: Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features\n    at Error\n    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)\n    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488\n    at <unknown>\n    at <unknown>\n    at <unknown>\n"
+161.671 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+161.671 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+161.671 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+161.671 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+161.671 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+161.671 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+161.671 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+161.671 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+161.671 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+161.671 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+161.671 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+161.671 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+161.671 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+161.671 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+161.671 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+161.671 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+164.471 WebContent(1028): (js info) "[2024-07-02T17:27:44.061Z] Information: Normalizing '_blazor' to 'https://asd.runasp.net/_blazor'."
+165.261 WebContent(1028): (js error) "Error in mono_download_assets: Error: Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features"
+165.371 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+165.371 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+166.051 WebContent(1028): (js info) "[2024-07-02T17:27:45.635Z] Information: WebSocket connected to wss://asd.runasp.net/_blazor?id=A6iSUMBkK7W0vg712FDxWw."
+171.611 RequestServer(993): TLS Socket read failed, error: recv: Connection reset by peer (errno=104)
+171.611 WebContent(1028): (js info) "[2024-07-02T17:27:51.194Z] Information: Connection disconnected."
+171.611 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Invocation canceled due to the underlying connection being closed.
+171.611 WebContent(1028):     at Error
+    at _connectionClosed (https://asd.runasp.net/_framework/blazor.web.js:1:64019)
+    at https://asd.runasp.net/_framework/blazor.web.js:1:54030
+    at _stopConnection (https://asd.runasp.net/_framework/blazor.web.js:1:93869)
+    at https://asd.runasp.net/_framework/blazor.web.js:1:91562
+    at _close (https://asd.runasp.net/_framework/blazor.web.js:1:83297)
+    at https://asd.runasp.net/_framework/blazor.web.js:1:82188
+    at <unknown>
+    at <unknown>
+
+175.441 WebContent(1028): Unhandled JavaScript exception (in promise): [ReferenceError] 'TextDecoderStream' is not defined
+175.441 WebContent(1028):     at https://asd.runasp.net/_framework/blazor.web.js:1:175227
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+179.881 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+179.891 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+182.441 WebContent(1028): (js error) "MONO_WASM: instantiate_wasm_module() failed" [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+182.441 WebContent(1028): (js error) "MONO_WASM: Error: Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features\n    at Error\n    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)\n    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488\n    at <unknown>\n    at <unknown>\n    at <unknown>\n"
+182.451 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+182.451 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+182.451 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+182.451 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+182.451 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+182.451 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+182.451 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+182.451 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+182.451 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+182.451 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+182.451 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+182.451 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+182.451 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+182.451 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+182.451 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+182.451 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+182.551 WebContent(1028): (js info) "[2024-07-02T17:28:02.132Z] Information: Normalizing '_blazor' to 'https://asd.runasp.net/_blazor'."
+182.651 WebContent(1028): (js error) "Error in mono_download_assets: Error: Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features"
+182.661 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+182.661 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+183.421 WebContent(1028): (js info) "[2024-07-02T17:28:03.000Z] Information: WebSocket connected to wss://asd.runasp.net/_blazor?id=luYTPzUFOH1XvtFDoDBTOQ."
+188.961 RequestServer(993): TLS Socket read failed, error: recv: Connection reset by peer (errno=104)
+188.961 WebContent(1028): (js info) "[2024-07-02T17:28:08.535Z] Information: Connection disconnected."
+188.961 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Invocation canceled due to the underlying connection being closed.
+188.961 WebContent(1028):     at Error
+    at _connectionClosed (https://asd.runasp.net/_framework/blazor.web.js:1:64019)
+    at https://asd.runasp.net/_framework/blazor.web.js:1:54030
+    at _stopConnection (https://asd.runasp.net/_framework/blazor.web.js:1:93869)
+    at https://asd.runasp.net/_framework/blazor.web.js:1:91562
+    at _close (https://asd.runasp.net/_framework/blazor.web.js:1:83297)
+    at https://asd.runasp.net/_framework/blazor.web.js:1:82188
+    at <unknown>
+    at <unknown>
+
+252.611 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+252.621 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+255.161 WebContent(1028): (js error) "MONO_WASM: instantiate_wasm_module() failed" [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+255.161 WebContent(1028): (js error) "MONO_WASM: Error: Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features\n    at Error\n    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)\n    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488\n    at <unknown>\n    at <unknown>\n    at <unknown>\n"
+255.171 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+255.171 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+255.171 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+255.171 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+255.171 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+255.171 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+255.171 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+255.171 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+255.171 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+255.171 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+255.171 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+255.171 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+255.171 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+255.171 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+255.171 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+255.171 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+255.271 WebContent(1028): (js info) "[2024-07-02T17:29:14.850Z] Information: Normalizing '_blazor' to 'https://asd.runasp.net/_blazor'."
+255.391 WebContent(1028): (js error) "Error in mono_download_assets: Error: Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features"
+255.391 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Assert failed: This browser/engine doesn't support WASM exception handling. Please use a modern version. See also https://aka.ms/dotnet-wasm-features
+255.391 WebContent(1028):     at Error
+    at w (dotnet.runtime.8.0.5.utadgdr8xb.js:3:1249)
+    at dotnet.runtime.8.0.5.utadgdr8xb.js:3:200488
+    at <unknown>
+    at <unknown>
+    at <unknown>
+
+256.101 WebContent(1028): (js info) "[2024-07-02T17:29:15.680Z] Information: WebSocket connected to wss://asd.runasp.net/_blazor?id=T861IEygMb6Mb6MKh18Q4w."
+256.621 WebContent(1028): (js error) "[2024-07-02T17:29:16.211Z] Error: Connection disconnected with error 'Error: Server returned an error on close: Connection closed with an error.'."
+256.631 WebContent(1028): Unhandled JavaScript exception (in promise): [Error] Server returned an error on close: Connection closed with an error.
+256.631 WebContent(1028):     at Error
+    at _processIncomingData (https://asd.runasp.net/_framework/blazor.web.js:1:60706)
+    at https://asd.runasp.net/_framework/blazor.web.js:1:82111
+    at https://asd.runasp.net/_framework/blazor.web.js:1:82111
+    at <unknown>
+    at <unknown>
+
+261.631 RequestServer(993): TLS Socket read failed, error: recv: Connection reset by peer (errno=104)
