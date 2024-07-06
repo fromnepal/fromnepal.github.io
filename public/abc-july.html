@@ -48,14 +48,31 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="message george">
-            <strong>GEORGE STEPHANOPOULOS:</strong> Mr. President, thank you for doing this.
-        </div>
-        <div class="message biden">
-            <strong>PRESIDENT JOE BIDEN:</strong> Thank you for doin' it.
-        </div>
-        <!-- Add more messages here following the same structure -->
+    <div class="container" id="transcript">
+        <!-- Messages will be loaded here -->
     </div>
+    <script>
+        fetch('http://fromnepal.github.io/abc-july.md')
+            .then(response => response.text())
+            .then(data => {
+                const lines = data.split('\\n');
+                const container = document.getElementById('transcript');
+                lines.forEach(line => {
+                    if (line.trim()) {
+                        const messageDiv = document.createElement('div');
+                        const speaker = line.split(':')[0].trim();
+                        messageDiv.classList.add('message');
+                        if (speaker === 'GEORGE STEPHANOPOULOS') {
+                            messageDiv.classList.add('george');
+                        } else if (speaker === 'PRESIDENT JOE BIDEN') {
+                            messageDiv.classList.add('biden');
+                        }
+                        messageDiv.innerHTML = '<strong>' + speaker + ':</strong> ' + line.split(':').slice(1).join(':').trim();
+                        container.appendChild(messageDiv);
+                    }
+                });
+            })
+            .catch(error => console.error('Error fetching the transcript:', error));
+    </script>
 </body>
 </html>
