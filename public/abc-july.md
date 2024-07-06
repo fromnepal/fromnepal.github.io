@@ -1,108 +1,231 @@
-ABC News taped its interview with President Biden on Friday afternoon and aired it  at 8 p.m. Eastern time. Following is a transcript of the interview, which lasted about 20 minutes, between George Stephanopoulos and the president, as released by ABC News.
+Read the full transcript of President Joe Biden's exclusive interview with ABC News' George Stephanopoulos on Wednesday.
+
 GEORGE STEPHANOPOULOS: Mr. President, thank you for doing this.
-PRESIDENT BIDEN: Thank you for having me.
-STEPHANOPOULOS: Let’s start with the debate. Eh, you and your team said, have said you had a bad night. But your —
-BIDEN: Sure did.
-STEPHANOPOULOS: But your friend Nancy Pelosi actually framed the question that I think is on the minds of millions of Americans. Was this a bad episode or the sign of a more serious condition?
-BIDEN: It was a bad episode. No indication of any serious condition. I was exhausted. I didn’t listen to my instincts in terms of preparing and — and a bad night.
-STEPHANOPOULOS: You know, you say you were exhausted. And — and I know you’ve said that before as well, but you came — and you did have a tough month. But you came home from Europe about 11 or 12 days before the debate, spent six days in Camp David. Why wasn’t that enough rest time, enough recovery time?
-BIDEN: Because I was sick. I was feeling terrible. Matter of fact, the docs with me, I asked if they did a Covid test because they’re trying to figure out what was wrong. They did a test to see whether or not I had some infection, you know, a virus. I didn’t. I just had a really bad cold.
-STEPHANOPOULOS: And — did you ever watch the debate afterwards?
-BIDEN: I don’t think I did, no.
-STEPHANOPOULOS: Well, what I’m try — what I want to get at is, what were you experiencing as you were going through the debate? Did you know how badly it was going?
-BIDEN: Yeah, look. The whole way I prepared, nobody’s fault, mine. Nobody’s fault but mine. I, uh — I prepared what I usually would do, sitting down as I did come back with foreign leaders or National Security Council for explicit detail. And I realized — about partway through that, you know, all — I get quoted, The New York Times had me down at 10 points before the debate, nine now, or whatever the hell it is. The fact of the matter is, what I looked at is that he also lied 28 times. I couldn’t — I mean, the way the debate ran, not — my fault, no one else’s fault, no one else’s fault.
-STEPHANOPOULOS: But it seemed like you were having trouble from the first question in, even before he spoke.
-BIDEN: Well, I just had a bad night. You’ve had some bad interviews once in a while. I — I can’t remember any, but I’m sure you did.
-STEPHANOPOULOS: I’ve had plenty. I guess the question of — the problem is here for a lot of Americans watching is, you’ve said going back to 2020, “Watch me,” to people who are concerned about your age. And, you know, 50 million Americans watched that debate. It seemed to confirm fears they already had.
-BIDEN: Well, look. After that debate, I did 10 major events in a row, including until 2 in the morning after the debate. I did events in North Carolina. I did events in — in — in Georgia, did events like this today, large crowds, overwhelming response, no — no — no slipping. And so, I just had a bad night. I don’t know why.
-STEPHANOPOULOS: And — how — how quickly did it — did it come to you that you were having that bad night?
-BIDEN: Well, it came to me, I was having a bad night when I realized that even when I was answering a question, even though they turned his mic off, he was still shouting. And I — I let it distract me. I — I’m not blaming it on that, but I realized that I just wasn’t in control.
-STEPHANOPOULOS: Part of the other concern is that — this seems to fit into a pattern of decline that has been reported on recently. The New York Times had a headline on July 2nd, “Biden’s lapses are said to be increasingly common and worrisome.” Here’s what they wrote: “People who’ve spent time with President Biden over the last few months or so said the lapses appear to have grown more frequent, more pronounced, and after Thursday — Thursday’s debate, more worrisome. By many accounts, as evidenced by video footage, observation, and interviews, Mr. Biden is not the same today as he was even when he took office three and a half years ago.” Similar reporting in The Washington Post and The Wall Street Journal. Are you the same man today that you were when you took office three and a half years ago?
-BIDEN: In terms of successes, yes. I also was the guy who put together a peace plan for the Middle East that may be coming to fruition. I was also the guy that expanded NATO. I was also the guy that grew the economy. All the individual things that were done were ideas I had or I fulfilled. I moved on.
-And so, for example, you know, “We — Well, that was true then, what’s Biden done lately?” Did you just, just see today, just announced, 200,000 new jobs. We’re moving in the direction that no one’s ever taken on. I know you know this from days in — in — in the — in the government.
-I took on Big Pharma. I beat them. No one said I could beat them. I took on all the things we said we got done, were told we couldn’t get done. And part of it is what I said when I ran was I wanted to do three things: Restore some decency to the office, restore some support for the middle class instead of trickle-down economics both from the middle out and the bottom up the way the wealthy still do fine, everyone does better, and unite the country.
-STEPHANOPOULOS: But what has all that work over the last three and a half years cost you physically, mentally, emotionally?
-BIDEN: Well, I — I — I just think it cost me a really bad night, bad run, but, you know, I — George. I have — I’m optimistic about this country. I don’t think we’re a country of losers that he points out. I don’t think America’s in tough shape. I think America is on the cusp of breaking through in so many incredible opportunities.
-In this next term, I’m going to make sure we got to — straighten out the tax system. I’m going to make sure we’re in a situation where we have health care for all people, where we’re in a position where we have — have child care and elder care, free up — and all these things.
-One thing I’m proudest of is, remember when my economic plan was put forward? A lot of the mainstream economists said, “This is not going to work.” Guess what? We now have 16 Nobel laureates, 16 of them in economics saying that “Biden’s next term would be a sig — enor — based on what he wants to do, enormous success.” Trump’s plan would cause a recession and signif — gi — increase inflation. I’ve made great progress, and that’s what I plan on doing. And we can do this.
-STEPHANOPOULOS: I — I — I understand that, and I’m not disputing that. What I’m asking you is — about your personal situation. Do you dispute that there have been more lapses, especially in the last several months?
-BIDEN: Can I run the 100 in 10 flat? No. But I’m still in good shape.
-STEPHANOPOULOS: Are you more frail?
-BIDEN: No.
-STEPHANOPOULOS: I know you —
-BIDEN: Come keep my schedule. (LAUGH)
-STEPHANOPOULOS: I know you spoke with your doctor after the debate. What did he say?
-BIDEN: He said he — just looked at me and said, “You’re exhausted.” That’s it. I have medical doctors travel with me everywhere. Every president does, as you know. Medical doctors, some of the best in the world travel with me everywhere I go. I have an ongoing assessment of what I’m doing, and they don’t hesitate to tell me if they think there’s something wrong.
-STEPHANOPOULOS: I know you said you have an ongoing assessment. Have you had a full neurological and cognitive evaluation?
-BIDEN: I’ve had — I get a full neurological test everyday with me. And I’ve had a full physical. I had, you know, I mean, I — I’ve been at Walter Reed for my physicals. I mean —um, yes, the answer.
-STEPHANOPOULOS: I — I know your doctor said he consulted with a neurologist. I — I guess I’m asking — a slightly different question. Have you had the specific cognitive tests, and have you had a neurologist, a specialist, do an examination?
-BIDEN: No. No one said I had to. No one said. They said I’m good.
-STEPHANOPOULOS: Would you be willing to undergo an independent medical evaluation that included neurological and cognit — cognitive tests and release the results to the American people?
-BIDEN: Look. I have a cognitive test every single day. Every day I have that test. Everything I do. You know, not only am I campaigning, but I’m running the world. Not — and that’s not hi— sounds like hyperbole, but we are the essential nation of the world.
-Madeleine Albright was right. And every single day, for example, today before I came out here, I’m on the phone with — with the prime minister of — well, anyway, I shouldn’t get into detail, but with Netanyahu. I’m on the phone with the new prime minister of England.
-I’m working on what we were doing with regard to — in Europe with regard to expansion of NATO and whether it’s going to stick. I’m taking on Putin. I mean, every day there’s no day I go through there not those decisions I have to make every single day.
-STEPHANOPOULOS:And you have been doing that, and the American people have been watching. Yet their concerns about your age and your health are growing. So that’s why I’m asking — to reassure them — would you be willing to have the independent medical evaluation?
-BIDEN: Watch me between — there’s a lot of time left in this campaign. There’s over 125 days.
-STEPHANOPOULOS: So the answer —
-BIDEN: They’ll make a decision.
-STEPHANOPOULOS: Right — the answer right now is, no, you — you don’t want to do that right now.
-BIDEN: Well, I’ve already done it.
-STEPHANOPOULOS: You talked a lot about your successes in — at the beginning of this interview. And — and I don’t want to dispute that, I don’t want to debate that. But — as you know, elections are about the future, not the past. They’re about tomorrow, not yesterday. And the question on so many people’s minds right now is, “Can you serve effectively for the next four years?”
-BIDEN: George. I’m the guy that put NATO together, the future. No one thought I could expand it. I’m the guy that shut Putin down. No one thought could happen. I’m the guy that put together a South Pacific initiative with AUKUS. I’m the guy that got 50 nations out — not only in Europe, outside of Europe as well — to help Ukraine.
-I’m the guy that got Japanese to expand their budget. I’m the — so I mean, these — and, for example, when I decided we used to have 40 percent of computer chips. We invented the chip, the little chip, the computer chip. It’s in everything from cellphones to weapons.
-And so, we used to have 40 percent, and we’re down to virtually nothing. So I get in the plane, against the advice of everybody, and I fly to South Korea. I convince them to invest in the United States, billions of dollars. Now we have tens of billions of dollars being invested in the United States making us back in a position — we’re going to own that industry again. We have, I mean, I — I just — anyway. I’m — I don’t want to take too much credit. I have a great staff.
-STEPHANOPOULOS: But hold on. My — I guess my point is, all that takes a toll. Do you have the mental and physical capacity to do it for another four years?
-BIDEN: I believes so. I wouldn’t be running if I didn’t think I did. Look, I’m running again because I think I understand best what has to be done to take this nation to a completely new, new level. We’re on our way. We’re on our way. And, look. The decision recently made by the Supreme Court on immunity, you know, the next president of the United States, it’s not just about whether he or she knows what they’re doing.
-It’s — it’s — it’s not — not about a con — a conglomerate of people making decisions. It’s about the character of the president. The character of the president’s going to determine whether or not this Constitution is employed the right way.
-STEPHANOPOULOS: Let me ask you a tougher, more personal question. Are you sure you’re being honest with yourself when you say you have the mental and physical capacity to serve another four years?
-BIDEN: Yes, I am, because, George, the last thing I want to do is not be able to meet that. I think, as some of senior economist and senior foreign policy specialists say, if I stop now, I’d go down in history as a pretty successful president. No one thought I could get done what we got done.
-STEPHANOPOULOS: But are you being with honest — with yourself as well about your ability to defeat Donald Trump right now?
-BIDEN: Yes. Yes, yes, yes.
-STEPHANOPOULOS: You say that, and let me challenge you.
-BIDEN: Sure.
-STEPHANOPOULOS: Because you were close but behind going into the debate. You’re further behind now by — by any measure. It’s been a two-man race for several months. Inflation has come down. In those last few months, he’s become a convicted felon. Yet, you’re still falling further behind.
-BIDEN: You guys keep saying that. George, do you — look, you know polling better than anybody. Do you think polling data as accurate as it used to be?
-STEPHANOPOULOS: I don’t think so, but I think when you look at all the polling data right now, it shows that he’s certainly ahead in the popular vote, probably even more ahead in the battleground states. And one of the other key factors there is, it shows that in many of the battleground states, the Democrats who are running for Senate and the House are doing better than you are.
-BIDEN: That’s not unusual in some states. I carried an awful lot of Democrats last time I ran in 2020. Look, I remember them telling me the same thing in 2020. “I can’t win. The polls show I can’t win.” Remember 2024 — 2020, the red wave was coming.
-Before the vote, I said, “That’s not going to happen. We’re going to win.” We did better in an off-year than almost any incumbent president ever has done. They said in 2023, all the tough — we’re not going to win. I went into all those areas and all those — all those districts, and we won.
-STEPHANOPOULOS: All that is true, but 2020 was a close race. And your approval rating has dropped significantly since then. I think the last poll I saw was at about 36 percent.
-BIDEN: Woah, woah, woah.
-STEPHANOPOULOS: The number of Americans who think you’re too old to serve has doubled since 2020. Wouldn’t a clear-eyed political calculus tell you that it’s going to be much tougher to win in 2024?
-BIDEN: Not when you’re running against a pathological liar. Not when he hadn’t been challenged in a way that he’s about to be challenged. Not when people —
-STEPHANOPOULOS: You’ve had months to challenge him.
-BIDEN: Oh, sure, I had months, but I was also doing a hell of a lot of other things, like wars around the world, like keeping NATO together, like working — anyway. But look.
-STEPHANOPOULOS: Do you really believe you’re not behind right now?
-BIDEN: I think it’s in — all the pollsters I talk to tell me it’s a tossup. It’s a tossup. And when I’m behind, there’s only one poll I’m really far behind, CBS Poll and NBC, I mean, excuse me. And — uh —
-STEPHANOPOULOS: New York — The New York Times and NBC both have — have you about six points behind in the popular vote.
-BIDEN: That’s exactly right. The New York Times had me behind before, anything having to do with this race — had me hind — behind 10 points. Ten points they had me behind. Nothing’s changed substantially since the debate in The New York Times poll.
-STEPHANOPOULOS: Just when you look at the reality, though, Mr. President, I mean, you won the popular vote — in — in 2020, but it was still deadly close in the Electoral College.
-BIDEN: By 7 million votes.
-STEPHANOPOULOS: Yes. But you’re behind now in the popular vote.
-BIDEN: I don’t — I don’t buy that.
-STEPHANOPOULOS: Is it worth the risk?
-BIDEN: I don’t think anybody’s more qualified to be president or win this race than me.
-STEPHANOPOULOS: You know, the heart of your case against Donald Trump is that he’s only out for himself, putting his personal interests ahead of the national interest. How do you respond to critics who say that by staying in the race, you’re doing the same thing?
-BIDEN: Oh, come on. Well, I don’t think those critics know what they’re talkin’ about.
-STEPHANOPOULOS: They’re just wrong?
-BIDEN: They’re just wrong. Look, Trump is a pathological liar. Trump is — he is — you ever seen anything Trump did that benefited sa — somebody else and not him? You can’t answer, I know.
-STEPHANOPOULOS: I’ve — I’ve questioned him and his allies as persistently as any journalist has.
-BIDEN: Oh, I know you have. I’m not being critical. I’m not being critical, but look, I mean, the man is a congenital liar. As I said, they pointed out in that debate, he lied 27 — 28 times — times, whatever number, over 20 times. Talk about how good his economy was, how he brought down inflation, how — this is a guy who unlike — only other president oth— other than him is Hoover, who lost more jobs than he created.
-This is a guy who told us to put bleach in our arms to deal with Covid, with a million — over a million people died. This is a guy who talks about wanting to get rid of the health care provision we put in place. This is a guy who wants to give the power back to Big Pharma to be able to charge exorbitant prices for drugs. This is a guy who wants to undo every single thing I’ve done, every single — every single thing.
-STEPHANOPOULOS: I understand that. I understand that’s why you want to stay in the race, but have you convinced yourself that only you can defeat him?
-BIDEN: I convinced myself of two things. I’m the most qualified person to beat him, and I know how to get things done.
-STEPHANOPOULOS: If you can be convinced that you cannot defeat Donald Trump, will you stand down?
-BIDEN: (LAUGH) It depends on — on if the Lord Almighty comes down and tells me that, I might do that.
-STEPHANOPOULOS: Well, if — I mean, on a more practical level, The Washington Post just reported in the last hour that Senator Mark Warner is — is assembling a group of senators together to try and convince you to stand down, because they don’t think you can win.
-BIDEN: Well, Mark is a good man. We’ve never had — He also tried to get the nomination, too. Mark’s not — Mark and I have a different perspective. I respect him.
-STEPHANOPOULOS: And if Chuck Schumer and Hakeem Jeffries and Nancy Pelosi come down and say, “We’re worried that if you stay in the race, we’re going to lose the House and the Senate,” how will you respond?
-BIDEN: I — I’d go into detail with them. I’ve spoken to all of them in detail, including Jim Clyburn, every one of them. They all said I should stay in the race — stay in the race. No one said — none of the people said I should leave.
-STEPHANOPOULOS: But if they do?
-BIDEN: Well, it’s, like, (LAUGH) they’re not going to do that.
-STEPHANOPOULOS: You’re sure?
-BIDEN: Well, yeah, I’m sure. Look. I mean, if the Lord Almighty came down and said, “Joe, get out of the race,” I’d get out of the race. The Lord Almighty’s not coming down. I mean, these hypotheticals, George, if, I mean, it’s all —
-STEPHANOPOULOS: But — but it’s — it’s — it’s not that hypothetical anymore. I — I — I — I grant that the — they have not — requested a meeting, but it’s been reported.
-BIDEN: But they — I met with them. I met with a lot of these people. I talk with them regularly. I had an hour conversation with Hakeem. I had more time — with Jim Clyburn. I spent time with many hours off and on in the last little bit with Chuck Schumer. It’s not like — I had all the governors — all the governors.
-STEPHANOPOULOS: I agree that the Lord Almighty’s not going to come down, but if — if  — if you are told reliably from your allies, from your friends and supporters in the Democratic Party in the House and the Senate that they’re concerned you’re going to lose the House and the Senate if you stay in, what will you do?
-BIDEN: I’m not going to answer that question. It’s not going to happen.
-STEPHANOPOULOS: What’s your plan to turn the campaign around?
-BIDEN: You saw it today. How many — how many peop
+
+PRESIDENT JOE BIDEN: Thank you for doin' it.
+
+STEPHANOPOULOS: Let's get right to it. Back in July, you said a Taliban takeover was highly unlikely. Was the intelligence wrong, or did you downplay it?
+
+BIDEN: I think -- there was no consensus. If you go back and look at the intelligence reports, they said that it's more likely to be sometime by the end of the year. The idea that the tal -- and then it goes further on, even as late as August. I think you're gonna see -- the Chairman of the Joint Chiefs of Staff and others speaking about this later today.
+
+STEPHANOPOULOS: But you didn't put a timeline on it when you said it was highly unlikely. You just said flat out, "It's highly unlikely the Taliban would take over."
+
+BIDEN: Yeah. Well, the question was whether or not it w-- the idea that the Taliban would take over was premised on the notion that the -- that somehow, the 300,000 troops we had trained and equipped was gonna just collapse, they were gonna give up. I don't think anybody anticipated that.
+
+STEPHANOPOULOS: But you know that Senator McConnell, others say this was not only predictable, it was predicted, including by him, based on intelligence briefings he was getting.
+
+BIDEN: What -- what did he say was predicted?
+
+STEPHANOPOULOS: Senator McConnell said it was predictable that the Taliban was gonna take over.
+
+BIDEN: Well, by the end of the year, I said that's that was -- that was a real possibility. But no one said it was gonna take over then when it was bein' asked.
+
+STEPHANOPOULOS: So when you look at what's happened over the last week, was it a failure of intelligence, planning, execution or judgment?
+
+BIDEN: Look, I don't think it was a fa-- look, it was a simple choice, George. When the-- when the Taliban -- let me back -- put it another way. When you had the government of Afghanistan, the leader of that government get in a plane and taking off and going to another country, when you saw the significant collapse of the ta-- of the-- Afghan troops we had trained -- up to 300,000 of them just leaving their equipment and taking off, that was -- you know, I'm not-- this -- that -- that's what happened.
+
+That's simply what happened. So the question was in the beginning the-- the threshold question was, do we commit to leave within the timeframe we've set? We extended it to September 1st. Or do we put significantly more troops in? I hear people say, "Well, you had 2,500 folks in there and nothin' was happening. You know, there wasn't any war."
+
+But guess what? The fact was that the reason it wasn't happening is the last president negotiated a year earlier that he'd be out by May 1st and that-- in return, there'd be no attack on American forces. That's what was done. That's why nothing was happening. But the idea if I had said -- I had a simple choice. If I had said, "We're gonna stay," then we'd better prepare to put a whole hell of a lot more troops in --
+
+STEPHANOPOULOS: But your top military advisors warned against withdrawing on this timeline. They wanted you to keep about 2,500 troops.
+
+BIDEN: No, they didn't. It was split. Tha-- that wasn't true. That wasn't true.
+
+STEPHANOPOULOS: They didn't tell you that they wanted troops to stay?
+
+BIDEN: No. Not at -- not in terms of whether we were going to get out in a timeframe all troops. They didn't argue against that.
+
+STEPHANOPOULOS: So no one told -- your military advisors did not tell you, "No, we should just keep 2,500 troops. It's been a stable situation for the last several years. We can do that. We can continue to do that"?
+
+BIDEN: No. No one said that to me that I can recall. Look, George, the reason why it's been stable for a year is because the last president said, "We're leaving. And here's the deal I wanna make with you, Taliban. We're agreeing to leave if you agree not to attack us between now and the time we leave on May the 1st."
+
+I got into office, George. Less than two months after I elected to office, I was sworn in, all of a sudden, I have a May 1 deadline. I have a May 1 deadline. I got one of two choices. Do I say we're staying? And do you think we would not have to put a hell of a lot more troops? B-- you know, we had hundreds-- we had tens of thousands of troops there before. Tens of thousands.
+
+Do you think we woulda -- that we would've just said, "No problem. Don't worry about it, we're not gonna attack anybody. We're okay"? In the meantime, the Taliban was takin' territory all throughout the country in the north and down in the south, in the Pasthtun area.
+
+STEPHANOPOULOS: So would you have withdrawn troops like this even if President Trump had not made that deal with the Taliban?
+
+BIDEN: I would've tried to figure out how to withdraw those troops, yes, because look, George. There is no good time to leave Afghanistan. Fifteen years ago would've been a problem, 15 years from now. The basic choice is am I gonna send your sons and your daughters to war in Afghanistan in perpetuity?
+
+STEPHANOPOULOS: That's--
+
+BIDEN: No one can name for me a time when this would end. And what-- wha-- wha-- what-- what constitutes defeat of the Taliban? What constitutes defeat? Would we have left then? Let's say they surrender like before. OK. Do we leave then? Do you think anybody-- the same people who think we should stay would've said, "No, good time to go"? We spent over $1 trillion, George, 20 years. There was no good time to leave.
+
+STEPHANOPOULOS: But if there's no good time, if you know you're gonna have to leave eventually, why not have th-- everything in place to make sure Americans could get out, to make sure our Afghan allies get out, so we don't have these chaotic scenes in Kabul?
+
+BIDEN: Number one, as you know, the intelligence community did not say back in June or July that, in fact, this was gonna collapse like it did. Number one.
+
+STEPHANOPOULOS: They thought the Taliban would take over, but not this quickly?
+
+BIDEN: But not this quickly. Not even close. We had already issued several thousand passports to the-- the SIVs, the people-- the-- the-- the translators when I came into office before we had negotiated getting out at the end of s-- August.
+
+Secondly, we're in a position where what we did was took precautions. That's why I authorized that there be 6,000 American troops to flow in to accommodate this exit, number one. And number two, provided all that aircraft in the Gulf to get people out. We pre-positioned all that, anticipated that. Now, granted, it took two days to take control of the airport. We have control of the airport now.
+
+STEPHANOPOULOS: Still a lotta pandemonium outside the airport.
+
+BIDEN: Oh, there is. But, look, b-- but no one's being killed right now, God forgive me if I'm wrong about that, but no one's being killed right now. People are-- we got 1,000-somewhat, 1,200 out, yesterday, a couple thousand today. And it's increasing. We're gonna get those people out.
+
+STEPHANOPOULOS: But we've all seen the pictures. We've seen those hundreds of people packed into a C-17. You've seen Afghans falling--
+
+BIDEN: That was four days ago, five days ago.
+
+STEPHANOPOULOS: What did you think when you first saw those pictures?
+
+BIDEN: What I thought was we ha-- we have to gain control of this. We have to move this more quickly. We have to move in a way in which we can take control of that airport. And we did.
+
+STEPHANOPOULOS: I-- I think a lot of-- a lot of Americans, and a l-- even a lot of veterans who served in Afghanistan agree with you on the big, strategic picture. They believe we had to get out. But I wonder how you respond to an Army Special Forces officer, Javier McKay (PH). He did seven tours. He was shot twice. He agrees with you. He says, "We have to cut our losses in Afghanistan." But he adds, "I just wish we could've left with honor."
+
+BIDEN: Look, that's like askin' my deceased son Beau, who spent six months in Kosovo and a year in Iraq as a Navy captain and then major-- I mean, as an Army major. And, you know, I'm sure h-- he had regrets comin' out of Afganista-- I mean, out of Iraq.
+
+He had regrets to what's-- how-- how it's going. But the idea-- what's the alternative? The alternative is why are we staying in Afghanistan? Why are we there? Don't you think that the one-- you know who's most disappointed in us getting out? Russia and China. They'd love us to continue to have to--
+
+STEPHANOPOULOS: So you don't think this could've been handled, this exit could've been handled better in any way? No mistakes?
+
+BIDEN: No. I-- I don't think it could've been handled in a way that there-- we-- we're gonna go back in hindsight and look, but the idea that somehow there's a way to have gotten out without chaos ensuing, I don't know how that happens. I don't know how that happened.
+
+STEPHANOPOULOS: So for you, that was always priced into the decision?
+
+BIDEN: Yes. Now, exactly what happened-- is not priced in. But I knew that they're gonna have an enormous, enorm-- look, one of the things we didn't know is what the Taliban would do in terms of trying to keep people from getting out, what they would do.What are they doing now? They're cooperating, letting American citizens get out, American personnel get out, embassies get out, et cetera. But they're having-- we're having some more difficulty in having those who helped us when we were in there--
+
+STEPHANOPOULOS: And we don't really know what's happening outside of Kabul.
+
+BIDEN: Pardon me?
+
+STEPHANOPOULOS: We don't really know what's happening outside of Kabul.
+
+BIDEN: Well-- we do know generically and in some specificity what's happening outside of Kabul. We don't know it in great detail. But we do know. And guess what? The Taliban knows if they take on American citizens or American military, we will strike them back like hell won't have it.
+
+STEPHANOPOULOS: All troops are supposed to be out by August 31st. Even if Americans and our Afghan allies are still trying to get out, they're gonna leave?
+
+BIDEN: We're gonna do everything in our power to get all Americans out and our allies out.
+
+STEPHANOPOULOS: Does that mean troops will stay beyond August 31st if necessary?
+
+BIDEN: It depends on where we are and whether we can get-- ramp these numbers up to 5,000 to 7,000 a day coming out. If that's the case, we'll be-- they'll all be out.
+
+STEPHANOPOULOS: 'Cause we've got, like, 10,000 to 15,000 Americans in the country right now, right? And are you committed to making sure that the troops stay until every American who wants to be out--
+
+BIDEN: Yes.
+
+STEPHANOPOULOS: -- is out?
+
+BIDEN: Yes.
+
+STEPHANOPOULOS: How about our Afghan allies? We have about 80,000 people--
+
+BIDEN: Well, that's not the s--
+
+STEPHANOPOULOS: Is that too high?
+
+BIDEN: That's too high.
+
+STEPHANOPOULOS: How many--
+
+BIDEN: The estimate we're giving is somewhere between 50,000 and 65,000 folks total, counting their families.
+
+STEPHANOPOULOS: Does the commitment hold for them as well?
+
+BIDEN: The commitment holds to get everyone out that, in fact, we can get out and everyone that should come out. And that's the objective. That's what we're doing now, that's the path we're on. And I think we'll get there.
+
+STEPHANOPOULOS: So Americans should understand that troops might have to be there beyond August 31st?
+
+BIDEN: No. Americans should understand that we're gonna try to get it done before August 31st.
+
+STEPHANOPOULOS: But if we don't, the troops will stay--
+
+BIDEN: If -- if we don't, we'll determine at the time who's left.
+
+STEPHANOPOULOS: And?
+
+BIDEN: And if you're American force -- if there's American citizens left, we're gonna stay to get them all out.
+
+STEPHANOPOULOS: You talked about our adversaries, China and Russia. You already see China telling Taiwan, "See? You can't count on the Americans." (LAUGH)
+
+BIDEN: Sh-- why wouldn't China say that? Look, George, the idea that w-- there's a fundamental difference between-- between Taiwan, South Korea, NATO. We are in a situation where they are in-- entities we've made agreements with based on not a civil war they're having on that island or in South Korea, but on an agreement where they have a unity government that, in fact, is trying to keep bad guys from doin' bad things to them.
+
+We have made-- kept every commitment. We made a sacred commitment to Article Five that if in fact anyone were to invade or take action against our NATO allies, we would respond. Same with Japan, same with South Korea, same with-- Taiwan. It's not even comparable to talk about that.
+
+STEPHANOPOULOS: Yeah, but those--
+
+BIDEN: It's not comparable to t--
+
+STEPHANOPOULOS: --who say, "Look, America cannot be trusted now, America does not keep its promises--"
+
+BIDEN: Who-- who's gonna say that? Look, before I made this decision, I met with all our allies, our NATO allies in Europe. They agreed. We should be getting out.
+
+STEPHANOPOULOS: Did they have a choice?
+
+BIDEN: Sure, they had a choice. Look, the one thing I promise you in private, NATO allies are not quiet. You remember from your old days. They're not gonna be quiet. And so-- and by the way, you know, what we're gonna be doing is we're gonna be putting together a group of the G-7, the folks that we work with the most-- to-- I was on the phone with-- with Angela Merkel today. I was on the phone with the British prime minister. I'm gonna be talking to Macron in France to make sure we have a coherent view of how we're gonna deal from this point on.
+
+STEPHANOPOULOS: What happens now in Afghanistan? Do you believe the Taliban have changed?
+
+BIDEN: No. I think-- let me put it this way. I think they're going through sort of an existential crisis about do they want to be recognized by the international community as being a legitimate government. I'm not sure they do. But look, they have--
+
+STEPHANOPOULOS: They care about their beliefs more?
+
+BIDEN: Well, they do. But they also care about whether they have food to eat, whether they have an income that they can provide for their f-- that they can make any money and run an economy. They care about whether or not they can hold together the society that they in fact say they care so much about.
+
+I'm not counting on any of that. I'm not cou-- but that is part of what I think is going on right now in terms of I-- I'm not sure I would've predicted, George, nor would you or anyone else, that when we decided to leave, that they'd provide safe passage for Americans to get out.
+
+STEPHANOPOULOS: Beyond Americans, what do we owe the Afghans who are left behind, particularly Afghan women who are facing the prospect of subjugation again?
+
+BIDEN: As many as we can get out, we should. For example, I had a meeting today for a couple hours in the Situation Room just below here. There are Afghan women outside the gate. I told 'em, "Get 'em on the planes. Get them out. Get them out. Get their families out if you can."
+
+But here's the deal, George. The idea that we're able to deal with the rights of women around the world by military force is not rational. Not rational. Look what's happened to the Uighurs in western China. Look what's happening in other parts of the world.
+
+Look what's happenin' in, you know, in-- in the Congo. I mean, there are a lotta places where women are being subjugated. The way to deal with that is not with a military invasion. The way to deal with that is putting economic, diplomatic, and national pre-- international pressure on them to change their behavior.
+
+STEPHANOPOULOS: How about the threat to the United States? Most intelligence analysis has predicted that Al Qaeda would come back 18 to 24 months after a withdrawal of American troops. Is that analysis now being revised? Could it be sooner?
+
+BIDEN: It could be. But George, look, here's the deal. Al Qaeda, ISIS, they metastasize. There's a significantly greater threat to the United States from Syria. There's a significantly greater threat from East Africa. There's significant greater threat to other places in the world than it is from the mountains of Afghanistan. And we have maintained the ability to have an over-the-horizon capability to take them out. We're-- we don't have military in Syria to make sure that we're gonna be protected--
+
+STEPHANOPOULOS: And you're confident we're gonna have that in Afghanistan?
+
+BIDEN: Yeah. I'm confident we're gonna have the overriding capability, yes. Look, George, it's like asking me, you know, am I confident that people are gonna act even remotely rationally. Here's the deal. The deal is the threat from Al Qaeda and their associate organizations is greater in other parts of the world to the United States than it is from Afghanistan.
+
+STEPHANOPOULOS: And th-- that tells you that you're-- it's safe to leave?
+
+BIDEN: No. That tells me that-- my dad used to have an expression, George. If everything's equally important to you, nothing's important to you. We should be focusing on where the threat is the greatest. And the threat-- the idea-- we can continue to spend $1 trillion and have tens of thousands of American forces in Afghanistan when we have what's going on around the world, in the Middle East and North Africa and west-- I mean, excuse me-- yeah, North Africa and Western Africa. The idea we can do that and ignore those-- those looming problems, growing problems, is not-- not rational.
+
+STEPHANOPOULOS: Final question on this. You know, in a couple weeks, we're all gonna commemorate the 20th anniversary of 9/11. The Taliban are gonna be ruling Afghanistan, just l-- like they were when our country was attacked. How do you explain that to the American people?
+
+BIDEN: Not true. It's not true. They're not gonna look just like they were we were attacked. There was a guy named Osama bin Laden that was still alive and well. They were organized in a big way, that they had significant help from arou-- from other parts of the world.
+
+We went there for two reasons, George. Two reasons. One, to get Bin Laden, and two, to wipe out as best we could, and we did, the Al Qaeda in Afghanistan. We did it. Then what happened? Began to morph into the notion that, instead of having a counterterrorism capability to have small forces there in-- or in the region to be able to take on Al Qaeda if it tried to reconstitute, we decided to engage in nation building. In nation building. That never made any sense to me.
+
+STEPHANOPOULOS: It sounds like you think we shoulda gotten out a long time ago--
+
+BIDEN: We should've.
+
+STEPHANOPOULOS: --and-- and accept the idea that it was gonna be messy no matter what.
+
+BIDEN: Well, by the-- what would be messy?
+
+STEPHANOPOULOS: The exit--
+
+BIDEN: If we had gotten out a long time ago-- getting out would be messy no matter when it occurred. I ask you, you want me to stay, you want us to stay and send your kids back to Afghanistan? How about it? Are you g-- if you had a son or daughter, would you send them in Afghanistan now? Or later?
+
+STEPHANOPOULOS: Would be hard, but a lot of families have done it.
+
+BIDEN: They've done it because, in fact, there was a circumstance that was different when we started. We were there for two reasons, George. And we accomplished both ten years ago. We got Osama bin Laden. As I said and got criticized for saying at the time, we're gonna follow him to the gates of hell. Hell, we did--
+
+STEPHANOPOULOS: How will history judge the United States' experience in Afghanistan?
+
+BIDEN: One that we overextended what we needed to do to deal with our national interest. That's like my sayin' they-- they're-- they-- they b-- b-- the border of Tajikistan-- and-- other-- what-- does it matter? Are we gonna go to war because of what's goin' on in Tajikistan? What do you think?
+
+Tell me what-- where in that isolated country that has never, never, never in all of history been united, all the way back to Alexander the Great, straight through the British Empire and the Russians, what is the idea? Are we gonna s-- continue to lose thousands of Americans to injury and death to try to unite that country? What do you think? I think not.
+
+I think the American people are with me. And when you unite that country, what do you have? They're surrounded by Russia in the north or the Stans in the north. You have-- to the west, they have Iran. To the south, they have Pakistan, who's supporting them. And to the-- and-- actually, the east, they have Pakistan and China. Tell me. Tell me. Is that worth our national interest to continue to spend another $1 trillion and lose thousands more American lives? For what?
+
+STEPHANOPOULOS: I know we're outta time. I have two quick questions on COVID. I know you're gonna make-- be makin' an announcement on booster shots today. Have you and the first lady gotten your booster shots yet?
+
+BIDEN: We're gonna get the booster shots. And-- it's somethin' that I think-- you know, because we g-- w-- we got our shots all the way back in I think December. So it's-- it's-- it's past time. And so the idea (NOISE) that the recommendation-- that's my wife calling. (LAUGH) No. (LAUGH) But all kiddin' aside, yes, we will get the booster shots.
+
+STEPHANOPOULOS: And-- and finally-- are you comfortable with Americans getting a third shot when so many millions around the world haven't had their first?
+
+BIDEN: Absolutely because we're providing more to the rest of the world than all the rest of the world combined. We got enough for everybody American, plus before this year is-- before we get to the middle of next year, we're gonna provide a half a billion shots to the rest of the world. We're keepin' our part of the bargain. We're doin' more than anybody.
+
+STEPHANOPOULOS: Mr. President, thanks for your time.
+
+BIDEN: Thank you.
