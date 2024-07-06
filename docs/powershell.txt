@@ -12,3 +12,519 @@ Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_
 This message is shown once a day. To disable it please create the
 /home/kushal/.hushlogin file.
 kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+[sudo] password for kushal:
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:3 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1583 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1791 kB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [269 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [2029 kB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [346 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [883 kB]
+Get:12 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [172 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [326 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [2086 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [356 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1100 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [255 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [388 B]
+Get:19 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [672 B]
+Fetched 11.6 MB in 1s (9782 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+4 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+real    0m7.993s
+user    0m0.016s
+sys     0m0.008s
+Listing... Done
+tzdata/jammy-updates 2024a-0ubuntu0.22.04.1 all [upgradable from: 2024a-0ubuntu0.22.04]
+ubuntu-advantage-tools/jammy-updates 32.3.1~22.04 all [upgradable from: 32.3~22.04]
+ubuntu-pro-client-l10n/jammy-updates 32.3.1~22.04 amd64 [upgradable from: 32.3~22.04]
+ubuntu-pro-client/jammy-updates 32.3.1~22.04 amd64 [upgradable from: 32.3~22.04]
+
+real    0m0.128s
+user    0m0.111s
+sys     0m0.010s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
+  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
+  libavfilter7
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+#
+# OpenSSH CVE-2024-6387 has been fixed for 22.04 LTS, 23.10 and 24.04 LTS.
+# RegreSSHion: Possible RCE Due To A Race Condition In Signal Handling.
+# For more details see: https://ubuntu.com/security/notices/USN-6859-1.
+#
+The following packages will be upgraded:
+  tzdata ubuntu-advantage-tools ubuntu-pro-client ubuntu-pro-client-l10n
+4 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 589 kB of archives.
+After this operation, 3072 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 tzdata all 2024a-0ubuntu0.22.04.1 [349 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ubuntu-pro-client-l10n amd64 32.3.1~22.04 [20.3 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ubuntu-pro-client amd64 32.3.1~22.04 [209 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ubuntu-advantage-tools all 32.3.1~22.04 [10.9 kB]
+Fetched 589 kB in 0s (2218 kB/s)
+Preconfiguring packages ...
+(Reading database ... 62497 files and directories currently installed.)
+Preparing to unpack .../tzdata_2024a-0ubuntu0.22.04.1_all.deb ...
+Unpacking tzdata (2024a-0ubuntu0.22.04.1) over (2024a-0ubuntu0.22.04) ...
+Preparing to unpack .../ubuntu-pro-client-l10n_32.3.1~22.04_amd64.deb ...
+Unpacking ubuntu-pro-client-l10n (32.3.1~22.04) over (32.3~22.04) ...
+Preparing to unpack .../ubuntu-pro-client_32.3.1~22.04_amd64.deb ...
+Unpacking ubuntu-pro-client (32.3.1~22.04) over (32.3~22.04) ...
+Preparing to unpack .../ubuntu-advantage-tools_32.3.1~22.04_all.deb ...
+Unpacking ubuntu-advantage-tools (32.3.1~22.04) over (32.3~22.04) ...
+Setting up tzdata (2024a-0ubuntu0.22.04.1) ...
+
+Current default time zone: 'America/New_York'
+Local time is now:      Sat Jul  6 07:23:20 EDT 2024.
+Universal Time is now:  Sat Jul  6 11:23:20 UTC 2024.
+Run 'dpkg-reconfigure tzdata' if you wish to change it.
+
+Setting up ubuntu-pro-client (32.3.1~22.04) ...
+Installing new version of config file /etc/apparmor.d/ubuntu_pro_esm_cache ...
+Setting up ubuntu-pro-client-l10n (32.3.1~22.04) ...
+Setting up ubuntu-advantage-tools (32.3.1~22.04) ...
+Processing triggers for man-db (2.10.2-1) ...
+
+real    0m2.915s
+user    0m0.001s
+sys     0m0.005s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.061s
+user    0m0.017s
+sys     0m0.043s
+remote: Enumerating objects: 876, done.
+remote: Counting objects: 100% (876/876), done.
+remote: Compressing objects: 100% (347/347), done.
+remote: Total 876 (delta 547), reused 808 (delta 524), pack-reused 0
+Receiving objects: 100% (876/876), 644.31 KiB | 8.83 MiB/s, done.
+Resolving deltas: 100% (547/547), completed with 140 local objects.
+From https://github.com/LadybirdBrowser/ladybird
+   af90978454..e1c61d654f  master     -> origin/master
+
+real    0m0.509s
+user    0m0.060s
+sys     0m0.065s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Updating af90978454..e1c61d654f
+Fast-forward
+ .devcontainer/features/ladybird/install.sh                                                     |   3 +-
+ .github/actions/setup/action.yml                                                               |   4 +-
+ AK/Assertions.h                                                                                |   2 +
+ AK/FloatingPoint.h                                                                             |  24 +++++
+ AK/FloatingPointStringConversions.cpp                                                          |  73 ++++++++------
+ AK/Format.cpp                                                                                  |   7 +-
+ AK/Forward.h                                                                                   |   2 +
+ AK/GenericLexer.h                                                                              |   7 +-
+ AK/JsonParser.cpp                                                                              |  24 +++--
+ AK/Math.h                                                                                      |  22 +++--
+ AK/Platform.h                                                                                  |  17 ++++
+ AK/StringBase.h                                                                                |  13 ++-
+ Base/res/ladybird/newtab.html                                                                  |  98 +------------------
+ Base/res/ladybird/templates/error.html                                                         |   1 +
+ CMakeLists.txt                                                                                 |   7 ++
+ Documentation/AdvancedBuildInstructions.md                                                     |   1 -
+ Documentation/BuildInstructionsLadybird.md                                                     |  24 ++++-
+ Documentation/NvimConfiguration.md                                                             |  87 ++++++++++++-----
+ Documentation/VSCodeConfiguration.md                                                           |   2 +-
+ Ladybird/Android/BuildLagomTools.sh                                                            |  27 +++--
+ Ladybird/Android/CMakeLists.txt                                                                |   2 +-
+ Ladybird/Android/build.gradle.kts                                                              |  10 +-
+ Ladybird/Android/src/main/cpp/LadybirdActivity.cpp                                             |   8 ++
+ Ladybird/Android/src/main/cpp/WebContentService.cpp                                            |  10 +-
+ Ladybird/Android/src/main/cpp/WebViewImplementationNative.cpp                                  |   5 +-
+ Ladybird/Android/src/main/cpp/WebViewImplementationNative.h                                    |   4 +-
+ Ladybird/Android/vcpkg_android.cmake                                                           |  96 ++++++++++++++++++
+ Ladybird/AppKit/UI/LadybirdWebView.mm                                                          |  18 +++-
+ Ladybird/AppKit/UI/TabController.mm                                                            |   2 +-
+ Ladybird/AppKit/main.mm                                                                        |   3 -
+ Ladybird/CMakeLists.txt                                                                        |  26 ++++-
+ Ladybird/DefaultSettings.h                                                                     |   2 +-
+ Ladybird/FontPlugin.cpp                                                                        |  11 ++-
+ Ladybird/HelperProcess.cpp                                                                     |   2 -
+ Ladybird/Qt/BrowserWindow.cpp                                                                  |  32 ++++++
+ Ladybird/Qt/BrowserWindow.h                                                                    |   3 +
+ Ladybird/Qt/Settings.cpp                                                                       |  12 +++
+ Ladybird/Qt/Settings.h                                                                         |   5 +
+ Ladybird/Qt/SettingsDialog.cpp                                                                 |   7 ++
+ Ladybird/Qt/SettingsDialog.h                                                                   |   1 +
+ Ladybird/Qt/Tab.cpp                                                                            |  10 ++
+ Ladybird/Qt/Tab.h                                                                              |   3 +
+ Ladybird/Qt/WebContentView.cpp                                                                 |  36 ++++++-
+ Ladybird/Qt/WebContentView.h                                                                   |   5 +
+ Ladybird/Qt/main.cpp                                                                           |   3 -
+ Ladybird/Types.h                                                                               |   6 --
+ Ladybird/WebContent/CMakeLists.txt                                                             |  13 +--
+ Ladybird/WebContent/main.cpp                                                                   |   5 -
+ Ladybird/cmake/AndroidExtras.cmake                                                             |   4 +-
+ Meta/CMake/accelerated_graphics.cmake                                                          |  19 ----
+ Meta/CMake/common_options.cmake                                                                |   1 -
+ Meta/CMake/fontconfig.cmake                                                                    |   2 +-
+ Meta/CMake/use_linker.cmake                                                                    |   2 +-
+ Meta/CMake/vulkan.cmake                                                                        |   8 ++
+ Meta/Lagom/CMakeLists.txt                                                                      |   1 -
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/BindingsGenerator/IDLGenerators.cpp                     |  49 ++++++++++
+ Meta/debug.plist                                                                               |   8 ++
+ Meta/gn/secondary/Ladybird/BUILD.gn                                                            |   2 -
+ Meta/gn/secondary/Ladybird/WebContent/BUILD.gn                                                 |   4 -
+ Meta/gn/secondary/Userland/Libraries/LibAccelGfx/BUILD.gn                                      |  33 -------
+ Meta/gn/secondary/Userland/Libraries/LibWeb/HTML/BUILD.gn                                      |   2 +
+ Meta/gn/secondary/Userland/Libraries/LibWeb/Painting/BUILD.gn                                  |   5 -
+ Meta/gn/secondary/Userland/Libraries/LibWeb/idl_files.gni                                      |   2 +
+ Meta/ladybird.sh                                                                               |  15 ++-
+ Tests/AK/TestJSON.cpp                                                                          |  22 +++++
+ Tests/AK/TestString.cpp                                                                        |  24 +++--
+ Tests/LibAudio/TestPlaybackStream.cpp                                                          |   8 +-
+ Tests/LibAudio/TestWav.cpp                                                                     |   5 -
+ Tests/LibCompress/TestBrotli.cpp                                                               |  10 --
+ Tests/LibCompress/TestDeflate.cpp                                                              |   6 +-
+ Tests/LibGfx/BenchmarkJPEGLoader.cpp                                                           |   6 +-
+ Tests/LibGfx/TestICCProfile.cpp                                                                |   6 +-
+ Tests/LibGfx/TestImageDecoder.cpp                                                              |   6 +-
+ Tests/LibGfx/TestWOFF.cpp                                                                      |   6 +-
+ Tests/LibGfx/TestWOFF2.cpp                                                                     |   6 +-
+ Tests/LibJS/test262-runner.cpp                                                                 |  13 +--
+ Tests/LibWeb/Layout/expected/block-and-inline/out-of-flows-not-inserted-into-generated-box.txt |  19 ++++
+ Tests/LibWeb/Layout/expected/flex/justify-content-on-min-content-with-gap.txt                  |  64 ++++++++++++
+ Tests/LibWeb/Layout/expected/input-placeholder.txt                                             |  26 ++---
+ Tests/LibWeb/Layout/input/block-and-inline/out-of-flows-not-inserted-into-generated-box.html   |   9 ++
+ Tests/LibWeb/Layout/input/flex/justify-content-on-min-content-with-gap.html                    |  30 ++++++
+ Tests/LibWeb/Ref/css-color-functions.html                                                      |  89 +++++++++++++++++
+ Tests/LibWeb/Ref/reference/css-color-functions-ref.html                                        |  91 +++++++++++++++++
+ Tests/LibWeb/TestHTMLTokenizer.cpp                                                             |   5 -
+ Tests/LibWeb/Text/expected/DOM/derived-interface-prototype.txt                                 |   1 +
+ Tests/LibWeb/Text/expected/all-window-properties.txt                                           |   2 +
+ Tests/LibWeb/Text/expected/css/getComputedStyle-print-all.txt                                  |   1 +
+ Tests/LibWeb/Text/expected/css/transform-serialization.txt                                     |  58 +++++++++++
+ Tests/LibWeb/Text/expected/set-selection-inside-shadow-root.txt                                |   2 +
+ Tests/LibWeb/Text/input/DOM/derived-interface-prototype.html                                   |  19 ++++
+ Tests/LibWeb/Text/input/css/transform-serialization.html                                       |  73 ++++++++++++++
+ Tests/LibWeb/Text/input/set-selection-inside-shadow-root.html                                  |  21 ++++
+ Tests/LibWeb/rebaseline-libweb-test                                                            |  13 ++-
+ Userland/Libraries/LibAccelGfx/CMakeLists.txt                                                  |  14 ---
+ Userland/Libraries/LibAccelGfx/Canvas.h                                                        |  46 ---------
+ Userland/Libraries/LibAccelGfx/Context.cpp                                                     | 195 -------------------------------------
+ Userland/Libraries/LibAccelGfx/Context.h                                                       |  36 -------
+ Userland/Libraries/LibAccelGfx/Forward.h                                                       |  13 ---
+ Userland/Libraries/LibAccelGfx/GL.cpp                                                          | 299 --------------------------------------------------------
+ Userland/Libraries/LibAccelGfx/GL.h                                                            | 121 -----------------------
+ Userland/Libraries/LibAccelGfx/GlyphAtlas.cpp                                                  |  86 ----------------
+ Userland/Libraries/LibAccelGfx/GlyphAtlas.h                                                    |  64 ------------
+ Userland/Libraries/LibAccelGfx/Painter.cpp                                                     | 801 -----------------------------------------------------------------------------------------------------------------------------------------------------
+ Userland/Libraries/LibAccelGfx/Painter.h                                                       | 130 -------------------------
+ Userland/Libraries/LibAccelGfx/Program.cpp                                                     |  46 ---------
+ Userland/Libraries/LibAccelGfx/Program.h                                                       |  43 --------
+ Userland/Libraries/LibCore/CMakeLists.txt                                                      |  10 ++
+ Userland/Libraries/LibCore/Socket.cpp                                                          |  42 ++++++--
+ Userland/Libraries/LibCore/Socket.h                                                            |   3 +-
+ Userland/Libraries/LibCore/SocketAddress.h                                                     |  47 +++++++--
+ Userland/Libraries/LibCore/StandardPaths.cpp                                                   |   4 +
+ Userland/Libraries/LibCore/VulkanContext.cpp                                                   | 125 ++++++++++++++++++++++++
+ Userland/Libraries/LibCore/VulkanContext.h                                                     |  29 ++++++
+ Userland/Libraries/LibCrypto/Checksum/CRC32.cpp                                                |  13 ++-
+ Userland/Libraries/LibGfx/EdgeFlagPathRasterizer.h                                             |   2 +-
+ Userland/Libraries/LibGfx/TextLayout.cpp                                                       |  12 +--
+ Userland/Libraries/LibMedia/CMakeLists.txt                                                     |  17 +++-
+ Userland/Libraries/LibMedia/FFmpeg/FFmpegVideoDecoderStub.cpp                                  |  49 ++++++++++
+ Userland/Libraries/LibUnicode/CMakeLists.txt                                                   |   2 +-
+ Userland/Libraries/LibWasm/AbstractMachine/Validator.cpp                                       |   7 ++
+ Userland/Libraries/LibWeb/CMakeLists.txt                                                       |  34 +++++--
+ Userland/Libraries/LibWeb/CSS/Enums.json                                                       |   5 +
+ Userland/Libraries/LibWeb/CSS/Identifiers.json                                                 |   2 +
+ Userland/Libraries/LibWeb/CSS/Parser/Parser.cpp                                                | 643 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-------------------------
+ Userland/Libraries/LibWeb/CSS/Parser/Parser.h                                                  |   7 +-
+ Userland/Libraries/LibWeb/CSS/Properties.json                                                  |  13 ++-
+ Userland/Libraries/LibWeb/CSS/StyleProperties.cpp                                              |   1 +
+ Userland/Libraries/LibWeb/CSS/StyleValue.cpp                                                   |   1 +
+ Userland/Libraries/LibWeb/CSS/StyleValue.h                                                     |   1 +
+ Userland/Libraries/LibWeb/CSS/StyleValues/ScrollbarGutterStyleValue.h                          |  49 ++++++++++
+ Userland/Libraries/LibWeb/CSS/StyleValues/TransformationStyleValue.cpp                         |  18 +++-
+ Userland/Libraries/LibWeb/DOM/Document.cpp                                                     |  61 +-----------
+ Userland/Libraries/LibWeb/Fetch/Fetching/Fetching.cpp                                          |   6 +-
+ Userland/Libraries/LibWeb/Forward.h                                                            |   4 +
+ Userland/Libraries/LibWeb/HTML/AttributeNames.h                                                |   1 +
+ Userland/Libraries/LibWeb/HTML/EventLoop/EventLoop.cpp                                         |  10 ++
+ Userland/Libraries/LibWeb/HTML/HTMLElement.cpp                                                 |  28 ++++++
+ Userland/Libraries/LibWeb/HTML/HTMLElement.h                                                   |   3 +
+ Userland/Libraries/LibWeb/HTML/HTMLElement.idl                                                 |   2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLImageElement.cpp                                            |   4 +-
+ Userland/Libraries/LibWeb/HTML/HTMLInputElement.cpp                                            |   9 ++
+ Userland/Libraries/LibWeb/HTML/HTMLMediaElement.cpp                                            |   4 +
+ Userland/Libraries/LibWeb/HTML/HTMLMediaElement.h                                              |   4 +
+ Userland/Libraries/LibWeb/HTML/HTMLMediaElement.idl                                            |   3 +-
+ Userland/Libraries/LibWeb/HTML/HTMLTrackElement.cpp                                            |  31 ++++++
+ Userland/Libraries/LibWeb/HTML/HTMLTrackElement.h                                              |  10 ++
+ Userland/Libraries/LibWeb/HTML/HTMLTrackElement.idl                                            |   2 +-
+ Userland/Libraries/LibWeb/HTML/Navigable.cpp                                                   |  22 +++--
+ Userland/Libraries/LibWeb/HTML/Navigable.h                                                     |   5 +-
+ Userland/Libraries/LibWeb/HTML/Navigator.cpp                                                   |  13 +++
+ Userland/Libraries/LibWeb/HTML/Navigator.h                                                     |   2 +
+ Userland/Libraries/LibWeb/HTML/Navigator.idl                                                   |   3 +
+ Userland/Libraries/LibWeb/HTML/NavigatorID.cpp                                                 |  95 ++++++++++++++++--
+ Userland/Libraries/LibWeb/HTML/NavigatorID.h                                                   |   6 +-
+ Userland/Libraries/LibWeb/HTML/Scripting/WorkerEnvironmentSettingsObject.cpp                   |  15 ++-
+ Userland/Libraries/LibWeb/HTML/Scripting/WorkerEnvironmentSettingsObject.h                     |   2 +-
+ Userland/Libraries/LibWeb/HTML/TextTrack.cpp                                                   | 113 +++++++++++++++++++++
+ Userland/Libraries/LibWeb/HTML/TextTrack.h                                                     |  56 +++++++++++
+ Userland/Libraries/LibWeb/HTML/TextTrack.idl                                                   |  28 ++++++
+ Userland/Libraries/LibWeb/HTML/TextTrackList.cpp                                               | 111 +++++++++++++++++++++
+ Userland/Libraries/LibWeb/HTML/TextTrackList.h                                                 |  46 +++++++++
+ Userland/Libraries/LibWeb/HTML/TextTrackList.idl                                               |  13 +++
+ Userland/Libraries/LibWeb/HTML/TrackEvent.cpp                                                  |   2 +-
+ Userland/Libraries/LibWeb/HTML/TrackEvent.h                                                    |   4 +-
+ Userland/Libraries/LibWeb/HTML/TrackEvent.idl                                                  |   7 +-
+ Userland/Libraries/LibWeb/HTML/TraversableNavigable.cpp                                        |  47 +++++----
+ Userland/Libraries/LibWeb/HTML/TraversableNavigable.h                                          |   7 +-
+ Userland/Libraries/LibWeb/Layout/BlockFormattingContext.cpp                                    |  43 ++++++--
+ Userland/Libraries/LibWeb/Layout/BlockFormattingContext.h                                      |   3 +-
+ Userland/Libraries/LibWeb/Layout/FlexFormattingContext.cpp                                     |   7 +-
+ Userland/Libraries/LibWeb/Layout/Node.h                                                        |   8 ++
+ Userland/Libraries/LibWeb/Layout/TreeBuilder.cpp                                               |  15 ++-
+ Userland/Libraries/LibWeb/Layout/Viewport.cpp                                                  |  63 ++++++++++++
+ Userland/Libraries/LibWeb/Layout/Viewport.h                                                    |  16 +++
+ Userland/Libraries/LibWeb/Loader/GeneratedPagesLoader.cpp                                      |   3 +-
+ Userland/Libraries/LibWeb/Loader/GeneratedPagesLoader.h                                        |   2 +-
+ Userland/Libraries/LibWeb/Loader/ResourceLoader.cpp                                            |  33 +++----
+ Userland/Libraries/LibWeb/Loader/ResourceLoader.h                                              |   9 ++
+ Userland/Libraries/LibWeb/Loader/UserAgent.h                                                   |  12 +++
+ Userland/Libraries/LibWeb/Page/EventHandler.cpp                                                |  17 +++-
+ Userland/Libraries/LibWeb/Page/Page.h                                                          |  14 +--
+ Userland/Libraries/LibWeb/Painting/DisplayListPlayerGPU.cpp                                    | 397 --------------------------------------------------------------------------
+ Userland/Libraries/LibWeb/Painting/DisplayListPlayerGPU.h                                      |  93 ------------------
+ Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.cpp                                   |  83 ++++++++++++++++
+ Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.h                                     |   9 ++
+ Userland/Libraries/LibWeb/Painting/MediaPaintable.cpp                                          |   4 +-
+ Userland/Libraries/LibWeb/SVG/SVGDecodedImageData.cpp                                          |   3 +-
+ Userland/Libraries/LibWeb/SVG/SVGDecodedImageData.h                                            |   1 +
+ Userland/Libraries/LibWeb/Selection/Selection.cpp                                              |   7 +-
+ Userland/Libraries/LibWeb/WebGL/OpenGLContext.cpp                                              | 206 ---------------------------------------
+ Userland/Libraries/LibWeb/idl_files.cmake                                                      |   2 +
+ Userland/Libraries/LibWebView/SourceHighlighter.cpp                                            |   4 +-
+ Userland/Libraries/LibWebView/ViewImplementation.cpp                                           |   5 +
+ Userland/Libraries/LibWebView/ViewImplementation.h                                             |   6 +-
+ Userland/Libraries/LibWebView/WebContentClient.cpp                                             |  20 +++-
+ Userland/Libraries/LibWebView/WebContentClient.h                                               |   4 +-
+ Userland/Services/WebContent/CMakeLists.txt                                                    |   7 --
+ Userland/Services/WebContent/ConnectionFromClient.cpp                                          |  23 +++++
+ Userland/Services/WebContent/ConnectionFromClient.h                                            |   1 +
+ Userland/Services/WebContent/PageClient.cpp                                                    |  49 ++++------
+ Userland/Services/WebContent/PageClient.h                                                      |  15 +--
+ Userland/Services/WebContent/WebContentClient.ipc                                              |   4 +-
+ Userland/Services/WebContent/WebContentServer.ipc                                              |   1 +
+ Userland/Services/WebWorker/DedicatedWorkerHost.cpp                                            |   6 +-
+ Userland/Services/WebWorker/PageHost.h                                                         |   1 +
+ vcpkg.json                                                                                     |  19 +++-
+ 206 files changed, 3185 insertions(+), 3422 deletions(-)
+ create mode 100644 Ladybird/Android/vcpkg_android.cmake
+ delete mode 100644 Meta/CMake/accelerated_graphics.cmake
+ create mode 100644 Meta/CMake/vulkan.cmake
+ create mode 100644 Meta/debug.plist
+ delete mode 100644 Meta/gn/secondary/Userland/Libraries/LibAccelGfx/BUILD.gn
+ create mode 100644 Tests/LibWeb/Layout/expected/block-and-inline/out-of-flows-not-inserted-into-generated-box.txt
+ create mode 100644 Tests/LibWeb/Layout/expected/flex/justify-content-on-min-content-with-gap.txt
+ create mode 100644 Tests/LibWeb/Layout/input/block-and-inline/out-of-flows-not-inserted-into-generated-box.html
+ create mode 100644 Tests/LibWeb/Layout/input/flex/justify-content-on-min-content-with-gap.html
+ create mode 100644 Tests/LibWeb/Ref/css-color-functions.html
+ create mode 100644 Tests/LibWeb/Ref/reference/css-color-functions-ref.html
+ create mode 100644 Tests/LibWeb/Text/expected/DOM/derived-interface-prototype.txt
+ create mode 100644 Tests/LibWeb/Text/expected/css/transform-serialization.txt
+ create mode 100644 Tests/LibWeb/Text/expected/set-selection-inside-shadow-root.txt
+ create mode 100644 Tests/LibWeb/Text/input/DOM/derived-interface-prototype.html
+ create mode 100644 Tests/LibWeb/Text/input/css/transform-serialization.html
+ create mode 100644 Tests/LibWeb/Text/input/set-selection-inside-shadow-root.html
+ delete mode 100644 Userland/Libraries/LibAccelGfx/CMakeLists.txt
+ delete mode 100644 Userland/Libraries/LibAccelGfx/Canvas.h
+ delete mode 100644 Userland/Libraries/LibAccelGfx/Context.cpp
+ delete mode 100644 Userland/Libraries/LibAccelGfx/Context.h
+ delete mode 100644 Userland/Libraries/LibAccelGfx/Forward.h
+ delete mode 100644 Userland/Libraries/LibAccelGfx/GL.cpp
+ delete mode 100644 Userland/Libraries/LibAccelGfx/GL.h
+ delete mode 100644 Userland/Libraries/LibAccelGfx/GlyphAtlas.cpp
+ delete mode 100644 Userland/Libraries/LibAccelGfx/GlyphAtlas.h
+ delete mode 100644 Userland/Libraries/LibAccelGfx/Painter.cpp
+ delete mode 100644 Userland/Libraries/LibAccelGfx/Painter.h
+ delete mode 100644 Userland/Libraries/LibAccelGfx/Program.cpp
+ delete mode 100644 Userland/Libraries/LibAccelGfx/Program.h
+ create mode 100644 Userland/Libraries/LibCore/VulkanContext.cpp
+ create mode 100644 Userland/Libraries/LibCore/VulkanContext.h
+ create mode 100644 Userland/Libraries/LibMedia/FFmpeg/FFmpegVideoDecoderStub.cpp
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/ScrollbarGutterStyleValue.h
+ create mode 100644 Userland/Libraries/LibWeb/HTML/TextTrack.cpp
+ create mode 100644 Userland/Libraries/LibWeb/HTML/TextTrack.h
+ create mode 100644 Userland/Libraries/LibWeb/HTML/TextTrack.idl
+ create mode 100644 Userland/Libraries/LibWeb/HTML/TextTrackList.cpp
+ create mode 100644 Userland/Libraries/LibWeb/HTML/TextTrackList.h
+ create mode 100644 Userland/Libraries/LibWeb/HTML/TextTrackList.idl
+ delete mode 100644 Userland/Libraries/LibWeb/Painting/DisplayListPlayerGPU.cpp
+ delete mode 100644 Userland/Libraries/LibWeb/Painting/DisplayListPlayerGPU.h
+
+real    0m0.202s
+user    0m0.041s
+sys     0m0.050s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.034s
+user    0m0.024s
+sys     0m0.012s
+Sat Jul  6 07:23:22 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+[1/2] Re-running CMake...
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/clang++-17
+The following packages will be rebuilt:
+    skia[core,fontconfig,freetype,gl,harfbuzz,icu,vulkan]:x64-linux@124 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/skia/b993a94ad57f5f651ac7dfa08cf20f17134a1b0d
+The following packages will be built and installed:
+    vulkan:x64-linux@2023-12-17 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vulkan/3e8d64ec799440b97c7151f97dd00a53e8e1b5ea
+    vulkan-headers:x64-linux@1.3.280.0 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vulkan-headers/47ec3d0d82ea8e9428d59b4c3428ca43cb5ea4c8
+  * vulkan-loader:x64-linux@1.3.280.0 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vulkan-loader/f2b6ac616463bb279cb0677885ab70c8c734f3bd
+  * vulkan-memory-allocator:x64-linux@3.1.0 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vulkan-memory-allocator/267d8f5eb222e5ea111f11f57ebc8458c6df65e7
+Additional packages (*) will be modified to complete this operation.
+Restored 0 package(s) from /home/kushal/.cache/vcpkg/archives in 377 us. Use --debug to see more details.
+Removing 1/6 skia:x64-linux
+Elapsed time to handle skia:x64-linux: 72.6 ms
+Installing 2/6 vulkan-memory-allocator:x64-linux@3.1.0...
+Building vulkan-memory-allocator:x64-linux@3.1.0...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vulkan-memory-allocator/267d8f5eb222e5ea111f11f57ebc8458c6df65e7: info: installing overlay port from here
+-- Downloading https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator/archive/v3.1.0.tar.gz -> GPUOpen-LibrariesAndSDKs-VulkanMemoryAllocator-v3.1.0.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/GPUOpen-LibrariesAndSDKs-VulkanMemoryAllocator-v3.1.0.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/vulkan-memory-allocator/src/v3.1.0-2108f5f92f.clean
+-- Configuring x64-linux
+-- Building x64-linux-rel
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vulkan-memory-allocator_x64-linux/share/vulkan-memory-allocator/copyright
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vulkan-memory-allocator_x64-linux/share/vulkan-memory-allocator/usage
+-- Performing post-build validation
+Stored binaries in 1 destinations in 16 ms.
+Elapsed time to handle vulkan-memory-allocator:x64-linux: 3.6 s
+vulkan-memory-allocator:x64-linux package ABI: 296da084e2b9ab395eef6d2c0f3b276bad04ceb458a015caccb309abb5812e80
+Installing 3/6 vulkan-headers:x64-linux@1.3.280.0...
+Building vulkan-headers:x64-linux@1.3.280.0...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vulkan-headers/47ec3d0d82ea8e9428d59b4c3428ca43cb5ea4c8: info: installing overlay port from here
+-- Downloading https://github.com/KhronosGroup/Vulkan-Headers/archive/vulkan-sdk-1.3.280.0.tar.gz -> KhronosGroup-Vulkan-Headers-vulkan-sdk-1.3.280.0.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/KhronosGroup-Vulkan-Headers-vulkan-sdk-1.3.280.0.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/vulkan-headers/src/-1.3.280.0-5cd4115c30.clean
+-- Configuring x64-linux
+-- Building x64-linux-rel
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vulkan-headers_x64-linux/share/vulkan-headers/copyright
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vulkan-headers_x64-linux/share/vulkan-headers/usage
+-- Performing post-build validation
+Stored binaries in 1 destinations in 267 ms.
+Elapsed time to handle vulkan-headers:x64-linux: 4.4 s
+vulkan-headers:x64-linux package ABI: 1a37362eaf168401831ab2261f59c8ee0c1420f47bfe2dd000960094ece03a13
+Installing 4/6 skia[core,fontconfig,freetype,gl,harfbuzz,icu,vulkan]:x64-linux@124...
+Building skia[core,fontconfig,freetype,gl,harfbuzz,icu,vulkan]:x64-linux@124...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/skia/b993a94ad57f5f651ac7dfa08cf20f17134a1b0d: info: installing overlay port from here
+-- Using cached google-skia-e7bf161ff959268a2a2f37530a6ea61c27019d33.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/skia/src/1c27019d33-728a6df320.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/google-skia-e7bf161ff959268a2a2f37530a6ea61c27019d33.tar.gz
+-- Applying patch disable-msvc-env-setup.patch
+-- Applying patch disable-dev-test.patch
+-- Applying patch skia-include-string.patch
+-- Applying patch bentleyottmann-build.patch
+-- Applying patch graphite.patch
+-- Applying patch vulkan-headers.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/skia/src/1c27019d33-728a6df320.clean
+-- Creating third_party/externals/dng_sdk
+-- Using cached /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/skia-c8d0c9b1d16bfda56f15165d39e0ffa360a11123.tar.gz
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/skia-c8d0c9b1d16bfda56f15165d39e0ffa360a11123.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/skia/src/a360a11123-ad86a105da.clean
+-- Creating third_party/externals/piex
+-- Using cached /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/skia-bb217acdca1cc0c16b704669dd6f91a1b509c406.tar.gz
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/skia-bb217acdca1cc0c16b704669dd6f91a1b509c406.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/skia/src/a1b509c406-c78cbbe048.clean
+-- Creating third_party/externals/wuffs
+-- Using cached /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/skia-e3f919ccfe3ef542cfc983a82146070258fb57f8.tar.gz
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/skia-e3f919ccfe3ef542cfc983a82146070258fb57f8.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/skia/src/0258fb57f8-a43a032398.clean
+-- Getting CMake variables for x64-linux
+-- Generating build (x64-linux-dbg)...
+-- Generating build (x64-linux-rel)...
+-- Building (x64-linux-dbg)...
+-- Installing (x64-linux-dbg)...
+-- Building (x64-linux-rel)...
+-- Installing (x64-linux-rel)...
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/skia_x64-linux/share/skia/skiaConfig.cmake
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/skia_x64-linux/share/skia/example/CMakeLists.txt
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/skia_x64-linux/share/skia/example/convert-to-nia.cpp
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/skia_x64-linux/share/skia/usage
+-- Performing post-build validation
+Stored binaries in 1 destinations in 9.9 s.
+Elapsed time to handle skia:x64-linux: 3.8 min
+skia:x64-linux package ABI: 6d08aa9eec83372d5e93cbeceefe0dfccdaf8100298bbb55f284a0434dcee442
+Installing 5/6 vulkan-loader:x64-linux@1.3.280.0...
+Building vulkan-loader:x64-linux@1.3.280.0...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vulkan-loader/f2b6ac616463bb279cb0677885ab70c8c734f3bd: info: installing overlay port from here
+-- Downloading https://github.com/KhronosGroup/Vulkan-Loader/archive/vulkan-sdk-1.3.280.0.tar.gz -> KhronosGroup-Vulkan-Loader-vulkan-sdk-1.3.280.0.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/KhronosGroup-Vulkan-Loader-vulkan-sdk-1.3.280.0.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/vulkan-loader/src/-1.3.280.0-a675026bd4.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+CMake Error at scripts/cmake/vcpkg_execute_build_process.cmake:134 (message):
+    Command failed: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/tools/cmake-3.29.2-linux/cmake-3.29.2-linux-x86_64/bin/cmake --build . --config Debug --target install -- -v -j17
+    Working Directory: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/vulkan-loader/x64-linux-dbg
+    See logs for more information:
+      /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/vulkan-loader/install-x64-linux-dbg-out.log
+
+Call Stack (most recent call first):
+  /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/share/vcpkg-cmake/vcpkg_cmake_build.cmake:74 (vcpkg_execute_build_process)
+  /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/share/vcpkg-cmake/vcpkg_cmake_install.cmake:16 (vcpkg_cmake_build)
+  buildtrees/versioning_/versions/vulkan-loader/f2b6ac616463bb279cb0677885ab70c8c734f3bd/portfile.cmake:16 (vcpkg_cmake_install)
+  scripts/ports.cmake:191 (include)
+
+
+error: building vulkan-loader:x64-linux failed with: BUILD_FAILED
+Elapsed time to handle vulkan-loader:x64-linux: 6.2 s
+Please ensure you're using the latest port files with `git pull` and `vcpkg update`.
+Then check for known issues at:
+  https://github.com/microsoft/vcpkg/issues?q=is%3Aissue+is%3Aopen+in%3Atitle+vulkan-loader
+You can submit a new issue at:
+  https://github.com/microsoft/vcpkg/issues/new?title=[vulkan-loader]+Build+error+on+x64-linux&body=Copy+issue+body+from+%2Fhome%2Fkushal%2Fsrc%2Fladybird%2FBuild%2Fladybird%2Fvcpkg_installed%2Fvcpkg%2Fissue_body.md
+
+-- Running vcpkg install - failed
+CMake Error at Toolchain/Tarballs/vcpkg/scripts/buildsystems/vcpkg.cmake:899 (message):
+  vcpkg install failed.  See logs for more information:
+  /home/kushal/src/ladybird/Build/ladybird/vcpkg-manifest-install.log
+Call Stack (most recent call first):
+  Build/ladybird/CMakeFiles/3.26.4/CMakeSystem.cmake:6 (include)
+  CMakeLists.txt:10 (project)
+
+
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja
+/home/kushal/src/ladybird/Toolchain/Local/cmake/bin/cmake --regenerate-during-build -S/home/kushal/src/ladybird -B/home/kushal/src/ladybird/Build/ladybird
+ninja: error: rebuilding 'build.ninja': subcommand failed
+
+real    4m10.521s
+user    53m37.184s
+sys     2m18.866s
+Sat Jul  6 07:27:33 EDT 2024
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
