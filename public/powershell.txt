@@ -4,74 +4,15 @@ PowerShell 7.4.2
    Upgrade now, or check out the release page at:
      https://aka.ms/PowerShell-Release?tag=v7.4.3
 
-PS C:\Users\kushal> scoop search standard
-Results from local buckets...
-
-Name          Version  Source Binaries
-----          -------  ------ --------
-standardnotes 3.194.13 extras
-
-PS C:\Users\kushal> scoop install standardnotes
-Updating Scoop...
-Updating Buckets...
-Scoop was updated successfully!
-Installing 'standardnotes' (3.194.13) [64bit] from 'extras' bucket
-standard-notes-3.194.13-win-x64.exe (108.4 MB) [==============================================================================================================================================================================================================================] 100%
-Checking hash of standard-notes-3.194.13-win-x64.exe ... ok.
-Extracting standard-notes-3.194.13-win-x64.exe ... done.
-Running pre_install script...done.
-Linking ~\scoop\apps\standardnotes\current => ~\scoop\apps\standardnotes\3.194.13
-Creating shortcut for Standard Notes (Standard Notes.exe)
-Running post_install script...done.
-'standardnotes' (3.194.13) was installed successfully!
-PS C:\Users\kushal> date; scoop status; date; scoop bucket rm main; date; scoop bucket add main; date; scoop bucket rm extras; date; scoop bucket add extras; date; scoop status; date; scoop update; date; scoop update *; date; scoop cache show; date; scoop cache rm *; date; scoopstatus; date;
-
-Tuesday, July 9, 2024 8:00:30 PM
-Scoop is up to date.
-Everything is ok!
-Tuesday, July 9, 2024 8:00:31 PM
-The main bucket was removed successfully.
-Tuesday, July 9, 2024 8:00:31 PM
-Checking repo... OK
-The main bucket was added successfully.
-Tuesday, July 9, 2024 8:00:37 PM
-The extras bucket was removed successfully.
-Tuesday, July 9, 2024 8:00:37 PM
-Checking repo... OK
-The extras bucket was added successfully.
-Tuesday, July 9, 2024 8:00:47 PM
-Scoop is up to date.
-Everything is ok!
-Tuesday, July 9, 2024 8:00:48 PM
-Updating Scoop...
-Updating Buckets...
-Scoop was updated successfully!
-Tuesday, July 9, 2024 8:00:56 PM
-Latest versions for all apps are installed! For more information try 'scoop status'
-Tuesday, July 9, 2024 8:00:57 PM
-
-Name    : standardnotes
-Version : 3.194.13
-Length  : 113670368
-
-Total: 1 file, 108.4 MB
-Tuesday, July 9, 2024 8:00:57 PM
-Removing standardnotes#3.194.13#b332868.7z...
-Deleted: 1 file, 108.4 MB
-Tuesday, July 9, 2024 8:00:57 PM
-Scoop is up to date.
-Everything is ok!
-Tuesday, July 9, 2024 8:00:58 PM
-
 PS C:\Users\kushal>
 PS C:\Users\kushal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-Tuesday, July 9, 2024 8:10:22 PM
+Wednesday, July 10, 2024 8:27:19 AM
 yarn install v1.22.21
 [1/4] Resolving packages...
 success Already up-to-date.
-Done in 0.14s.
-Tuesday, July 9, 2024 8:10:23 PM
+Done in 0.09s.
+Wednesday, July 10, 2024 8:27:20 AM
 yarn run v1.22.21
 $ tsc && vite build
 vite v5.2.13 building for production...
@@ -79,63 +20,29 @@ vite v5.2.13 building for production...
 docs/index.html                 0.53 kB │ gzip: 0.32 kB
 docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
 docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 144ms
-Done in 2.64s.
-Tuesday, July 9, 2024 8:10:26 PM
+✓ built in 139ms
+Done in 2.10s.
+Wednesday, July 10, 2024 8:27:22 AM
 warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Tuesday, July 9, 2024 8:10:26 PM
-On branch main
-Your branch is up to date with 'origin/main'.
-
-nothing to commit, working tree clean
-Tuesday, July 9, 2024 8:10:26 PM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Already up to date.
-Tuesday, July 9, 2024 8:10:27 PM
-Everything up-to-date
-Tuesday, July 9, 2024 8:10:27 PM
-
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
-
-Tuesday, July 9, 2024 8:10:35 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.06s.
-Tuesday, July 9, 2024 8:10:36 PM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.2.13 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 98ms
-Done in 0.79s.
-Tuesday, July 9, 2024 8:10:37 PM
-warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Tuesday, July 9, 2024 8:10:37 PM
-[main 0fe0440] build application
- 2 files changed, 198 insertions(+), 264 deletions(-)
-Tuesday, July 9, 2024 8:10:37 PM
+Wednesday, July 10, 2024 8:27:22 AM
+[main ccb435d] build application
+ 2 files changed, 80 insertions(+)
+Wednesday, July 10, 2024 8:27:23 AM
 From github.com:fromnepal/fromnepal.github.io
  * branch            main       -> FETCH_HEAD
 Current branch main is up to date.
-Tuesday, July 9, 2024 8:10:37 PM
+Wednesday, July 10, 2024 8:27:24 AM
 Enumerating objects: 9, done.
 Counting objects: 100% (9/9), done.
 Delta compression using up to 16 threads
 Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 1.69 KiB | 1.69 MiB/s, done.
-Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+Writing objects: 100% (5/5), 848 bytes | 848.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
 To github.com:fromnepal/fromnepal.github.io.git
-   3349bec..0fe0440  main -> main
-Tuesday, July 9, 2024 8:10:38 PM
+   0fe0440..ccb435d  main -> main
+Wednesday, July 10, 2024 8:27:25 AM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
