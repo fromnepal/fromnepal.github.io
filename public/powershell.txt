@@ -1,1005 +1,417 @@
-kushal@kus2023:~$ ./helloworld
-Guess the number!
-Please input your guess.
-12
-You guessed: 12
-Too small!
-The sum of your guess and the secret number is: 101
-The product of your guess and the secret number is: 1068
-Please input your guess.
-45
-You guessed: 45
-Too small!
-The sum of your guess and the secret number is: 134
-The product of your guess and the secret number is: 4005
-Please input your guess.
-1
-You guessed: 1
-Too small!
-The sum of your guess and the secret number is: 90
-The product of your guess and the secret number is: 89
-Please input your guess.
-92
-You guessed: 92
-Too big!
-The sum of your guess and the secret number is: 181
-The product of your guess and the secret number is: 8188
-Please input your guess.
-91
-You guessed: 91
-Too big!
-The sum of your guess and the secret number is: 180
-The product of your guess and the secret number is: 8099
-Please input your guess.
-90
-You guessed: 90
-Too big!
-The sum of your guess and the secret number is: 179
-The product of your guess and the secret number is: 8010
-Please input your guess.
-89
-You guessed: 89
-You win!
-Press Enter to exit...
+PowerShell 7.4.2
 
-kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; timegit status; date; time ./Meta/ladybird.sh run ladybird; date;
-[sudo] password for kushal:
-Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
-Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
-Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
-Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
-Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
-Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1792 kB]
-Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [326 kB]
-Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [2090 kB]
-Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [356 kB]
-Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1101 kB]
-Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [256 kB]
-Get:12 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1583 kB]
-Get:13 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [884 kB]
-Get:14 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [172 kB]
-Fetched 8818 kB in 1s (7110 kB/s)
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-8 packages can be upgraded. Run 'apt list --upgradable' to see them.
+   A new PowerShell stable release is available: v7.4.3
+   Upgrade now, or check out the release page at:
+     https://aka.ms/PowerShell-Release?tag=v7.4.3
 
-real    0m7.933s
-user    0m0.027s
-sys     0m0.000s
-Listing... Done
-libpython3.10-minimal/jammy-updates,jammy-security 3.10.12-1~22.04.4 amd64 [upgradable from: 3.10.12-1~22.04.3]
-libpython3.10-stdlib/jammy-updates,jammy-security 3.10.12-1~22.04.4 amd64 [upgradable from: 3.10.12-1~22.04.3]
-libpython3.10/jammy-updates,jammy-security 3.10.12-1~22.04.4 amd64 [upgradable from: 3.10.12-1~22.04.3]
-python3.10-minimal/jammy-updates,jammy-security 3.10.12-1~22.04.4 amd64 [upgradable from: 3.10.12-1~22.04.3]
-python3.10/jammy-updates,jammy-security 3.10.12-1~22.04.4 amd64 [upgradable from: 3.10.12-1~22.04.3]
-ubuntu-minimal/jammy-updates 1.481.2 amd64 [upgradable from: 1.481.1]
-ubuntu-standard/jammy-updates 1.481.2 amd64 [upgradable from: 1.481.1]
-ubuntu-wsl/jammy-updates 1.481.2 amd64 [upgradable from: 1.481.1]
+PS C:\Users\kushal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-real    0m0.151s
-user    0m0.151s
-sys     0m0.000s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
-  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
-  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
-  libavfilter7
-Learn more about Ubuntu Pro at https://ubuntu.com/pro
-The following packages will be upgraded:
-  libpython3.10 libpython3.10-minimal libpython3.10-stdlib python3.10 python3.10-minimal ubuntu-minimal ubuntu-standard ubuntu-wsl
-8 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-5 standard LTS security updates
-Need to get 7371 kB of archives.
-After this operation, 0 B of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10 amd64 3.10.12-1~22.04.4 [1949 kB]
-Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10 amd64 3.10.12-1~22.04.4 [508 kB]
-Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-stdlib amd64 3.10.12-1~22.04.4 [1849 kB]
-Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10-minimal amd64 3.10.12-1~22.04.4 [2245 kB]
-Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-minimal amd64 3.10.12-1~22.04.4 [812 kB]
-Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ubuntu-minimal amd64 1.481.2 [2812 B]
-Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ubuntu-standard amd64 1.481.2 [2834 B]
-Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ubuntu-wsl amd64 1.481.2 [2650 B]
-Fetched 7371 kB in 1s (14.6 MB/s)
-(Reading database ... 62497 files and directories currently installed.)
-Preparing to unpack .../0-libpython3.10_3.10.12-1~22.04.4_amd64.deb ...
-Unpacking libpython3.10:amd64 (3.10.12-1~22.04.4) over (3.10.12-1~22.04.3) ...
-Preparing to unpack .../1-python3.10_3.10.12-1~22.04.4_amd64.deb ...
-Unpacking python3.10 (3.10.12-1~22.04.4) over (3.10.12-1~22.04.3) ...
-Preparing to unpack .../2-libpython3.10-stdlib_3.10.12-1~22.04.4_amd64.deb ...
-Unpacking libpython3.10-stdlib:amd64 (3.10.12-1~22.04.4) over (3.10.12-1~22.04.3) ...
-Preparing to unpack .../3-python3.10-minimal_3.10.12-1~22.04.4_amd64.deb ...
-Unpacking python3.10-minimal (3.10.12-1~22.04.4) over (3.10.12-1~22.04.3) ...
-Preparing to unpack .../4-libpython3.10-minimal_3.10.12-1~22.04.4_amd64.deb ...
-Unpacking libpython3.10-minimal:amd64 (3.10.12-1~22.04.4) over (3.10.12-1~22.04.3) ...
-Preparing to unpack .../5-ubuntu-minimal_1.481.2_amd64.deb ...
-Unpacking ubuntu-minimal (1.481.2) over (1.481.1) ...
-Preparing to unpack .../6-ubuntu-standard_1.481.2_amd64.deb ...
-Unpacking ubuntu-standard (1.481.2) over (1.481.1) ...
-Preparing to unpack .../7-ubuntu-wsl_1.481.2_amd64.deb ...
-Unpacking ubuntu-wsl (1.481.2) over (1.481.1) ...
-Setting up ubuntu-minimal (1.481.2) ...
-Setting up ubuntu-wsl (1.481.2) ...
-Setting up ubuntu-standard (1.481.2) ...
-Setting up libpython3.10-minimal:amd64 (3.10.12-1~22.04.4) ...
-Setting up python3.10-minimal (3.10.12-1~22.04.4) ...
-Setting up libpython3.10-stdlib:amd64 (3.10.12-1~22.04.4) ...
-Setting up libpython3.10:amd64 (3.10.12-1~22.04.4) ...
-Setting up python3.10 (3.10.12-1~22.04.4) ...
-Processing triggers for man-db (2.10.2-1) ...
-Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
+Wednesday, July 10, 2024 1:45:21 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Wednesday, July 10, 2024 1:45:21 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 118ms
+Done in 1.19s.
+Wednesday, July 10, 2024 1:45:23 PM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Wednesday, July 10, 2024 1:45:23 PM
+On branch main
+Your branch is up to date with 'origin/main'.
 
-real    0m2.967s
-user    0m0.001s
-sys     0m0.007s
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-real    0m0.062s
-user    0m0.014s
-sys     0m0.055s
-remote: Enumerating objects: 1150, done.
-remote: Counting objects: 100% (1062/1062), done.
-remote: Compressing objects: 100% (661/661), done.
-remote: Total 1150 (delta 536), reused 738 (delta 385), pack-reused 88
-Receiving objects: 100% (1150/1150), 1.13 MiB | 11.54 MiB/s, done.
-Resolving deltas: 100% (550/550), completed with 52 local objects.
-From https://github.com/LadybirdBrowser/ladybird
-   e1c61d654f..bee42160c5  master     -> origin/master
-
-real    0m0.581s
-user    0m0.078s
-sys     0m0.046s
-From https://github.com/LadybirdBrowser/ladybird
- * branch                  master     -> FETCH_HEAD
-Updating e1c61d654f..bee42160c5
-Fast-forward
- .clangd                                                                                   |   6 +
- .github/FUNDING.yml                                                                       |   1 +
- .github/actions/setup/action.yml                                                          |   5 +-
- .github/workflows/ladybird-js-artifacts.yml                                               |   7 +-
- .github/workflows/lagom-template.yml                                                      |   1 +
- .github/workflows/libjs-test262.yml                                                       |   6 +-
- .gitignore                                                                                |   2 +
- .ycm_extra_conf.py                                                                        |   2 +-
- AK/Assertions.cpp                                                                         |  21 +++
- AK/Assertions.h                                                                           |  12 ++
- AK/ByteBuffer.h                                                                           |   3 +
- AK/ConstrainedStream.h                                                                    |   1 +
- AK/SourceGenerator.h                                                                      |  26 ++-
- Base/res/html/misc/gifsuite.html                                                          | 183 ------------------
- Base/res/html/misc/gifsuite_files/animated_interlaced_loop-0.png                          | Bin 789 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_interlaced_loop-1.png                          | Bin 804 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_interlaced_loop-2.png                          | Bin 814 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_interlaced_loop-3.png                          | Bin 776 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_interlaced_loop.gif                            | Bin 878 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_loop-0.png                                     | Bin 789 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_loop-1.png                                     | Bin 804 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_loop-2.png                                     | Bin 814 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_loop-3.png                                     | Bin 776 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_loop.gif                                       | Bin 873 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_loop_variable_delay-0.png                      | Bin 789 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_loop_variable_delay-1.png                      | Bin 804 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_loop_variable_delay-2.png                      | Bin 814 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_loop_variable_delay-3.png                      | Bin 776 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_loop_variable_delay.gif                        | Bin 873 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_noloop-0.png                                   | Bin 789 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_noloop-1.png                                   | Bin 804 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_noloop-2.png                                   | Bin 814 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_noloop-3.png                                   | Bin 776 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_noloop.gif                                     | Bin 854 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_firstframerestoreprev_loop-0.png   | Bin 479 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_firstframerestoreprev_loop-1.png   | Bin 315 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_firstframerestoreprev_loop-2.png   | Bin 316 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_firstframerestoreprev_loop-3.png   | Bin 315 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_firstframerestoreprev_loop.gif     | Bin 536 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_frame_norestore_loop-0.png         | Bin 479 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_frame_norestore_loop-1.png         | Bin 554 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_frame_norestore_loop-2.png         | Bin 609 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_frame_norestore_loop-3.png         | Bin 653 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_frame_norestore_loop.gif           | Bin 685 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_frame_restorebackground_loop-0.png | Bin 479 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_frame_restorebackground_loop-1.png | Bin 554 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_frame_restorebackground_loop-2.png | Bin 642 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_frame_restorebackground_loop-3.png | Bin 703 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_frame_restorebackground_loop.gif   | Bin 685 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_frame_restoreprev_loop-0.png       | Bin 479 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_frame_restoreprev_loop-1.png       | Bin 554 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_frame_restoreprev_loop-2.png       | Bin 562 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_frame_restoreprev_loop-3.png       | Bin 556 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_frame_restoreprev_loop.gif         | Bin 685 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_loop-0.png                         | Bin 479 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_loop-1.png                         | Bin 488 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_loop-2.png                         | Bin 500 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_loop-3.png                         | Bin 490 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_loop.gif                           | Bin 536 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_loop_frames_out_of_bounds-0.png    | Bin 298 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_loop_frames_out_of_bounds-1.png    | Bin 315 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_loop_frames_out_of_bounds-2.png    | Bin 329 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_loop_frames_out_of_bounds-3.png    | Bin 345 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_loop_frames_out_of_bounds.gif      | Bin 559 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_restoreprev_loop-0.png             | Bin 479 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_restoreprev_loop-1.png             | Bin 488 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_restoreprev_loop-2.png             | Bin 501 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_restoreprev_loop-3.png             | Bin 493 -> 0 bytes
- Base/res/html/misc/gifsuite_files/animated_transparent_restoreprev_loop.gif               | Bin 536 -> 0 bytes
- Base/res/html/misc/gifsuite_files/bad_lzw_data.gif                                        | Bin 1051 -> 0 bytes
- Base/res/html/misc/gifsuite_files/bkgd.png                                                | Bin 160 -> 0 bytes
- Base/res/html/misc/gifsuite_files/static_nontransparent.gif                               | Bin 678 -> 0 bytes
- Base/res/html/misc/gifsuite_files/static_nontransparent.png                               | Bin 789 -> 0 bytes
- Base/res/html/misc/gifsuite_files/static_transparent.gif                                  | Bin 341 -> 0 bytes
- Base/res/html/misc/gifsuite_files/static_transparent.png                                  | Bin 479 -> 0 bytes
- Base/res/html/misc/jpg.html                                                               |  23 ---
- Base/res/html/misc/jpgsuite_files/chroma-quartered-lena.jpg                               | Bin 25019 -> 0 bytes
- Base/res/html/misc/jpgsuite_files/horizontally-halved-lena.jpg                            | Bin 29282 -> 0 bytes
- Base/res/html/misc/jpgsuite_files/non-subsampled-lena.jpg                                 | Bin 35193 -> 0 bytes
- Base/res/html/misc/jpgsuite_files/oh-lena.jpg                                             | Bin 155145 -> 0 bytes
- Base/res/html/misc/jpgsuite_files/vertically-halved-lena.jpg                              | Bin 28566 -> 0 bytes
- Base/res/html/misc/pbmsuite.html                                                          |  17 --
- Base/res/html/misc/pbmsuite_files/buggie-ascii.pbm                                        | 318 -------------------------------
- Base/res/html/misc/pbmsuite_files/buggie-raw.pbm                                          | Bin 2917 -> 0 bytes
- Base/res/html/misc/pbmsuite_files/buggie.png                                              | Bin 13270 -> 0 bytes
- Base/res/html/misc/pngsuite_bas_png.html                                                  |  26 ---
- Base/res/html/misc/pngsuite_int_png.html                                                  |  26 ---
- Base/res/html/misc/pngsuite_siz_png.html                                                  |  47 -----
- Base/res/html/misc/welcome.html                                                           |   5 -
- Base/res/icons/128x128/app-browser-dark.png                                               | Bin 0 -> 12298 bytes
- Base/res/icons/128x128/app-browser.png                                                    | Bin 0 -> 17516 bytes
- Base/res/icons/16x16/app-browser.png                                                      | Bin 634 -> 0 bytes
- Base/res/icons/32x32/app-browser.png                                                      | Bin 1505 -> 0 bytes
- Base/res/icons/48x48/app-browser.png                                                      | Bin 0 -> 7871 bytes
- Base/res/ladybird/templates/directory.html                                                |  19 +-
- Base/res/ladybird/templates/error.html                                                    |  12 +-
- Base/res/ladybird/templates/version.html                                                  |  30 ++-
- CMakeLists.txt                                                                            |  19 +-
- Documentation/BuildInstructionsLadybird.md                                                |  24 ++-
- Documentation/EmacsConfiguration.md                                                       |  16 +-
- Documentation/HelixConfiguration.md                                                       |  14 +-
- Documentation/NvimConfiguration.md                                                        |  12 +-
- Documentation/VSCodeConfiguration.md                                                      |  13 --
- Ladybird/Android/BuildLagomTools.sh                                                       |   2 +
- Ladybird/Android/src/main/cpp/ALooperEventLoopImplementation.cpp                          |   5 +-
- Ladybird/Android/src/main/cpp/LadybirdActivity.cpp                                        |   2 +-
- Ladybird/Android/src/main/cpp/WebContentService.cpp                                       |   2 +-
- Ladybird/Android/src/main/cpp/WebViewImplementationNative.cpp                             |  19 ++
- Ladybird/Android/src/main/cpp/WebViewImplementationNative.h                               |   2 +
- Ladybird/Android/src/main/cpp/WebViewImplementationNativeJNI.cpp                          |  26 +++
- Ladybird/Android/src/main/java/org/serenityos/ladybird/LadybirdServiceConnection.kt       |   4 +-
- Ladybird/Android/src/main/java/org/serenityos/ladybird/WebView.kt                         |  18 ++
- Ladybird/Android/src/main/java/org/serenityos/ladybird/WebViewImplementation.kt           |   6 +
- Ladybird/Android/src/main/res/layout/activity_main.xml                                    |   6 +-
- Ladybird/AppKit/Application/ApplicationBridge.cpp                                         |   2 +-
- Ladybird/AppKit/Application/ApplicationDelegate.h                                         |   3 +-
- Ladybird/AppKit/Application/ApplicationDelegate.mm                                        |  26 ++-
- Ladybird/AppKit/UI/Tab.mm                                                                 |   2 +-
- Ladybird/AppKit/UI/TabController.h                                                        |   3 +-
- Ladybird/AppKit/UI/TabController.mm                                                       |  14 +-
- Ladybird/AppKit/main.mm                                                                   |   9 +-
- Ladybird/HelperProcess.cpp                                                                |  16 +-
- Ladybird/HelperProcess.h                                                                  |   2 +-
- Ladybird/Qt/Application.cpp                                                               |   4 +-
- Ladybird/Qt/Application.h                                                                 |   2 +-
- Ladybird/Qt/BrowserWindow.cpp                                                             |  47 ++---
- Ladybird/Qt/BrowserWindow.h                                                               |   6 +-
- Ladybird/Qt/RequestManagerQt.cpp                                                          |  11 +-
- Ladybird/Qt/RequestManagerQt.h                                                            |   6 +-
- Ladybird/Qt/Tab.cpp                                                                       |   3 +-
- Ladybird/Qt/TaskManagerWindow.cpp                                                         |   4 +-
- Ladybird/Qt/TaskManagerWindow.h                                                           |   2 +-
- Ladybird/Qt/WebContentView.cpp                                                            |   9 +-
- Ladybird/Qt/main.cpp                                                                      |   9 +-
- Ladybird/WebContent/main.cpp                                                              |   5 +-
- Ladybird/WebDriver/main.cpp                                                               |  12 +-
- Ladybird/WebWorker/CMakeLists.txt                                                         |  24 ++-
- Ladybird/WebWorker/main.cpp                                                               |  26 ++-
- Ladybird/cmake/AndroidExtras.cmake                                                        |   1 +
- Ladybird/cmake/ResourceFiles.cmake                                                        |  21 ++-
- Meta/CMake/common_options.cmake                                                           |   2 +
- Meta/CMake/vcpkg/base-triplets/arm64-linux.cmake                                          |   5 +
- Meta/CMake/vcpkg/base-triplets/arm64-osx.cmake                                            |   2 +
- Meta/CMake/vcpkg/base-triplets/x64-linux.cmake                                            |   2 +
- Meta/CMake/vcpkg/base-triplets/x64-osx.cmake                                              |   2 +
- Meta/CMake/vcpkg/debug-triplets/arm64-linux.cmake                                         |   2 +
- Meta/CMake/vcpkg/overlay-ports/vulkan/portfile.cmake                                      |   1 +
- Meta/CMake/vcpkg/overlay-ports/vulkan/vcpkg.json                                          |   4 +
- Meta/CMake/vcpkg/release-triplets/arm64-linux.cmake                                       |   2 +
- Meta/CMake/vcpkg/sanitizer-triplets/arm64-linux.cmake                                     |   2 +
- Meta/Lagom/CMakeLists.txt                                                                 |  43 +++--
- Meta/Lagom/Fuzzers/FuzzCSSParser.cpp                                                      |   2 +-
- Meta/Lagom/ReadMe.md                                                                      |   6 +-
- Meta/Lagom/Tools/CMakeLists.txt                                                           |  17 +-
- Meta/Lagom/Tools/CodeGenerators/LibWeb/BindingsGenerator/IDLGenerators.cpp                |   1 +
- Meta/Lagom/Tools/CodeGenerators/LibWeb/GenerateWindowOrWorkerInterfaces.cpp               |   6 +
- Meta/generate-libwasm-spec-test.py                                                        |  22 ++-
- Meta/gn/secondary/Ladybird/BUILD.gn                                                       |  19 +-
- Meta/gn/secondary/Userland/Libraries/LibWeb/HTML/BUILD.gn                                 |   1 +
- Meta/ladybird.sh                                                                          |  19 +-
- Tests/LibAudio/CMakeLists.txt                                                             |   4 -
- Tests/LibCompress/CMakeLists.txt                                                          |   3 -
- Tests/LibCore/CMakeLists.txt                                                              |   2 -
- Tests/LibGfx/CMakeLists.txt                                                               |   2 -
- Tests/LibGfx/TestImageDecoder.cpp                                                         |  62 +++++++
- Tests/LibGfx/test-inputs/avif/icc_profile.avif                                            | Bin 0 -> 5965 bytes
- Tests/LibGfx/test-inputs/avif/simple-bitdepth10.avif                                      | Bin 0 -> 1063 bytes
- Tests/LibGfx/test-inputs/avif/simple-lossless.avif                                        | Bin 0 -> 64011 bytes
- Tests/LibGfx/test-inputs/avif/simple-lossy.avif                                           | Bin 0 -> 1134 bytes
- Tests/LibJS/CMakeLists.txt                                                                |   4 -
- Tests/LibWasm/CMakeLists.txt                                                              |   1 -
- Tests/LibWasm/test-wasm.cpp                                                               |  33 +++-
- Tests/LibWeb/CMakeLists.txt                                                               |   2 -
- Tests/LibWeb/Layout/expected/abspos-box-bottom-with-max-height.txt                        |  10 +
- Tests/LibWeb/Layout/expected/block-and-inline/float-logical.txt                           |  17 ++
- Tests/LibWeb/Layout/expected/css-line-height-zero.txt                                     |  19 ++
- Tests/LibWeb/Layout/expected/dialog-open-modal.txt                                        |  20 ++
- Tests/LibWeb/Layout/expected/dialog-open-non-modal.txt                                    |  18 ++
- Tests/LibWeb/Layout/expected/top-layer.txt                                                |  10 +-
- Tests/LibWeb/Layout/input/abspos-box-bottom-with-max-height.html                          |  10 +
- Tests/LibWeb/Layout/input/block-and-inline/float-logical.html                             |  23 +++
- Tests/LibWeb/Layout/input/css-line-height-zero.html                                       |   5 +
- Tests/LibWeb/Layout/input/dialog-open-modal.html                                          |  16 ++
- Tests/LibWeb/Layout/input/dialog-open-non-modal.html                                      |   9 +
- Tests/LibWeb/Ref/meter.html                                                               |   2 +
- Tests/LibWeb/Ref/reference/images/meter-ref.png                                           | Bin 1045 -> 3696 bytes
- Tests/LibWeb/Ref/reference/webkit-text-fill-color.html                                    |   1 +
- Tests/LibWeb/Ref/webkit-text-fill-color.html                                              |   2 +
- Tests/LibWeb/Text/expected/HTML/WindowOrWorkerGlobalScope-reportError.txt                 |   6 +
- Tests/LibWeb/Text/expected/SVG/svg-className-attribute.txt                                |   1 +
- Tests/LibWeb/Text/expected/all-window-properties.txt                                      |   1 +
- Tests/LibWeb/Text/expected/css/getComputedStyle-print-all.txt                             |   3 +-
- Tests/LibWeb/Text/expected/no-window-resize-on-load.txt                                   |   1 +
- Tests/LibWeb/Text/expected/script-src-set-after-insertion.txt                             |   1 +
- Tests/LibWeb/Text/input/HTML/WindowOrWorkerGlobalScope-reportError.html                   |  18 ++
- Tests/LibWeb/Text/input/SVG/svg-className-attribute.html                                  |   8 +
- Tests/LibWeb/Text/input/no-window-resize-on-load.html                                     |  12 ++
- Tests/LibWeb/Text/input/script-src-set-after-insertion.html                               |  13 ++
- Tests/LibWeb/Text/input/script-src-set-after-insertion.js                                 |   1 +
- Tests/LibWeb/WPT/run.sh                                                                   |   1 +
- Userland/Libraries/LibCore/EventLoopImplementationUnix.cpp                                |   6 +
- Userland/Libraries/LibCore/VulkanContext.cpp                                              |   5 +-
- Userland/Libraries/LibGfx/CMakeLists.txt                                                  |   4 +-
- Userland/Libraries/LibGfx/GradientPainting.cpp                                            |   2 +-
- Userland/Libraries/LibGfx/Gradients.h                                                     |   4 +
- Userland/Libraries/LibGfx/ImageFormats/AVIFLoader.cpp                                     | 196 ++++++++++++++++++++
- Userland/Libraries/LibGfx/ImageFormats/AVIFLoader.h                                       |  38 ++++
- Userland/Libraries/LibGfx/ImageFormats/ImageDecoder.cpp                                   |   2 +
- Userland/Libraries/LibJS/Bytecode/CommonImplementations.h                                 | 875 --------------------------------------------------------------------------------------
- Userland/Libraries/LibJS/Bytecode/Executable.h                                            |   3 +
- Userland/Libraries/LibJS/Bytecode/Generator.cpp                                           |   2 +
- Userland/Libraries/LibJS/Bytecode/Generator.h                                             |   2 +
- Userland/Libraries/LibJS/Bytecode/Interpreter.cpp                                         | 916 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--
- Userland/Libraries/LibJS/Heap/GCPtr.h                                                     |   4 +-
- Userland/Libraries/LibJS/Runtime/NumberConstructor.cpp                                    |   1 +
- Userland/Libraries/LibJS/Runtime/Value.h                                                  |  15 +-
- Userland/Libraries/LibMedia/Color/ColorConverter.cpp                                      |  17 +-
- Userland/Libraries/LibMedia/PlaybackManager.cpp                                           |   4 +-
- Userland/Libraries/LibMedia/VideoFrame.cpp                                                |   5 +-
- Userland/Libraries/LibWasm/AbstractMachine/AbstractMachine.h                              |  15 +-
- Userland/Libraries/LibWasm/AbstractMachine/BytecodeInterpreter.cpp                        |   4 +-
- Userland/Libraries/LibWasm/AbstractMachine/Operators.h                                    |  34 ++--
- Userland/Libraries/LibWasm/Parser/Parser.cpp                                              |   6 +-
- Userland/Libraries/LibWasm/Types.h                                                        |   8 +-
- Userland/Libraries/LibWasm/WASI/Wasi.cpp                                                  |   3 +-
- Userland/Libraries/LibWeb/Bindings/MainThreadVM.cpp                                       |   4 +-
- Userland/Libraries/LibWeb/Bindings/MainThreadVM.h                                         |   2 +-
- Userland/Libraries/LibWeb/Bindings/PlatformObject.cpp                                     |  10 +-
- Userland/Libraries/LibWeb/CMakeLists.txt                                                  |   5 +-
- Userland/Libraries/LibWeb/CSS/ComputedValues.h                                            |   4 +
- Userland/Libraries/LibWeb/CSS/Default.css                                                 |  11 +-
- Userland/Libraries/LibWeb/CSS/Enums.json                                                  |   4 +-
- Userland/Libraries/LibWeb/CSS/Identifiers.json                                            |   2 +
- Userland/Libraries/LibWeb/CSS/Properties.json                                             |   6 +
- Userland/Libraries/LibWeb/CSS/PseudoClasses.json                                          |   3 +
- Userland/Libraries/LibWeb/CSS/ResolvedCSSStyleDeclaration.cpp                             |   2 +
- Userland/Libraries/LibWeb/CSS/SelectorEngine.cpp                                          |   9 +
- Userland/Libraries/LibWeb/CSS/StyleComputer.cpp                                           |  13 ++
- Userland/Libraries/LibWeb/CSS/StyleProperties.cpp                                         |  44 -----
- Userland/Libraries/LibWeb/CSS/StyleProperties.h                                           |   1 -
- Userland/Libraries/LibWeb/Crypto/CryptoAlgorithms.cpp                                     |  67 ++++---
- Userland/Libraries/LibWeb/Crypto/KeyAlgorithms.cpp                                        |  23 ++-
- Userland/Libraries/LibWeb/DOM/Document.cpp                                                |   5 +-
- Userland/Libraries/LibWeb/DOM/Document.h                                                  |   2 +-
- Userland/Libraries/LibWeb/DOM/Element.cpp                                                 |   4 +-
- Userland/Libraries/LibWeb/DOM/Element.h                                                   |   2 +-
- Userland/Libraries/LibWeb/Fetch/Infrastructure/HTTP/Requests.cpp                          |   4 +-
- Userland/Libraries/LibWeb/Forward.h                                                       |   2 +
- Userland/Libraries/LibWeb/HTML/CustomElements/CustomElementRegistry.cpp                   |  15 ++
- Userland/Libraries/LibWeb/HTML/CustomElements/CustomElementRegistry.h                     |   1 +
- Userland/Libraries/LibWeb/HTML/CustomElements/CustomElementRegistry.idl                   |   1 +
- Userland/Libraries/LibWeb/HTML/DedicatedWorkerGlobalScope.cpp                             |  73 ++++++++
- Userland/Libraries/LibWeb/HTML/DedicatedWorkerGlobalScope.h                               |  52 ++++++
- Userland/Libraries/LibWeb/HTML/DedicatedWorkerGlobalScope.idl                             |  15 ++
- Userland/Libraries/LibWeb/HTML/DragEvent.cpp                                              |  39 ++++
- Userland/Libraries/LibWeb/HTML/DragEvent.h                                                |  41 ++++
- Userland/Libraries/LibWeb/HTML/DragEvent.idl                                              |  14 ++
- Userland/Libraries/LibWeb/HTML/EmbedderPolicy.cpp                                         |  35 ++++
- Userland/Libraries/LibWeb/HTML/EmbedderPolicy.h                                           |  44 +++++
- Userland/Libraries/LibWeb/HTML/EventLoop/EventLoop.cpp                                    |   3 +-
- Userland/Libraries/LibWeb/HTML/EventLoop/EventLoop.h                                      |   2 +-
- Userland/Libraries/LibWeb/HTML/FormAssociatedElement.h                                    |  54 +++---
- Userland/Libraries/LibWeb/HTML/HTMLAnchorElement.cpp                                      |   4 +-
- Userland/Libraries/LibWeb/HTML/HTMLAnchorElement.h                                        |   2 +-
- Userland/Libraries/LibWeb/HTML/HTMLAreaElement.cpp                                        |   4 +-
- Userland/Libraries/LibWeb/HTML/HTMLAreaElement.h                                          |   2 +-
- Userland/Libraries/LibWeb/HTML/HTMLBaseElement.cpp                                        |   4 +-
- Userland/Libraries/LibWeb/HTML/HTMLBaseElement.h                                          |   2 +-
- Userland/Libraries/LibWeb/HTML/HTMLBodyElement.cpp                                        |   4 +-
- Userland/Libraries/LibWeb/HTML/HTMLBodyElement.h                                          |   2 +-
- Userland/Libraries/LibWeb/HTML/HTMLDetailsElement.cpp                                     |   4 +-
- Userland/Libraries/LibWeb/HTML/HTMLDetailsElement.h                                       |   2 +-
- Userland/Libraries/LibWeb/HTML/HTMLDialogElement.h                                        |   2 +
- Userland/Libraries/LibWeb/HTML/HTMLElement.cpp                                            |   4 +-
- Userland/Libraries/LibWeb/HTML/HTMLElement.h                                              |   2 +-
- Userland/Libraries/LibWeb/HTML/HTMLFormElement.cpp                                        |   4 +-
- Userland/Libraries/LibWeb/HTML/HTMLFormElement.h                                          |   2 +-
- Userland/Libraries/LibWeb/HTML/HTMLFrameSetElement.cpp                                    |   4 +-
- Userland/Libraries/LibWeb/HTML/HTMLFrameSetElement.h                                      |   2 +-
- Userland/Libraries/LibWeb/HTML/HTMLIFrameElement.cpp                                      |   4 +-
- Userland/Libraries/LibWeb/HTML/HTMLIFrameElement.h                                        |   2 +-
- Userland/Libraries/LibWeb/HTML/HTMLInputElement.cpp                                       |  57 +++++-
- Userland/Libraries/LibWeb/HTML/HTMLInputElement.h                                         |   4 +
- Userland/Libraries/LibWeb/HTML/HTMLLinkElement.cpp                                        |   9 +-
- Userland/Libraries/LibWeb/HTML/HTMLLinkElement.h                                          |   2 +-
- Userland/Libraries/LibWeb/HTML/HTMLMediaElement.cpp                                       |   4 +-
- Userland/Libraries/LibWeb/HTML/HTMLMediaElement.h                                         |   2 +-
- Userland/Libraries/LibWeb/HTML/HTMLMeterElement.cpp                                       |   4 +-
- Userland/Libraries/LibWeb/HTML/HTMLOptionElement.cpp                                      |   4 +-
- Userland/Libraries/LibWeb/HTML/HTMLOptionElement.h                                        |   2 +-
- Userland/Libraries/LibWeb/HTML/HTMLScriptElement.cpp                                      |  12 +-
- Userland/Libraries/LibWeb/HTML/HTMLScriptElement.h                                        |   2 +-
- Userland/Libraries/LibWeb/HTML/HTMLTableElement.cpp                                       |   4 +-
- Userland/Libraries/LibWeb/HTML/HTMLTableElement.h                                         |   2 +-
- Userland/Libraries/LibWeb/HTML/HTMLTextAreaElement.cpp                                    |  11 +-
- Userland/Libraries/LibWeb/HTML/HTMLTrackElement.cpp                                       |   4 +-
- Userland/Libraries/LibWeb/HTML/HTMLTrackElement.h                                         |   2 +-
- Userland/Libraries/LibWeb/HTML/HTMLVideoElement.cpp                                       |   4 +-
- Userland/Libraries/LibWeb/HTML/HTMLVideoElement.h                                         |   2 +-
- Userland/Libraries/LibWeb/HTML/MessageEvent.cpp                                           |  27 +++
- Userland/Libraries/LibWeb/HTML/MessageEvent.h                                             |   2 +
- Userland/Libraries/LibWeb/HTML/MessageEvent.idl                                           |   2 +
- Userland/Libraries/LibWeb/HTML/PolicyContainers.h                                         |   4 +-
- Userland/Libraries/LibWeb/HTML/SharedImageRequest.cpp                                     |  10 +-
- Userland/Libraries/LibWeb/HTML/Window.h                                                   |   1 +
- Userland/Libraries/LibWeb/HTML/WindowOrWorkerGlobalScope.cpp                              |  97 ++++++++++
- Userland/Libraries/LibWeb/HTML/WindowOrWorkerGlobalScope.h                                |   4 +
- Userland/Libraries/LibWeb/HTML/WindowOrWorkerGlobalScope.idl                              |   3 +-
- Userland/Libraries/LibWeb/HTML/WorkerGlobalScope.cpp                                      |  25 +--
- Userland/Libraries/LibWeb/HTML/WorkerGlobalScope.h                                        |  37 ++--
- Userland/Libraries/LibWeb/HTML/WorkerGlobalScope.idl                                      |   6 -
- Userland/Libraries/LibWeb/Layout/FormattingContext.cpp                                    |   2 +-
- Userland/Libraries/LibWeb/Layout/Node.cpp                                                 |   2 +
- Userland/Libraries/LibWeb/Loader/GeneratedPagesLoader.cpp                                 |   6 +-
- Userland/Libraries/LibWeb/Page/EventHandler.cpp                                           |  39 ++++
- Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.cpp                              |  93 ++++++++--
- Userland/Libraries/LibWeb/Painting/PaintableBox.cpp                                       |   2 +-
- Userland/Libraries/LibWeb/SVG/AttributeNames.cpp                                          |   3 +
- Userland/Libraries/LibWeb/SVG/AttributeNames.h                                            |   1 +
- Userland/Libraries/LibWeb/SVG/SVGClipPathElement.cpp                                      |   4 +-
- Userland/Libraries/LibWeb/SVG/SVGClipPathElement.h                                        |   2 +-
- Userland/Libraries/LibWeb/SVG/SVGElement.cpp                                              |  15 +-
- Userland/Libraries/LibWeb/SVG/SVGElement.h                                                |  14 +-
- Userland/Libraries/LibWeb/SVG/SVGElement.idl                                              |   7 +
- Userland/Libraries/LibWeb/SVG/SVGEllipseElement.cpp                                       |   4 +-
- Userland/Libraries/LibWeb/SVG/SVGEllipseElement.h                                         |   2 +-
- Userland/Libraries/LibWeb/SVG/SVGGeometryElement.idl                                      |   5 +-
- Userland/Libraries/LibWeb/SVG/SVGGradientElement.cpp                                      |   4 +-
- Userland/Libraries/LibWeb/SVG/SVGGradientElement.h                                        |   2 +-
- Userland/Libraries/LibWeb/SVG/SVGGraphicsElement.cpp                                      |   4 +-
- Userland/Libraries/LibWeb/SVG/SVGGraphicsElement.h                                        |   2 +-
- Userland/Libraries/LibWeb/SVG/SVGLineElement.cpp                                          |   4 +-
- Userland/Libraries/LibWeb/SVG/SVGLineElement.h                                            |   2 +-
- Userland/Libraries/LibWeb/SVG/SVGLinearGradientElement.cpp                                |   4 +-
- Userland/Libraries/LibWeb/SVG/SVGLinearGradientElement.h                                  |   2 +-
- Userland/Libraries/LibWeb/SVG/SVGMaskElement.cpp                                          |   4 +-
- Userland/Libraries/LibWeb/SVG/SVGMaskElement.h                                            |   2 +-
- Userland/Libraries/LibWeb/SVG/SVGPathElement.cpp                                          |   4 +-
- Userland/Libraries/LibWeb/SVG/SVGPathElement.h                                            |   2 +-
- Userland/Libraries/LibWeb/SVG/SVGPolygonElement.cpp                                       |   4 +-
- Userland/Libraries/LibWeb/SVG/SVGPolygonElement.h                                         |   2 +-
- Userland/Libraries/LibWeb/SVG/SVGPolylineElement.cpp                                      |   4 +-
- Userland/Libraries/LibWeb/SVG/SVGPolylineElement.h                                        |   2 +-
- Userland/Libraries/LibWeb/SVG/SVGRadialGradientElement.cpp                                |   4 +-
- Userland/Libraries/LibWeb/SVG/SVGRadialGradientElement.h                                  |   2 +-
- Userland/Libraries/LibWeb/SVG/SVGRectElement.cpp                                          |   4 +-
- Userland/Libraries/LibWeb/SVG/SVGRectElement.h                                            |   2 +-
- Userland/Libraries/LibWeb/SVG/SVGSVGElement.cpp                                           |   4 +-
- Userland/Libraries/LibWeb/SVG/SVGSVGElement.h                                             |   2 +-
- Userland/Libraries/LibWeb/SVG/SVGStopElement.cpp                                          |   4 +-
- Userland/Libraries/LibWeb/SVG/SVGStopElement.h                                            |   2 +-
- Userland/Libraries/LibWeb/SVG/SVGSymbolElement.cpp                                        |   4 +-
- Userland/Libraries/LibWeb/SVG/SVGSymbolElement.h                                          |   2 +-
- Userland/Libraries/LibWeb/SVG/SVGTextPositioningElement.cpp                               |   4 +-
- Userland/Libraries/LibWeb/SVG/SVGTextPositioningElement.h                                 |   2 +-
- Userland/Libraries/LibWeb/SVG/SVGUseElement.cpp                                           |   4 +-
- Userland/Libraries/LibWeb/SVG/SVGUseElement.h                                             |   2 +-
- Userland/Libraries/LibWeb/WebAssembly/WebAssembly.cpp                                     |  29 +--
- Userland/Libraries/LibWeb/Worker/WebWorkerClient.cpp                                      |   6 +
- Userland/Libraries/LibWeb/Worker/WebWorkerClient.h                                        |   4 +
- Userland/Libraries/LibWeb/Worker/WebWorkerClient.ipc                                      |   1 +
- Userland/Libraries/LibWeb/Worker/WebWorkerServer.ipc                                      |   2 +
- Userland/Libraries/LibWeb/idl_files.cmake                                                 |   4 +-
- Userland/Services/WebContent/main.cpp                                                     |   2 +-
- Userland/Services/WebWorker/ConnectionFromClient.cpp                                      |  14 +-
- Userland/Services/WebWorker/ConnectionFromClient.h                                        |   4 +-
- Userland/Services/WebWorker/DedicatedWorkerHost.cpp                                       |  11 +-
- Userland/Services/WebWorker/DedicatedWorkerHost.h                                         |   3 +-
- Userland/Services/WebWorker/main.cpp                                                      |   2 +-
- Userland/Utilities/headless-browser.cpp                                                   |   7 +-
- Userland/Utilities/wasm.cpp                                                               |   3 +-
- vcpkg-configuration.json                                                                  |   3 +-
- vcpkg.json                                                                                |  10 +
- 373 files changed, 3159 insertions(+), 2190 deletions(-)
- create mode 100644 .clangd
- delete mode 100644 Base/res/html/misc/gifsuite.html
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_interlaced_loop-0.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_interlaced_loop-1.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_interlaced_loop-2.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_interlaced_loop-3.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_interlaced_loop.gif
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_loop-0.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_loop-1.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_loop-2.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_loop-3.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_loop.gif
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_loop_variable_delay-0.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_loop_variable_delay-1.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_loop_variable_delay-2.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_loop_variable_delay-3.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_loop_variable_delay.gif
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_noloop-0.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_noloop-1.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_noloop-2.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_noloop-3.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_noloop.gif
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_firstframerestoreprev_loop-0.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_firstframerestoreprev_loop-1.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_firstframerestoreprev_loop-2.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_firstframerestoreprev_loop-3.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_firstframerestoreprev_loop.gif
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_frame_norestore_loop-0.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_frame_norestore_loop-1.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_frame_norestore_loop-2.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_frame_norestore_loop-3.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_frame_norestore_loop.gif
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_frame_restorebackground_loop-0.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_frame_restorebackground_loop-1.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_frame_restorebackground_loop-2.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_frame_restorebackground_loop-3.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_frame_restorebackground_loop.gif
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_frame_restoreprev_loop-0.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_frame_restoreprev_loop-1.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_frame_restoreprev_loop-2.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_frame_restoreprev_loop-3.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_frame_restoreprev_loop.gif
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_loop-0.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_loop-1.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_loop-2.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_loop-3.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_loop.gif
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_loop_frames_out_of_bounds-0.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_loop_frames_out_of_bounds-1.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_loop_frames_out_of_bounds-2.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_loop_frames_out_of_bounds-3.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_loop_frames_out_of_bounds.gif
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_restoreprev_loop-0.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_restoreprev_loop-1.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_restoreprev_loop-2.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_restoreprev_loop-3.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/animated_transparent_restoreprev_loop.gif
- delete mode 100644 Base/res/html/misc/gifsuite_files/bad_lzw_data.gif
- delete mode 100644 Base/res/html/misc/gifsuite_files/bkgd.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/static_nontransparent.gif
- delete mode 100644 Base/res/html/misc/gifsuite_files/static_nontransparent.png
- delete mode 100644 Base/res/html/misc/gifsuite_files/static_transparent.gif
- delete mode 100644 Base/res/html/misc/gifsuite_files/static_transparent.png
- delete mode 100644 Base/res/html/misc/jpg.html
- delete mode 100644 Base/res/html/misc/jpgsuite_files/chroma-quartered-lena.jpg
- delete mode 100644 Base/res/html/misc/jpgsuite_files/horizontally-halved-lena.jpg
- delete mode 100644 Base/res/html/misc/jpgsuite_files/non-subsampled-lena.jpg
- delete mode 100644 Base/res/html/misc/jpgsuite_files/oh-lena.jpg
- delete mode 100644 Base/res/html/misc/jpgsuite_files/vertically-halved-lena.jpg
- delete mode 100644 Base/res/html/misc/pbmsuite.html
- delete mode 100644 Base/res/html/misc/pbmsuite_files/buggie-ascii.pbm
- delete mode 100644 Base/res/html/misc/pbmsuite_files/buggie-raw.pbm
- delete mode 100644 Base/res/html/misc/pbmsuite_files/buggie.png
- delete mode 100644 Base/res/html/misc/pngsuite_bas_png.html
- delete mode 100644 Base/res/html/misc/pngsuite_int_png.html
- delete mode 100644 Base/res/html/misc/pngsuite_siz_png.html
- create mode 100644 Base/res/icons/128x128/app-browser-dark.png
- create mode 100644 Base/res/icons/128x128/app-browser.png
- delete mode 100644 Base/res/icons/16x16/app-browser.png
- delete mode 100644 Base/res/icons/32x32/app-browser.png
- create mode 100644 Base/res/icons/48x48/app-browser.png
- create mode 100644 Meta/CMake/vcpkg/base-triplets/arm64-linux.cmake
- create mode 100644 Meta/CMake/vcpkg/debug-triplets/arm64-linux.cmake
- create mode 100644 Meta/CMake/vcpkg/overlay-ports/vulkan/portfile.cmake
- create mode 100644 Meta/CMake/vcpkg/overlay-ports/vulkan/vcpkg.json
- create mode 100644 Meta/CMake/vcpkg/release-triplets/arm64-linux.cmake
- create mode 100644 Meta/CMake/vcpkg/sanitizer-triplets/arm64-linux.cmake
- create mode 100755 Tests/LibGfx/test-inputs/avif/icc_profile.avif
- create mode 100644 Tests/LibGfx/test-inputs/avif/simple-bitdepth10.avif
- create mode 100644 Tests/LibGfx/test-inputs/avif/simple-lossless.avif
- create mode 100644 Tests/LibGfx/test-inputs/avif/simple-lossy.avif
- create mode 100644 Tests/LibWeb/Layout/expected/abspos-box-bottom-with-max-height.txt
- create mode 100644 Tests/LibWeb/Layout/expected/block-and-inline/float-logical.txt
- create mode 100644 Tests/LibWeb/Layout/expected/css-line-height-zero.txt
- create mode 100644 Tests/LibWeb/Layout/expected/dialog-open-modal.txt
- create mode 100644 Tests/LibWeb/Layout/expected/dialog-open-non-modal.txt
- create mode 100644 Tests/LibWeb/Layout/input/abspos-box-bottom-with-max-height.html
- create mode 100644 Tests/LibWeb/Layout/input/block-and-inline/float-logical.html
- create mode 100644 Tests/LibWeb/Layout/input/css-line-height-zero.html
- create mode 100644 Tests/LibWeb/Layout/input/dialog-open-modal.html
- create mode 100644 Tests/LibWeb/Layout/input/dialog-open-non-modal.html
- create mode 100644 Tests/LibWeb/Ref/reference/webkit-text-fill-color.html
- create mode 100644 Tests/LibWeb/Ref/webkit-text-fill-color.html
- create mode 100644 Tests/LibWeb/Text/expected/HTML/WindowOrWorkerGlobalScope-reportError.txt
- create mode 100644 Tests/LibWeb/Text/expected/SVG/svg-className-attribute.txt
- create mode 100644 Tests/LibWeb/Text/expected/no-window-resize-on-load.txt
- create mode 100644 Tests/LibWeb/Text/expected/script-src-set-after-insertion.txt
- create mode 100644 Tests/LibWeb/Text/input/HTML/WindowOrWorkerGlobalScope-reportError.html
- create mode 100644 Tests/LibWeb/Text/input/SVG/svg-className-attribute.html
- create mode 100644 Tests/LibWeb/Text/input/no-window-resize-on-load.html
- create mode 100644 Tests/LibWeb/Text/input/script-src-set-after-insertion.html
- create mode 100644 Tests/LibWeb/Text/input/script-src-set-after-insertion.js
- create mode 100644 Userland/Libraries/LibGfx/ImageFormats/AVIFLoader.cpp
- create mode 100644 Userland/Libraries/LibGfx/ImageFormats/AVIFLoader.h
- delete mode 100644 Userland/Libraries/LibJS/Bytecode/CommonImplementations.h
- create mode 100644 Userland/Libraries/LibWeb/HTML/DedicatedWorkerGlobalScope.cpp
- create mode 100644 Userland/Libraries/LibWeb/HTML/DedicatedWorkerGlobalScope.h
- create mode 100644 Userland/Libraries/LibWeb/HTML/DedicatedWorkerGlobalScope.idl
- create mode 100644 Userland/Libraries/LibWeb/HTML/DragEvent.cpp
- create mode 100644 Userland/Libraries/LibWeb/HTML/DragEvent.h
- create mode 100644 Userland/Libraries/LibWeb/HTML/DragEvent.idl
- create mode 100644 Userland/Libraries/LibWeb/HTML/EmbedderPolicy.cpp
- create mode 100644 Userland/Libraries/LibWeb/HTML/EmbedderPolicy.h
-
-real    0m0.212s
-user    0m0.063s
-sys     0m0.039s
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-real    0m0.038s
-user    0m0.014s
-sys     0m0.022s
-Wed Jul 10 13:42:13 EDT 2024
-~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
-ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
-[0/2] Re-checking globbed directories...
-[1/2] Re-running CMake...
--- Running vcpkg install
-Detecting compiler hash for triplet x64-linux...
-Compiler found: /usr/bin/clang++-17
-The following packages will be built and installed:
-  * dav1d:x64-linux@1.4.0 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/dav1d/0349d1196602b2983b1171647b30b5a9379920c6
-    libavif[core,dav1d]:x64-linux@1.0.4#1 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libavif/5464a231b3a83e3d8a076b339d93c5247d04b36b
-  * libyuv:x64-linux@1857 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libyuv/ee4cbd8592c2d5f3fd77c1478b679bc00671b316
-    vulkan:x64-linux@2023-12-17 -- /home/kushal/src/ladybird/Meta/CMake/vcpkg/overlay-ports/vulkan
-Additional packages (*) will be modified to complete this operation.
-Restored 0 package(s) from /home/kushal/.cache/vcpkg/archives in 375 us. Use --debug to see more details.
-Installing 1/4 dav1d:x64-linux@1.4.0...
-Building dav1d:x64-linux@1.4.0...
-/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/dav1d/0349d1196602b2983b1171647b30b5a9379920c6: info: installing overlay port from here
--- Found Python version '3.10.12 at /usr/bin/python3'
--- Using meson: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/tools/meson-1.3.2-6f83ac/meson.py
--- Downloading https://code.videolan.org/videolan/dav1d/-/archive/1.4.0/dav1d-1.4.0.tar.gz -> videolan-dav1d-1.4.0.tar.gz...
--- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/videolan-dav1d-1.4.0.tar.gz
--- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/dav1d/src/1.4.0-ddc1ddf3b5.clean
-CMake Error at scripts/cmake/vcpkg_find_acquire_program.cmake:166 (message):
-  Could not find nasm.  Please install it via your package manager:
-
-      sudo apt-get install nasm
-Call Stack (most recent call first):
-  buildtrees/versioning_/versions/dav1d/0349d1196602b2983b1171647b30b5a9379920c6/portfile.cmake:9 (vcpkg_find_acquire_program)
-  scripts/ports.cmake:191 (include)
-
-
-error: building dav1d:x64-linux failed with: BUILD_FAILED
-Elapsed time to handle dav1d:x64-linux: 1.3 s
-Please ensure you're using the latest port files with `git pull` and `vcpkg update`.
-Then check for known issues at:
-  https://github.com/microsoft/vcpkg/issues?q=is%3Aissue+is%3Aopen+in%3Atitle+dav1d
-You can submit a new issue at:
-  https://github.com/microsoft/vcpkg/issues/new?title=[dav1d]+Build+error+on+x64-linux&body=Copy+issue+body+from+%2Fhome%2Fkushal%2Fsrc%2Fladybird%2FBuild%2Fladybird%2Fvcpkg_installed%2Fvcpkg%2Fissue_body.md
-
--- Running vcpkg install - failed
-CMake Error at Toolchain/Tarballs/vcpkg/scripts/buildsystems/vcpkg.cmake:899 (message):
-  vcpkg install failed.  See logs for more information:
-  /home/kushal/src/ladybird/Build/ladybird/vcpkg-manifest-install.log
-Call Stack (most recent call first):
-  Build/ladybird/CMakeFiles/3.26.4/CMakeSystem.cmake:6 (include)
-  CMakeLists.txt:10 (project)
-
-
--- Configuring incomplete, errors occurred!
-FAILED: build.ninja
-/home/kushal/src/ladybird/Toolchain/Local/cmake/bin/cmake --regenerate-during-build -S/home/kushal/src/ladybird -B/home/kushal/src/ladybird/Build/ladybird
-ninja: error: rebuilding 'build.ninja': subcommand failed
-
-real    0m7.726s
-user    0m0.378s
-sys     0m0.668s
-Wed Jul 10 13:42:21 EDT 2024
-kushal@kus2023:~/src/ladybird$
-kushal@kus2023:~/src/ladybird$ time sudo apt install autoconf autoconf-archive automake build-essential cmake libavcodec-dev libgl1-mesa-dev nasm ninja-build qt6-base-dev qt6-tools-dev-tools qt6-multimedia-dev ccache fonts-liberation2 zip unzip curl tar libssl-dev
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-autoconf is already the newest version (2.71-2).
-automake is already the newest version (1:1.16.5-1.3).
-build-essential is already the newest version (12.9ubuntu3).
-fonts-liberation2 is already the newest version (2.1.5-1).
-zip is already the newest version (3.0-12build2).
-autoconf-archive is already the newest version (20210219-2.1).
-ccache is already the newest version (4.5.1-1).
-ninja-build is already the newest version (1.10.1-1).
-qt6-multimedia-dev is already the newest version (6.2.4-1).
-qt6-tools-dev-tools is already the newest version (6.2.4-1).
-cmake is already the newest version (3.22.1-1ubuntu1.22.04.2).
-curl is already the newest version (7.81.0-1ubuntu1.16).
-libgl1-mesa-dev is already the newest version (23.2.1-1ubuntu3.1~22.04.2).
-libssl-dev is already the newest version (3.0.2-0ubuntu1.16).
-tar is already the newest version (1.34+dfsg-1ubuntu0.1.22.04.2).
-unzip is already the newest version (6.0-26ubuntu3.2).
-libavcodec-dev is already the newest version (7:4.4.2-0ubuntu0.22.04.1).
-qt6-base-dev is already the newest version (6.2.4+dfsg-2ubuntu1.1).
-The following NEW packages will be installed:
-  nasm
-0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
-Need to get 375 kB of archives.
-After this operation, 3345 kB of additional disk space will be used.
-Do you want to continue? [Y/n]
-Get:1 http://archive.ubuntu.com/ubuntu jammy/universe amd64 nasm amd64 2.15.05-1 [375 kB]
-Fetched 375 kB in 1s (569 kB/s)
-Selecting previously unselected package nasm.
-(Reading database ... 62497 files and directories currently installed.)
-Preparing to unpack .../nasm_2.15.05-1_amd64.deb ...
-Unpacking nasm (2.15.05-1) ...
-Setting up nasm (2.15.05-1) ...
-Processing triggers for man-db (2.10.2-1) ...
-
-real    0m2.705s
-user    0m0.001s
-sys     0m0.006s
-kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull originmaster; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
-Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
-Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
-Hit:3 http://security.ubuntu.com/ubuntu jammy-security InRelease
-Hit:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
-Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-All packages are up to date.
-
-real    0m1.295s
-user    0m0.009s
-sys     0m0.000s
-Listing... Done
-
-real    0m0.170s
-user    0m0.138s
-sys     0m0.020s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
-  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
-  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
-  libavfilter7
-Learn more about Ubuntu Pro at https://ubuntu.com/pro
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-
-real    0m0.312s
-user    0m0.005s
-sys     0m0.000s
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-real    0m0.042s
-user    0m0.018s
-sys     0m0.028s
-
-real    0m0.148s
-user    0m0.017s
-sys     0m0.013s
-From https://github.com/LadybirdBrowser/ladybird
- * branch                  master     -> FETCH_HEAD
+nothing to commit, working tree clean
+Wednesday, July 10, 2024 1:45:23 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
 Already up to date.
+Wednesday, July 10, 2024 1:45:23 PM
+Everything up-to-date
+Wednesday, July 10, 2024 1:45:24 PM
 
-real    0m0.182s
-user    0m0.018s
-sys     0m0.014s
-On branch master
-Your branch is up to date with 'origin/master'.
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
+Wednesday, July 10, 2024 1:45:32 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Wednesday, July 10, 2024 1:45:33 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 99ms
+Done in 0.79s.
+Wednesday, July 10, 2024 1:45:34 PM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Wednesday, July 10, 2024 1:45:34 PM
+[main 136e640] build application
+ 2 files changed, 1464 insertions(+), 420 deletions(-)
+Wednesday, July 10, 2024 1:45:34 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Wednesday, July 10, 2024 1:45:34 PM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 9.24 KiB | 727.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   cfa4b11..136e640  main -> main
+Wednesday, July 10, 2024 1:45:36 PM
 
-nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-real    0m0.013s
-user    0m0.000s
-sys     0m0.013s
-Wed Jul 10 13:46:10 EDT 2024
-~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
-ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
-[0/2] Re-checking globbed directories...
-[1/2] Re-running CMake...
--- Running vcpkg install
-Detecting compiler hash for triplet x64-linux...
-Compiler found: /usr/bin/clang++-17
-The following packages will be built and installed:
-  * dav1d:x64-linux@1.4.0 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/dav1d/0349d1196602b2983b1171647b30b5a9379920c6
-    libavif[core,dav1d]:x64-linux@1.0.4#1 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libavif/5464a231b3a83e3d8a076b339d93c5247d04b36b
-  * libyuv:x64-linux@1857 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libyuv/ee4cbd8592c2d5f3fd77c1478b679bc00671b316
-    vulkan:x64-linux@2023-12-17 -- /home/kushal/src/ladybird/Meta/CMake/vcpkg/overlay-ports/vulkan
-Additional packages (*) will be modified to complete this operation.
-Restored 0 package(s) from /home/kushal/.cache/vcpkg/archives in 6.71 us. Use --debug to see more details.
-Installing 1/4 dav1d:x64-linux@1.4.0...
-Building dav1d:x64-linux@1.4.0...
-/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/dav1d/0349d1196602b2983b1171647b30b5a9379920c6: info: installing overlay port from here
--- Found Python version '3.10.12 at /usr/bin/python3'
--- Using meson: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/tools/meson-1.3.2-6f83ac/meson.py
--- Using cached videolan-dav1d-1.4.0.tar.gz.
--- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/dav1d/src/1.4.0-ddc1ddf3b5.clean. Use --editable to skip cleaning for the packages you specify.
--- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/videolan-dav1d-1.4.0.tar.gz
--- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/dav1d/src/1.4.0-ddc1ddf3b5.clean
--- Configuring x64-linux-dbg
--- Getting CMake variables for x64-linux-dbg
--- Getting CMake variables for x64-linux-rel
--- Configuring x64-linux-dbg done
--- Configuring x64-linux-rel
--- Configuring x64-linux-rel done
--- Package x64-linux-dbg
--- Package x64-linux-rel
--- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/dav1d_x64-linux/lib/pkgconfig/dav1d.pc
--- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/dav1d_x64-linux/debug/lib/pkgconfig/dav1d.pc
--- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/dav1d_x64-linux/share/dav1d/usage
--- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/dav1d_x64-linux/share/dav1d/copyright
--- Performing post-build validation
-Stored binaries in 1 destinations in 234 ms.
-Elapsed time to handle dav1d:x64-linux: 39 s
-dav1d:x64-linux package ABI: 8c6575fbd25f7bc1b12e59d43140a265509541e40bd043c957315c69b37e8c51
-Installing 2/4 libyuv:x64-linux@1857...
-Building libyuv:x64-linux@1857...
-/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libyuv/ee4cbd8592c2d5f3fd77c1478b679bc00671b316: info: installing overlay port from here
--- Fetching https://chromium.googlesource.com/libyuv/libyuv 0faf8dd0e004520a61a603a4d2996d5ecc80dc3f...
--- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/libyuv-0faf8dd0e004520a61a603a4d2996d5ecc80dc3f.tar.gz
--- Applying patch fix-cmakelists.patch
--- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libyuv/src/5ecc80dc3f-eb55e29413.clean
--- Configuring x64-linux
--- Building x64-linux-dbg
--- Building x64-linux-rel
--- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libyuv_x64-linux/share/libyuv/copyright
--- Getting CMake variables for x64-linux
--- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libyuv_x64-linux/share/libyuv/usage
--- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libyuv_x64-linux/debug/tools/yuvconvert' (From '' -> To '$ORIGIN:$ORIGIN/../lib')
--- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libyuv_x64-linux/tools/yuvconvert' (From '' -> To '$ORIGIN:$ORIGIN/../lib')
--- Performing post-build validation
-Stored binaries in 1 destinations in 117 ms.
-Elapsed time to handle libyuv:x64-linux: 10 s
-libyuv:x64-linux package ABI: f923f2e2ac72a7bb968a3dd6ca0767c7c35c5c080696004829c791d8749fea90
-Installing 3/4 libavif[core,dav1d]:x64-linux@1.0.4#1...
-Building libavif[core,dav1d]:x64-linux@1.0.4#1...
-/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libavif/5464a231b3a83e3d8a076b339d93c5247d04b36b: info: installing overlay port from here
--- Downloading https://github.com/AOMediaCodec/libavif/archive/v1.0.4.tar.gz -> AOMediaCodec-libavif-v1.0.4.tar.gz...
--- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/AOMediaCodec-libavif-v1.0.4.tar.gz
--- Applying patch disable-source-utf8.patch
--- Applying patch find-dependency.patch
--- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libavif/src/v1.0.4-d3bdd0bed1.clean
--- Configuring x64-linux
--- Building x64-linux-dbg
--- Building x64-linux-rel
--- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libavif_x64-linux/lib/pkgconfig/libavif.pc
--- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libavif_x64-linux/debug/lib/pkgconfig/libavif.pc
--- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libavif_x64-linux/share/libavif/copyright
--- Performing post-build validation
-Stored binaries in 1 destinations in 36 ms.
-Elapsed time to handle libavif:x64-linux: 4.9 s
-libavif:x64-linux package ABI: 440fcde81f8803c936726b270244537d2f567157c0a600619a3732fea9325030
-Installing 4/4 vulkan:x64-linux@2023-12-17...
-Building vulkan:x64-linux@2023-12-17...
-/home/kushal/src/ladybird/Meta/CMake/vcpkg/overlay-ports/vulkan: info: installing overlay port from here
--- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
-Stored binaries in 1 destinations in 1.86 ms.
-Elapsed time to handle vulkan:x64-linux: 13.6 ms
-vulkan:x64-linux package ABI: 5e7a23ff4c3c34dc0fda9f965418b76d02c8fa35307fc19b53768ac65d3c4cf9
-Total install time: 54 s
--- Running vcpkg install - done
--- Found the following ICU libraries:
---   data (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicudata.a
---   i18n (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicui18n.a
---   uc (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicuuc.a
--- Found ICU: /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/include (found suitable version "74.2", minimum required is "74")
--- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
--- Found WrapVulkanHeaders: /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/include
--- Configuring done (84.3s)
--- Generating done (0.4s)
--- Build files have been written to: /home/kushal/src/ladybird/Build/ladybird
-[0/2] Re-checking globbed directories...
-[2492/2492] Linking CXX executable bin/Ladybird
-QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
-qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
-861.281 WebContent(16705): ResourceLoader: Failed load of: "https://fromnepal.github.io/vite.svg", Error: Load failed: 404, Duration: 60ms
-861.341 WebContent(16705): No property (from 4 properties) matched Token: Ident: auto
-861.341 WebContent(16705):     padding-top
-861.341 WebContent(16705):     padding-right
-861.341 WebContent(16705):     padding-bottom
-861.341 WebContent(16705):     padding-left
-862.441 WebContent(16705): (js log) "Visit data saved:" ""Message received at 7/10/2024 5:55:28 PM from IP: 70.104.195.206.""
-862.941 WebContent(16705): (js log) "Verification successful, retrieved data:" Object{ "id": 281, "dataKey": "visit2024-07-10-13-55-29", "data": "{"timestamp":"2024-07-10-13-55-29","userAgent":"Mozilla/5.0 (Linux; x86_64) Ladybird/1.0"}", "referer": "https://fromnepal.github.io/", "ipAddress": "70.104.195.206", "createdAt": "2024-07-10T17:55:28.159565Z" }
-2388.010 WebContent(16705): HTMLScriptElement: Refusing to run classic script because it has the nomodule attribute.
-2388.430 WebContent(16705): No property (from 4 properties) matched Function: env(safe-area-inset-top)
-2388.430 WebContent(16705):     padding-top
-2388.430 WebContent(16705):     padding-right
-2388.430 WebContent(16705):     padding-bottom
-2388.430 WebContent(16705):     padding-left
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-2389.060 WebContent(16705): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
-2389.410 RequestServer(16670:16700): ConnectionCache: Connection to https://improving.duckduckgo.com/t/page_home_impression?5174268&b=mozilla&d=d&l=en&p=linux&atb=v438-1&pre_va=_&pre_atbva=_&atbi=true&i=false&ak=false&ax=false failed: connect: Connection refused (errno=111)
-2389.410 RequestServer(16670:16700): Request with a null socket finished for URL https://improving.duckduckgo.com/t/page_home_impression?5174268&b=mozilla&d=d&l=en&p=linux&atb=v438-1&pre_va=_&pre_atbva=_&atbi=true&i=false&ak=false&ax=false
-2389.470 WebContent(16705): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/page_home_impression?5174268&b=mozilla&d=d&l=en&p=linux&atb=v438-1&pre_va=_&pre_atbva=_&atbi=true&i=false&ak=false&ax=false", Error: Load failed, Duration: 90ms
-2390.550 RequestServer(16670:16690): Request with a null socket finished for URL https://improving.duckduckgo.com/t/page_home_searchbox_suggest?107487&b=mozilla&d=d&l=en&p=linux&atb=v438-1&pre_va=_&pre_atbva=_&atbi=true&i=false&ak=false&ax=false
-2390.570 WebContent(16705): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/page_home_searchbox_suggest?107487&b=mozilla&d=d&l=en&p=linux&atb=v438-1&pre_va=_&pre_atbva=_&atbi=true&i=false&ak=false&ax=false", Error: Load failed, Duration: 60ms
-2395.880 WebContent(16705): HTMLScriptElement: Refusing to run classic script because it has the nomodule attribute.
-2395.910 RequestServer(16670:16702): EnsureConnection: Pre-connect to https://links.duckduckgo.com/
-2397.130 WebContent(16705): HTMLScriptElement: Refusing to run classic script because it has the nomodule attribute.
-2397.130 WebContent(16705): HTMLScriptElement: Refusing to run classic script because it has the nomodule attribute.
-2398.230 WebContent(16705): Failed to parse font: Automatic format detection failed
-2399.810 RequestServer(16670:16703): ConnectionCache: Connection to https://improving.duckduckgo.com/t/apss_f?8438792&preloaded=1&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckbarexp=b&duckchat_alpha=b&image_exp=b&litexp=a&localexp=b&locstr_exp=b&msvrtexp=b&product_ad_extensions_exp=b&useclsexp=a failed: connect: Connection refused (errno=111)
-2399.810 RequestServer(16670:16703): Request with a null socket finished for URL https://improving.duckduckgo.com/t/apss_f?8438792&preloaded=1&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckbarexp=b&duckchat_alpha=b&image_exp=b&litexp=a&localexp=b&locstr_exp=b&msvrtexp=b&product_ad_extensions_exp=b&useclsexp=a
-2400.010 RequestServer(16670:16703): Request with a null socket finished for URL https://improving.duckduckgo.com/t/ias_web?6471274&fromWebTab=1&initialState=active&timeSincePageLoad=183&timeSinceDeepStarted=35&timeSinceDeepFinished=0&q=copy%20on%20write%20wikipedia&ct=US&d=d&kl=wt-wt&rl=us-en&blay=w6RelatedQnA1w19r1,w1&dsig=nlp_qa:m,wikinlp:l&isig=about:m&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckbarexp=b&duckchat_alpha=b&image_exp=b&litexp=a&localexp=b&locstr_exp=b&msvrtexp=b&product_ad_extensions_exp=b&useclsexp=a
-2400.050 RequestServer(16670:16699): ConnectionCache: Connection to https://improving.duckduckgo.com/t/ias_products?9066328&fromWebTab=1&initialState=inactive&timeSincePageLoad=185&timeSinceDeepStarted=37&timeSinceDeepFinished=0&q=copy%20on%20write%20wikipedia&ct=US&d=d&kl=wt-wt&rl=us-en&blay=w6RelatedQnA1w19r1,w1&dsig=nlp_qa:m,wikinlp:l&isig=about:m&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckbarexp=b&duckchat_alpha=b&image_exp=b&litexp=a&localexp=b&locstr_exp=b&msvrtexp=b&product_ad_extensions_exp=b&useclsexp=a failed: connect: Connection refused (errno=111)
-2400.050 RequestServer(16670:16699): Request with a null socket finished for URL https://improving.duckduckgo.com/t/ias_products?9066328&fromWebTab=1&initialState=inactive&timeSincePageLoad=185&timeSinceDeepStarted=37&timeSinceDeepFinished=0&q=copy%20on%20write%20wikipedia&ct=US&d=d&kl=wt-wt&rl=us-en&blay=w6RelatedQnA1w19r1,w1&dsig=nlp_qa:m,wikinlp:l&isig=about:m&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckbarexp=b&duckchat_alpha=b&image_exp=b&litexp=a&localexp=b&locstr_exp=b&msvrtexp=b&product_ad_extensions_exp=b&useclsexp=a
-2400.060 WebContent(16705): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/apss_f?8438792&preloaded=1&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckbarexp=b&duckchat_alpha=b&image_exp=b&litexp=a&localexp=b&locstr_exp=b&msvrtexp=b&product_ad_extensions_exp=b&useclsexp=a", Error: Load failed, Duration: 310ms
-2400.060 WebContent(16705): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/ias_web?6471274&fromWebTab=1&initialState=active&timeSincePageLoad=183&timeSinceDeepStarted=35&timeSinceDeepFinished=0&q=copy%20on%20write%20wikipedia&ct=US&d=d&kl=wt-wt&rl=us-en&blay=w6RelatedQnA1w19r1,w1&dsig=nlp_qa:m,wikinlp:l&isig=about:m&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckbarexp=b&duckchat_alpha=b&image_exp=b&litexp=a&localexp=b&locstr_exp=b&msvrtexp=b&product_ad_extensions_exp=b&useclsexp=a", Error: Load failed, Duration: 80ms
-2400.060 WebContent(16705): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/ias_products?9066328&fromWebTab=1&initialState=inactive&timeSincePageLoad=185&timeSinceDeepStarted=37&timeSinceDeepFinished=0&q=copy%20on%20write%20wikipedia&ct=US&d=d&kl=wt-wt&rl=us-en&blay=w6RelatedQnA1w19r1,w1&dsig=nlp_qa:m,wikinlp:l&isig=about:m&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckbarexp=b&duckchat_alpha=b&image_exp=b&litexp=a&localexp=b&locstr_exp=b&msvrtexp=b&product_ad_extensions_exp=b&useclsexp=a", Error: Load failed, Duration: 70ms
-2400.250 RequestServer(16670:16690): Request with a null socket finished for URL https://improving.duckduckgo.com/t/ias_wikinlp?4995092&fromWebTab=1&initialState=inactive&timeSincePageLoad=567&timeSinceDeepStarted=419&timeSinceDeepFinished=0&q=copy%20on%20write%20wikipedia&ct=US&d=d&kl=wt-wt&rl=us-en&blay=w6RelatedQnA1w19r1,w1&dsig=nlp_qa:m,wikinlp:l&isig=about:m&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckbarexp=b&duckchat_alpha=b&image_exp=b&litexp=a&localexp=b&locstr_exp=b&msvrtexp=b&product_ad_extensions_exp=b&useclsexp=a
-2400.250 RequestServer(16670:16696): ConnectionCache: Connection to https://improving.duckduckgo.com/t/adsummary?7125904&page=1&mainline_ad=0&mainline_products=0&mainline_products_middle=0&mainline_autoads=0&mainline_toursactivities=0&mainline_creditcards=0&sidebar_ad=0&sidebar_products=0&sidebar_products_middle=0&sidebar_autoads=0&sidebar_toursactivities=0&sidebar_creditcards=0&blay=w6RelatedQnA1w19r1,w1&dsig=nlp_qa:m,wikinlp:l&isig=about:m&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckbarexp=b&duckchat_alpha=b&image_exp=b&litexp=a&localexp=b&locstr_exp=b&msvrtexp=b&product_ad_extensions_exp=b&useclsexp=a failed: connect: Connection refused (errno=111)
-2400.250 RequestServer(16670:16696): Request with a null socket finished for URL https://improving.duckduckgo.com/t/adsummary?7125904&page=1&mainline_ad=0&mainline_products=0&mainline_products_middle=0&mainline_autoads=0&mainline_toursactivities=0&mainline_creditcards=0&sidebar_ad=0&sidebar_products=0&sidebar_products_middle=0&sidebar_autoads=0&sidebar_toursactivities=0&sidebar_creditcards=0&blay=w6RelatedQnA1w19r1,w1&dsig=nlp_qa:m,wikinlp:l&isig=about:m&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckbarexp=b&duckchat_alpha=b&image_exp=b&litexp=a&localexp=b&locstr_exp=b&msvrtexp=b&product_ad_extensions_exp=b&useclsexp=a
-2400.320 WebContent(16705): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/ias_wikinlp?4995092&fromWebTab=1&initialState=inactive&timeSincePageLoad=567&timeSinceDeepStarted=419&timeSinceDeepFinished=0&q=copy%20on%20write%20wikipedia&ct=US&d=d&kl=wt-wt&rl=us-en&blay=w6RelatedQnA1w19r1,w1&dsig=nlp_qa:m,wikinlp:l&isig=about:m&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckbarexp=b&duckchat_alpha=b&image_exp=b&litexp=a&localexp=b&locstr_exp=b&msvrtexp=b&product_ad_extensions_exp=b&useclsexp=a", Error: Load failed, Duration: 110ms
-2400.320 WebContent(16705): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/adsummary?7125904&page=1&mainline_ad=0&mainline_products=0&mainline_products_middle=0&mainline_autoads=0&mainline_toursactivities=0&mainline_creditcards=0&sidebar_ad=0&sidebar_products=0&sidebar_products_middle=0&sidebar_autoads=0&sidebar_toursactivities=0&sidebar_creditcards=0&blay=w6RelatedQnA1w19r1,w1&dsig=nlp_qa:m,wikinlp:l&isig=about:m&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckbarexp=b&duckchat_alpha=b&image_exp=b&litexp=a&localexp=b&locstr_exp=b&msvrtexp=b&product_ad_extensions_exp=b&useclsexp=a", Error: Load failed, Duration: 100ms
-2400.450 RequestServer(16670:16691): Request with a null socket finished for URL https://improving.duckduckgo.com/t/dev?4909271&fsig=web%3An%2Cimages%3An%2Cvideos%3An%2Cnews%3An%2Cmaps_expanded%3An%2Cproducts%3An%2Cchat%3An%2Cabout%3Am%2Crelated_searches%3An%2Cwikinlp%3Al%2Cqa%3Al&nerrors=0&ntimeouts=0&nconflicts=2&nextras=1&nsuperseded=0&pole=about&wide=0&extras=wikinlp&mainline=w10r1w15&sidebar=qa1&conflicts=about%2Cwikinlp&nshifts=1&shifts=qa%3Ann-1ss0&d=related_searches%3Amodule%3Amainline%3Aslotted%3A0%2Cabout%3Amodule%3Asidebar%3Atriggering%3A0%2Cqa%3Amodule%3Asidebar%3Atriggering%3A0&q=copy%20on%20write%20wikipedia&serp_return=0&organic_above_fold=1&blay=w6RelatedQnA1w19r1,w1&dsig=nlp_qa:m,wikinlp:l&isig=about:m&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckbarexp=b&duckchat_alpha=b&image_exp=b&litexp=a&localexp=b&locstr_exp=b&msvrtexp=b&product_ad_extensions_exp=b&useclsexp=a
-2400.490 WebContent(16705): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/dev?4909271&fsig=web%3An%2Cimages%3An%2Cvideos%3An%2Cnews%3An%2Cmaps_expanded%3An%2Cproducts%3An%2Cchat%3An%2Cabout%3Am%2Crelated_searches%3An%2Cwikinlp%3Al%2Cqa%3Al&nerrors=0&ntimeouts=0&nconflicts=2&nextras=1&nsuperseded=0&pole=about&wide=0&extras=wikinlp&mainline=w10r1w15&sidebar=qa1&conflicts=about%2Cwikinlp&nshifts=1&shifts=qa%3Ann-1ss0&d=related_searches%3Amodule%3Amainline%3Aslotted%3A0%2Cabout%3Amodule%3Asidebar%3Atriggering%3A0%2Cqa%3Amodule%3Asidebar%3Atriggering%3A0&q=copy%20on%20write%20wikipedia&serp_return=0&organic_above_fold=1&blay=w6RelatedQnA1w19r1,w1&dsig=nlp_qa:m,wikinlp:l&isig=about:m&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckbarexp=b&duckchat_alpha=b&image_exp=b&litexp=a&localexp=b&locstr_exp=b&msvrtexp=b&product_ad_extensions_exp=b&useclsexp=a", Error: Load failed, Duration: 60ms
+Wednesday, July 10, 2024 1:46:03 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Wednesday, July 10, 2024 1:46:03 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 98ms
+Done in 0.79s.
+Wednesday, July 10, 2024 1:46:04 PM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Wednesday, July 10, 2024 1:46:04 PM
+[main 93551d8] build application
+ 2 files changed, 80 insertions(+)
+Wednesday, July 10, 2024 1:46:04 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Wednesday, July 10, 2024 1:46:05 PM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.09 KiB | 1.09 MiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   136e640..93551d8  main -> main
+Wednesday, July 10, 2024 1:46:06 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Wednesday, July 10, 2024 1:55:09 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Wednesday, July 10, 2024 1:55:10 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 129ms
+Done in 1.04s.
+Wednesday, July 10, 2024 1:55:11 PM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Wednesday, July 10, 2024 1:55:11 PM
+[main e6c0d71] build application
+ 2 files changed, 334 insertions(+)
+Wednesday, July 10, 2024 1:55:11 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Wednesday, July 10, 2024 1:55:12 PM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 2.29 KiB | 2.29 MiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   93551d8..e6c0d71  main -> main
+Wednesday, July 10, 2024 1:55:13 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Wednesday, July 10, 2024 1:59:34 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Wednesday, July 10, 2024 1:59:34 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 123ms
+Done in 1.05s.
+Wednesday, July 10, 2024 1:59:35 PM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Wednesday, July 10, 2024 1:59:35 PM
+[main 374a046] build application
+ 2 files changed, 16 insertions(+)
+Wednesday, July 10, 2024 1:59:35 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Wednesday, July 10, 2024 1:59:36 PM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 900 bytes | 900.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   e6c0d71..374a046  main -> main
+Wednesday, July 10, 2024 1:59:37 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Wednesday, July 10, 2024 2:19:08 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Wednesday, July 10, 2024 2:19:08 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 120ms
+Done in 1.11s.
+Wednesday, July 10, 2024 2:19:09 PM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Wednesday, July 10, 2024 2:19:09 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Wednesday, July 10, 2024 2:19:09 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Wednesday, July 10, 2024 2:19:10 PM
+Everything up-to-date
+Wednesday, July 10, 2024 2:19:10 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal>
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Wednesday, July 10, 2024 2:19:47 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Wednesday, July 10, 2024 2:19:48 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 100ms
+Done in 0.80s.
+Wednesday, July 10, 2024 2:19:49 PM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Wednesday, July 10, 2024 2:19:49 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Wednesday, July 10, 2024 2:19:49 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Wednesday, July 10, 2024 2:19:49 PM
+Everything up-to-date
+Wednesday, July 10, 2024 2:19:50 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Wednesday, July 10, 2024 2:20:18 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Wednesday, July 10, 2024 2:20:18 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 100ms
+Done in 0.80s.
+Wednesday, July 10, 2024 2:20:19 PM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Wednesday, July 10, 2024 2:20:19 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Wednesday, July 10, 2024 2:20:19 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Wednesday, July 10, 2024 2:20:20 PM
+Everything up-to-date
+Wednesday, July 10, 2024 2:20:20 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --restrict-filenames --add-metadata -i -o "%(title).100s.%(ext)s" "https://www.youtube.com/watch?v=U_A3_XSnbAs"; date;
+
+Wednesday, July 10, 2024 2:24:26 PM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Wednesday, July 10, 2024 2:24:26 PM
+[youtube] Extracting URL: https://www.youtube.com/watch?v=U_A3_XSnbAs
+[youtube] U_A3_XSnbAs: Downloading webpage
+[youtube] U_A3_XSnbAs: Downloading ios player API JSON
+[youtube] U_A3_XSnbAs: Downloading m3u8 information
+[info] U_A3_XSnbAs: Downloading 1 format(s): 303+251
+[download] Destination: Are_Minions_Full_of_Piss.f303.webm
+[download]  12.1% of   81.92MiB at   11.19MiB/s ETA 00:06ERROR: unable to download video data: HTTP Error 403: Forbidden
+Wednesday, July 10, 2024 2:24:31 PM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded>
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded>
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --restrict-filenames --add-metadata -i -o
+ "%(title).100s.%(ext)s" "https://www.youtube.com/watch?v=U_A3_XSnbAs"; date;
+
+Wednesday, July 10, 2024 2:25:50 PM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Wednesday, July 10, 2024 2:25:50 PM
+[youtube] Extracting URL: https://www.youtube.com/watch?v=U_A3_XSnbAs
+[youtube] U_A3_XSnbAs: Downloading webpage
+[youtube] U_A3_XSnbAs: Downloading ios player API JSON
+[youtube] U_A3_XSnbAs: Downloading m3u8 information
+[info] U_A3_XSnbAs: Downloading 1 format(s): 303+251
+[download] Resuming download at byte 10389118
+[download] Destination: Are_Minions_Full_of_Piss.f303.webm
+[download] 100% of   81.92MiB in 00:00:05 at 15.38MiB/s
+[download] Destination: Are_Minions_Full_of_Piss.f251.webm
+[download] 100% of    3.93MiB in 00:00:00 at 12.19MiB/s
+[Merger] Merging formats into "Are_Minions_Full_of_Piss.webm"
+Deleting original file Are_Minions_Full_of_Piss.f303.webm (pass -k to keep)
+Deleting original file Are_Minions_Full_of_Piss.f251.webm (pass -k to keep)
+[Metadata] Adding metadata to "Are_Minions_Full_of_Piss.webm"
+Wednesday, July 10, 2024 2:26:19 PM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --restrict-filenames --add-metadata -i -o "%(title).100s.%(ext)s" "https://www.youtube.com/watch?v=if2oBPTL7b4"; date;
+
+Wednesday, July 10, 2024 2:27:21 PM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Wednesday, July 10, 2024 2:27:21 PM
+[youtube] Extracting URL: https://www.youtube.com/watch?v=if2oBPTL7b4
+[youtube] if2oBPTL7b4: Downloading webpage
+[youtube] if2oBPTL7b4: Downloading ios player API JSON
+[youtube] if2oBPTL7b4: Downloading m3u8 information
+[info] if2oBPTL7b4: Downloading 1 format(s): 313+251
+[download] Destination: I_Opened_An_Under_5_000_Car_Dealership.f313.webm
+[download] 100% of    1.60GiB in 00:01:47 at 15.23MiB/s
+[download] Destination: I_Opened_An_Under_5_000_Car_Dealership.f251.webm
+[download] 100% of   15.96MiB in 00:00:01 at 12.62MiB/s
+[Merger] Merging formats into "I_Opened_An_Under_5_000_Car_Dealership.webm"
+Deleting original file I_Opened_An_Under_5_000_Car_Dealership.f251.webm (pass -k to keep)
+Deleting original file I_Opened_An_Under_5_000_Car_Dealership.f313.webm (pass -k to keep)
+[Metadata] Adding metadata to "I_Opened_An_Under_5_000_Car_Dealership.webm"
+Wednesday, July 10, 2024 2:35:04 PM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message"build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Wednesday, July 10, 2024 2:51:31 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Wednesday, July 10, 2024 2:51:31 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 119ms
+Done in 1.06s.
+Wednesday, July 10, 2024 2:51:32 PM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Wednesday, July 10, 2024 2:51:32 PM
+[main f74d2a1] build application
+ 2 files changed, 104 insertions(+)
+Wednesday, July 10, 2024 2:51:32 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Wednesday, July 10, 2024 2:51:33 PM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 2.20 KiB | 2.20 MiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   374a046..f74d2a1  main -> main
+Wednesday, July 10, 2024 2:51:34 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
