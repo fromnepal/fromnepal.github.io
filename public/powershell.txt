@@ -1,134 +1,101 @@
-kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
-[sudo] password for kushal:
-Sorry, try again.
-[sudo] password for kushal:
-Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
-Hit:3 http://archive.ubuntu.com/ubuntu jammy InRelease
-Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
-Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
-Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
-Fetched 257 kB in 0s (640 kB/s)
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-All packages are up to date.
+PowerShell 7.4.2
 
-real    0m12.702s
-user    0m0.025s
-sys     0m0.016s
-Listing... Done
+   A new PowerShell stable release is available: v7.4.3
+   Upgrade now, or check out the release page at:
+     https://aka.ms/PowerShell-Release?tag=v7.4.3
 
-real    0m0.177s
-user    0m0.157s
-sys     0m0.010s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
-  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
-  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
-  libavfilter7
-Learn more about Ubuntu Pro at https://ubuntu.com/pro
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+PS C:\Users\kushal> scoop search standard
+Results from local buckets...
 
-real    0m0.348s
-user    0m0.000s
-sys     0m0.004s
-On branch master
-Your branch is up to date with 'origin/master'.
+Name          Version  Source Binaries
+----          -------  ------ --------
+standardnotes 3.194.13 extras
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
+PS C:\Users\kushal> scoop install standardnotes
+Updating Scoop...
+Updating Buckets...
+Scoop was updated successfully!
+Installing 'standardnotes' (3.194.13) [64bit] from 'extras' bucket
+standard-notes-3.194.13-win-x64.exe (108.4 MB) [==============================================================================================================================================================================================================================] 100%
+Checking hash of standard-notes-3.194.13-win-x64.exe ... ok.
+Extracting standard-notes-3.194.13-win-x64.exe ... done.
+Running pre_install script...done.
+Linking ~\scoop\apps\standardnotes\current => ~\scoop\apps\standardnotes\3.194.13
+Creating shortcut for Standard Notes (Standard Notes.exe)
+Running post_install script...done.
+'standardnotes' (3.194.13) was installed successfully!
+PS C:\Users\kushal> date; scoop status; date; scoop bucket rm main; date; scoop bucket add main; date; scoop bucket rm extras; date; scoop bucket add extras; date; scoop status; date; scoop update; date; scoop update *; date; scoop cache show; date; scoop cache rm *; date; scoopstatus; date;
 
-nothing added to commit but untracked files present (use "git add" to track)
+Tuesday, July 9, 2024 8:00:30 PM
+Scoop is up to date.
+Everything is ok!
+Tuesday, July 9, 2024 8:00:31 PM
+The main bucket was removed successfully.
+Tuesday, July 9, 2024 8:00:31 PM
+Checking repo... OK
+The main bucket was added successfully.
+Tuesday, July 9, 2024 8:00:37 PM
+The extras bucket was removed successfully.
+Tuesday, July 9, 2024 8:00:37 PM
+Checking repo... OK
+The extras bucket was added successfully.
+Tuesday, July 9, 2024 8:00:47 PM
+Scoop is up to date.
+Everything is ok!
+Tuesday, July 9, 2024 8:00:48 PM
+Updating Scoop...
+Updating Buckets...
+Scoop was updated successfully!
+Tuesday, July 9, 2024 8:00:56 PM
+Latest versions for all apps are installed! For more information try 'scoop status'
+Tuesday, July 9, 2024 8:00:57 PM
 
-real    0m0.060s
-user    0m0.000s
-sys     0m0.065s
+Name    : standardnotes
+Version : 3.194.13
+Length  : 113670368
 
-real    0m0.275s
-user    0m0.036s
-sys     0m0.000s
-From https://github.com/LadybirdBrowser/ladybird
- * branch                  master     -> FETCH_HEAD
+Total: 1 file, 108.4 MB
+Tuesday, July 9, 2024 8:00:57 PM
+Removing standardnotes#3.194.13#b332868.7z...
+Deleted: 1 file, 108.4 MB
+Tuesday, July 9, 2024 8:00:57 PM
+Scoop is up to date.
+Everything is ok!
+Tuesday, July 9, 2024 8:00:58 PM
+
+PS C:\Users\kushal>
+PS C:\Users\kushal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Tuesday, July 9, 2024 8:10:22 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.14s.
+Tuesday, July 9, 2024 8:10:23 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 144ms
+Done in 2.64s.
+Tuesday, July 9, 2024 8:10:26 PM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Tuesday, July 9, 2024 8:10:26 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Tuesday, July 9, 2024 8:10:26 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
 Already up to date.
+Tuesday, July 9, 2024 8:10:27 PM
+Everything up-to-date
+Tuesday, July 9, 2024 8:10:27 PM
 
-real    0m0.166s
-user    0m0.029s
-sys     0m0.000s
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-real    0m0.012s
-user    0m0.006s
-sys     0m0.006s
-Sat Jul  6 07:57:23 EDT 2024
-~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
-ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
-[0/2] Re-checking globbed directories...
-[1/2] Re-running CMake...
--- Running vcpkg install
-Detecting compiler hash for triplet x64-linux...
-Compiler found: /usr/bin/clang++-17
-The following packages will be built and installed:
-    vulkan:x64-linux@2023-12-17 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vulkan/3e8d64ec799440b97c7151f97dd00a53e8e1b5ea
-  * vulkan-loader:x64-linux@1.3.280.0 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vulkan-loader/f2b6ac616463bb279cb0677885ab70c8c734f3bd
-Additional packages (*) will be modified to complete this operation.
-Restored 0 package(s) from /home/kushal/.cache/vcpkg/archives in 301 us. Use --debug to see more details.
-Installing 1/2 vulkan-loader:x64-linux@1.3.280.0...
-Building vulkan-loader:x64-linux@1.3.280.0...
-/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vulkan-loader/f2b6ac616463bb279cb0677885ab70c8c734f3bd: info: installing overlay port from here
--- Using cached KhronosGroup-Vulkan-Loader-vulkan-sdk-1.3.280.0.tar.gz.
--- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/vulkan-loader/src/-1.3.280.0-a675026bd4.clean. Use --editable to skip cleaning for the packages you specify.
--- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/KhronosGroup-Vulkan-Loader-vulkan-sdk-1.3.280.0.tar.gz
--- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/vulkan-loader/src/-1.3.280.0-a675026bd4.clean
--- Configuring x64-linux
--- Building x64-linux-dbg
-CMake Error at scripts/cmake/vcpkg_execute_build_process.cmake:134 (message):
-    Command failed: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/tools/cmake-3.29.2-linux/cmake-3.29.2-linux-x86_64/bin/cmake --build . --config Debug --target install -- -v -j17
-    Working Directory: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/vulkan-loader/x64-linux-dbg
-    See logs for more information:
-      /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/vulkan-loader/install-x64-linux-dbg-out.log
-
-Call Stack (most recent call first):
-  /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/share/vcpkg-cmake/vcpkg_cmake_build.cmake:74 (vcpkg_execute_build_process)
-  /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/share/vcpkg-cmake/vcpkg_cmake_install.cmake:16 (vcpkg_cmake_build)
-  buildtrees/versioning_/versions/vulkan-loader/f2b6ac616463bb279cb0677885ab70c8c734f3bd/portfile.cmake:16 (vcpkg_cmake_install)
-  scripts/ports.cmake:191 (include)
-
-
-error: building vulkan-loader:x64-linux failed with: BUILD_FAILED
-Elapsed time to handle vulkan-loader:x64-linux: 4.7 s
-Please ensure you're using the latest port files with `git pull` and `vcpkg update`.
-Then check for known issues at:
-  https://github.com/microsoft/vcpkg/issues?q=is%3Aissue+is%3Aopen+in%3Atitle+vulkan-loader
-You can submit a new issue at:
-  https://github.com/microsoft/vcpkg/issues/new?title=[vulkan-loader]+Build+error+on+x64-linux&body=Copy+issue+body+from+%2Fhome%2Fkushal%2Fsrc%2Fladybird%2FBuild%2Fladybird%2Fvcpkg_installed%2Fvcpkg%2Fissue_body.md
-
--- Running vcpkg install - failed
-CMake Error at Toolchain/Tarballs/vcpkg/scripts/buildsystems/vcpkg.cmake:899 (message):
-  vcpkg install failed.  See logs for more information:
-  /home/kushal/src/ladybird/Build/ladybird/vcpkg-manifest-install.log
-Call Stack (most recent call first):
-  Build/ladybird/CMakeFiles/3.26.4/CMakeSystem.cmake:6 (include)
-  CMakeLists.txt:10 (project)
-
-
--- Configuring incomplete, errors occurred!
-FAILED: build.ninja
-/home/kushal/src/ladybird/Toolchain/Local/cmake/bin/cmake --regenerate-during-build -S/home/kushal/src/ladybird -B/home/kushal/src/ladybird/Build/ladybird
-ninja: error: rebuilding 'build.ninja': subcommand failed
-
-real    0m11.185s
-user    0m1.097s
-sys     0m1.406s
-Sat Jul  6 07:57:35 EDT 2024
-kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
