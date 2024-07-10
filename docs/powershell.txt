@@ -776,3 +776,170 @@ real    0m2.705s
 user    0m0.001s
 sys     0m0.006s
 kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull originmaster; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:3 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+
+real    0m1.295s
+user    0m0.009s
+sys     0m0.000s
+Listing... Done
+
+real    0m0.170s
+user    0m0.138s
+sys     0m0.020s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
+  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
+  libavfilter7
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+real    0m0.312s
+user    0m0.005s
+sys     0m0.000s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.042s
+user    0m0.018s
+sys     0m0.028s
+
+real    0m0.148s
+user    0m0.017s
+sys     0m0.013s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Already up to date.
+
+real    0m0.182s
+user    0m0.018s
+sys     0m0.014s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.013s
+user    0m0.000s
+sys     0m0.013s
+Wed Jul 10 13:46:10 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+[1/2] Re-running CMake...
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/clang++-17
+The following packages will be built and installed:
+  * dav1d:x64-linux@1.4.0 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/dav1d/0349d1196602b2983b1171647b30b5a9379920c6
+    libavif[core,dav1d]:x64-linux@1.0.4#1 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libavif/5464a231b3a83e3d8a076b339d93c5247d04b36b
+  * libyuv:x64-linux@1857 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libyuv/ee4cbd8592c2d5f3fd77c1478b679bc00671b316
+    vulkan:x64-linux@2023-12-17 -- /home/kushal/src/ladybird/Meta/CMake/vcpkg/overlay-ports/vulkan
+Additional packages (*) will be modified to complete this operation.
+Restored 0 package(s) from /home/kushal/.cache/vcpkg/archives in 6.71 us. Use --debug to see more details.
+Installing 1/4 dav1d:x64-linux@1.4.0...
+Building dav1d:x64-linux@1.4.0...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/dav1d/0349d1196602b2983b1171647b30b5a9379920c6: info: installing overlay port from here
+-- Found Python version '3.10.12 at /usr/bin/python3'
+-- Using meson: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/tools/meson-1.3.2-6f83ac/meson.py
+-- Using cached videolan-dav1d-1.4.0.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/dav1d/src/1.4.0-ddc1ddf3b5.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/videolan-dav1d-1.4.0.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/dav1d/src/1.4.0-ddc1ddf3b5.clean
+-- Configuring x64-linux-dbg
+-- Getting CMake variables for x64-linux-dbg
+-- Getting CMake variables for x64-linux-rel
+-- Configuring x64-linux-dbg done
+-- Configuring x64-linux-rel
+-- Configuring x64-linux-rel done
+-- Package x64-linux-dbg
+-- Package x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/dav1d_x64-linux/lib/pkgconfig/dav1d.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/dav1d_x64-linux/debug/lib/pkgconfig/dav1d.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/dav1d_x64-linux/share/dav1d/usage
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/dav1d_x64-linux/share/dav1d/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 234 ms.
+Elapsed time to handle dav1d:x64-linux: 39 s
+dav1d:x64-linux package ABI: 8c6575fbd25f7bc1b12e59d43140a265509541e40bd043c957315c69b37e8c51
+Installing 2/4 libyuv:x64-linux@1857...
+Building libyuv:x64-linux@1857...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libyuv/ee4cbd8592c2d5f3fd77c1478b679bc00671b316: info: installing overlay port from here
+-- Fetching https://chromium.googlesource.com/libyuv/libyuv 0faf8dd0e004520a61a603a4d2996d5ecc80dc3f...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/libyuv-0faf8dd0e004520a61a603a4d2996d5ecc80dc3f.tar.gz
+-- Applying patch fix-cmakelists.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libyuv/src/5ecc80dc3f-eb55e29413.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libyuv_x64-linux/share/libyuv/copyright
+-- Getting CMake variables for x64-linux
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libyuv_x64-linux/share/libyuv/usage
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libyuv_x64-linux/debug/tools/yuvconvert' (From '' -> To '$ORIGIN:$ORIGIN/../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libyuv_x64-linux/tools/yuvconvert' (From '' -> To '$ORIGIN:$ORIGIN/../lib')
+-- Performing post-build validation
+Stored binaries in 1 destinations in 117 ms.
+Elapsed time to handle libyuv:x64-linux: 10 s
+libyuv:x64-linux package ABI: f923f2e2ac72a7bb968a3dd6ca0767c7c35c5c080696004829c791d8749fea90
+Installing 3/4 libavif[core,dav1d]:x64-linux@1.0.4#1...
+Building libavif[core,dav1d]:x64-linux@1.0.4#1...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libavif/5464a231b3a83e3d8a076b339d93c5247d04b36b: info: installing overlay port from here
+-- Downloading https://github.com/AOMediaCodec/libavif/archive/v1.0.4.tar.gz -> AOMediaCodec-libavif-v1.0.4.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/AOMediaCodec-libavif-v1.0.4.tar.gz
+-- Applying patch disable-source-utf8.patch
+-- Applying patch find-dependency.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libavif/src/v1.0.4-d3bdd0bed1.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libavif_x64-linux/lib/pkgconfig/libavif.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libavif_x64-linux/debug/lib/pkgconfig/libavif.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libavif_x64-linux/share/libavif/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 36 ms.
+Elapsed time to handle libavif:x64-linux: 4.9 s
+libavif:x64-linux package ABI: 440fcde81f8803c936726b270244537d2f567157c0a600619a3732fea9325030
+Installing 4/4 vulkan:x64-linux@2023-12-17...
+Building vulkan:x64-linux@2023-12-17...
+/home/kushal/src/ladybird/Meta/CMake/vcpkg/overlay-ports/vulkan: info: installing overlay port from here
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Stored binaries in 1 destinations in 1.86 ms.
+Elapsed time to handle vulkan:x64-linux: 13.6 ms
+vulkan:x64-linux package ABI: 5e7a23ff4c3c34dc0fda9f965418b76d02c8fa35307fc19b53768ac65d3c4cf9
+Total install time: 54 s
+-- Running vcpkg install - done
+-- Found the following ICU libraries:
+--   data (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicudata.a
+--   i18n (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicui18n.a
+--   uc (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicuuc.a
+-- Found ICU: /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/include (found suitable version "74.2", minimum required is "74")
+-- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+-- Found WrapVulkanHeaders: /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/include
+-- Configuring done (84.3s)
+-- Generating done (0.4s)
+-- Build files have been written to: /home/kushal/src/ladybird/Build/ladybird
+[0/2] Re-checking globbed directories...
+[2492/2492] Linking CXX executable bin/Ladybird
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
