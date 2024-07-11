@@ -12,3 +12,101 @@ Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_
 This message is shown once a day. To disable it please create the
 /home/kushal/.hushlogin file.
 kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+[sudo] password for kushal:
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1585 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1794 kB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [269 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [2033 kB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [347 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [326 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [2093 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [357 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1101 kB]
+Fetched 10.2 MB in 1s (8764 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+
+real    0m6.533s
+user    0m0.014s
+sys     0m0.014s
+Listing... Done
+
+real    0m0.154s
+user    0m0.142s
+sys     0m0.010s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
+  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
+  libavfilter7
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+real    0m0.312s
+user    0m0.005s
+sys     0m0.000s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.059s
+user    0m0.015s
+sys     0m0.058s
+remote: Enumerating objects: 40, done.
+remote: Counting objects: 100% (40/40), done.
+remote: Compressing objects: 100% (28/28), done.
+remote: Total 40 (delta 15), reused 33 (delta 12), pack-reused 0
+Unpacking objects: 100% (40/40), 38.00 KiB | 1.46 MiB/s, done.
+From https://github.com/LadybirdBrowser/ladybird
+   bee42160c5..3850214aac  master     -> origin/master
+
+real    0m0.358s
+user    0m0.056s
+sys     0m0.007s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Updating bee42160c5..3850214aac
+Fast-forward
+ Userland/Libraries/LibGfx/Font/OpenType/Tables.cpp                 | 10 +++++++++-
+ Userland/Libraries/LibWasm/AbstractMachine/AbstractMachine.h       | 17 +++++++++++++++--
+ Userland/Libraries/LibWasm/AbstractMachine/BytecodeInterpreter.cpp | 34 ++++++++++++++++++----------------
+ Userland/Libraries/LibWasm/AbstractMachine/Operators.h             | 14 ++++++++++++++
+ Userland/Libraries/LibWeb/Layout/Viewport.cpp                      |  2 +-
+ Userland/Libraries/LibWeb/WebAssembly/Memory.cpp                   |  2 +-
+ 6 files changed, 58 insertions(+), 21 deletions(-)
+
+real    0m0.149s
+user    0m0.045s
+sys     0m0.002s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.017s
+user    0m0.008s
+sys     0m0.008s
+Thu Jul 11 05:21:39 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+[30/38] Linking CXX shared library lib/liblagom-web.so.0.0.0
