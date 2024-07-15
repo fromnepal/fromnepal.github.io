@@ -1,300 +1,152 @@
-Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_64)
+PowerShell 7.4.2
 
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/pro
+   A new PowerShell stable release is available: v7.4.3
+   Upgrade now, or check out the release page at:
+     https://aka.ms/PowerShell-Release?tag=v7.4.3
 
- * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
-   just raised the bar for easy, resilient and secure K8s cluster deployment.
+PS C:\Users\kushal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+Monday, July 15, 2024 7:53:42 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.08s.
+Monday, July 15, 2024 7:53:43 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 140ms
+Done in 2.05s.
+Monday, July 15, 2024 7:53:45 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Monday, July 15, 2024 7:53:45 AM
+On branch main
+Your branch is up to date with 'origin/main'.
 
-This message is shown once a day. To disable it please create the
-/home/kushal/.hushlogin file.
-kushal@kus2023:~$ ssh pr.pico.sh help
-The authenticity of host 'pr.pico.sh (129.159.97.11)' can't be established.
-ED25519 key fingerprint is SHA256:vZ7mjhYu17SUmP7xvx6pphVYA4GsrIO5oFRxMRagZ2o.
-This key is not known by any other names
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added 'pr.pico.sh' (ED25519) to the list of known hosts.
-kushal@pr.pico.sh: Permission denied (publickey).
-kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; timegit status; date; time ./Meta/ladybird.sh run ladybird; date;
-[sudo] password for kushal:
-Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
-Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
-Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
-Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
-Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
-Get:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1587 kB]
-Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1794 kB]
-Get:8 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [269 kB]
-Get:9 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [13.0 kB]
-Get:10 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [2037 kB]
-Get:11 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [348 kB]
-Get:12 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 c-n-f Metadata [572 B]
-Get:13 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [884 kB]
-Get:14 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [18.9 kB]
-Get:15 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [228 B]
-Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [17.7 kB]
-Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 c-n-f Metadata [604 B]
-Get:18 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1101 kB]
-Get:19 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [25.4 kB]
-Get:20 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [444 B]
-Fetched 8354 kB in 1s (7734 kB/s)
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-2 packages can be upgraded. Run 'apt list --upgradable' to see them.
+nothing to commit, working tree clean
+Monday, July 15, 2024 7:53:45 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Monday, July 15, 2024 7:53:46 AM
+Everything up-to-date
+Monday, July 15, 2024 7:53:47 AM
 
-real    0m8.102s
-user    0m0.010s
-sys     0m0.020s
-Listing... Done
-libldap-2.5-0/jammy-updates 2.5.18+dfsg-0ubuntu0.22.04.1 amd64 [upgradable from: 2.5.17+dfsg-0ubuntu0.22.04.1]
-libldap-common/jammy-updates 2.5.18+dfsg-0ubuntu0.22.04.1 all [upgradable from: 2.5.17+dfsg-0ubuntu0.22.04.1]
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-real    0m0.175s
-user    0m0.163s
-sys     0m0.010s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
-  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
-  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
-  libavfilter7
-Learn more about Ubuntu Pro at https://ubuntu.com/pro
-The following packages will be upgraded:
-  libldap-2.5-0 libldap-common
-2 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-Need to get 199 kB of archives.
-After this operation, 0 B of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-2.5-0 amd64 2.5.18+dfsg-0ubuntu0.22.04.1 [183 kB]
-Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-common all 2.5.18+dfsg-0ubuntu0.22.04.1 [15.9 kB]
-Fetched 199 kB in 0s (925 kB/s)
-(Reading database ... 62522 files and directories currently installed.)
-Preparing to unpack .../libldap-2.5-0_2.5.18+dfsg-0ubuntu0.22.04.1_amd64.deb ...
-Unpacking libldap-2.5-0:amd64 (2.5.18+dfsg-0ubuntu0.22.04.1) over (2.5.17+dfsg-0ubuntu0.22.04.1) ...
-Preparing to unpack .../libldap-common_2.5.18+dfsg-0ubuntu0.22.04.1_all.deb ...
-Unpacking libldap-common (2.5.18+dfsg-0ubuntu0.22.04.1) over (2.5.17+dfsg-0ubuntu0.22.04.1) ...
-Setting up libldap-common (2.5.18+dfsg-0ubuntu0.22.04.1) ...
-Setting up libldap-2.5-0:amd64 (2.5.18+dfsg-0ubuntu0.22.04.1) ...
-Processing triggers for man-db (2.10.2-1) ...
-Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
+Monday, July 15, 2024 7:53:50 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Monday, July 15, 2024 7:53:50 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 98ms
+Done in 0.79s.
+Monday, July 15, 2024 7:53:51 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Monday, July 15, 2024 7:53:51 AM
+On branch main
+Your branch is up to date with 'origin/main'.
 
-real    0m1.370s
-user    0m0.006s
-sys     0m0.000s
-On branch master
-Your branch is up to date with 'origin/master'.
+nothing to commit, working tree clean
+Monday, July 15, 2024 7:53:52 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Monday, July 15, 2024 7:53:52 AM
+Everything up-to-date
+Monday, July 15, 2024 7:53:53 AM
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
+PS C:\Users\kushal\src\myhtml\fromnepal> date; scoop status; date; scoop bucket rm main; date; scoop bucket add main; date; scoop bucket rm extras; date; scoop bucket add extras; date; scoop status; date; scoop update; date; scoop update *; date; scoop cache show; date; scoop cache rm *; date; scoop status; date;
 
-nothing added to commit but untracked files present (use "git add" to track)
+Monday, July 15, 2024 8:52:32 AM
+WARN  Scoop bucket(s) out of date. Run 'scoop update' to get the latest changes.
+Monday, July 15, 2024 8:52:34 AM
+The main bucket was removed successfully.
+Monday, July 15, 2024 8:52:34 AM
+Checking repo... OK
+The main bucket was added successfully.
+Monday, July 15, 2024 8:52:41 AM
+The extras bucket was removed successfully.
+Monday, July 15, 2024 8:52:41 AM
+Checking repo... OK
+The extras bucket was added successfully.
+Monday, July 15, 2024 8:52:50 AM
+Scoop is up to date.
 
-real    0m0.078s
-user    0m0.008s
-sys     0m0.082s
-remote: Enumerating objects: 459, done.
-remote: Counting objects: 100% (333/333), done.
-remote: Total 459 (delta 333), reused 333 (delta 333), pack-reused 126
-Receiving objects: 100% (459/459), 87.86 KiB | 1.79 MiB/s, done.
-Resolving deltas: 100% (342/342), completed with 117 local objects.
-From https://github.com/LadybirdBrowser/ladybird
-   3850214aac..9ce727d315  master     -> origin/master
+Name                 : mkvtoolnix
+Installed Version    : 85.0
+Latest Version       : 86.0
+Missing Dependencies :
+Info                 :
 
-real    0m0.405s
-user    0m0.071s
-sys     0m0.039s
-From https://github.com/LadybirdBrowser/ladybird
- * branch                  master     -> FETCH_HEAD
-Updating 3850214aac..9ce727d315
-Fast-forward
- .devcontainer/devcontainer.json                                          |   2 +-
- .github/workflows/nightly-android.yml                                    |   7 +-
- Documentation/BuildInstructionsLadybird.md                               |   9 +-
- Ladybird/Android/BuildLagomTools.sh                                      |   2 +
- Ladybird/Qt/Tab.cpp                                                      |   3 +
- Ladybird/cmake/AndroidExtras.cmake                                       |   4 +-
- Meta/Lagom/Fuzzers/FuzzTTF.cpp                                           |   4 +-
- Meta/Lagom/Fuzzers/FuzzWOFF.cpp                                          |   4 +-
- Meta/Lagom/Fuzzers/FuzzWOFF2.cpp                                         |   4 +-
- Meta/generate-libwasm-spec-test.py                                       | 179 +++++++++++++++++++---------
- Meta/gn/secondary/Userland/Libraries/LibWeb/HTML/BUILD.gn                |   1 +
- Meta/gn/secondary/Userland/Libraries/LibWeb/idl_files.gni                |   1 +
- Meta/ladybird.sh                                                         |  20 +++-
- README.md                                                                |   2 +-
- Tests/LibGfx/TestWOFF.cpp                                                |   4 +-
- Tests/LibGfx/TestWOFF2.cpp                                               |   6 +-
- Tests/LibWasm/test-wasm.cpp                                              | 137 ++++++++++++++-------
- Tests/LibWeb/Layout/expected/input-as-button-align-center.txt            |  11 +-
- Tests/LibWeb/Layout/expected/input-as-button-shrink-to-fit.txt           |  11 +-
- Tests/LibWeb/Layout/expected/input-range.txt                             |  26 ++++
- Tests/LibWeb/Layout/input/input-range.html                               |   8 ++
- Tests/LibWeb/Text/expected/DOM/DOMParser-xmlns.txt                       |   2 +
- Tests/LibWeb/Text/expected/DOM/Node-normalize.txt                        |   8 ++
- Tests/LibWeb/Text/expected/HTML/get-innerHTML-xml.txt                    |   1 +
- Tests/LibWeb/Text/expected/Streams/ReadableStreamBYOBReader-read-min.txt |   4 +
- Tests/LibWeb/Text/expected/all-window-properties.txt                     |   1 +
- Tests/LibWeb/Text/input/DOM/DOMParser-xmlns.html                         |  11 ++
- Tests/LibWeb/Text/input/DOM/Node-normalize.html                          |  29 +++++
- Tests/LibWeb/Text/input/HTML/get-innerHTML-xml.html                      |  10 ++
- Tests/LibWeb/Text/input/Streams/ReadableStreamBYOBReader-read-min.html   |  68 +++++++++++
- Userland/Libraries/LibGfx/CMakeLists.txt                                 |   6 +-
- Userland/Libraries/LibGfx/Font/FontDatabase.cpp                          |   8 +-
- Userland/Libraries/LibGfx/Font/OpenType/{Font.cpp => Typeface.cpp}       |  60 +++++-----
- Userland/Libraries/LibGfx/Font/OpenType/{Font.h => Typeface.h}           |  12 +-
- Userland/Libraries/LibGfx/Font/ScaledFont.cpp                            |  20 ++--
- Userland/Libraries/LibGfx/Font/ScaledFont.h                              |  20 ++--
- Userland/Libraries/LibGfx/Font/WOFF/{Font.cpp => Typeface.cpp}           |  12 +-
- Userland/Libraries/LibGfx/Font/WOFF/{Font.h => Typeface.h}               |  10 +-
- Userland/Libraries/LibGfx/Font/WOFF2/{Font.cpp => Typeface.cpp}          |  10 +-
- Userland/Libraries/LibGfx/Font/WOFF2/{Font.h => Typeface.h}              |   8 +-
- Userland/Libraries/LibJS/CMakeLists.txt                                  |   1 +
- Userland/Libraries/LibJS/Runtime/AbstractOperations.h                    |   6 +-
- Userland/Libraries/LibJS/Runtime/KeyedCollections.cpp                    |  22 ++++
- Userland/Libraries/LibJS/Runtime/KeyedCollections.h                      |  15 +++
- Userland/Libraries/LibJS/Runtime/MapPrototype.cpp                        |  40 ++++---
- Userland/Libraries/LibJS/Runtime/Set.cpp                                 |  58 +++++++++
- Userland/Libraries/LibJS/Runtime/Set.h                                   |  11 ++
- Userland/Libraries/LibJS/Runtime/SetPrototype.cpp                        | 696 +++++++++++++++++++++++++++++++++++++++++++++++++++--------------------------------------------------------
- Userland/Libraries/LibJS/Runtime/SetPrototype.h                          |  11 +-
- Userland/Libraries/LibJS/Runtime/ValueTraits.h                           |   7 +-
- Userland/Libraries/LibWasm/AbstractMachine/BytecodeInterpreter.cpp       | 247 +++++++++++++++++++++++++-------------
- Userland/Libraries/LibWasm/AbstractMachine/Operators.h                   | 260 +++++++++++++++++++++++++++++++++++++++-
- Userland/Libraries/LibWasm/AbstractMachine/Validator.cpp                 |   8 +-
- Userland/Libraries/LibWeb/CMakeLists.txt                                 |   1 +
- Userland/Libraries/LibWeb/CSS/Default.css                                |   9 ++
- Userland/Libraries/LibWeb/CSS/FontFace.cpp                               |  12 +-
- Userland/Libraries/LibWeb/CSS/StyleComputer.cpp                          |  18 +--
- Userland/Libraries/LibWeb/DOM/Document.cpp                               |   6 +
- Userland/Libraries/LibWeb/DOM/Node.cpp                                   | 119 +++++++++++++++++++
- Userland/Libraries/LibWeb/DOM/Node.h                                     |   2 +
- Userland/Libraries/LibWeb/DOM/Node.idl                                   |   1 +
- Userland/Libraries/LibWeb/Fetch/Fetching/Fetching.cpp                    |  49 +++++++-
- Userland/Libraries/LibWeb/Fetch/Fetching/Fetching.h                      |   4 +
- Userland/Libraries/LibWeb/Forward.h                                      |   1 +
- Userland/Libraries/LibWeb/HTML/AttributeNames.h                          |   3 +
- Userland/Libraries/LibWeb/HTML/BroadcastChannel.cpp                      |  72 +++++++++++
- Userland/Libraries/LibWeb/HTML/BroadcastChannel.h                        |  38 ++++++
- Userland/Libraries/LibWeb/HTML/BroadcastChannel.idl                      |  14 +++
- Userland/Libraries/LibWeb/HTML/HTMLFrameElement.idl                      |   6 +-
- Userland/Libraries/LibWeb/HTML/HTMLInputElement.cpp                      |  13 +-
- Userland/Libraries/LibWeb/HTML/HTMLMarqueeElement.cpp                    |  36 ++++++
- Userland/Libraries/LibWeb/HTML/HTMLMarqueeElement.h                      |   8 ++
- Userland/Libraries/LibWeb/HTML/HTMLMarqueeElement.idl                    |   6 +-
- Userland/Libraries/LibWeb/Page/EventHandler.cpp                          |   7 ++
- Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.cpp             |  94 +++++++++++++--
- Userland/Libraries/LibWeb/Painting/PaintableBox.cpp                      |  19 ++-
- Userland/Libraries/LibWeb/Streams/AbstractOperations.cpp                 |  74 +++++++-----
- Userland/Libraries/LibWeb/Streams/AbstractOperations.h                   |   5 +-
- Userland/Libraries/LibWeb/Streams/ReadableByteStreamController.cpp       |   1 +
- Userland/Libraries/LibWeb/Streams/ReadableByteStreamController.h         |   4 +
- Userland/Libraries/LibWeb/Streams/ReadableStreamBYOBReader.cpp           |  40 +++++--
- Userland/Libraries/LibWeb/Streams/ReadableStreamBYOBReader.h             |   8 +-
- Userland/Libraries/LibWeb/Streams/ReadableStreamBYOBReader.idl           |   6 +-
- Userland/Libraries/LibWeb/UIEvents/FocusEvent.cpp                        |   2 +-
- Userland/Libraries/LibWeb/UIEvents/MouseEvent.cpp                        |  10 --
- Userland/Libraries/LibWeb/UIEvents/MouseEvent.h                          |   2 -
- Userland/Libraries/LibWeb/UIEvents/WheelEvent.cpp                        |   8 --
- Userland/Libraries/LibWeb/UIEvents/WheelEvent.h                          |   2 -
- Userland/Libraries/LibWeb/XML/XMLDocumentBuilder.cpp                     |   9 +-
- Userland/Libraries/LibWeb/idl_files.cmake                                |   1 +
- Userland/Utilities/ttfdisasm.cpp                                         |   4 +-
- 91 files changed, 2033 insertions(+), 808 deletions(-)
- create mode 100644 Tests/LibWeb/Layout/expected/input-range.txt
- create mode 100644 Tests/LibWeb/Layout/input/input-range.html
- create mode 100644 Tests/LibWeb/Text/expected/DOM/DOMParser-xmlns.txt
- create mode 100644 Tests/LibWeb/Text/expected/DOM/Node-normalize.txt
- create mode 100644 Tests/LibWeb/Text/expected/HTML/get-innerHTML-xml.txt
- create mode 100644 Tests/LibWeb/Text/expected/Streams/ReadableStreamBYOBReader-read-min.txt
- create mode 100644 Tests/LibWeb/Text/input/DOM/DOMParser-xmlns.html
- create mode 100644 Tests/LibWeb/Text/input/DOM/Node-normalize.html
- create mode 100644 Tests/LibWeb/Text/input/HTML/get-innerHTML-xml.html
- create mode 100644 Tests/LibWeb/Text/input/Streams/ReadableStreamBYOBReader-read-min.html
- rename Userland/Libraries/LibGfx/Font/OpenType/{Font.cpp => Typeface.cpp} (92%)
- rename Userland/Libraries/LibGfx/Font/OpenType/{Font.h => Typeface.h} (93%)
- rename Userland/Libraries/LibGfx/Font/WOFF/{Font.cpp => Typeface.cpp} (93%)
- rename Userland/Libraries/LibGfx/Font/WOFF/{Font.h => Typeface.h} (87%)
- rename Userland/Libraries/LibGfx/Font/WOFF2/{Font.cpp => Typeface.cpp} (82%)
- rename Userland/Libraries/LibGfx/Font/WOFF2/{Font.h => Typeface.h} (91%)
- create mode 100644 Userland/Libraries/LibJS/Runtime/KeyedCollections.cpp
- create mode 100644 Userland/Libraries/LibJS/Runtime/KeyedCollections.h
- create mode 100644 Userland/Libraries/LibWeb/HTML/BroadcastChannel.cpp
- create mode 100644 Userland/Libraries/LibWeb/HTML/BroadcastChannel.h
- create mode 100644 Userland/Libraries/LibWeb/HTML/BroadcastChannel.idl
+Monday, July 15, 2024 8:52:51 AM
+Updating Scoop...
+Updating Buckets...
+Scoop was updated successfully!
+Monday, July 15, 2024 8:52:55 AM
+mkvtoolnix: 85.0 -> 86.0
+Updating one outdated app:
+Updating 'mkvtoolnix' (85.0 -> 86.0)
+Downloading new version
+mkvtoolnix-64-bit-86.0.7z (26.7 MB) [==================================================================================================================================================================] 100%
+Checking hash of mkvtoolnix-64-bit-86.0.7z ... ok.
+Uninstalling 'mkvtoolnix' (85.0)
+Running uninstaller script...done.
+Removing shim 'mkvextract.shim'.
+Removing shim 'mkvextract.exe'.
+Removing shim 'mkvinfo.shim'.
+Removing shim 'mkvinfo.exe'.
+Removing shim 'mkvmerge.shim'.
+Removing shim 'mkvmerge.exe'.
+Removing shim 'mkvpropedit.shim'.
+Removing shim 'mkvpropedit.exe'.
+Removing shim 'mkvtoolnix-gui.shim'.
+Removing shim 'mkvtoolnix-gui.exe'.
+Unlinking ~\scoop\apps\mkvtoolnix\current
+Installing 'mkvtoolnix' (86.0) [64bit] from 'extras' bucket
+Loading mkvtoolnix-64-bit-86.0.7z from cache
+Extracting mkvtoolnix-64-bit-86.0.7z ... done.
+Running pre_install script...done.
+Linking ~\scoop\apps\mkvtoolnix\current => ~\scoop\apps\mkvtoolnix\86.0
+Creating shim for 'mkvextract'.
+Creating shim for 'mkvinfo'.
+Creating shim for 'mkvmerge'.
+Creating shim for 'mkvpropedit'.
+Creating shim for 'mkvtoolnix-gui'.
+Making C:\Users\kushal\scoop\shims\mkvtoolnix-gui.exe a GUI binary.
+Creating shortcut for MKVToolNix GUI (mkvtoolnix-gui.exe)
+Persisting cache
+Persisting jobQueue
+'mkvtoolnix' (86.0) was installed successfully!
+Monday, July 15, 2024 8:53:02 AM
 
-real    0m0.195s
-user    0m0.055s
-sys     0m0.023s
-On branch master
-Your branch is up to date with 'origin/master'.
+Name    : mkvtoolnix
+Version : 86.0
+Length  : 28047205
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
+Total: 1 file, 26.7 MB
+Monday, July 15, 2024 8:53:02 AM
+Removing mkvtoolnix#86.0#939640f.7z...
+Deleted: 1 file, 26.7 MB
+Monday, July 15, 2024 8:53:02 AM
+Scoop is up to date.
+Everything is ok!
+Monday, July 15, 2024 8:53:03 AM
 
-nothing added to commit but untracked files present (use "git add" to track)
-
-real    0m0.028s
-user    0m0.010s
-sys     0m0.020s
-Sun Jul 14 17:23:31 EDT 2024
-~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
-ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
-[0/2] Re-checking globbed directories...
-[1/2] Re-running CMake...
--- Running vcpkg install
-Detecting compiler hash for triplet x64-linux...
-Compiler found: /usr/bin/clang++-17
-All requested packages are currently installed.
-Total install time: 371 ns
--- Running vcpkg install - done
--- Found the following ICU libraries:
---   data (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicudata.a
---   i18n (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicui18n.a
---   uc (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicuuc.a
--- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
--- Configuring done (31.6s)
--- Generating done (0.4s)
--- Build files have been written to: /home/kushal/src/ladybird/Build/ladybird
-[0/2] Re-checking globbed directories...
-[1723/1723] Linking CXX executable bin/Ladybird
-QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
-qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
-11517.147 WebContent(9886): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
-11517.147 WebContent(9886): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
-11517.147 WebContent(9886): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-11517.147 WebContent(9886): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
-11517.147 WebContent(9886): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
-11517.147 WebContent(9886): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
-11517.147 WebContent(9886): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-11517.147 WebContent(9886): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
-11517.787 WebContent(9886): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
-11517.787 WebContent(9886): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
-11517.787 WebContent(9886): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-11517.787 WebContent(9886): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
-11517.787 WebContent(9886): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
-11517.787 WebContent(9886): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
-11517.787 WebContent(9886): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-11517.787 WebContent(9886): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
-11517.847 WebContent(9886): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
-11517.847 WebContent(9886): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
-11517.847 WebContent(9886): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-11517.847 WebContent(9886): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
-11517.847 WebContent(9886): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
-11517.857 WebContent(9886): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
-11517.857 WebContent(9886): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-11517.857 WebContent(9886): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
-11517.887 WebContent(9886): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
-11517.887 WebContent(9886): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
-11517.887 WebContent(9886): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-11517.887 WebContent(9886): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
-11517.887 WebContent(9886): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
-11517.887 WebContent(9886): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
-11517.887 WebContent(9886): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-11517.887 WebContent(9886): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
-11542.827 WebContent(9886): Web::EventHandler: Clicking on a link to https://ladybird.org/posts/why-ladybird
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
