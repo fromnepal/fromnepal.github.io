@@ -1,3 +1,6 @@
+Please rewrite the following to be concise, direct, and to the point without losing any meaning. 
+Please output the result in plain text markdown in a way that is easy to copy paste. 
+
 disagree and commit 
 ----
 
