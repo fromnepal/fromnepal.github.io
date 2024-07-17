@@ -61,3 +61,40 @@ Please keep in mind that the topic should be serious and substantial. For exampl
 Mixtral 
 
  "Describe a time when you and your supervisor had significantly different solutions to a significant problem, they disagreed but committed to your approach. What was the outcome?"
+
+
+
+
+
+
+
+ Copilot (meta result -- actual meta, not facebook)
+
+ meta prompt 1 
+ [All the text above]
+
+ meta prompt 2
+ can you output the text as markdown that is easy to copy paste and make sure no line is longer than 80 characters but break lines in a way that it makes sense for example, try to avoid breaking the line in the middle of the same subject clause or object clause unless absolutely necessary
+
+Sure! Here is the text formatted as requested:
+
+```markdown
+## Disagree and Commit
+
+When was the last time you and your supervisor had radically different approaches
+to solving a serious problem, and your supervisor "disagreed and committed"
+to your approach? What was the result? Ensure the topic is serious and substantial.
+For example, convincing your supervisor to choose pepperoni over sausage pizza
+is not a good example.
+```
+
+Feel free to copy and paste this text! If you need any further adjustments, just let me know.
+
+
+
+
+
+
+
+
+
