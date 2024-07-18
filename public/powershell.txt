@@ -4,14 +4,17 @@ PowerShell 7.4.2
    Upgrade now, or check out the release page at:
      https://aka.ms/PowerShell-Release?tag=v7.4.3
 
+Loading personal and system profiles took 534ms.
+PS C:\Users\kushal>
+PS C:\Users\kushal>
 PS C:\Users\kushal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-Wednesday, July 17, 2024 6:19:44 PM
+Thursday, July 18, 2024 2:03:08 PM
 yarn install v1.22.21
 [1/4] Resolving packages...
 success Already up-to-date.
-Done in 0.08s.
-Wednesday, July 17, 2024 6:19:44 PM
+Done in 0.17s.
+Thursday, July 18, 2024 2:03:09 PM
 yarn run v1.22.21
 $ tsc && vite build
 vite v5.2.13 building for production...
@@ -19,153 +22,235 @@ vite v5.2.13 building for production...
 docs/index.html                 0.53 kB │ gzip: 0.32 kB
 docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
 docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 129ms
-Done in 2.08s.
-Wednesday, July 17, 2024 6:19:47 PM
+✓ built in 177ms
+Done in 3.19s.
+Thursday, July 18, 2024 2:03:12 PM
 warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Wednesday, July 17, 2024 6:19:47 PM
-[main d01c84b] build application
- 2 files changed, 24 insertions(+)
- create mode 100644 docs/disagree-and-commit.md
- create mode 100644 public/disagree-and-commit.md
-Wednesday, July 17, 2024 6:19:47 PM
+Thursday, July 18, 2024 2:03:12 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Thursday, July 18, 2024 2:03:12 PM
 From github.com:fromnepal/fromnepal.github.io
  * branch            main       -> FETCH_HEAD
-Current branch main is up to date.
-Wednesday, July 17, 2024 6:19:47 PM
-Enumerating objects: 8, done.
-Counting objects: 100% (8/8), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 722 bytes | 722.00 KiB/s, done.
-Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   7fdb872..d01c84b  main -> main
-Wednesday, July 17, 2024 6:19:48 PM
+Already up to date.
+Thursday, July 18, 2024 2:03:14 PM
+Everything up-to-date
+Thursday, July 18, 2024 2:03:14 PM
 
-PS C:\Users\kushal\src\myhtml\fromnepal>
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+PS C:\Users\kushal\src\myhtml\fromnepal> date; scoop status; date; scoop bucket rm main; date; scoop bucket add main; date; scoop bucket rm extras; date; scoop bucket add extras; date; scoop status; date; scoop update; date; scoop update *; date; scoop cache show; date; scoop cache rm *; date; scoop status; date;
 
-Wednesday, July 17, 2024 6:20:50 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.06s.
-Wednesday, July 17, 2024 6:20:50 PM
+Thursday, July 18, 2024 2:03:26 PM
+WARN  Scoop bucket(s) out of date. Run 'scoop update' to get the latest changes.
+Thursday, July 18, 2024 2:03:28 PM
+The main bucket was removed successfully.
+Thursday, July 18, 2024 2:03:28 PM
+Checking repo... OK
+The main bucket was added successfully.
+Thursday, July 18, 2024 2:03:35 PM
+The extras bucket was removed successfully.
+Thursday, July 18, 2024 2:03:35 PM
+Checking repo... OK
+The extras bucket was added successfully.
+Thursday, July 18, 2024 2:03:44 PM
+Scoop is up to date.
+Everything is ok!
+Thursday, July 18, 2024 2:03:44 PM
+Updating Scoop...
+Updating Buckets...
+Scoop was updated successfully!
+Thursday, July 18, 2024 2:03:50 PM
+Latest versions for all apps are installed! For more information try 'scoop status'
+Thursday, July 18, 2024 2:03:50 PM
+Total: 0 files, 0 B
+Thursday, July 18, 2024 2:03:50 PM
+Deleted: 0 files, 0 B
+Thursday, July 18, 2024 2:03:50 PM
+Scoop is up to date.
+Everything is ok!
+Thursday, July 18, 2024 2:03:51 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\AppData\Local\Firefox Developer Edition"; .\firefox.exe --start-debugger-server 6000 -new-tab about:debugging
+PS C:\Users\kushal\AppData\Local\Firefox Developer Edition> cd "C:\Users\kushal\src\angular\angulareighteen\"; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; yarn run ng update; date; yarn run ng build; date; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; yarn run ng test; date; yarn run ng update @angular/core@angular/cli @angular/material; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; echo y | npx update-browserslist-db@latest; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; git remote show origin; date;
+
+Thursday, July 18, 2024 2:04:04 PM
+Thursday, July 18, 2024 2:04:05 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thursday, July 18, 2024 2:04:05 PM
+Thursday, July 18, 2024 2:04:05 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thursday, July 18, 2024 2:04:05 PM
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Thursday, July 18, 2024 2:04:05 PM
+Everything up-to-date
+Thursday, July 18, 2024 2:04:06 PM
 yarn run v1.22.21
-$ tsc && vite build
-vite v5.2.13 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 105ms
-Done in 0.80s.
-Wednesday, July 17, 2024 6:20:51 PM
-warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Wednesday, July 17, 2024 6:20:51 PM
-[main f0e42c6] build application
- 2 files changed, 6 insertions(+)
-Wednesday, July 17, 2024 6:20:51 PM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Current branch main is up to date.
-Wednesday, July 17, 2024 6:20:52 PM
-Enumerating objects: 9, done.
-Counting objects: 100% (9/9), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 556 bytes | 556.00 KiB/s, done.
-Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   d01c84b..f0e42c6  main -> main
-Wednesday, July 17, 2024 6:20:53 PM
+$ ng update
+Using package manager: yarn
+Collecting installed dependencies...
+Found 26 dependencies.
+    We analyzed your package.json, there are some packages to update:
 
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+      Name                               Version                  Command to update
+     --------------------------------------------------------------------------------
+      @angular/cli                       18.1.0 -> 18.1.1         ng update @angular/cli
+      @angular/core                      18.1.0 -> 18.1.1         ng update @angular/core
 
-Wednesday, July 17, 2024 6:24:02 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.06s.
-Wednesday, July 17, 2024 6:24:02 PM
+    There might be additional packages which don't provide 'ng update' capabilities that are outdated.
+    You can update the additional packages by running the update command of your package manager.
+Done in 8.71s.
+Thursday, July 18, 2024 2:04:15 PM
 yarn run v1.22.21
-$ tsc && vite build
-vite v5.2.13 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 103ms
-Done in 0.80s.
-Wednesday, July 17, 2024 6:24:03 PM
-warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Wednesday, July 17, 2024 6:24:03 PM
-[main 891878b] build application
- 2 files changed, 96 insertions(+)
-Wednesday, July 17, 2024 6:24:03 PM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Current branch main is up to date.
-Wednesday, July 17, 2024 6:24:04 PM
-Enumerating objects: 9, done.
-Counting objects: 100% (9/9), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 1.10 KiB | 1.10 MiB/s, done.
-Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   f0e42c6..891878b  main -> main
-Wednesday, July 17, 2024 6:24:05 PM
+$ ng build
+Initial chunk files   | Names         |  Raw size | Estimated transfer size
+main-HLUBJGD7.js      | main          | 203.99 kB |                55.14 kB
+polyfills-6EAL64PA.js | polyfills     |  34.23 kB |                11.13 kB
+styles-5INURTSO.css   | styles        |   0 bytes |                 0 bytes
 
-PS C:\Users\kushal\src\myhtml\fromnepal>
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+                      | Initial total | 238.22 kB |                66.27 kB
 
-Wednesday, July 17, 2024 6:29:43 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.06s.
-Wednesday, July 17, 2024 6:29:43 PM
+Output location: C:\Users\kushal\src\angular\angulareighteen\docs
+
+Application bundle generation complete. [6.229 seconds]
+
+Done in 9.91s.
+Thursday, July 18, 2024 2:04:25 PM
+Thursday, July 18, 2024 2:04:25 PM
+Thursday, July 18, 2024 2:04:25 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thursday, July 18, 2024 2:04:26 PM
+Thursday, July 18, 2024 2:04:26 PM
+warning: in the working copy of 'docs/3rdpartylicenses.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/main-HLUBJGD7.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/polyfills-6EAL64PA.js', LF will be replaced by CRLF the next time Git touches it
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thursday, July 18, 2024 2:04:26 PM
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Thursday, July 18, 2024 2:04:26 PM
+Everything up-to-date
+Thursday, July 18, 2024 2:04:27 PM
 yarn run v1.22.21
-$ tsc && vite build
-vite v5.2.13 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 98ms
-Done in 0.80s.
-Wednesday, July 17, 2024 6:29:44 PM
-warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Wednesday, July 17, 2024 6:29:44 PM
-[main 301b343] build application
- 2 files changed, 76 insertions(+), 2 deletions(-)
-Wednesday, July 17, 2024 6:29:44 PM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Current branch main is up to date.
-Wednesday, July 17, 2024 6:29:45 PM
-Enumerating objects: 9, done.
-Counting objects: 100% (9/9), done.
+$ ng test
+✔ Browser application bundle generation complete.
+18 07 2024 14:04:41.637:INFO [karma-server]: Karma v6.4.3 server started at http://localhost:9876/
+18 07 2024 14:04:41.639:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
+18 07 2024 14:04:41.692:INFO [launcher]: Starting browser Firefox
+18 07 2024 14:04:42.701:INFO [Firefox 129.0 (Windows 10)]: Connected on socket DPcWWQ22hS_x9CLVAAAB with id 27002588
+Firefox 129.0 (Windows 10): Executed 3 of 3 SUCCESS (0.098 secs / 0.09 secs)
+TOTAL: 3 SUCCESS
+Done in 16.03s.
+Thursday, July 18, 2024 2:04:43 PM
+yarn run v1.22.21
+$ ng update @angular/core @angular/cli @angular/material
+The installed Angular CLI version is outdated.
+Installing a temporary Angular CLI versioned 18.1.1 to perform the update.
+Using package manager: yarn
+Collecting installed dependencies...
+Found 26 dependencies.
+Fetching dependency metadata from registry...
+Package '@angular/material' is already up to date.
+    Updating package.json with dependency @angular-devkit/build-angular @ "18.1.1" (was "18.1.0")...
+    Updating package.json with dependency @angular/cli @ "18.1.1" (was "18.1.0")...
+    Updating package.json with dependency @angular/compiler-cli @ "18.1.1" (was "18.1.0")...
+    Updating package.json with dependency @angular/animations @ "18.1.1" (was "18.1.0")...
+    Updating package.json with dependency @angular/common @ "18.1.1" (was "18.1.0")...
+    Updating package.json with dependency @angular/compiler @ "18.1.1" (was "18.1.0")...
+    Updating package.json with dependency @angular/core @ "18.1.1" (was "18.1.0")...
+    Updating package.json with dependency @angular/forms @ "18.1.1" (was "18.1.0")...
+    Updating package.json with dependency @angular/platform-browser @ "18.1.1" (was "18.1.0")...
+    Updating package.json with dependency @angular/platform-browser-dynamic @ "18.1.1" (was "18.1.0")...
+    Updating package.json with dependency @angular/router @ "18.1.1" (was "18.1.0")...
+UPDATE package.json (1164 bytes)
+✔ Cleaning node modules directory
+✔ Installing packages
+Done in 42.76s.
+Thursday, July 18, 2024 2:05:26 PM
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+[master 924c05e] add all files
+ 2 files changed, 99 insertions(+), 98 deletions(-)
+Thursday, July 18, 2024 2:05:26 PM
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Current branch master is up to date.
+Thursday, July 18, 2024 2:05:27 PM
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
 Delta compression using up to 16 threads
-Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 855 bytes | 855.00 KiB/s, done.
-Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   891878b..301b343  main -> main
-Wednesday, July 17, 2024 6:29:46 PM
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 2.85 KiB | 973.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:angulareighteen/angulareighteen.github.io.git
+   e840e7c..924c05e  master -> master
+Thursday, July 18, 2024 2:05:28 PM
+Latest version:     1.0.30001642
+Installed version:  none
+Removing old caniuse-lite from lock file
+Installing new caniuse-lite version
+$ yarn add -W caniuse-lite
+warning Pattern ["string-width-cjs@npm:string-width@^4.2.0"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["string-width@^4.2.3"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["string-width@^4.2.0"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["wrap-ansi@^7.0.0"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-wrap-ansi-cjs-7.0.0-67e145cff510a6a6984bdf1152911d69d2eb9e43-integrity\\node_modules\\wrap-ansi-cjs" as pattern ["wrap-ansi-cjs@npm:wrap-ansi@^7.0.0"]. This could result in non-deterministic behavior, skipping.
+warning " > @angular/material@18.1.1" has unmet peer dependency "@angular/cdk@18.1.1".
+Cleaning package.json dependencies from caniuse-lite
+$ yarn remove -W caniuse-lite
+warning Pattern ["string-width-cjs@npm:string-width@^4.2.0"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["string-width@^4.2.3"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["string-width@^4.2.0"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["wrap-ansi@^7.0.0"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-wrap-ansi-cjs-7.0.0-67e145cff510a6a6984bdf1152911d69d2eb9e43-integrity\\node_modules\\wrap-ansi-cjs" as pattern ["wrap-ansi-cjs@npm:wrap-ansi@^7.0.0"]. This could result in non-deterministic behavior, skipping.
+warning " > @angular/material@18.1.1" has unmet peer dependency "@angular/cdk@18.1.1".
+caniuse-lite has been successfully updated
 
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+No target browser changes
+Thursday, July 18, 2024 2:05:43 PM
+Thursday, July 18, 2024 2:05:43 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thursday, July 18, 2024 2:05:43 PM
+Thursday, July 18, 2024 2:05:43 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thursday, July 18, 2024 2:05:43 PM
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Thursday, July 18, 2024 2:05:44 PM
+Everything up-to-date
+Thursday, July 18, 2024 2:05:44 PM
+* remote origin
+  Fetch URL: git@github.com:angulareighteen/angulareighteen.github.io.git
+  Push  URL: git@github.com:angulareighteen/angulareighteen.github.io.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Thursday, July 18, 2024 2:05:45 PM
+
+PS C:\Users\kushal\src\angular\angulareighteen> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from theterminal"; date; git pull --rebase origin main; date; git push origin main; date;
