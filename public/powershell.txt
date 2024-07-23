@@ -12,3 +12,1090 @@ Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_
 This message is shown once a day. To disable it please create the
 /home/kushal/.hushlogin file.
 kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; timegit status; date; time ./Meta/ladybird.sh run ladybird; date;
+[sudo] password for kushal:
+Sorry, try again.
+[sudo] password for kushal:
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1645 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1853 kB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [277 kB]
+Get:9 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [2128 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [334 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [2184 kB]
+Get:12 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [364 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [373 kB]
+Get:14 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [885 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1108 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [258 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [28.8 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.5 kB]
+Fetched 11.8 MB in 1s (9527 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+1 package can be upgraded. Run 'apt list --upgradable' to see it.
+
+real    0m16.072s
+user    0m0.033s
+sys     0m0.008s
+Listing... Done
+python3-zipp/jammy-security 1.0.0-3ubuntu0.1 all [upgradable from: 1.0.0-3]
+N: There is 1 additional version. Please use the '-a' switch to see it
+
+real    0m0.140s
+user    0m0.125s
+sys     0m0.009s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
+  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
+  libavfilter7
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+The following packages will be upgraded:
+  python3-zipp
+1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+1 standard LTS security update
+Need to get 6288 B of archives.
+After this operation, 2048 B of additional disk space will be used.
+Get:1 http://security.ubuntu.com/ubuntu jammy-security/main amd64 python3-zipp all 1.0.0-3ubuntu0.1 [6288 B]
+Fetched 6288 B in 0s (67.7 kB/s)
+(Reading database ... 62521 files and directories currently installed.)
+Preparing to unpack .../python3-zipp_1.0.0-3ubuntu0.1_all.deb ...
+Unpacking python3-zipp (1.0.0-3ubuntu0.1) over (1.0.0-3) ...
+Setting up python3-zipp (1.0.0-3ubuntu0.1) ...
+
+real    0m1.029s
+user    0m0.005s
+sys     0m0.000s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.098s
+user    0m0.017s
+sys     0m0.067s
+remote: Enumerating objects: 1849, done.
+remote: Counting objects: 100% (1442/1442), done.
+remote: Compressing objects: 100% (699/699), done.
+remote: Total 1849 (delta 929), reused 1083 (delta 730), pack-reused 407
+Receiving objects: 100% (1849/1849), 4.30 MiB | 12.98 MiB/s, done.
+Resolving deltas: 100% (1023/1023), completed with 164 local objects.
+From https://github.com/LadybirdBrowser/ladybird
+   0140e5e9cc..1d03944a9c  master     -> origin/master
+
+real    0m1.181s
+user    0m0.204s
+sys     0m0.023s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Updating 0140e5e9cc..1d03944a9c
+Fast-forward
+ .github/actions/setup/action.yml                                                                                  |    9 +-
+ .github/workflows/lagom-template.yml                                                                              |   19 +-
+ .github/workflows/notes-push.yml                                                                                  |   22 +
+ .mailmap                                                                                                          |    4 +-
+ AK/Assertions.h                                                                                                   |    2 +-
+ AK/ByteBuffer.h                                                                                                   |   18 +
+ AK/CMakeLists.txt                                                                                                 |   11 +-
+ AK/Endian.h                                                                                                       |    7 +
+ AK/FixedPoint.h                                                                                                   |    4 -
+ AK/Forward.h                                                                                                      |    4 +-
+ AK/String.cpp                                                                                                     |   64 ++
+ AK/String.h                                                                                                       |    7 +
+ AK/StringBase.cpp                                                                                                 |   13 +
+ AK/StringBase.h                                                                                                   |    2 +
+ AK/StringBuilder.cpp                                                                                              |   92 ++-
+ AK/StringBuilder.h                                                                                                |   18 +-
+ AK/StringData.h                                                                                                   |   45 +-
+ AK/Time.h                                                                                                         |    1 -
+ AK/Utf16View.cpp                                                                                                  |  222 ++++--
+ AK/Utf16View.h                                                                                                    |   36 +-
+ AK/Utf8View.cpp                                                                                                   |   38 +
+ AK/Utf8View.h                                                                                                     |   64 +-
+ Base/res/ladybird/inspector.css                                                                                   |    2 +-
+ Base/res/ladybird/inspector.js                                                                                    |   77 ++
+ CMakeLists.txt                                                                                                    |   35 +-
+ CMakePresets.json                                                                                                 |   26 +-
+ Documentation/BuildInstructionsLadybird.md                                                                        |   31 +-
+ Documentation/FAQ.md                                                                                              |   10 +
+ Documentation/VSCodeConfiguration.md                                                                              |   27 +-
+ Ladybird/Android/build.gradle.kts                                                                                 |    3 +
+ Ladybird/Android/src/main/cpp/LadybirdActivity.cpp                                                                |    8 +-
+ Ladybird/Android/src/main/cpp/LadybirdServiceBaseJNI.cpp                                                          |    4 +-
+ Ladybird/Android/src/main/cpp/RequestServerService.cpp                                                            |    2 +-
+ Ladybird/Android/src/main/cpp/WebContentService.cpp                                                               |    7 +-
+ Ladybird/AppKit/Application/Application.h                                                                         |    2 +-
+ Ladybird/AppKit/Application/ApplicationBridge.cpp                                                                 |    2 +-
+ Ladybird/AppKit/Application/ApplicationDelegate.h                                                                 |    2 +-
+ Ladybird/AppKit/Application/ApplicationDelegate.mm                                                                |   13 +-
+ Ladybird/AppKit/Application/EventLoopImplementation.mm                                                            |    6 +-
+ Ladybird/AppKit/CMakeLists.txt                                                                                    |   56 +-
+ Ladybird/AppKit/System/Carbon.h                                                                                   |   13 -
+ Ladybird/AppKit/System/Cocoa.h                                                                                    |   13 -
+ Ladybird/AppKit/System/CoreFoundation.h                                                                           |   13 -
+ Ladybird/AppKit/System/Detail/Footer.h                                                                            |   14 -
+ Ladybird/AppKit/System/Detail/Header.h                                                                            |   14 -
+ Ladybird/AppKit/UI/Event.h                                                                                        |    2 +-
+ Ladybird/AppKit/UI/Event.mm                                                                                       |    2 +-
+ Ladybird/AppKit/UI/Inspector.h                                                                                    |    2 +-
+ Ladybird/AppKit/UI/InspectorController.h                                                                          |    2 +-
+ Ladybird/AppKit/UI/LadybirdWebView.h                                                                              |    2 +-
+ Ladybird/AppKit/UI/Palette.mm                                                                                     |    2 +-
+ Ladybird/AppKit/UI/SearchPanel.h                                                                                  |    2 +-
+ Ladybird/AppKit/UI/Tab.h                                                                                          |    2 +-
+ Ladybird/AppKit/UI/TabController.h                                                                                |    2 +-
+ Ladybird/AppKit/UI/TaskManager.h                                                                                  |    2 +-
+ Ladybird/AppKit/UI/TaskManager.swift                                                                              |   64 ++
+ Ladybird/AppKit/UI/TaskManagerController.h                                                                        |    4 +-
+ Ladybird/AppKit/UI/TaskManagerController.mm                                                                       |    2 +-
+ Ladybird/AppKit/UI/TaskManagerController.swift                                                                    |   50 ++
+ Ladybird/AppKit/Utilities/Conversions.h                                                                           |    2 +-
+ Ladybird/AppKit/main.mm                                                                                           |    5 +-
+ Ladybird/AppKit/module.modulemap                                                                                  |   14 +
+ Ladybird/CMakeLists.txt                                                                                           |   19 +-
+ Ladybird/HelperProcess.cpp                                                                                        |    2 -
+ Ladybird/Info.plist                                                                                               |    2 +-
+ Ladybird/MachPortServer.cpp                                                                                       |    2 +-
+ Ladybird/Qt/AudioCodecPluginQt.cpp                                                                                |    2 +-
+ Ladybird/Qt/AudioCodecPluginQt.h                                                                                  |    2 +-
+ Ladybird/Qt/AudioThread.cpp                                                                                       |    2 +-
+ Ladybird/Qt/AudioThread.h                                                                                         |    8 +-
+ Ladybird/Qt/BrowserWindow.cpp                                                                                     |   25 +
+ Ladybird/Qt/BrowserWindow.h                                                                                       |    4 +
+ Ladybird/Qt/EventLoopImplementationQt.cpp                                                                         |    2 +-
+ Ladybird/Qt/Icon.cpp                                                                                              |    2 +
+ Ladybird/Qt/InspectorWidget.h                                                                                     |    2 +-
+ Ladybird/Qt/Tab.cpp                                                                                               |    1 -
+ Ladybird/Qt/TabBar.h                                                                                              |    2 +-
+ Ladybird/Qt/main.cpp                                                                                              |    9 +-
+ Ladybird/RequestServer/main.cpp                                                                                   |    2 +-
+ Ladybird/Types.h                                                                                                  |    6 -
+ Ladybird/Utilities.cpp                                                                                            |    6 +-
+ Ladybird/Utilities.h                                                                                              |    2 +-
+ Ladybird/WebContent/main.cpp                                                                                      |    8 +-
+ Ladybird/WebDriver/main.cpp                                                                                       |    2 +-
+ Ladybird/cmake/GenerateSwiftHeader.cmake                                                                          |   85 ++
+ Meta/CMake/common_compile_options.cmake                                                                           |   94 ++-
+ Meta/CMake/common_options.cmake                                                                                   |    7 +
+ Meta/CMake/lagom_compile_options.cmake                                                                            |   36 +-
+ Meta/CMake/vcpkg/base-triplets/arm64-linux.cmake                                                                  |    2 +-
+ Meta/CMake/vcpkg/base-triplets/arm64-osx.cmake                                                                    |    2 +-
+ Meta/CMake/vcpkg/base-triplets/base.cmake                                                                         |    2 +
+ Meta/CMake/vcpkg/base-triplets/x64-linux.cmake                                                                    |    2 +-
+ Meta/CMake/vcpkg/base-triplets/x64-osx.cmake                                                                      |    2 +-
+ Meta/CMake/vcpkg/generate_vcpkg_toolchain_variables.cmake                                                         |   11 +
+ Meta/Lagom/CMakeLists.txt                                                                                         |   22 +-
+ Meta/Lagom/CMakePresets.json                                                                                      |   11 +
+ Meta/Lagom/Fuzzers/CMakeLists.txt                                                                                 |    6 +
+ Meta/Lagom/Fuzzers/FuzzWOFF.cpp                                                                                   |    4 +-
+ Meta/Lagom/Fuzzers/FuzzWOFF2.cpp                                                                                  |    4 +-
+ Meta/Lagom/Fuzzers/FuzzilliJs.cpp                                                                                 |    9 +-
+ Meta/Lagom/Tools/CodeGenerators/IPCCompiler/main.cpp                                                              |    2 +
+ Meta/Lagom/Tools/CodeGenerators/LibTextCodec/GenerateEncodingIndexes.cpp                                          |    2 +
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/BindingsGenerator/IDLGenerators.cpp                                        |   12 +-
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/BindingsGenerator/IDLGenerators.h                                          |   33 +
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/BindingsGenerator/main.cpp                                                 |   18 +-
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/GenerateAriaRoles.cpp                                                      |   55 +-
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/GenerateCSSMathFunctions.cpp                                               |   55 +-
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/GeneratorUtil.h                                                            |    8 +-
+ Meta/Lagom/vcpkg-configuration.json                                                                               |   10 +
+ Meta/Lagom/vcpkg.json                                                                                             |    1 +
+ Meta/gn/secondary/Userland/Libraries/LibWeb/Painting/BUILD.gn                                                     |    1 -
+ Meta/gn/secondary/Userland/Libraries/LibWeb/WebAudio/BUILD.gn                                                     |    4 +
+ Meta/gn/secondary/Userland/Libraries/LibWeb/idl_files.gni                                                         |    2 +
+ Tests/AK/TestDuration.cpp                                                                                         |    2 +
+ Tests/AK/TestFixedPoint.cpp                                                                                       |    2 +
+ Tests/AK/TestUtf16.cpp                                                                                            |   87 ++-
+ Tests/AK/TestUtf8.cpp                                                                                             |   12 +
+ Tests/LibGfx/TestImageDecoder.cpp                                                                                 |   21 -
+ Tests/LibGfx/TestWOFF.cpp                                                                                         |    4 +-
+ Tests/LibGfx/TestWOFF2.cpp                                                                                        |    6 +-
+ Tests/LibGfx/test-inputs/jxl/modular_property_8.jxl                                                               |  Bin 26 -> 0 bytes
+ Tests/LibJS/test262-runner.cpp                                                                                    |   12 +-
+ Tests/LibMedia/TestMediaCommon.h                                                                                  |    2 +-
+ Tests/LibMedia/TestParseMatroska.cpp                                                                              |    2 +-
+ Tests/LibTextCodec/TestTextDecoders.cpp                                                                           |   12 +
+ Tests/LibUnicode/TestTimeZone.cpp                                                                                 |    6 +-
+ Tests/LibWeb/Layout/expected/block-and-inline/abspos-with-insets-and-auto-margins.txt                             |   15 +
+ Tests/LibWeb/Layout/expected/css-content-visibility.txt                                                           |    9 +
+ Tests/LibWeb/Layout/expected/details-closed.txt                                                                   |   24 +-
+ Tests/LibWeb/Layout/expected/details-open.txt                                                                     |   40 +-
+ Tests/LibWeb/Layout/expected/details-summary-default-ua-style.txt                                                 |   19 +
+ Tests/LibWeb/Layout/expected/grid/define-area-using-line-names.txt                                                |   16 +
+ Tests/LibWeb/Layout/expected/svg-text-with-percentage-values.txt                                                  |   29 +
+ Tests/LibWeb/Layout/expected/svg/svg-line-with-percentage-values.txt                                              |   23 +
+ Tests/LibWeb/Layout/expected/svg/svg-viewbox-zero-width.txt                                                       |   10 +
+ Tests/LibWeb/Layout/input/block-and-inline/abspos-with-insets-and-auto-margins.html                               |   18 +
+ Tests/LibWeb/Layout/input/css-content-visibility.html                                                             |    9 +
+ Tests/LibWeb/Layout/input/details-summary-default-ua-style.html                                                   |    6 +
+ Tests/LibWeb/Layout/input/grid/define-area-using-line-names.html                                                  |   17 +
+ Tests/LibWeb/Layout/input/svg-text-with-percentage-values.html                                                    |   20 +
+ Tests/LibWeb/Layout/input/svg/svg-line-with-percentage-values.html                                                |   12 +
+ Tests/LibWeb/Layout/input/svg/svg-viewbox-zero-width.html                                                         |    1 +
+ Tests/LibWeb/Ref/alt-frame.html                                                                                   |    3 -
+ Tests/LibWeb/Ref/css-backgrounds.html                                                                             |   82 --
+ Tests/LibWeb/Ref/reference/css-color-functions-ref.html                                                           |   91 ---
+ Tests/LibWeb/Ref/reference/images/alt-frame.png                                                                   |  Bin 1629 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/border-radius-ref.png                                                           |  Bin 410685 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/canvas-arcs-and-ellipses-ref.png                                                |  Bin 999 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/canvas-implict-moves-and-lines-ref.png                                          |  Bin 2314 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/canvas-text-ref.png                                                             |  Bin 20198 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/clip-path-polygon-ref.png                                                       |  Bin 171 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/css-background-clip-text.png                                                    |  Bin 183853 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/css-background-position-ref.png                                                 |  Bin 6729 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/css-background-repeat-ref.png                                                   |  Bin 42652 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/css-backgrounds-ref.png                                                         |  Bin 138318 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/css-gradients-ref.png                                                           |  Bin 553651 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/css-transform-box-ref.png                                                       |  Bin 8362 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/inline-node-ref.png                                                             |  Bin 7427 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/input-placeholder-ref.png                                                       |  Bin 1614 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/nested-boxes-with-hidden-overflow-and-border-radius-ref.png                     |  Bin 10230 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/object-fit-position.png                                                         |  Bin 561379 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/outer-box-shadow-ref.png                                                        |  Bin 85407 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/svg-axis-aligned-lines-ref.png                                                  |  Bin 196 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/svg-background-no-natural-size-ref.png                                          |  Bin 407 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/svg-clip-path-and-mask-ref.png                                                  |  Bin 2298 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/svg-clip-rule-ref.png                                                           |  Bin 1004 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/svg-gradient-spreadMethod-ref.png                                               |  Bin 34509 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/svg-maskContentUnits-ref.png                                                    |  Bin 1540 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/svg-radialGradient-ref.png                                                      |  Bin 877988 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/svg-simple-clipPath-ref.png                                                     |  Bin 831 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/svg-text-effects-ref.png                                                        |  Bin 9436 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/svg-textPath-ref.png                                                            |  Bin 18524 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/text-decorations.png                                                            |  Bin 1788 -> 0 bytes
+ Tests/LibWeb/Ref/reference/images/text-shadow-ref.png                                                             |  Bin 46095 -> 0 bytes
+ Tests/LibWeb/Ref/reference/opacity-stacking-ref.html                                                              |    9 -
+ Tests/LibWeb/Ref/reference/svg-foreign-object-mask-ref.html                                                       |    4 -
+ Tests/LibWeb/Ref/reference/svg-non-local-clip-path-ref.html                                                       |    6 -
+ Tests/LibWeb/Ref/reference/svg-stroke-paintstyle-with-opacity-ref.html                                            |   14 -
+ Tests/LibWeb/Screenshot/alt-frame.html                                                                            |    3 +
+ Tests/LibWeb/{Ref => Screenshot}/assets/background-no-repeat.html                                                 |    0
+ Tests/LibWeb/{Ref => Screenshot}/assets/background-repeat-x.html                                                  |    0
+ Tests/LibWeb/{Ref => Screenshot}/assets/background-repeat-y.html                                                  |    0
+ Tests/LibWeb/{Ref => Screenshot}/assets/background-repeat.html                                                    |    0
+ Tests/LibWeb/{Ref => Screenshot}/assets/car.png                                                                   |  Bin
+ Tests/LibWeb/{Ref => Screenshot}/assets/smiley.png                                                                |  Bin
+ Tests/LibWeb/Screenshot/assets/vertical-rect.svg                                                                  |    4 +
+ Tests/LibWeb/{Ref => Screenshot}/border-radius.html                                                               |   14 +-
+ Tests/LibWeb/{Ref => Screenshot}/canvas-arcs-and-ellipses.html                                                    |    0
+ Tests/LibWeb/{Ref => Screenshot}/canvas-fillstyle-rgb.html                                                        |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/canvas-implict-moves-and-lines.html                                              |    0
+ Tests/LibWeb/{Ref => Screenshot}/canvas-path-rect.html                                                            |    0
+ Tests/LibWeb/{Ref => Screenshot}/canvas-text.html                                                                 |    0
+ Tests/LibWeb/{Ref => Screenshot}/clip-path-polygon.html                                                           |    0
+ Tests/LibWeb/{Ref => Screenshot}/css-background-clip-text.html                                                    |    0
+ Tests/LibWeb/{Ref => Screenshot}/css-background-position.html                                                     |    4 +-
+ Tests/LibWeb/{Ref => Screenshot}/css-background-repeat.html                                                       |   10 +-
+ Tests/LibWeb/Screenshot/css-backgrounds.html                                                                      |   82 ++
+ Tests/LibWeb/{Ref => Screenshot}/css-color-functions.html                                                         |    0
+ Tests/LibWeb/{Ref => Screenshot}/css-gradients.html                                                               |    0
+ Tests/LibWeb/{Ref => Screenshot}/css-transform-box.html                                                           |    0
+ Tests/LibWeb/Screenshot/images/alt-frame.png                                                                      |  Bin 0 -> 4339 bytes
+ Tests/LibWeb/Screenshot/images/border-radius-ref.png                                                              |  Bin 0 -> 373180 bytes
+ Tests/LibWeb/Screenshot/images/canvas-arcs-and-ellipses-ref.png                                                   |  Bin 0 -> 6253 bytes
+ Tests/LibWeb/{Ref/reference => Screenshot}/images/canvas-fillstyle-rgb.png                                        |  Bin
+ Tests/LibWeb/Screenshot/images/canvas-implict-moves-and-lines-ref.png                                             |  Bin 0 -> 8913 bytes
+ Tests/LibWeb/{Ref/reference => Screenshot}/images/canvas-path-rect-ref.png                                        |  Bin
+ Tests/LibWeb/Screenshot/images/canvas-text-ref.png                                                                |  Bin 0 -> 29883 bytes
+ Tests/LibWeb/Screenshot/images/clip-path-polygon-ref.png                                                          |  Bin 0 -> 3350 bytes
+ Tests/LibWeb/Screenshot/images/css-background-clip-text.png                                                       |  Bin 0 -> 278614 bytes
+ Tests/LibWeb/Screenshot/images/css-background-position-ref.png                                                    |  Bin 0 -> 78910 bytes
+ Tests/LibWeb/Screenshot/images/css-background-repeat-ref.png                                                      |  Bin 0 -> 31845 bytes
+ Tests/LibWeb/Screenshot/images/css-backgrounds-ref.png                                                            |  Bin 0 -> 118044 bytes
+ Tests/LibWeb/Screenshot/images/css-color-functions-ref.png                                                        |  Bin 0 -> 117427 bytes
+ Tests/LibWeb/Screenshot/images/css-gradients-ref.png                                                              |  Bin 0 -> 440459 bytes
+ Tests/LibWeb/Screenshot/images/css-transform-box-ref.png                                                          |  Bin 0 -> 6083 bytes
+ Tests/LibWeb/Screenshot/images/inline-node-ref.png                                                                |  Bin 0 -> 16903 bytes
+ Tests/LibWeb/Screenshot/images/input-placeholder-ref.png                                                          |  Bin 0 -> 4338 bytes
+ Tests/LibWeb/Screenshot/images/meter-ref.png                                                                      |  Bin 0 -> 3648 bytes
+ Tests/LibWeb/Screenshot/images/nested-boxes-with-hidden-overflow-and-border-radius-ref.png                        |  Bin 0 -> 8076 bytes
+ Tests/LibWeb/Screenshot/images/object-fit-position.png                                                            |  Bin 0 -> 671505 bytes
+ Tests/LibWeb/Screenshot/images/opacity-stacking-ref.png                                                           |  Bin 0 -> 13906 bytes
+ Tests/LibWeb/Screenshot/images/outer-box-shadow-ref.png                                                           |  Bin 0 -> 111133 bytes
+ Tests/LibWeb/Screenshot/images/svg-axis-aligned-lines-ref.png                                                     |  Bin 0 -> 3369 bytes
+ Tests/LibWeb/Screenshot/images/svg-background-no-natural-size-ref.png                                             |  Bin 0 -> 3505 bytes
+ Tests/LibWeb/Screenshot/images/svg-clip-path-and-mask-ref.png                                                     |  Bin 0 -> 9525 bytes
+ Tests/LibWeb/Screenshot/images/svg-clip-rule-ref.png                                                              |  Bin 0 -> 5243 bytes
+ Tests/LibWeb/Screenshot/images/svg-foreign-object-mask-ref.png                                                    |  Bin 0 -> 4083 bytes
+ Tests/LibWeb/Screenshot/images/svg-gradient-spreadMethod-ref.png                                                  |  Bin 0 -> 38371 bytes
+ Tests/LibWeb/Screenshot/images/svg-maskContentUnits-ref.png                                                       |  Bin 0 -> 6340 bytes
+ Tests/LibWeb/{Ref/reference/images/meter-ref.png => Screenshot/images/svg-non-local-clip-path-ref.png}            |  Bin 3696 -> 3260 bytes
+ Tests/LibWeb/Screenshot/images/svg-radialGradient-ref.png                                                         |  Bin 0 -> 841694 bytes
+ Tests/LibWeb/Screenshot/images/svg-simple-clipPath-ref.png                                                        |  Bin 0 -> 5088 bytes
+ Tests/LibWeb/Screenshot/images/svg-stroke-paintstyle-with-opacity-ref.png                                         |  Bin 0 -> 3348 bytes
+ Tests/LibWeb/Screenshot/images/svg-text-effects-ref.png                                                           |  Bin 0 -> 18402 bytes
+ Tests/LibWeb/Screenshot/images/svg-textPath-ref.png                                                               |  Bin 0 -> 39205 bytes
+ Tests/LibWeb/Screenshot/images/text-decorations.png                                                               |  Bin 0 -> 6975 bytes
+ Tests/LibWeb/Screenshot/images/text-shadow-ref.png                                                                |  Bin 0 -> 74782 bytes
+ Tests/LibWeb/{Ref => Screenshot}/inline-node.html                                                                 |    0
+ Tests/LibWeb/{Ref => Screenshot}/input-placeholder.html                                                           |    0
+ Tests/LibWeb/{Ref => Screenshot}/meter.html                                                                       |    0
+ Tests/LibWeb/{Ref => Screenshot}/nested-boxes-with-hidden-overflow-and-border-radius.html                         |    0
+ Tests/LibWeb/{Ref => Screenshot}/object-fit-position.html                                                         |   96 +--
+ Tests/LibWeb/{Ref => Screenshot}/opacity-stacking.html                                                            |    0
+ Tests/LibWeb/{Ref => Screenshot}/outer-box-shadow.html                                                            |    0
+ Tests/LibWeb/{Ref/reference/alt-frame.html => Screenshot/reference/alt-frame-ref.html}                            |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/border-radius-ref.html                                                 |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/canvas-arcs-and-ellipses-ref.html                                      |    2 +-
+ Tests/LibWeb/{Ref/reference/canvas-fillstyle-rgb.html => Screenshot/reference/canvas-fillstyle-rgb-ref.html}      |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/canvas-implict-moves-and-lines-ref.html                                |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/canvas-path-rect-ref.html                                              |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/canvas-text-ref.html                                                   |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/clip-path-polygon-ref.html                                             |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/css-background-clip-text-ref.html                                      |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/css-background-position-ref.html                                       |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/css-background-repeat-ref.html                                         |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/css-backgrounds-ref.html                                               |    2 +-
+ Tests/LibWeb/{Ref/reference/svg-axis-aligned-lines-ref.html => Screenshot/reference/css-color-functions-ref.html} |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/css-gradients-ref.html                                                 |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/css-transform-box-ref.html                                             |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/inline-node-ref.html                                                   |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/input-placeholder-ref.html                                             |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/meter-ref.html                                                         |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/nested-boxes-with-hidden-overflow-and-border-radius-ref.html           |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/object-fit-position-ref.html                                           |    2 +-
+ Tests/LibWeb/Screenshot/reference/opacity-stacking-ref.html                                                       |   10 +
+ Tests/LibWeb/{Ref => Screenshot}/reference/outer-box-shadow-ref.html                                              |    2 +-
+ Tests/LibWeb/Screenshot/reference/svg-axis-aligned-lines-ref.html                                                 |    9 +
+ Tests/LibWeb/{Ref => Screenshot}/reference/svg-background-no-natural-size-ref.html                                |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/svg-clip-path-and-mask-ref.html                                        |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/svg-clip-rule-ref.html                                                 |    2 +-
+ Tests/LibWeb/Screenshot/reference/svg-foreign-object-mask-ref.html                                                |   10 +
+ Tests/LibWeb/{Ref => Screenshot}/reference/svg-gradient-spreadMethod-ref.html                                     |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/svg-maskContentUnits-ref.html                                          |    2 +-
+ Tests/LibWeb/Screenshot/reference/svg-non-local-clip-path-ref.html                                                |   10 +
+ Tests/LibWeb/{Ref => Screenshot}/reference/svg-radialGradient-ref.html                                            |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/svg-simple-clipPath-ref.html                                           |    2 +-
+ Tests/LibWeb/Screenshot/reference/svg-stroke-paintstyle-with-opacity-ref.html                                     |   10 +
+ Tests/LibWeb/{Ref => Screenshot}/reference/svg-text-effects-ref.html                                              |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/svg-textPath-ref.html                                                  |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/text-decorations-ref.html                                              |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/reference/text-shadow-ref.html                                                   |    2 +-
+ Tests/LibWeb/{Ref => Screenshot}/svg-axis-aligned-lines.html                                                      |    0
+ Tests/LibWeb/{Ref => Screenshot}/svg-background-no-natural-size.html                                              |    4 +-
+ Tests/LibWeb/{Ref => Screenshot}/svg-clip-path-and-mask.html                                                      |    0
+ Tests/LibWeb/{Ref => Screenshot}/svg-clip-rule.html                                                               |    0
+ Tests/LibWeb/{Ref => Screenshot}/svg-foreign-object-mask.html                                                     |    0
+ Tests/LibWeb/{Ref => Screenshot}/svg-gradient-spreadMethod.html                                                   |    0
+ Tests/LibWeb/{Ref => Screenshot}/svg-maskContentUnits.html                                                        |    0
+ Tests/LibWeb/{Ref => Screenshot}/svg-non-local-clip-path.html                                                     |    0
+ Tests/LibWeb/{Ref => Screenshot}/svg-radialGradient.html                                                          |    0
+ Tests/LibWeb/{Ref => Screenshot}/svg-simple-clipPath.html                                                         |    0
+ Tests/LibWeb/{Ref => Screenshot}/svg-stroke-paintstyle-with-opacity.html                                          |    0
+ Tests/LibWeb/{Ref => Screenshot}/svg-text-effects.html                                                            |    0
+ Tests/LibWeb/{Ref => Screenshot}/svg-textPath.html                                                                |    0
+ Tests/LibWeb/{Ref => Screenshot}/text-decorations.html                                                            |    0
+ Tests/LibWeb/{Ref => Screenshot}/text-shadow.html                                                                 |    0
+ Tests/LibWeb/Text/expected/DOM/CharacterData-replaceData-break-surrogate-pair.txt                                 |    5 +
+ Tests/LibWeb/Text/expected/DOM/DOMStringMap-setter-with-invalid-name.txt                                          |    1 +
+ Tests/LibWeb/Text/expected/DOM/Node-isDefaultNamespace.txt                                                        |   12 +
+ Tests/LibWeb/Text/expected/DOM/Node-isEqualNode.txt                                                               |   11 +
+ Tests/LibWeb/Text/expected/DOM/Node-lookupNamespaceURI.txt                                                        |   20 +
+ Tests/LibWeb/Text/expected/DOM/Text-wholeText.txt                                                                 |    6 +
+ Tests/LibWeb/Text/expected/DOM/getElementById-empty-string.txt                                                    |    1 +
+ Tests/LibWeb/Text/expected/DOM/getElementById-multiple.txt                                                        |    1 +
+ Tests/LibWeb/Text/expected/DOM/getElementsByClassName-empty-string.txt                                            |    1 +
+ Tests/LibWeb/Text/expected/DOM/getElementsName-empty-string.txt                                                   |    1 +
+ Tests/LibWeb/Text/expected/Element-scrollby-negative-scroll-offset-crash.txt                                      |    1 +
+ Tests/LibWeb/Text/expected/{ => Fetch}/fetch-request-url-search-params.txt                                        |    0
+ Tests/LibWeb/Text/expected/{ => Fetch}/fetch-response-content-type.txt                                            |    0
+ Tests/LibWeb/Text/expected/Fetch/fetch-response-url-encoded.txt                                                   |    3 +
+ Tests/LibWeb/Text/expected/{ => Fetch}/fetch-timed-out-request.txt                                                |    0
+ Tests/LibWeb/Text/expected/HTML/Element-checkVisibility.txt                                                       |    8 +
+ Tests/LibWeb/Text/expected/HTML/maxed-out-dimension-value.txt                                                     |    1 +
+ Tests/LibWeb/Text/expected/HTML/short-legacy-color-value.txt                                                      |    1 +
+ Tests/LibWeb/Text/expected/SVG/svg-getbbox-transform-with-no-inverse.txt                                          |    1 +
+ Tests/LibWeb/Text/expected/Selection-setBaseAndExtent-without-common-root.txt                                     |    1 +
+ Tests/LibWeb/Text/expected/ShadowDOM/remove-style-element-inside-shadow-tree.txt                                  |    4 +
+ Tests/LibWeb/Text/expected/all-window-properties.txt                                                              |    2 +
+ Tests/LibWeb/Text/expected/css/getComputedStyle-print-all.txt                                                     |    3 +-
+ Tests/LibWeb/Text/input/DOM/CharacterData-replaceData-break-surrogate-pair.html                                   |   16 +
+ Tests/LibWeb/Text/input/DOM/DOMStringMap-setter-with-invalid-name.html                                            |   12 +
+ Tests/LibWeb/Text/input/DOM/Node-isDefaultNamespace.html                                                          |   31 +
+ Tests/LibWeb/Text/input/DOM/Node-isEqualNode.html                                                                 |   32 +
+ Tests/LibWeb/Text/input/DOM/Node-lookupNamespaceURI.html                                                          |   43 ++
+ Tests/LibWeb/Text/input/DOM/Text-wholeText.html                                                                   |   36 +
+ Tests/LibWeb/Text/input/DOM/getElementById-empty-string.html                                                      |    8 +
+ Tests/LibWeb/Text/input/DOM/getElementById-multiple.html                                                          |    7 +
+ Tests/LibWeb/Text/input/DOM/getElementsByClassName-empty-string.html                                              |    8 +
+ Tests/LibWeb/Text/input/DOM/getElementsName-empty-string.html                                                     |    8 +
+ Tests/LibWeb/Text/input/Element-scrollby-negative-scroll-offset-crash.html                                        |   16 +
+ Tests/LibWeb/Text/input/{ => Fetch}/fetch-request-url-search-params.html                                          |    2 +-
+ Tests/LibWeb/Text/input/{ => Fetch}/fetch-response-content-type.html                                              |    2 +-
+ Tests/LibWeb/Text/input/Fetch/fetch-response-url-encoded.html                                                     |   17 +
+ Tests/LibWeb/Text/input/{ => Fetch}/fetch-timed-out-request.html                                                  |    2 +-
+ Tests/LibWeb/Text/input/HTML/Element-checkVisibility.html                                                         |   71 ++
+ Tests/LibWeb/Text/input/HTML/maxed-out-dimension-value.html                                                       |    9 +
+ Tests/LibWeb/Text/input/HTML/short-legacy-color-value.html                                                        |    7 +
+ Tests/LibWeb/Text/input/SVG/svg-getbbox-transform-with-no-inverse.html                                            |   12 +
+ Tests/LibWeb/Text/input/Selection-setBaseAndExtent-without-common-root.html                                       |   11 +
+ Tests/LibWeb/Text/input/ShadowDOM/remove-style-element-inside-shadow-tree.html                                    |   20 +
+ Userland/Libraries/LibAudio/CMakeLists.txt                                                                        |    6 +
+ Userland/Libraries/LibAudio/PlaybackStream.cpp                                                                    |    4 +
+ Userland/Libraries/LibAudio/PlaybackStream.h                                                                      |    4 +-
+ Userland/Libraries/LibAudio/PlaybackStreamAudioUnit.cpp                                                           |   23 +-
+ Userland/Libraries/LibAudio/PlaybackStreamAudioUnit.h                                                             |    4 +-
+ Userland/Libraries/LibAudio/PlaybackStreamOboe.cpp                                                                |  158 ++++
+ Userland/Libraries/LibAudio/PlaybackStreamOboe.h                                                                  |   36 +
+ Userland/Libraries/LibAudio/PlaybackStreamPulseAudio.cpp                                                          |    8 +-
+ Userland/Libraries/LibAudio/PlaybackStreamPulseAudio.h                                                            |    4 +-
+ Userland/Libraries/LibAudio/PulseAudioWrappers.cpp                                                                |    8 +-
+ Userland/Libraries/LibAudio/PulseAudioWrappers.h                                                                  |    2 +-
+ Userland/Libraries/LibCore/ElapsedTimer.cpp                                                                       |    2 +-
+ Userland/Libraries/LibCore/ElapsedTimer.h                                                                         |    2 +-
+ Userland/Libraries/LibCore/EventLoopImplementationUnix.cpp                                                        |   16 +-
+ Userland/Libraries/LibCore/FileWatcherMacOS.mm                                                                    |    9 +-
+ Userland/Libraries/LibCore/IOSurface.cpp                                                                          |    6 +-
+ Userland/Libraries/LibCore/MetalContext.mm                                                                        |    6 +-
+ Userland/Libraries/LibCore/Platform/ProcessStatisticsMach.cpp                                                     |    8 +-
+ Userland/Libraries/LibCore/Socket.cpp                                                                             |    6 +-
+ Userland/Libraries/LibCore/Socket.h                                                                               |    6 +-
+ Userland/Libraries/LibCore/System.cpp                                                                             |   21 +
+ Userland/Libraries/LibCore/System.h                                                                               |    4 +
+ Userland/Libraries/LibCore/VulkanContext.cpp                                                                      |    6 +-
+ Userland/Libraries/LibCrypto/CMakeLists.txt                                                                       |    2 +-
+ Userland/Libraries/LibGfx/Bitmap.cpp                                                                              |   42 +
+ Userland/Libraries/LibGfx/Bitmap.h                                                                                |   13 +-
+ Userland/Libraries/LibGfx/CMakeLists.txt                                                                          |   12 +-
+ Userland/Libraries/LibGfx/Filters/BoxBlurFilter.h                                                                 |   23 -
+ Userland/Libraries/LibGfx/Filters/BrightnessFilter.h                                                              |   41 -
+ Userland/Libraries/LibGfx/Filters/ColorBlindnessFilter.cpp                                                        |   84 --
+ Userland/Libraries/LibGfx/Filters/ColorBlindnessFilter.h                                                          |   64 --
+ Userland/Libraries/LibGfx/Filters/ColorFilter.h                                                                   |   53 --
+ Userland/Libraries/LibGfx/Filters/ContrastFilter.h                                                                |   41 -
+ Userland/Libraries/LibGfx/Filters/FastBoxBlurFilter.cpp                                                           |  182 -----
+ Userland/Libraries/LibGfx/Filters/FastBoxBlurFilter.h                                                             |   26 -
+ Userland/Libraries/LibGfx/Filters/Filter.h                                                                        |   34 -
+ Userland/Libraries/LibGfx/Filters/GenericConvolutionFilter.h                                                      |  154 ----
+ Userland/Libraries/LibGfx/Filters/GrayscaleFilter.h                                                               |   25 -
+ Userland/Libraries/LibGfx/Filters/HueRotateFilter.h                                                               |   54 --
+ Userland/Libraries/LibGfx/Filters/InvertFilter.h                                                                  |   25 -
+ Userland/Libraries/LibGfx/Filters/LaplacianFilter.h                                                               |   22 -
+ Userland/Libraries/LibGfx/Filters/LumaFilter.cpp                                                                  |   33 -
+ Userland/Libraries/LibGfx/Filters/LumaFilter.h                                                                    |   24 -
+ Userland/Libraries/LibGfx/Filters/MatrixFilter.h                                                                  |   46 --
+ Userland/Libraries/LibGfx/Filters/OpacityFilter.h                                                                 |   33 -
+ Userland/Libraries/LibGfx/Filters/SaturateFilter.h                                                                |   40 -
+ Userland/Libraries/LibGfx/Filters/SepiaFilter.h                                                                   |   31 -
+ Userland/Libraries/LibGfx/Filters/SharpenFilter.h                                                                 |   22 -
+ Userland/Libraries/LibGfx/Filters/SpatialGaussianBlurFilter.h                                                     |   22 -
+ Userland/Libraries/LibGfx/Filters/StackBlurFilter.cpp                                                             |  312 --------
+ Userland/Libraries/LibGfx/Filters/StackBlurFilter.h                                                               |   27 -
+ Userland/Libraries/LibGfx/Filters/TintFilter.h                                                                    |   38 -
+ Userland/Libraries/LibGfx/Font/FontData.cpp                                                                       |   40 +
+ Userland/Libraries/LibGfx/Font/FontData.h                                                                         |   31 +
+ Userland/Libraries/LibGfx/Font/FontDatabase.cpp                                                                   |    4 +-
+ Userland/Libraries/LibGfx/Font/OpenType/Tables.cpp                                                                |   14 +-
+ Userland/Libraries/LibGfx/Font/OpenType/Typeface.cpp                                                              |   10 +-
+ Userland/Libraries/LibGfx/Font/OpenType/Typeface.h                                                                |    3 +-
+ Userland/Libraries/LibGfx/Font/Typeface.h                                                                         |    1 +
+ Userland/Libraries/LibGfx/Font/WOFF/{Typeface.cpp => Loader.cpp}                                                  |   12 +-
+ Userland/Libraries/LibGfx/Font/WOFF/Loader.h                                                                      |   19 +
+ Userland/Libraries/LibGfx/Font/WOFF/Typeface.h                                                                    |   56 --
+ Userland/Libraries/LibGfx/Font/WOFF2/{Typeface.cpp => Loader.cpp}                                                 |   10 +-
+ Userland/Libraries/LibGfx/Font/WOFF2/Loader.h                                                                     |   18 +
+ Userland/Libraries/LibGfx/Font/WOFF2/Typeface.h                                                                   |   57 --
+ Userland/Libraries/LibGfx/ICC/TagTypes.h                                                                          |    4 +-
+ Userland/Libraries/LibGfx/ImageFormats/JPEGWriter.cpp                                                             |    2 +-
+ Userland/Libraries/LibGfx/ImageFormats/JPEGXLLoader.cpp                                                           | 2741 ++++-------------------------------------------------------------
+ Userland/Libraries/LibGfx/ImageFormats/JPEGXLLoader.h                                                             |    4 +-
+ Userland/Libraries/LibIPC/Decoder.cpp                                                                             |    2 +-
+ Userland/Libraries/LibIPC/Decoder.h                                                                               |    2 +-
+ Userland/Libraries/LibIPC/Encoder.cpp                                                                             |    2 +-
+ Userland/Libraries/LibIPC/Encoder.h                                                                               |    2 +-
+ Userland/Libraries/LibImageDecoderClient/Client.cpp                                                               |    6 +-
+ Userland/Libraries/LibImageDecoderClient/Client.h                                                                 |    2 +-
+ Userland/Libraries/LibJS/Bytecode/Interpreter.cpp                                                                 |   12 +-
+ Userland/Libraries/LibJS/Heap/Heap.cpp                                                                            |    2 +-
+ Userland/Libraries/LibJS/Runtime/Intrinsics.cpp                                                                   |    2 +
+ Userland/Libraries/LibJS/Runtime/Iterator.cpp                                                                     |   36 +
+ Userland/Libraries/LibJS/Runtime/Iterator.h                                                                       |    1 +
+ Userland/Libraries/LibJS/Runtime/IteratorPrototype.cpp                                                            |   50 +-
+ Userland/Libraries/LibJS/Runtime/IteratorPrototype.h                                                              |    6 +
+ Userland/Libraries/LibJS/Runtime/PrimitiveString.cpp                                                              |    6 +-
+ Userland/Libraries/LibJS/Runtime/VM.cpp                                                                           |   20 +
+ Userland/Libraries/LibJS/Runtime/VM.h                                                                             |   10 +
+ Userland/Libraries/LibJS/Runtime/Value.cpp                                                                        |   22 +-
+ Userland/Libraries/LibJS/Runtime/Value.h                                                                          |    2 +-
+ Userland/Libraries/LibJS/Tests/builtins/Iterator/Iterator.prototype.@@toStringTag.js                              |   34 +-
+ Userland/Libraries/LibJS/Tests/builtins/Iterator/Iterator.prototype.constructor.js                                |   33 +
+ Userland/Libraries/LibMedia/Containers/Matroska/Document.h                                                        |   22 +-
+ Userland/Libraries/LibMedia/Containers/Matroska/MatroskaDemuxer.cpp                                               |    6 +-
+ Userland/Libraries/LibMedia/Containers/Matroska/MatroskaDemuxer.h                                                 |    4 +-
+ Userland/Libraries/LibMedia/Containers/Matroska/Reader.cpp                                                        |   14 +-
+ Userland/Libraries/LibMedia/Containers/Matroska/Reader.h                                                          |    8 +-
+ Userland/Libraries/LibMedia/Demuxer.h                                                                             |    4 +-
+ Userland/Libraries/LibMedia/FFmpeg/FFmpegVideoDecoder.cpp                                                         |    4 +-
+ Userland/Libraries/LibMedia/FFmpeg/FFmpegVideoDecoder.h                                                           |    4 +-
+ Userland/Libraries/LibMedia/FFmpeg/FFmpegVideoDecoderStub.cpp                                                     |    2 +-
+ Userland/Libraries/LibMedia/PlaybackManager.cpp                                                                   |   30 +-
+ Userland/Libraries/LibMedia/PlaybackManager.h                                                                     |   30 +-
+ Userland/Libraries/LibMedia/Sample.h                                                                              |    6 +-
+ Userland/Libraries/LibMedia/Track.h                                                                               |    2 +-
+ Userland/Libraries/LibMedia/VideoDecoder.h                                                                        |    4 +-
+ Userland/Libraries/LibMedia/VideoFrame.cpp                                                                        |    4 +-
+ Userland/Libraries/LibMedia/VideoFrame.h                                                                          |   12 +-
+ Userland/Libraries/LibTLS/CMakeLists.txt                                                                          |    2 +-
+ Userland/Libraries/LibTextCodec/Decoder.cpp                                                                       |  133 +---
+ Userland/Libraries/LibUnicode/TimeZone.cpp                                                                        |    2 +-
+ Userland/Libraries/LibUnicode/TimeZone.h                                                                          |    2 +-
+ Userland/Libraries/LibWasm/AbstractMachine/AbstractMachine.cpp                                                    |   57 +-
+ Userland/Libraries/LibWasm/AbstractMachine/BytecodeInterpreter.cpp                                                |  187 ++---
+ Userland/Libraries/LibWasm/AbstractMachine/BytecodeInterpreter.h                                                  |    8 +-
+ Userland/Libraries/LibWasm/AbstractMachine/Operators.h                                                            |  120 +++
+ Userland/Libraries/LibWasm/AbstractMachine/Validator.cpp                                                          |   11 +-
+ Userland/Libraries/LibWasm/AbstractMachine/Validator.h                                                            |    8 +-
+ Userland/Libraries/LibWasm/WASI/Wasi.cpp                                                                          |  123 ++-
+ Userland/Libraries/LibWasm/Wasi.h                                                                                 |   11 +-
+ Userland/Libraries/LibWeb/CMakeLists.txt                                                                          |    5 +-
+ Userland/Libraries/LibWeb/CSS/ComputedValues.h                                                                    |    4 +
+ Userland/Libraries/LibWeb/CSS/Default.css                                                                         |    6 +-
+ Userland/Libraries/LibWeb/CSS/Enums.json                                                                          |    5 +
+ Userland/Libraries/LibWeb/CSS/FontFace.cpp                                                                        |    8 +-
+ Userland/Libraries/LibWeb/CSS/Parser/Tokenizer.cpp                                                                |   19 +-
+ Userland/Libraries/LibWeb/CSS/Properties.json                                                                     |    9 +
+ Userland/Libraries/LibWeb/CSS/StyleComputer.cpp                                                                   |   12 +-
+ Userland/Libraries/LibWeb/CSS/StyleInvalidation.cpp                                                               |    4 +-
+ Userland/Libraries/LibWeb/CSS/StyleProperties.cpp                                                                 |    6 +
+ Userland/Libraries/LibWeb/CSS/StyleProperties.h                                                                   |    1 +
+ Userland/Libraries/LibWeb/CSS/StyleSheetList.cpp                                                                  |    3 +-
+ Userland/Libraries/LibWeb/Cookie/ParsedCookie.cpp                                                                 |    2 +-
+ Userland/Libraries/LibWeb/DOM/CharacterData.cpp                                                                   |    4 +-
+ Userland/Libraries/LibWeb/DOM/Document.cpp                                                                        |  129 +++-
+ Userland/Libraries/LibWeb/DOM/Document.h                                                                          |    8 +-
+ Userland/Libraries/LibWeb/DOM/Document.idl                                                                        |    2 +-
+ Userland/Libraries/LibWeb/DOM/DocumentType.idl                                                                    |    2 +
+ Userland/Libraries/LibWeb/DOM/Element.cpp                                                                         |   88 ++-
+ Userland/Libraries/LibWeb/DOM/Element.h                                                                           |   13 +-
+ Userland/Libraries/LibWeb/DOM/Element.idl                                                                         |   11 +-
+ Userland/Libraries/LibWeb/DOM/EventDispatcher.cpp                                                                 |   28 +-
+ Userland/Libraries/LibWeb/DOM/Node.cpp                                                                            |  119 ++-
+ Userland/Libraries/LibWeb/DOM/Node.h                                                                              |    4 +
+ Userland/Libraries/LibWeb/DOM/Node.idl                                                                            |   64 +-
+ Userland/Libraries/LibWeb/DOM/NonElementParentNode.h                                                              |   19 +-
+ Userland/Libraries/LibWeb/DOM/ParentNode.cpp                                                                      |   16 +
+ Userland/Libraries/LibWeb/DOM/ParentNode.h                                                                        |    2 +
+ Userland/Libraries/LibWeb/DOM/StyleElementUtils.cpp                                                               |   20 +-
+ Userland/Libraries/LibWeb/DOM/StyleElementUtils.h                                                                 |    2 +-
+ Userland/Libraries/LibWeb/DOM/Text.cpp                                                                            |   32 +
+ Userland/Libraries/LibWeb/DOM/Text.h                                                                              |    1 +
+ Userland/Libraries/LibWeb/DOM/Text.idl                                                                            |    2 +-
+ Userland/Libraries/LibWeb/DOM/Utils.cpp                                                                           |   41 +
+ Userland/Libraries/LibWeb/DOM/Utils.h                                                                             |   16 +
+ Userland/Libraries/LibWeb/Fetch/Body.cpp                                                                          |   15 +-
+ Userland/Libraries/LibWeb/Fetch/Fetching/Fetching.cpp                                                             |   35 +-
+ Userland/Libraries/LibWeb/Fetch/Infrastructure/FetchRecord.cpp                                                    |   41 +
+ Userland/Libraries/LibWeb/Fetch/Infrastructure/FetchRecord.h                                                      |   44 ++
+ Userland/Libraries/LibWeb/Fetch/Infrastructure/HTTP/Responses.cpp                                                 |   10 +-
+ Userland/Libraries/LibWeb/Forward.h                                                                               |    3 +
+ Userland/Libraries/LibWeb/HTML/AudioTrack.cpp                                                                     |    2 +-
+ Userland/Libraries/LibWeb/HTML/AudioTrack.h                                                                       |    2 +-
+ Userland/Libraries/LibWeb/HTML/DOMStringMap.cpp                                                                   |    2 +-
+ Userland/Libraries/LibWeb/HTML/EventSource.cpp                                                                    |    2 +-
+ Userland/Libraries/LibWeb/HTML/EventSource.h                                                                      |    2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLDetailsElement.cpp                                                             |    3 +-
+ Userland/Libraries/LibWeb/HTML/HTMLFormElement.cpp                                                                |    2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLImageElement.idl                                                               |    4 +
+ Userland/Libraries/LibWeb/HTML/HTMLStyleElement.cpp                                                               |    2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLTrackElement.idl                                                               |    8 +-
+ Userland/Libraries/LibWeb/HTML/HTMLVideoElement.cpp                                                               |    2 +-
+ Userland/Libraries/LibWeb/HTML/History.idl                                                                        |    5 +-
+ Userland/Libraries/LibWeb/HTML/Navigable.cpp                                                                      |    2 +-
+ Userland/Libraries/LibWeb/HTML/Parser/HTMLParser.cpp                                                              |   42 +-
+ Userland/Libraries/LibWeb/HTML/Scripting/Environments.cpp                                                         |    2 +
+ Userland/Libraries/LibWeb/HTML/Scripting/Environments.h                                                           |    6 +
+ Userland/Libraries/LibWeb/HTML/Scripting/Fetching.cpp                                                             |    2 +-
+ Userland/Libraries/LibWeb/HTML/TraversableNavigable.cpp                                                           |   12 +-
+ Userland/Libraries/LibWeb/HTML/VideoTrack.cpp                                                                     |    6 +-
+ Userland/Libraries/LibWeb/HTML/VideoTrack.h                                                                       |    6 +-
+ Userland/Libraries/LibWeb/HighResolutionTime/Performance.idl                                                      |    1 +
+ Userland/Libraries/LibWeb/Layout/FormattingContext.cpp                                                            |    2 +-
+ Userland/Libraries/LibWeb/Layout/GridFormattingContext.cpp                                                        |   20 +-
+ Userland/Libraries/LibWeb/Layout/GridFormattingContext.h                                                          |    2 -
+ Userland/Libraries/LibWeb/Layout/Node.cpp                                                                         |    4 +
+ Userland/Libraries/LibWeb/Layout/SVGFormattingContext.cpp                                                         |    2 +-
+ Userland/Libraries/LibWeb/Layout/SVGSVGBox.cpp                                                                    |    5 +-
+ Userland/Libraries/LibWeb/Layout/TreeBuilder.cpp                                                                  |   21 +-
+ Userland/Libraries/LibWeb/Loader/LoadRequest.h                                                                    |    2 +-
+ Userland/Libraries/LibWeb/Page/Page.h                                                                             |    1 -
+ Userland/Libraries/LibWeb/Painting/BorderRadiusCornerClipper.cpp                                                  |  105 ---
+ Userland/Libraries/LibWeb/Painting/BorderRadiusCornerClipper.h                                                    |   43 --
+ Userland/Libraries/LibWeb/Painting/DisplayListPlayerCPU.cpp                                                       |  480 ------------
+ Userland/Libraries/LibWeb/Painting/DisplayListPlayerCPU.h                                                         |   78 --
+ Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.cpp                                                      |   54 +-
+ Userland/Libraries/LibWeb/Painting/FilterPainting.cpp                                                             |   88 ---
+ Userland/Libraries/LibWeb/Painting/FilterPainting.h                                                               |    2 -
+ Userland/Libraries/LibWeb/Painting/InlinePaintable.cpp                                                            |   81 ++
+ Userland/Libraries/LibWeb/Painting/InlinePaintable.h                                                              |    2 +
+ Userland/Libraries/LibWeb/Painting/Paintable.cpp                                                                  |   50 ++
+ Userland/Libraries/LibWeb/Painting/Paintable.h                                                                    |    4 +
+ Userland/Libraries/LibWeb/Painting/PaintableBox.cpp                                                               |  153 +++-
+ Userland/Libraries/LibWeb/Painting/PaintableBox.h                                                                 |    4 +
+ Userland/Libraries/LibWeb/Painting/PaintableFragment.h                                                            |    3 +-
+ Userland/Libraries/LibWeb/Painting/SVGMaskable.cpp                                                                |    4 +-
+ Userland/Libraries/LibWeb/Painting/ShadowPainting.cpp                                                             |  276 -------
+ Userland/Libraries/LibWeb/Painting/ShadowPainting.h                                                               |    3 -
+ Userland/Libraries/LibWeb/Painting/ViewportPaintable.cpp                                                          |  266 +------
+ Userland/Libraries/LibWeb/Platform/AudioCodecPlugin.cpp                                                           |    6 +-
+ Userland/Libraries/LibWeb/Platform/AudioCodecPlugin.h                                                             |    8 +-
+ Userland/Libraries/LibWeb/Platform/AudioCodecPluginAgnostic.cpp                                                   |   12 +-
+ Userland/Libraries/LibWeb/Platform/AudioCodecPluginAgnostic.h                                                     |   12 +-
+ Userland/Libraries/LibWeb/SVG/SVGDecodedImageData.cpp                                                             |    6 -
+ Userland/Libraries/LibWeb/SVG/SVGGraphicsElement.cpp                                                              |    7 +-
+ Userland/Libraries/LibWeb/SVG/SVGLength.idl                                                                       |   12 +-
+ Userland/Libraries/LibWeb/SVG/SVGLineElement.cpp                                                                  |   37 +-
+ Userland/Libraries/LibWeb/SVG/SVGLineElement.h                                                                    |    8 +-
+ Userland/Libraries/LibWeb/SVG/SVGStyleElement.cpp                                                                 |    2 +-
+ Userland/Libraries/LibWeb/SVG/SVGSymbolElement.cpp                                                                |   16 +-
+ Userland/Libraries/LibWeb/SVG/SVGSymbolElement.h                                                                  |    5 +
+ Userland/Libraries/LibWeb/SVG/SVGSymbolElement.idl                                                                |    2 +-
+ Userland/Libraries/LibWeb/SVG/SVGTextPositioningElement.cpp                                                       |   20 +-
+ Userland/Libraries/LibWeb/SVG/SVGTextPositioningElement.h                                                         |   10 +-
+ Userland/Libraries/LibWeb/Selection/Selection.cpp                                                                 |    2 +-
+ Userland/Libraries/LibWeb/UIEvents/KeyboardEvent.cpp                                                              |   23 +
+ Userland/Libraries/LibWeb/UIEvents/KeyboardEvent.h                                                                |    2 +
+ Userland/Libraries/LibWeb/UIEvents/KeyboardEvent.idl                                                              |    3 +
+ Userland/Libraries/LibWeb/UIEvents/MouseEvent.cpp                                                                 |   27 +
+ Userland/Libraries/LibWeb/UIEvents/MouseEvent.h                                                                   |    2 +
+ Userland/Libraries/LibWeb/UIEvents/MouseEvent.idl                                                                 |    3 +
+ Userland/Libraries/LibWeb/UIEvents/UIEvent.h                                                                      |   11 +-
+ Userland/Libraries/LibWeb/WebAudio/AudioBufferSourceNode.cpp                                                      |   49 ++
+ Userland/Libraries/LibWeb/WebAudio/AudioBufferSourceNode.h                                                        |   42 +
+ Userland/Libraries/LibWeb/WebAudio/AudioBufferSourceNode.idl                                                      |   26 +
+ Userland/Libraries/LibWeb/WebAudio/BaseAudioContext.cpp                                                           |   16 +
+ Userland/Libraries/LibWeb/WebAudio/BaseAudioContext.h                                                             |    3 +
+ Userland/Libraries/LibWeb/WebAudio/BaseAudioContext.idl                                                           |    5 +-
+ Userland/Libraries/LibWeb/WebAudio/BiquadFilterNode.cpp                                                           |   49 ++
+ Userland/Libraries/LibWeb/WebAudio/BiquadFilterNode.h                                                             |   41 +
+ Userland/Libraries/LibWeb/WebAudio/BiquadFilterNode.idl                                                           |   33 +
+ Userland/Libraries/LibWeb/WebDriver/ExecuteScript.cpp                                                             |    2 +-
+ Userland/Libraries/LibWeb/WebGL/WebGLRenderingContextBase.idl                                                     |  121 ++-
+ Userland/Libraries/LibWeb/WebIDL/Tracing.h                                                                        |    3 +-
+ Userland/Libraries/LibWeb/XHR/FormData.cpp                                                                        |   12 +-
+ Userland/Libraries/LibWeb/XHR/FormData.h                                                                          |    5 +-
+ Userland/Libraries/LibWeb/idl_files.cmake                                                                         |    2 +
+ Userland/Libraries/LibWebView/Application.h                                                                       |    8 +-
+ Userland/Libraries/LibWebView/ChromeProcess.cpp                                                                   |    9 +
+ Userland/Libraries/LibWebView/ChromeProcess.h                                                                     |    6 +-
+ Userland/Libraries/LibWebView/CookieJar.cpp                                                                       |    2 +-
+ Userland/Services/ImageDecoder/ConnectionFromClient.cpp                                                           |    6 +-
+ Userland/Services/ImageDecoder/ConnectionFromClient.h                                                             |    2 +-
+ Userland/Services/ImageDecoder/ImageDecoderClient.ipc                                                             |    2 +-
+ Userland/Services/RequestServer/ConnectionCache.cpp                                                               |    8 +-
+ Userland/Services/RequestServer/ConnectionCache.h                                                                 |   12 +-
+ Userland/Services/RequestServer/ConnectionFromClient.cpp                                                          |   21 +-
+ Userland/Services/RequestServer/ConnectionFromClient.h                                                            |   42 +-
+ Userland/Services/WebContent/PageClient.cpp                                                                       |    4 +-
+ Userland/Services/WebContent/PageClient.h                                                                         |    1 -
+ Userland/Services/WebContent/WebDriverConnection.cpp                                                              |    2 +-
+ Userland/Utilities/headless-browser.cpp                                                                           |   12 +-
+ Userland/Utilities/icc.cpp                                                                                        |    2 +-
+ Userland/Utilities/wasm.cpp                                                                                       |    2 +
+ vcpkg.json                                                                                                        |    5 +
+ 602 files changed, 5379 insertions(+), 7397 deletions(-)
+ create mode 100644 .github/workflows/notes-push.yml
+ delete mode 100644 Ladybird/AppKit/System/Carbon.h
+ delete mode 100644 Ladybird/AppKit/System/Cocoa.h
+ delete mode 100644 Ladybird/AppKit/System/CoreFoundation.h
+ delete mode 100644 Ladybird/AppKit/System/Detail/Footer.h
+ delete mode 100644 Ladybird/AppKit/System/Detail/Header.h
+ create mode 100644 Ladybird/AppKit/UI/TaskManager.swift
+ create mode 100644 Ladybird/AppKit/UI/TaskManagerController.swift
+ create mode 100644 Ladybird/AppKit/module.modulemap
+ create mode 100644 Ladybird/cmake/GenerateSwiftHeader.cmake
+ create mode 100644 Meta/CMake/vcpkg/base-triplets/base.cmake
+ create mode 100644 Meta/CMake/vcpkg/generate_vcpkg_toolchain_variables.cmake
+ create mode 100644 Meta/Lagom/CMakePresets.json
+ create mode 100644 Meta/Lagom/Tools/CodeGenerators/LibWeb/BindingsGenerator/IDLGenerators.h
+ create mode 100644 Meta/Lagom/vcpkg-configuration.json
+ create mode 120000 Meta/Lagom/vcpkg.json
+ delete mode 100644 Tests/LibGfx/test-inputs/jxl/modular_property_8.jxl
+ create mode 100644 Tests/LibWeb/Layout/expected/block-and-inline/abspos-with-insets-and-auto-margins.txt
+ create mode 100644 Tests/LibWeb/Layout/expected/css-content-visibility.txt
+ create mode 100644 Tests/LibWeb/Layout/expected/details-summary-default-ua-style.txt
+ create mode 100644 Tests/LibWeb/Layout/expected/grid/define-area-using-line-names.txt
+ create mode 100644 Tests/LibWeb/Layout/expected/svg-text-with-percentage-values.txt
+ create mode 100644 Tests/LibWeb/Layout/expected/svg/svg-line-with-percentage-values.txt
+ create mode 100644 Tests/LibWeb/Layout/expected/svg/svg-viewbox-zero-width.txt
+ create mode 100644 Tests/LibWeb/Layout/input/block-and-inline/abspos-with-insets-and-auto-margins.html
+ create mode 100644 Tests/LibWeb/Layout/input/css-content-visibility.html
+ create mode 100644 Tests/LibWeb/Layout/input/details-summary-default-ua-style.html
+ create mode 100644 Tests/LibWeb/Layout/input/grid/define-area-using-line-names.html
+ create mode 100644 Tests/LibWeb/Layout/input/svg-text-with-percentage-values.html
+ create mode 100644 Tests/LibWeb/Layout/input/svg/svg-line-with-percentage-values.html
+ create mode 100644 Tests/LibWeb/Layout/input/svg/svg-viewbox-zero-width.html
+ delete mode 100644 Tests/LibWeb/Ref/alt-frame.html
+ delete mode 100644 Tests/LibWeb/Ref/css-backgrounds.html
+ delete mode 100644 Tests/LibWeb/Ref/reference/css-color-functions-ref.html
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/alt-frame.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/border-radius-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/canvas-arcs-and-ellipses-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/canvas-implict-moves-and-lines-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/canvas-text-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/clip-path-polygon-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/css-background-clip-text.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/css-background-position-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/css-background-repeat-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/css-backgrounds-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/css-gradients-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/css-transform-box-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/inline-node-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/input-placeholder-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/nested-boxes-with-hidden-overflow-and-border-radius-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/object-fit-position.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/outer-box-shadow-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/svg-axis-aligned-lines-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/svg-background-no-natural-size-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/svg-clip-path-and-mask-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/svg-clip-rule-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/svg-gradient-spreadMethod-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/svg-maskContentUnits-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/svg-radialGradient-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/svg-simple-clipPath-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/svg-text-effects-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/svg-textPath-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/text-decorations.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/images/text-shadow-ref.png
+ delete mode 100644 Tests/LibWeb/Ref/reference/opacity-stacking-ref.html
+ delete mode 100644 Tests/LibWeb/Ref/reference/svg-foreign-object-mask-ref.html
+ delete mode 100644 Tests/LibWeb/Ref/reference/svg-non-local-clip-path-ref.html
+ delete mode 100644 Tests/LibWeb/Ref/reference/svg-stroke-paintstyle-with-opacity-ref.html
+ create mode 100644 Tests/LibWeb/Screenshot/alt-frame.html
+ rename Tests/LibWeb/{Ref => Screenshot}/assets/background-no-repeat.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/assets/background-repeat-x.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/assets/background-repeat-y.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/assets/background-repeat.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/assets/car.png (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/assets/smiley.png (100%)
+ create mode 100644 Tests/LibWeb/Screenshot/assets/vertical-rect.svg
+ rename Tests/LibWeb/{Ref => Screenshot}/border-radius.html (94%)
+ rename Tests/LibWeb/{Ref => Screenshot}/canvas-arcs-and-ellipses.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/canvas-fillstyle-rgb.html (92%)
+ rename Tests/LibWeb/{Ref => Screenshot}/canvas-implict-moves-and-lines.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/canvas-path-rect.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/canvas-text.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/clip-path-polygon.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/css-background-clip-text.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/css-background-position.html (98%)
+ rename Tests/LibWeb/{Ref => Screenshot}/css-background-repeat.html (77%)
+ create mode 100644 Tests/LibWeb/Screenshot/css-backgrounds.html
+ rename Tests/LibWeb/{Ref => Screenshot}/css-color-functions.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/css-gradients.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/css-transform-box.html (100%)
+ create mode 100644 Tests/LibWeb/Screenshot/images/alt-frame.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/border-radius-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/canvas-arcs-and-ellipses-ref.png
+ rename Tests/LibWeb/{Ref/reference => Screenshot}/images/canvas-fillstyle-rgb.png (100%)
+ create mode 100644 Tests/LibWeb/Screenshot/images/canvas-implict-moves-and-lines-ref.png
+ rename Tests/LibWeb/{Ref/reference => Screenshot}/images/canvas-path-rect-ref.png (100%)
+ create mode 100644 Tests/LibWeb/Screenshot/images/canvas-text-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/clip-path-polygon-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/css-background-clip-text.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/css-background-position-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/css-background-repeat-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/css-backgrounds-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/css-color-functions-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/css-gradients-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/css-transform-box-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/inline-node-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/input-placeholder-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/meter-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/nested-boxes-with-hidden-overflow-and-border-radius-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/object-fit-position.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/opacity-stacking-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/outer-box-shadow-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/svg-axis-aligned-lines-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/svg-background-no-natural-size-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/svg-clip-path-and-mask-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/svg-clip-rule-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/svg-foreign-object-mask-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/svg-gradient-spreadMethod-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/svg-maskContentUnits-ref.png
+ rename Tests/LibWeb/{Ref/reference/images/meter-ref.png => Screenshot/images/svg-non-local-clip-path-ref.png} (71%)
+ create mode 100644 Tests/LibWeb/Screenshot/images/svg-radialGradient-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/svg-simple-clipPath-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/svg-stroke-paintstyle-with-opacity-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/svg-text-effects-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/svg-textPath-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/text-decorations.png
+ create mode 100644 Tests/LibWeb/Screenshot/images/text-shadow-ref.png
+ rename Tests/LibWeb/{Ref => Screenshot}/inline-node.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/input-placeholder.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/meter.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/nested-boxes-with-hidden-overflow-and-border-radius.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/object-fit-position.html (68%)
+ rename Tests/LibWeb/{Ref => Screenshot}/opacity-stacking.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/outer-box-shadow.html (100%)
+ rename Tests/LibWeb/{Ref/reference/alt-frame.html => Screenshot/reference/alt-frame-ref.html} (73%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/border-radius-ref.html (86%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/canvas-arcs-and-ellipses-ref.html (60%)
+ rename Tests/LibWeb/{Ref/reference/canvas-fillstyle-rgb.html => Screenshot/reference/canvas-fillstyle-rgb-ref.html} (86%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/canvas-implict-moves-and-lines-ref.html (57%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/canvas-path-rect-ref.html (86%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/canvas-text-ref.html (69%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/clip-path-polygon-ref.html (63%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/css-background-clip-text-ref.html (86%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/css-background-position-ref.html (84%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/css-background-repeat-ref.html (84%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/css-backgrounds-ref.html (86%)
+ rename Tests/LibWeb/{Ref/reference/svg-axis-aligned-lines-ref.html => Screenshot/reference/css-color-functions-ref.html} (59%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/css-gradients-ref.html (86%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/css-transform-box-ref.html (86%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/inline-node-ref.html (64%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/input-placeholder-ref.html (86%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/meter-ref.html (87%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/nested-boxes-with-hidden-overflow-and-border-radius-ref.html (55%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/object-fit-position-ref.html (83%)
+ create mode 100644 Tests/LibWeb/Screenshot/reference/opacity-stacking-ref.html
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/outer-box-shadow-ref.html (85%)
+ create mode 100644 Tests/LibWeb/Screenshot/reference/svg-axis-aligned-lines-ref.html
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/svg-background-no-natural-size-ref.html (79%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/svg-clip-path-and-mask-ref.html (61%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/svg-clip-rule-ref.html (66%)
+ create mode 100644 Tests/LibWeb/Screenshot/reference/svg-foreign-object-mask-ref.html
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/svg-gradient-spreadMethod-ref.html (84%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/svg-maskContentUnits-ref.html (62%)
+ create mode 100644 Tests/LibWeb/Screenshot/reference/svg-non-local-clip-path-ref.html
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/svg-radialGradient-ref.html (85%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/svg-simple-clipPath-ref.html (62%)
+ create mode 100644 Tests/LibWeb/Screenshot/reference/svg-stroke-paintstyle-with-opacity-ref.html
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/svg-text-effects-ref.html (85%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/svg-textPath-ref.html (86%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/text-decorations-ref.html (63%)
+ rename Tests/LibWeb/{Ref => Screenshot}/reference/text-shadow-ref.html (64%)
+ rename Tests/LibWeb/{Ref => Screenshot}/svg-axis-aligned-lines.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/svg-background-no-natural-size.html (78%)
+ rename Tests/LibWeb/{Ref => Screenshot}/svg-clip-path-and-mask.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/svg-clip-rule.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/svg-foreign-object-mask.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/svg-gradient-spreadMethod.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/svg-maskContentUnits.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/svg-non-local-clip-path.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/svg-radialGradient.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/svg-simple-clipPath.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/svg-stroke-paintstyle-with-opacity.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/svg-text-effects.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/svg-textPath.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/text-decorations.html (100%)
+ rename Tests/LibWeb/{Ref => Screenshot}/text-shadow.html (100%)
+ create mode 100644 Tests/LibWeb/Text/expected/DOM/CharacterData-replaceData-break-surrogate-pair.txt
+ create mode 100644 Tests/LibWeb/Text/expected/DOM/DOMStringMap-setter-with-invalid-name.txt
+ create mode 100644 Tests/LibWeb/Text/expected/DOM/Node-isDefaultNamespace.txt
+ create mode 100644 Tests/LibWeb/Text/expected/DOM/Node-isEqualNode.txt
+ create mode 100644 Tests/LibWeb/Text/expected/DOM/Node-lookupNamespaceURI.txt
+ create mode 100644 Tests/LibWeb/Text/expected/DOM/Text-wholeText.txt
+ create mode 100644 Tests/LibWeb/Text/expected/DOM/getElementById-empty-string.txt
+ create mode 100644 Tests/LibWeb/Text/expected/DOM/getElementById-multiple.txt
+ create mode 100644 Tests/LibWeb/Text/expected/DOM/getElementsByClassName-empty-string.txt
+ create mode 100644 Tests/LibWeb/Text/expected/DOM/getElementsName-empty-string.txt
+ create mode 100644 Tests/LibWeb/Text/expected/Element-scrollby-negative-scroll-offset-crash.txt
+ rename Tests/LibWeb/Text/expected/{ => Fetch}/fetch-request-url-search-params.txt (100%)
+ rename Tests/LibWeb/Text/expected/{ => Fetch}/fetch-response-content-type.txt (100%)
+ create mode 100644 Tests/LibWeb/Text/expected/Fetch/fetch-response-url-encoded.txt
+ rename Tests/LibWeb/Text/expected/{ => Fetch}/fetch-timed-out-request.txt (100%)
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/Element-checkVisibility.txt
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/maxed-out-dimension-value.txt
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/short-legacy-color-value.txt
+ create mode 100644 Tests/LibWeb/Text/expected/SVG/svg-getbbox-transform-with-no-inverse.txt
+ create mode 100644 Tests/LibWeb/Text/expected/Selection-setBaseAndExtent-without-common-root.txt
+ create mode 100644 Tests/LibWeb/Text/expected/ShadowDOM/remove-style-element-inside-shadow-tree.txt
+ create mode 100644 Tests/LibWeb/Text/input/DOM/CharacterData-replaceData-break-surrogate-pair.html
+ create mode 100644 Tests/LibWeb/Text/input/DOM/DOMStringMap-setter-with-invalid-name.html
+ create mode 100644 Tests/LibWeb/Text/input/DOM/Node-isDefaultNamespace.html
+ create mode 100644 Tests/LibWeb/Text/input/DOM/Node-isEqualNode.html
+ create mode 100644 Tests/LibWeb/Text/input/DOM/Node-lookupNamespaceURI.html
+ create mode 100644 Tests/LibWeb/Text/input/DOM/Text-wholeText.html
+ create mode 100644 Tests/LibWeb/Text/input/DOM/getElementById-empty-string.html
+ create mode 100644 Tests/LibWeb/Text/input/DOM/getElementById-multiple.html
+ create mode 100644 Tests/LibWeb/Text/input/DOM/getElementsByClassName-empty-string.html
+ create mode 100644 Tests/LibWeb/Text/input/DOM/getElementsName-empty-string.html
+ create mode 100644 Tests/LibWeb/Text/input/Element-scrollby-negative-scroll-offset-crash.html
+ rename Tests/LibWeb/Text/input/{ => Fetch}/fetch-request-url-search-params.html (91%)
+ rename Tests/LibWeb/Text/input/{ => Fetch}/fetch-response-content-type.html (92%)
+ create mode 100644 Tests/LibWeb/Text/input/Fetch/fetch-response-url-encoded.html
+ rename Tests/LibWeb/Text/input/{ => Fetch}/fetch-timed-out-request.html (87%)
+ create mode 100644 Tests/LibWeb/Text/input/HTML/Element-checkVisibility.html
+ create mode 100644 Tests/LibWeb/Text/input/HTML/maxed-out-dimension-value.html
+ create mode 100644 Tests/LibWeb/Text/input/HTML/short-legacy-color-value.html
+ create mode 100644 Tests/LibWeb/Text/input/SVG/svg-getbbox-transform-with-no-inverse.html
+ create mode 100644 Tests/LibWeb/Text/input/Selection-setBaseAndExtent-without-common-root.html
+ create mode 100644 Tests/LibWeb/Text/input/ShadowDOM/remove-style-element-inside-shadow-tree.html
+ create mode 100644 Userland/Libraries/LibAudio/PlaybackStreamOboe.cpp
+ create mode 100644 Userland/Libraries/LibAudio/PlaybackStreamOboe.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/BoxBlurFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/BrightnessFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/ColorBlindnessFilter.cpp
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/ColorBlindnessFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/ColorFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/ContrastFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/FastBoxBlurFilter.cpp
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/FastBoxBlurFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/Filter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/GenericConvolutionFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/GrayscaleFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/HueRotateFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/InvertFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/LaplacianFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/LumaFilter.cpp
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/LumaFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/MatrixFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/OpacityFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/SaturateFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/SepiaFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/SharpenFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/SpatialGaussianBlurFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/StackBlurFilter.cpp
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/StackBlurFilter.h
+ delete mode 100644 Userland/Libraries/LibGfx/Filters/TintFilter.h
+ create mode 100644 Userland/Libraries/LibGfx/Font/FontData.cpp
+ create mode 100644 Userland/Libraries/LibGfx/Font/FontData.h
+ rename Userland/Libraries/LibGfx/Font/WOFF/{Typeface.cpp => Loader.cpp} (95%)
+ create mode 100644 Userland/Libraries/LibGfx/Font/WOFF/Loader.h
+ delete mode 100644 Userland/Libraries/LibGfx/Font/WOFF/Typeface.h
+ rename Userland/Libraries/LibGfx/Font/WOFF2/{Typeface.cpp => Loader.cpp} (85%)
+ create mode 100644 Userland/Libraries/LibGfx/Font/WOFF2/Loader.h
+ delete mode 100644 Userland/Libraries/LibGfx/Font/WOFF2/Typeface.h
+ create mode 100644 Userland/Libraries/LibJS/Tests/builtins/Iterator/Iterator.prototype.constructor.js
+ create mode 100644 Userland/Libraries/LibWeb/DOM/Utils.cpp
+ create mode 100644 Userland/Libraries/LibWeb/DOM/Utils.h
+ create mode 100644 Userland/Libraries/LibWeb/Fetch/Infrastructure/FetchRecord.cpp
+ create mode 100644 Userland/Libraries/LibWeb/Fetch/Infrastructure/FetchRecord.h
+ delete mode 100644 Userland/Libraries/LibWeb/Painting/DisplayListPlayerCPU.cpp
+ delete mode 100644 Userland/Libraries/LibWeb/Painting/DisplayListPlayerCPU.h
+ create mode 100644 Userland/Libraries/LibWeb/WebAudio/AudioBufferSourceNode.cpp
+ create mode 100644 Userland/Libraries/LibWeb/WebAudio/AudioBufferSourceNode.h
+ create mode 100644 Userland/Libraries/LibWeb/WebAudio/AudioBufferSourceNode.idl
+ create mode 100644 Userland/Libraries/LibWeb/WebAudio/BiquadFilterNode.cpp
+ create mode 100644 Userland/Libraries/LibWeb/WebAudio/BiquadFilterNode.h
+ create mode 100644 Userland/Libraries/LibWeb/WebAudio/BiquadFilterNode.idl
+
+real    0m0.283s
+user    0m0.088s
+sys     0m0.078s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.051s
+user    0m0.019s
+sys     0m0.028s
+Tue Jul 23 06:17:15 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+[1/2] Re-running CMake...
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/clang++-17
+The following packages will be built and installed:
+  * highway:x64-linux@1.1.0 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/highway/c5063ea7c7a83d9bb3d70a9ac0ea8e3fc96730c8
+  * lcms:x64-linux@2.14 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/lcms/d5fb3c46f4b60d45e67444591a83d80c08100871
+    libjxl:x64-linux@0.10.2 -- /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libjxl/4a0c70d1ff8967afd670855a24154ccb04321de1
+Additional packages (*) will be modified to complete this operation.
+Restored 0 package(s) from /home/kushal/.cache/vcpkg/archives in 907 us. Use --debug to see more details.
+Installing 1/3 lcms:x64-linux@2.14...
+Building lcms:x64-linux@2.14...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/lcms/d5fb3c46f4b60d45e67444591a83d80c08100871: info: installing overlay port from here
+-- Downloading https://github.com/mm2/Little-CMS/archive/lcms2.14.tar.gz -> mm2-Little-CMS-lcms2.14.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/mm2-Little-CMS-lcms2.14.tar.gz
+-- Applying patch remove_library_directive.patch
+-- Applying patch remove-register.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/lcms/src/lcms2.14-d3eca6a91b.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/lcms_x64-linux/lib/pkgconfig/lcms2.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/lcms_x64-linux/debug/lib/pkgconfig/lcms2.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/lcms_x64-linux/share/lcms/copyright
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/lcms_x64-linux/share/lcms/usage
+-- Performing post-build validation
+Stored binaries in 1 destinations in 72.1 ms.
+Elapsed time to handle lcms:x64-linux: 5.8 s
+lcms:x64-linux package ABI: 6df36a396f0060185b4881f761be541324c547db375e1797882fdc734c980b0a
+Installing 2/3 highway:x64-linux@1.1.0...
+Building highway:x64-linux@1.1.0...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/highway/c5063ea7c7a83d9bb3d70a9ac0ea8e3fc96730c8: info: installing overlay port from here
+-- Downloading https://github.com/google/highway/archive/1.1.0.tar.gz -> google-highway-1.1.0.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/google-highway-1.1.0.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/highway/src/1.1.0-8f39bba357.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/highway_x64-linux/lib/pkgconfig/libhwy.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/highway_x64-linux/debug/lib/pkgconfig/libhwy.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/highway_x64-linux/share/highway/copyright
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/highway_x64-linux/share/highway/usage
+-- Performing post-build validation
+Stored binaries in 1 destinations in 77.4 ms.
+Elapsed time to handle highway:x64-linux: 14 s
+highway:x64-linux package ABI: f7d8c9225a4b5ece3d829a015e56c9f8c1f32314e17c99bd229e3f711ad3de4c
+Installing 3/3 libjxl:x64-linux@0.10.2...
+Building libjxl:x64-linux@0.10.2...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libjxl/4a0c70d1ff8967afd670855a24154ccb04321de1: info: installing overlay port from here
+-- Downloading https://github.com/libjxl/libjxl/archive/v0.10.2.tar.gz -> libjxl-libjxl-v0.10.2.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/libjxl-libjxl-v0.10.2.tar.gz
+-- Applying patch fix-dependencies.patch
+-- Applying patch fix-tools-build.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libjxl/src/v0.10.2-fef900ea4e.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjxl_x64-linux/lib/pkgconfig/libjxl.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjxl_x64-linux/lib/pkgconfig/libjxl_cms.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjxl_x64-linux/lib/pkgconfig/libjxl_threads.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjxl_x64-linux/debug/lib/pkgconfig/libjxl.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjxl_x64-linux/debug/lib/pkgconfig/libjxl_cms.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjxl_x64-linux/debug/lib/pkgconfig/libjxl_threads.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjxl_x64-linux/share/libjxl/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 2 s.
+Elapsed time to handle libjxl:x64-linux: 60 s
+libjxl:x64-linux package ABI: 08027ff80f310027c2e3d02cc040c2d036814563175e0df056e49bfd9422bf22
+Total install time: 1.3 min
+-- Running vcpkg install - done
+-- Found the following ICU libraries:
+--   data (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicudata.a
+--   i18n (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicui18n.a
+--   uc (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicuuc.a
+-- Checking for module 'libjxl'
+--   Found libjxl, version 0.10.2
+-- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+-- Configuring done (109.8s)
+-- Generating done (0.4s)
+-- Build files have been written to: /home/kushal/src/ladybird/Build/ladybird
+[0/2] Re-checking globbed directories...
+[2496/2496] Linking CXX executable bin/Ladybird
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
+637.681 WebContent(14792): ResourceLoader: Failed load of: "https://content.production.cdn.art19.com/validation=1721816818,14688af9-43f4-5246-b6c5-124c6db52403,MKTRUZSN7ZxQ1IexRTETkMwuyvM/episodes/cf391faa-c070-4ae5-af38-f7c3fec55673/a35aac345d2ae96a848f0abb0f1fcc113b2619bc5858fbdaf72b2f4dcee87bb5d40515d747f40fcbd741bfcc5884d12ce513919e51a89f670640fd69377f06e8/Monday%2C%20July%2022%2C%202024.mp3", Error: Load failed: 403, Duration: 681ms
+No audio device detected
+684.191 WebContent(14792): Web::EventHandler: Clicking on a link to https://lobste.rs/active
+693.271 WebContent(14792): Web::EventHandler: Clicking on a link to https://lobste.rs/s/voskxv/pitfalls_app_browsers
+713.691 WebContent(14792): Web::EventHandler: Clicking on a link to https://lobste.rs/s/woj8tt/how_conditional_breakpoints_work
+714.771 WebContent(14792): Web::EventHandler: Clicking on a link to https://lobste.rs/s/woj8tt/how_conditional_breakpoints_work
+715.021 WebContent(14792): Web::EventHandler: Clicking on a link to https://lobste.rs/s/woj8tt/how_conditional_breakpoints_work
+715.231 WebContent(14792): Web::EventHandler: Clicking on a link to https://lobste.rs/s/woj8tt/how_conditional_breakpoints_work
+ 14771 Lost connection to RequestServer
+
+real    58m25.382s
+user    116m47.593s
+sys     5m23.137s
+Tue Jul 23 07:15:40 EDT 2024
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull originmaster; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
