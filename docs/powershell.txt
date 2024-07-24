@@ -4,15 +4,14 @@ PowerShell 7.4.3
    Upgrade now, or check out the release page at:
      https://aka.ms/PowerShell-Release?tag=v7.4.4
 
-Loading personal and system profiles took 532ms.
 PS C:\Users\kushal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-Wednesday, July 24, 2024 8:05:09 AM
+Wednesday, July 24, 2024 8:54:57 AM
 yarn install v1.22.21
 [1/4] Resolving packages...
 success Already up-to-date.
-Done in 0.15s.
-Wednesday, July 24, 2024 8:05:10 AM
+Done in 0.06s.
+Wednesday, July 24, 2024 8:54:57 AM
 yarn run v1.22.21
 $ tsc && vite build
 vite v5.2.13 building for production...
@@ -20,124 +19,121 @@ vite v5.2.13 building for production...
 docs/index.html                 0.53 kB │ gzip: 0.32 kB
 docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
 docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 149ms
-Done in 2.19s.
-Wednesday, July 24, 2024 8:05:12 AM
+✓ built in 128ms
+Done in 0.91s.
+Wednesday, July 24, 2024 8:54:58 AM
 warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Wednesday, July 24, 2024 8:05:12 AM
+Wednesday, July 24, 2024 8:54:58 AM
 On branch main
 Your branch is up to date with 'origin/main'.
 
 nothing to commit, working tree clean
-Wednesday, July 24, 2024 8:05:12 AM
+Wednesday, July 24, 2024 8:54:58 AM
 From github.com:fromnepal/fromnepal.github.io
  * branch            main       -> FETCH_HEAD
 Already up to date.
-Wednesday, July 24, 2024 8:05:14 AM
+Wednesday, July 24, 2024 8:54:59 AM
 Everything up-to-date
-Wednesday, July 24, 2024 8:05:14 AM
+Wednesday, July 24, 2024 8:54:59 AM
 
-PS C:\Users\kushal\src\myhtml\fromnepal> date; scoop status; date; scoop bucket rm main; date; scoop bucket add main; date; scoop bucket rm extras; date; scoop bucket add extras; date; scoop status; date; scoop update; date; scoop update *; date; scoop cache show; date; scoop cache rm *; date; scoop status; date;
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --restrict-filenames --add-metadata -i "https://www.washingtonpost.com/video/world/rescuers-dig-through-wreckage-after-nepal-plane-crash/2024/07/24/219a5a1d-dec6-449a-a76e-7bffdc218436_video.html"; date;
 
-Wednesday, July 24, 2024 8:05:17 AM
-WARN  Scoop bucket(s) out of date. Run 'scoop update' to get the latest changes.
-Wednesday, July 24, 2024 8:05:19 AM
-The main bucket was removed successfully.
-Wednesday, July 24, 2024 8:05:19 AM
-Checking repo... OK
-The main bucket was added successfully.
-Wednesday, July 24, 2024 8:05:25 AM
-The extras bucket was removed successfully.
-Wednesday, July 24, 2024 8:05:26 AM
-Checking repo... OK
-The extras bucket was added successfully.
-Wednesday, July 24, 2024 8:05:34 AM
-Scoop is up to date.
-Everything is ok!
-Wednesday, July 24, 2024 8:05:35 AM
-Updating Scoop...
-Updating Buckets...
-Scoop was updated successfully!
-Wednesday, July 24, 2024 8:05:40 AM
-Latest versions for all apps are installed! For more information try 'scoop status'
-Wednesday, July 24, 2024 8:05:41 AM
-Total: 0 files, 0 B
-Wednesday, July 24, 2024 8:05:41 AM
-Deleted: 0 files, 0 B
-Wednesday, July 24, 2024 8:05:41 AM
-Scoop is up to date.
-Everything is ok!
-Wednesday, July 24, 2024 8:05:41 AM
+Wednesday, July 24, 2024 8:55:24 AM
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
 
-PS C:\Users\kushal\src\myhtml\fromnepal> scoop search gpu
-Results from local buckets...
+Wednesday, July 24, 2024 8:55:24 AM
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-i', 'https://www.washingtonpost.com/video/world/rescuers-dig-through-wreckage-after-nepal-plane-crash/2024/07/24/219a5a1d-dec6-449a-a76e-7bffdc218436_video.html']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.07.16 from yt-dlp/yt-dlp [89a161e8c] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.1-full_build-www.gyan.dev (setts), ffprobe 7.0.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1829 extractors
+[washingtonpost] Extracting URL: https://www.washingtonpost.com/video/world/rescuers-dig-through-wreckage-after-nepal-plane-crash/2024/07/24/219a5a1d-dec6-449a-a76e-7bffdc218436_video.html
+[ArcPublishing] Extracting URL: arcpublishing:wapo:219a5a1d-dec6-449a-a76e-7bffdc218436
+[ArcPublishing] 219a5a1d-dec6-449a-a76e-7bffdc218436: Downloading JSON metadata
+[ArcPublishing] 219a5a1d-dec6-449a-a76e-7bffdc218436: Downloading m3u8 information
+WARNING: [ArcPublishing] Ignoring subtitle tracks found in the HLS manifest; if any subtitle tracks are missing, please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+[ArcPublishing] 219a5a1d-dec6-449a-a76e-7bffdc218436: Downloading m3u8 information
+[ArcPublishing] 219a5a1d-dec6-449a-a76e-7bffdc218436: Downloading m3u8 information
+[ArcPublishing] 219a5a1d-dec6-449a-a76e-7bffdc218436: Downloading m3u8 information
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[debug] Default format spec: bestvideo*+bestaudio/best
+[info] 219a5a1d-dec6-449a-a76e-7bffdc218436: Downloading 1 format(s): hls-4789
+[debug] Invoking hlsnative downloader on "https://d21rhj7n383afu.cloudfront.net/washpost-production/Reuters/20240724/66a0aef5509c0d7bb25731db/66a0b76ad9dfd01cdcfb5a6a/hlsv3_5_1920x1080-4500-v4.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 5
+[download] Destination: Rescuers_dig_through_wreckage_after_Nepal_plane_crash-[219a5a1d-dec6-449a-a76e-7bffdc218436].mp4
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of   14.93MiB in 00:00:03 at 4.69MiB/s
+[debug] ffprobe command line: ffprobe -hide_banner -show_format -show_streams -print_format json "file:Rescuers_dig_through_wreckage_after_Nepal_plane_crash-[219a5a1d-dec6-449a-a76e-7bffdc218436].mp4"
+[debug] ffmpeg command line: ffprobe -show_streams "file:Rescuers_dig_through_wreckage_after_Nepal_plane_crash-[219a5a1d-dec6-449a-a76e-7bffdc218436].mp4"
+[FixupM3u8] Fixing MPEG-TS in MP4 container of "Rescuers_dig_through_wreckage_after_Nepal_plane_crash-[219a5a1d-dec6-449a-a76e-7bffdc218436].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Rescuers_dig_through_wreckage_after_Nepal_plane_crash-[219a5a1d-dec6-449a-a76e-7bffdc218436].mp4" -map 0 -dn -ignore_unknown -c copy -f mp4 -bsf:a aac_adtstoasc -movflags +faststart "file:Rescuers_dig_through_wreckage_after_Nepal_plane_crash-[219a5a1d-dec6-449a-a76e-7bffdc218436].temp.mp4"
+[Metadata] Adding metadata to "Rescuers_dig_through_wreckage_after_Nepal_plane_crash-[219a5a1d-dec6-449a-a76e-7bffdc218436].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Rescuers_dig_through_wreckage_after_Nepal_plane_crash-[219a5a1d-dec6-449a-a76e-7bffdc218436].mp4" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Rescuers dig through wreckage after Nepal plane crash" -metadata "date=20240724" -metadata "description=Emergency workers dug through charred debris after a domestic plane slipped off the runway and crashed during take off from Kathmandu, Nepal on July 24, killing eighteen passengers." -metadata "synopsis=Emergency workers dug through charred debris after a domestic plane slipped off the runway and crashed during take off from Kathmandu, Nepal on July 24, killing eighteen passengers." -metadata "purl=arcpublishing:wapo:219a5a1d-dec6-449a-a76e-7bffdc218436" -metadata "comment=arcpublishing:wapo:219a5a1d-dec6-449a-a76e-7bffdc218436" -movflags +faststart "file:Rescuers_dig_through_wreckage_after_Nepal_plane_crash-[219a5a1d-dec6-449a-a76e-7bffdc218436].temp.mp4"
+Wednesday, July 24, 2024 8:55:38 AM
 
-Name  Version Source Binaries
-----  ------- ------ --------
-gpu-z 2.59.0  extras
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --restrict-filenames --add-metadata -i "https://www.washingtonpost.com/world/2024/07/24/nepal-plane-crash-saurya-airlines-kathmandu/"; date;
 
-PS C:\Users\kushal\src\myhtml\fromnepal> date; scoop install gpu-z; date;
+Wednesday, July 24, 2024 8:56:13 AM
 
-Wednesday, July 24, 2024 8:06:11 AM
-Installing 'gpu-z' (2.59.0) [64bit] from 'extras' bucket
-GPU-Z.2.59.0.exe (9.7 MB) [============================================================================================================================================================================] 100%
-Checking hash of GPU-Z.2.59.0.exe ... ok.
-Linking ~\scoop\apps\gpu-z\current => ~\scoop\apps\gpu-z\2.59.0
-Creating shim for 'GPU-Z'.
-Making C:\Users\kushal\scoop\shims\gpu-z.exe a GUI binary.
-Creating shortcut for GPU-Z (GPU-Z.exe)
-'gpu-z' (2.59.0) was installed successfully!
-Wednesday, July 24, 2024 8:06:15 AM
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
 
-PS C:\Users\kushal\src\myhtml\fromnepal> date; scoop status; date; scoop bucket rm main; date; scoop bucket add main; date; scoop bucket rm extras; date; scoop bucket add extras; date; scoop status; date; scoop update; date; scoop update *; date; scoop cache show; date; scoop cache rm *; date; scoop status; date;
+Wednesday, July 24, 2024 8:56:13 AM
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-i', 'https://www.washingtonpost.com/world/2024/07/24/nepal-plane-crash-saurya-airlines-kathmandu/']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.07.16 from yt-dlp/yt-dlp [89a161e8c] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.1-full_build-www.gyan.dev (setts), ffprobe 7.0.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1829 extractors
+[washingtonpost:article] Extracting URL: https://www.washingtonpost.com/world/2024/07/24/nepal-plane-crash-saurya-airlines-kathmandu/
+[washingtonpost:article] nepal-plane-crash-saurya-airlines-kathmandu: Downloading webpage
+[download] Downloading playlist: Plane slips off runway and crashes at Kathmandu airport, killing 18
+[washingtonpost:article] Playlist Plane slips off runway and crashes at Kathmandu airport, killing 18: Downloading 1 items of 1
+[download] Downloading item 1 of 1
+[washingtonpost] Extracting URL: washingtonpost:219a5a1d-dec6-449a-a76e-7bffdc218436
+[ArcPublishing] Extracting URL: arcpublishing:wapo:219a5a1d-dec6-449a-a76e-7bffdc218436
+[ArcPublishing] 219a5a1d-dec6-449a-a76e-7bffdc218436: Downloading JSON metadata
+[ArcPublishing] 219a5a1d-dec6-449a-a76e-7bffdc218436: Downloading m3u8 information
+WARNING: [ArcPublishing] Ignoring subtitle tracks found in the HLS manifest; if any subtitle tracks are missing, please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+[ArcPublishing] 219a5a1d-dec6-449a-a76e-7bffdc218436: Downloading m3u8 information
+[ArcPublishing] 219a5a1d-dec6-449a-a76e-7bffdc218436: Downloading m3u8 information
+[ArcPublishing] 219a5a1d-dec6-449a-a76e-7bffdc218436: Downloading m3u8 information
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[debug] Default format spec: bestvideo*+bestaudio/best
+[info] 219a5a1d-dec6-449a-a76e-7bffdc218436: Downloading 1 format(s): hls-4789
+[debug] Invoking hlsnative downloader on "https://d21rhj7n383afu.cloudfront.net/washpost-production/Reuters/20240724/66a0aef5509c0d7bb25731db/66a0b76ad9dfd01cdcfb5a6a/hlsv3_5_1920x1080-4500-v4.m3u8"
+[download] Rescuers_dig_through_wreckage_after_Nepal_plane_crash-[219a5a1d-dec6-449a-a76e-7bffdc218436].mp4 has already been downloaded
+[download] 100% of   14.32MiB
+[Metadata] Adding metadata to "Rescuers_dig_through_wreckage_after_Nepal_plane_crash-[219a5a1d-dec6-449a-a76e-7bffdc218436].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Rescuers_dig_through_wreckage_after_Nepal_plane_crash-[219a5a1d-dec6-449a-a76e-7bffdc218436].mp4" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Rescuers dig through wreckage after Nepal plane crash" -metadata "date=20240724" -metadata "description=Emergency workers dug through charred debris after a domestic plane slipped off the runway and crashed during take off from Kathmandu, Nepal on July 24, killing eighteen passengers." -metadata "synopsis=Emergency workers dug through charred debris after a domestic plane slipped off the runway and crashed during take off from Kathmandu, Nepal on July 24, killing eighteen passengers." -metadata "purl=arcpublishing:wapo:219a5a1d-dec6-449a-a76e-7bffdc218436" -metadata "comment=arcpublishing:wapo:219a5a1d-dec6-449a-a76e-7bffdc218436" -movflags +faststart "file:Rescuers_dig_through_wreckage_after_Nepal_plane_crash-[219a5a1d-dec6-449a-a76e-7bffdc218436].temp.mp4"
+[download] Finished downloading playlist: Plane slips off runway and crashes at Kathmandu airport, killing 18
+Wednesday, July 24, 2024 8:56:26 AM
 
-Wednesday, July 24, 2024 8:06:20 AM
-Scoop is up to date.
-Everything is ok!
-Wednesday, July 24, 2024 8:06:20 AM
-The main bucket was removed successfully.
-Wednesday, July 24, 2024 8:06:21 AM
-Checking repo... OK
-The main bucket was added successfully.
-Wednesday, July 24, 2024 8:06:27 AM
-The extras bucket was removed successfully.
-Wednesday, July 24, 2024 8:06:27 AM
-Checking repo... OK
-The extras bucket was added successfully.
-Wednesday, July 24, 2024 8:06:35 AM
-Scoop is up to date.
-Everything is ok!
-Wednesday, July 24, 2024 8:06:36 AM
-Updating Scoop...
-Updating Buckets...
-Scoop was updated successfully!
-Wednesday, July 24, 2024 8:06:44 AM
-Latest versions for all apps are installed! For more information try 'scoop status'
-Wednesday, July 24, 2024 8:06:44 AM
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message"build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-Name    : gpu-z
-Version : 2.59.0
-Length  : 10169048
-
-Total: 1 file, 9.7 MB
-Wednesday, July 24, 2024 8:06:44 AM
-Removing gpu-z#2.59.0#e64bd2c.exe...
-Deleted: 1 file, 9.7 MB
-Wednesday, July 24, 2024 8:06:44 AM
-Scoop is up to date.
-Everything is ok!
-Wednesday, July 24, 2024 8:06:45 AM
-
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
-
-Wednesday, July 24, 2024 8:06:49 AM
+Wednesday, July 24, 2024 8:59:44 AM
 yarn install v1.22.21
 [1/4] Resolving packages...
 success Already up-to-date.
 Done in 0.06s.
-Wednesday, July 24, 2024 8:06:50 AM
+Wednesday, July 24, 2024 8:59:44 AM
 yarn run v1.22.21
 $ tsc && vite build
 vite v5.2.13 building for production...
@@ -145,179 +141,23 @@ vite v5.2.13 building for production...
 docs/index.html                 0.53 kB │ gzip: 0.32 kB
 docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
 docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 107ms
-Done in 0.86s.
-Wednesday, July 24, 2024 8:06:51 AM
+✓ built in 123ms
+Done in 0.88s.
+Wednesday, July 24, 2024 8:59:45 AM
 warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Wednesday, July 24, 2024 8:06:51 AM
+Wednesday, July 24, 2024 8:59:45 AM
 On branch main
 Your branch is up to date with 'origin/main'.
 
 nothing to commit, working tree clean
-Wednesday, July 24, 2024 8:06:51 AM
+Wednesday, July 24, 2024 8:59:45 AM
 From github.com:fromnepal/fromnepal.github.io
  * branch            main       -> FETCH_HEAD
 Already up to date.
-Wednesday, July 24, 2024 8:06:51 AM
+Wednesday, July 24, 2024 8:59:46 AM
 Everything up-to-date
-Wednesday, July 24, 2024 8:06:52 AM
-
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
-
-Wednesday, July 24, 2024 8:06:59 AM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.06s.
-Wednesday, July 24, 2024 8:06:59 AM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.2.13 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 105ms
-Done in 0.80s.
-Wednesday, July 24, 2024 8:07:00 AM
-warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Wednesday, July 24, 2024 8:07:00 AM
-[main 60435e3] build application
- 2 files changed, 188 insertions(+), 506 deletions(-)
-Wednesday, July 24, 2024 8:07:00 AM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Current branch main is up to date.
-Wednesday, July 24, 2024 8:07:01 AM
-Enumerating objects: 9, done.
-Counting objects: 100% (9/9), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 1.29 KiB | 1.29 MiB/s, done.
-Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   e8a2932..60435e3  main -> main
-Wednesday, July 24, 2024 8:07:02 AM
-
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
-
-Wednesday, July 24, 2024 8:14:10 AM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.06s.
-Wednesday, July 24, 2024 8:14:10 AM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.2.13 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 107ms
-Done in 0.79s.
-Wednesday, July 24, 2024 8:14:11 AM
-warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Wednesday, July 24, 2024 8:14:11 AM
-[main 44e5e42] build application
- 4 files changed, 694 insertions(+)
- create mode 100644 docs/font/GPU-Z Sensor Log.txt
- create mode 100644 public/font/GPU-Z Sensor Log.txt
-Wednesday, July 24, 2024 8:14:12 AM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Current branch main is up to date.
-Wednesday, July 24, 2024 8:14:12 AM
-Enumerating objects: 12, done.
-Counting objects: 100% (12/12), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (7/7), done.
-Writing objects: 100% (7/7), 10.81 KiB | 2.16 MiB/s, done.
-Total 7 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   60435e3..44e5e42  main -> main
-Wednesday, July 24, 2024 8:14:13 AM
-
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
-
-Wednesday, July 24, 2024 8:23:13 AM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.06s.
-Wednesday, July 24, 2024 8:23:13 AM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.2.13 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 107ms
-Done in 0.94s.
-Wednesday, July 24, 2024 8:23:14 AM
-warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Wednesday, July 24, 2024 8:23:14 AM
-On branch main
-Your branch is up to date with 'origin/main'.
-
-nothing to commit, working tree clean
-Wednesday, July 24, 2024 8:23:14 AM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Already up to date.
-Wednesday, July 24, 2024 8:23:15 AM
-Everything up-to-date
-Wednesday, July 24, 2024 8:23:15 AM
-
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
-
-Wednesday, July 24, 2024 8:46:19 AM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.06s.
-Wednesday, July 24, 2024 8:46:19 AM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.2.13 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 110ms
-Done in 1.17s.
-Wednesday, July 24, 2024 8:46:21 AM
-warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Wednesday, July 24, 2024 8:46:21 AM
-[main 1fcfe53] build application
- 2 files changed, 152 insertions(+)
-Wednesday, July 24, 2024 8:46:21 AM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Current branch main is up to date.
-Wednesday, July 24, 2024 8:46:21 AM
-Enumerating objects: 9, done.
-Counting objects: 100% (9/9), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 744 bytes | 744.00 KiB/s, done.
-Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   44e5e42..1fcfe53  main -> main
-Wednesday, July 24, 2024 8:46:22 AM
+Wednesday, July 24, 2024 8:59:46 AM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
