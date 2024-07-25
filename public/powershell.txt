@@ -11,7 +11,7 @@ Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_
 
 This message is shown once a day. To disable it please create the
 /home/kushal/.hushlogin file.
-kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; timegit status; date; time ./Meta/ladybird.sh run ladybird; date;
+kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
 [sudo] password for kushal:
 Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
 Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
@@ -227,3 +227,119 @@ ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
 [1/2] Re-running CMake...
 -- Running vcpkg install
 Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/clang++-17
+All requested packages are currently installed.
+Total install time: 170 ns
+-- Running vcpkg install - done
+-- Found the following ICU libraries:
+--   data (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicudata.a
+--   i18n (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicui18n.a
+--   uc (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicuuc.a
+-- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+-- Configuring done (32.5s)
+-- Generating done (0.5s)
+-- Build files have been written to: /home/kushal/src/ladybird/Build/ladybird
+[0/2] Re-checking globbed directories...
+[1400/1400] Linking CXX executable bin/Ladybird
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
+505.871 WebContent(8689): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+506.371 WebContent(8689): FIXME: Unimplemented Navigator.maxTouchPoints
+506.411 WebContent(8689): (STUBBED) HTMLInputElement::set_selection_range(start=0, end=0, direction='None'). Called on: input.lst
+506.411 WebContent(8689): ResourceLoader: Filtered request to: "https://clients1.google.com/generate_204"
+506.411 WebContent(8689): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+506.411 WebContent(8689): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+506.411 WebContent(8689): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
+506.421 WebContent(8689): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=i&ct=psnt&cad=&nt=null&ei=1S6iZqftAsqe5NoP7pmqmAI&zx=1721904856533&opi=89978449"
+ 8668 Lost connection to RequestServer
+
+real    7m27.256s
+user    91m42.062s
+sys     5m2.223s
+Thu Jul 25 06:54:27 EDT 2024
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+2 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+real    0m1.100s
+user    0m0.007s
+sys     0m0.000s
+Listing... Done
+libldap-2.5-0/jammy-updates 2.5.18+dfsg-0ubuntu0.22.04.2 amd64 [upgradable from: 2.5.18+dfsg-0ubuntu0.22.04.1]
+libldap-common/jammy-updates 2.5.18+dfsg-0ubuntu0.22.04.2 all [upgradable from: 2.5.18+dfsg-0ubuntu0.22.04.1]
+
+real    0m0.172s
+user    0m0.146s
+sys     0m0.020s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
+  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
+  libavfilter7
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+The following packages have been kept back:
+  libldap-2.5-0 libldap-common
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+
+real    0m0.333s
+user    0m0.005s
+sys     0m0.000s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.029s
+user    0m0.010s
+sys     0m0.019s
+
+real    0m0.156s
+user    0m0.012s
+sys     0m0.019s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Already up to date.
+
+real    0m0.156s
+user    0m0.021s
+sys     0m0.012s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.013s
+user    0m0.000s
+sys     0m0.016s
+Thu Jul 25 06:54:47 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
+ 9361 Lost connection to RequestServer
+
+real    0m3.881s
+user    0m0.195s
+sys     0m0.200s
+Thu Jul 25 06:54:51 EDT 2024
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
