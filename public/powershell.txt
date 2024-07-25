@@ -1,345 +1,317 @@
-Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_64)
+PowerShell 7.4.3
 
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/pro
+   A new PowerShell stable release is available: v7.4.4
+   Upgrade now, or check out the release page at:
+     https://aka.ms/PowerShell-Release?tag=v7.4.4
 
- * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
-   just raised the bar for easy, resilient and secure K8s cluster deployment.
+Loading personal and system profiles took 520ms.
+PS C:\Users\kushal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+Thursday, July 25, 2024 6:46:02 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.09s.
+Thursday, July 25, 2024 6:46:03 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 162ms
+Done in 2.70s.
+Thursday, July 25, 2024 6:46:06 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, July 25, 2024 6:46:06 AM
+On branch main
+Your branch is up to date with 'origin/main'.
 
-This message is shown once a day. To disable it please create the
-/home/kushal/.hushlogin file.
-kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
-[sudo] password for kushal:
-Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
-Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
-Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
-Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
-Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
-Get:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1673 kB]
-Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1888 kB]
-Get:8 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [279 kB]
-Get:9 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [2171 kB]
-Get:10 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [372 kB]
-Get:11 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [886 kB]
-Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [337 kB]
-Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [2238 kB]
-Get:14 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [173 kB]
-Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [384 kB]
-Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1109 kB]
-Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [258 kB]
-Fetched 12.0 MB in 1s (9573 kB/s)
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-6 packages can be upgraded. Run 'apt list --upgradable' to see them.
-
-real    0m7.680s
-user    0m0.013s
-sys     0m0.013s
-Listing... Done
-bind9-dnsutils/jammy-updates,jammy-security 1:9.18.28-0ubuntu0.22.04.1 amd64 [upgradable from: 1:9.18.24-0ubuntu0.22.04.1]
-bind9-host/jammy-updates,jammy-security 1:9.18.28-0ubuntu0.22.04.1 amd64 [upgradable from: 1:9.18.24-0ubuntu0.22.04.1]
-bind9-libs/jammy-updates,jammy-security 1:9.18.28-0ubuntu0.22.04.1 amd64 [upgradable from: 1:9.18.24-0ubuntu0.22.04.1]
-libldap-2.5-0/jammy-updates 2.5.18+dfsg-0ubuntu0.22.04.2 amd64 [upgradable from: 2.5.18+dfsg-0ubuntu0.22.04.1]
-libldap-common/jammy-updates 2.5.18+dfsg-0ubuntu0.22.04.2 all [upgradable from: 2.5.18+dfsg-0ubuntu0.22.04.1]
-linux-libc-dev/jammy-updates,jammy-security 5.15.0-117.127 amd64 [upgradable from: 5.15.0-116.126]
-
-real    0m0.182s
-user    0m0.178s
-sys     0m0.000s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
-  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
-  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
-  libavfilter7
-Learn more about Ubuntu Pro at https://ubuntu.com/pro
-The following packages have been kept back:
-  libldap-2.5-0 libldap-common
-The following packages will be upgraded:
-  bind9-dnsutils bind9-host bind9-libs linux-libc-dev
-4 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
-4 standard LTS security updates
-Need to get 2803 kB of archives.
-After this operation, 46.1 kB of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 bind9-dnsutils amd64 1:9.18.28-0ubuntu0.22.04.1 [157 kB]
-Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 bind9-host amd64 1:9.18.28-0ubuntu0.22.04.1 [52.6 kB]
-Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 bind9-libs amd64 1:9.18.28-0ubuntu0.22.04.1 [1256 kB]
-Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 linux-libc-dev amd64 5.15.0-117.127 [1338 kB]
-Fetched 2803 kB in 0s (8025 kB/s)
-(Reading database ... 62521 files and directories currently installed.)
-Preparing to unpack .../bind9-dnsutils_1%3a9.18.28-0ubuntu0.22.04.1_amd64.deb ...
-Unpacking bind9-dnsutils (1:9.18.28-0ubuntu0.22.04.1) over (1:9.18.24-0ubuntu0.22.04.1) ...
-Preparing to unpack .../bind9-host_1%3a9.18.28-0ubuntu0.22.04.1_amd64.deb ...
-Unpacking bind9-host (1:9.18.28-0ubuntu0.22.04.1) over (1:9.18.24-0ubuntu0.22.04.1) ...
-Preparing to unpack .../bind9-libs_1%3a9.18.28-0ubuntu0.22.04.1_amd64.deb ...
-Unpacking bind9-libs:amd64 (1:9.18.28-0ubuntu0.22.04.1) over (1:9.18.24-0ubuntu0.22.04.1) ...
-Preparing to unpack .../linux-libc-dev_5.15.0-117.127_amd64.deb ...
-Unpacking linux-libc-dev:amd64 (5.15.0-117.127) over (5.15.0-116.126) ...
-Setting up bind9-libs:amd64 (1:9.18.28-0ubuntu0.22.04.1) ...
-Setting up linux-libc-dev:amd64 (5.15.0-117.127) ...
-Setting up bind9-host (1:9.18.28-0ubuntu0.22.04.1) ...
-Setting up bind9-dnsutils (1:9.18.28-0ubuntu0.22.04.1) ...
-Processing triggers for man-db (2.10.2-1) ...
-Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
-
-real    0m1.958s
-user    0m0.007s
-sys     0m0.000s
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-real    0m0.065s
-user    0m0.007s
-sys     0m0.091s
-remote: Enumerating objects: 330, done.
-remote: Counting objects: 100% (330/330), done.
-remote: Compressing objects: 100% (196/196), done.
-remote: Total 330 (delta 168), reused 231 (delta 133), pack-reused 0
-Receiving objects: 100% (330/330), 1.04 MiB | 11.35 MiB/s, done.
-Resolving deltas: 100% (168/168), completed with 23 local objects.
-From https://github.com/LadybirdBrowser/ladybird
-   1d03944a9c..132ab775d8  master     -> origin/master
-
-real    0m0.721s
-user    0m0.047s
-sys     0m0.050s
-From https://github.com/LadybirdBrowser/ladybird
- * branch                  master     -> FETCH_HEAD
-Updating 1d03944a9c..132ab775d8
-Fast-forward
- AK/SIMDExtras.h                                                     |    3 +-
- Ladybird/Qt/BrowserWindow.cpp                                       |   19 ++
- Ladybird/Qt/InspectorWidget.cpp                                     |    2 +-
- Ladybird/Qt/Settings.cpp                                            |   11 +
- Ladybird/Qt/Settings.h                                              |    4 +
- Ladybird/Qt/SettingsDialog.cpp                                      |   10 +
- Ladybird/Qt/SettingsDialog.h                                        |    1 +
- Ladybird/Qt/Tab.cpp                                                 |    5 +
- Ladybird/Qt/Tab.h                                                   |    2 +
- Ladybird/Qt/WebContentView.h                                        |    2 +
- Tests/LibWeb/Layout/expected/host-pseudo-class-basic.txt            |   19 ++
- Tests/LibWeb/Layout/input/host-pseudo-class-basic.html              |    4 +
- Tests/LibWeb/Screenshot/images/border-radius-ref.png                |  Bin 373180 -> 373225 bytes
- Tests/LibWeb/Screenshot/images/css-background-clip-text.png         |  Bin 278614 -> 278629 bytes
- Tests/LibWeb/Screenshot/images/css-backgrounds-ref.png              |  Bin 118044 -> 117065 bytes
- Tests/LibWeb/Text/expected/DOM/Element-classList.txt                |    6 +
- Tests/LibWeb/Text/expected/Element-toggleAttribute-invalid-name.txt |    2 +
- Tests/LibWeb/Text/expected/all-window-properties.txt                |    1 +
- Tests/LibWeb/Text/expected/canvas/invalid-font-property.txt         |    4 +
- Tests/LibWeb/Text/input/DOM/Element-classList.html                  |   23 ++
- Tests/LibWeb/Text/input/Element-toggleAttribute-invalid-name.html   |   24 ++
- Tests/LibWeb/Text/input/canvas/invalid-font-property.html           |   15 ++
- Userland/Libraries/LibJS/Bytecode/ASTCodegen.cpp                    |   16 +-
- Userland/Libraries/LibJS/Tests/for-loop-per-iteration-env-bug.js    |   12 +
- Userland/Libraries/LibWasm/AbstractMachine/BytecodeInterpreter.cpp  |   44 +---
- Userland/Libraries/LibWasm/AbstractMachine/BytecodeInterpreter.h    |    4 +-
- Userland/Libraries/LibWasm/AbstractMachine/Operators.h              |    6 +-
- Userland/Libraries/LibWasm/Opcode.h                                 |    4 +-
- Userland/Libraries/LibWasm/Parser/Parser.cpp                        | 1464 +++++++++++++++++++++++++++++++++++++++++++++++++++++----------------------------------------------------------
- Userland/Libraries/LibWasm/Types.h                                  |    3 +-
- Userland/Libraries/LibWeb/CMakeLists.txt                            |    1 +
- Userland/Libraries/LibWeb/CSS/Parser/SelectorParsing.cpp            |    5 +-
- Userland/Libraries/LibWeb/CSS/SelectorEngine.cpp                    |  103 +++++---
- Userland/Libraries/LibWeb/CSS/SelectorEngine.h                      |    4 +-
- Userland/Libraries/LibWeb/CSS/StyleComputer.cpp                     |   32 ++-
- Userland/Libraries/LibWeb/CSS/StyleValues/ImageStyleValue.cpp       |    5 +
- Userland/Libraries/LibWeb/CSS/StyleValues/ImageStyleValue.h         |    1 +
- Userland/Libraries/LibWeb/DOM/DOMTokenList.cpp                      |   31 ++-
- Userland/Libraries/LibWeb/DOM/DOMTokenList.h                        |    4 +
- Userland/Libraries/LibWeb/DOM/Element.cpp                           |   13 +-
- Userland/Libraries/LibWeb/DOM/ParentNode.cpp                        |    5 +-
- Userland/Libraries/LibWeb/Fetch/Fetching/Fetching.cpp               |    5 +-
- Userland/Libraries/LibWeb/Forward.h                                 |    1 +
- Userland/Libraries/LibWeb/HTML/Canvas/CanvasTextDrawingStyles.h     |    5 +-
- Userland/Libraries/LibWeb/HTML/FormControlInfrastructure.cpp        |   15 +-
- Userland/Libraries/LibWeb/HTML/NavigatorLanguage.h                  |   11 +-
- Userland/Libraries/LibWeb/Loader/ResourceLoader.cpp                 |    1 +
- Userland/Libraries/LibWeb/Loader/ResourceLoader.h                   |    4 +
- Userland/Libraries/LibWeb/Painting/BackgroundPainting.cpp           |   11 +
- Userland/Libraries/LibWeb/Painting/Command.h                        |   16 ++
- Userland/Libraries/LibWeb/Painting/DisplayList.cpp                  |   57 +----
- Userland/Libraries/LibWeb/Painting/DisplayList.h                    |   71 +++---
- Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.cpp        |  128 +++++-----
- Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.h          |   65 +++--
- Userland/Libraries/LibWeb/Painting/DisplayListRecorder.cpp          |   13 +-
- Userland/Libraries/LibWeb/Painting/DisplayListRecorder.h            |    2 +
- Userland/Libraries/LibWeb/Painting/PaintableBox.cpp                 |    5 +-
- Userland/Libraries/LibWeb/WebAudio/AudioDestinationNode.cpp         |   34 +++
- Userland/Libraries/LibWeb/WebAudio/AudioDestinationNode.h           |   28 +++
- Userland/Libraries/LibWeb/WebAudio/AudioDestinationNode.idl         |    7 +
- Userland/Libraries/LibWeb/WebAudio/AudioNode.cpp                    |    4 +-
- Userland/Libraries/LibWeb/WebAudio/AudioParam.cpp                   |    3 +-
- Userland/Libraries/LibWeb/WebAudio/BaseAudioContext.cpp             |   19 ++
- Userland/Libraries/LibWeb/WebAudio/BaseAudioContext.h               |    5 +
- Userland/Libraries/LibWeb/WebAudio/BaseAudioContext.idl             |    3 +-
- Userland/Libraries/LibWeb/WebIDL/OverloadResolution.cpp             |   10 +-
- Userland/Libraries/LibWeb/idl_files.cmake                           |    1 +
- Userland/Libraries/LibWebView/ViewImplementation.cpp                |    5 +
- Userland/Libraries/LibWebView/ViewImplementation.h                  |    2 +
- Userland/Services/WebContent/ConnectionFromClient.cpp               |    9 +
- Userland/Services/WebContent/ConnectionFromClient.h                 |    1 +
- Userland/Services/WebContent/WebContentServer.ipc                   |    1 +
- 72 files changed, 1353 insertions(+), 1103 deletions(-)
- create mode 100644 Tests/LibWeb/Layout/expected/host-pseudo-class-basic.txt
- create mode 100644 Tests/LibWeb/Layout/input/host-pseudo-class-basic.html
- create mode 100644 Tests/LibWeb/Text/expected/DOM/Element-classList.txt
- create mode 100644 Tests/LibWeb/Text/expected/Element-toggleAttribute-invalid-name.txt
- create mode 100644 Tests/LibWeb/Text/expected/canvas/invalid-font-property.txt
- create mode 100644 Tests/LibWeb/Text/input/DOM/Element-classList.html
- create mode 100644 Tests/LibWeb/Text/input/Element-toggleAttribute-invalid-name.html
- create mode 100644 Tests/LibWeb/Text/input/canvas/invalid-font-property.html
- create mode 100644 Userland/Libraries/LibJS/Tests/for-loop-per-iteration-env-bug.js
- create mode 100644 Userland/Libraries/LibWeb/WebAudio/AudioDestinationNode.cpp
- create mode 100644 Userland/Libraries/LibWeb/WebAudio/AudioDestinationNode.h
- create mode 100644 Userland/Libraries/LibWeb/WebAudio/AudioDestinationNode.idl
-
-real    0m0.171s
-user    0m0.042s
-sys     0m0.027s
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-real    0m0.025s
-user    0m0.009s
-sys     0m0.017s
-Thu Jul 25 06:46:59 EDT 2024
-~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
-ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
-[0/2] Re-checking globbed directories...
-[1/2] Re-running CMake...
--- Running vcpkg install
-Detecting compiler hash for triplet x64-linux...
-Compiler found: /usr/bin/clang++-17
-All requested packages are currently installed.
-Total install time: 170 ns
--- Running vcpkg install - done
--- Found the following ICU libraries:
---   data (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicudata.a
---   i18n (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicui18n.a
---   uc (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicuuc.a
--- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
--- Configuring done (32.5s)
--- Generating done (0.5s)
--- Build files have been written to: /home/kushal/src/ladybird/Build/ladybird
-[0/2] Re-checking globbed directories...
-[1400/1400] Linking CXX executable bin/Ladybird
-QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
-qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
-505.871 WebContent(8689): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
-506.371 WebContent(8689): FIXME: Unimplemented Navigator.maxTouchPoints
-506.411 WebContent(8689): (STUBBED) HTMLInputElement::set_selection_range(start=0, end=0, direction='None'). Called on: input.lst
-506.411 WebContent(8689): ResourceLoader: Filtered request to: "https://clients1.google.com/generate_204"
-506.411 WebContent(8689): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-506.411 WebContent(8689): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-506.411 WebContent(8689): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
-506.421 WebContent(8689): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=i&ct=psnt&cad=&nt=null&ei=1S6iZqftAsqe5NoP7pmqmAI&zx=1721904856533&opi=89978449"
- 8668 Lost connection to RequestServer
-
-real    7m27.256s
-user    91m42.062s
-sys     5m2.223s
-Thu Jul 25 06:54:27 EDT 2024
-kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
-Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
-Hit:3 http://archive.ubuntu.com/ubuntu jammy InRelease
-Hit:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
-Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
-Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-2 packages can be upgraded. Run 'apt list --upgradable' to see them.
-
-real    0m1.100s
-user    0m0.007s
-sys     0m0.000s
-Listing... Done
-libldap-2.5-0/jammy-updates 2.5.18+dfsg-0ubuntu0.22.04.2 amd64 [upgradable from: 2.5.18+dfsg-0ubuntu0.22.04.1]
-libldap-common/jammy-updates 2.5.18+dfsg-0ubuntu0.22.04.2 all [upgradable from: 2.5.18+dfsg-0ubuntu0.22.04.1]
-
-real    0m0.172s
-user    0m0.146s
-sys     0m0.020s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
-  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
-  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
-  libavfilter7
-Learn more about Ubuntu Pro at https://ubuntu.com/pro
-The following packages have been kept back:
-  libldap-2.5-0 libldap-common
-0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
-
-real    0m0.333s
-user    0m0.005s
-sys     0m0.000s
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-real    0m0.029s
-user    0m0.010s
-sys     0m0.019s
-
-real    0m0.156s
-user    0m0.012s
-sys     0m0.019s
-From https://github.com/LadybirdBrowser/ladybird
- * branch                  master     -> FETCH_HEAD
+nothing to commit, working tree clean
+Thursday, July 25, 2024 6:46:06 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
 Already up to date.
+Thursday, July 25, 2024 6:46:07 AM
+Everything up-to-date
+Thursday, July 25, 2024 6:46:07 AM
 
-real    0m0.156s
-user    0m0.021s
-sys     0m0.012s
-On branch master
-Your branch is up to date with 'origin/master'.
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
+Thursday, July 25, 2024 6:46:18 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Thursday, July 25, 2024 6:46:18 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 110ms
+Done in 0.90s.
+Thursday, July 25, 2024 6:46:19 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, July 25, 2024 6:46:19 AM
+[main 9a9dd9c] build application
+ 2 files changed, 20 insertions(+), 572 deletions(-)
+Thursday, July 25, 2024 6:46:19 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, July 25, 2024 6:46:20 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 747 bytes | 747.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   5a78506..9a9dd9c  main -> main
+Thursday, July 25, 2024 6:46:21 AM
 
-nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-real    0m0.013s
-user    0m0.000s
-sys     0m0.016s
-Thu Jul 25 06:54:47 EDT 2024
-~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
-ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
-[0/2] Re-checking globbed directories...
-ninja: no work to do.
-QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
-qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
- 9361 Lost connection to RequestServer
+Thursday, July 25, 2024 6:46:30 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Thursday, July 25, 2024 6:46:30 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 105ms
+Done in 0.81s.
+Thursday, July 25, 2024 6:46:31 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, July 25, 2024 6:46:31 AM
+[main 6a2e58e] build application
+ 2 files changed, 156 insertions(+), 20 deletions(-)
+Thursday, July 25, 2024 6:46:32 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, July 25, 2024 6:46:32 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.42 KiB | 1.42 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   9a9dd9c..6a2e58e  main -> main
+Thursday, July 25, 2024 6:46:33 AM
 
-real    0m3.881s
-user    0m0.195s
-sys     0m0.200s
-Thu Jul 25 06:54:51 EDT 2024
-kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, July 25, 2024 6:46:39 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Thursday, July 25, 2024 6:46:39 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 107ms
+Done in 0.80s.
+Thursday, July 25, 2024 6:46:40 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, July 25, 2024 6:46:40 AM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Thursday, July 25, 2024 6:46:40 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Thursday, July 25, 2024 6:46:40 AM
+Everything up-to-date
+Thursday, July 25, 2024 6:46:41 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, July 25, 2024 6:47:03 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Thursday, July 25, 2024 6:47:03 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 113ms
+Done in 0.84s.
+Thursday, July 25, 2024 6:47:04 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, July 25, 2024 6:47:04 AM
+[main 535c6ab] build application
+ 2 files changed, 444 insertions(+), 150 deletions(-)
+Thursday, July 25, 2024 6:47:04 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, July 25, 2024 6:47:05 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 3.80 KiB | 3.80 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   6a2e58e..535c6ab  main -> main
+Thursday, July 25, 2024 6:47:06 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, July 25, 2024 6:54:36 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Thursday, July 25, 2024 6:54:36 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 128ms
+Done in 0.89s.
+Thursday, July 25, 2024 6:54:37 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, July 25, 2024 6:54:37 AM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Thursday, July 25, 2024 6:54:37 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Thursday, July 25, 2024 6:54:38 AM
+Everything up-to-date
+Thursday, July 25, 2024 6:54:38 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --restrict-filenames --add-metadata -i "https://v.redd.it/slrul7pv7led1"; date;
+
+Thursday, July 25, 2024 7:37:52 AM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Thursday, July 25, 2024 7:37:52 AM
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-i', 'https://v.redd.it/slrul7pv7led1']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.07.16 from yt-dlp/yt-dlp [89a161e8c] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.1-full_build-www.gyan.dev (setts), ffprobe 7.0.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1829 extractors
+[generic] Extracting URL: https://v.redd.it/slrul7pv7led1
+[generic] slrul7pv7led1: Downloading webpage
+[redirect] Following redirect to https://www.reddit.com/r/blackmagicfuckery/comments/1eblcu6/what_in_the_how/?rdt=62263
+[Reddit] Extracting URL: https://www.reddit.com/r/blackmagicfuckery/comments/1eblcu6/what_in_the_how/?rdt=62263
+[Reddit] 1eblcu6: Downloading JSON metadata
+[Reddit] 1eblcu6: Downloading m3u8 information
+[Reddit] 1eblcu6: Downloading MPD manifest
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[debug] Default format spec: bestvideo*+bestaudio/best
+[info] slrul7pv7led1: Downloading 1 format(s): hls-1353+dash-7
+[debug] Invoking hlsnative downloader on "https://v.redd.it/slrul7pv7led1/HLS_720.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 14
+[download] Destination: What_in_the...._How-[slrul7pv7led1].fhls-1353.mp4
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of    8.06MiB in 00:00:04 at 1.89MiB/s
+[debug] Invoking http downloader on "https://v.redd.it/slrul7pv7led1/DASH_AUDIO_128.mp4"
+[download] Destination: What_in_the...._How-[slrul7pv7led1].fdash-7.m4a
+[download] 100% of  919.50KiB in 00:00:00 at 5.16MiB/s
+[Merger] Merging formats into "What_in_the...._How-[slrul7pv7led1].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:What_in_the...._How-[slrul7pv7led1].fhls-1353.mp4" -i "file:What_in_the...._How-[slrul7pv7led1].fdash-7.m4a" -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart "file:What_in_the...._How-[slrul7pv7led1].temp.mp4"
+Deleting original file What_in_the...._How-[slrul7pv7led1].fhls-1353.mp4 (pass -k to keep)
+Deleting original file What_in_the...._How-[slrul7pv7led1].fdash-7.m4a (pass -k to keep)
+[Metadata] Adding metadata to "What_in_the...._How-[slrul7pv7led1].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:What_in_the...._How-[slrul7pv7led1].mp4" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=What in the….?? How?!" -metadata "date=20240725" -metadata "purl=https://www.reddit.com/r/blackmagicfuckery/comments/1eblcu6/what_in_the_how/?rdt=62263" -metadata "comment=https://www.reddit.com/r/blackmagicfuckery/comments/1eblcu6/what_in_the_how/?rdt=62263" -metadata "artist=iamChristianMerritt" -movflags +faststart "file:What_in_the...._How-[slrul7pv7led1].temp.mp4"
+Thursday, July 25, 2024 7:38:08 AM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, July 25, 2024 7:38:11 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Thursday, July 25, 2024 7:38:12 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 139ms
+Done in 0.91s.
+Thursday, July 25, 2024 7:38:13 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, July 25, 2024 7:38:13 AM
+[main 08bade4] build application
+ 2 files changed, 234 insertions(+), 2 deletions(-)
+Thursday, July 25, 2024 7:38:13 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, July 25, 2024 7:38:14 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.66 KiB | 1.66 MiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   535c6ab..08bade4  main -> main
+Thursday, July 25, 2024 7:38:14 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
