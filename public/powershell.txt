@@ -4,16 +4,16 @@ PowerShell 7.4.3
    Upgrade now, or check out the release page at:
      https://aka.ms/PowerShell-Release?tag=v7.4.4
 
-Loading personal and system profiles took 574ms.
+Loading personal and system profiles took 513ms.
 PS C:\Users\kushal>
 PS C:\Users\kushal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-Friday, July 26, 2024 3:10:40 PM
+Friday, July 26, 2024 4:50:26 PM
 yarn install v1.22.21
 [1/4] Resolving packages...
 success Already up-to-date.
-Done in 0.10s.
-Friday, July 26, 2024 3:10:40 PM
+Done in 0.14s.
+Friday, July 26, 2024 4:50:46 PM
 yarn run v1.22.21
 $ tsc && vite build
 vite v5.2.13 building for production...
@@ -21,42 +21,44 @@ vite v5.2.13 building for production...
 docs/index.html                 0.53 kB │ gzip: 0.32 kB
 docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
 docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 159ms
-Done in 2.54s.
-Friday, July 26, 2024 3:10:43 PM
+✓ built in 152ms
+Done in 2.55s.
+Friday, July 26, 2024 4:50:49 PM
 warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Friday, July 26, 2024 3:10:43 PM
-[main 90ca848] build application
+Friday, July 26, 2024 4:50:49 PM
+[main 872d42f] build application
  2 files changed, 80 insertions(+)
-Friday, July 26, 2024 3:10:43 PM
+Friday, July 26, 2024 4:50:49 PM
 From github.com:fromnepal/fromnepal.github.io
  * branch            main       -> FETCH_HEAD
 Current branch main is up to date.
-Friday, July 26, 2024 3:10:45 PM
+Friday, July 26, 2024 4:50:51 PM
 Enumerating objects: 9, done.
 Counting objects: 100% (9/9), done.
 Delta compression using up to 16 threads
 Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 560 bytes | 560.00 KiB/s, done.
+Writing objects: 100% (5/5), 639 bytes | 639.00 KiB/s, done.
 Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
 To github.com:fromnepal/fromnepal.github.io.git
-   89c588e..90ca848  main -> main
-Friday, July 26, 2024 3:10:45 PM
+   14de525..872d42f  main -> main
+Friday, July 26, 2024 4:50:51 PM
 
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --restrict-filenames --add-metadata -i "https://www.instagram.com/reel/C9y0zEPhsDt"; date;
+PS C:\Users\kushal\src\myhtml\fromnepal>
+PS C:\Users\kushal\src\myhtml\fromnepal>
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --restrict-filenames --add-metadata -i "https://youtu.be/TT6O6NhZWg0"; date;
 
-Friday, July 26, 2024 3:10:58 PM
+Saturday, July 27, 2024 10:26:18 AM
 
 Drive        :
 Provider     : Microsoft.PowerShell.Core\FileSystem
 ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
 Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
 
-Friday, July 26, 2024 3:10:58 PM
-[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-i', 'https://www.instagram.com/reel/C9y0zEPhsDt']
+Saturday, July 27, 2024 10:26:18 AM
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-i', 'https://youtu.be/TT6O6NhZWg0']
 [debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
 [debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
 [debug] yt-dlp version stable@2024.07.16 from yt-dlp/yt-dlp [89a161e8c] (win_exe)
@@ -66,41 +68,53 @@ Friday, July 26, 2024 3:10:58 PM
 [debug] Proxy map: {}
 [debug] Request Handlers: urllib, requests, websockets, curl_cffi
 [debug] Loaded 1829 extractors
-[Instagram] Extracting URL: https://www.instagram.com/reel/C9y0zEPhsDt
-[Instagram] C9y0zEPhsDt: Setting up session
-[Instagram] C9y0zEPhsDt: Downloading JSON metadata
-[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[youtube] Extracting URL: https://youtu.be/TT6O6NhZWg0
+[youtube] TT6O6NhZWg0: Downloading webpage
+[youtube] TT6O6NhZWg0: Downloading ios player API JSON
+[youtube] TT6O6NhZWg0: Downloading player 1f8742dc
+WARNING: [youtube] TT6O6NhZWg0: nsig extraction failed: Some formats may be missing
+         n = FVeqRBn_1DY-VodA6 ; player = https://www.youtube.com/s/player/1f8742dc/player_ias.vflset/en_US/base.js
+[debug] [youtube] Unable to extract nsig function code (caused by RegexNotFoundError('Unable to extract \x1b[0;94mInitial JS player n function name\x1b[0m; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U')); please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+WARNING: [youtube] TT6O6NhZWg0: nsig extraction failed: Some formats may be missing
+         n = L-dH8_Me70LaFwL2A ; player = https://www.youtube.com/s/player/1f8742dc/player_ias.vflset/en_US/base.js
+[youtube] TT6O6NhZWg0: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
 [debug] Default format spec: bestvideo*+bestaudio/best
-[info] C9y0zEPhsDt: Downloading 1 format(s): dash-3703728289884098v+dash-1972067379902864ad
-[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t39.25447-16/452523262_1472962176944748_56076978399333530_n.mp4?_nc_cat=1&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=f4IB9VytfQsQ7kNvgGSU8cS&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYCPrdgZfYbHsMNDnb4A16UuCVvxohMOJy98WCQF6D_S0Q&oe=66A9BAE1"
+[info] TT6O6NhZWg0: Downloading 1 format(s): 617+140
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1722111978/ei/igOlZvOfMa-FkucPp_iy2A8/ip/70.104.195.206/id/4d3e8ee8d8595a0d/itag/617/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D10819136%3Bdur%3D53.200%3Bgir%3Dyes%3Bitag%3D303%3Blmt%3D1716242471001959/rqh/1/hls_chunk_host/rr2---sn-8xgp1vo-gpjl.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/mh/v7/mm/31,29/mn/sn-8xgp1vo-gpjl,sn-8xgp1vo-p5qee/ms/au,rdu/mv/m/mvi/2/pl/20/initcwndbps/1125000/vprv/1/playlist_type/DVR/dover/13/txp/630A224/mt/1722089840/fvip/7/short_key/1/keepalive/yes/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,vprv,playlist_type/sig/AJfQdSswRQIhAJ0R89fFKhZKz76o2366LuUCB1j-dlNPJtfC4GOJL6rnAiAvN2wtIpQyhOdALbtyOYEjW8Imem-kE8do05ZtsY_Aog%3D%3D/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl,initcwndbps/lsig/AGtxev0wRAIgTCcPHQ0Q6IWagSgcz8LTNa3VGZyXdPEK11pCvo1MWJYCIGKn5Tbjbu1n37VI3v-rwDb-hoZklp2JwvoiCsjCxPSp/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 12
+[download] Destination: Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].f617.mp4
 [debug] File locking is not supported. Proceeding without locking
-[download] Destination: Video_by_funny_world_1221-[C9y0zEPhsDt].fdash-3703728289884098v.mp4
-[download] 100% of   19.57MiB in 00:00:01 at 15.77MiB/s
-[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t50.33967-16/451310367_503765022161144_1211860451234453806_n.mp4?_nc_cat=1&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=5aa6SyUJtToQ7kNvgFUryxv&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYAZcg_jTZ28VTiyWzJbR8NJgRtjbvUCmEByOmefMLPiJA&oe=66A9C754"
-[download] Destination: Video_by_funny_world_1221-[C9y0zEPhsDt].fdash-1972067379902864ad.m4a
-[download] 100% of  315.02KiB in 00:00:00 at 1.98MiB/s
-[Merger] Merging formats into "Video_by_funny_world_1221-[C9y0zEPhsDt].mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Video_by_funny_world_1221-[C9y0zEPhsDt].fdash-3703728289884098v.mp4" -i "file:Video_by_funny_world_1221-[C9y0zEPhsDt].fdash-1972067379902864ad.m4a" -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart "file:Video_by_funny_world_1221-[C9y0zEPhsDt].temp.mp4"
-Deleting original file Video_by_funny_world_1221-[C9y0zEPhsDt].fdash-3703728289884098v.mp4 (pass -k to keep)
-Deleting original file Video_by_funny_world_1221-[C9y0zEPhsDt].fdash-1972067379902864ad.m4a (pass -k to keep)
-[Metadata] Adding metadata to "Video_by_funny_world_1221-[C9y0zEPhsDt].mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Video_by_funny_world_1221-[C9y0zEPhsDt].mp4" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by funny_world_1221"-metadata "date=20240724" -metadata "description=Here is the information about stars!!
-  Stars are luminous celestial bodies composed primarily of hydrogen and helium, undergoing nuclear fusion reactions that generate immense energy. They vary in size, temperature, and lifespan, with classifications ranging from dwarf stars like red dwarfs to massive supergiants like Betelgeuse. Stars play a fundamental role in the universe, serving as the building blocks of galaxies and the catalysts for the formation of planetary systems. Their brightness and color are indicative of their temperature and evolutionary stage. Studying stars provides insights into stellar evolution, the dynamics of galaxies, and the fundamental laws of physics governing the cosmos. Astronomers employ various techniques, including spectroscopy and photometry, to explore the properties and behavior of stars across different regions of the electromagnetic spectrum
+[download] 100% of   10.33MiB in 00:00:04 at 2.55MiB/s
+[debug] Invoking http downloader on "https://rr2---sn-8xgp1vo-gpjl.googlevideo.com/videoplayback?expire=1722111978&ei=igOlZvOfMa-FkucPp_iy2A8&ip=70.104.195.206&id=o-AEVtcMX_wrcueoW0OkkB88iYCuBMCG2nk8yA4Tp4KFDR&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=v7&mm=31%2C29&mn=sn-8xgp1vo-gpjl%2Csn-8xgp1vo-p5qee&ms=au%2Crdu&mv=m&mvi=2&pl=20&initcwndbps=1125000&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=862568&dur=53.243&lmt=1716242456540051&mt=1722089840&fvip=7&keepalive=yes&c=IOS&txp=6308224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgWMCe6NG-B9S1F87BSz3ZSuB76LLH6_Qqt3rpKruqL70CIQD9fKkKMghSdDYZZy5CmAUquA7v-jyp--cfCUkeRGUvVg%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRAIgTwYusYqq5DWO8lxz0c3ceQqiyYO66PgDiwJbVN10bNICIAZQkdahenPCfp4hBdRGo8yA-aisoLgvAA8QDtOf2wKu"
+[download] Destination: Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].f140.m4a
+[download] 100% of  842.35KiB in 00:00:00 at 2.47MiB/s
+[Merger] Merging formats into "Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].f617.mp4" -i "file:Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].f140.m4a" -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart "file:Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].temp.mp4"
+Deleting original file Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].f617.mp4 (pass -k to keep)
+Deleting original file Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].f140.m4a (pass -k to keep)
+[Metadata] Adding metadata to "Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].mp4" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata"title=Cops Say They Have a Warrant? Here's What to Do 👮‍♂️🏡 #lawyerreacts" -metadata "date=20240120" -metadata "description=What happens if the cops come to your door claiming to have a search warrant? First, ask for a copy of the search warrant. Sometimes, cops are sneaky and lie about having a search warrant, so make sure they actually have it.
 
-#reel #viral #funny #relatable #instagram #friends" -metadata "synopsis=Here is the information about stars!!
-  Stars are luminous celestial bodies composed primarily of hydrogen and helium, undergoing nuclear fusion reactions that generate immense energy. They vary in size, temperature, and lifespan, with classifications ranging from dwarf stars like red dwarfs to massive supergiants like Betelgeuse. Stars play a fundamental role in the universe, serving as the building blocks of galaxies and the catalysts for the formation of planetary systems. Their brightness and color are indicative of their temperature and evolutionary stage. Studying stars provides insights into stellar evolution, the dynamics of galaxies, and the fundamental laws of physics governing the cosmos. Astronomers employ various techniques, including spectroscopy and photometry, to explore the properties and behavior of stars across different regions of the electromagnetic spectrum
+Second, tell the supervisor that you do not consent to any search of a person, place, or item that's not included in the warrant. This can help incriminating items be thrown out as evidence if they were foundduring an illegal search.
 
-#reel #viral #funny #relatable #instagram #friends" -metadata "purl=https://www.instagram.com/reel/C9y0zEPhsDt" -metadata "comment=https://www.instagram.com/reel/C9y0zEPhsDt" -metadata "artist=FUNNY_MEMME" -movflags +faststart "file:Video_by_funny_world_1221-[C9y0zEPhsDt].temp.mp4"
-Friday, July 26, 2024 3:11:16 PM
+Lastly, invoke your Fifth Amendment right to remain silent. Do not answer any questions. Just stand there and respectfully remain silent." -metadata "synopsis=What happens if the cops come to your door claiming to have a search warrant? First, ask for a copy of the search warrant. Sometimes, cops are sneaky and lie about having a search warrant, so make sure they actually have it.
+
+Second, tell the supervisor that you do not consent to any search of a person, place, or item that's not included in the warrant. This can help incriminating items be thrown out as evidence if they were foundduring an illegal search.
+
+Lastly, invoke your Fifth Amendment right to remain silent. Do not answer any questions. Just stand there and respectfully remain silent." -metadata "purl=https://www.youtube.com/watch?v=TT6O6NhZWg0" -metadata "comment=https://www.youtube.com/watch?v=TT6O6NhZWg0" -metadata "artist=Hampton Law" -metadata:s:1 "language=eng" -movflags +faststart "file:Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].temp.mp4"
+Saturday, July 27, 2024 10:26:34 AM
 
 PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message"build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-Friday, July 26, 2024 3:53:35 PM
+Saturday, July 27, 2024 10:26:43 AM
 yarn install v1.22.21
 [1/4] Resolving packages...
 success Already up-to-date.
-Done in 0.07s.
-Friday, July 26, 2024 3:53:35 PM
+Done in 0.10s.
+Saturday, July 27, 2024 10:26:44 AM
 yarn run v1.22.21
 $ tsc && vite build
 vite v5.2.13 building for production...
@@ -108,63 +122,23 @@ vite v5.2.13 building for production...
 docs/index.html                 0.53 kB │ gzip: 0.32 kB
 docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
 docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 133ms
-Done in 1.00s.
-Friday, July 26, 2024 3:53:37 PM
+✓ built in 158ms
+Done in 2.13s.
+Saturday, July 27, 2024 10:26:46 AM
 warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Friday, July 26, 2024 3:53:37 PM
+Saturday, July 27, 2024 10:26:46 AM
 On branch main
 Your branch is up to date with 'origin/main'.
 
 nothing to commit, working tree clean
-Friday, July 26, 2024 3:53:37 PM
+Saturday, July 27, 2024 10:26:46 AM
 From github.com:fromnepal/fromnepal.github.io
  * branch            main       -> FETCH_HEAD
 Already up to date.
-Friday, July 26, 2024 3:53:37 PM
+Saturday, July 27, 2024 10:26:48 AM
 Everything up-to-date
-Friday, July 26, 2024 3:53:38 PM
-
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
-
-Friday, July 26, 2024 3:53:44 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.06s.
-Friday, July 26, 2024 3:53:45 PM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.2.13 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 105ms
-Done in 0.80s.
-Friday, July 26, 2024 3:53:46 PM
-warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Friday, July 26, 2024 3:53:46 PM
-[main 14de525] build application
- 2 files changed, 152 insertions(+), 530 deletions(-)
-Friday, July 26, 2024 3:53:46 PM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Current branch main is up to date.
-Friday, July 26, 2024 3:53:46 PM
-Enumerating objects: 9, done.
-Counting objects: 100% (9/9), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 3.64 KiB | 3.64 MiB/s, done.
-Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   90ca848..14de525  main -> main
-Friday, July 26, 2024 3:53:47 PM
+Saturday, July 27, 2024 10:26:48 AM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
