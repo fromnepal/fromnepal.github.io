@@ -1,41 +1,22 @@
-Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/pro
-
- * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
-   just raised the bar for easy, resilient and secure K8s cluster deployment.
-
-   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
-
-This message is shown once a day. To disable it please create the
-/home/kushal/.hushlogin file.
 kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; timegit status; date; time ./Meta/ladybird.sh run ladybird; date;
 [sudo] password for kushal:
-Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
-Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
 Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
-Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
-Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
-Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1888 kB]
-Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1108 kB]
-Get:8 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [886 kB]
-Fetched 4267 kB in 1s (4209 kB/s)
+Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
 Reading package lists... Done
 Building dependency tree... Done
 Reading state information... Done
-2 packages can be upgraded. Run 'apt list --upgradable' to see them.
+All packages are up to date.
 
-real    0m6.858s
-user    0m0.031s
-sys     0m0.000s
+real    0m5.942s
+user    0m0.022s
+sys     0m0.022s
 Listing... Done
-libldap-2.5-0/jammy-updates 2.5.18+dfsg-0ubuntu0.22.04.2 amd64 [upgradable from: 2.5.18+dfsg-0ubuntu0.22.04.1]
-libldap-common/jammy-updates 2.5.18+dfsg-0ubuntu0.22.04.2 all [upgradable from: 2.5.18+dfsg-0ubuntu0.22.04.1]
 
-real    0m0.191s
-user    0m0.181s
+real    0m0.158s
+user    0m0.147s
 sys     0m0.010s
 Reading package lists... Done
 Building dependency tree... Done
@@ -46,27 +27,11 @@ Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
   libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
   libavfilter7
 Learn more about Ubuntu Pro at https://ubuntu.com/pro
-The following packages will be upgraded:
-  libldap-2.5-0 libldap-common
-2 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-Need to get 199 kB of archives.
-After this operation, 0 B of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-2.5-0 amd64 2.5.18+dfsg-0ubuntu0.22.04.2 [183 kB]
-Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-common all 2.5.18+dfsg-0ubuntu0.22.04.2 [15.9 kB]
-Fetched 199 kB in 0s (883 kB/s)
-(Reading database ... 62521 files and directories currently installed.)
-Preparing to unpack .../libldap-2.5-0_2.5.18+dfsg-0ubuntu0.22.04.2_amd64.deb ...
-Unpacking libldap-2.5-0:amd64 (2.5.18+dfsg-0ubuntu0.22.04.2) over (2.5.18+dfsg-0ubuntu0.22.04.1) ...
-Preparing to unpack .../libldap-common_2.5.18+dfsg-0ubuntu0.22.04.2_all.deb ...
-Unpacking libldap-common (2.5.18+dfsg-0ubuntu0.22.04.2) over (2.5.18+dfsg-0ubuntu0.22.04.1) ...
-Setting up libldap-common (2.5.18+dfsg-0ubuntu0.22.04.2) ...
-Setting up libldap-2.5-0:amd64 (2.5.18+dfsg-0ubuntu0.22.04.2) ...
-Processing triggers for man-db (2.10.2-1) ...
-Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 
-real    0m1.405s
-user    0m0.001s
-sys     0m0.006s
+real    0m0.315s
+user    0m0.006s
+sys     0m0.000s
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -76,306 +41,38 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
-real    0m0.062s
-user    0m0.008s
-sys     0m0.083s
-remote: Enumerating objects: 1009, done.
-remote: Counting objects: 100% (572/572), done.
-remote: Compressing objects: 100% (162/162), done.
-remote: Total 1009 (delta 470), reused 417 (delta 410), pack-reused 437
-Receiving objects: 100% (1009/1009), 1.89 MiB | 11.87 MiB/s, done.
-Resolving deltas: 100% (649/649), completed with 129 local objects.
+real    0m0.239s
+user    0m0.027s
+sys     0m0.128s
+remote: Enumerating objects: 16, done.
+remote: Counting objects: 100% (16/16), done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 16 (delta 2), reused 15 (delta 2), pack-reused 0
+Unpacking objects: 100% (16/16), 28.31 KiB | 1.67 MiB/s, done.
 From https://github.com/LadybirdBrowser/ladybird
-   132ab775d8..a168bec7ef  master     -> origin/master
+   a168bec7ef..f61e54b10c  master     -> origin/master
 
-real    0m1.019s
-user    0m0.118s
-sys     0m0.071s
+real    0m0.573s
+user    0m0.066s
+sys     0m0.021s
 From https://github.com/LadybirdBrowser/ladybird
  * branch                  master     -> FETCH_HEAD
-Updating 132ab775d8..a168bec7ef
+Updating a168bec7ef..f61e54b10c
 Fast-forward
- .github/workflows/lagom-template.yml                                                     |   8 ++
- AK/LEB128.h                                                                              |  34 ++++-----
- AK/SIMDExtras.h                                                                          |   9 +--
- CONTRIBUTING.md                                                                          |   1 +
- Documentation/BuildInstructionsLadybird.md                                               |  18 +++++
- ISSUES.md                                                                                |  93 +++++++++++++++++++++++
- Ladybird/CMakeLists.txt                                                                  |  10 ++-
- Meta/CMake/code_generators.cmake                                                         |   4 +-
- Meta/CMake/common_options.cmake                                                          |   2 +
- Meta/CMake/libtextcodec_generators.cmake                                                 |   4 +-
- Meta/CMake/libweb_generators.cmake                                                       |  40 +++++-----
- Meta/CMake/skia.cmake                                                                    |  22 ++++++
- Meta/Lagom/CMakeLists.txt                                                                |  60 ++++++++-------
- Meta/Lagom/ClangPlugins/CMakeLists.txt                                                   |   4 +
- Meta/Lagom/ClangPlugins/LibJSGCPluginAction.cpp                                          |  25 ++++--
- Meta/Lagom/Tools/CodeGenerators/LibWeb/BindingsGenerator/IDLGenerators.cpp               |  51 +------------
- Meta/Lagom/Tools/CodeGenerators/LibWeb/GenerateCSSPropertyID.cpp                         |  28 ++++++-
- README.md                                                                                |   2 +-
- Tests/ClangPlugins/CMakeLists.txt                                                        |   5 +-
- Tests/ClangPlugins/LibJSGCTests/strong_root_fields_in_gc_allocated_types.cpp             |   2 +
- Tests/LibMedia/CMakeLists.txt                                                            |   7 --
- Tests/LibWeb/Layout/expected/block-and-inline/relpos-inline-element-js-offsets.txt       |   8 +-
- Tests/LibWeb/Layout/expected/css-counters/basic.txt                                      | 134 ++++++++++++++++++++++++++++++++
- Tests/LibWeb/Layout/expected/css-counters/counters-function.txt                          | 254 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- Tests/LibWeb/Layout/expected/css-counters/hidden-elements.txt                            |  67 ++++++++++++++++
- Tests/LibWeb/Layout/expected/grid/fit-content-1.txt                                      |  21 +++++
- Tests/LibWeb/Layout/expected/grid/fit-content-2.txt                                      |  46 +++++++++++
- Tests/LibWeb/Layout/input/css-counters/basic.html                                        |  12 +++
- Tests/LibWeb/Layout/input/css-counters/counters-function.html                            |  36 +++++++++
- Tests/LibWeb/Layout/input/css-counters/hidden-elements.html                              |   8 ++
- Tests/LibWeb/Layout/input/grid/fit-content-1.html                                        |  15 ++++
- Tests/LibWeb/Layout/input/grid/fit-content-2.html                                        |  25 ++++++
- Tests/LibWeb/Screenshot/canvas-fillstyle-rgb.html                                        |   8 +-
- Tests/LibWeb/Screenshot/images/alt-frame.png                                             | Bin 4339 -> 4633 bytes
- Tests/LibWeb/Screenshot/images/canvas-fillstyle-rgb.png                                  | Bin 264 -> 566 bytes
- Tests/LibWeb/Screenshot/images/css-background-clip-text.png                              | Bin 278629 -> 274655 bytes
- Tests/LibWeb/Screenshot/images/css-color-functions-ref.png                               | Bin 117427 -> 109293 bytes
- Tests/LibWeb/Screenshot/images/css-transform-box-ref.png                                 | Bin 6083 -> 6502 bytes
- Tests/LibWeb/Screenshot/images/inline-node-ref.png                                       | Bin 16903 -> 16978 bytes
- Tests/LibWeb/Screenshot/images/input-placeholder-ref.png                                 | Bin 4338 -> 4541 bytes
- Tests/LibWeb/Screenshot/images/object-fit-position.png                                   | Bin 671505 -> 690108 bytes
- Tests/LibWeb/Screenshot/images/text-decorations.png                                      | Bin 6975 -> 7925 bytes
- Tests/LibWeb/Screenshot/images/text-shadow-ref.png                                       | Bin 74782 -> 80060 bytes
- Tests/LibWeb/Text/expected/DOM/CDATASection-cloneNode.txt                                |   1 +
- Tests/LibWeb/Text/expected/DOM/Document-createElementNS-uppercase.txt                    |   4 +
- Tests/LibWeb/Text/expected/DOM/Node-nodeName.txt                                         |   9 +++
- Tests/LibWeb/Text/expected/DOM/Offset-of-empty-inline-element.txt                        |   4 +-
- Tests/LibWeb/Text/expected/DOM/Range-containing-CDATASection.txt                         |   1 +
- Tests/LibWeb/Text/expected/FileAPI/Blob-intialized-with-strings-read-from-bytes.txt      |   1 +
- Tests/LibWeb/Text/expected/HTML/HTMLMediaElement-addTextTrack.txt                        |   5 ++
- Tests/LibWeb/Text/expected/HTML/HTMLSelectElement-can-select-option-in-JS.txt            |   1 +
- Tests/LibWeb/Text/expected/HTML/HTMLSelectElement-options-available-after-add.txt        |   1 +
- Tests/LibWeb/Text/expected/HTML/HTMLSelectElement-options-available-at-load.txt          |   1 +
- Tests/LibWeb/Text/expected/HTML/submit-button-click-when-disabled.txt                    |   1 +
- Tests/LibWeb/Text/expected/ShadowDOM/css-variable-inheritance-across-shadow-boundary.txt |   1 +
- Tests/LibWeb/Text/expected/XHTML/script-execution.txt                                    |   1 +
- Tests/LibWeb/Text/expected/XHTML/script-execution.xhtml.txt                              |   0
- Tests/LibWeb/Text/expected/canvas/fillstyle.txt                                          |   8 +-
- Tests/LibWeb/Text/expected/css/custom-ident-parsing.txt                                  |  16 ++++
- Tests/LibWeb/Text/expected/css/getComputedStyle-print-all.txt                            |   5 +-
- Tests/LibWeb/Text/expected/select.txt                                                    |   2 +-
- Tests/LibWeb/Text/input/DOM/CDATASection-cloneNode.html                                  |   9 +++
- Tests/LibWeb/Text/input/DOM/Document-createElementNS-uppercase.html                      |  16 ++++
- Tests/LibWeb/Text/input/DOM/Node-nodeName.html                                           |  28 +++++++
- Tests/LibWeb/Text/input/DOM/Range-containing-CDATASection.html                           |  11 +++
- Tests/LibWeb/Text/input/FileAPI/Blob-intialized-with-strings-read-from-bytes.html        |  13 ++++
- Tests/LibWeb/Text/input/HTML/HTMLMediaElement-addTextTrack.html                          |  16 ++++
- Tests/LibWeb/Text/input/HTML/HTMLSelectElement-can-select-option-in-JS.html              |  16 ++++
- Tests/LibWeb/Text/input/HTML/HTMLSelectElement-options-available-after-add.html          |  20 +++++
- Tests/LibWeb/Text/input/HTML/HTMLSelectElement-options-available-at-load.html            |  14 ++++
- Tests/LibWeb/Text/input/HTML/submit-button-click-when-disabled.html                      |  12 +++
- Tests/LibWeb/Text/input/ShadowDOM/css-variable-inheritance-across-shadow-boundary.html   |  20 +++++
- Tests/LibWeb/Text/input/XHTML/script-execution.xhtml                                     |  10 +++
- Tests/LibWeb/Text/input/canvas/fillstyle.html                                            |  10 ++-
- Tests/LibWeb/Text/input/css/custom-ident-parsing.html                                    |  14 ++++
- Userland/Libraries/LibCore/MimeData.cpp                                                  |   1 +
- Userland/Libraries/LibGfx/CMakeLists.txt                                                 |  13 +++-
- Userland/Libraries/LibGfx/Font/Font.h                                                    |   4 +
- Userland/Libraries/LibGfx/Font/OpenType/Typeface.cpp                                     |   4 +-
- Userland/Libraries/LibGfx/Font/OpenType/Typeface.h                                       |  14 +++-
- Userland/Libraries/LibGfx/Font/ScaledFont.h                                              |   6 ++
- Userland/Libraries/LibGfx/Font/ScaledFontSkia.cpp                                        |  21 +++++
- Userland/Libraries/LibGfx/Font/Typeface.cpp                                              |   4 +
- Userland/Libraries/LibGfx/Font/Typeface.h                                                |   8 ++
- Userland/Libraries/LibGfx/Font/TypefaceSkia.cpp                                          |  45 +++++++++++
- Userland/Libraries/LibJS/Heap/Cell.h                                                     |   8 ++
- Userland/Libraries/LibLine/Editor.cpp                                                    |   4 -
- Userland/Libraries/LibLine/Editor.h                                                      |   2 +
- Userland/Libraries/LibLine/InternalFunctions.cpp                                         |   4 -
- Userland/Libraries/LibLine/KeyCallbackMachine.cpp                                        |   4 -
- Userland/Libraries/LibThreading/BackgroundAction.cpp                                     |   3 +
- Userland/Libraries/LibWasm/Parser/Parser.cpp                                             |  20 ++---
- Userland/Libraries/LibWasm/Types.h                                                       |   4 +-
- Userland/Libraries/LibWeb/Animations/AnimationEffect.cpp                                 |   6 +-
- Userland/Libraries/LibWeb/Animations/KeyframeEffect.cpp                                  |   6 +-
- Userland/Libraries/LibWeb/Bindings/PlatformObject.cpp                                    |  46 ++++++-----
- Userland/Libraries/LibWeb/Bindings/PlatformObject.h                                      |   9 ++-
- Userland/Libraries/LibWeb/CMakeLists.txt                                                 |  27 +------
- Userland/Libraries/LibWeb/CSS/CSSNumericType.cpp                                         |   1 +
- Userland/Libraries/LibWeb/CSS/CSSRuleList.cpp                                            |  13 +---
- Userland/Libraries/LibWeb/CSS/CSSRuleList.h                                              |   3 +-
- Userland/Libraries/LibWeb/CSS/ComputedValues.h                                           |  14 ++++
- Userland/Libraries/LibWeb/CSS/CountersSet.cpp                                            | 103 +++++++++++++++++++++++++
- Userland/Libraries/LibWeb/CSS/CountersSet.h                                              |  50 ++++++++++++
- Userland/Libraries/LibWeb/CSS/FontFace.cpp                                               |  18 ++---
- Userland/Libraries/LibWeb/CSS/GridTrackSize.cpp                                          |  35 ++++++++-
- Userland/Libraries/LibWeb/CSS/GridTrackSize.h                                            |  33 +++++++-
- Userland/Libraries/LibWeb/CSS/MediaList.cpp                                              |  11 +--
- Userland/Libraries/LibWeb/CSS/MediaList.h                                                |   3 +-
- Userland/Libraries/LibWeb/CSS/Parser/Helpers.cpp                                         |  27 +++----
- Userland/Libraries/LibWeb/CSS/Parser/Parser.cpp                                          | 379 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++---------------
- Userland/Libraries/LibWeb/CSS/Parser/Parser.h                                            |  16 +++-
- Userland/Libraries/LibWeb/CSS/Parser/Tokenizer.cpp                                       | 130 +++++++++++++++----------------
- Userland/Libraries/LibWeb/CSS/Parser/Tokenizer.h                                         |  18 ++---
- Userland/Libraries/LibWeb/CSS/Properties.json                                            | 219 +++++++++++++++++++++++++++++++++++++++++------------
- Userland/Libraries/LibWeb/CSS/StyleProperties.cpp                                        |  50 +++++++++++-
- Userland/Libraries/LibWeb/CSS/StyleProperties.h                                          |   3 +-
- Userland/Libraries/LibWeb/CSS/StyleSheetList.cpp                                         |  15 +---
- Userland/Libraries/LibWeb/CSS/StyleSheetList.h                                           |   3 +-
- Userland/Libraries/LibWeb/CSS/StyleValue.cpp                                             |   2 +
- Userland/Libraries/LibWeb/CSS/StyleValue.h                                               |   2 +
- Userland/Libraries/LibWeb/CSS/StyleValues/AbstractImageStyleValue.h                      |   2 +-
- Userland/Libraries/LibWeb/CSS/StyleValues/ConicGradientStyleValue.cpp                    |   4 +-
- Userland/Libraries/LibWeb/CSS/StyleValues/ConicGradientStyleValue.h                      |   2 +-
- Userland/Libraries/LibWeb/CSS/StyleValues/CounterDefinitionsStyleValue.cpp               |  46 +++++++++++
- Userland/Libraries/LibWeb/CSS/StyleValues/CounterDefinitionsStyleValue.h                 |  47 ++++++++++++
- Userland/Libraries/LibWeb/CSS/StyleValues/CounterStyleValue.cpp                          | 175 ++++++++++++++++++++++++++++++++++++++++++
- Userland/Libraries/LibWeb/CSS/StyleValues/CounterStyleValue.h                            |  55 ++++++++++++++
- Userland/Libraries/LibWeb/CSS/StyleValues/ImageStyleValue.cpp                            |   4 +-
- Userland/Libraries/LibWeb/CSS/StyleValues/ImageStyleValue.h                              |   2 +-
- Userland/Libraries/LibWeb/CSS/StyleValues/LinearGradientStyleValue.cpp                   |   4 +-
- Userland/Libraries/LibWeb/CSS/StyleValues/LinearGradientStyleValue.h                     |   2 +-
- Userland/Libraries/LibWeb/CSS/StyleValues/RadialGradientStyleValue.cpp                   |   4 +-
- Userland/Libraries/LibWeb/CSS/StyleValues/RadialGradientStyleValue.h                     |   2 +-
- Userland/Libraries/LibWeb/CSS/SyntaxHighlighter/SyntaxHighlighter.cpp                    |   2 +-
- Userland/Libraries/LibWeb/Clipboard/Clipboard.cpp                                        |   2 +-
- Userland/Libraries/LibWeb/DOM/DOMTokenList.cpp                                           |  10 +--
- Userland/Libraries/LibWeb/DOM/DOMTokenList.h                                             |   3 +-
- Userland/Libraries/LibWeb/DOM/Document.cpp                                               |   4 +-
- Userland/Libraries/LibWeb/DOM/Document.h                                                 |   4 +-
- Userland/Libraries/LibWeb/DOM/DocumentType.h                                             |   2 +-
- Userland/Libraries/LibWeb/DOM/Element.cpp                                                | 113 +++++++++++++++++++++++++--
- Userland/Libraries/LibWeb/DOM/Element.h                                                  |   9 +++
- Userland/Libraries/LibWeb/DOM/ElementFactory.cpp                                         | 142 +++++++++++++++++-----------------
- Userland/Libraries/LibWeb/DOM/HTMLCollection.cpp                                         |  80 +++++++++----------
- Userland/Libraries/LibWeb/DOM/HTMLCollection.h                                           |   8 +-
- Userland/Libraries/LibWeb/DOM/HTMLFormControlsCollection.cpp                             |   2 +-
- Userland/Libraries/LibWeb/DOM/HTMLFormControlsCollection.h                               |   2 +-
- Userland/Libraries/LibWeb/DOM/LiveNodeList.cpp                                           |   8 --
- Userland/Libraries/LibWeb/DOM/LiveNodeList.h                                             |   2 -
- Userland/Libraries/LibWeb/DOM/NamedNodeMap.cpp                                           |  12 +--
- Userland/Libraries/LibWeb/DOM/NamedNodeMap.h                                             |   5 +-
- Userland/Libraries/LibWeb/DOM/Node.cpp                                                   |   9 ++-
- Userland/Libraries/LibWeb/DOM/Node.h                                                     |   3 +-
- Userland/Libraries/LibWeb/DOM/NodeList.cpp                                               |   9 +--
- Userland/Libraries/LibWeb/DOM/NodeList.h                                                 |   3 +-
- Userland/Libraries/LibWeb/DOM/StaticNodeList.cpp                                         |   8 --
- Userland/Libraries/LibWeb/DOM/StaticNodeList.h                                           |   2 -
- Userland/Libraries/LibWeb/DOMURL/DOMURL.cpp                                              |   2 +-
- Userland/Libraries/LibWeb/Fetch/Fetching/Fetching.cpp                                    |  11 ++-
- Userland/Libraries/LibWeb/Fetch/Infrastructure/HTTP/Bodies.cpp                           |   2 +-
- Userland/Libraries/LibWeb/FileAPI/Blob.cpp                                               |  28 ++++++-
- Userland/Libraries/LibWeb/FileAPI/Blob.h                                                 |   3 +-
- Userland/Libraries/LibWeb/FileAPI/Blob.idl                                               |   1 +
- Userland/Libraries/LibWeb/FileAPI/FileList.cpp                                           |  15 +---
- Userland/Libraries/LibWeb/FileAPI/FileList.h                                             |   3 +-
- Userland/Libraries/LibWeb/Forward.h                                                      |   4 +
- Userland/Libraries/LibWeb/Geometry/DOMRectList.cpp                                       |   9 +--
- Userland/Libraries/LibWeb/Geometry/DOMRectList.h                                         |   3 +-
- Userland/Libraries/LibWeb/HTML/Canvas/CanvasFillStrokeStyles.h                           |  83 +++++++++++++++-----
- Userland/Libraries/LibWeb/HTML/DOMStringMap.cpp                                          |   2 +-
- Userland/Libraries/LibWeb/HTML/DOMStringMap.h                                            |   2 +-
- Userland/Libraries/LibWeb/HTML/DragEvent.cpp                                             |   6 ++
- Userland/Libraries/LibWeb/HTML/DragEvent.h                                               |   1 +
- Userland/Libraries/LibWeb/HTML/EventLoop/EventLoop.cpp                                   |   2 +-
- Userland/Libraries/LibWeb/HTML/FormControlInfrastructure.cpp                             |   4 +-
- Userland/Libraries/LibWeb/HTML/HTMLAllCollection.cpp                                     |  13 ++--
- Userland/Libraries/LibWeb/HTML/HTMLAllCollection.h                                       |   5 +-
- Userland/Libraries/LibWeb/HTML/HTMLElement.cpp                                           |  58 +++++++++++---
- Userland/Libraries/LibWeb/HTML/HTMLFormElement.cpp                                       |  15 ++--
- Userland/Libraries/LibWeb/HTML/HTMLFormElement.h                                         |   5 +-
- Userland/Libraries/LibWeb/HTML/HTMLMediaElement.cpp                                      |  36 +++++++++
- Userland/Libraries/LibWeb/HTML/HTMLMediaElement.h                                        |   2 +
- Userland/Libraries/LibWeb/HTML/HTMLMediaElement.idl                                      |   3 +-
- Userland/Libraries/LibWeb/HTML/HTMLOptionElement.cpp                                     |  12 ++-
- Userland/Libraries/LibWeb/HTML/HTMLOptionElement.h                                       |   1 +
- Userland/Libraries/LibWeb/HTML/HTMLScriptElement.cpp                                     |   4 +-
- Userland/Libraries/LibWeb/HTML/HTMLSelectElement.cpp                                     |  80 ++++++++++++++++---
- Userland/Libraries/LibWeb/HTML/HTMLSelectElement.h                                       |   2 +
- Userland/Libraries/LibWeb/HTML/MimeTypeArray.cpp                                         |  14 +---
- Userland/Libraries/LibWeb/HTML/MimeTypeArray.h                                           |   5 +-
- Userland/Libraries/LibWeb/HTML/Plugin.cpp                                                |  14 +---
- Userland/Libraries/LibWeb/HTML/Plugin.h                                                  |   5 +-
- Userland/Libraries/LibWeb/HTML/PluginArray.cpp                                           |  14 +---
- Userland/Libraries/LibWeb/HTML/PluginArray.h                                             |   5 +-
- Userland/Libraries/LibWeb/HTML/Scripting/Environments.h                                  |   2 +
- Userland/Libraries/LibWeb/HTML/SourceSet.cpp                                             |   2 +-
- Userland/Libraries/LibWeb/HTML/Storage.cpp                                               |   2 +-
- Userland/Libraries/LibWeb/HTML/Storage.h                                                 |   2 +-
- Userland/Libraries/LibWeb/HTML/TextTrack.cpp                                             |  11 +++
- Userland/Libraries/LibWeb/HTML/TextTrack.h                                               |  18 +++++
- Userland/Libraries/LibWeb/HTML/TextTrack.idl                                             |   2 +-
- Userland/Libraries/LibWeb/HTML/TraversableNavigable.cpp                                  |  10 +--
- Userland/Libraries/LibWeb/HTML/Window.cpp                                                |   2 +-
- Userland/Libraries/LibWeb/HTML/Window.h                                                  |   2 +-
- Userland/Libraries/LibWeb/HTML/WindowOrWorkerGlobalScope.cpp                             |   2 +-
- Userland/Libraries/LibWeb/Layout/FlexFormattingContext.cpp                               |   8 --
- Userland/Libraries/LibWeb/Layout/FormattingContext.h                                     |   8 ++
- Userland/Libraries/LibWeb/Layout/GridFormattingContext.cpp                               |  21 ++++-
- Userland/Libraries/LibWeb/Layout/Node.cpp                                                |   5 +-
- Userland/Libraries/LibWeb/Layout/TreeBuilder.cpp                                         |   4 +-
- Userland/Libraries/LibWeb/Loader/ResourceLoader.h                                        |  12 ++-
- Userland/Libraries/LibWeb/Painting/BackgroundPainting.cpp                                |  50 +++---------
- Userland/Libraries/LibWeb/Painting/Command.h                                             |  17 +++--
- Userland/Libraries/LibWeb/Painting/DisplayList.cpp                                       |  18 +++--
- Userland/Libraries/LibWeb/Painting/DisplayList.h                                         |  19 ++++-
- Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.cpp                             |  98 ++++++++++++++----------
- Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.h                               |  30 ++++----
- Userland/Libraries/LibWeb/Painting/DisplayListRecorder.cpp                               |  35 ++++-----
- Userland/Libraries/LibWeb/Painting/DisplayListRecorder.h                                 |  18 ++---
- Userland/Libraries/LibWeb/Painting/SVGMaskable.cpp                                       |   8 +-
- Userland/Libraries/LibWeb/SVG/SVGDecodedImageData.cpp                                    |   6 +-
- Userland/Libraries/LibWeb/WebSockets/WebSocket.cpp                                       |   2 +-
- Userland/Libraries/LibWeb/XML/XMLDocumentBuilder.cpp                                     |  20 ++---
- Userland/Libraries/LibWebView/CMakeLists.txt                                             |  22 +++---
- Userland/Libraries/LibWebView/ViewImplementation.cpp                                     |   1 +
- Userland/Services/WebContent/BackingStoreManager.h                                       |   3 +-
- Userland/Services/WebContent/ConsoleGlobalEnvironmentExtensions.cpp                      |   3 +-
- Userland/Utilities/js.cpp                                                                |  16 ++++
- 229 files changed, 3442 insertions(+), 1049 deletions(-)
- create mode 100644 ISSUES.md
- create mode 100644 Meta/CMake/skia.cmake
- create mode 100644 Tests/LibWeb/Layout/expected/css-counters/basic.txt
- create mode 100644 Tests/LibWeb/Layout/expected/css-counters/counters-function.txt
- create mode 100644 Tests/LibWeb/Layout/expected/css-counters/hidden-elements.txt
- create mode 100644 Tests/LibWeb/Layout/expected/grid/fit-content-1.txt
- create mode 100644 Tests/LibWeb/Layout/expected/grid/fit-content-2.txt
- create mode 100644 Tests/LibWeb/Layout/input/css-counters/basic.html
- create mode 100644 Tests/LibWeb/Layout/input/css-counters/counters-function.html
- create mode 100644 Tests/LibWeb/Layout/input/css-counters/hidden-elements.html
- create mode 100644 Tests/LibWeb/Layout/input/grid/fit-content-1.html
- create mode 100644 Tests/LibWeb/Layout/input/grid/fit-content-2.html
- create mode 100644 Tests/LibWeb/Text/expected/DOM/CDATASection-cloneNode.txt
- create mode 100644 Tests/LibWeb/Text/expected/DOM/Document-createElementNS-uppercase.txt
- create mode 100644 Tests/LibWeb/Text/expected/DOM/Node-nodeName.txt
- create mode 100644 Tests/LibWeb/Text/expected/DOM/Range-containing-CDATASection.txt
- create mode 100644 Tests/LibWeb/Text/expected/FileAPI/Blob-intialized-with-strings-read-from-bytes.txt
- create mode 100644 Tests/LibWeb/Text/expected/HTML/HTMLMediaElement-addTextTrack.txt
- create mode 100644 Tests/LibWeb/Text/expected/HTML/HTMLSelectElement-can-select-option-in-JS.txt
- create mode 100644 Tests/LibWeb/Text/expected/HTML/HTMLSelectElement-options-available-after-add.txt
- create mode 100644 Tests/LibWeb/Text/expected/HTML/HTMLSelectElement-options-available-at-load.txt
- create mode 100644 Tests/LibWeb/Text/expected/HTML/submit-button-click-when-disabled.txt
- create mode 100644 Tests/LibWeb/Text/expected/ShadowDOM/css-variable-inheritance-across-shadow-boundary.txt
- create mode 100644 Tests/LibWeb/Text/expected/XHTML/script-execution.txt
- create mode 100644 Tests/LibWeb/Text/expected/XHTML/script-execution.xhtml.txt
- create mode 100644 Tests/LibWeb/Text/expected/css/custom-ident-parsing.txt
- create mode 100644 Tests/LibWeb/Text/input/DOM/CDATASection-cloneNode.html
- create mode 100644 Tests/LibWeb/Text/input/DOM/Document-createElementNS-uppercase.html
- create mode 100644 Tests/LibWeb/Text/input/DOM/Node-nodeName.html
- create mode 100644 Tests/LibWeb/Text/input/DOM/Range-containing-CDATASection.html
- create mode 100644 Tests/LibWeb/Text/input/FileAPI/Blob-intialized-with-strings-read-from-bytes.html
- create mode 100644 Tests/LibWeb/Text/input/HTML/HTMLMediaElement-addTextTrack.html
- create mode 100644 Tests/LibWeb/Text/input/HTML/HTMLSelectElement-can-select-option-in-JS.html
- create mode 100644 Tests/LibWeb/Text/input/HTML/HTMLSelectElement-options-available-after-add.html
- create mode 100644 Tests/LibWeb/Text/input/HTML/HTMLSelectElement-options-available-at-load.html
- create mode 100644 Tests/LibWeb/Text/input/HTML/submit-button-click-when-disabled.html
- create mode 100644 Tests/LibWeb/Text/input/ShadowDOM/css-variable-inheritance-across-shadow-boundary.html
- create mode 100644 Tests/LibWeb/Text/input/XHTML/script-execution.xhtml
- create mode 100644 Tests/LibWeb/Text/input/css/custom-ident-parsing.html
- create mode 100644 Userland/Libraries/LibGfx/Font/ScaledFontSkia.cpp
- create mode 100644 Userland/Libraries/LibGfx/Font/TypefaceSkia.cpp
- create mode 100644 Userland/Libraries/LibWeb/CSS/CountersSet.cpp
- create mode 100644 Userland/Libraries/LibWeb/CSS/CountersSet.h
- create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CounterDefinitionsStyleValue.cpp
- create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CounterDefinitionsStyleValue.h
- create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CounterStyleValue.cpp
- create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CounterStyleValue.h
+ Userland/Libraries/LibGfx/Font/Font.cpp              | 18 ------------------
+ Userland/Libraries/LibGfx/Font/Font.h                | 51 ---------------------------------------------------
+ Userland/Libraries/LibGfx/Font/OpenType/Typeface.cpp | 21 ---------------------
+ Userland/Libraries/LibGfx/Font/OpenType/Typeface.h   |  1 -
+ Userland/Libraries/LibGfx/Font/ScaledFont.cpp        | 27 ---------------------------
+ Userland/Libraries/LibGfx/Font/ScaledFont.h          | 23 -----------------------
+ Userland/Libraries/LibGfx/Font/Typeface.h            |  1 -
+ Userland/Libraries/LibGfx/Painter.cpp                | 38 --------------------------------------
+ Userland/Libraries/LibGfx/Painter.h                  |  2 --
+ 9 files changed, 182 deletions(-)
 
-real    0m0.226s
-user    0m0.085s
-sys     0m0.024s
+real    0m0.405s
+user    0m0.045s
+sys     0m0.010s
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -385,868 +82,271 @@ Untracked files:
 
 nothing added to commit but untracked files present (use "git add" to track)
 
-real    0m0.041s
-user    0m0.021s
-sys     0m0.021s
-Sat Jul 27 10:27:14 EDT 2024
+real    0m0.018s
+user    0m0.000s
+sys     0m0.019s
+Sat Jul 27 14:34:45 EDT 2024
 ~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
 ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
 [0/2] Re-checking globbed directories...
-[1/2] Re-running CMake...
--- Running vcpkg install
-Detecting compiler hash for triplet x64-linux...
-Compiler found: /usr/bin/clang++-17
-All requested packages are currently installed.
-Total install time: 170 ns
--- Running vcpkg install - done
--- Found the following ICU libraries:
---   data (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicudata.a
---   i18n (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicui18n.a
---   uc (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicuuc.a
--- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
--- Configuring done (31.9s)
--- Generating done (0.4s)
--- Build files have been written to: /home/kushal/src/ladybird/Build/ladybird
-[0/2] Re-checking globbed directories...
-[2085/2085] Linking CXX executable bin/Ladybird
+[597/597] Linking CXX executable bin/Ladybird
 QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
 qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
-11256.101 WebContent(10851): ResourceLoader: Filtered request to: "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
-11256.111 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11256.121 WebContent(10851): ResourceLoader: Filtered request to: "https://cdn.cookielaw.org/opt-out/otCCPAiab.js"
-11256.121 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11256.121 WebContent(10851): ResourceLoader: Filtered request to: "https://www.googletagmanager.com/gtm.js?id=GTM-NLXNPCQ"
-11256.121 WebContent(10851): ResourceLoader: Filtered request to: "https://www.googletagservices.com/tag/js/gpt.js"
-11256.131 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11256.131 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11256.181 RequestServer(10832:10850): ConnectionCache: Connection to https://ads-static.conde.digital/production/cns/builds/ars-technica/ars-technica.min.js failed: connect: Connection refused (errno=111)
-11256.181 RequestServer(10832:10850): Request with a null socket finished for URL https://ads-static.conde.digital/production/cns/builds/ars-technica/ars-technica.min.js
-11256.181 WebContent(10851): ResourceLoader: Failed load of: "https://ads-static.conde.digital/production/cns/builds/ars-technica/ars-technica.min.js", Error: Load failed, Duration: 60ms
-11256.181 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11256.781 RequestServer(10832:10848): EnsureConnection: DNS-preload for https://cdn.arstechnica.net/ done
-11256.781 RequestServer(10832:10848): EnsureConnection: DNS-preload for cdn.arstechnica.net
-11256.781 RequestServer(10832:10850): EnsureConnection: DNS-preload for https://s.w.org/ done
-11256.781 RequestServer(10832:10850): EnsureConnection: DNS-preload for s.w.org
-11256.781 RequestServer(10832:10846): EnsureConnection: DNS-preload for https://arstechnica-apps.s3.amazonaws.com/ done
-11256.781 RequestServer(10832:10846): EnsureConnection: DNS-preload for arstechnica-apps.s3.amazonaws.com
-11256.791 RequestServer(10832:10839): ConnectionCache: Connection to https://shiverscissors.com/v2fumwIJOo-LsCB0dlG18VSTW43CpWhUEPJuKeRTzrEQdSPPlMr5GymU failed: connect: Connection refused (errno=111)
-11256.791 RequestServer(10832:10839): Request with a null socket finished for URL https://shiverscissors.com/v2fumwIJOo-LsCB0dlG18VSTW43CpWhUEPJuKeRTzrEQdSPPlMr5GymU
-11256.881 WebContent(10851): ResourceLoader: Failed load of: "https://shiverscissors.com/v2fumwIJOo-LsCB0dlG18VSTW43CpWhUEPJuKeRTzrEQdSPPlMr5GymU", Error: Load failed, Duration: 130ms
-11256.921 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11257.861 WebContent(10851): Call to NavigatorIDMixin::app_version, using Chrome or WebKit compatibility mode
-11257.961 WebContent(10851): ResourceLoader: Filtered request to: "https://cdn.mediavoice.com/nativeads/script/condenastcorporate/conde-asa-polar-master.js"
-11257.961 WebContent(10851): ResourceLoader: Filtered request to: "https://s.skimresources.com/js/100098X1555750.skimlinks.js"
-11258.031 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11258.041 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11258.171 WebContent(10851): FIXME: Unimplemented IDL interface: 'IDBFactoryPrototype.open'
-11258.321 WebContent(10851): Call to NavigatorIDMixin::app_version, using Chrome or WebKit compatibility mode
-11258.381 RequestServer(10832:10850): ConnectionCache: Connection to https://globalservices.conde.digital/p77xzrbz9z.js failed: connect: Connection refused (errno=111)
-11258.381 RequestServer(10832:10850): Request with a null socket finished for URL https://globalservices.conde.digital/p77xzrbz9z.js
-11258.381 WebContent(10851): ResourceLoader: Failed load of: "https://globalservices.conde.digital/p77xzrbz9z.js", Error: Load failed, Duration: 60ms
-11258.451 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11345.101 WebContent(10851): ResourceLoader: Refusing to pre-connect to 'https://cdn.optimizely.com/': URL was filtered
-11345.101 WebContent(10851): ResourceLoader: Refusing to prefetch DNS for 'https://cdn.optimizely.com/': URL was filtered
-11345.101 WebContent(10851): ResourceLoader: Refusing to pre-connect to 'https://get.s-onetag.com/': URL was filtered
-11345.101 WebContent(10851): ResourceLoader: Refusing to prefetch DNS for 'https://get.s-onetag.com/': URL was filtered
-11345.101 WebContent(10851): ResourceLoader: Refusing to pre-connect to 'https://tpc.googlesyndication.com/': URL was filtered
-11345.101 WebContent(10851): ResourceLoader: Refusing to prefetch DNS for 'https://tpc.googlesyndication.com/': URL was filtered
-11345.101 WebContent(10851): ResourceLoader: Refusing to pre-connect to 'https://pagead2.googlesyndication.com/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to prefetch DNS for 'https://pagead2.googlesyndication.com/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to pre-connect to 'https://www.googletagservices.com/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to prefetch DNS for 'https://www.googletagservices.com/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to pre-connect to 'https://c.amazon-adsystem.com/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to prefetch DNS for 'https://c.amazon-adsystem.com/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to pre-connect to 'https://ib.adnxs.com/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to prefetch DNS for 'https://ib.adnxs.com/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to pre-connect to 'https://static.yieldmo.com/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to prefetch DNS for 'https://static.yieldmo.com/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to pre-connect to 'https://widgets.outbrain.com/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to prefetch DNS for 'https://widgets.outbrain.com/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to pre-connect to 'https://odb.outbrain.com/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to prefetch DNS for 'https://odb.outbrain.com/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to pre-connect to 'https://cdn.adsafeprotected.com/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to prefetch DNS for 'https://cdn.adsafeprotected.com/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to pre-connect to 'https://securepubads.g.doubleclick.net/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to prefetch DNS for 'https://securepubads.g.doubleclick.net/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to pre-connect to 'https://segment-data-us-east.zqtk.net/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to prefetch DNS for 'https://segment-data-us-east.zqtk.net/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to pre-connect to 'https://js-sec.indexww.com/': URL was filtered
-11345.111 WebContent(10851): ResourceLoader: Refusing to prefetch DNS for 'https://js-sec.indexww.com/': URL was filtered
-11345.141 WebContent(10851): ResourceLoader: Filtered request to: "https://cdn.optimizely.com/public/125375509/s/landingprod.js"
-11345.141 WebContent(10851): ResourceLoader: Filtered request to: "https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
-11345.141 WebContent(10851): ResourceLoader: Filtered request to: "https://s.ntv.io/serve/load.js"
-11345.141 WebContent(10851): ResourceLoader: Filtered request to: "https://get.s-onetag.com/c15ddde9-ec7d-4a49-b8ca-7a21bc4b943b/tag.min.js"
-11345.141 WebContent(10851): ResourceLoader: Filtered request to: "https://cdn.optimizely.com/public/125375509/s/landingprod.js"
-11345.151 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11345.151 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11345.151 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11345.151 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11345.181 RequestServer(10832:10835): EnsureConnection: Pre-connect to https://www.google.com/
-11345.181 RequestServer(10832:10843): EnsureConnection: DNS-preload for https://www.google.com/ done
-11345.181 RequestServer(10832:10843): EnsureConnection: DNS-preload for www.google.com
-11345.181 RequestServer(10832:10837): EnsureConnection: Pre-connect to https://registry.api.cnn.io/
-11345.181 RequestServer(10832:10841): EnsureConnection: DNS-preload for https://registry.api.cnn.io/ done
-11345.181 RequestServer(10832:10841): EnsureConnection: DNS-preload for registry.api.cnn.io
-11345.181 RequestServer(10832:10840): EnsureConnection: Pre-connect to https://a.jsrdn.com/
-11345.181 RequestServer(10832:10847): EnsureConnection: DNS-preload for https://a.jsrdn.com/ done
-11345.181 RequestServer(10832:10847): EnsureConnection: DNS-preload for a.jsrdn.com
-11345.181 RequestServer(10832:10837): ConnectionCache: Connection to https://registry.api.cnn.io/ failed: connect: Connection refused (errno=111)
-11345.181 RequestServer(10832:10837): Pre-connect to https://registry.api.cnn.io/ failed: ConnectionFailed
-11345.181 RequestServer(10832:10840): ConnectionCache: Connection to https://a.jsrdn.com/ failed: connect: Connection refused (errno=111)
-11345.181 RequestServer(10832:10840): Pre-connect to https://a.jsrdn.com/ failed: ConnectionFailed
-11345.181 RequestServer(10832:10845): ConnectionCache: Connection to https://lightning.cnn.com/launch/7be62238e4c3/97fa00444124/launch-2878c87af5e3.min.js failed: connect: Connection refused (errno=111)
-11345.181 RequestServer(10832:10845): Request with a null socket finished for URL https://lightning.cnn.com/launch/7be62238e4c3/97fa00444124/launch-2878c87af5e3.min.js
-11345.191 RequestServer(10832:10842): ConnectionCache: Connection to https://z.cdp-dev.cnn.com/zion-web-client/3.0/zion-web-client.min.js failed: connect: Connection refused (errno=111)
-11345.191 RequestServer(10832:10842): Request with a null socket finished for URL https://z.cdp-dev.cnn.com/zion-web-client/3.0/zion-web-client.min.js
-11345.871 WebContent(10851): (js info) Object{ "browserVersion": "Mozilla/5.0 (Linux; x86_64) Ladybird/1.0" } Object{ "_label": "INFO" } "Datadog Telemetry Enabled"
-11348.041 WebContent(10851): ResourceLoader: Filtered request to: "https://static.chartbeat.com/js/chartbeat_mab.js"
-11348.071 WebContent(10851): ResourceLoader: Filtered request to: "https://static.chartbeat.com/js/chartbeat_video.js"
-11348.071 WebContent(10851): ResourceLoader: Filtered request to: "https://live.rezync.com/sync?c=16b6410431b6374e780104abb0443ca8&p=34747f0775f02a6784bb965de6833e73&k=cnn-pixel-8786&zmpID=cnn&custom1=section_homepage1&custom2=section&custom3=homepage&cache_buster=1722101766767"
-11348.071 WebContent(10851): ResourceLoader: Filtered request to: "https://widgets.outbrain.com/outbrain.js"
-11348.401 WebContent(10851): ResourceLoader: Failed load of: "https://lightning.cnn.com/launch/7be62238e4c3/97fa00444124/launch-2878c87af5e3.min.js", Error: Load failed, Duration: 3290ms
-11348.401 WebContent(10851): ResourceLoader: Failed load of: "https://z.cdp-dev.cnn.com/zion-web-client/3.0/zion-web-client.min.js", Error: Load failed, Duration: 3260ms
-11348.401 RequestServer(10832:10840): ConnectionCache: Connection to https://healthguides.cnn.com/ucms/rss/cnn-hp-health-link-1?renderer=html failed: connect: Connection refused (errno=111)
-11348.401 RequestServer(10832:10840): Request with a null socket finished for URL https://healthguides.cnn.com/ucms/rss/cnn-hp-health-link-1?renderer=html
-11348.591 WebContent(10851): ResourceLoader: Failed load of: "https://healthguides.cnn.com/ucms/rss/cnn-hp-health-link-1?renderer=html", Error: Load failed, Duration: 190ms
-11350.061 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11350.081 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11350.091 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11350.111 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11350.271 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11352.061 WebContent(10851): FIXME: Unimplemented IDL interface: 'LocationPrototype.ancestorOrigins'
-11352.091 WebContent(10851): FIXME: Unimplemented Navigator.maxTouchPoints
-11352.091 WebContent(10851): FIXME: Unimplemented Navigator.maxTouchPoints
-11352.101 WebContent(10851): FIXME: Unimplemented Navigator.maxTouchPoints
-11352.101 WebContent(10851): FIXME: Unimplemented Navigator.maxTouchPoints
-11352.101 WebContent(10851): FIXME: Unimplemented Navigator.maxTouchPoints
-11352.101 WebContent(10851): FIXME: Unimplemented Navigator.maxTouchPoints
-11352.351 WebContent(10851): ResourceLoader: Filtered request to: "https://js-sec.indexww.com/ht/p/186948-78534564703284.js"
-11352.351 WebContent(10851): ResourceLoader: Filtered request to: "https://c.amazon-adsystem.com/aax2/apstag.js"
-11352.351 WebContent(10851): ResourceLoader: Filtered request to: "https://segment-data-us-east.zqtk.net/turner-47fcf6?url=https%3A%2F%2Fwww.cnn.com%2F"
-11352.351 WebContent(10851): ResourceLoader: Filtered request to: "https://cdn.adsafeprotected.com/iasPET.1.js"
-11352.351 WebContent(10851): ResourceLoader: Filtered request to: "https://ads.stickyadstv.com/user-matching?id=185&_fw_gdpr=0&_fw_gdpr_consent="
-11352.351 WebContent(10851): ResourceLoader: Filtered request to: "https://ads.stickyadstv.com/auto-user-sync"
-11352.351 WebContent(10851): ResourceLoader: Filtered request to: "https://www.ugdturner.com/xd.sjs"
-11352.351 WebContent(10851): ResourceLoader: Filtered request to: "https://securepubads.g.doubleclick.net/tag/js/gpt.js"
-11352.381 RequestServer(10832:10841): ConnectionCache: Connection to https://cadmus.script.ac/d2uap9jskdzp2/script.js failed: connect: Connection refused (errno=111)
-11352.381 RequestServer(10832:10841): Request with a null socket finished for URL https://cadmus.script.ac/d2uap9jskdzp2/script.js
-11352.431 WebContent(10851): ResourceLoader: Failed load of: "https://cadmus.script.ac/d2uap9jskdzp2/script.js", Error: Load failed, Duration: 80ms
-11352.491 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11352.491 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11352.511 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11352.521 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11352.551 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11352.551 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11352.591 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
+15103.441 RequestServer(72086:72102): EnsureConnection: DNS-preload for https://github.githubassets.com/ done
+15103.441 RequestServer(72086:72099): EnsureConnection: DNS-preload for https://avatars.githubusercontent.com/ done
+15103.441 RequestServer(72086:72099): EnsureConnection: DNS-preload for avatars.githubusercontent.com
+15103.441 RequestServer(72086:72102): EnsureConnection: DNS-preload for github.githubassets.com
+15103.441 RequestServer(72086:72091): EnsureConnection: DNS-preload for https://github-cloud.s3.amazonaws.com/ done
+15103.441 RequestServer(72086:72089): EnsureConnection: DNS-preload for https://user-images.githubusercontent.com/ done
+15103.441 RequestServer(72086:72091): EnsureConnection: DNS-preload for github-cloud.s3.amazonaws.com
+15103.441 RequestServer(72086:72089): EnsureConnection: DNS-preload for user-images.githubusercontent.com
+15103.441 RequestServer(72086:72101): EnsureConnection: Pre-connect to https://avatars.githubusercontent.com/
+15103.441 RequestServer(72086:72094): EnsureConnection: Pre-connect to https://github.githubassets.com/
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+15103.471 WebContent(72105): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+15103.651 WebContent(72105): ImageDecoderClient: Failed to decode image with ID 1: Decoding failed: Could not find suitable image decoder plugin for data
+15103.941 WebContent(72105): No property (from 4 properties) matched Token: Ident: none
+15103.941 WebContent(72105):     border-top-color
+15103.941 WebContent(72105):     border-right-color
+15103.941 WebContent(72105):     border-bottom-color
+15103.941 WebContent(72105):     border-left-color
+15103.941 WebContent(72105): No property (from 4 properties) matched Function: -var(--base-size-8)
+15103.941 WebContent(72105):     margin-top
+15103.941 WebContent(72105):     margin-right
+15103.941 WebContent(72105):     margin-bottom
+15103.941 WebContent(72105):     margin-left
+15104.021 WebContent(72105): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
+15104.021 WebContent(72105): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.write'
+15104.021 WebContent(72105): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
+15104.521 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.autocomplete'
+15104.521 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.spellcheck'
+15105.061 WebContent(72105): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
+15105.111 WebContent(72105): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'event'
+15105.781 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15105.781 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15105.781 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15105.781 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
+15105.781 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15106.241 RequestServer(72086:72096): ConnectionCache: Connection to https://collector.github.com/github/collect failed: connect: Connection refused (errno=111)
+15106.241 RequestServer(72086:72096): Request with a null socket finished for URL https://collector.github.com/github/collect
+15106.281 WebContent(72105): ResourceLoader: Failed load of: "https://collector.github.com/github/collect", Error: Load failed, Duration: 81ms
+15107.281 WebContent(72105): HTMLScriptElement: Refusing to run script because it has already started.
+15107.281 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15107.281 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15107.281 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
 No audio device detected
 No audio device detected
 No audio device detected
-11355.161 WebContent(10851): (js error) "[WMUC]:" "OneTrust Error (" 1 "): " "Stub load failure"
-11355.301 WebContent(10851): (js warn) "[iFrameSizer][Host page: iFrameResizer0]" "IFrame has not responded within 5 seconds. Check iFrameResizer.contentWindow.js has been loaded in iFrame. This message can be ingored if everything is working, or you can set the warningTimeout option to a higher value or zero to suppress this warning."
-11357.241 WebContent(10851): Unhandled JavaScript exception (in promise): The promise timed out.
-11357.261 WebContent(10851): Unhandled JavaScript exception (in promise): The promise timed out.
-11375.821 WebContent(10851): ResourceLoader: Failed load of: "https://lite.cnn.com/favicon.ico", Error: Load failed: 404, Duration: 80ms
-11398.041 WebContent(10851): Web::EventHandler: Clicking on a link to https://lite.cnn.com/2024/07/27/success/fed-interest-rate-cuts-debt-savings/index.html
-11398.401 WebContent(10851): ResourceLoader: Failed load of: "https://lite.cnn.com/favicon.ico", Error: Load failed: 404, Duration: 110ms
-11471.701 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
-11472.021 ImageDecoder(10833): ConnectionFromClient(0x00005613538f6d20) (id=230257957) had an error (Too many file descriptors to send), disconnecting.
-11472.021 WebContent(10851): ImageDecoder disconnected trying to decode image
-11472.331 WebContent(10851): FIXME: Unimplemented Navigator.maxTouchPoints
-11472.361 WebContent(10851): (STUBBED) HTMLInputElement::set_selection_range(start=0, end=0, direction='None'). Called on: input.lst
-11472.371 WebContent(10851): ResourceLoader: Filtered request to: "https://clients1.google.com/generate_204"
-11472.371 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11472.371 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11472.371 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
-11472.371 WebContent(10851): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=i&ct=psnt&cad=&nt=null&ei=gDClZrD3EpSt5NoPndqjwAw&zx=1722101893244&opi=89978449"
-11472.401 WebContent(10851): ImageDecoder disconnected trying to decode image
-11472.421 WebContent(10851): ImageDecoder disconnected trying to decode image
-11475.851 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11475.961 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11476.911 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11477.051 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11477.971 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11478.081 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11478.371 WebContent(10851): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=i&ct=rcm&cad=&ei=gDClZrD3EpSt5NoPndqjwAw&tgtved=&jsname=&zx=1722101899244&opi=89978449"
-11478.371 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11479.521 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11479.651 WebContent(10851): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=i&ct=rcm&cad=&ei=gDClZrD3EpSt5NoPndqjwAw&tgtved=&jsname=&zx=1722101900521&opi=89978449"
-11479.651 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11480.081 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11480.081 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
-11480.081 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11480.181 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11480.311 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11480.311 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11480.431 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11481.791 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11481.801 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11481.871 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11481.981 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11481.991 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11482.061 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11490.531 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11490.541 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11490.611 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11490.711 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11490.721 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11490.771 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11490.931 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11490.931 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11490.991 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11491.111 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11491.121 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11491.171 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11491.351 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11491.371 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11491.421 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11491.531 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11491.541 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11491.601 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11491.661 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11491.671 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11491.731 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11491.831 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11491.841 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11491.911 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11493.611 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11493.671 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11494.491 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.491 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.501 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.511 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.511 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.511 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.511 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.511 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.511 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.511 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.511 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.521 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.521 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.521 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.521 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.521 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.521 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.521 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.531 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.531 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.531 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.531 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.531 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.531 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.531 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.531 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.531 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.531 WebContent(10851): ImageDecoder disconnected trying to decode image
-11494.601 WebContent(10851): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=csi&s=web&t=all&lite=1&ei=ljClZrCwHq-s5NoP4sO4iAs&conn=-1&biw=1714&bih=818&ime=0&imel=0&imex=0&imeh=19&imea=0&imeb=9&rt=prt.23,ol.221,rqst.0,rspt.0&zx=1722101915470"
-11494.701 WebContent(10851): ImageDecoder disconnected trying to decode image
-11498.621 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
-11501.321 WebContent(10851): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=csi&s=web&t=aft&lite=1&ei=nTClZobQH7mn5NoPs6O_qA8&conn=-1&biw=1714&bih=818&ima=0&rt=prt.17,aft.17&zx=1722101922183"
-11501.351 WebContent(10851): ImageDecoder disconnected trying to decode image
-11501.351 WebContent(10851): ImageDecoder disconnected trying to decode image
-11501.361 WebContent(10851): ImageDecoder disconnected trying to decode image
-11501.361 WebContent(10851): ImageDecoder disconnected trying to decode image
-11501.361 WebContent(10851): ImageDecoder disconnected trying to decode image
-11501.361 WebContent(10851): ImageDecoder disconnected trying to decode image
-11501.361 WebContent(10851): ImageDecoder disconnected trying to decode image
-11501.361 WebContent(10851): ImageDecoder disconnected trying to decode image
-11501.361 WebContent(10851): ImageDecoder disconnected trying to decode image
-11501.361 WebContent(10851): ImageDecoder disconnected trying to decode image
-11501.401 WebContent(10851): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=csi&s=web&t=all&lite=1&ei=nTClZobQH7mn5NoPs6O_qA8&conn=-1&biw=1714&bih=818&ima=0&ime=0&imel=0&imex=0&imeh=5&imea=0&imeb=9&rt=prt.17,aft.17,ol.119,rqst.0,rspt.0&zx=1722101922273"
-11501.501 WebContent(10851): ImageDecoder disconnected trying to decode image
-11511.531 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
-11513.911 WebContent(10851): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=csi&s=web&t=aft&lite=1&ei=qjClZp-tB43V5NoPpJmigQY&conn=-1&biw=1714&bih=818&ima=0&rt=prt.18,aft.18&zx=1722101934774"
-11513.941 WebContent(10851): ImageDecoder disconnected trying to decode image
-11513.941 WebContent(10851): ImageDecoder disconnected trying to decode image
-11513.951 WebContent(10851): ImageDecoder disconnected trying to decode image
-11513.951 WebContent(10851): ImageDecoder disconnected trying to decode image
-11513.951 WebContent(10851): ImageDecoder disconnected trying to decode image
-11513.951 WebContent(10851): ImageDecoder disconnected trying to decode image
-11513.951 WebContent(10851): ImageDecoder disconnected trying to decode image
-11513.951 WebContent(10851): ImageDecoder disconnected trying to decode image
-11513.951 WebContent(10851): ImageDecoder disconnected trying to decode image
-11513.961 WebContent(10851): ImageDecoder disconnected trying to decode image
-11514.001 WebContent(10851): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=csi&s=web&t=all&lite=1&ei=qjClZp-tB43V5NoPpJmigQY&conn=-1&biw=1714&bih=818&ima=0&ime=0&imel=0&imex=0&imeh=5&imea=0&imeb=9&rt=prt.18,aft.18,ol.131,rqst.0,rspt.0&zx=1722101934877"
-11514.101 WebContent(10851): ImageDecoder disconnected trying to decode image
-11530.701 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
-11541.781 WebContent(10851): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=csi&s=web&t=aft&lite=1&ei=xjClZoHDAceo5NoPoqvEqAQ&conn=-1&biw=1714&bih=818&ima=0&rt=prt.13,aft.13&zx=1722101962639"
-11541.791 WebContent(10851): ImageDecoder disconnected trying to decode image
-11541.791 WebContent(10851): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=csi&s=web&t=all&lite=1&ei=xjClZoHDAceo5NoPoqvEqAQ&conn=-1&biw=1714&bih=818&ima=0&ime=0&imel=0&imex=0&imeh=0&imea=0&imeb=0&rt=prt.13,aft.13,ol.40,rqst.0,rspt.0&zx=1722101962666"
-11541.901 WebContent(10851): ImageDecoder disconnected trying to decode image
-11557.421 WebContent(10851): ImageDecoder disconnected trying to decode image
-11557.821 WebContent(10851): ResourceLoader: Failed load of: "https://secretimage.github.io/favicon.ico", Error: Load failed: 404, Duration: 80ms
-11558.161 RequestServer(10832:10838): certificate expired (expiry date 2024-07-24 18:43:46)
-11558.161 RequestServer(10832:10838): verify_chain: Certificate is not valid \CN=*.runasp.net
-11558.161 RequestServer(10832:10838): certificate verification failed :(
-11558.161 RequestServer(10832:10838): Possible failure cause(s):
-11558.161 RequestServer(10832:10838): - No one knows.
-11558.161 RequestServer(10832:10838): - A certificate was corrupt, contained signatures that did not verify correctly, etc.
-11558.161 RequestServer(10832:10838): null secret
-11558.161 RequestServer(10832:10838): ConnectionCache: Connection to https://nice.runasp.net/Analytics/ReferralUrl failed: BAD_CERTIFICATE
-11558.161 RequestServer(10832:10838): Request with a null socket finished for URL https://nice.runasp.net/Analytics/ReferralUrl
-11558.161 WebContent(10851): ResourceLoader: Failed load of: "https://nice.runasp.net/Analytics/ReferralUrl", Error: Load failed, Duration: 530ms
-11558.161 WebContent(10851): (js error) "There has been a problem with your fetch operation:" [TypeError] Request with 'cors' response tainting failed CORS check
-11567.761 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11567.761 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11567.761 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
-11570.681 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11570.681 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11570.681 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11570.681 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
-11570.791 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11571.031 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11571.031 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11571.051 RequestServer(10832:10838): certificate expired (expiry date 2024-07-24 18:43:46)
-11571.051 RequestServer(10832:10838): verify_chain: Certificate is not valid \CN=*.runasp.net
-11571.051 RequestServer(10832:10838): certificate verification failed :(
-11571.051 RequestServer(10832:10838): Possible failure cause(s):
-11571.051 RequestServer(10832:10838): - No one knows.
-11571.051 RequestServer(10832:10838): - A certificate was corrupt, contained signatures that did not verify correctly, etc.
-11571.051 RequestServer(10832:10838): null secret
-11571.051 RequestServer(10832:10838): Request with a null socket finished for URL https://nice.runasp.net/Analytics/SaveAnalytics?key=attemptedPassword2024-07-27-13-39-51&data=o
-11571.051 WebContent(10851): ResourceLoader: Failed load of: "https://nice.runasp.net/Analytics/SaveAnalytics?key=attemptedPassword2024-07-27-13-39-51&data=o", Error: Load failed, Duration: 260ms
-11571.051 WebContent(10851): (js error) "Error saving data:" [TypeError] CORS-preflight check failed
-11571.121 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11571.701 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11571.701 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11571.781 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11572.291 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11572.301 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11572.371 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11572.951 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11572.951 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11573.051 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11573.301 RequestServer(10832:10836): certificate expired (expiry date 2024-07-24 18:43:46)
-11573.301 RequestServer(10832:10836): verify_chain: Certificate is not valid \CN=*.runasp.net
-11573.301 RequestServer(10832:10836): certificate verification failed :(
-11573.301 RequestServer(10832:10836): Possible failure cause(s):
-11573.301 RequestServer(10832:10836): - No one knows.
-11573.301 RequestServer(10832:10836): - A certificate was corrupt, contained signatures that did not verify correctly, etc.
-11573.301 RequestServer(10832:10836): null secret
-11573.301 RequestServer(10832:10836): ConnectionCache: Connection to https://nice.runasp.net/Analytics/SaveAnalytics?key=attemptedPassword2024-07-27-13-39-53&data=opens failed: BAD_CERTIFICATE
-11573.301 RequestServer(10832:10836): Request with a null socket finished for URL https://nice.runasp.net/Analytics/SaveAnalytics?key=attemptedPassword2024-07-27-13-39-53&data=opens
-11573.301 WebContent(10851): ResourceLoader: Failed load of: "https://nice.runasp.net/Analytics/SaveAnalytics?key=attemptedPassword2024-07-27-13-39-53&data=opens", Error: Load failed, Duration: 250ms
-11573.301 WebContent(10851): (js error) "Error saving data:" [TypeError] CORS-preflight check failed
-11573.481 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11573.481 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11573.561 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11573.801 RequestServer(10832:10841): certificate expired (expiry date 2024-07-24 18:43:46)
-11573.801 RequestServer(10832:10841): verify_chain: Certificate is not valid \CN=*.runasp.net
-11573.801 RequestServer(10832:10841): certificate verification failed :(
-11573.801 RequestServer(10832:10841): Possible failure cause(s):
-11573.801 RequestServer(10832:10841): - No one knows.
-11573.801 RequestServer(10832:10841): - A certificate was corrupt, contained signatures that did not verify correctly, etc.
-11573.801 RequestServer(10832:10841): null secret
-11573.801 RequestServer(10832:10841): Request with a null socket finished for URL https://nice.runasp.net/Analytics/SaveAnalytics?key=attemptedPassword2024-07-27-13-39-54&data=opense
-11573.801 WebContent(10851): ResourceLoader: Failed load of: "https://nice.runasp.net/Analytics/SaveAnalytics?key=attemptedPassword2024-07-27-13-39-54&data=opense", Error: Load failed, Duration: 240ms
-11573.801 WebContent(10851): (js error) "Error saving data:" [TypeError] CORS-preflight check failed
-11573.821 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11573.821 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11573.921 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11574.201 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11574.211 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11574.291 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11574.521 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11574.521 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11574.611 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11575.521 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11575.521 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11575.571 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11575.581 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11576.771 WebContent(10851): ImageDecoder disconnected trying to decode image
-11582.101 WebContent(10851): ImageDecoder disconnected trying to decode image
-11584.031 WebContent(10851): ImageDecoder disconnected trying to decode image
-11585.911 WebContent(10851): ImageDecoder disconnected trying to decode image
-11587.341 WebContent(10851): ImageDecoder disconnected trying to decode image
-11588.111 WebContent(10851): ImageDecoder disconnected trying to decode image
-11588.601 WebContent(10851): ImageDecoder disconnected trying to decode image
-11588.991 WebContent(10851): ImageDecoder disconnected trying to decode image
-11589.401 WebContent(10851): ImageDecoder disconnected trying to decode image
-11590.251 WebContent(10851): ImageDecoder disconnected trying to decode image
-11591.411 WebContent(10851): ImageDecoder disconnected trying to decode image
-11592.891 WebContent(10851): ImageDecoder disconnected trying to decode image
-11594.251 WebContent(10851): ImageDecoder disconnected trying to decode image
-11595.571 WebContent(10851): ImageDecoder disconnected trying to decode image
-11596.841 WebContent(10851): ImageDecoder disconnected trying to decode image
-11597.921 WebContent(10851): ImageDecoder disconnected trying to decode image
-11598.421 WebContent(10851): ImageDecoder disconnected trying to decode image
-11598.871 WebContent(10851): ImageDecoder disconnected trying to decode image
-11604.141 WebContent(10851): Web::EventHandler: Clicking on a link to https://secretimage.github.io/IMG_6793.png
-11605.071 WebContent(10851): ImageDecoder disconnected trying to decode image
-11605.091 WebContent(10851): ResourceLoader: Failed load of: "https://secretimage.github.io/favicon.ico", Error: Load failed: 404, Duration: 20ms
-11616.501 WebContent(10851): ImageDecoder disconnected trying to decode image
-11616.541 WebContent(10851): ResourceLoader: Failed load of: "https://secretimage.github.io/favicon.ico", Error: Load failed: 404, Duration: 40ms
-11619.851 WebContent(10851): Web::EventHandler: Clicking on a link to https://vitejs.dev/
-11620.071 WebContent(10851): ResourceLoader: Filtered request to: "https://cdn.usefathom.com/script.js"
-11620.311 WebContent(10851): ImageDecoder disconnected trying to decode image
-11620.391 WebContent(10851): ImageDecoder disconnected trying to decode image
-11620.721 WebContent(10851): FIXME: Unimplemented Navigator.maxTouchPoints
-11620.761 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11621.021 WebContent(10851): ResourceLoader: Failed load of: "https://vitejs.dev/favicon.ico", Error: Load failed: 404, Duration: 241ms
-11621.031 RequestServer(10832:10838): ConnectionCache: Connection to https://sponsors.vuejs.org/vite.json failed: connect: Connection refused (errno=111)
-11621.031 RequestServer(10832:10838): Request with a null socket finished for URL https://sponsors.vuejs.org/vite.json
-11621.041 WebContent(10851): ResourceLoader: Failed load of: "https://sponsors.vuejs.org/vite.json", Error: Load failed, Duration: 20ms
-11621.061 WebContent(10851): (js error) [TypeError] Request with 'cors' response tainting failed CORS check
-11621.081 RequestServer(10832:10847): EnsureConnection: Pre-connect to https://7h67qr5p0a-dsn.algolia.net/
-11631.641 WebContent(10851): Web::EventHandler: Clicking on a link to https://github.com/sponsors/yyx990803
-11632.281 RequestServer(10832:10840): EnsureConnection: DNS-preload for https://github.githubassets.com/ done
-11632.281 RequestServer(10832:10840): EnsureConnection: DNS-preload for github.githubassets.com
-11632.281 RequestServer(10832:10842): EnsureConnection: DNS-preload for https://avatars.githubusercontent.com/ done
-11632.281 RequestServer(10832:10842): EnsureConnection: DNS-preload for avatars.githubusercontent.com
-11632.281 RequestServer(10832:10843): EnsureConnection: DNS-preload for https://github-cloud.s3.amazonaws.com/ done
-11632.281 RequestServer(10832:10843): EnsureConnection: DNS-preload for github-cloud.s3.amazonaws.com
-11632.281 RequestServer(10832:10846): EnsureConnection: DNS-preload for https://user-images.githubusercontent.com/ done
-11632.281 RequestServer(10832:10846): EnsureConnection: DNS-preload for user-images.githubusercontent.com
-11632.281 RequestServer(10832:10845): EnsureConnection: Pre-connect to https://avatars.githubusercontent.com/
-11632.281 RequestServer(10832:10836): EnsureConnection: Pre-connect to https://github.githubassets.com/
-11632.401 WebContent(10851): ImageDecoder disconnected trying to decode image
-11632.411 WebContent(10851): ImageDecoder disconnected trying to decode image
-11632.411 WebContent(10851): ImageDecoder disconnected trying to decode image
-11632.711 WebContent(10851): ImageDecoder disconnected trying to decode image
-11632.811 WebContent(10851): ImageDecoder disconnected trying to decode image
-11633.011 WebContent(10851): ImageDecoder disconnected trying to decode image
-11633.391 WebContent(10851): ImageDecoder disconnected trying to decode image
-11633.431 WebContent(10851): ImageDecoder disconnected trying to decode image
-11633.431 WebContent(10851): ImageDecoder disconnected trying to decode image
-11633.441 WebContent(10851): ImageDecoder disconnected trying to decode image
-11633.451 WebContent(10851): ImageDecoder disconnected trying to decode image
-11633.521 WebContent(10851): ImageDecoder disconnected trying to decode image
-11633.531 WebContent(10851): ImageDecoder disconnected trying to decode image
-11633.531 WebContent(10851): ImageDecoder disconnected trying to decode image
-11633.551 WebContent(10851): ImageDecoder disconnected trying to decode image
-11633.561 WebContent(10851): ImageDecoder disconnected trying to decode image
-11633.571 WebContent(10851): ImageDecoder disconnected trying to decode image
-11633.571 WebContent(10851): ImageDecoder disconnected trying to decode image
-11633.611 WebContent(10851): ImageDecoder disconnected trying to decode image
-11633.631 WebContent(10851): No property (from 4 properties) matched Token: Ident: none
-11633.631 WebContent(10851):     border-top-color
-11633.631 WebContent(10851):     border-right-color
-11633.631 WebContent(10851):     border-bottom-color
-11633.631 WebContent(10851):     border-left-color
-11633.631 WebContent(10851): No property (from 4 properties) matched Function: -var(--base-size-8)
-11633.631 WebContent(10851):     margin-top
-11633.631 WebContent(10851):     margin-right
-11633.631 WebContent(10851):     margin-bottom
-11633.631 WebContent(10851):     margin-left
-11633.741 WebContent(10851): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
-11633.741 WebContent(10851): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.write'
-11633.741 WebContent(10851): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
-11633.901 WebContent(10851): ImageDecoder disconnected trying to decode image
-11633.941 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.001 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.031 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.041 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.071 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.161 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.autocomplete'
-11634.161 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.spellcheck'
-11634.161 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.autocomplete'
-11634.161 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.spellcheck'
-11634.171 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.171 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.251 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.281 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.281 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.351 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.401 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.411 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.411 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.411 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.501 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11634.551 WebContent(10851): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'event'
-11634.691 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.691 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.701 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.701 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.711 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.711 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.711 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.711 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.721 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.721 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.731 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.731 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.741 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.741 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.751 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.751 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.761 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.761 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.761 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.771 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.771 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.771 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.781 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.781 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.791 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.791 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.801 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.911 WebContent(10851): (STUBBED) HTMLInputElement::set_custom_validity(error=Verifying…). Called on: input.form-control.pl-4.js-sponsors-custom-amount-input
-11634.981 WebContent(10851): ImageDecoder disconnected trying to decode image
-11634.981 WebContent(10851): ImageDecoder disconnected trying to decode image
-11635.011 WebContent(10851): ImageDecoder disconnected trying to decode image
-11635.041 WebContent(10851): ImageDecoder disconnected trying to decode image
-11635.051 WebContent(10851): ImageDecoder disconnected trying to decode image
-11635.051 WebContent(10851): ImageDecoder disconnected trying to decode image
-11635.051 WebContent(10851): ImageDecoder disconnected trying to decode image
-11635.061 WebContent(10851): ImageDecoder disconnected trying to decode image
-11635.061 WebContent(10851): ImageDecoder disconnected trying to decode image
-11635.381 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11635.381 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11635.381 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11635.381 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
-11635.381 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11635.701 WebContent(10851): HTMLScriptElement: Refusing to run script because it has already started.
-11635.701 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11635.701 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11635.701 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
-11635.771 WebContent(10851): (STUBBED) HTMLInputElement::set_custom_validity(error=). Called on: input.form-control.pl-4.js-sponsors-custom-amount-input
-11636.231 WebContent(10851): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
-11636.231 WebContent(10851): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
-11636.251 RequestServer(10832:10838): ConnectionCache: Connection to https://collector.github.com/github/collect failed: connect: Connection refused (errno=111)
-11636.251 RequestServer(10832:10838): Request with a null socket finished for URL https://collector.github.com/github/collect
-11636.291 WebContent(10851): ResourceLoader: Failed load of: "https://collector.github.com/github/collect", Error: Load failed, Duration: 60ms
-11636.471 WebContent(10851): ImageDecoder disconnected trying to decode image
-11670.861 WebContent(10851): Web::EventHandler: Clicking on a link to https://airtable.com/shrCQhat57SApJI2l
-11671.621 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
-11671.761 RequestServer(10832:10846): ConnectionCache: Connection to https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location failed: connect: Connection refused (errno=111)
-11671.761 RequestServer(10832:10846): Request with a null socket finished for URL https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location
-11671.761 WebContent(10851): ResourceLoader: Failed load of: "https://geolocation.onetrust.com/cookieconsentpub/v1/geo/location", Error: Load failed, Duration: 80ms
-11672.001 WebContent(10851): ImageDecoder disconnected trying to decode image
-11672.001 WebContent(10851): ImageDecoder disconnected trying to decode image
-11672.001 WebContent(10851): ImageDecoder disconnected trying to decode image
-11672.281 WebContent(10851): ImageDecoder disconnected trying to decode image
-11672.281 WebContent(10851): ImageDecoder disconnected trying to decode image
-11672.281 WebContent(10851): ImageDecoder disconnected trying to decode image
-11672.511 WebContent(10851): No property (from 4 properties) matched Token: Dimension: -0.125rem (number_type: Number)
-11672.511 WebContent(10851):     padding-top
-11672.511 WebContent(10851):     padding-right
-11672.511 WebContent(10851):     padding-bottom
-11672.511 WebContent(10851):     padding-left
-11672.511 WebContent(10851): No property (from 4 properties) matched Token: Dimension: -0.125rem (number_type: Number)
-11672.511 WebContent(10851):     padding-top
-11672.511 WebContent(10851):     padding-right
-11672.511 WebContent(10851):     padding-bottom
-11672.511 WebContent(10851):     padding-left
-11672.511 WebContent(10851): No property (from 4 properties) matched Token: Dimension: -0.125rem (number_type: Number)
-11672.511 WebContent(10851):     padding-top
-11672.511 WebContent(10851):     padding-right
-11672.511 WebContent(10851):     padding-bottom
-11672.511 WebContent(10851):     padding-left
-11672.511 WebContent(10851): No property (from 4 properties) matched Token: Dimension: -0.125rem (number_type: Number)
-11672.511 WebContent(10851):     padding-top
-11672.511 WebContent(10851):     padding-right
-11672.511 WebContent(10851):     padding-bottom
-11672.511 WebContent(10851):     padding-left
-11672.511 WebContent(10851): No property (from 4 properties) matched Token: Dimension: -0.125rem (number_type: Number)
-11672.511 WebContent(10851):     padding-top
-11672.511 WebContent(10851):     padding-right
-11672.511 WebContent(10851):     padding-bottom
-11672.511 WebContent(10851):     padding-left
-11672.991 WebContent(10851): Failed to parse font: Automatic format detection failed
-11673.931 WebContent(10851): ResourceLoader: Filtered request to: "https://analytics.twitter.com/i/adsct?txn_id=l6gpl&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0"
-11673.931 WebContent(10851): ResourceLoader: Filtered request to: "https://www.googletagmanager.com/gtm.js?id=GTM-NCLXNTS&l=googleDataLayer"
-11674.021 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11674.141 WebContent(10851): ImageDecoder disconnected trying to decode image
-11675.851 WebContent(10851): ImageDecoder disconnected trying to decode image
-11675.851 WebContent(10851): ImageDecoder disconnected trying to decode image
-11675.891 WebContent(10851): ImageDecoder disconnected trying to decode image
-11675.891 WebContent(10851): ImageDecoder disconnected trying to decode image
-11676.081 RequestServer(10832:10841): ConnectionCache: Connection to https://munchkin.marketo.net/munchkin.js failed: connect: Connection refused (errno=111)
-11676.081 RequestServer(10832:10841): Request with a null socket finished for URL https://munchkin.marketo.net/munchkin.js
-11676.111 WebContent(10851): ResourceLoader: Failed load of: "https://munchkin.marketo.net/munchkin.js", Error: Load failed, Duration: 30ms
-11676.121 WebContent(10851): ImageDecoder disconnected trying to decode image
-11676.131 WebContent(10851): HTMLScriptElement: Refusing to run script because the element's result is null.
-11698.561 Ladybird(10831): WebContentClient::did_paint: Did not find a page with ID 2
-11705.531 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
-11705.661 WebContent(10851): ImageDecoder disconnected trying to decode image
-11705.701 WebContent(10851): ImageDecoder disconnected trying to decode image
-11705.701 WebContent(10851): ImageDecoder disconnected trying to decode image
-11706.051 WebContent(10851): FIXME: Unimplemented Navigator.maxTouchPoints
-11706.091 WebContent(10851): (STUBBED) HTMLInputElement::set_selection_range(start=0, end=0, direction='None'). Called on: input.lst
-11706.101 WebContent(10851): ResourceLoader: Filtered request to: "https://clients1.google.com/generate_204"
-11706.101 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11706.101 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11706.101 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
-11706.111 WebContent(10851): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=i&ct=psnt&cad=&nt=null&ei=ajGlZtHqBr-q5NoPoKuFoAo&zx=1722102126980&opi=89978449"
-11706.181 WebContent(10851): ImageDecoder disconnected trying to decode image
-11706.201 WebContent(10851): ImageDecoder disconnected trying to decode image
-11707.831 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11707.941 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11709.441 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11709.441 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
-11709.451 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11709.541 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11710.331 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11710.341 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11710.401 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11710.501 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11710.501 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11710.571 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11710.691 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11710.701 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11710.771 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11710.841 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11710.851 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11710.931 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11710.971 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11710.981 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11711.061 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11711.181 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11711.201 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11711.261 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11711.301 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11711.321 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11711.441 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11711.471 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11711.491 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11711.561 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11711.671 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11711.681 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11711.771 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11711.821 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11711.831 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11711.901 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11711.951 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11711.971 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11712.061 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11712.061 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11712.071 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11712.091 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11712.171 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11712.191 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11712.261 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11712.341 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11712.351 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11712.411 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.121 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.141 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.191 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.271 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.291 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.321 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.371 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.391 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.461 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.501 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.521 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.591 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.641 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.661 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.691 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.791 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.801 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.861 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.961 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11713.981 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.011 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.081 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.101 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.101 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.111 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.141 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.211 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.261 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.261 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.271 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.281 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.281 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.371 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.391 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.391 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.481 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.481 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.491 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.511 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.571 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.581 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.671 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.671 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.681 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.781 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.861 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11714.891 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11715.691 WebContent(10851): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=csi&s=web&t=aft&lite=1&ei=czGlZu7qLeus5NoPxaaBuA8&conn=-1&biw=1714&bih=818&ima=0&rt=prt.16,aft.16&zx=1722102136556"
-11715.711 WebContent(10851): ImageDecoder disconnected trying to decode image
-11715.721 WebContent(10851): ImageDecoder disconnected trying to decode image
-11715.721 WebContent(10851): ImageDecoder disconnected trying to decode image
-11715.731 WebContent(10851): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=csi&s=web&t=all&lite=1&ei=czGlZu7qLeus5NoPxaaBuA8&conn=-1&biw=1714&bih=818&ima=0&ime=0&imel=0&imex=0&imeh=0&imea=0&imeb=8&rt=prt.16,aft.16,ol.72,rqst.0,rspt.0&zx=1722102136601"
-11715.781 WebContent(10851): ImageDecoder disconnected trying to decode image
-11718.491 WebContent(10851): Web::EventHandler: Clicking on a link to https://www.google.com/url?q=https://www.apple.com/newsroom/2024/07/apple-maps-on-the-web-launches-in-beta/&sa=U&ved=2ahUKEwiu8NGu4seHAxVrFlkFHUVTAPcQFnoECAMQAg&usg=AOvVaw3vIo3-IRp4raO6zSIk_tBd
-11719.231 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11719.241 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11719.241 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11719.241 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11719.241 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11719.241 WebContent(10851): FIXME: Unimplemented Navigator.maxTouchPoints
-11719.251 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11719.251 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11719.251 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11719.251 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11720.021 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11720.131 WebContent(10851): Unhandled JavaScript exception: [TypeError] undefined is not a function (evaluated from '<object>.closest')
-11720.131 WebContent(10851):     at https://www.apple.com/api-www/global-elements/global-header/v1/assets/globalheader.umd.js:1:38588
+15109.431 WebContent(72105): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
+15109.431 WebContent(72105): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
+15109.431 RequestServer(72086:72098): Request with a null socket finished for URL https://collector.github.com/github/collect
+15109.521 WebContent(72105): ResourceLoader: Failed load of: "https://collector.github.com/github/collect", Error: Load failed, Duration: 91ms
+15120.411 WebContent(72105): ImageDecoderClient: Failed to decode image with ID 16: Decoding failed: Could not find suitable image decoder plugin for data
+15120.431 RequestServer(72086:72099): EnsureConnection: DNS-preload for https://github.githubassets.com/ done
+15120.431 RequestServer(72086:72099): EnsureConnection: DNS-preload for github.githubassets.com
+15120.431 RequestServer(72086:72091): EnsureConnection: DNS-preload for https://avatars.githubusercontent.com/ done
+15120.431 RequestServer(72086:72091): EnsureConnection: DNS-preload for avatars.githubusercontent.com
+15120.431 RequestServer(72086:72089): EnsureConnection: DNS-preload for https://github-cloud.s3.amazonaws.com/ done
+15120.431 RequestServer(72086:72089): EnsureConnection: DNS-preload for github-cloud.s3.amazonaws.com
+15120.431 RequestServer(72086:72097): EnsureConnection: DNS-preload for https://user-images.githubusercontent.com/ done
+15120.431 RequestServer(72086:72100): EnsureConnection: Pre-connect to https://github.githubassets.com/
+15120.431 RequestServer(72086:72096): EnsureConnection: Pre-connect to https://avatars.githubusercontent.com/
+15120.431 RequestServer(72086:72097): EnsureConnection: DNS-preload for user-images.githubusercontent.com
+15120.441 WebContent(72105): ImageDecoderClient: Failed to decode image with ID 18: Decoding failed: Could not find suitable image decoder plugin for data
+15120.771 WebContent(72105): No property (from 4 properties) matched Token: Ident: none
+15120.771 WebContent(72105):     border-top-color
+15120.771 WebContent(72105):     border-right-color
+15120.771 WebContent(72105):     border-bottom-color
+15120.771 WebContent(72105):     border-left-color
+15120.781 WebContent(72105): No property (from 4 properties) matched Function: -var(--base-size-8)
+15120.781 WebContent(72105):     margin-top
+15120.781 WebContent(72105):     margin-right
+15120.781 WebContent(72105):     margin-bottom
+15120.781 WebContent(72105):     margin-left
+15121.181 WebContent(72105): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
+15121.181 WebContent(72105): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.write'
+15121.181 WebContent(72105): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
+15121.231 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.autocomplete'
+15121.231 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.spellcheck'
+15121.251 WebContent(72105): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
+15121.301 WebContent(72105): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'event'
+15121.791 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15121.791 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15121.791 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15121.791 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
+15121.791 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15122.171 WebContent(72105): HTMLScriptElement: Refusing to run script because it has already started.
+15122.171 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15122.171 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15122.171 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
+15122.891 WebContent(72105): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
+15122.891 WebContent(72105): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
+15137.641 RequestServer(72086:72089): EnsureConnection: DNS-preload for https://github.githubassets.com/ done
+15137.641 RequestServer(72086:72089): EnsureConnection: DNS-preload for github.githubassets.com
+15137.641 RequestServer(72086:72096): EnsureConnection: DNS-preload for https://avatars.githubusercontent.com/ done
+15137.641 RequestServer(72086:72096): EnsureConnection: DNS-preload for avatars.githubusercontent.com
+15137.641 RequestServer(72086:72091): EnsureConnection: DNS-preload for https://github-cloud.s3.amazonaws.com/ done
+15137.641 RequestServer(72086:72091): EnsureConnection: DNS-preload for github-cloud.s3.amazonaws.com
+15137.641 RequestServer(72086:72095): EnsureConnection: DNS-preload for https://user-images.githubusercontent.com/ done
+15137.641 RequestServer(72086:72095): EnsureConnection: DNS-preload for user-images.githubusercontent.com
+15137.641 RequestServer(72086:72104): EnsureConnection: Pre-connect to https://github.githubassets.com/
+15137.641 RequestServer(72086:72093): EnsureConnection: Pre-connect to https://avatars.githubusercontent.com/
+15137.681 WebContent(72105): ImageDecoderClient: Failed to decode image with ID 23: Decoding failed: Could not find suitable image decoder plugin for data
+15137.721 WebContent(72105): ImageDecoderClient: Failed to decode image with ID 25: Decoding failed: Could not find suitable image decoder plugin for data
+15137.891 WebContent(72105): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
+15137.891 WebContent(72105): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.write'
+15137.891 WebContent(72105): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
+15138.231 WebContent(72105): No property (from 4 properties) matched Token: Ident: none
+15138.231 WebContent(72105):     border-top-color
+15138.231 WebContent(72105):     border-right-color
+15138.231 WebContent(72105):     border-bottom-color
+15138.231 WebContent(72105):     border-left-color
+15138.231 WebContent(72105): No property (from 4 properties) matched Function: -var(--base-size-8)
+15138.231 WebContent(72105):     margin-top
+15138.231 WebContent(72105):     margin-right
+15138.231 WebContent(72105):     margin-bottom
+15138.231 WebContent(72105):     margin-left
+15138.791 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.autocomplete'
+15138.791 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.spellcheck'
+15140.291 WebContent(72105): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
+15140.331 WebContent(72105): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'event'
+15149.481 WebContent(72105): HTMLScriptElement: Refusing to run script because it has already started.
+15155.851 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15155.851 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15155.851 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15155.851 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
+15155.851 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15156.121 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15156.121 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15156.121 WebContent(72105): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
+15157.511 WebContent(72105): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
+15157.511 WebContent(72105): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
+VERIFICATION FAILED: has<T>() at /home/kushal/src/ladybird/AK/Variant.h:382
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-ak.so.0(ak_verification_failed+0xef) [0x7f18a18e538f]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x8d52fe) [0x7f18a57be2fe]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x54a6ff) [0x7f18a54336ff]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::HTML::EventLoop::process() 0x54) [0x7f18a56a0234]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x9e5b40) [0x7f18a58ceb40]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0(+0x2c3cf) [0x7f18a3be93cf]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::EventReceiver::dispatch_event(Core::Event&, Core::EventReceiver*) 0x75) [0x7f18a3be88a5]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebContent(+0x40bb1) [0x558438296bb1]
+/lib/x86_64-linux-gnu/libQt6Core.so.6(+0x1ac023) [0x7f18a6bf4023]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QTimer::timeout(QTimer::QPrivateSignal) 0x3e) [0x7f18a6c024be]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QObject::event(QEvent*) 0x1df) [0x7f18a6be862f]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QCoreApplication::notifyInternal2(QObject*, QEvent*) 0xfd) [0x7f18a6b9ba2d]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QTimerInfoList::activateTimers() 0x333) [0x7f18a6d04203]
+/lib/x86_64-linux-gnu/libQt6Core.so.6(+0x37bbfc) [0x7f18a6dc3bfc]
+/lib/x86_64-linux-gnu/libglib-2.0.so.0(g_main_context_dispatch+0x26b) [0x7f18a1184d3b]
+/lib/x86_64-linux-gnu/libglib-2.0.so.0(+0xab2b8) [0x7f18a11da2b8]
+/lib/x86_64-linux-gnu/libglib-2.0.so.0(g_main_context_iteration+0x33) [0x7f18a11823e3]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) 0xcc) [0x7f18a6dc3f0c]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebContent(+0x3fe40) [0x558438295e40]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::EventLoop::spin_until(AK::Function<bool ()>) 0x5e) [0x7f18a3be113e]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::Platform::EventLoopPluginSerenity::spin_until(JS::SafeFunction<bool ()>) 0xc5) [0x7f18a58ce095]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::HTML::EventLoop::spin_until(JS::SafeFunction<bool ()>) 0xf1) [0x7f18a569fe81]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::HTML::TraversableNavigable::apply_the_history_step(int, bool, AK::Optional<Web::HTML::SourceSnapshotParams>,JS::GCPtr<Web::HTML::Navigable>, AK::Optional<Web::HTML::UserNavigationInvolvement>, AK::Optional<Web::Bindings::NavigationType>, Web::HTML::TraversableNavigable::SynchronousNavigation) 0x604) [0x7f18a57baa84]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::HTML::TraversableNavigable::apply_the_push_or_replace_history_step(int, Web::HTML::HistoryHandlingBehavior, Web::HTML::TraversableNavigable::SynchronousNavigation) 0x5d) [0x7f18a57bcafd]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0 Web::HTML::finalize_a_cross_document_navigation(JS::NonnullGCPtr<Web::HTML::Navigable>, Web::HTML::HistoryHandlingBehavior, JS::NonnullGCPtr<Web::HTML::SessionHistoryEntry>) 0x630) [0x7f18a5734bb0]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x84fa02) [0x7f18a5738a02]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x54a6ff) [0x7f18a54336ff]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-web.so.0(+0x8b10c4) [0x7f18a579a0c4]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0(+0x2c3cf) [0x7f18a3be93cf]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::EventReceiver::dispatch_event(Core::Event&, Core::EventReceiver*) 0x75) [0x7f18a3be88a5]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebContent(+0x40bb1) [0x558438296bb1]
+/lib/x86_64-linux-gnu/libQt6Core.so.6(+0x1ac023) [0x7f18a6bf4023]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QTimer::timeout(QTimer::QPrivateSignal) 0x3e) [0x7f18a6c024be]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QObject::event(QEvent*) 0x1df) [0x7f18a6be862f]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QCoreApplication::notifyInternal2(QObject*, QEvent*) 0xfd) [0x7f18a6b9ba2d]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QTimerInfoList::activateTimers() 0x333) [0x7f18a6d04203]
+/lib/x86_64-linux-gnu/libQt6Core.so.6(+0x37bc44) [0x7f18a6dc3c44]
+/lib/x86_64-linux-gnu/libglib-2.0.so.0(g_main_context_dispatch+0x26b) [0x7f18a1184d3b]
+/lib/x86_64-linux-gnu/libglib-2.0.so.0(+0xab2b8) [0x7f18a11da2b8]
+/lib/x86_64-linux-gnu/libglib-2.0.so.0(g_main_context_iteration+0x33) [0x7f18a11823e3]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) 0x6e) [0x7f18a6dc3eae]
+/lib/x86_64-linux-gnu/libQt6Core.so.6 QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) 0x17b) [0x7f18a6ba8adb]
+/home/kushal/src/ladybird/Build/ladybird/libexec/../lib/liblagom-core.so.0 Core::EventLoop::exec() 0x31) [0x7f18a3be1091]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebContent(+0x4d3b6) [0x5584382a33b6]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebContent(+0xf1152) [0x558438347152]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90) [0x7f18a1388d90]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80) [0x7f18a1388e40]
+/home/kushal/src/ladybird/Build/ladybird/libexec/WebContent(+0x3eaf5) [0x558438294af5]
+15157.621 Ladybird(72084): WebContent process crashed!
+15157.621 Ladybird(72084): Consider raising an issue at https://github.com/LadybirdBrowser/ladybird/issues
+15186.541 RequestServer(72086:72097): EnsureConnection: DNS-preload for https://avatars.githubusercontent.com/ done
+15186.541 RequestServer(72086:72101): EnsureConnection: DNS-preload for https://github.githubassets.com/ done
+15186.541 RequestServer(72086:72092): EnsureConnection: DNS-preload for https://user-images.githubusercontent.com/ done
+15186.541 RequestServer(72086:72099): EnsureConnection: DNS-preload for https://github-cloud.s3.amazonaws.com/ done
+15186.541 RequestServer(72086:72097): EnsureConnection: DNS-preload for avatars.githubusercontent.com
+15186.541 RequestServer(72086:72101): EnsureConnection: DNS-preload for github.githubassets.com
+15186.541 RequestServer(72086:72092): EnsureConnection: DNS-preload for user-images.githubusercontent.com
+15186.541 RequestServer(72086:72099): EnsureConnection: DNS-preload for github-cloud.s3.amazonaws.com
+15186.541 RequestServer(72086:72095): EnsureConnection: Pre-connect to https://github.githubassets.com/
+15186.541 RequestServer(72086:72093): EnsureConnection: Pre-connect to https://avatars.githubusercontent.com/
+15186.731 WebContent(72372): ImageDecoderClient: Failed to decode image with ID 1: Decoding failed: Could not find suitable image decoder plugin for data
+15187.401 WebContent(72372): No property (from 4 properties) matched Token: Ident: none
+15187.401 WebContent(72372):     border-top-color
+15187.401 WebContent(72372):     border-right-color
+15187.401 WebContent(72372):     border-bottom-color
+15187.401 WebContent(72372):     border-left-color
+15187.401 WebContent(72372): No property (from 4 properties) matched Function: -var(--base-size-8)
+15187.401 WebContent(72372):     margin-top
+15187.401 WebContent(72372):     margin-right
+15187.401 WebContent(72372):     margin-bottom
+15187.401 WebContent(72372):     margin-left
+15187.521 WebContent(72372): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
+15187.521 WebContent(72372): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.write'
+15187.521 WebContent(72372): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
+15187.601 WebContent(72372): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.autocomplete'
+15187.601 WebContent(72372): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.spellcheck'
+15187.781 WebContent(72372): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
+15187.821 WebContent(72372): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'event'
+15188.241 WebContent(72372): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15188.251 WebContent(72372): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15188.251 WebContent(72372): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15188.251 WebContent(72372): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
+15188.251 WebContent(72372): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15188.941 WebContent(72372): HTMLScriptElement: Refusing to run script because it has already started.
+15189.551 WebContent(72372): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15189.551 WebContent(72372): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15189.551 WebContent(72372): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
+15189.661 WebContent(72372): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15189.841 WebContent(72372): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15189.861 WebContent(72372): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15189.991 WebContent(72372): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15190.051 WebContent(72372): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
+15190.051 WebContent(72372): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
+15190.171 WebContent(72372): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15190.281 WebContent(72372): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15190.521 WebContent(72372): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15190.711 WebContent(72372): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
+15223.991 WebContent(72372): Web::EventHandler: Clicking on a link to https://raw.githubusercontent.com/joshuacline/documentation/main/windick/png/04.png
+15224.361 WebContent(72372): ResourceLoader: Failed load of: "https://raw.githubusercontent.com/favicon.ico", Error: Load failed: 400, Duration: 80ms
+15239.061 WebContent(72372): Web::EventHandler: Clicking on a link to https://raw.githubusercontent.com/joshuacline/documentation/main/windick/png/00.png
+15239.461 WebContent(72372): ResourceLoader: Failed load of: "https://raw.githubusercontent.com/favicon.ico", Error: Load failed: 400, Duration: 60ms
+ 72084 Lost connection to RequestServer
 
-11720.741 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11720.751 WebContent(10851): FIXME: Unimplemented Navigator.maxTouchPoints
-11721.001 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11721.001 WebContent(10851): FIXME: Unimplemented Navigator.maxTouchPoints
-11721.461 RequestServer(10832:10850): ConnectionCache: Connection to https://securemetrics.apple.com/b/ss/applestoreww/1/JS-2.23.0/s34743692070418?AQB=1&ndh=1&pf=1&t=27%2F6%2F2024%2013%3A42%3A22%206%20240&fid=4414C3CFD530D35F-1D97C46E6EFBAADE&ce=UTF-8&cdp=2&cl=1800&pageName=newsroom%20-%20apple%20maps%20on%20the%20web%20launches%20in%20beta%20%28us%29&g=https%3A%2F%2Fwww.apple.com%2Fnewsroom%2F2024%2F07%2Fapple-maps-on-the-web-launches-in-beta%2F&r=https%3A%2F%2Fwww.google.com%2F&cc=USD&ch=www.us.newsroom&server=ac-2.19.0&h1=www.us.newsroom&v3=aos%3A%20us&l3=D%3Das_tex&c4=D%3Dg&v4=D%3DpageName&v14=en-us&c20=aos%3A%20us&v49=D%3Dr&v54=D%3Dg&v97=s.t-p&s=2560x1440&c=24&j=1.6&v=N&k=Y&bw=1714&bh=818&AQE=1 failed: connect: Connection refused (errno=111)
-11721.461 RequestServer(10832:10850): Request with a null socket finished for URL https://securemetrics.apple.com/b/ss/applestoreww/1/JS-2.23.0/s34743692070418?AQB=1&ndh=1&pf=1&t=27%2F6%2F2024%2013%3A42%3A22%206%20240&fid=4414C3CFD530D35F-1D97C46E6EFBAADE&ce=UTF-8&cdp=2&cl=1800&pageName=newsroom%20-%20apple%20maps%20on%20the%20web%20launches%20in%20beta%20%28us%29&g=https%3A%2F%2Fwww.apple.com%2Fnewsroom%2F2024%2F07%2Fapple-maps-on-the-web-launches-in-beta%2F&r=https%3A%2F%2Fwww.google.com%2F&cc=USD&ch=www.us.newsroom&server=ac-2.19.0&h1=www.us.newsroom&v3=aos%3A%20us&l3=D%3Das_tex&c4=D%3Dg&v4=D%3DpageName&v14=en-us&c20=aos%3A%20us&v49=D%3Dr&v54=D%3Dg&v97=s.t-p&s=2560x1440&c=24&j=1.6&v=N&k=Y&bw=1714&bh=818&AQE=1
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.471 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11721.481 WebContent(10851): ResourceLoader: Failed load of: "https://securemetrics.apple.com/b/ss/applestoreww/1/JS-2.23.0/s34743692070418?AQB=1&ndh=1&pf=1&t=27%2F6%2F2024%2013%3A42%3A22%206%20240&fid=4414C3CFD530D35F-1D97C46E6EFBAADE&ce=UTF-8&cdp=2&cl=1800&pageName=newsroom%20-%20apple%20maps%20on%20the%20web%20launches%20in%20beta%20%28us%29&g=https%3A%2F%2Fwww.apple.com%2Fnewsroom%2F2024%2F07%2Fapple-maps-on-the-web-launches-in-beta%2F&r=https%3A%2F%2Fwww.google.com%2F&cc=USD&ch=www.us.newsroom&server=ac-2.19.0&h1=www.us.newsroom&v3=aos%3A%20us&l3=D%3Das_tex&c4=D%3Dg&v4=D%3DpageName&v14=en-us&c20=aos%3A%20us&v49=D%3Dr&v54=D%3Dg&v97=s.t-p&s=2560x1440&c=24&j=1.6&v=N&k=Y&bw=1714&bh=818&AQE=1", Error: Load failed, Duration: 90ms
-11721.541 WebContent(10851): ImageDecoder disconnected trying to decode image
-11721.691 WebContent(10851): ImageDecoder disconnected trying to decode image
-11721.931 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11722.431 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11722.581 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11722.591 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11722.621 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11722.621 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11723.151 WebContent(10851): (js warn) ""setAttributes" is deprecated, please use "setAttributeForElements" instead."
-11723.381 WebContent(10851): Unhandled JavaScript exception: [TypeError] Cannot access property "type" on undefined object "[0]"
-11723.381 WebContent(10851):     at https://www.apple.com/newsroom/scripts/main.built.js:1:198965
-
-11723.441 WebContent(10851): Web::EventHandler: Clicking on a link to http://beta.maps.apple.com/
-11723.461 RequestServer(10832:10846): Request with a null socket finished for URL https://securemetrics.apple.com/b/ss/applestoreww/1/JS-2.23.0/s36912411841776?AQB=1&ndh=1&pf=1&t=27%2F6%2F2024%2013%3A42%3A24%206%20240&fid=4414C3CFD530D35F-1D97C46E6EFBAADE&ce=UTF-8&cdp=2&cl=1800&pageName=newsroom%20-%20apple%20maps%20on%20the%20web%20launches%20in%20beta%20%28us%29&g=https%3A%2F%2Fwww.apple.com%2Fnewsroom%2F2024%2F07%2Fapple-maps-on-the-web-launches-in-beta%2F&cc=USD&events=event242&h1=www.us.newsroom&l3=D%3Das_tex&v4=D%3DpageName&v14=en-us&v49=https%3A%2F%2Fwww.google.com%2F&v54=D%3Dg&v93=1&v97=s.tl-e&pe=lnk_e&pev1=http%3A%2F%2Fbeta.maps.apple.com%2F&c.&a.&activitymap.&page=newsroom%20-%20apple%20maps%20on%20the%20web%20launches%20in%20beta%20%28us%29&link=apple%20maps%20on%20the%20web%20-%20beta.maps.apple.com%2F%20-%20quickread%20-%20%2301&region=quickread&pageIDType=1&.activitymap&.a&.c&pid=newsroom%20-%20apple%20maps%20on%20the%20web%20launches%20in%20beta%20%28us%29&pidt=1&oid=http%3A%2F%2Fbeta.maps.apple.com%2F&ot=A&s=2560x1440&c=24&j=1.6&v=N&k=Y&bw=1714&bh=818&AQE=1
-11723.471 WebContent(10851): ResourceLoader: Failed load of: "https://securemetrics.apple.com/b/ss/applestoreww/1/JS-2.23.0/s36912411841776?AQB=1&ndh=1&pf=1&t=27%2F6%2F2024%2013%3A42%3A24%206%20240&fid=4414C3CFD530D35F-1D97C46E6EFBAADE&ce=UTF-8&cdp=2&cl=1800&pageName=newsroom%20-%20apple%20maps%20on%20the%20web%20launches%20in%20beta%20%28us%29&g=https%3A%2F%2Fwww.apple.com%2Fnewsroom%2F2024%2F07%2Fapple-maps-on-the-web-launches-in-beta%2F&cc=USD&events=event242&h1=www.us.newsroom&l3=D%3Das_tex&v4=D%3DpageName&v14=en-us&v49=https%3A%2F%2Fwww.google.com%2F&v54=D%3Dg&v93=1&v97=s.tl-e&pe=lnk_e&pev1=http%3A%2F%2Fbeta.maps.apple.com%2F&c.&a.&activitymap.&page=newsroom%20-%20apple%20maps%20on%20the%20web%20launches%20in%20beta%20%28us%29&link=apple%20maps%20on%20the%20web%20-%20beta.maps.apple.com%2F%20-%20quickread%20-%20%2301&region=quickread&pageIDType=1&.activitymap&.a&.c&pid=newsroom%20-%20apple%20maps%20on%20the%20web%20launches%20in%20beta%20%28us%29&pidt=1&oid=http%3A%2F%2Fbeta.maps.apple.com%2F&ot=A&s=2560x1440&c=24&j=1.6&v=N&k=Y&bw=1714&bh=818&AQE=1", Error: Load failed, Duration: 30ms
-11723.521 WebContent(10851): ImageDecoder disconnected trying to decode image
-11723.641 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11723.641 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11723.961 WebContent(10851): ImageDecoder disconnected trying to decode image
-11724.191 WebContent(10851): ImageDecoder disconnected trying to decode image
-11727.271 Ladybird(10831): WebContentClient::did_paint: Did not find a page with ID 0
-11746.881 WebContent(10851): ImageDecoder disconnected trying to decode image
-11746.981 WebContent(10851): ImageDecoder disconnected trying to decode image
-11751.481 WebContent(10851): ImageDecoder disconnected trying to decode image
-11751.631 WebContent(10851): ImageDecoder disconnected trying to decode image
-11754.291 WebContent(10851): Web::EventHandler: Clicking on a link to https://support.apple.com/120585
-11755.061 RequestServer(10832:10844): EnsureConnection: DNS-preload for https://www.apple.com/ done
-11755.061 RequestServer(10832:10844): EnsureConnection: DNS-preload for www.apple.com
-11755.061 RequestServer(10832:10850): EnsureConnection: Pre-connect to https://www.apple.com/
-11755.381 WebContent(10851): ImageDecoder disconnected trying to decode image
-11755.571 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11755.571 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11755.571 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11755.571 WebContent(10851): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
-11755.581 WebContent(10851): ResourceLoader: Failed load of: "https://www.apple.com/wss/fonts?families=SF+Pro,v1:200,300,400,500,600|SF+Pro+Icons,v1", Error: Load failed: 404, Duration: 560ms
-11756.071 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11756.321 WebContent(10851): ImageDecoder disconnected trying to decode image
-11756.341 WebContent(10851): ImageDecoder disconnected trying to decode image
-11757.841 WebContent(10851): Call to NavigatorIDMixin::app_version, using Chrome or WebKit compatibility mode
-11758.051 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11758.061 WebContent(10851): Call to NavigatorIDMixin::app_version, using Chrome or WebKit compatibility mode
-11758.161 RequestServer(10832:10850): ConnectionCache: Connection to https://supportmetrics.apple.com/content/services/stats failed: connect: Connection refused (errno=111)
-11758.161 RequestServer(10832:10850): Request with a null socket finished for URL https://supportmetrics.apple.com/content/services/stats
-11758.161 WebContent(10851): ResourceLoader: Failed load of: "https://supportmetrics.apple.com/content/services/stats", Error: Load failed, Duration: 70ms
-11758.481 WebContent(10851): ImageDecoder disconnected trying to decode image
-11778.051 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11778.061 RequestServer(10832:10838): Request with a null socket finished for URL https://supportmetrics.apple.com/content/services/stats
-11778.061 WebContent(10851): ResourceLoader: Failed load of: "https://supportmetrics.apple.com/content/services/stats", Error: Load failed, Duration: 10ms
-11780.251 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11789.071 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11789.071 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11789.071 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11789.241 WebContent(10851): ImageDecoder disconnected trying to decode image
-11790.061 WebContent(10851): ImageDecoder disconnected trying to decode image
-11790.241 WebContent(10851): ImageDecoder disconnected trying to decode image
-11819.821 WebContent(10851): Web::EventHandler: Clicking on a link to https://news.ycombinator.com/item?id=41083987
-11820.441 WebContent(10851): ImageDecoder disconnected trying to decode image
-11820.851 WebContent(10851): ImageDecoder disconnected trying to decode image
-11820.961 WebContent(10851): ImageDecoder disconnected trying to decode image
-11834.291 WebContent(10851): Web::EventHandler: Clicking on a link to https://github.com/joshuacline/windick
-11835.061 RequestServer(10832:10838): EnsureConnection: DNS-preload for https://github.githubassets.com/ done
-11835.061 RequestServer(10832:10836): EnsureConnection: DNS-preload for https://avatars.githubusercontent.com/ done
-11835.061 RequestServer(10832:10838): EnsureConnection: DNS-preload for github.githubassets.com
-11835.061 RequestServer(10832:10836): EnsureConnection: DNS-preload for avatars.githubusercontent.com
-11835.061 RequestServer(10832:10850): EnsureConnection: Pre-connect to https://github.githubassets.com/
-11835.061 RequestServer(10832:10844): EnsureConnection: DNS-preload for https://github-cloud.s3.amazonaws.com/ done
-11835.061 RequestServer(10832:10846): EnsureConnection: DNS-preload for https://user-images.githubusercontent.com/ done
-11835.061 RequestServer(10832:10844): EnsureConnection: DNS-preload for github-cloud.s3.amazonaws.com
-11835.061 RequestServer(10832:10846): EnsureConnection: DNS-preload for user-images.githubusercontent.com
-11835.081 RequestServer(10832:10837): EnsureConnection: Pre-connect to https://avatars.githubusercontent.com/
-11835.321 WebContent(10851): ImageDecoder disconnected trying to decode image
-11835.601 WebContent(10851): ImageDecoder disconnected trying to decode image
-11835.601 WebContent(10851): ImageDecoder disconnected trying to decode image
-11836.191 WebContent(10851): No property (from 4 properties) matched Token: Ident: none
-11836.191 WebContent(10851):     border-top-color
-11836.191 WebContent(10851):     border-right-color
-11836.191 WebContent(10851):     border-bottom-color
-11836.191 WebContent(10851):     border-left-color
-11836.191 WebContent(10851): No property (from 4 properties) matched Function: -var(--base-size-8)
-11836.191 WebContent(10851):     margin-top
-11836.191 WebContent(10851):     margin-right
-11836.191 WebContent(10851):     margin-bottom
-11836.191 WebContent(10851):     margin-left
-11836.351 WebContent(10851): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
-11836.351 WebContent(10851): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.write'
-11836.351 WebContent(10851): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
-11836.421 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.autocomplete'
-11836.421 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.spellcheck'
-11836.801 WebContent(10851): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-11836.851 WebContent(10851): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'event'
-11837.071 WebContent(10851): ImageDecoder disconnected trying to decode image
-11837.171 WebContent(10851): ImageDecoder disconnected trying to decode image
-11837.851 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11837.851 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11837.851 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11837.851 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
-11837.851 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11838.021 WebContent(10851): ImageDecoder disconnected trying to decode image
-11838.391 WebContent(10851): ImageDecoder disconnected trying to decode image
-11838.391 WebContent(10851): ImageDecoder disconnected trying to decode image
-11838.451 WebContent(10851): ImageDecoder disconnected trying to decode image
-11838.591 WebContent(10851): HTMLScriptElement: Refusing to run script because it has already started.
-11838.601 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11838.601 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11838.601 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionEnd'
-11838.601 WebContent(10851): ImageDecoder disconnected trying to decode image
-11838.661 WebContent(10851): ImageDecoder disconnected trying to decode image
-11838.661 WebContent(10851): ImageDecoder disconnected trying to decode image
-11838.661 WebContent(10851): ImageDecoder disconnected trying to decode image
-11838.671 WebContent(10851): ImageDecoder disconnected trying to decode image
-11838.681 WebContent(10851): ImageDecoder disconnected trying to decode image
-11838.901 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11839.031 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11839.031 WebContent(10851): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
-11839.031 WebContent(10851): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
-11839.141 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11839.171 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11839.181 RequestServer(10832:10843): Request with a null socket finished for URL https://collector.github.com/github/collect
-11839.211 WebContent(10851): ResourceLoader: Failed load of: "https://collector.github.com/github/collect", Error: Load failed, Duration: 110ms
-11839.681 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11839.711 WebContent(10851): ImageDecoder disconnected trying to decode image
-11840.091 WebContent(10851): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.selectionStart'
-11840.281 WebContent(10851): ImageDecoder disconnected trying to decode image
-11844.321 WebContent(10851): Web::EventHandler: Clicking on a link to https://raw.githubusercontent.com/joshuacline/documentation/main/windick/png/00.png
-11845.071 WebContent(10851): ImageDecoder disconnected trying to decode image
-11845.101 WebContent(10851): ResourceLoader: Failed load of: "https://raw.githubusercontent.com/favicon.ico", Error: Load failed: 400, Duration: 30ms
-11967.831 WebContent(10851): ImageDecoder disconnected trying to decode image
-11967.881 WebContent(10851): ResourceLoader: Failed load of: "https://raw.githubusercontent.com/favicon.ico", Error: Load failed: 400, Duration: 40ms
- 10831 Lost connection to RequestServer
-
-real    226m51.980s
-user    105m40.118s
-sys     5m25.195s
-Sat Jul 27 14:14:06 EDT 2024
+real    7m40.928s
+user    49m46.491s
+sys     2m55.812s
+Sat Jul 27 14:42:26 EDT 2024
+kushal@kus2023:~/src/ladybird$
 kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull originmaster; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
