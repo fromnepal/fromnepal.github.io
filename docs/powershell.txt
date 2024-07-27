@@ -1,144 +1,393 @@
-PowerShell 7.4.3
+Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_64)
 
-   A new PowerShell stable release is available: v7.4.4
-   Upgrade now, or check out the release page at:
-     https://aka.ms/PowerShell-Release?tag=v7.4.4
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
 
-Loading personal and system profiles took 513ms.
-PS C:\Users\kushal>
-PS C:\Users\kushal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
 
-Friday, July 26, 2024 4:50:26 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.14s.
-Friday, July 26, 2024 4:50:46 PM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.2.13 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 152ms
-Done in 2.55s.
-Friday, July 26, 2024 4:50:49 PM
-warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Friday, July 26, 2024 4:50:49 PM
-[main 872d42f] build application
- 2 files changed, 80 insertions(+)
-Friday, July 26, 2024 4:50:49 PM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Current branch main is up to date.
-Friday, July 26, 2024 4:50:51 PM
-Enumerating objects: 9, done.
-Counting objects: 100% (9/9), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 639 bytes | 639.00 KiB/s, done.
-Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   14de525..872d42f  main -> main
-Friday, July 26, 2024 4:50:51 PM
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
 
-PS C:\Users\kushal\src\myhtml\fromnepal>
-PS C:\Users\kushal\src\myhtml\fromnepal>
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --restrict-filenames --add-metadata -i "https://youtu.be/TT6O6NhZWg0"; date;
+This message is shown once a day. To disable it please create the
+/home/kushal/.hushlogin file.
+kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; timegit status; date; time ./Meta/ladybird.sh run ladybird; date;
+[sudo] password for kushal:
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1888 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1108 kB]
+Get:8 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [886 kB]
+Fetched 4267 kB in 1s (4209 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+2 packages can be upgraded. Run 'apt list --upgradable' to see them.
 
-Saturday, July 27, 2024 10:26:18 AM
+real    0m6.858s
+user    0m0.031s
+sys     0m0.000s
+Listing... Done
+libldap-2.5-0/jammy-updates 2.5.18+dfsg-0ubuntu0.22.04.2 amd64 [upgradable from: 2.5.18+dfsg-0ubuntu0.22.04.1]
+libldap-common/jammy-updates 2.5.18+dfsg-0ubuntu0.22.04.2 all [upgradable from: 2.5.18+dfsg-0ubuntu0.22.04.1]
 
-Drive        :
-Provider     : Microsoft.PowerShell.Core\FileSystem
-ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
-Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+real    0m0.191s
+user    0m0.181s
+sys     0m0.010s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
+  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
+  libavfilter7
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+The following packages will be upgraded:
+  libldap-2.5-0 libldap-common
+2 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 199 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-2.5-0 amd64 2.5.18+dfsg-0ubuntu0.22.04.2 [183 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-common all 2.5.18+dfsg-0ubuntu0.22.04.2 [15.9 kB]
+Fetched 199 kB in 0s (883 kB/s)
+(Reading database ... 62521 files and directories currently installed.)
+Preparing to unpack .../libldap-2.5-0_2.5.18+dfsg-0ubuntu0.22.04.2_amd64.deb ...
+Unpacking libldap-2.5-0:amd64 (2.5.18+dfsg-0ubuntu0.22.04.2) over (2.5.18+dfsg-0ubuntu0.22.04.1) ...
+Preparing to unpack .../libldap-common_2.5.18+dfsg-0ubuntu0.22.04.2_all.deb ...
+Unpacking libldap-common (2.5.18+dfsg-0ubuntu0.22.04.2) over (2.5.18+dfsg-0ubuntu0.22.04.1) ...
+Setting up libldap-common (2.5.18+dfsg-0ubuntu0.22.04.2) ...
+Setting up libldap-2.5-0:amd64 (2.5.18+dfsg-0ubuntu0.22.04.2) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
 
-Saturday, July 27, 2024 10:26:18 AM
-[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-i', 'https://youtu.be/TT6O6NhZWg0']
-[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
-[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
-[debug] yt-dlp version stable@2024.07.16 from yt-dlp/yt-dlp [89a161e8c] (win_exe)
-[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
-[debug] exe versions: ffmpeg 7.0.1-full_build-www.gyan.dev (setts), ffprobe 7.0.1-full_build-www.gyan.dev
-[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
-[debug] Proxy map: {}
-[debug] Request Handlers: urllib, requests, websockets, curl_cffi
-[debug] Loaded 1829 extractors
-[youtube] Extracting URL: https://youtu.be/TT6O6NhZWg0
-[youtube] TT6O6NhZWg0: Downloading webpage
-[youtube] TT6O6NhZWg0: Downloading ios player API JSON
-[youtube] TT6O6NhZWg0: Downloading player 1f8742dc
-WARNING: [youtube] TT6O6NhZWg0: nsig extraction failed: Some formats may be missing
-         n = FVeqRBn_1DY-VodA6 ; player = https://www.youtube.com/s/player/1f8742dc/player_ias.vflset/en_US/base.js
-[debug] [youtube] Unable to extract nsig function code (caused by RegexNotFoundError('Unable to extract \x1b[0;94mInitial JS player n function name\x1b[0m; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U')); please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
-WARNING: [youtube] TT6O6NhZWg0: nsig extraction failed: Some formats may be missing
-         n = L-dH8_Me70LaFwL2A ; player = https://www.youtube.com/s/player/1f8742dc/player_ias.vflset/en_US/base.js
-[youtube] TT6O6NhZWg0: Downloading m3u8 information
-[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
-[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
-[debug] Default format spec: bestvideo*+bestaudio/best
-[info] TT6O6NhZWg0: Downloading 1 format(s): 617+140
-[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1722111978/ei/igOlZvOfMa-FkucPp_iy2A8/ip/70.104.195.206/id/4d3e8ee8d8595a0d/itag/617/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D10819136%3Bdur%3D53.200%3Bgir%3Dyes%3Bitag%3D303%3Blmt%3D1716242471001959/rqh/1/hls_chunk_host/rr2---sn-8xgp1vo-gpjl.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/mh/v7/mm/31,29/mn/sn-8xgp1vo-gpjl,sn-8xgp1vo-p5qee/ms/au,rdu/mv/m/mvi/2/pl/20/initcwndbps/1125000/vprv/1/playlist_type/DVR/dover/13/txp/630A224/mt/1722089840/fvip/7/short_key/1/keepalive/yes/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,vprv,playlist_type/sig/AJfQdSswRQIhAJ0R89fFKhZKz76o2366LuUCB1j-dlNPJtfC4GOJL6rnAiAvN2wtIpQyhOdALbtyOYEjW8Imem-kE8do05ZtsY_Aog%3D%3D/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl,initcwndbps/lsig/AGtxev0wRAIgTCcPHQ0Q6IWagSgcz8LTNa3VGZyXdPEK11pCvo1MWJYCIGKn5Tbjbu1n37VI3v-rwDb-hoZklp2JwvoiCsjCxPSp/playlist/index.m3u8"
-[hlsnative] Downloading m3u8 manifest
-[hlsnative] Total fragments: 12
-[download] Destination: Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].f617.mp4
-[debug] File locking is not supported. Proceeding without locking
-[download] 100% of   10.33MiB in 00:00:04 at 2.55MiB/s
-[debug] Invoking http downloader on "https://rr2---sn-8xgp1vo-gpjl.googlevideo.com/videoplayback?expire=1722111978&ei=igOlZvOfMa-FkucPp_iy2A8&ip=70.104.195.206&id=o-AEVtcMX_wrcueoW0OkkB88iYCuBMCG2nk8yA4Tp4KFDR&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=v7&mm=31%2C29&mn=sn-8xgp1vo-gpjl%2Csn-8xgp1vo-p5qee&ms=au%2Crdu&mv=m&mvi=2&pl=20&initcwndbps=1125000&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=862568&dur=53.243&lmt=1716242456540051&mt=1722089840&fvip=7&keepalive=yes&c=IOS&txp=6308224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgWMCe6NG-B9S1F87BSz3ZSuB76LLH6_Qqt3rpKruqL70CIQD9fKkKMghSdDYZZy5CmAUquA7v-jyp--cfCUkeRGUvVg%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRAIgTwYusYqq5DWO8lxz0c3ceQqiyYO66PgDiwJbVN10bNICIAZQkdahenPCfp4hBdRGo8yA-aisoLgvAA8QDtOf2wKu"
-[download] Destination: Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].f140.m4a
-[download] 100% of  842.35KiB in 00:00:00 at 2.47MiB/s
-[Merger] Merging formats into "Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].f617.mp4" -i "file:Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].f140.m4a" -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart "file:Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].temp.mp4"
-Deleting original file Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].f617.mp4 (pass -k to keep)
-Deleting original file Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].f140.m4a (pass -k to keep)
-[Metadata] Adding metadata to "Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].mp4" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata"title=Cops Say They Have a Warrant? Here's What to Do 👮‍♂️🏡 #lawyerreacts" -metadata "date=20240120" -metadata "description=What happens if the cops come to your door claiming to have a search warrant? First, ask for a copy of the search warrant. Sometimes, cops are sneaky and lie about having a search warrant, so make sure they actually have it.
+real    0m1.405s
+user    0m0.001s
+sys     0m0.006s
+On branch master
+Your branch is up to date with 'origin/master'.
 
-Second, tell the supervisor that you do not consent to any search of a person, place, or item that's not included in the warrant. This can help incriminating items be thrown out as evidence if they were foundduring an illegal search.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
 
-Lastly, invoke your Fifth Amendment right to remain silent. Do not answer any questions. Just stand there and respectfully remain silent." -metadata "synopsis=What happens if the cops come to your door claiming to have a search warrant? First, ask for a copy of the search warrant. Sometimes, cops are sneaky and lie about having a search warrant, so make sure they actually have it.
+nothing added to commit but untracked files present (use "git add" to track)
 
-Second, tell the supervisor that you do not consent to any search of a person, place, or item that's not included in the warrant. This can help incriminating items be thrown out as evidence if they were foundduring an illegal search.
+real    0m0.062s
+user    0m0.008s
+sys     0m0.083s
+remote: Enumerating objects: 1009, done.
+remote: Counting objects: 100% (572/572), done.
+remote: Compressing objects: 100% (162/162), done.
+remote: Total 1009 (delta 470), reused 417 (delta 410), pack-reused 437
+Receiving objects: 100% (1009/1009), 1.89 MiB | 11.87 MiB/s, done.
+Resolving deltas: 100% (649/649), completed with 129 local objects.
+From https://github.com/LadybirdBrowser/ladybird
+   132ab775d8..a168bec7ef  master     -> origin/master
 
-Lastly, invoke your Fifth Amendment right to remain silent. Do not answer any questions. Just stand there and respectfully remain silent." -metadata "purl=https://www.youtube.com/watch?v=TT6O6NhZWg0" -metadata "comment=https://www.youtube.com/watch?v=TT6O6NhZWg0" -metadata "artist=Hampton Law" -metadata:s:1 "language=eng" -movflags +faststart "file:Cops_Say_They_Have_a_Warrant_Here_s_What_to_Do_lawyerreacts-[TT6O6NhZWg0].temp.mp4"
-Saturday, July 27, 2024 10:26:34 AM
+real    0m1.019s
+user    0m0.118s
+sys     0m0.071s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Updating 132ab775d8..a168bec7ef
+Fast-forward
+ .github/workflows/lagom-template.yml                                                     |   8 ++
+ AK/LEB128.h                                                                              |  34 ++++-----
+ AK/SIMDExtras.h                                                                          |   9 +--
+ CONTRIBUTING.md                                                                          |   1 +
+ Documentation/BuildInstructionsLadybird.md                                               |  18 +++++
+ ISSUES.md                                                                                |  93 +++++++++++++++++++++++
+ Ladybird/CMakeLists.txt                                                                  |  10 ++-
+ Meta/CMake/code_generators.cmake                                                         |   4 +-
+ Meta/CMake/common_options.cmake                                                          |   2 +
+ Meta/CMake/libtextcodec_generators.cmake                                                 |   4 +-
+ Meta/CMake/libweb_generators.cmake                                                       |  40 +++++-----
+ Meta/CMake/skia.cmake                                                                    |  22 ++++++
+ Meta/Lagom/CMakeLists.txt                                                                |  60 ++++++++-------
+ Meta/Lagom/ClangPlugins/CMakeLists.txt                                                   |   4 +
+ Meta/Lagom/ClangPlugins/LibJSGCPluginAction.cpp                                          |  25 ++++--
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/BindingsGenerator/IDLGenerators.cpp               |  51 +------------
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/GenerateCSSPropertyID.cpp                         |  28 ++++++-
+ README.md                                                                                |   2 +-
+ Tests/ClangPlugins/CMakeLists.txt                                                        |   5 +-
+ Tests/ClangPlugins/LibJSGCTests/strong_root_fields_in_gc_allocated_types.cpp             |   2 +
+ Tests/LibMedia/CMakeLists.txt                                                            |   7 --
+ Tests/LibWeb/Layout/expected/block-and-inline/relpos-inline-element-js-offsets.txt       |   8 +-
+ Tests/LibWeb/Layout/expected/css-counters/basic.txt                                      | 134 ++++++++++++++++++++++++++++++++
+ Tests/LibWeb/Layout/expected/css-counters/counters-function.txt                          | 254 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Tests/LibWeb/Layout/expected/css-counters/hidden-elements.txt                            |  67 ++++++++++++++++
+ Tests/LibWeb/Layout/expected/grid/fit-content-1.txt                                      |  21 +++++
+ Tests/LibWeb/Layout/expected/grid/fit-content-2.txt                                      |  46 +++++++++++
+ Tests/LibWeb/Layout/input/css-counters/basic.html                                        |  12 +++
+ Tests/LibWeb/Layout/input/css-counters/counters-function.html                            |  36 +++++++++
+ Tests/LibWeb/Layout/input/css-counters/hidden-elements.html                              |   8 ++
+ Tests/LibWeb/Layout/input/grid/fit-content-1.html                                        |  15 ++++
+ Tests/LibWeb/Layout/input/grid/fit-content-2.html                                        |  25 ++++++
+ Tests/LibWeb/Screenshot/canvas-fillstyle-rgb.html                                        |   8 +-
+ Tests/LibWeb/Screenshot/images/alt-frame.png                                             | Bin 4339 -> 4633 bytes
+ Tests/LibWeb/Screenshot/images/canvas-fillstyle-rgb.png                                  | Bin 264 -> 566 bytes
+ Tests/LibWeb/Screenshot/images/css-background-clip-text.png                              | Bin 278629 -> 274655 bytes
+ Tests/LibWeb/Screenshot/images/css-color-functions-ref.png                               | Bin 117427 -> 109293 bytes
+ Tests/LibWeb/Screenshot/images/css-transform-box-ref.png                                 | Bin 6083 -> 6502 bytes
+ Tests/LibWeb/Screenshot/images/inline-node-ref.png                                       | Bin 16903 -> 16978 bytes
+ Tests/LibWeb/Screenshot/images/input-placeholder-ref.png                                 | Bin 4338 -> 4541 bytes
+ Tests/LibWeb/Screenshot/images/object-fit-position.png                                   | Bin 671505 -> 690108 bytes
+ Tests/LibWeb/Screenshot/images/text-decorations.png                                      | Bin 6975 -> 7925 bytes
+ Tests/LibWeb/Screenshot/images/text-shadow-ref.png                                       | Bin 74782 -> 80060 bytes
+ Tests/LibWeb/Text/expected/DOM/CDATASection-cloneNode.txt                                |   1 +
+ Tests/LibWeb/Text/expected/DOM/Document-createElementNS-uppercase.txt                    |   4 +
+ Tests/LibWeb/Text/expected/DOM/Node-nodeName.txt                                         |   9 +++
+ Tests/LibWeb/Text/expected/DOM/Offset-of-empty-inline-element.txt                        |   4 +-
+ Tests/LibWeb/Text/expected/DOM/Range-containing-CDATASection.txt                         |   1 +
+ Tests/LibWeb/Text/expected/FileAPI/Blob-intialized-with-strings-read-from-bytes.txt      |   1 +
+ Tests/LibWeb/Text/expected/HTML/HTMLMediaElement-addTextTrack.txt                        |   5 ++
+ Tests/LibWeb/Text/expected/HTML/HTMLSelectElement-can-select-option-in-JS.txt            |   1 +
+ Tests/LibWeb/Text/expected/HTML/HTMLSelectElement-options-available-after-add.txt        |   1 +
+ Tests/LibWeb/Text/expected/HTML/HTMLSelectElement-options-available-at-load.txt          |   1 +
+ Tests/LibWeb/Text/expected/HTML/submit-button-click-when-disabled.txt                    |   1 +
+ Tests/LibWeb/Text/expected/ShadowDOM/css-variable-inheritance-across-shadow-boundary.txt |   1 +
+ Tests/LibWeb/Text/expected/XHTML/script-execution.txt                                    |   1 +
+ Tests/LibWeb/Text/expected/XHTML/script-execution.xhtml.txt                              |   0
+ Tests/LibWeb/Text/expected/canvas/fillstyle.txt                                          |   8 +-
+ Tests/LibWeb/Text/expected/css/custom-ident-parsing.txt                                  |  16 ++++
+ Tests/LibWeb/Text/expected/css/getComputedStyle-print-all.txt                            |   5 +-
+ Tests/LibWeb/Text/expected/select.txt                                                    |   2 +-
+ Tests/LibWeb/Text/input/DOM/CDATASection-cloneNode.html                                  |   9 +++
+ Tests/LibWeb/Text/input/DOM/Document-createElementNS-uppercase.html                      |  16 ++++
+ Tests/LibWeb/Text/input/DOM/Node-nodeName.html                                           |  28 +++++++
+ Tests/LibWeb/Text/input/DOM/Range-containing-CDATASection.html                           |  11 +++
+ Tests/LibWeb/Text/input/FileAPI/Blob-intialized-with-strings-read-from-bytes.html        |  13 ++++
+ Tests/LibWeb/Text/input/HTML/HTMLMediaElement-addTextTrack.html                          |  16 ++++
+ Tests/LibWeb/Text/input/HTML/HTMLSelectElement-can-select-option-in-JS.html              |  16 ++++
+ Tests/LibWeb/Text/input/HTML/HTMLSelectElement-options-available-after-add.html          |  20 +++++
+ Tests/LibWeb/Text/input/HTML/HTMLSelectElement-options-available-at-load.html            |  14 ++++
+ Tests/LibWeb/Text/input/HTML/submit-button-click-when-disabled.html                      |  12 +++
+ Tests/LibWeb/Text/input/ShadowDOM/css-variable-inheritance-across-shadow-boundary.html   |  20 +++++
+ Tests/LibWeb/Text/input/XHTML/script-execution.xhtml                                     |  10 +++
+ Tests/LibWeb/Text/input/canvas/fillstyle.html                                            |  10 ++-
+ Tests/LibWeb/Text/input/css/custom-ident-parsing.html                                    |  14 ++++
+ Userland/Libraries/LibCore/MimeData.cpp                                                  |   1 +
+ Userland/Libraries/LibGfx/CMakeLists.txt                                                 |  13 +++-
+ Userland/Libraries/LibGfx/Font/Font.h                                                    |   4 +
+ Userland/Libraries/LibGfx/Font/OpenType/Typeface.cpp                                     |   4 +-
+ Userland/Libraries/LibGfx/Font/OpenType/Typeface.h                                       |  14 +++-
+ Userland/Libraries/LibGfx/Font/ScaledFont.h                                              |   6 ++
+ Userland/Libraries/LibGfx/Font/ScaledFontSkia.cpp                                        |  21 +++++
+ Userland/Libraries/LibGfx/Font/Typeface.cpp                                              |   4 +
+ Userland/Libraries/LibGfx/Font/Typeface.h                                                |   8 ++
+ Userland/Libraries/LibGfx/Font/TypefaceSkia.cpp                                          |  45 +++++++++++
+ Userland/Libraries/LibJS/Heap/Cell.h                                                     |   8 ++
+ Userland/Libraries/LibLine/Editor.cpp                                                    |   4 -
+ Userland/Libraries/LibLine/Editor.h                                                      |   2 +
+ Userland/Libraries/LibLine/InternalFunctions.cpp                                         |   4 -
+ Userland/Libraries/LibLine/KeyCallbackMachine.cpp                                        |   4 -
+ Userland/Libraries/LibThreading/BackgroundAction.cpp                                     |   3 +
+ Userland/Libraries/LibWasm/Parser/Parser.cpp                                             |  20 ++---
+ Userland/Libraries/LibWasm/Types.h                                                       |   4 +-
+ Userland/Libraries/LibWeb/Animations/AnimationEffect.cpp                                 |   6 +-
+ Userland/Libraries/LibWeb/Animations/KeyframeEffect.cpp                                  |   6 +-
+ Userland/Libraries/LibWeb/Bindings/PlatformObject.cpp                                    |  46 ++++++-----
+ Userland/Libraries/LibWeb/Bindings/PlatformObject.h                                      |   9 ++-
+ Userland/Libraries/LibWeb/CMakeLists.txt                                                 |  27 +------
+ Userland/Libraries/LibWeb/CSS/CSSNumericType.cpp                                         |   1 +
+ Userland/Libraries/LibWeb/CSS/CSSRuleList.cpp                                            |  13 +---
+ Userland/Libraries/LibWeb/CSS/CSSRuleList.h                                              |   3 +-
+ Userland/Libraries/LibWeb/CSS/ComputedValues.h                                           |  14 ++++
+ Userland/Libraries/LibWeb/CSS/CountersSet.cpp                                            | 103 +++++++++++++++++++++++++
+ Userland/Libraries/LibWeb/CSS/CountersSet.h                                              |  50 ++++++++++++
+ Userland/Libraries/LibWeb/CSS/FontFace.cpp                                               |  18 ++---
+ Userland/Libraries/LibWeb/CSS/GridTrackSize.cpp                                          |  35 ++++++++-
+ Userland/Libraries/LibWeb/CSS/GridTrackSize.h                                            |  33 +++++++-
+ Userland/Libraries/LibWeb/CSS/MediaList.cpp                                              |  11 +--
+ Userland/Libraries/LibWeb/CSS/MediaList.h                                                |   3 +-
+ Userland/Libraries/LibWeb/CSS/Parser/Helpers.cpp                                         |  27 +++----
+ Userland/Libraries/LibWeb/CSS/Parser/Parser.cpp                                          | 379 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++---------------
+ Userland/Libraries/LibWeb/CSS/Parser/Parser.h                                            |  16 +++-
+ Userland/Libraries/LibWeb/CSS/Parser/Tokenizer.cpp                                       | 130 +++++++++++++++----------------
+ Userland/Libraries/LibWeb/CSS/Parser/Tokenizer.h                                         |  18 ++---
+ Userland/Libraries/LibWeb/CSS/Properties.json                                            | 219 +++++++++++++++++++++++++++++++++++++++++------------
+ Userland/Libraries/LibWeb/CSS/StyleProperties.cpp                                        |  50 +++++++++++-
+ Userland/Libraries/LibWeb/CSS/StyleProperties.h                                          |   3 +-
+ Userland/Libraries/LibWeb/CSS/StyleSheetList.cpp                                         |  15 +---
+ Userland/Libraries/LibWeb/CSS/StyleSheetList.h                                           |   3 +-
+ Userland/Libraries/LibWeb/CSS/StyleValue.cpp                                             |   2 +
+ Userland/Libraries/LibWeb/CSS/StyleValue.h                                               |   2 +
+ Userland/Libraries/LibWeb/CSS/StyleValues/AbstractImageStyleValue.h                      |   2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/ConicGradientStyleValue.cpp                    |   4 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/ConicGradientStyleValue.h                      |   2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/CounterDefinitionsStyleValue.cpp               |  46 +++++++++++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CounterDefinitionsStyleValue.h                 |  47 ++++++++++++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CounterStyleValue.cpp                          | 175 ++++++++++++++++++++++++++++++++++++++++++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CounterStyleValue.h                            |  55 ++++++++++++++
+ Userland/Libraries/LibWeb/CSS/StyleValues/ImageStyleValue.cpp                            |   4 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/ImageStyleValue.h                              |   2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/LinearGradientStyleValue.cpp                   |   4 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/LinearGradientStyleValue.h                     |   2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/RadialGradientStyleValue.cpp                   |   4 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/RadialGradientStyleValue.h                     |   2 +-
+ Userland/Libraries/LibWeb/CSS/SyntaxHighlighter/SyntaxHighlighter.cpp                    |   2 +-
+ Userland/Libraries/LibWeb/Clipboard/Clipboard.cpp                                        |   2 +-
+ Userland/Libraries/LibWeb/DOM/DOMTokenList.cpp                                           |  10 +--
+ Userland/Libraries/LibWeb/DOM/DOMTokenList.h                                             |   3 +-
+ Userland/Libraries/LibWeb/DOM/Document.cpp                                               |   4 +-
+ Userland/Libraries/LibWeb/DOM/Document.h                                                 |   4 +-
+ Userland/Libraries/LibWeb/DOM/DocumentType.h                                             |   2 +-
+ Userland/Libraries/LibWeb/DOM/Element.cpp                                                | 113 +++++++++++++++++++++++++--
+ Userland/Libraries/LibWeb/DOM/Element.h                                                  |   9 +++
+ Userland/Libraries/LibWeb/DOM/ElementFactory.cpp                                         | 142 +++++++++++++++++-----------------
+ Userland/Libraries/LibWeb/DOM/HTMLCollection.cpp                                         |  80 +++++++++----------
+ Userland/Libraries/LibWeb/DOM/HTMLCollection.h                                           |   8 +-
+ Userland/Libraries/LibWeb/DOM/HTMLFormControlsCollection.cpp                             |   2 +-
+ Userland/Libraries/LibWeb/DOM/HTMLFormControlsCollection.h                               |   2 +-
+ Userland/Libraries/LibWeb/DOM/LiveNodeList.cpp                                           |   8 --
+ Userland/Libraries/LibWeb/DOM/LiveNodeList.h                                             |   2 -
+ Userland/Libraries/LibWeb/DOM/NamedNodeMap.cpp                                           |  12 +--
+ Userland/Libraries/LibWeb/DOM/NamedNodeMap.h                                             |   5 +-
+ Userland/Libraries/LibWeb/DOM/Node.cpp                                                   |   9 ++-
+ Userland/Libraries/LibWeb/DOM/Node.h                                                     |   3 +-
+ Userland/Libraries/LibWeb/DOM/NodeList.cpp                                               |   9 +--
+ Userland/Libraries/LibWeb/DOM/NodeList.h                                                 |   3 +-
+ Userland/Libraries/LibWeb/DOM/StaticNodeList.cpp                                         |   8 --
+ Userland/Libraries/LibWeb/DOM/StaticNodeList.h                                           |   2 -
+ Userland/Libraries/LibWeb/DOMURL/DOMURL.cpp                                              |   2 +-
+ Userland/Libraries/LibWeb/Fetch/Fetching/Fetching.cpp                                    |  11 ++-
+ Userland/Libraries/LibWeb/Fetch/Infrastructure/HTTP/Bodies.cpp                           |   2 +-
+ Userland/Libraries/LibWeb/FileAPI/Blob.cpp                                               |  28 ++++++-
+ Userland/Libraries/LibWeb/FileAPI/Blob.h                                                 |   3 +-
+ Userland/Libraries/LibWeb/FileAPI/Blob.idl                                               |   1 +
+ Userland/Libraries/LibWeb/FileAPI/FileList.cpp                                           |  15 +---
+ Userland/Libraries/LibWeb/FileAPI/FileList.h                                             |   3 +-
+ Userland/Libraries/LibWeb/Forward.h                                                      |   4 +
+ Userland/Libraries/LibWeb/Geometry/DOMRectList.cpp                                       |   9 +--
+ Userland/Libraries/LibWeb/Geometry/DOMRectList.h                                         |   3 +-
+ Userland/Libraries/LibWeb/HTML/Canvas/CanvasFillStrokeStyles.h                           |  83 +++++++++++++++-----
+ Userland/Libraries/LibWeb/HTML/DOMStringMap.cpp                                          |   2 +-
+ Userland/Libraries/LibWeb/HTML/DOMStringMap.h                                            |   2 +-
+ Userland/Libraries/LibWeb/HTML/DragEvent.cpp                                             |   6 ++
+ Userland/Libraries/LibWeb/HTML/DragEvent.h                                               |   1 +
+ Userland/Libraries/LibWeb/HTML/EventLoop/EventLoop.cpp                                   |   2 +-
+ Userland/Libraries/LibWeb/HTML/FormControlInfrastructure.cpp                             |   4 +-
+ Userland/Libraries/LibWeb/HTML/HTMLAllCollection.cpp                                     |  13 ++--
+ Userland/Libraries/LibWeb/HTML/HTMLAllCollection.h                                       |   5 +-
+ Userland/Libraries/LibWeb/HTML/HTMLElement.cpp                                           |  58 +++++++++++---
+ Userland/Libraries/LibWeb/HTML/HTMLFormElement.cpp                                       |  15 ++--
+ Userland/Libraries/LibWeb/HTML/HTMLFormElement.h                                         |   5 +-
+ Userland/Libraries/LibWeb/HTML/HTMLMediaElement.cpp                                      |  36 +++++++++
+ Userland/Libraries/LibWeb/HTML/HTMLMediaElement.h                                        |   2 +
+ Userland/Libraries/LibWeb/HTML/HTMLMediaElement.idl                                      |   3 +-
+ Userland/Libraries/LibWeb/HTML/HTMLOptionElement.cpp                                     |  12 ++-
+ Userland/Libraries/LibWeb/HTML/HTMLOptionElement.h                                       |   1 +
+ Userland/Libraries/LibWeb/HTML/HTMLScriptElement.cpp                                     |   4 +-
+ Userland/Libraries/LibWeb/HTML/HTMLSelectElement.cpp                                     |  80 ++++++++++++++++---
+ Userland/Libraries/LibWeb/HTML/HTMLSelectElement.h                                       |   2 +
+ Userland/Libraries/LibWeb/HTML/MimeTypeArray.cpp                                         |  14 +---
+ Userland/Libraries/LibWeb/HTML/MimeTypeArray.h                                           |   5 +-
+ Userland/Libraries/LibWeb/HTML/Plugin.cpp                                                |  14 +---
+ Userland/Libraries/LibWeb/HTML/Plugin.h                                                  |   5 +-
+ Userland/Libraries/LibWeb/HTML/PluginArray.cpp                                           |  14 +---
+ Userland/Libraries/LibWeb/HTML/PluginArray.h                                             |   5 +-
+ Userland/Libraries/LibWeb/HTML/Scripting/Environments.h                                  |   2 +
+ Userland/Libraries/LibWeb/HTML/SourceSet.cpp                                             |   2 +-
+ Userland/Libraries/LibWeb/HTML/Storage.cpp                                               |   2 +-
+ Userland/Libraries/LibWeb/HTML/Storage.h                                                 |   2 +-
+ Userland/Libraries/LibWeb/HTML/TextTrack.cpp                                             |  11 +++
+ Userland/Libraries/LibWeb/HTML/TextTrack.h                                               |  18 +++++
+ Userland/Libraries/LibWeb/HTML/TextTrack.idl                                             |   2 +-
+ Userland/Libraries/LibWeb/HTML/TraversableNavigable.cpp                                  |  10 +--
+ Userland/Libraries/LibWeb/HTML/Window.cpp                                                |   2 +-
+ Userland/Libraries/LibWeb/HTML/Window.h                                                  |   2 +-
+ Userland/Libraries/LibWeb/HTML/WindowOrWorkerGlobalScope.cpp                             |   2 +-
+ Userland/Libraries/LibWeb/Layout/FlexFormattingContext.cpp                               |   8 --
+ Userland/Libraries/LibWeb/Layout/FormattingContext.h                                     |   8 ++
+ Userland/Libraries/LibWeb/Layout/GridFormattingContext.cpp                               |  21 ++++-
+ Userland/Libraries/LibWeb/Layout/Node.cpp                                                |   5 +-
+ Userland/Libraries/LibWeb/Layout/TreeBuilder.cpp                                         |   4 +-
+ Userland/Libraries/LibWeb/Loader/ResourceLoader.h                                        |  12 ++-
+ Userland/Libraries/LibWeb/Painting/BackgroundPainting.cpp                                |  50 +++---------
+ Userland/Libraries/LibWeb/Painting/Command.h                                             |  17 +++--
+ Userland/Libraries/LibWeb/Painting/DisplayList.cpp                                       |  18 +++--
+ Userland/Libraries/LibWeb/Painting/DisplayList.h                                         |  19 ++++-
+ Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.cpp                             |  98 ++++++++++++++----------
+ Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.h                               |  30 ++++----
+ Userland/Libraries/LibWeb/Painting/DisplayListRecorder.cpp                               |  35 ++++-----
+ Userland/Libraries/LibWeb/Painting/DisplayListRecorder.h                                 |  18 ++---
+ Userland/Libraries/LibWeb/Painting/SVGMaskable.cpp                                       |   8 +-
+ Userland/Libraries/LibWeb/SVG/SVGDecodedImageData.cpp                                    |   6 +-
+ Userland/Libraries/LibWeb/WebSockets/WebSocket.cpp                                       |   2 +-
+ Userland/Libraries/LibWeb/XML/XMLDocumentBuilder.cpp                                     |  20 ++---
+ Userland/Libraries/LibWebView/CMakeLists.txt                                             |  22 +++---
+ Userland/Libraries/LibWebView/ViewImplementation.cpp                                     |   1 +
+ Userland/Services/WebContent/BackingStoreManager.h                                       |   3 +-
+ Userland/Services/WebContent/ConsoleGlobalEnvironmentExtensions.cpp                      |   3 +-
+ Userland/Utilities/js.cpp                                                                |  16 ++++
+ 229 files changed, 3442 insertions(+), 1049 deletions(-)
+ create mode 100644 ISSUES.md
+ create mode 100644 Meta/CMake/skia.cmake
+ create mode 100644 Tests/LibWeb/Layout/expected/css-counters/basic.txt
+ create mode 100644 Tests/LibWeb/Layout/expected/css-counters/counters-function.txt
+ create mode 100644 Tests/LibWeb/Layout/expected/css-counters/hidden-elements.txt
+ create mode 100644 Tests/LibWeb/Layout/expected/grid/fit-content-1.txt
+ create mode 100644 Tests/LibWeb/Layout/expected/grid/fit-content-2.txt
+ create mode 100644 Tests/LibWeb/Layout/input/css-counters/basic.html
+ create mode 100644 Tests/LibWeb/Layout/input/css-counters/counters-function.html
+ create mode 100644 Tests/LibWeb/Layout/input/css-counters/hidden-elements.html
+ create mode 100644 Tests/LibWeb/Layout/input/grid/fit-content-1.html
+ create mode 100644 Tests/LibWeb/Layout/input/grid/fit-content-2.html
+ create mode 100644 Tests/LibWeb/Text/expected/DOM/CDATASection-cloneNode.txt
+ create mode 100644 Tests/LibWeb/Text/expected/DOM/Document-createElementNS-uppercase.txt
+ create mode 100644 Tests/LibWeb/Text/expected/DOM/Node-nodeName.txt
+ create mode 100644 Tests/LibWeb/Text/expected/DOM/Range-containing-CDATASection.txt
+ create mode 100644 Tests/LibWeb/Text/expected/FileAPI/Blob-intialized-with-strings-read-from-bytes.txt
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/HTMLMediaElement-addTextTrack.txt
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/HTMLSelectElement-can-select-option-in-JS.txt
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/HTMLSelectElement-options-available-after-add.txt
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/HTMLSelectElement-options-available-at-load.txt
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/submit-button-click-when-disabled.txt
+ create mode 100644 Tests/LibWeb/Text/expected/ShadowDOM/css-variable-inheritance-across-shadow-boundary.txt
+ create mode 100644 Tests/LibWeb/Text/expected/XHTML/script-execution.txt
+ create mode 100644 Tests/LibWeb/Text/expected/XHTML/script-execution.xhtml.txt
+ create mode 100644 Tests/LibWeb/Text/expected/css/custom-ident-parsing.txt
+ create mode 100644 Tests/LibWeb/Text/input/DOM/CDATASection-cloneNode.html
+ create mode 100644 Tests/LibWeb/Text/input/DOM/Document-createElementNS-uppercase.html
+ create mode 100644 Tests/LibWeb/Text/input/DOM/Node-nodeName.html
+ create mode 100644 Tests/LibWeb/Text/input/DOM/Range-containing-CDATASection.html
+ create mode 100644 Tests/LibWeb/Text/input/FileAPI/Blob-intialized-with-strings-read-from-bytes.html
+ create mode 100644 Tests/LibWeb/Text/input/HTML/HTMLMediaElement-addTextTrack.html
+ create mode 100644 Tests/LibWeb/Text/input/HTML/HTMLSelectElement-can-select-option-in-JS.html
+ create mode 100644 Tests/LibWeb/Text/input/HTML/HTMLSelectElement-options-available-after-add.html
+ create mode 100644 Tests/LibWeb/Text/input/HTML/HTMLSelectElement-options-available-at-load.html
+ create mode 100644 Tests/LibWeb/Text/input/HTML/submit-button-click-when-disabled.html
+ create mode 100644 Tests/LibWeb/Text/input/ShadowDOM/css-variable-inheritance-across-shadow-boundary.html
+ create mode 100644 Tests/LibWeb/Text/input/XHTML/script-execution.xhtml
+ create mode 100644 Tests/LibWeb/Text/input/css/custom-ident-parsing.html
+ create mode 100644 Userland/Libraries/LibGfx/Font/ScaledFontSkia.cpp
+ create mode 100644 Userland/Libraries/LibGfx/Font/TypefaceSkia.cpp
+ create mode 100644 Userland/Libraries/LibWeb/CSS/CountersSet.cpp
+ create mode 100644 Userland/Libraries/LibWeb/CSS/CountersSet.h
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CounterDefinitionsStyleValue.cpp
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CounterDefinitionsStyleValue.h
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CounterStyleValue.cpp
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CounterStyleValue.h
 
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message"build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+real    0m0.226s
+user    0m0.085s
+sys     0m0.024s
+On branch master
+Your branch is up to date with 'origin/master'.
 
-Saturday, July 27, 2024 10:26:43 AM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.10s.
-Saturday, July 27, 2024 10:26:44 AM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.2.13 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 158ms
-Done in 2.13s.
-Saturday, July 27, 2024 10:26:46 AM
-warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Saturday, July 27, 2024 10:26:46 AM
-On branch main
-Your branch is up to date with 'origin/main'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
 
-nothing to commit, working tree clean
-Saturday, July 27, 2024 10:26:46 AM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Already up to date.
-Saturday, July 27, 2024 10:26:48 AM
-Everything up-to-date
-Saturday, July 27, 2024 10:26:48 AM
+nothing added to commit but untracked files present (use "git add" to track)
 
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+real    0m0.041s
+user    0m0.021s
+sys     0m0.021s
+Sat Jul 27 10:27:14 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
