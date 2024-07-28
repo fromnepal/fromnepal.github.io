@@ -86,3 +86,1098 @@ real    0m0.266s
 user    0m0.014s
 sys     0m0.017s
 kushal@kusfedoravm:~$
+kushal@kusfedoravm:~$ sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download && time sudo dnf offline-upgrade reboot;
+Current date and time: Sun Jul 28 02:02:06 PM EDT 2024
+Fedora 40 - x86_64                                                                                                                                                                                                                                       73 kB/s |  28 kB     00:00
+Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                                                                                                5.7 kB/s | 989  B     00:00
+Fedora 40 - x86_64 - Updates                                                                                                                                                                                                                            194 kB/s |  28 kB     00:00
+Dependencies resolved.
+Nothing to do.
+Complete!
+The system-upgrade transaction is empty, your system is already up-to-date.
+
+real    0m2.050s
+user    0m0.009s
+sys     0m0.021s
+Error: system is not ready for upgrade
+
+real    0m0.271s
+user    0m0.009s
+sys     0m0.020s
+kushal@kusfedoravm:~$ dnf search btop
+Last metadata expiration check: 0:05:39 ago on Sun 28 Jul 2024 01:57:32 PM EDT.
+============================================================================================================================== Name Exactly Matched: btop ==============================================================================================================================
+btop.x86_64 : Modern and colorful command line resource monitor that shows usage and stats
+============================================================================================================================= Name & Summary Matched: btop =============================================================================================================================
+texlive-bibtopic-doc.noarch : Documentation for bibtopic
+texlive-bibtopicprefix.noarch : Prefix references to bibliographies produced by bibtopic
+texlive-bibtopicprefix-doc.noarch : Documentation for bibtopicprefix
+================================================================================================================================== Name Matched: btop ==================================================================================================================================
+texlive-bibtopic.noarch : Include multiple bibliographies in a document
+usbtop.x86_64 : Utility to show USB bandwidth
+kushal@kusfedoravm:~$ btop
+bash: btop: command not found...
+Similar command is: 'top'
+kushal@kusfedoravm:~$ time sudo dnf install btop
+Fedora 40 - x86_64                                                                                                                                                                                                                                       15 MB/s |  20 MB     00:01
+Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                                                                                                2.1 kB/s | 1.4 kB     00:00
+Fedora 40 - x86_64 - Updates                                                                                                                                                                                                                            9.2 MB/s | 9.0 MB     00:00
+Last metadata expiration check: 0:00:01 ago on Sun 28 Jul 2024 02:03:28 PM EDT.
+Dependencies resolved.
+========================================================================================================================================================================================================================================================================================
+ Package                                                          Architecture                                                       Version                                                                   Repository                                                          Size
+========================================================================================================================================================================================================================================================================================
+Installing:
+ btop                                                             x86_64                                                             1.3.2-1.fc40                                                              fedora                                                             596 k
+
+Transaction Summary
+========================================================================================================================================================================================================================================================================================
+Install  1 Package
+
+Total download size: 596 k
+Installed size: 1.5 M
+Is this ok [y/N]: y
+Downloading Packages:
+btop-1.3.2-1.fc40.x86_64.rpm                                                                                                                                                                                                                            887 kB/s | 596 kB     00:00
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                                                                                                                   553 kB/s | 596 kB     00:01
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                                                                                                                                                1/1
+  Installing       : btop-1.3.2-1.fc40.x86_64                                                                                                                                                                                                                                       1/1
+  Running scriptlet: btop-1.3.2-1.fc40.x86_64                                                                                                                                                                                                                                       1/1
+
+Installed:
+  btop-1.3.2-1.fc40.x86_64
+
+Complete!
+
+real    0m15.260s
+user    0m0.009s
+sys     0m0.024s
+kushal@kusfedoravm:~$ btop
+kushal@kusfedoravm:~$ kushal@kusfedoravm:~$
+kushal@kusfedoravm:~$
+kushal@kusfedoravm:~$ btop
+kushal@kusfedoravm:~$ kushal@kusfedoravm:~$
+kushal@kusfedoravm:~$
+kushal@kusfedoravm:~$ git --version
+git version 2.45.2
+kushal@kusfedoravm:~$ ls
+Desktop  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+kushal@kusfedoravm:~$ mkdir bin
+kushal@kusfedoravm:~$ cd bin/
+kushal@kusfedoravm:~/bin$ wget https://github.com/kusl/hellorust20240711/releases/download/202407172004/helloworld
+helloworld           100% [=====================================================================================================================================================================================================================================>]    3.56M    9.42MB/s
+                          [Files: 1  Bytes: 3.56M [4.20MB/s] Redirects: 1  Todo: 0  Errors: 0                                                                                                                                                                    ]
+kushal@kusfedoravm:~/bin$ ls
+helloworld
+kushal@kusfedoravm:~/bin$ helloworld
+-bash: /home/kushal/bin/helloworld: Permission denied
+kushal@kusfedoravm:~/bin$ chmod +x helloworld
+kushal@kusfedoravm:~/bin$ helloworld
+Guess the number!
+Please input your guess.
+12
+You guessed: 12
+Too small!
+The sum of your guess and the secret number is: 96
+The product of your guess and the secret number is: 1008
+The greatest common divisor of your guess and the secret number is: 12
+Please input your guess.
+1
+You guessed: 1
+Too small!
+The sum of your guess and the secret number is: 85
+The product of your guess and the secret number is: 84
+The greatest common divisor of your guess and the secret number is: 1
+Please input your guess.
+86
+You guessed: 86
+Too big!
+The sum of your guess and the secret number is: 170
+The product of your guess and the secret number is: 7224
+The greatest common divisor of your guess and the secret number is: 2
+Please input your guess.
+85
+You guessed: 85
+Too big!
+The sum of your guess and the secret number is: 169
+The product of your guess and the secret number is: 7140
+The greatest common divisor of your guess and the secret number is: 1
+Please input your guess.
+84
+You guessed: 84
+You win!
+Failed to fetch response: error sending request for url (https://nice.runasp.net/Analytics/HelloWorld)
+Press Enter to exit...
+
+kushal@kusfedoravm:~/bin$ openssl s_client -connect nice.runasp.net:443 -servername nice.runasp.net
+bash: openssl: command not found...
+Install package 'openssl' to provide command 'openssl'? [N/y] y
+
+
+ * Waiting in queue...
+ * Loading list of packages....
+The following packages have to be installed:
+ openssl-1:3.2.1-2.fc40.x86_64  Utilities from the general purpose cryptography library with TLS implementation
+Proceed with changes? [N/y] y
+
+
+ * Waiting in queue...
+ * Waiting for authentication... Failed to install packages: Failed to obtain authentication.
+
+kushal@kusfedoravm:~/bin$
+kushal@kusfedoravm:~/bin$ openssl s_client -connect nice.runasp.net:443 -servername nice.runasp.net
+bash: openssl: command not found...
+Install package 'openssl' to provide command 'openssl'? [N/y] y
+
+
+ * Waiting in queue...
+The following packages have to be installed:
+ openssl-1:3.2.1-2.fc40.x86_64  Utilities from the general purpose cryptography library with TLS implementation
+Proceed with changes? [N/y] y
+
+
+ * Waiting in queue...
+ * Waiting for authentication... Failed to install packages: Failed to obtain authentication.
+
+kushal@kusfedoravm:~/bin$ time sudo dnf install openssl
+[sudo] password for kushal:
+Last metadata expiration check: 0:03:23 ago on Sun 28 Jul 2024 02:08:12 PM EDT.
+Dependencies resolved.
+========================================================================================================================================================================================================================================================================================
+ Package                                                            Architecture                                                      Version                                                                   Repository                                                         Size
+========================================================================================================================================================================================================================================================================================
+Installing:
+ openssl                                                            x86_64                                                            1:3.2.1-2.fc40                                                            fedora                                                            1.1 M
+
+Transaction Summary
+========================================================================================================================================================================================================================================================================================
+Install  1 Package
+
+Total download size: 1.1 M
+Installed size: 1.7 M
+Is this ok [y/N]: y
+Downloading Packages:
+openssl-3.2.1-2.fc40.x86_64.rpm                                                                                                                                                                                                                         2.4 MB/s | 1.1 MB     00:00
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                                                                                                                   1.3 MB/s | 1.1 MB     00:00
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                                                                                                                                                                1/1
+  Installing       : openssl-1:3.2.1-2.fc40.x86_64                                                                                                                                                                                                                                  1/1
+  Running scriptlet: openssl-1:3.2.1-2.fc40.x86_64                                                                                                                                                                                                                                  1/1
+
+Installed:
+  openssl-1:3.2.1-2.fc40.x86_64
+
+Complete!
+
+real    0m9.311s
+user    0m0.049s
+sys     0m0.065s
+kushal@kusfedoravm:~/bin$ openssl s_client -connect nice.runasp.net:443 -servername nice.runasp.net
+Connecting to 185.193.66.215
+CONNECTED(00000003)
+depth=2 C=US, O=Internet Security Research Group, CN=ISRG Root X1
+verify return:1
+depth=1 C=US, O=Let's Encrypt, CN=R3
+verify return:1
+depth=0 CN=*.runasp.net
+verify error:num=10:certificate has expired
+notAfter=Jul 24 22:43:46 2024 GMT
+verify return:1
+depth=0 CN=*.runasp.net
+notAfter=Jul 24 22:43:46 2024 GMT
+verify return:1
+---
+Certificate chain
+ 0 s:CN=*.runasp.net
+   i:C=US, O=Let's Encrypt, CN=R3
+   a:PKEY: rsaEncryption, 3072 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Apr 25 22:43:47 2024 GMT; NotAfter: Jul 24 22:43:46 2024 GMT
+ 1 s:C=US, O=Let's Encrypt, CN=R3
+   i:C=US, O=Internet Security Research Group, CN=ISRG Root X1
+   a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Sep  4 00:00:00 2020 GMT; NotAfter: Sep 15 16:00:00 2025 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIFZTCCBE2gAwIBAgISBKNHxVha1XA4dteeIodQtcmLMA0GCSqGSIb3DQEBCwUA
+MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD
+EwJSMzAeFw0yNDA0MjUyMjQzNDdaFw0yNDA3MjQyMjQzNDZaMBcxFTATBgNVBAMM
+DCoucnVuYXNwLm5ldDCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAJp5
+gKolG7gIrBWfbBlY6Wz9IHPocFkbwICKANcBFCqpDJd+/xmyGNeTP6OeACPpIvek
++Ww6drk/K6J0m6tcv1IgaiVV6ba33/tJdBjzc2QEu/WqWKzKhMj2ihchFSSlWq3P
++svFHT7rYna0RZSyfenmMGyiqSRGf+vav0fqrtOP2r4jfVSVWM9AxBpp1HDEI30C
+DoMg+c2w9WpYfpSsbgTH4o0vEMkg2135ofoohx2j9e5iq5Tjtt5y6vUDbEjncOl0
+lj8DJGQVlTRqCcKqy/btFrPwZhBVpLq0RBiNJzwOU+d205AZTsyIET5O8u2c9zJy
+MLXEAMwbWy4cP2w7L5yHbmGRV2jtRNIozWY3vKlSXz8za8gAEsibgvjQCcMhGGlM
+ISbtk1VAOxLEAtmVgnN6lvuHwi0U2Ox5ETXvqS0XvUjI/zCN3ooC3rX4If9epA1p
+hutsOd1RVrd11noXlEVdNwjwVy3TLAEZXJyMbB/6emmCjPfTFdGVWI9TvfN9WQID
+AQABo4ICDjCCAgowDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMB
+BggrBgEFBQcDAjAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBTNPMj0C8vVk5IGIaGc
+vL0U3JXZYzAfBgNVHSMEGDAWgBQULrMXt1hWy65QCUDmH6+dixTCxjBVBggrBgEF
+BQcBAQRJMEcwIQYIKwYBBQUHMAGGFWh0dHA6Ly9yMy5vLmxlbmNyLm9yZzAiBggr
+BgEFBQcwAoYWaHR0cDovL3IzLmkubGVuY3Iub3JnLzAXBgNVHREEEDAOggwqLnJ1
+bmFzcC5uZXQwEwYDVR0gBAwwCjAIBgZngQwBAgEwggEEBgorBgEEAdZ5AgQCBIH1
+BIHyAPAAdwA/F0tP1yJHWJQdZRyEvg0S7ZA3fx+FauvBvyiF7PhkbgAAAY8XpM7P
+AAAEAwBIMEYCIQDXKUlYneXJE0ALJvTVwdSOtbfrFgdN2JHXvy+yGH5bSQIhAJrI
+S4R/917aB7YDyXEdNl0T7jj1oAch48DPOu9BrxcrAHUA3+FW66oFr7WcD4ZxjajA
+Mk6uVtlup/WlagHRwTu+UlwAAAGPF6TPhgAABAMARjBEAiAMhdWXIU9TicktQwuP
+hw1blg61qsn8WbinjrsliOR4UAIgalanlr6s0MDE2ZzipQGzqK/6HeCJPdXJKDRY
+NkEuXrIwDQYJKoZIhvcNAQELBQADggEBAHXTUVPbivfboWsi6lOC4lG6Y7wVl5rY
+vftpYWIsf8nHbTeQf+DtVVpxhsrvVLa+e2HPB3UHpM+mgYnSUP9zWyF0oB9AjW/w
+K1GBafzmBcEnyos0C81jyJWq39l4apwysoCk4BBQoh/AGb++0yluzVVPGJ/SMbjm
+SPyIKmLKy79v9lE1mIfTewuvIJdiKbm8CSesig1U3ZOq8Ov5fvKz/6GcOAl+iSqA
+L5VzCHLUeBRD1ruu0V2Bph+UIvewJolM4AoRrXdSdHIvk13hYxKIYLrPhJJh/PfY
+RxwtO3txs0VN8y7wP0gVabzMag51vhkIPYLfS7oJMUhdr3CSTlJmzes=
+-----END CERTIFICATE-----
+subject=CN=*.runasp.net
+issuer=C=US, O=Let's Encrypt, CN=R3
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: RSA-PSS
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 3318 bytes and written 406 bytes
+Verification error: certificate has expired
+---
+New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
+Server public key is 3072 bit
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 10 (certificate has expired)
+---
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_256_GCM_SHA384
+    Session-ID: B618A9B7ABA063498651D6C43D96F1128C2CDC4137CF420CA45488C7D2A18488
+    Session-ID-ctx:
+    Resumption PSK: DD09812A057FBE5AA664D26570437094B6D53CD09FC41F6DD212CFB93DF85426F329A6DE376573A0D10149D3B47D051F
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 36000 (seconds)
+    TLS session ticket:
+    0000 - 42 22 00 00 54 78 31 54-b0 42 1f e3 8c b0 9e 15   B"..Tx1T.B......
+    0010 - 4f 19 11 ec 26 3a ce 85-6b 20 4f ff da 2b dc 25   O...&:..k O..+.%
+
+    Start Time: 1722190302
+    Timeout   : 7200 (sec)
+    Verify return code: 10 (certificate has expired)
+    Extended master secret: no
+    Max Early Data: 0
+---
+read R BLOCK
+
+
+q
+HTTP/1.1 400 Bad Request
+Content-Type: text/html; charset=us-ascii
+Server: Microsoft-HTTPAPI/2.0
+Date: Sun, 28 Jul 2024 18:13:33 GMT
+Connection: close
+Content-Length: 326
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+<HTML><HEAD><TITLE>Bad Request</TITLE>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+<BODY><h2>Bad Request - Invalid Verb</h2>
+<hr><p>HTTP Error 400. The request verb is invalid.</p>
+</BODY></HTML>
+8002ECCA077F0000:error:0A000126:SSL routines::unexpected eof while reading:ssl/record/rec_layer_s3.c:645:
+kushal@kusfedoravm:~/bin$
+kushal@kusfedoravm:~/bin$
+kushal@kusfedoravm:~/bin$ openssl s_client -connect nice.runasp.net:443 -servername forum.level1techs.com
+Connecting to 185.193.66.215
+CONNECTED(00000003)
+write:errno=104
+---
+no peer certificate available
+---
+No client certificate CA names sent
+---
+SSL handshake has read 0 bytes and written 332 bytes
+Verification: OK
+---
+New, (NONE), Cipher is (NONE)
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 0 (ok)
+---
+kushal@kusfedoravm:~/bin$ openssl s_client -connect nice.runasp.net:443 -servername nice.runasp.net
+Connecting to 185.193.66.215
+CONNECTED(00000003)
+depth=2 C=US, O=Internet Security Research Group, CN=ISRG Root X1
+verify return:1
+depth=1 C=US, O=Let's Encrypt, CN=R3
+verify return:1
+depth=0 CN=*.runasp.net
+verify error:num=10:certificate has expired
+notAfter=Jul 24 22:43:46 2024 GMT
+verify return:1
+depth=0 CN=*.runasp.net
+notAfter=Jul 24 22:43:46 2024 GMT
+verify return:1
+---
+Certificate chain
+ 0 s:CN=*.runasp.net
+   i:C=US, O=Let's Encrypt, CN=R3
+   a:PKEY: rsaEncryption, 3072 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Apr 25 22:43:47 2024 GMT; NotAfter: Jul 24 22:43:46 2024 GMT
+ 1 s:C=US, O=Let's Encrypt, CN=R3
+   i:C=US, O=Internet Security Research Group, CN=ISRG Root X1
+   a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Sep  4 00:00:00 2020 GMT; NotAfter: Sep 15 16:00:00 2025 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIFZTCCBE2gAwIBAgISBKNHxVha1XA4dteeIodQtcmLMA0GCSqGSIb3DQEBCwUA
+MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD
+EwJSMzAeFw0yNDA0MjUyMjQzNDdaFw0yNDA3MjQyMjQzNDZaMBcxFTATBgNVBAMM
+DCoucnVuYXNwLm5ldDCCAaIwDQYJKoZIhvcNAQEBBQADggGPADCCAYoCggGBAJp5
+gKolG7gIrBWfbBlY6Wz9IHPocFkbwICKANcBFCqpDJd+/xmyGNeTP6OeACPpIvek
++Ww6drk/K6J0m6tcv1IgaiVV6ba33/tJdBjzc2QEu/WqWKzKhMj2ihchFSSlWq3P
++svFHT7rYna0RZSyfenmMGyiqSRGf+vav0fqrtOP2r4jfVSVWM9AxBpp1HDEI30C
+DoMg+c2w9WpYfpSsbgTH4o0vEMkg2135ofoohx2j9e5iq5Tjtt5y6vUDbEjncOl0
+lj8DJGQVlTRqCcKqy/btFrPwZhBVpLq0RBiNJzwOU+d205AZTsyIET5O8u2c9zJy
+MLXEAMwbWy4cP2w7L5yHbmGRV2jtRNIozWY3vKlSXz8za8gAEsibgvjQCcMhGGlM
+ISbtk1VAOxLEAtmVgnN6lvuHwi0U2Ox5ETXvqS0XvUjI/zCN3ooC3rX4If9epA1p
+hutsOd1RVrd11noXlEVdNwjwVy3TLAEZXJyMbB/6emmCjPfTFdGVWI9TvfN9WQID
+AQABo4ICDjCCAgowDgYDVR0PAQH/BAQDAgWgMB0GA1UdJQQWMBQGCCsGAQUFBwMB
+BggrBgEFBQcDAjAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBTNPMj0C8vVk5IGIaGc
+vL0U3JXZYzAfBgNVHSMEGDAWgBQULrMXt1hWy65QCUDmH6+dixTCxjBVBggrBgEF
+BQcBAQRJMEcwIQYIKwYBBQUHMAGGFWh0dHA6Ly9yMy5vLmxlbmNyLm9yZzAiBggr
+BgEFBQcwAoYWaHR0cDovL3IzLmkubGVuY3Iub3JnLzAXBgNVHREEEDAOggwqLnJ1
+bmFzcC5uZXQwEwYDVR0gBAwwCjAIBgZngQwBAgEwggEEBgorBgEEAdZ5AgQCBIH1
+BIHyAPAAdwA/F0tP1yJHWJQdZRyEvg0S7ZA3fx+FauvBvyiF7PhkbgAAAY8XpM7P
+AAAEAwBIMEYCIQDXKUlYneXJE0ALJvTVwdSOtbfrFgdN2JHXvy+yGH5bSQIhAJrI
+S4R/917aB7YDyXEdNl0T7jj1oAch48DPOu9BrxcrAHUA3+FW66oFr7WcD4ZxjajA
+Mk6uVtlup/WlagHRwTu+UlwAAAGPF6TPhgAABAMARjBEAiAMhdWXIU9TicktQwuP
+hw1blg61qsn8WbinjrsliOR4UAIgalanlr6s0MDE2ZzipQGzqK/6HeCJPdXJKDRY
+NkEuXrIwDQYJKoZIhvcNAQELBQADggEBAHXTUVPbivfboWsi6lOC4lG6Y7wVl5rY
+vftpYWIsf8nHbTeQf+DtVVpxhsrvVLa+e2HPB3UHpM+mgYnSUP9zWyF0oB9AjW/w
+K1GBafzmBcEnyos0C81jyJWq39l4apwysoCk4BBQoh/AGb++0yluzVVPGJ/SMbjm
+SPyIKmLKy79v9lE1mIfTewuvIJdiKbm8CSesig1U3ZOq8Ov5fvKz/6GcOAl+iSqA
+L5VzCHLUeBRD1ruu0V2Bph+UIvewJolM4AoRrXdSdHIvk13hYxKIYLrPhJJh/PfY
+RxwtO3txs0VN8y7wP0gVabzMag51vhkIPYLfS7oJMUhdr3CSTlJmzes=
+-----END CERTIFICATE-----
+subject=CN=*.runasp.net
+issuer=C=US, O=Let's Encrypt, CN=R3
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: RSA-PSS
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 3318 bytes and written 406 bytes
+Verification error: certificate has expired
+---
+New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
+Server public key is 3072 bit
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 10 (certificate has expired)
+---
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_256_GCM_SHA384
+    Session-ID: EB858C1A3FE104BCD9E8233533F2B489812F3CBD691EEB82C9F9EF052959D748
+    Session-ID-ctx:
+    Resumption PSK: 6AFCC74275B0CAF45B1DC86A06A39053E20319FF64B75141D57E511754E9C7B6AB48197E76DCEF13432A25522CBF8C49
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 36000 (seconds)
+    TLS session ticket:
+    0000 - cd 4b 00 00 b8 42 86 b7-3a ec fe db 9b bf 15 0e   .K...B..:.......
+    0010 - d3 b6 89 bc 68 9a e0 04-10 27 f7 9d 0c 40 84 c4   ....h....'...@..
+
+    Start Time: 1722190783
+    Timeout   : 7200 (sec)
+    Verify return code: 10 (certificate has expired)
+    Extended master secret: no
+    Max Early Data: 0
+---
+read R BLOCK
+
+q
+HTTP/1.1 400 Bad Request
+Content-Type: text/html; charset=us-ascii
+Server: Microsoft-HTTPAPI/2.0
+Date: Sun, 28 Jul 2024 18:19:47 GMT
+Connection: close
+Content-Length: 326
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+<HTML><HEAD><TITLE>Bad Request</TITLE>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+<BODY><h2>Bad Request - Invalid Verb</h2>
+<hr><p>HTTP Error 400. The request verb is invalid.</p>
+</BODY></HTML>
+80C25F2FC07F0000:error:0A000126:SSL routines::unexpected eof while reading:ssl/record/rec_layer_s3.c:645:
+kushal@kusfedoravm:~/bin$ openssl s_client -connect nice.runasp.net:443 -servername level1techs.com
+Connecting to 185.193.66.215
+CONNECTED(00000003)
+write:errno=104
+---
+no peer certificate available
+---
+No client certificate CA names sent
+---
+SSL handshake has read 0 bytes and written 326 bytes
+Verification: OK
+---
+New, (NONE), Cipher is (NONE)
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 0 (ok)
+---
+kushal@kusfedoravm:~/bin$ openssl s_client -connect nice.runasp.net:443 -servername duckduckgo.com
+Connecting to 185.193.66.215
+CONNECTED(00000003)
+write:errno=104
+---
+no peer certificate available
+---
+No client certificate CA names sent
+---
+SSL handshake has read 0 bytes and written 325 bytes
+Verification: OK
+---
+New, (NONE), Cipher is (NONE)
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 0 (ok)
+---
+kushal@kusfedoravm:~/bin$ openssl s_client -connect nice.runasp.net:443 -servername gooogle.com
+Connecting to 185.193.66.215
+CONNECTED(00000003)
+write:errno=104
+---
+no peer certificate available
+---
+No client certificate CA names sent
+---
+SSL handshake has read 0 bytes and written 322 bytes
+Verification: OK
+---
+New, (NONE), Cipher is (NONE)
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 0 (ok)
+---
+kushal@kusfedoravm:~/bin$ openssl s_client -connect nice.runasp.net:443 -servername google.com
+Connecting to 185.193.66.215
+CONNECTED(00000003)
+write:errno=104
+---
+no peer certificate available
+---
+No client certificate CA names sent
+---
+SSL handshake has read 0 bytes and written 321 bytes
+Verification: OK
+---
+New, (NONE), Cipher is (NONE)
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 0 (ok)
+---
+kushal@kusfedoravm:~/bin$ openssl s_client -connect nice.runasp.net:443 -servername news.ycombinator.com
+Connecting to 185.193.66.215
+CONNECTED(00000003)
+write:errno=104
+---
+no peer certificate available
+---
+No client certificate CA names sent
+---
+SSL handshake has read 0 bytes and written 331 bytes
+Verification: OK
+---
+New, (NONE), Cipher is (NONE)
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 0 (ok)
+---
+kushal@kusfedoravm:~/bin$ openssl s_client -connect news.ycombinator.com:443 -servername news.ycombinator.com
+Connecting to 209.216.230.207
+CONNECTED(00000003)
+depth=2 C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Global Root G2
+verify return:1
+depth=1 C=US, O=DigiCert Inc, CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+verify return:1
+depth=0 C=US, ST=California, L=Mountain View, O=Y Combinator Management, LLC., CN=news.ycombinator.com
+verify return:1
+---
+Certificate chain
+ 0 s:C=US, ST=California, L=Mountain View, O=Y Combinator Management, LLC., CN=news.ycombinator.com
+   i:C=US, O=DigiCert Inc, CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+   a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Aug 27 00:00:00 2023 GMT; NotAfter: Sep 10 23:59:59 2024 GMT
+ 1 s:C=US, O=DigiCert Inc, CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+   i:C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Global Root G2
+   a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Mar 30 00:00:00 2021 GMT; NotAfter: Mar 29 23:59:59 2031 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIG9DCCBdygAwIBAgIQBh5aPgVQbk0D1gupgYwvwzANBgkqhkiG9w0BAQsFADBZ
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMTMwMQYDVQQDEypE
+aWdpQ2VydCBHbG9iYWwgRzIgVExTIFJTQSBTSEEyNTYgMjAyMCBDQTEwHhcNMjMw
+ODI3MDAwMDAwWhcNMjQwOTEwMjM1OTU5WjCBgTELMAkGA1UEBhMCVVMxEzARBgNV
+BAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxJjAkBgNVBAoT
+HVkgQ29tYmluYXRvciBNYW5hZ2VtZW50LCBMTEMuMR0wGwYDVQQDExRuZXdzLnlj
+b21iaW5hdG9yLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOo4
+VS1LCgVOlqYgTwM9RKxSWI5qGlGKm6pfPq+tfuco8H7kBWOU0EVZ0VP7G6udwHTc
+n/G4k416SnsYINwvDJY+G+pvjisIZ+rzQFO90Ek4EMEn3Cc0e6+ip8sgZSAVB/XN
+pajkFRTceqiNw5srYN0s3MOo4jdlMg49OjsaSaeHFk+ryBZWPixqDg3Ssl6oRHFW
+K1WuAwa/2VWB2d3b39V+kCD/5M2Gszreg/U2oEg9hdp6zzcnwPtgqza6YsBAI/xr
+ZHo9DzMFir6ytcx08+tHuBkL39HVIGQ4LnYPNVT1C4xAg545A1UeLAUI2KdP3zem
+US20JKdDCOa9MFrfALMCAwEAAaOCA40wggOJMB8GA1UdIwQYMBaAFHSFgMBmx983
+3s+9KTeqAx2+7c0XMB0GA1UdDgQWBBTxdXFaKWAC7AOhgCxAt0UIlB9RuDAfBgNV
+HREEGDAWghRuZXdzLnljb21iaW5hdG9yLmNvbTAOBgNVHQ8BAf8EBAMCBaAwHQYD
+VR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMIGfBgNVHR8EgZcwgZQwSKBGoESG
+Qmh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEdsb2JhbEcyVExTUlNB
+U0hBMjU2MjAyMENBMS0xLmNybDBIoEagRIZCaHR0cDovL2NybDQuZGlnaWNlcnQu
+Y29tL0RpZ2lDZXJ0R2xvYmFsRzJUTFNSU0FTSEEyNTYyMDIwQ0ExLTEuY3JsMD4G
+A1UdIAQ3MDUwMwYGZ4EMAQICMCkwJwYIKwYBBQUHAgEWG2h0dHA6Ly93d3cuZGln
+aWNlcnQuY29tL0NQUzCBhwYIKwYBBQUHAQEEezB5MCQGCCsGAQUFBzABhhhodHRw
+Oi8vb2NzcC5kaWdpY2VydC5jb20wUQYIKwYBBQUHMAKGRWh0dHA6Ly9jYWNlcnRz
+LmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEdsb2JhbEcyVExTUlNBU0hBMjU2MjAyMENB
+MS0xLmNydDAJBgNVHRMEAjAAMIIBfgYKKwYBBAHWeQIEAgSCAW4EggFqAWgAdwDu
+zdBk1dsazsVct520zROiModGfLzs3sNRSFlGcR+1mwAAAYo0Vd/yAAAEAwBIMEYC
+IQDqQvQ8Lp61h43lhQMwKxxGfgjxgBEKExU2D438QtjcWAIhANipLZ/WwBR2pW8D
+YbKRsuiOtdH304v9aSGbx0rr7myZAHUASLDja9qmRzQP5WoC+p0w6xxSActW3SyB
+2bu/qznYhHMAAAGKNFXeUQAABAMARjBEAiAlt8z0OTMuwwD75RfKriVQMeoGhnPp
+gBJWvUm97QZ7DgIgLEgHrxLQXWQu6Yn1hRFmgEyGd0W4IDCPzhisy4s4qE8AdgDa
+tr9rP7W2Ip+bwrtca+hwkXFsu1GEhTS9pD0wSNf7qwAAAYo0Vd36AAAEAwBHMEUC
+IQCDZD78eS7FFaDow3AryvH7s6BeNohLPPl9fr4VHv27wgIgIPMyAnX42AnrICgd
+iK6gdMjnoQ+E8+3S2PeR1Hzw6XYwDQYJKoZIhvcNAQELBQADggEBACgU4U8gBb6Y
+jyFVoxAWdV+Mw5A7lFXT/bYHdackNdl93vuHlnHjj22sB2Ua/ZCQOYhXZlCJlJNE
+r0IfsO6tt1Fbo2mujOg4NUYQwIojJRQItS6wD3GF8TR4REsuFAfDdEIYY5W/XVGG
+K0Gho6iRhUiBB6qP0BCHDs4j5dAaClC4IyxVSCWJgORBiDuKkmd5zJb4sJPbDN7q
+7XWybpsE9ngxPwYZhEY2pb6JymjojUv1oPAXnkoOUNanBAybPyhefEg/f66B3JJk
+FxCDafK2TYH+FCyi9rS+hJ8Nxb2t27MOK8DWhN0H/kgZ7f9VzsaX7l7OHNeoMr2U
+ZwDGrvggq50=
+-----END CERTIFICATE-----
+subject=C=US, ST=California, L=Mountain View, O=Y Combinator Management, LLC., CN=news.ycombinator.com
+issuer=C=US, O=DigiCert Inc, CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: RSA-PSS
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 3692 bytes and written 424 bytes
+Verification: OK
+---
+New, TLSv1.2, Cipher is ECDHE-RSA-AES256-GCM-SHA384
+Server public key is 2048 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-RSA-AES256-GCM-SHA384
+    Session-ID: C2BE602F2D5C8B4F85E3BD4A7A2A50AE6F606004E0BD8B0563AA98311901F969
+    Session-ID-ctx:
+    Master-Key: 3A20A5F4B6E5D8A481B086F740A3293EEC73F7AF4A2E79BABCECCF08D7AC94472862339846941CC4A726D69C384774DE
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 300 (seconds)
+    TLS session ticket:
+    0000 - 0c 3f d4 33 5d a9 0f 0f-8a 74 9b c4 01 f4 bc 1b   .?.3]....t......
+    0010 - fa 35 06 fa 9b e7 1d 15-24 ee b5 c3 6a 69 66 9c   .5......$...jif.
+    0020 - 79 d0 b7 c3 8e b4 48 04-00 71 ba 15 d1 6d 0b fe   y.....H..q...m..
+    0030 - 56 74 8b 4a cc 3d 08 76-4c 95 ac 44 d7 18 ec ac   Vt.J.=.vL..D....
+    0040 - dd 93 0e 37 d5 e9 b1 f1-52 70 ca d3 fa 62 2e 08   ...7....Rp...b..
+    0050 - 46 da 8f 7c 21 ae 61 e8-88 7a ed 45 3d cc 60 3e   F..|!.a..z.E=.`>
+    0060 - 11 52 e0 60 55 4a af 94-55 c7 8e ed d9 79 9c c3   .R.`UJ..U....y..
+    0070 - 15 86 6a 56 e3 4d 02 55-c9 c5 db 0f cf 1d e3 60   ..jV.M.U.......`
+    0080 - 32 eb ad 74 c7 ed 50 40-d8 4b f5 be dc 20 04 ce   2..t..P@.K... ..
+    0090 - a3 19 7e b9 5c 4c 5c a2-94 ea 89 da 09 1c 6b db   ..~.\L\.......k.
+    00a0 - 69 60 c0 87 92 bd 80 98-2c 26 04 a0 01 1e 8e a7   i`......,&......
+    00b0 - 47 af 23 02 15 af ae 39-43 13 d3 db b0 58 d7 f2   G.#....9C....X..
+    00c0 - 2d 65 42 18 85 e3 39 bc-a1 da a1 7e f4 6d d1 e2   -eB...9....~.m..
+
+    Start Time: 1722190865
+    Timeout   : 7200 (sec)
+    Verify return code: 0 (ok)
+    Extended master secret: yes
+---
+
+
+exit
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Sun, 28 Jul 2024 18:21:12 GMT
+Content-Type: text/html
+Content-Length: 150
+Connection: close
+
+<html>
+<head><title>400 Bad Request</title></head>
+<body>
+<center><h1>400 Bad Request</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+closed
+kushal@kusfedoravm:~/bin$ openssl s_client -connect forum.level1techs.com:443 -servername forum.level1techs.com
+Connecting to 172.67.73.46
+CONNECTED(00000003)
+depth=2 C=US, O=Google Trust Services LLC, CN=GTS Root R4
+verify return:1
+depth=1 C=US, O=Google Trust Services, CN=WE1
+verify return:1
+depth=0 CN=level1techs.com
+verify return:1
+---
+Certificate chain
+ 0 s:CN=level1techs.com
+   i:C=US, O=Google Trust Services, CN=WE1
+   a:PKEY: id-ecPublicKey, 256 (bit); sigalg: ecdsa-with-SHA256
+   v:NotBefore: Jul 12 02:44:48 2024 GMT; NotAfter: Oct 10 02:44:47 2024 GMT
+ 1 s:C=US, O=Google Trust Services, CN=WE1
+   i:C=US, O=Google Trust Services LLC, CN=GTS Root R4
+   a:PKEY: id-ecPublicKey, 256 (bit); sigalg: ecdsa-with-SHA384
+   v:NotBefore: Dec 13 09:00:00 2023 GMT; NotAfter: Feb 20 14:00:00 2029 GMT
+ 2 s:C=US, O=Google Trust Services LLC, CN=GTS Root R4
+   i:C=BE, O=GlobalSign nv-sa, OU=Root CA, CN=GlobalSign Root CA
+   a:PKEY: id-ecPublicKey, 384 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Nov 15 03:43:21 2023 GMT; NotAfter: Jan 28 00:00:42 2028 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIDsTCCA1igAwIBAgIRAIYAh2COsR/0DvebeeESmpMwCgYIKoZIzj0EAwIwOzEL
+MAkGA1UEBhMCVVMxHjAcBgNVBAoTFUdvb2dsZSBUcnVzdCBTZXJ2aWNlczEMMAoG
+A1UEAxMDV0UxMB4XDTI0MDcxMjAyNDQ0OFoXDTI0MTAxMDAyNDQ0N1owGjEYMBYG
+A1UEAxMPbGV2ZWwxdGVjaHMuY29tMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE
+m1ZojjCwM+yTJW2JzbuME4xMk2VnX1TrH1iLh71+8w9yDy3vhyOz1yj5OK6ZhmHU
+reIF21JbWmottIsI0et7LaOCAlwwggJYMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUE
+DDAKBggrBgEFBQcDATAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBTBzABclzqA8TuJ
+Xl+Vyjf66zzj6jAfBgNVHSMEGDAWgBSQd5I1Z8T/qMyp5nvZgHl7zJP5ODBeBggr
+BgEFBQcBAQRSMFAwJwYIKwYBBQUHMAGGG2h0dHA6Ly9vLnBraS5nb29nL3Mvd2Ux
+L2hnQTAlBggrBgEFBQcwAoYZaHR0cDovL2kucGtpLmdvb2cvd2UxLmNydDAtBgNV
+HREEJjAkgg9sZXZlbDF0ZWNocy5jb22CESoubGV2ZWwxdGVjaHMuY29tMBMGA1Ud
+IAQMMAowCAYGZ4EMAQIBMDYGA1UdHwQvMC0wK6ApoCeGJWh0dHA6Ly9jLnBraS5n
+b29nL3dlMS91SWp4am5xQXQ5MC5jcmwwggEFBgorBgEEAdZ5AgQCBIH2BIHzAPEA
+dwDatr9rP7W2Ip+bwrtca+hwkXFsu1GEhTS9pD0wSNf7qwAAAZClCyKEAAAEAwBI
+MEYCIQCUEkaRzpnOjEsumNQTO7VM+WCPuEqoaVMas773KPC7CAIhANRLC0/crqvE
+j3YhlhWK3wZbm6Kmh/lRzNPnPMd++mLwAHYA7s3QZNXbGs7FXLedtM0TojKHRny8
+7N7DUUhZRnEftZsAAAGQpQsiTwAABAMARzBFAiBb7OxwuYevhsANIqvH+GAFOd4H
++cfF5Vi/x0F56uG3awIhAOb7t9XQpE4vkQb72BOpd8Idmz5ESAwfEEtHbdSXYedL
+MAoGCCqGSM49BAMCA0cAMEQCIEHQ7m//Czqf6ZxQY88vZjU8Kn702oeUyv95I8DS
+6Q4XAiBA1AkqGF9VkT91A2zCHJ57AjzgKcDGwht4Q2fqwNSgjw==
+-----END CERTIFICATE-----
+subject=CN=level1techs.com
+issuer=C=US, O=Google Trust Services, CN=WE1
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: ECDSA
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 2836 bytes and written 412 bytes
+Verification: OK
+---
+New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
+Server public key is 256 bit
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 0 (ok)
+---
+
+q
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_256_GCM_SHA384
+    Session-ID: A2ED67EAD23888BC1D3447CCDF38A0167F374B11D3965085EB9C8BFF89063A75
+    Session-ID-ctx:
+    Resumption PSK: 6634274875FEAF52FF718ACD86E9BB0FA3F4E10730D3382D7A7C183109FB57258BE0E7B0DE23BCEF83278F0A2F1DDD15
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 64800 (seconds)
+    TLS session ticket:
+    0000 - 4e aa 41 76 a3 5a ff c7-cb 7e 42 e5 aa d8 ba 0b   N.Av.Z...~B.....
+    0010 - 19 d3 47 0f ae 3e 4d 04-1e ac fa a3 e2 47 69 74   ..G..>M......Git
+    0020 - aa d2 10 86 62 f3 0d c2-b7 9a 7e d4 4c 9d 0d ad   ....b.....~.L...
+    0030 - ea e5 e6 c6 32 33 4e 97-fd 1e 38 9f e8 17 c1 5b   ....23N...8....[
+    0040 - c5 16 be de 97 21 54 66-e8 86 04 9d f8 fa ed be   .....!Tf........
+    0050 - 77 44 7c f6 f0 f9 fd 8f-52 f1 b3 9b 4e a1 7b 64   wD|.....R...N.{d
+    0060 - f2 f2 ec 32 30 da 49 d3-98 b8 a5 5e 7e 38 31 72   ...20.I....^~81r
+    0070 - d6 8d 9d c1 d7 d6 03 79-24 34 e3 e5 05 96 6c ab   .......y$4....l.
+    0080 - d2 3f 7b 9b 49 42 cd 3a-28 a5 7e 2a 03 60 56 28   .?{.IB.:(.~*.`V(
+    0090 - 13 67 82 ee fe 26 74 69-7c 3b 3f 7f e7 5d be ed   .g...&ti|;?..]..
+    00a0 - 5f 53 2a 23 c5 f0 2c 0b-b9 c8 d8 a4 4b f1 b8 89   _S*#..,.....K...
+    00b0 - cc 0e 9c f7 70 6b 6f 61-0a e4 d8 28 68 fe ac dc   ....pkoa...(h...
+    00c0 - a3 1c 1c c4 1a e8 50 dc-7b 49 f2 3f 39 3e 0f 54   ......P.{I.?9>.T
+
+    Start Time: 1722190904
+    Timeout   : 7200 (sec)
+    Verify return code: 0 (ok)
+    Extended master secret: no
+    Max Early Data: 14336
+---
+read R BLOCK
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_256_GCM_SHA384
+    Session-ID: 402F10DA2BABF122154621631CD794E55518C11F8FB9E9258AFACA2ABA0A7A14
+    Session-ID-ctx:
+    Resumption PSK: B642D5E2CA3BFF51421663ECFE01362247F30AD8F197452908E3657879748B926B11C5EA757555E7615E2A9D7CBE4B8E
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 64800 (seconds)
+    TLS session ticket:
+    0000 - 4e aa 41 76 a3 5a ff c7-cb 7e 42 e5 aa d8 ba 0b   N.Av.Z...~B.....
+    0010 - d9 31 41 ba 2c d7 e6 f5-d5 d9 17 a5 51 fd 46 14   .1A.,.......Q.F.
+    0020 - bc 4c 9a c1 be 57 ca b5-1c f3 16 6f 2c fa 82 5c   .L...W.....o,..\
+    0030 - b2 3c 60 a3 90 71 99 9d-4f 59 4f 35 c5 64 4c dd   .<`..q..OYO5.dL.
+    0040 - 4f cc ec ed 96 7b ca 0e-23 b1 e3 f0 e0 12 57 7a   O....{..#.....Wz
+    0050 - b2 11 1a c0 10 0d ac 4f-79 5e 50 b1 f0 5b 2e da   .......Oy^P..[..
+    0060 - 05 00 e3 0f 5c 0e 41 b7-de 7e 3f fc 00 29 4b 2a   ....\.A..~?..)K*
+    0070 - 2f 8f c1 9e c3 f2 56 d7-75 73 51 fa 14 2d 78 00   /.....V.usQ..-x.
+    0080 - 29 75 22 e0 49 a6 97 b7-f7 55 c1 5e de 20 0b a9   )u".I....U.^. ..
+    0090 - 72 ce 73 cc d2 07 9a 3d-99 63 66 65 f1 48 77 6e   r.s....=.cfe.Hwn
+    00a0 - 04 89 43 64 50 1f f2 81-cd 28 75 9b e2 0a 33 03   ..CdP....(u...3.
+    00b0 - b9 c2 b1 21 ef 29 a8 80-22 fc 77 c0 d4 67 52 b9   ...!.)..".w..gR.
+    00c0 - 25 29 8f cb 12 e9 5b 96-6c 27 0a 5e 26 af cc 0d   %)....[.l'.^&...
+
+    Start Time: 1722190904
+    Timeout   : 7200 (sec)
+    Verify return code: 0 (ok)
+    Extended master secret: no
+    Max Early Data: 14336
+---
+read R BLOCK
+HTTP/1.1 400 Bad Request
+Server: cloudflare
+Date: Sun, 28 Jul 2024 18:21:44 GMT
+Content-Type: text/html
+Content-Length: 155
+Connection: close
+CF-RAY: -
+
+<html>
+<head><title>400 Bad Request</title></head>
+<body>
+<center><h1>400 Bad Request</h1></center>
+<hr><center>cloudflare</center>
+</body>
+</html>
+closed
+kushal@kusfedoravm:~/bin$ openssl s_client -connect news.ycombinator.com:443 -servername news.ycombinator.com
+Connecting to 209.216.230.207
+CONNECTED(00000003)
+depth=2 C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Global Root G2
+verify return:1
+depth=1 C=US, O=DigiCert Inc, CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+verify return:1
+depth=0 C=US, ST=California, L=Mountain View, O=Y Combinator Management, LLC., CN=news.ycombinator.com
+verify return:1
+---
+Certificate chain
+ 0 s:C=US, ST=California, L=Mountain View, O=Y Combinator Management, LLC., CN=news.ycombinator.com
+   i:C=US, O=DigiCert Inc, CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+   a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Aug 27 00:00:00 2023 GMT; NotAfter: Sep 10 23:59:59 2024 GMT
+ 1 s:C=US, O=DigiCert Inc, CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+   i:C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert Global Root G2
+   a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Mar 30 00:00:00 2021 GMT; NotAfter: Mar 29 23:59:59 2031 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIG9DCCBdygAwIBAgIQBh5aPgVQbk0D1gupgYwvwzANBgkqhkiG9w0BAQsFADBZ
+MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMTMwMQYDVQQDEypE
+aWdpQ2VydCBHbG9iYWwgRzIgVExTIFJTQSBTSEEyNTYgMjAyMCBDQTEwHhcNMjMw
+ODI3MDAwMDAwWhcNMjQwOTEwMjM1OTU5WjCBgTELMAkGA1UEBhMCVVMxEzARBgNV
+BAgTCkNhbGlmb3JuaWExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxJjAkBgNVBAoT
+HVkgQ29tYmluYXRvciBNYW5hZ2VtZW50LCBMTEMuMR0wGwYDVQQDExRuZXdzLnlj
+b21iaW5hdG9yLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOo4
+VS1LCgVOlqYgTwM9RKxSWI5qGlGKm6pfPq+tfuco8H7kBWOU0EVZ0VP7G6udwHTc
+n/G4k416SnsYINwvDJY+G+pvjisIZ+rzQFO90Ek4EMEn3Cc0e6+ip8sgZSAVB/XN
+pajkFRTceqiNw5srYN0s3MOo4jdlMg49OjsaSaeHFk+ryBZWPixqDg3Ssl6oRHFW
+K1WuAwa/2VWB2d3b39V+kCD/5M2Gszreg/U2oEg9hdp6zzcnwPtgqza6YsBAI/xr
+ZHo9DzMFir6ytcx08+tHuBkL39HVIGQ4LnYPNVT1C4xAg545A1UeLAUI2KdP3zem
+US20JKdDCOa9MFrfALMCAwEAAaOCA40wggOJMB8GA1UdIwQYMBaAFHSFgMBmx983
+3s+9KTeqAx2+7c0XMB0GA1UdDgQWBBTxdXFaKWAC7AOhgCxAt0UIlB9RuDAfBgNV
+HREEGDAWghRuZXdzLnljb21iaW5hdG9yLmNvbTAOBgNVHQ8BAf8EBAMCBaAwHQYD
+VR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMIGfBgNVHR8EgZcwgZQwSKBGoESG
+Qmh0dHA6Ly9jcmwzLmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEdsb2JhbEcyVExTUlNB
+U0hBMjU2MjAyMENBMS0xLmNybDBIoEagRIZCaHR0cDovL2NybDQuZGlnaWNlcnQu
+Y29tL0RpZ2lDZXJ0R2xvYmFsRzJUTFNSU0FTSEEyNTYyMDIwQ0ExLTEuY3JsMD4G
+A1UdIAQ3MDUwMwYGZ4EMAQICMCkwJwYIKwYBBQUHAgEWG2h0dHA6Ly93d3cuZGln
+aWNlcnQuY29tL0NQUzCBhwYIKwYBBQUHAQEEezB5MCQGCCsGAQUFBzABhhhodHRw
+Oi8vb2NzcC5kaWdpY2VydC5jb20wUQYIKwYBBQUHMAKGRWh0dHA6Ly9jYWNlcnRz
+LmRpZ2ljZXJ0LmNvbS9EaWdpQ2VydEdsb2JhbEcyVExTUlNBU0hBMjU2MjAyMENB
+MS0xLmNydDAJBgNVHRMEAjAAMIIBfgYKKwYBBAHWeQIEAgSCAW4EggFqAWgAdwDu
+zdBk1dsazsVct520zROiModGfLzs3sNRSFlGcR+1mwAAAYo0Vd/yAAAEAwBIMEYC
+IQDqQvQ8Lp61h43lhQMwKxxGfgjxgBEKExU2D438QtjcWAIhANipLZ/WwBR2pW8D
+YbKRsuiOtdH304v9aSGbx0rr7myZAHUASLDja9qmRzQP5WoC+p0w6xxSActW3SyB
+2bu/qznYhHMAAAGKNFXeUQAABAMARjBEAiAlt8z0OTMuwwD75RfKriVQMeoGhnPp
+gBJWvUm97QZ7DgIgLEgHrxLQXWQu6Yn1hRFmgEyGd0W4IDCPzhisy4s4qE8AdgDa
+tr9rP7W2Ip+bwrtca+hwkXFsu1GEhTS9pD0wSNf7qwAAAYo0Vd36AAAEAwBHMEUC
+IQCDZD78eS7FFaDow3AryvH7s6BeNohLPPl9fr4VHv27wgIgIPMyAnX42AnrICgd
+iK6gdMjnoQ+E8+3S2PeR1Hzw6XYwDQYJKoZIhvcNAQELBQADggEBACgU4U8gBb6Y
+jyFVoxAWdV+Mw5A7lFXT/bYHdackNdl93vuHlnHjj22sB2Ua/ZCQOYhXZlCJlJNE
+r0IfsO6tt1Fbo2mujOg4NUYQwIojJRQItS6wD3GF8TR4REsuFAfDdEIYY5W/XVGG
+K0Gho6iRhUiBB6qP0BCHDs4j5dAaClC4IyxVSCWJgORBiDuKkmd5zJb4sJPbDN7q
+7XWybpsE9ngxPwYZhEY2pb6JymjojUv1oPAXnkoOUNanBAybPyhefEg/f66B3JJk
+FxCDafK2TYH+FCyi9rS+hJ8Nxb2t27MOK8DWhN0H/kgZ7f9VzsaX7l7OHNeoMr2U
+ZwDGrvggq50=
+-----END CERTIFICATE-----
+subject=C=US, ST=California, L=Mountain View, O=Y Combinator Management, LLC., CN=news.ycombinator.com
+issuer=C=US, O=DigiCert Inc, CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: RSA-PSS
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 3692 bytes and written 424 bytes
+Verification: OK
+---
+New, TLSv1.2, Cipher is ECDHE-RSA-AES256-GCM-SHA384
+Server public key is 2048 bit
+Secure Renegotiation IS supported
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+SSL-Session:
+    Protocol  : TLSv1.2
+    Cipher    : ECDHE-RSA-AES256-GCM-SHA384
+    Session-ID: 5BB1DC13EED7615BAA350D878536D4221AD8D1123042D1A82194E1DAFC3924A0
+    Session-ID-ctx:
+    Master-Key: DB023DBCDD524DCC9DB9D2413649CE52EEA2FD65D483B49894FA94F1611E959171C804E45B75EBBBF82186BDDB00565D
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 300 (seconds)
+    TLS session ticket:
+    0000 - 0c 3f d4 33 5d a9 0f 0f-8a 74 9b c4 01 f4 bc 1b   .?.3]....t......
+    0010 - 7b 35 24 19 f4 00 45 0d-cf c9 01 da d3 80 e8 4f   {5$...E........O
+    0020 - eb 11 ad 46 4b ce 5c 9a-27 7f dd 03 4e ce d7 01   ...FK.\.'...N...
+    0030 - af a3 b8 44 9c 66 1c 44-80 5e 3c d6 4d 93 59 d9   ...D.f.D.^<.M.Y.
+    0040 - a6 e2 63 1c 22 6e c7 a4-bf 34 4c 22 03 46 48 77   ..c."n...4L".FHw
+    0050 - 76 13 11 cb b6 d9 ac a3-95 50 32 1c 55 a7 a0 19   v........P2.U...
+    0060 - aa 25 9c 39 80 e3 92 ff-bc fa f3 10 ff d5 f3 69   .%.9...........i
+    0070 - c8 c9 0a 04 e3 f5 91 7c-32 b5 d5 8d af cd b0 05   .......|2.......
+    0080 - ae 13 ee 1f 61 d5 a6 35-02 b9 ee 42 2b 84 7b 64   ....a..5...B+.{d
+    0090 - 93 e9 cd 29 cb 7b 39 4c-97 68 6a 3b 60 dc 7c 33   ...).{9L.hj;`.|3
+    00a0 - 00 b8 cc cd 53 43 a5 55-c0 ec 12 96 c3 0c 53 49   ....SC.U......SI
+    00b0 - 10 ba 37 35 ac 9b ae 96-28 ed f3 6e e0 7b 5b 76   ..75....(..n.{[v
+    00c0 - b0 f1 d5 36 51 5d ba f8-77 d2 a8 e9 a2 96 82 23   ...6Q]..w......#
+
+    Start Time: 1722190949
+    Timeout   : 7200 (sec)
+    Verify return code: 0 (ok)
+    Extended master secret: yes
+---
+q
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Sun, 28 Jul 2024 18:22:49 GMT
+Content-Type: text/html
+Content-Length: 150
+Connection: close
+
+<html>
+<head><title>400 Bad Request</title></head>
+<body>
+<center><h1>400 Bad Request</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+closed
+kushal@kusfedoravm:~/bin$ openssl s_client -connect lobste.rs:443 -servername lobste.rs
+Connecting to 67.205.189.7
+CONNECTED(00000003)
+depth=2 C=US, O=Internet Security Research Group, CN=ISRG Root X1
+verify return:1
+depth=1 C=US, O=Let's Encrypt, CN=R11
+verify return:1
+depth=0 CN=lobste.rs
+verify return:1
+---
+Certificate chain
+ 0 s:CN=lobste.rs
+   i:C=US, O=Let's Encrypt, CN=R11
+   a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Jun 27 04:02:19 2024 GMT; NotAfter: Sep 25 04:02:18 2024 GMT
+ 1 s:C=US, O=Let's Encrypt, CN=R11
+   i:C=US, O=Internet Security Research Group, CN=ISRG Root X1
+   a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Mar 13 00:00:00 2024 GMT; NotAfter: Mar 12 23:59:59 2027 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIFETCCA/mgAwIBAgISAxGUDacHq5JBllGmSXny8pVPMA0GCSqGSIb3DQEBCwUA
+MDMxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQwwCgYDVQQD
+EwNSMTEwHhcNMjQwNjI3MDQwMjE5WhcNMjQwOTI1MDQwMjE4WjAUMRIwEAYDVQQD
+Ewlsb2JzdGUucnMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCj0S5v
+91kXOwgB5CIA6NvZJo9mP+TtQe81VYCty1oDq4X6SoGbGEV6D2OyogMUM+8NyT8S
+XOrC96s74qfhtobErBJeHjD5p/eM8cgMgSwqu66ShNdxadU0bOkp5Wp+uI4bjM04
+G4eX8OI9RC6xu+gmdjKgA/fPVFXSAlsU47RGPZRhP7eCObE1f4f2zcRidaW4oW8r
+kDjY5NzsAW0ZirzHfMFmAmWt2CfQkrj5846MaU9Zfv5NUsCmeopGb3X2exWm4cFg
++AcfHbNWPlTKEBOFEEqQT3eC2L4Flb6rGVXbXCBsx01GZtwsA6djNFh79CF7xvqy
+r9iFqag7pQDHnEAfAgMBAAGjggI8MIICODAOBgNVHQ8BAf8EBAMCBaAwHQYDVR0l
+BBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYE
+FIZGoJBwE4KafcnWe8u37CAOkWn6MB8GA1UdIwQYMBaAFMXPRqTq9MPAemyVxC2w
+XpIvJuO5MFcGCCsGAQUFBwEBBEswSTAiBggrBgEFBQcwAYYWaHR0cDovL3IxMS5v
+LmxlbmNyLm9yZzAjBggrBgEFBQcwAoYXaHR0cDovL3IxMS5pLmxlbmNyLm9yZy8w
+QwYDVR0RBDwwOoIJbG9ic3RlLnJzggxsb2JzdGVycy5kZXaCDXd3dy5sb2JzdGUu
+cnOCEHd3dy5sb2JzdGVycy5kZXYwEwYDVR0gBAwwCjAIBgZngQwBAgEwggEEBgor
+BgEEAdZ5AgQCBIH1BIHyAPAAdQBIsONr2qZHNA/lagL6nTDrHFIBy1bdLIHZu7+r
+OdiEcwAAAZBYErZrAAAEAwBGMEQCIBxCzTGRlBjtDCYMIUocZZFaf+UHsTZlT1Wt
+/PliZOn2AiAvw5cRY+5nEIPksaK8ZbTb2KO0ZAx6W68V2XBD3/4M1QB3AD8XS0/X
+IkdYlB1lHIS+DRLtkDd/H4Vq68G/KIXs+GRuAAABkFgStnQAAAQDAEgwRgIhALlm
+reKwV/8ow0+urTjM2wAct4dqCOYxNgzCabH16Vh2AiEAod+LndxW5D9/S+DyiVrl
+Rc+JrTzl0zD0uHvk2b/nhxowDQYJKoZIhvcNAQELBQADggEBALMUNgw9pirInCBX
+FtB77AjlQtWh2YVDm9J1bhEjpNma0np0QyLHLScLc+KFMyAO/0eqyuKvzh7HheXX
+foQcoeXLp5vC+mkE3gRIrDBBXFQNaLNRqqNwfMy+z0WXvtK/avbKgiOiBWtK+C6/
+N7WqIw4Sh3MBmrcsdg2puXHCB+e/Ybn+ysvYRPifWBQtVg/7hLyLrzLWKg0rBS9x
+V3Iyr/S5IVsYAd+IwWJMGuABhYP2gIyeYS6i7gPAs9Ub9y6DB6HVIhkZkwcEsVbq
+BvTgeSGU1tBWfCSDDXcp7gLZ4q12SDGQ9ugd6lIP384i7+chNKgXH7474H+hdBFw
+mliHC6E=
+-----END CERTIFICATE-----
+subject=CN=lobste.rs
+issuer=C=US, O=Let's Encrypt, CN=R11
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: RSA-PSS
+Server Temp Key: X25519, 253 bits
+---
+SSL handshake has read 3156 bytes and written 400 bytes
+Verification: OK
+---
+New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
+Server public key is 2048 bit
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 0 (ok)
+---
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_256_GCM_SHA384
+    Session-ID: 26B4F7C3C1085C0966A788B13F0C7B39D2E97857D2F6B67D79065FD9AA7AA085
+    Session-ID-ctx:
+    Resumption PSK: 15B2A61B4B58FD884857755D1F912BAA6C916308A45507BBAA2756BE8EE41280111380E448881CC2743B42ABBB7A9B66
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 86400 (seconds)
+    TLS session ticket:
+    0000 - c8 02 d2 ad 35 74 f7 6e-a0 49 1b ac fc 28 9c cb   ....5t.n.I...(..
+    0010 - c7 86 1d 01 9f 5c 1d 55-70 0f 64 13 0c 14 b8 5a   .....\.Up.d....Z
+
+    Start Time: 1722191001
+    Timeout   : 7200 (sec)
+    Verify return code: 0 (ok)
+    Extended master secret: no
+    Max Early Data: 0
+---
+read R BLOCK
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_256_GCM_SHA384
+    Session-ID: 421E15C9CAE1CD51FC812C61D81723F9457985B46B08EBF12D3C2E3DC01A122B
+    Session-ID-ctx:
+    Resumption PSK: CDD975FDFF09F10895A5495363157823CB0B9AB758CA7E3CBFFC7F1AC00918A1BE4EAAEC9A2333E77A892F0DE101CC19
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 86400 (seconds)
+    TLS session ticket:
+    0000 - 28 08 3c b0 75 21 61 81-25 b6 ea 50 fe 0f da e7   (.<.u!a.%..P....
+    0010 - c9 ac 2b 4b f7 5c 80 fb-a8 81 5b 7b a7 1e 43 3a   ..+K.\....[{..C:
+
+    Start Time: 1722191001
+    Timeout   : 7200 (sec)
+    Verify return code: 0 (ok)
+    Extended master secret: no
+    Max Early Data: 0
+---
+read R BLOCK
+
+q
+HTTP/1.1 400 Bad Request
+Server: nginx
+Date: Sun, 28 Jul 2024 18:23:28 GMT
+Content-Type: text/html
+Content-Length: 150
+Connection: close
+Content-Security-Policy: frame-ancestors 'none'
+X-Robots-Tag: noai, noimageai
+
+<html>
+<head><title>400 Bad Request</title></head>
+<body>
+<center><h1>400 Bad Request</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+800272A8927F0000:error:0A000126:SSL routines::unexpected eof while reading:ssl/record/rec_layer_s3.c:645:
+kushal@kusfedoravm:~/bin$ exit
+logout
+Connection to kusfedoravm closed.
+PS C:\Users\kushal>
