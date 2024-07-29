@@ -1614,3 +1614,98 @@ You win!
 Press Enter to exit...
 
 kushal@kusfedoravm:~/bin$ cd ~/bin/; rm helloworld; wget https://github.com/kusl/hellorust20240711/releases/download/202407281923/helloworld; chmod +x helloworld; ./helloworld
+helloworld           100% [=====================================================================================================================================================================================================================================>]    3.66M   35.10MB/s
+                          [Files: 1  Bytes: 3.66M [7.83MB/s] Redirects: 1  Todo: 0  Errors: 0                                                                                                                                                                    ]
+Guess the number!
+Remember, you can update your consent by running this application with the --update-consent flag.
+Please input your guess.
+1
+You guessed: 1
+Too small!
+The sum of your guess and the secret number is: 75
+The product of your guess and the secret number is: 74
+The greatest common divisor of your guess and the secret number is: 1
+Please input your guess.
+74
+You guessed: 74
+You win!
+Press Enter to exit...
+
+kushal@kusfedoravm:~/bin$ client_loop: send disconnect: Connection reset
+PS C:\Users\kushal> ssh kusfedoravm
+kushal@kusfedoravm's password:
+
+1 device has a firmware upgrade available.
+Run `fwupdmgr get-upgrades` for more information.
+
+Last login: Sun Jul 28 14:24:16 2024 from fe80::975c:f636:bfb:5026%eth0
+kushal@kusfedoravm:~$ sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download && time sudo dnf offline-upgrade reboot;
+[sudo] password for kushal:
+Current date and time: Mon Jul 29 07:21:38 AM EDT 2024
+Fedora 40 - x86_64                                                                                                                                                                                                                                      167 kB/s |  28 kB     00:00
+Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                                                                                                 14 kB/s | 989  B     00:00
+Fedora 40 - x86_64 - Updates                                                                                                                                                                                                                            123 kB/s |  28 kB     00:00
+Fedora 40 - x86_64 - Updates                                                                                                                                                                                                                            2.5 MB/s | 3.3 MB     00:01
+Dependencies resolved.
+========================================================================================================================================================================================================================================================================================
+ Package                                                               Architecture                                                     Version                                                                 Repository                                                         Size
+========================================================================================================================================================================================================================================================================================
+Upgrading:
+ zchunk-libs                                                           x86_64                                                           1.5.1-1.fc40                                                            updates                                                            52 k
+
+Transaction Summary
+========================================================================================================================================================================================================================================================================================
+Upgrade  1 Package
+
+Total download size: 52 k
+DNF will only download packages, install gpg keys, and check the transaction.
+Is this ok [y/N]: y
+Downloading Packages:
+zchunk-libs-1.5.1-1.fc40.x86_64.rpm                                                                                                                                                                                                                     286 kB/s |  52 kB     00:00
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                                                                                                                   180 kB/s |  52 kB     00:00
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Complete!
+Transaction saved to /var/lib/dnf/system-upgrade/system-upgrade-transaction.json.
+Download complete! Use 'dnf offline-upgrade reboot' to start the upgrade.
+To remove cached metadata and transaction use 'dnf offline-upgrade clean'
+The downloaded packages were saved in cache until the next successful transaction.
+You can remove cached packages by executing 'dnf clean packages'.
+
+real    9m32.300s
+user    0m0.009s
+sys     0m0.024s
+[sudo] password for kushal:
+
+Broadcast message from root@kusfedoravm on pts/1 (Mon 2024-07-29 07:31:23 EDT):
+
+The system will reboot now!
+
+Connection to kusfedoravm closed by remote host.
+Connection to kusfedoravm closed.
+PS C:\Users\kushal> ssh kusfedoravm
+kushal@kusfedoravm's password:
+Last login: Mon Jul 29 07:21:28 2024 from fe80::975c:f636:bfb:5026%eth0
+kushal@kusfedoravm:~$ sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download && time sudo dnf offline-upgrade reboot;
+[sudo] password for kushal:
+Current date and time: Mon Jul 29 07:58:24 AM EDT 2024
+Fedora 40 - x86_64                                                                                                                                                                                                                                       15 MB/s |  20 MB     00:01
+Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                                                                                                2.7 kB/s | 1.4 kB     00:00
+Fedora 40 - x86_64 - Updates                                                                                                                                                                                                                            9.7 MB/s | 9.0 MB     00:00
+Dependencies resolved.
+Nothing to do.
+Complete!
+The system-upgrade transaction is empty, your system is already up-to-date.
+
+real    0m10.080s
+user    0m0.010s
+sys     0m0.020s
+Error: system is not ready for upgrade
+
+real    0m0.264s
+user    0m0.009s
+sys     0m0.018s
+kushal@kusfedoravm:~$
