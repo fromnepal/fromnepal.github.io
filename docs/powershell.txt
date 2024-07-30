@@ -1,3 +1,374 @@
 kushal@kus2023:~$
 kushal@kus2023:~$
 kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+[sudo] password for kushal:
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:3 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:5 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1679 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [887 kB]
+Hit:7 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1900 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [338 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [2257 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [388 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1109 kB]
+Fetched 8815 kB in 2s (4367 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+5 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+real    0m12.255s
+user    0m0.071s
+sys     0m0.102s
+Listing... Done
+libpython3.10-minimal/jammy-updates,jammy-security 3.10.12-1~22.04.5 amd64 [upgradable from: 3.10.12-1~22.04.4]
+libpython3.10-stdlib/jammy-updates,jammy-security 3.10.12-1~22.04.5 amd64 [upgradable from: 3.10.12-1~22.04.4]
+libpython3.10/jammy-updates,jammy-security 3.10.12-1~22.04.5 amd64 [upgradable from: 3.10.12-1~22.04.4]
+python3.10-minimal/jammy-updates,jammy-security 3.10.12-1~22.04.5 amd64 [upgradable from: 3.10.12-1~22.04.4]
+python3.10/jammy-updates,jammy-security 3.10.12-1~22.04.5 amd64 [upgradable from: 3.10.12-1~22.04.4]
+
+real    0m0.231s
+user    0m0.209s
+sys     0m0.022s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
+  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
+  libavfilter7
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+The following packages will be upgraded:
+  libpython3.10 libpython3.10-minimal libpython3.10-stdlib python3.10 python3.10-minimal
+5 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+5 standard LTS security updates
+Need to get 7364 kB of archives.
+After this operation, 8192 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10 amd64 3.10.12-1~22.04.5 [1950 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10 amd64 3.10.12-1~22.04.5 [509 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-stdlib amd64 3.10.12-1~22.04.5 [1849 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10-minimal amd64 3.10.12-1~22.04.5 [2244 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-minimal amd64 3.10.12-1~22.04.5 [813 kB]
+Fetched 7364 kB in 1s (13.9 MB/s)
+(Reading database ... 62521 files and directories currently installed.)
+Preparing to unpack .../libpython3.10_3.10.12-1~22.04.5_amd64.deb ...
+Unpacking libpython3.10:amd64 (3.10.12-1~22.04.5) over (3.10.12-1~22.04.4) ...
+Preparing to unpack .../python3.10_3.10.12-1~22.04.5_amd64.deb ...
+Unpacking python3.10 (3.10.12-1~22.04.5) over (3.10.12-1~22.04.4) ...
+Preparing to unpack .../libpython3.10-stdlib_3.10.12-1~22.04.5_amd64.deb ...
+Unpacking libpython3.10-stdlib:amd64 (3.10.12-1~22.04.5) over (3.10.12-1~22.04.4) ...
+Preparing to unpack .../python3.10-minimal_3.10.12-1~22.04.5_amd64.deb ...
+Unpacking python3.10-minimal (3.10.12-1~22.04.5) over (3.10.12-1~22.04.4) ...
+Preparing to unpack .../libpython3.10-minimal_3.10.12-1~22.04.5_amd64.deb ...
+Unpacking libpython3.10-minimal:amd64 (3.10.12-1~22.04.5) over (3.10.12-1~22.04.4) ...
+Setting up libpython3.10-minimal:amd64 (3.10.12-1~22.04.5) ...
+Setting up python3.10-minimal (3.10.12-1~22.04.5) ...
+Setting up libpython3.10-stdlib:amd64 (3.10.12-1~22.04.5) ...
+Setting up libpython3.10:amd64 (3.10.12-1~22.04.5) ...
+Setting up python3.10 (3.10.12-1~22.04.5) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
+
+real    0m3.595s
+user    0m0.001s
+sys     0m0.008s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.225s
+user    0m0.075s
+sys     0m0.298s
+remote: Enumerating objects: 417, done.
+remote: Counting objects: 100% (339/339), done.
+remote: Compressing objects: 100% (107/107), done.
+remote: Total 417 (delta 245), reused 304 (delta 228), pack-reused 78
+Receiving objects: 100% (417/417), 443.80 KiB | 4.23 MiB/s, done.
+Resolving deltas: 100% (255/255), completed with 92 local objects.
+From https://github.com/LadybirdBrowser/ladybird
+   f61e54b10c..93216a875e  master     -> origin/master
+
+real    0m0.701s
+user    0m0.396s
+sys     0m0.104s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Updating f61e54b10c..93216a875e
+Fast-forward
+ CONTRIBUTING.md                                                                 |  66 ++++++++++++++++++++++--------------
+ Documentation/BuildInstructionsLadybird.md                                      |  37 ++++++++++++++-------
+ Documentation/Troubleshooting.md                                                |  14 ++++++++
+ Ladybird/Icons/macos/app_icon.iconset/icon_128x128.png                          | Bin 17191 -> 7306 bytes
+ Ladybird/Icons/macos/app_icon.iconset/icon_128x128@2x.png                       | Bin 57945 -> 17484 bytes
+ Ladybird/Icons/macos/app_icon.iconset/icon_16x16.png                            | Bin 650 -> 491 bytes
+ Ladybird/Icons/macos/app_icon.iconset/icon_16x16@2x.png                         | Bin 1694 -> 1312 bytes
+ Ladybird/Icons/macos/app_icon.iconset/icon_256x256.png                          | Bin 57945 -> 17484 bytes
+ Ladybird/Icons/macos/app_icon.iconset/icon_256x256@2x.png                       | Bin 203882 -> 37781 bytes
+ Ladybird/Icons/macos/app_icon.iconset/icon_32x32.png                            | Bin 1694 -> 1312 bytes
+ Ladybird/Icons/macos/app_icon.iconset/icon_32x32@2x.png                         | Bin 5055 -> 2669 bytes
+ Ladybird/Icons/macos/app_icon.iconset/icon_512x512.png                          | Bin 203882 -> 37781 bytes
+ Ladybird/Icons/macos/app_icon.iconset/icon_512x512@2x.png                       | Bin 706398 -> 92475 bytes
+ Ladybird/Qt/Application.cpp                                                     |   4 +--
+ Ladybird/Qt/Application.h                                                       |   2 +-
+ Ladybird/Qt/BrowserWindow.cpp                                                   |  34 ++++++-------------
+ Ladybird/Qt/BrowserWindow.h                                                     |  10 ++++--
+ Ladybird/Qt/TabBar.cpp                                                          |  53 +++++++++++++++++++++++++++++
+ Ladybird/Qt/TabBar.h                                                            |  13 ++++++++
+ Meta/gn/secondary/Userland/Libraries/LibWeb/HTML/BUILD.gn                       |   1 +
+ Meta/gn/secondary/Userland/Libraries/LibWeb/Painting/BUILD.gn                   |   1 -
+ Meta/gn/secondary/Userland/Libraries/LibWeb/WebAudio/BUILD.gn                   |   2 ++
+ Meta/gn/secondary/Userland/Libraries/LibWeb/idl_files.gni                       |   2 ++
+ Tests/LibWeb/Layout/expected/css-counters/counters-function-single-argument.txt |  11 ++++++
+ Tests/LibWeb/Layout/expected/table/col-span-crash.txt                           |  19 +++++++++++
+ Tests/LibWeb/Layout/input/css-counters/counters-function-single-argument.html   |   5 +++
+ Tests/LibWeb/Layout/input/table/col-span-crash.html                             |   2 ++
+ Tests/LibWeb/Text/expected/DOM/HTMLSelectElement-length.txt                     |   3 ++
+ Tests/LibWeb/Text/expected/DOM/Node-lookupPrefix.txt                            |   9 +++++
+ Tests/LibWeb/Text/expected/Worker/Worker-location.txt                           |   1 +
+ Tests/LibWeb/Text/expected/all-window-properties.txt                            |   1 +
+ Tests/LibWeb/Text/expected/css/update-pseudo-elements-on-hover.txt              |   3 ++
+ Tests/LibWeb/Text/expected/unclosed-body-element.txt                            |   1 +
+ Tests/LibWeb/Text/expected/unclosed-html-element.txt                            |   1 +
+ Tests/LibWeb/Text/input/DOM/HTMLSelectElement-length.html                       |  12 +++++++
+ Tests/LibWeb/Text/input/DOM/Node-lookupPrefix.html                              |  21 ++++++++++++
+ Tests/LibWeb/Text/input/Worker/Worker-location.html                             |  11 ++++++
+ Tests/LibWeb/Text/input/Worker/Worker-location.js                               |   1 +
+ Tests/LibWeb/Text/input/css/update-pseudo-elements-on-hover.html                |  33 ++++++++++++++++++
+ Tests/LibWeb/Text/input/unclosed-body-element.html                              |  10 ++++++
+ Tests/LibWeb/Text/input/unclosed-html-element.html                              |  10 ++++++
+ Userland/Libraries/LibHTTP/Job.cpp                                              |   7 ++++
+ Userland/Libraries/LibWasm/AbstractMachine/AbstractMachine.cpp                  |  33 +++++++++++-------
+ Userland/Libraries/LibWasm/AbstractMachine/AbstractMachine.h                    |   6 ++--
+ Userland/Libraries/LibWasm/AbstractMachine/Configuration.cpp                    |  10 +++---
+ Userland/Libraries/LibWasm/AbstractMachine/Validator.cpp                        |   8 +++--
+ Userland/Libraries/LibWasm/Parser/Parser.cpp                                    | 300 +++++++++++++++++++++++++++++++++++++++-----------------------------------------------------------------------------------------------------------------------------
+ Userland/Libraries/LibWasm/Printer/Printer.cpp                                  |  27 ---------------
+ Userland/Libraries/LibWasm/Printer/Printer.h                                    |   1 -
+ Userland/Libraries/LibWasm/Types.h                                              |  28 ----------------
+ Userland/Libraries/LibWeb/CMakeLists.txt                                        |   2 +-
+ Userland/Libraries/LibWeb/CSS/Parser/Parser.cpp                                 |   2 +-
+ Userland/Libraries/LibWeb/CSS/StyleInvalidation.h                               |   1 +
+ Userland/Libraries/LibWeb/DOM/Element.cpp                                       | 111 ++++++++++++++++++++++++++++++++++++++++++++++++-------------
+ Userland/Libraries/LibWeb/DOM/Element.h                                         |  18 ++++++----
+ Userland/Libraries/LibWeb/DOM/Node.cpp                                          |  51 ++++++++++++++++++++++++++++
+ Userland/Libraries/LibWeb/DOM/Node.h                                            |   1 +
+ Userland/Libraries/LibWeb/DOM/Node.idl                                          |   2 +-
+ Userland/Libraries/LibWeb/Forward.h                                             |   2 ++
+ Userland/Libraries/LibWeb/HTML/DOMStringList.cpp                                |  67 +++++++++++++++++++++++++++++++++++++
+ Userland/Libraries/LibWeb/HTML/DOMStringList.h                                  |  35 ++++++++++++++++++++
+ Userland/Libraries/LibWeb/HTML/DOMStringList.idl                                |   7 ++++
+ Userland/Libraries/LibWeb/HTML/HTMLOptionsCollection.cpp                        |   4 +--
+ Userland/Libraries/LibWeb/HTML/Navigable.cpp                                    |   1 -
+ Userland/Libraries/LibWeb/HTML/Parser/HTMLParser.cpp                            |   8 ++---
+ Userland/Libraries/LibWeb/HTML/WorkerLocation.cpp                               |   6 ++++
+ Userland/Libraries/LibWeb/HTML/WorkerLocation.h                                 |   1 +
+ Userland/Libraries/LibWeb/Layout/TableFormattingContext.cpp                     |   1 +
+ Userland/Libraries/LibWeb/Painting/BorderRadiusCornerClipper.cpp                |   7 ++--
+ Userland/Libraries/LibWeb/Painting/BorderRadiusCornerClipper.h                  |   2 --
+ Userland/Libraries/LibWeb/Painting/Command.cpp                                  |   8 ++++-
+ Userland/Libraries/LibWeb/Painting/Command.h                                    |  15 ++-------
+ Userland/Libraries/LibWeb/Painting/DisplayList.cpp                              |  64 ++---------------------------------
+ Userland/Libraries/LibWeb/Painting/DisplayList.h                                |   5 +--
+ Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.cpp                    |   9 +----
+ Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.h                      |   3 +-
+ Userland/Libraries/LibWeb/Painting/DisplayListRecorder.cpp                      |  38 ++++++++-------------
+ Userland/Libraries/LibWeb/Painting/DisplayListRecorder.h                        |   9 +----
+ Userland/Libraries/LibWeb/Painting/FilterPainting.cpp                           |  21 ------------
+ Userland/Libraries/LibWeb/Painting/FilterPainting.h                             |  17 ----------
+ Userland/Libraries/LibWeb/Painting/LinearGradientData.h                         |  38 ---------------------
+ Userland/Libraries/LibWeb/Painting/PaintContext.h                               |   3 --
+ Userland/Libraries/LibWeb/Painting/PaintStyle.cpp                               |  46 -------------------------
+ Userland/Libraries/LibWeb/Painting/PaintStyle.h                                 |   6 ----
+ Userland/Libraries/LibWeb/Painting/PaintableBox.cpp                             |  35 ++++++--------------
+ Userland/Libraries/LibWeb/Painting/PaintableBox.h                               |   1 -
+ Userland/Libraries/LibWeb/Painting/ShadowPainting.cpp                           | 236 ---------------------------------------------------------------------------------------------------------------------------------
+ Userland/Libraries/LibWeb/Painting/ShadowPainting.h                             |   2 --
+ Userland/Libraries/LibWeb/WebAudio/AudioBufferSourceNode.cpp                    |  87 +++++++++++++++++++++++++++++++++++++++++++++++-
+ Userland/Libraries/LibWeb/WebAudio/AudioBufferSourceNode.h                      |  23 +++++++++++++
+ Userland/Libraries/LibWeb/WebAudio/AudioBufferSourceNode.idl                    |  14 ++++----
+ Userland/Libraries/LibWeb/WebAudio/AudioDestinationNode.cpp                     |  16 ++++++++-
+ Userland/Libraries/LibWeb/WebAudio/AudioDestinationNode.h                       |   8 +++++
+ Userland/Libraries/LibWeb/WebAudio/AudioDestinationNode.idl                     |   2 +-
+ Userland/Libraries/LibWeb/WebAudio/AudioNode.cpp                                |  68 +++++++++++++++++++++++++++++++++++--
+ Userland/Libraries/LibWeb/WebAudio/AudioNode.h                                  |  13 +++++++-
+ Userland/Libraries/LibWeb/WebAudio/AudioNode.idl                                |  10 +++---
+ Userland/Libraries/LibWeb/WebAudio/BaseAudioContext.cpp                         |  13 +-------
+ Userland/Libraries/LibWeb/WebAudio/BaseAudioContext.h                           |  10 +++---
+ Userland/Libraries/LibWeb/WebAudio/BiquadFilterNode.cpp                         |  59 ++++++++++++++++++++++++++++++++-
+ Userland/Libraries/LibWeb/WebAudio/BiquadFilterNode.h                           |  16 +++++++++
+ Userland/Libraries/LibWeb/WebAudio/BiquadFilterNode.idl                         |  12 +++----
+ Userland/Libraries/LibWeb/WebAudio/GainNode.cpp                                 |   1 +
+ Userland/Libraries/LibWeb/WebAudio/GainNode.h                                   |   2 +-
+ Userland/Libraries/LibWeb/idl_files.cmake                                       |   1 +
+ Userland/Libraries/LibWebView/InspectorClient.cpp                               |   2 +-
+ Userland/Libraries/LibWebView/SourceHighlighter.cpp                             |  49 +++++++++++++++++++++++++--
+ Userland/Services/RequestServer/ConnectionCache.h                               |   3 +-
+ Userland/Services/RequestServer/ConnectionFromClient.cpp                        |  13 ++++++--
+ Userland/Services/RequestServer/ConnectionFromClient.h                          |   2 +-
+ Userland/Services/RequestServer/HttpCommon.h                                    |   4 +--
+ Userland/Services/RequestServer/HttpRequest.h                                   |   1 +
+ Userland/Services/RequestServer/HttpsRequest.h                                  |   1 +
+ Userland/Services/RequestServer/Request.h                                       |   2 ++
+ Userland/Services/WebContent/ConnectionFromClient.cpp                           |   9 +++--
+ 115 files changed, 1146 insertions(+), 993 deletions(-)
+ create mode 100644 Tests/LibWeb/Layout/expected/css-counters/counters-function-single-argument.txt
+ create mode 100644 Tests/LibWeb/Layout/expected/table/col-span-crash.txt
+ create mode 100644 Tests/LibWeb/Layout/input/css-counters/counters-function-single-argument.html
+ create mode 100644 Tests/LibWeb/Layout/input/table/col-span-crash.html
+ create mode 100644 Tests/LibWeb/Text/expected/DOM/HTMLSelectElement-length.txt
+ create mode 100644 Tests/LibWeb/Text/expected/DOM/Node-lookupPrefix.txt
+ create mode 100644 Tests/LibWeb/Text/expected/Worker/Worker-location.txt
+ create mode 100644 Tests/LibWeb/Text/expected/css/update-pseudo-elements-on-hover.txt
+ create mode 100644 Tests/LibWeb/Text/expected/unclosed-body-element.txt
+ create mode 100644 Tests/LibWeb/Text/expected/unclosed-html-element.txt
+ create mode 100644 Tests/LibWeb/Text/input/DOM/HTMLSelectElement-length.html
+ create mode 100644 Tests/LibWeb/Text/input/DOM/Node-lookupPrefix.html
+ create mode 100644 Tests/LibWeb/Text/input/Worker/Worker-location.html
+ create mode 100644 Tests/LibWeb/Text/input/Worker/Worker-location.js
+ create mode 100644 Tests/LibWeb/Text/input/css/update-pseudo-elements-on-hover.html
+ create mode 100644 Tests/LibWeb/Text/input/unclosed-body-element.html
+ create mode 100644 Tests/LibWeb/Text/input/unclosed-html-element.html
+ create mode 100644 Userland/Libraries/LibWeb/HTML/DOMStringList.cpp
+ create mode 100644 Userland/Libraries/LibWeb/HTML/DOMStringList.h
+ create mode 100644 Userland/Libraries/LibWeb/HTML/DOMStringList.idl
+ delete mode 100644 Userland/Libraries/LibWeb/Painting/FilterPainting.cpp
+ delete mode 100644 Userland/Libraries/LibWeb/Painting/FilterPainting.h
+ delete mode 100644 Userland/Libraries/LibWeb/Painting/LinearGradientData.h
+
+real    0m0.340s
+user    0m0.139s
+sys     0m0.090s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.031s
+user    0m0.004s
+sys     0m0.024s
+Tue Jul 30 13:11:09 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+[1/2] Re-running CMake...
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/clang++-17
+All requested packages are currently installed.
+Total install time: 200 ns
+-- Running vcpkg install - done
+-- Found the following ICU libraries:
+--   data (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicudata.a
+--   i18n (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicui18n.a
+--   uc (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicuuc.a
+-- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+-- Configuring done (36.7s)
+-- Generating done (0.6s)
+-- Build files have been written to: /home/kushal/src/ladybird/Build/ladybird
+[0/2] Re-checking globbed directories...
+[1586/1586] Linking CXX executable bin/Ladybird
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
+ 456769 Lost connection to RequestServer
+
+real    160m35.098s
+user    104m54.775s
+sys     7m45.949s
+Tue Jul 30 15:51:44 EDT 2024
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+[sudo] password for kushal:
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Fetched 257 kB in 1s (277 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+
+real    0m7.851s
+user    0m0.051s
+sys     0m0.055s
+Listing... Done
+
+real    0m0.252s
+user    0m0.240s
+sys     0m0.010s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
+  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
+  libavfilter7
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+real    0m0.408s
+user    0m0.001s
+sys     0m0.006s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.194s
+user    0m0.029s
+sys     0m1.277s
+
+real    0m0.247s
+user    0m0.019s
+sys     0m0.044s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Already up to date.
+
+real    0m0.377s
+user    0m0.035s
+sys     0m0.006s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.015s
+user    0m0.022s
+sys     0m0.000s
+Tue Jul 30 15:51:58 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+ninja: no work to do.
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
+ 482775 Lost connection to RequestServer
+
+real    0m5.739s
+user    0m1.082s
+sys     0m1.190s
+Tue Jul 30 15:52:04 EDT 2024
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
