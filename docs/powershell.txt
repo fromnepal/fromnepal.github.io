@@ -9028,4 +9028,23 @@
 --- colorado.duckdns.org ping statistics ---
 12606 packets transmitted, 12606 received, 0% packet loss, time 12902372ms
 rtt min/avg/max/mdev = 0.282/0.601/36.369/0.643 ms
-kushal@kusfedoravm:~/bin$ ping colorado.duckdns.org
+kushal@kusfedoravm:~/bin$ sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot;
+[sudo] password for kushal:
+Current date and time: Tue Jul 30 09:22:19 PM EDT 2024
+Fedora 40 - x86_64                                                                                                                                                                78 kB/s |  28 kB     00:00
+Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                         9.3 kB/s | 989  B     00:00
+Fedora 40 - x86_64 - Updates                                                                                                                                                     122 kB/s |  27 kB     00:00
+Dependencies resolved.
+Nothing to do.
+Complete!
+The system-upgrade transaction is empty, your system is already up-to-date.
+
+real    0m2.127s
+user    0m0.006s
+sys     0m0.025s
+Error: system is not ready for upgrade
+
+real    0m0.294s
+user    0m0.005s
+sys     0m0.022s
+kushal@kusfedoravm:~/bin$
