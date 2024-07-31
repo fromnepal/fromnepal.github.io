@@ -1578,4 +1578,34 @@ kushal@kus2023:/mnt/c/Users/kushal$ sudo systemctl enable --now virtlogd
 kushal@kus2023:/mnt/c/Users/kushal$ echo 1 | sudo tee /sys/module/kvm/parameters/ignore_msrs
 1
 kushal@kus2023:/mnt/c/Users/kushal$ sudo modprobe kvm
-kushal@kus2023:/mnt/c/Users/kushal$
+kushal@kus2023:/mnt/c/Users/kushal$ exit
+logout
+PS C:\Users\kushal> docker ps --all
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+PS C:\Users\kushal> docker run -it \
+docker: invalid reference format.
+See 'docker run --help'.
+PS C:\Users\kushal>     --device /dev/kvm \
+ParserError:
+Line |
+   1 |      --device /dev/kvm \
+     |        ~
+     | Missing expression after unary operator '--'.
+PS C:\Users\kushal>     -p 50922:10022 \
+-p: The term '-p' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\kushal>     -v /tmp/.X11-unix:/tmp/.X11-unix \
+-v: The term '-v' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\kushal>     -e "DISPLAY=${DISPLAY:-:0.0}" \
+-e: The term '-e' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\kushal>     sickcodes/docker-osx:latest
+sickcodes/docker-osx:latest: The term 'sickcodes/docker-osx:latest' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\Users\kushal>
+PS C:\Users\kushal> # docker build -t docker-osx .
+PS C:\Users\kushal> docker run -it --device \\.\PhysicalDrive0 -p 50922:10022 -v C:\tmp\.X11-unix:/tmp/.X11-unix -e "DISPLAY=:0.0" sickcodes/docker-osx:latest
+docker: \\.\PhysicalDrive0 is not an absolute path.
+See 'docker run --help'.
+PS C:\Users\kushal>
