@@ -1,127 +1,190 @@
-PowerShell 7.4.3
+kushal@kus2023:~$
+kushal@kus2023:~$
+kushal@kus2023:~$
+kushal@kus2023:~$ docker
 
-   A new PowerShell stable release is available: v7.4.4
-   Upgrade now, or check out the release page at:
-     https://aka.ms/PowerShell-Release?tag=v7.4.4
+Usage:  docker [OPTIONS] COMMAND
 
-PS C:\Users\kushal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+A self-sufficient runtime for containers
 
-Wednesday, July 31, 2024 7:54:38 AM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.10s.
-Wednesday, July 31, 2024 7:54:39 AM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.2.13 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 157ms
-Done in 2.64s.
-Wednesday, July 31, 2024 7:54:42 AM
-warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Wednesday, July 31, 2024 7:54:42 AM
-[main 3318846] build application
- 2 files changed, 10082 insertions(+), 18100 deletions(-)
-Wednesday, July 31, 2024 7:54:42 AM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Current branch main is up to date.
-Wednesday, July 31, 2024 7:54:43 AM
-Enumerating objects: 9, done.
-Counting objects: 100% (9/9), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 25.11 KiB | 1.57 MiB/s, done.
-Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   de5ecda..3318846  main -> main
-Wednesday, July 31, 2024 7:54:44 AM
+Common Commands:
+  run         Create and run a new container from an image
+  exec        Execute a command in a running container
+  ps          List containers
+  build       Build an image from a Dockerfile
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  images      List images
+  login       Log in to a registry
+  logout      Log out from a registry
+  search      Search Docker Hub for images
+  version     Show the Docker version information
+  info        Display system-wide information
 
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+Management Commands:
+  builder     Manage builds
+  buildx*     Docker Buildx
+  compose*    Docker Compose
+  container   Manage containers
+  context     Manage contexts
+  debug*      Get a shell into any image or container
+  dev*        Docker Dev Environments
+  extension*  Manages Docker extensions
+  feedback*   Provide feedback, right in your terminal!
+  image       Manage images
+  init*       Creates Docker-related starter files for your project
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  plugin      Manage plugins
+  sbom*       View the packaged-based Software Bill Of Materials (SBOM) for an image
+  scout*      Docker Scout
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
 
-Wednesday, July 31, 2024 7:59:46 AM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.06s.
-Wednesday, July 31, 2024 7:59:46 AM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.2.13 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 106ms
-Done in 0.80s.
-Wednesday, July 31, 2024 7:59:47 AM
-warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Wednesday, July 31, 2024 7:59:47 AM
-[main 0d75232] build application
- 2 files changed, 3150 insertions(+), 10070 deletions(-)
-Wednesday, July 31, 2024 7:59:47 AM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Current branch main is up to date.
-Wednesday, July 31, 2024 7:59:48 AM
-Enumerating objects: 9, done.
-Counting objects: 100% (9/9), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 17.47 KiB | 2.50 MiB/s, done.
-Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   3318846..0d75232  main -> main
-Wednesday, July 31, 2024 7:59:48 AM
+Swarm Commands:
+  swarm       Manage Swarm
 
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
 
-Wednesday, July 31, 2024 8:03:47 AM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.07s.
-Wednesday, July 31, 2024 8:03:48 AM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.2.13 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 104ms
-Done in 0.79s.
-Wednesday, July 31, 2024 8:03:49 AM
-warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Wednesday, July 31, 2024 8:03:49 AM
-[main 38adf38] build application
- 2 files changed, 62 insertions(+), 2 deletions(-)
-Wednesday, July 31, 2024 8:03:49 AM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Current branch main is up to date.
-Wednesday, July 31, 2024 8:03:49 AM
-Enumerating objects: 9, done.
-Counting objects: 100% (9/9), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 1.01 KiB | 1.01 MiB/s, done.
-Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   0d75232..38adf38  main -> main
-Wednesday, July 31, 2024 8:03:50 AM
+Global Options:
+      --config string      Location of client config files (default "/home/kushal/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket to connect to
+  -l, --log-level string   Set the logging level ("debug", "info", "warn", "error", "fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/home/kushal/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/home/kushal/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/home/kushal/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
 
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+Run 'docker COMMAND --help' for more information on a command.
+
+For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+kushal@kus2023:~$ docker run -it \
+    --device /dev/kvm \
+    -p 50922:10022 \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -e "DISPLAY=${DISPLAY:-:0.0}" \
+    sickcodes/docker-osx:latest
+
+# docker build -t docker-osx .
+Unable to find image 'sickcodes/docker-osx:latest' locally
+latest: Pulling from sickcodes/docker-osx
+6492817d4306: Pull complete
+5486ada88518: Pull complete
+8f5dabcef64f: Pull complete
+7fa3e9a6d67e: Pull complete
+64ea3b8459df: Pull complete
+ab4bf6cd6fac: Pull complete
+ff712440e903: Pull complete
+366a57a588df: Pull complete
+b20b60d0a39f: Pull complete4f4fb700ef54: Pull complete
+1a4fd2126ce6: Pull complete
+778ce316f640: Pull complete8ac3231baa8a: Pull complete
+441e41891b55: Pull complete
+c9faf3bb5867: Pull complete
+4acc9fabf2f4: Pull complete
+78e34f8fe2e6: Pull complete
+8c40eb8b5fb0: Pull complete
+7386cc97065a: Pull complete
+f0be7922a1ad: Pull complete
+fe6d5266f15c: Pull complete53eee4b76eda: Pull complete
+0fb64adeaf82: Pull complete
+45a781571407: Pull complete
+Digest: sha256:8db49b1aedb1a6228e7a774b4acfcce1bcf6b5a23b2e84e9aa7532be67dea872
+Status: Downloaded newer image for sickcodes/docker-osx:latest
+ssh-keygen: generating new host keys: RSA ECDSA ED25519
+nohup: appending output to 'nohup.out'
+++ id -u
+++ id -g
++ sudo chown 1000:1000 /dev/kvm
+++ id -u
+++ id -g
++ sudo chown -R 1000:1000 /dev/snd
++ [[ 4 = max ]]
++ [[ 4 = half ]]
+++ id -u
+++ id -g
++ sudo chown -R 1000:1000 /dev/snd
++ exec qemu-system-x86_64 -m 4000 -cpu Penryn,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on,+ssse3,+sse4.2,+popcnt,+avx,+aes,+xsave,+xsaveopt,check, -machine q35,accel=kvm:tcg -smp 4,cores=4 -usb -device usb-kbd -device usb-tablet -device 'isa-applesmc,osk=ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc' -drive if=pflash,format=raw,readonly=on,file=/home/arch/OSX-KVM/OVMF_CODE.fd -drive if=pflash,format=raw,file=/home/arch/OSX-KVM/OVMF_VARS-1024x768.fd -smbios type=2 -audiodev alsa,id=hda -device ich9-intel-hda -device hda-duplex,audiodev=hda -device ich9-ahci,id=sata -drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file=/home/arch/OSX-KVM/OpenCore/OpenCore.qcow2 -device ide-hd,bus=sata.2,drive=OpenCoreBoot -device ide-hd,bus=sata.3,drive=InstallMedia -drive id=InstallMedia,if=none,file=/home/arch/OSX-KVM/BaseSystem.img,format=qcow2 -drive id=MacHDD,if=none,file=/home/arch/OSX-KVM/mac_hdd_ng.img,format=qcow2 -device ide-hd,bus=sata.4,drive=MacHDD -netdev user,id=net0,hostfwd=tcp::10022-:22,hostfwd=tcp::5900-:5900, -device vmxnet3,netdev=net0,id=net0,mac=52:54:00:09:49:17 -monitor stdio -boot menu=on -vga vmware
+QEMU 8.0.2 monitor - type 'help' for more information
+(qemu) ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5704:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM default
+alsa: Could not initialize DAC
+alsa: Failed to open `default':
+alsa: Reason: No such file or directory
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5704:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM default
+alsa: Could not initialize DAC
+alsa: Failed to open `default':
+alsa: Reason: No such file or directory
+audio: Could not create a backend for voice `dac'
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5704:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM default
+alsa: Could not initialize ADC
+alsa: Failed to open `default':
+alsa: Reason: No such file or directory
+ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
+ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+ALSA lib conf.c:5704:(snd_config_expand) Evaluate error: No such file or directory
+ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM default
+alsa: Could not initialize ADC
+alsa: Failed to open `default':
+alsa: Reason: No such file or directory
+audio: Could not create a backend for voice `adc'
+kushal@kus2023:~$
+kushal@kus2023:~$
+kushal@kus2023:~$
