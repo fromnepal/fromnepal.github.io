@@ -1,46 +1,163 @@
-Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_64)
+PowerShell 7.4.3
 
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/pro
+   A new PowerShell stable release is available: v7.4.4
+   Upgrade now, or check out the release page at:
+     https://aka.ms/PowerShell-Release?tag=v7.4.4
 
+PS C:\Users\kushal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-This message is shown once a day. To disable it please create the
-/home/kushal/.hushlogin file.
-kushal@kus2023:~$
-kushal@kus2023:~$
-kushal@kus2023:~$ docker run -it --dv/dev/kvm -p 50922:10022 -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPLAY=${DISPLAY:-:0.0}" sickcodes/docker-osx:latest
+Thursday, August 1, 2024 9:55:15 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.09s.
+Thursday, August 1, 2024 9:55:15 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 152ms
+Done in 2.13s.
+Thursday, August 1, 2024 9:55:18 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, August 1, 2024 9:55:18 AM
+[main 207cbde] build application
+ 2 files changed, 80 insertions(+)
+Thursday, August 1, 2024 9:55:18 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 1, 2024 9:55:19 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 597 bytes | 597.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   538e4b3..207cbde  main -> main
+Thursday, August 1, 2024 9:55:20 AM
 
-The command 'docker' could not be found in this WSL 2 distro.
-We recommend to activate the WSL integration in Docker Desktop settings.
+PS C:\Users\kushal\src\myhtml\fromnepal>
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-For details about using Docker Desktop with WSL 2, visit:
+Thursday, August 1, 2024 9:55:27 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Thursday, August 1, 2024 9:55:28 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 102ms
+Done in 0.81s.
+Thursday, August 1, 2024 9:55:28 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, August 1, 2024 9:55:29 AM
+On branch main
+Your branch is up to date with 'origin/main'.
 
-https://docs.docker.com/go/wsl2/
+nothing to commit, working tree clean
+Thursday, August 1, 2024 9:55:29 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Thursday, August 1, 2024 9:55:29 AM
+Everything up-to-date
+Thursday, August 1, 2024 9:55:30 AM
 
-kushal@kus2023:~$
-kushal@kus2023:~$ docker run -it --dv/dev/kvm -p 50922:10022 -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPLAY=${DISPLAY:-:0.0}" sickcodes/docker-osx:latest
-unknown flag: --dv/dev/kvm
-See 'docker run --help'.
-kushal@kus2023:~$ docker run -it --device /dev/kvm -p 50922:10022 -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPLAY=${DISPLAY:-:0.0}" sickcodes/docker-osx:latest
-docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:50922 -> 0.0.0.0:0: listen tcp 0.0.0.0:50922: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
-kushal@kus2023:~$
-kushal@kus2023:~$ docker run -it --device /dev/kvm -p 50922:10022 -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPLAY=${DISPLAY:-:0.0}" sickcodes/docker-osx:latest
-docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:50922 -> 0.0.0.0:0: listen tcp 0.0.0.0:50922: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
-kushal@kus2023:~$ docker status
-docker: 'status' is not a docker command.
-See 'docker --help'
-kushal@kus2023:~$ docker ps
-CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-kushal@kus2023:~$
-kushal@kus2023:~$ docker ps
-CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-kushal@kus2023:~$ docker run -it --device /dev/kvm -p 50922:10022 -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPLAY=${DISPLAY:-:0.0}" sickcodes/docker-osx:latest
-docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:50922 -> 0.0.0.0:0: listen tcp 0.0.0.0:50922: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
-kushal@kus2023:~$ docker run -it --device /dev/kvm -p 50923:10022 -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPLAY=${DISPLAY:-:0.0}" sickcodes/docker-osx:latest
-docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:50923 -> 0.0.0.0:0: listen tcp 0.0.0.0:50923: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
-kushal@kus2023:~$ sudo lsof -i :50922
-[sudo] password for kushal:
-kushal@kus2023:~$ docker run -it --device /dev/kvm -p 50924:10022 -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPLAY=${DISPLAY:-:0.0}" sickcodes/docker-osx:latest
-docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:50924 -> 0.0.0.0:0: listen tcp 0.0.0.0:50924: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
-kushal@kus2023:~$
+PS C:\Users\kushal\src\myhtml\fromnepal>
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 1, 2024 9:55:51 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Thursday, August 1, 2024 9:55:51 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 104ms
+Done in 0.79s.
+Thursday, August 1, 2024 9:55:52 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, August 1, 2024 9:55:52 AM
+[main 0771927] build application
+ 2 files changed, 18 insertions(+), 1186 deletions(-)
+Thursday, August 1, 2024 9:55:52 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 1, 2024 9:55:53 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 636 bytes | 636.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   207cbde..0771927  main -> main
+Thursday, August 1, 2024 9:55:54 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 1, 2024 10:03:25 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Thursday, August 1, 2024 10:03:26 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 112ms
+Done in 1.18s.
+Thursday, August 1, 2024 10:03:27 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, August 1, 2024 10:03:27 AM
+[main 7b15713] build application
+ 2 files changed, 68 insertions(+)
+Thursday, August 1, 2024 10:03:27 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 1, 2024 10:03:28 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.16 KiB | 1.16 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   0771927..7b15713  main -> main
+Thursday, August 1, 2024 10:03:29 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
