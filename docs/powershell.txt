@@ -9,4 +9,38 @@ This message is shown once a day. To disable it please create the
 /home/kushal/.hushlogin file.
 kushal@kus2023:~$
 kushal@kus2023:~$
+kushal@kus2023:~$ docker run -it --dv/dev/kvm -p 50922:10022 -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPLAY=${DISPLAY:-:0.0}" sickcodes/docker-osx:latest
+
+The command 'docker' could not be found in this WSL 2 distro.
+We recommend to activate the WSL integration in Docker Desktop settings.
+
+For details about using Docker Desktop with WSL 2, visit:
+
+https://docs.docker.com/go/wsl2/
+
+kushal@kus2023:~$
+kushal@kus2023:~$ docker run -it --dv/dev/kvm -p 50922:10022 -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPLAY=${DISPLAY:-:0.0}" sickcodes/docker-osx:latest
+unknown flag: --dv/dev/kvm
+See 'docker run --help'.
+kushal@kus2023:~$ docker run -it --device /dev/kvm -p 50922:10022 -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPLAY=${DISPLAY:-:0.0}" sickcodes/docker-osx:latest
+docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:50922 -> 0.0.0.0:0: listen tcp 0.0.0.0:50922: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
+kushal@kus2023:~$
+kushal@kus2023:~$ docker run -it --device /dev/kvm -p 50922:10022 -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPLAY=${DISPLAY:-:0.0}" sickcodes/docker-osx:latest
+docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:50922 -> 0.0.0.0:0: listen tcp 0.0.0.0:50922: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
+kushal@kus2023:~$ docker status
+docker: 'status' is not a docker command.
+See 'docker --help'
+kushal@kus2023:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+kushal@kus2023:~$
+kushal@kus2023:~$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+kushal@kus2023:~$ docker run -it --device /dev/kvm -p 50922:10022 -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPLAY=${DISPLAY:-:0.0}" sickcodes/docker-osx:latest
+docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:50922 -> 0.0.0.0:0: listen tcp 0.0.0.0:50922: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
+kushal@kus2023:~$ docker run -it --device /dev/kvm -p 50923:10022 -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPLAY=${DISPLAY:-:0.0}" sickcodes/docker-osx:latest
+docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:50923 -> 0.0.0.0:0: listen tcp 0.0.0.0:50923: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
+kushal@kus2023:~$ sudo lsof -i :50922
+[sudo] password for kushal:
+kushal@kus2023:~$ docker run -it --device /dev/kvm -p 50924:10022 -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPLAY=${DISPLAY:-:0.0}" sickcodes/docker-osx:latest
+docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:50924 -> 0.0.0.0:0: listen tcp 0.0.0.0:50924: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
 kushal@kus2023:~$
