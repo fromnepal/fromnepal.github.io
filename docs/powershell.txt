@@ -226,3 +226,597 @@ alsa: Reason: No such file or directory
 audio: Could not create a backend for voice `adc'
 qemu: terminating on signal 2
 kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+[sudo] password for kushal:
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Hit:5 http://security.ubuntu.com/ubuntu jammy-security InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+
+real    0m6.836s
+user    0m0.018s
+sys     0m0.017s
+Listing... Done
+
+real    0m0.165s
+user    0m0.153s
+sys     0m0.010s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
+  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
+  libavfilter7
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+real    0m0.308s
+user    0m0.005s
+sys     0m0.000s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.073s
+user    0m0.013s
+sys     0m0.235s
+remote: Enumerating objects: 565, done.
+remote: Counting objects: 100% (546/546), done.
+remote: Compressing objects: 100% (331/331), done.
+remote: Total 565 (delta 291), reused 374 (delta 214), pack-reused 19
+Receiving objects: 100% (565/565), 600.29 KiB | 6.67 MiB/s, done.
+Resolving deltas: 100% (294/294), completed with 60 local objects.
+From https://github.com/LadybirdBrowser/ladybird
+   93216a875e..963cf1c2c4  master     -> origin/master
+
+real    0m0.625s
+user    0m0.097s
+sys     0m0.057s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Updating 93216a875e..963cf1c2c4
+Fast-forward
+ .swift-format                                                                                              |   8 ++
+ AK/Base64.cpp                                                                                              |   2 -
+ AK/StdLibExtras.h                                                                                          |  42 +---------
+ AK/String.cpp                                                                                              |   2 -
+ AK/Utf16View.cpp                                                                                           |  11 ++-
+ AK/Utf16View.h                                                                                             |   2 +
+ AK/Utf8View.cpp                                                                                            |   2 -
+ AK/module.modulemap                                                                                        |   6 ++
+ CMakeLists.txt                                                                                             |   9 +--
+ Ladybird/AppKit/Application/Application.h                                                                  |  10 ++-
+ Ladybird/AppKit/Application/Application.mm                                                                 |  20 ++---
+ Ladybird/AppKit/Application/ApplicationBridge.cpp                                                          |   9 +--
+ Ladybird/AppKit/Application/ApplicationBridge.h                                                            |   9 ++-
+ Ladybird/AppKit/Application/ApplicationDelegate.h                                                          |  13 +--
+ Ladybird/AppKit/Application/ApplicationDelegate.mm                                                         |  45 ++---------
+ Ladybird/AppKit/CMakeLists.txt                                                                             |  14 ----
+ Ladybird/AppKit/UI/LadybirdWebView.mm                                                                      |   2 +-
+ Ladybird/AppKit/UI/LadybirdWebViewBridge.cpp                                                               |  16 ++--
+ Ladybird/AppKit/UI/LadybirdWebViewBridge.h                                                                 |  12 +--
+ Ladybird/AppKit/UI/TabController.h                                                                         |   4 +-
+ Ladybird/AppKit/UI/TabController.mm                                                                        |   7 +-
+ Ladybird/AppKit/UI/TaskManager.swift                                                                       |  74 +++++++++--------
+ Ladybird/AppKit/UI/TaskManagerController.swift                                                             |  52 ++++++------
+ Ladybird/AppKit/main.mm                                                                                    |  97 +++++------------------
+ Ladybird/CMakeLists.txt                                                                                    |   1 -
+ Ladybird/HelperProcess.cpp                                                                                 |  48 ++++++-----
+ Ladybird/HelperProcess.h                                                                                   |   4 +-
+ Ladybird/ImageDecoder/main.cpp                                                                             |   7 ++
+ Ladybird/Qt/Application.cpp                                                                                |  31 +++++---
+ Ladybird/Qt/Application.h                                                                                  |  16 +++-
+ Ladybird/Qt/BrowserWindow.cpp                                                                              |  26 +++---
+ Ladybird/Qt/BrowserWindow.h                                                                                |   7 +-
+ Ladybird/Qt/InspectorWidget.cpp                                                                            |   2 +-
+ Ladybird/Qt/Tab.cpp                                                                                        |   4 +-
+ Ladybird/Qt/Tab.h                                                                                          |   2 +-
+ Ladybird/Qt/TaskManagerWindow.cpp                                                                          |   4 +-
+ Ladybird/Qt/TaskManagerWindow.h                                                                            |   2 +-
+ Ladybird/Qt/WebContentView.cpp                                                                             |  15 ++--
+ Ladybird/Qt/WebContentView.h                                                                               |   8 +-
+ Ladybird/Qt/main.cpp                                                                                       | 105 ++++++------------------
+ Ladybird/RequestServer/main.cpp                                                                            |   6 ++
+ Ladybird/Types.h                                                                                           |  67 ----------------
+ Ladybird/WebContent/main.cpp                                                                               |  12 +--
+ Ladybird/WebDriver/main.cpp                                                                                |  10 ++-
+ Ladybird/WebWorker/main.cpp                                                                                |   6 ++
+ {Ladybird/cmake => Meta/CMake/Swift}/GenerateSwiftHeader.cmake                                             |   0
+ Meta/CMake/Swift/InitializeSwift.cmake                                                                     |  99 +++++++++++++++++++++++
+ Meta/CMake/Swift/swift-settings.cmake                                                                      |  24 ++++++
+ Meta/CMake/common_options.cmake                                                                            |   5 +-
+ Meta/Lagom/CMakeLists.txt                                                                                  |  18 +++--
+ Meta/Lagom/ReadMe.md                                                                                       |   2 -
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/BindingsGenerator/IDLGenerators.cpp                                 |  53 +++++++++----
+ Meta/gn/secondary/Ladybird/BUILD.gn                                                                        |   1 -
+ Tests/AK/TestUtf16.cpp                                                                                     |   8 ++
+ Tests/LibWeb/Layout/expected/flex/abspos-flex-child-static-position-with-padding-on-flex-container.txt     |   6 +-
+ Tests/LibWeb/Layout/expected/input-placeholder.txt                                                         |   8 +-
+ Tests/LibWeb/Layout/expected/overflow-with-padding.txt                                                     |  57 +++++++++++++
+ Tests/LibWeb/Layout/expected/position-absolute-ignores-padding-of-position-relative-floating-parent.txt    |   2 +-
+ Tests/LibWeb/Layout/expected/table/avoid-div-by-zero-in-table-measures.txt                                 |   6 +-
+ Tests/LibWeb/Layout/input/overflow-with-padding.html                                                       |  19 +++++
+ Tests/LibWeb/Ref/reference/scrollable-contains-rotated-boxes-ref.html                                      |  46 +++++++++++
+ Tests/LibWeb/Ref/reference/scrollable-contains-table-ref.html                                              |  82 +++++++++++++++++++
+ Tests/LibWeb/Ref/scrollable-contains-rotated-boxes.html                                                    |  47 +++++++++++
+ Tests/LibWeb/Ref/scrollable-contains-table.html                                                            | 101 +++++++++++++++++++++++
+ Tests/LibWeb/Text/expected/input-selection-start-selection-end.txt                                         |   7 ++
+ Tests/LibWeb/Text/input/input-selection-start-selection-end.html                                           |  24 ++++++
+ Userland/Libraries/LibAudio/PlaybackStreamOboe.cpp                                                         |   1 -
+ Userland/Libraries/LibCore/System.cpp                                                                      |   4 +-
+ Userland/Libraries/LibGfx/CMakeLists.txt                                                                   |  22 ++++++
+ Userland/Libraries/LibGfx/Color.cpp                                                                        | 114 +++++++++++++++-----------
+ Userland/Libraries/LibGfx/Color.h                                                                          |   3 +-
+ Userland/Libraries/LibGfx/Color.swift                                                                      |  85 ++++++++++++++++++++
+ Userland/Libraries/LibGfx/Font/WOFF2/Loader.cpp                                                            |   1 -
+ Userland/Libraries/LibGfx/module.modulemap                                                                 |   8 ++
+ Userland/Libraries/LibJS/Runtime/Intl/Locale.cpp                                                           | 136 +++++++++++++------------------
+ Userland/Libraries/LibJS/Runtime/Intl/Locale.h                                                             |  24 +++---
+ Userland/Libraries/LibJS/Runtime/Intl/LocaleConstructor.cpp                                                |  74 ++++++++---------
+ Userland/Libraries/LibJS/Runtime/Intl/LocalePrototype.cpp                                                  |  13 +--
+ Userland/Libraries/LibJS/Tests/builtins/Date/Date.prototype.toLocaleString.js                              |  12 +--
+ Userland/Libraries/LibJS/Tests/builtins/Date/Date.prototype.toLocaleTimeString.js                          |   8 +-
+ Userland/Libraries/LibJS/Tests/builtins/Intl/DateTimeFormat/DateTimeFormat.prototype.format.js             |  56 ++++++-------
+ Userland/Libraries/LibJS/Tests/builtins/Intl/DateTimeFormat/DateTimeFormat.prototype.formatRange.js        |  64 ++++++++-------
+ Userland/Libraries/LibJS/Tests/builtins/Intl/DateTimeFormat/DateTimeFormat.prototype.formatRangeToParts.js |  40 +++++-----
+ Userland/Libraries/LibJS/Tests/builtins/Intl/DateTimeFormat/DateTimeFormat.prototype.formatToParts.js      |   8 +-
+ Userland/Libraries/LibJS/Tests/builtins/Intl/Locale/Locale.prototype.firstDayOfWeek.js                     |  38 ++++-----
+ Userland/Libraries/LibUnicode/CharacterTypes.cpp                                                           |   2 -
+ Userland/Libraries/LibUnicode/DateTimeFormat.cpp                                                           |  23 +++++-
+ Userland/Libraries/LibUnicode/DisplayNames.cpp                                                             |   2 -
+ Userland/Libraries/LibUnicode/DurationFormat.cpp                                                           |   2 -
+ Userland/Libraries/LibUnicode/ICU.cpp                                                                      |   2 -
+ Userland/Libraries/LibUnicode/ICU.h                                                                        |   2 -
+ Userland/Libraries/LibUnicode/IDNA.cpp                                                                     |   2 -
+ Userland/Libraries/LibUnicode/ListFormat.cpp                                                               |   2 -
+ Userland/Libraries/LibUnicode/Locale.cpp                                                                   |   2 -
+ Userland/Libraries/LibUnicode/Normalize.cpp                                                                |   2 -
+ Userland/Libraries/LibUnicode/NumberFormat.cpp                                                             |   2 -
+ Userland/Libraries/LibUnicode/RelativeTimeFormat.cpp                                                       |   2 -
+ Userland/Libraries/LibUnicode/Segmenter.cpp                                                                |   2 -
+ Userland/Libraries/LibUnicode/String.cpp                                                                   |   2 -
+ Userland/Libraries/LibUnicode/TimeZone.cpp                                                                 |   2 -
+ Userland/Libraries/LibUnicode/UnicodeKeywords.cpp                                                          |   2 -
+ Userland/Libraries/LibWasm/AbstractMachine/AbstractMachine.cpp                                             | 598 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-------------------------------------------------------------------------------
+ Userland/Libraries/LibWasm/AbstractMachine/Validator.cpp                                                   | 220 ++++++++++++++++++++-------------------------------
+ Userland/Libraries/LibWasm/Parser/Parser.cpp                                                               |  38 +++++----
+ Userland/Libraries/LibWasm/Printer/Printer.cpp                                                             |  42 +++++++++-
+ Userland/Libraries/LibWasm/Types.h                                                                         | 120 ++++++++++++++++------------
+ Userland/Libraries/LibWeb/Animations/Animatable.cpp                                                        |  38 ++++++++-
+ Userland/Libraries/LibWeb/Animations/Animatable.h                                                          |  13 +--
+ Userland/Libraries/LibWeb/Animations/KeyframeEffect.cpp                                                    |  22 ++++--
+ Userland/Libraries/LibWeb/CSS/StyleComputer.cpp                                                            |  16 ++--
+ Userland/Libraries/LibWeb/CSS/StyleInvalidation.cpp                                                        |   4 +-
+ Userland/Libraries/LibWeb/DOM/CharacterData.h                                                              |   5 +-
+ Userland/Libraries/LibWeb/DOM/Document.cpp                                                                 |  17 ++--
+ Userland/Libraries/LibWeb/DOM/Document.h                                                                   |  20 +++--
+ Userland/Libraries/LibWeb/DOM/Element.cpp                                                                  |  75 ++++++++++++------
+ Userland/Libraries/LibWeb/DOM/Element.h                                                                    |   4 +
+ Userland/Libraries/LibWeb/Fetch/Fetching/Fetching.cpp                                                      |   4 +
+ Userland/Libraries/LibWeb/HTML/FormAssociatedElement.cpp                                                   |  63 ++++++++++++++-
+ Userland/Libraries/LibWeb/HTML/FormAssociatedElement.h                                                     |   8 ++
+ Userland/Libraries/LibWeb/HTML/HTMLAnchorElement.cpp                                                       |   8 ++
+ Userland/Libraries/LibWeb/HTML/HTMLInputElement.cpp                                                        |  63 ++++++++++++++-
+ Userland/Libraries/LibWeb/HTML/HTMLInputElement.h                                                          |   7 ++
+ Userland/Libraries/LibWeb/HTML/HTMLInputElement.idl                                                        |   4 +-
+ Userland/Libraries/LibWeb/HTML/HTMLTextAreaElement.cpp                                                     |  62 +--------------
+ Userland/Libraries/LibWeb/HTML/HTMLTextAreaElement.h                                                       |   6 --
+ Userland/Libraries/LibWeb/HTML/MessagePort.cpp                                                             |   2 +-
+ Userland/Libraries/LibWeb/HTML/Parser/HTMLParser.cpp                                                       |   4 +-
+ Userland/Libraries/LibWeb/Layout/LayoutState.cpp                                                           |  24 ++++--
+ Userland/Libraries/LibWeb/Layout/Node.h                                                                    |   2 +
+ Userland/Libraries/LibWeb/Layout/TreeBuilder.cpp                                                           |   3 +-
+ Userland/Libraries/LibWeb/Page/EventHandler.cpp                                                            |   6 +-
+ Userland/Libraries/LibWeb/Page/Page.h                                                                      |   2 +-
+ Userland/Libraries/LibWeb/Painting/ClippableAndScrollable.cpp                                              |  12 +--
+ Userland/Libraries/LibWeb/Painting/Command.h                                                               |   1 +
+ Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.cpp                                               |   2 -
+ Userland/Libraries/LibWeb/Painting/Paintable.h                                                             |   1 +
+ Userland/Libraries/LibWeb/Painting/PaintableBox.cpp                                                        |  31 +++++---
+ Userland/Libraries/LibWeb/Painting/PaintableBox.h                                                          |   6 +-
+ Userland/Libraries/LibWeb/Painting/StackingContext.cpp                                                     |  18 ++---
+ Userland/Libraries/LibWeb/Painting/ViewportPaintable.cpp                                                   |  23 ++++--
+ Userland/Libraries/LibWeb/UIEvents/KeyCode.h                                                               |   7 ++
+ Userland/Libraries/LibWeb/UIEvents/MouseEvent.h                                                            |   9 +++
+ Userland/Libraries/LibWeb/WebAssembly/Table.cpp                                                            |   2 -
+ Userland/Libraries/LibWeb/WebAssembly/WebAssembly.cpp                                                      |   9 ++-
+ Userland/Libraries/LibWeb/WebAssembly/WebAssembly.h                                                        |   3 +
+ Userland/Libraries/LibWebView/Application.cpp                                                              |  80 ++++++++++++++++++-
+ Userland/Libraries/LibWebView/Application.h                                                                |  38 ++++++++-
+ Userland/Libraries/LibWebView/ChromeProcess.cpp                                                            |  15 ++--
+ Userland/Libraries/LibWebView/ChromeProcess.h                                                              |  13 +--
+ Userland/Libraries/LibWebView/Options.h                                                                    | 100 +++++++++++++++++++++++
+ Userland/Libraries/LibWebView/URL.cpp                                                                      |  16 ++++
+ Userland/Libraries/LibWebView/URL.h                                                                        |   1 +
+ Userland/Services/WebContent/PageClient.cpp                                                                |  34 ++++----
+ Userland/Services/WebContent/PageClient.h                                                                  |   5 +-
+ Userland/Services/WebDriver/main.cpp                                                                       |   2 +-
+ Userland/Utilities/headless-browser.cpp                                                                    | 160 ++++++++++++++++++-------------------
+ Userland/Utilities/wasm.cpp                                                                                |   2 +-
+ 157 files changed, 2531 insertions(+), 1789 deletions(-)
+ create mode 100644 .swift-format
+ create mode 100644 AK/module.modulemap
+ delete mode 100644 Ladybird/Types.h
+ rename {Ladybird/cmake => Meta/CMake/Swift}/GenerateSwiftHeader.cmake (100%)
+ create mode 100644 Meta/CMake/Swift/InitializeSwift.cmake
+ create mode 100644 Meta/CMake/Swift/swift-settings.cmake
+ create mode 100644 Tests/LibWeb/Layout/expected/overflow-with-padding.txt
+ create mode 100644 Tests/LibWeb/Layout/input/overflow-with-padding.html
+ create mode 100644 Tests/LibWeb/Ref/reference/scrollable-contains-rotated-boxes-ref.html
+ create mode 100644 Tests/LibWeb/Ref/reference/scrollable-contains-table-ref.html
+ create mode 100644 Tests/LibWeb/Ref/scrollable-contains-rotated-boxes.html
+ create mode 100644 Tests/LibWeb/Ref/scrollable-contains-table.html
+ create mode 100644 Tests/LibWeb/Text/expected/input-selection-start-selection-end.txt
+ create mode 100644 Tests/LibWeb/Text/input/input-selection-start-selection-end.html
+ create mode 100644 Userland/Libraries/LibGfx/Color.swift
+ create mode 100644 Userland/Libraries/LibGfx/module.modulemap
+ create mode 100644 Userland/Libraries/LibWebView/Options.h
+
+real    0m0.472s
+user    0m0.095s
+sys     0m0.030s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.034s
+user    0m0.019s
+sys     0m0.009s
+Fri Aug  2 06:30:38 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+[1/2] Re-running CMake...
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/clang++-17
+All requested packages are currently installed.
+Total install time: 290 ns
+-- Running vcpkg install - done
+-- Found the following ICU libraries:
+--   data (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicudata.a
+--   i18n (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicui18n.a
+--   uc (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicuuc.a
+-- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+-- Configuring done (26.1s)
+-- Generating done (0.4s)
+-- Build files have been written to: /home/kushal/src/ladybird/Build/ladybird
+[0/2] Re-checking globbed directories...
+[2504/2504] Linking CXX executable bin/Ladybird
+QSocketNotifier: Can only be used with threads started with QThread
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
+26324.989 RequestServer(116564:116569): EnsureConnection: DNS-preload for https://github.githubassets.com/ done
+26324.989 RequestServer(116564:116569): EnsureConnection: DNS-preload for github.githubassets.com
+26324.989 RequestServer(116564:116573): EnsureConnection: DNS-preload for https://avatars.githubusercontent.com/ done
+26324.989 RequestServer(116564:116573): EnsureConnection: DNS-preload for avatars.githubusercontent.com
+26324.989 RequestServer(116564:116582): EnsureConnection: DNS-preload for https://user-images.githubusercontent.com/ done
+26324.989 RequestServer(116564:116568): EnsureConnection: DNS-preload for https://github-cloud.s3.amazonaws.com/ done
+26324.989 RequestServer(116564:116579): EnsureConnection: Pre-connect to https://github.githubassets.com/
+26324.989 RequestServer(116564:116568): EnsureConnection: DNS-preload for github-cloud.s3.amazonaws.com
+26324.989 RequestServer(116564:116582): EnsureConnection: DNS-preload for user-images.githubusercontent.com
+26324.989 RequestServer(116564:116580): EnsureConnection: Pre-connect to https://avatars.githubusercontent.com/
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+26325.149 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 0: Decoding failed: Could not find suitable image decoder plugin for data
+26325.169 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 1: Decoding failed: Could not find suitable image decoder plugin for data
+26325.759 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
+26325.759 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.write'
+26325.759 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
+26326.519 WebContent(116583): No property (from 4 properties) matched Token: Ident: none
+26326.519 WebContent(116583):     border-top-color
+26326.519 WebContent(116583):     border-right-color
+26326.519 WebContent(116583):     border-bottom-color
+26326.519 WebContent(116583):     border-left-color
+26326.519 WebContent(116583): No property (from 4 properties) matched Function: -var(--base-size-8)
+26326.519 WebContent(116583):     margin-top
+26326.519 WebContent(116583):     margin-right
+26326.519 WebContent(116583):     margin-bottom
+26326.519 WebContent(116583):     margin-left
+26327.059 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.autocomplete'
+26327.059 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.spellcheck'
+26327.499 WebContent(116583): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
+26327.539 WebContent(116583): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'event'
+26329.990 RequestServer(116564:116571): ConnectionCache: Connection to https://collector.github.com/github/collect failed: connect: Connection refused (errno=111)
+26329.990 RequestServer(116564:116571): Request with a null socket finished for URL https://collector.github.com/github/collect
+26330.160 WebContent(116583): ResourceLoader: Failed load of: "https://collector.github.com/github/collect", Error: Load failed, Duration: 211ms
+26331.220 WebContent(116583): HTMLScriptElement: Refusing to run script because it has already started.
+26333.510 WebContent(116583): Unhandled JavaScript exception (in promise): AbortError: Media playback was paused
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+26333.590 RequestServer(116564:116578): EnsureConnection: DNS-preload for https://github.githubassets.com/ done
+26333.590 RequestServer(116564:116578): EnsureConnection: DNS-preload for github.githubassets.com
+26333.590 RequestServer(116564:116576): EnsureConnection: DNS-preload for https://avatars.githubusercontent.com/ done
+26333.590 RequestServer(116564:116575): EnsureConnection: DNS-preload for https://github-cloud.s3.amazonaws.com/ done
+26333.590 RequestServer(116564:116581): EnsureConnection: DNS-preload for https://user-images.githubusercontent.com/ done
+26333.590 RequestServer(116564:116576): EnsureConnection: DNS-preload for avatars.githubusercontent.com
+26333.590 RequestServer(116564:116575): EnsureConnection: DNS-preload for github-cloud.s3.amazonaws.com
+26333.590 RequestServer(116564:116581): EnsureConnection: DNS-preload for user-images.githubusercontent.com
+26333.590 RequestServer(116564:116577): EnsureConnection: Pre-connect to https://github.githubassets.com/
+26333.590 RequestServer(116564:116567): EnsureConnection: Pre-connect to https://avatars.githubusercontent.com/
+26333.590 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 16: Decoding failed: Could not find suitable image decoder plugin for data
+26333.650 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 18: Decoding failed: Could not find suitable image decoder plugin for data
+26334.680 WebContent(116583): No property (from 4 properties) matched Token: Ident: none
+26334.680 WebContent(116583):     border-top-color
+26334.680 WebContent(116583):     border-right-color
+26334.680 WebContent(116583):     border-bottom-color
+26334.680 WebContent(116583):     border-left-color
+26334.680 WebContent(116583): No property (from 4 properties) matched Function: -var(--base-size-8)
+26334.680 WebContent(116583):     margin-top
+26334.680 WebContent(116583):     margin-right
+26334.680 WebContent(116583):     margin-bottom
+26334.680 WebContent(116583):     margin-left
+26335.060 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
+26335.060 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.write'
+26335.060 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
+26335.370 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.autocomplete'
+26335.370 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.spellcheck'
+26335.650 WebContent(116583): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
+26335.700 WebContent(116583): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'event'
+26336.490 RequestServer(116564:116578): Request with a null socket finished for URL https://collector.github.com/github/collect
+26336.490 WebContent(116583): ResourceLoader: Failed load of: "https://collector.github.com/github/collect", Error: Load failed, Duration: 0ms
+26338.080 WebContent(116583): HTMLScriptElement: Refusing to run script because it has already started.
+26341.860 WebContent(116583): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
+26341.860 WebContent(116583): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
+26342.990 RequestServer(116564:116578): EnsureConnection: DNS-preload for https://github.githubassets.com/ done
+26342.990 RequestServer(116564:116570): EnsureConnection: DNS-preload for https://avatars.githubusercontent.com/ done
+26342.990 RequestServer(116564:116578): EnsureConnection: DNS-preload for github.githubassets.com
+26342.990 RequestServer(116564:116570): EnsureConnection: DNS-preload for avatars.githubusercontent.com
+26342.990 RequestServer(116564:116573): EnsureConnection: DNS-preload for https://github-cloud.s3.amazonaws.com/ done
+26342.990 RequestServer(116564:116573): EnsureConnection: DNS-preload for github-cloud.s3.amazonaws.com
+26342.990 RequestServer(116564:116576): EnsureConnection: DNS-preload for https://user-images.githubusercontent.com/ done
+26342.990 RequestServer(116564:116576): EnsureConnection: DNS-preload for user-images.githubusercontent.com
+26342.990 RequestServer(116564:116569): EnsureConnection: Pre-connect to https://github.githubassets.com/
+26342.990 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 35: Decoding failed: Could not find suitable image decoder plugin for data
+26342.990 RequestServer(116564:116572): EnsureConnection: Pre-connect to https://avatars.githubusercontent.com/
+26342.990 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 37: Decoding failed: Could not find suitable image decoder plugin for data
+26343.621 WebContent(116583): No property (from 4 properties) matched Token: Ident: none
+26343.621 WebContent(116583):     border-top-color
+26343.621 WebContent(116583):     border-right-color
+26343.621 WebContent(116583):     border-bottom-color
+26343.621 WebContent(116583):     border-left-color
+26343.621 WebContent(116583): No property (from 4 properties) matched Function: -var(--base-size-8)
+26343.621 WebContent(116583):     margin-top
+26343.621 WebContent(116583):     margin-right
+26343.621 WebContent(116583):     margin-bottom
+26343.621 WebContent(116583):     margin-left
+26344.181 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
+26344.181 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.write'
+26344.181 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
+26344.301 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.autocomplete'
+26344.301 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.spellcheck'
+26344.331 WebContent(116583): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
+26344.361 WebContent(116583): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'event'
+26344.721 WebContent(116583): HTMLScriptElement: Refusing to run script because it has already started.
+26349.081 WebContent(116583): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
+26349.081 WebContent(116583): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
+26379.073 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+26379.653 WebContent(116583): FIXME: Unimplemented Navigator.maxTouchPoints
+26379.693 WebContent(116583): (STUBBED) HTMLInputElement::set_selection_range(start=0, end=0, direction='None'). Called on: input.lst
+26379.703 WebContent(116583): ResourceLoader: Filtered request to: "https://clients1.google.com/generate_204"
+26379.703 WebContent(116583): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=i&ct=psnt&cad=&nt=null&ei=kresZrm1Jceo5NoPweLJ8QQ&zx=1722595219354&opi=89978449"
+26383.544 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
+26393.754 WebContent(116583): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=csi&s=web&t=aft&lite=1&ei=oLesZvy9N7jcptQPhsSG4AQ&conn=-1&biw=1714&bih=818&ima=0&rt=prt.17,aft.17&zx=1722595233386"
+26394.074 WebContent(116583): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=csi&s=web&t=all&lite=1&ei=oLesZvy9N7jcptQPhsSG4AQ&conn=-1&biw=1714&bih=818&ima=0&ime=0&imel=0&imex=0&imeh=5&imea=0&imeb=8&rt=prt.17,aft.17,ol.366,rqst.0,rspt.0&zx=1722595233719"
+26404.295 RequestServer(116564:116571): EnsureConnection: DNS-preload for https://github.githubassets.com/ done
+26404.295 RequestServer(116564:116571): EnsureConnection: DNS-preload for github.githubassets.com
+26404.295 RequestServer(116564:116569): EnsureConnection: DNS-preload for https://avatars.githubusercontent.com/ done
+26404.295 RequestServer(116564:116569): EnsureConnection: DNS-preload for avatars.githubusercontent.com
+26404.295 RequestServer(116564:116577): EnsureConnection: DNS-preload for https://github-cloud.s3.amazonaws.com/ done
+26404.295 RequestServer(116564:116578): EnsureConnection: DNS-preload for https://user-images.githubusercontent.com/ done
+26404.295 RequestServer(116564:116578): EnsureConnection: DNS-preload for user-images.githubusercontent.com
+26404.295 RequestServer(116564:116567): EnsureConnection: Pre-connect to https://github.githubassets.com/
+26404.295 RequestServer(116564:116577): EnsureConnection: DNS-preload for github-cloud.s3.amazonaws.com
+26404.295 RequestServer(116564:116575): EnsureConnection: Pre-connect to https://avatars.githubusercontent.com/
+26404.375 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 62: Decoding failed: Could not find suitable image decoder plugin for data
+26404.445 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 64: Decoding failed: Could not find suitable image decoder plugin for data
+26404.925 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
+26404.925 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.write'
+26404.925 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
+26405.845 WebContent(116583): No property (from 4 properties) matched Token: Ident: none
+26405.845 WebContent(116583):     border-top-color
+26405.845 WebContent(116583):     border-right-color
+26405.845 WebContent(116583):     border-bottom-color
+26405.845 WebContent(116583):     border-left-color
+26405.845 WebContent(116583): No property (from 4 properties) matched Function: -var(--base-size-8)
+26405.845 WebContent(116583):     margin-top
+26405.845 WebContent(116583):     margin-right
+26405.845 WebContent(116583):     margin-bottom
+26405.845 WebContent(116583):     margin-left
+26406.255 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.autocomplete'
+26406.255 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.spellcheck'
+26406.485 WebContent(116583): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
+26406.525 WebContent(116583): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'event'
+26409.235 WebContent(116583): HTMLScriptElement: Refusing to run script because it has already started.
+26411.165 WebContent(116583): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
+26411.165 WebContent(116583): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
+26433.326 WebContent(116583): Unhandled JavaScript exception: [TypeError] undefined is not a function (evaluated from 'performance.clearResourceTimings')
+26433.336 WebContent(116583):     at d (https://github.githubassets.com/assets/app_assets_modules_github_behaviors_ajax-error_ts-app_assets_modules_github_behaviors_include-467754-12b67c78b7f2.js:106:7790)
+    at s (https://github.githubassets.com/assets/app_assets_modules_github_behaviors_ajax-error_ts-app_assets_modules_github_behaviors_include-467754-12b67c78b7f2.js:106:6884)
+    at https://github.githubassets.com/assets/behaviors-3b2c76767cd8.js:33:9932
+    at <unknown>
+    at <unknown>
+    at p (https://github.githubassets.com/assets/vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js-858e043fcf76.js:1:5295)
+    at notifyApplicationAfterClickingLinkToLocation (https://github.githubassets.com/assets/vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js-858e043fcf76.js:15:33770)
+    at applicationAllowsFollowingLinkToLocation (https://github.githubassets.com/assets/vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js-858e043fcf76.js:15:33576)
+    at willFollowLinkToLocation (https://github.githubassets.com/assets/vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js-858e043fcf76.js:15:31495)
+    at https://github.githubassets.com/assets/vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js-858e043fcf76.js:1:19626
+
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
+26434.897 RequestServer(116564:116575): EnsureConnection: DNS-preload for https://github.githubassets.com/ done
+26434.897 RequestServer(116564:116575): EnsureConnection: DNS-preload for github.githubassets.com
+26434.897 RequestServer(116564:116581): EnsureConnection: DNS-preload for https://avatars.githubusercontent.com/ done
+26434.897 RequestServer(116564:116581): EnsureConnection: DNS-preload for avatars.githubusercontent.com
+26434.897 RequestServer(116564:116577): EnsureConnection: DNS-preload for https://github-cloud.s3.amazonaws.com/ done
+26434.897 RequestServer(116564:116577): EnsureConnection: DNS-preload for github-cloud.s3.amazonaws.com
+26434.897 RequestServer(116564:116570): EnsureConnection: DNS-preload for https://user-images.githubusercontent.com/ done
+26434.897 RequestServer(116564:116570): EnsureConnection: DNS-preload for user-images.githubusercontent.com
+26434.897 RequestServer(116564:116567): EnsureConnection: Pre-connect to https://github.githubassets.com/
+26434.897 RequestServer(116564:116580): EnsureConnection: Pre-connect to https://avatars.githubusercontent.com/
+26435.137 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 85: Decoding failed: Could not find suitable image decoder plugin for data
+26435.327 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 87: Decoding failed: Could not find suitable image decoder plugin for data
+26438.247 WebContent(116583): (STUBBED) HTMLInputElement::set_custom_validity(error=). Called on: input#custom_scope_name.form-control
+26438.607 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.autocomplete'
+26438.607 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.spellcheck'
+26440.197 WebContent(116583): HTMLScriptElement: Refusing to run script because it has already started.
+26440.767 RequestServer(116564:116576): Job: Malformed HTTP header: 'hub-cloud.s3.amazonaws.com objects.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/' (800)
+26441.087 WebContent(116583): ResourceLoader: Failed load of: "https://github.com/amirisback/automated-build-android-app-with-github-action/security/overall-count", Error: Load failed: 200, Duration: 591ms
+26649.472 WebContent(116583): ConnectionFromClient(0x000056316364f400) (id=1) had an error (IPC::transfer_message: Disconnected from peer), disconnecting.
+
+real    14m10.755s
+user    111m13.796s
+sys     5m24.290s
+Fri Aug  2 06:44:49 EDT 2024
+kushal@kus2023:~/src/ladybird$
+kushal@kus2023:~/src/ladybird$
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
