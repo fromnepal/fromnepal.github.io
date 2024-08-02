@@ -1,822 +1,661 @@
-kushal@kus2023:~$
-kushal@kus2023:~$
-kushal@kus2023:~$ docker run -it --device /dev/kvm -p 50922:10022 -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPLAY=${DISPLAY:-:0.0}" sickcodes/docker-osx:latest
-docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:50922 -> 0.0.0.0:0: listen tcp 0.0.0.0:50922: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
-kushal@kus2023:~$ netstat -ano | findstr :50922
-Command 'netstat' not found, but can be installed with:
-sudo apt install net-tools
-findstr: command not found
-kushal@kus2023:~$ sudo apt install net-tools
-[sudo] password for kushal:
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-The following NEW packages will be installed:
-  net-tools
-0 upgraded, 1 newly installed, 0 to remove and 4 not upgraded.
-Need to get 204 kB of archives.
-After this operation, 819 kB of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 net-tools amd64 1.60+git20181103.0eebece-1ubuntu5 [204 kB]
-Fetched 204 kB in 0s (890 kB/s)
-Selecting previously unselected package net-tools.
-(Reading database ... 72742 files and directories currently installed.)
-Preparing to unpack .../net-tools_1.60+git20181103.0eebece-1ubuntu5_amd64.deb ...
-Unpacking net-tools (1.60+git20181103.0eebece-1ubuntu5) ...
-Setting up net-tools (1.60+git20181103.0eebece-1ubuntu5) ...
-Processing triggers for man-db (2.10.2-1) ...
-kushal@kus2023:~$ netstat -ano | findstr :50922
-findstr: command not found
-kushal@kus2023:~$ docker run -it     --device /dev/kvm     -p 50922:10022     -v /tmp/.X11-unix:/tmp/.X11-unix     -e "DISPLAY=${DISPLAY:-:0.0}"     -e GENERATE_UNIQUE=true     sickcodes/docker-osx:auto
-docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:50922 -> 0.0.0.0:0: listen tcp 0.0.0.0:50922: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
-kushal@kus2023:~$ docker run -it     --device /dev/kvm     -p 50922:10022     -v /tmp/.X11-unix:/tmp/.X11-unix     -e "DISPLAY=${DISPLAY:-:0.0}"     -e GENERATE_UNIQUE=true     sickcodes/docker-osx:auto
-docker: Error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:50922 -> 0.0.0.0:0: listen tcp 0.0.0.0:50922: bind: An attempt was made to access a socket in a way forbidden by its access permissions.
-kushal@kus2023:~$ docker run -it --device /dev/kvm -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPLAY=${DISPLAY:-:0.0}" sickcodes/docker-osx:latest
-ssh-keygen: generating new host keys: RSA ECDSA ED25519
-nohup: appending output to 'nohup.out'
-++ id -u
-++ id -g
-+ sudo chown 1000:1000 /dev/kvm
-++ id -u
-++ id -g
-+ sudo chown -R 1000:1000 /dev/snd
-+ [[ 4 = max ]]
-+ [[ 4 = half ]]
-++ id -u
-++ id -g
-+ sudo chown -R 1000:1000 /dev/snd
-+ exec qemu-system-x86_64 -m 4000 -cpu Penryn,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on,+ssse3,+sse4.2,+popcnt,+avx,+aes,+xsave,+xsaveopt,check, -machine q35,accel=kvm:tcg -smp 4,cores=4 -usb -device usb-kbd -device usb-tablet -device 'isa-applesmc,osk=ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc' -drive if=pflash,format=raw,readonly=on,file=/home/arch/OSX-KVM/OVMF_CODE.fd -drive if=pflash,format=raw,file=/home/arch/OSX-KVM/OVMF_VARS-1024x768.fd -smbios type=2 -audiodev alsa,id=hda -device ich9-intel-hda -device hda-duplex,audiodev=hda -device ich9-ahci,id=sata -drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file=/home/arch/OSX-KVM/OpenCore/OpenCore.qcow2 -device ide-hd,bus=sata.2,drive=OpenCoreBoot -device ide-hd,bus=sata.3,drive=InstallMedia -drive id=InstallMedia,if=none,file=/home/arch/OSX-KVM/BaseSystem.img,format=qcow2 -drive id=MacHDD,if=none,file=/home/arch/OSX-KVM/mac_hdd_ng.img,format=qcow2 -device ide-hd,bus=sata.4,drive=MacHDD -netdev user,id=net0,hostfwd=tcp::10022-:22,hostfwd=tcp::5900-:5900, -device vmxnet3,netdev=net0,id=net0,mac=52:54:00:09:49:17 -monitor stdio -boot menu=on -vga vmware
-QEMU 8.0.2 monitor - type 'help' for more information
-(qemu) ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
-ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
-ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
-ALSA lib conf.c:5704:(snd_config_expand) Evaluate error: No such file or directory
-ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM default
-alsa: Could not initialize DAC
-alsa: Failed to open `default':
-alsa: Reason: No such file or directory
-ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
-ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
-ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
-ALSA lib conf.c:5704:(snd_config_expand) Evaluate error: No such file or directory
-ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM default
-alsa: Could not initialize DAC
-alsa: Failed to open `default':
-alsa: Reason: No such file or directory
-audio: Could not create a backend for voice `dac'
-ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
-ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
-ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
-ALSA lib conf.c:5704:(snd_config_expand) Evaluate error: No such file or directory
-ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM default
-alsa: Could not initialize ADC
-alsa: Failed to open `default':
-alsa: Reason: No such file or directory
-ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
-ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
-ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
-ALSA lib conf.c:5704:(snd_config_expand) Evaluate error: No such file or directory
-ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM default
-alsa: Could not initialize ADC
-alsa: Failed to open `default':
-alsa: Reason: No such file or directory
-audio: Could not create a backend for voice `adc'
-kushal@kus2023:~$ docker run -it --device /dev/kvm -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPLAY=${DISPLAY:-:0.0}" sickcodes/docker-osx:latest
-ssh-keygen: generating new host keys: RSA ECDSA ED25519
-nohup: appending output to 'nohup.out'
-++ id -u
-++ id -g
-+ sudo chown 1000:1000 /dev/kvm
-++ id -u
-++ id -g
-+ sudo chown -R 1000:1000 /dev/snd
-+ [[ 4 = max ]]
-+ [[ 4 = half ]]
-++ id -u
-++ id -g
-+ sudo chown -R 1000:1000 /dev/snd
-+ exec qemu-system-x86_64 -m 4000 -cpu Penryn,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on,+ssse3,+sse4.2,+popcnt,+avx,+aes,+xsave,+xsaveopt,check, -machine q35,accel=kvm:tcg -smp 4,cores=4 -usb -device usb-kbd -device usb-tablet -device 'isa-applesmc,osk=ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc' -drive if=pflash,format=raw,readonly=on,file=/home/arch/OSX-KVM/OVMF_CODE.fd -drive if=pflash,format=raw,file=/home/arch/OSX-KVM/OVMF_VARS-1024x768.fd -smbios type=2 -audiodev alsa,id=hda -device ich9-intel-hda -device hda-duplex,audiodev=hda -device ich9-ahci,id=sata -drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file=/home/arch/OSX-KVM/OpenCore/OpenCore.qcow2 -device ide-hd,bus=sata.2,drive=OpenCoreBoot -device ide-hd,bus=sata.3,drive=InstallMedia -drive id=InstallMedia,if=none,file=/home/arch/OSX-KVM/BaseSystem.img,format=qcow2 -drive id=MacHDD,if=none,file=/home/arch/OSX-KVM/mac_hdd_ng.img,format=qcow2 -device ide-hd,bus=sata.4,drive=MacHDD -netdev user,id=net0,hostfwd=tcp::10022-:22,hostfwd=tcp::5900-:5900, -device vmxnet3,netdev=net0,id=net0,mac=52:54:00:09:49:17 -monitor stdio -boot menu=on -vga vmware
-QEMU 8.0.2 monitor - type 'help' for more information
-(qemu) ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
-ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
-ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
-ALSA lib conf.c:5704:(snd_config_expand) Evaluate error: No such file or directory
-ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM default
-alsa: Could not initialize DAC
-alsa: Failed to open `default':
-alsa: Reason: No such file or directory
-ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
-ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
-ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
-ALSA lib conf.c:5704:(snd_config_expand) Evaluate error: No such file or directory
-ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM default
-alsa: Could not initialize DAC
-alsa: Failed to open `default':
-alsa: Reason: No such file or directory
-audio: Could not create a backend for voice `dac'
-ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
-ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
-ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
-ALSA lib conf.c:5704:(snd_config_expand) Evaluate error: No such file or directory
-ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM default
-alsa: Could not initialize ADC
-alsa: Failed to open `default':
-alsa: Reason: No such file or directory
-ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
-ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
-ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
-ALSA lib conf.c:5704:(snd_config_expand) Evaluate error: No such file or directory
-ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM default
-alsa: Could not initialize ADC
-alsa: Failed to open `default':
-alsa: Reason: No such file or directory
-audio: Could not create a backend for voice `adc'
-usb_desc_get_descriptor: 2 unknown type 33 (len 10)
-usb_desc_get_descriptor: 1 unknown type 33 (len 10)
-usb_desc_get_descriptor: 2 unknown type 33 (len 10)
-usb_desc_get_descriptor: 1 unknown type 33 (len 10)
-usb_desc_get_descriptor: 2 unknown type 33 (len 10)
-usb_desc_get_descriptor: 1 unknown type 33 (len 10)
-usb_desc_get_descriptor: 2 unknown type 33 (len 10)
-usb_desc_get_descriptor: 1 unknown type 33 (len 10)
-kushal@kus2023:~$ docker run -it --device /dev/kvm -v /tmp/.X11-unix:/tmp/.X11-unix -e "DISPLAY=${DISPLAY:-:0.0}" sickcodes/docker-osx:latest
-ssh-keygen: generating new host keys: RSA ECDSA ED25519
-nohup: appending output to 'nohup.out'
-++ id -u
-++ id -g
-+ sudo chown 1000:1000 /dev/kvm
-++ id -u
-++ id -g
-+ sudo chown -R 1000:1000 /dev/snd
-+ [[ 4 = max ]]
-+ [[ 4 = half ]]
-++ id -u
-++ id -g
-+ sudo chown -R 1000:1000 /dev/snd
-+ exec qemu-system-x86_64 -m 4000 -cpu Penryn,vendor=GenuineIntel,+invtsc,vmware-cpuid-freq=on,+ssse3,+sse4.2,+popcnt,+avx,+aes,+xsave,+xsaveopt,check, -machine q35,accel=kvm:tcg -smp 4,cores=4 -usb -device usb-kbd -device usb-tablet -device 'isa-applesmc,osk=ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc' -drive if=pflash,format=raw,readonly=on,file=/home/arch/OSX-KVM/OVMF_CODE.fd -drive if=pflash,format=raw,file=/home/arch/OSX-KVM/OVMF_VARS-1024x768.fd -smbios type=2 -audiodev alsa,id=hda -device ich9-intel-hda -device hda-duplex,audiodev=hda -device ich9-ahci,id=sata -drive id=OpenCoreBoot,if=none,snapshot=on,format=qcow2,file=/home/arch/OSX-KVM/OpenCore/OpenCore.qcow2 -device ide-hd,bus=sata.2,drive=OpenCoreBoot -device ide-hd,bus=sata.3,drive=InstallMedia -drive id=InstallMedia,if=none,file=/home/arch/OSX-KVM/BaseSystem.img,format=qcow2 -drive id=MacHDD,if=none,file=/home/arch/OSX-KVM/mac_hdd_ng.img,format=qcow2 -device ide-hd,bus=sata.4,drive=MacHDD -netdev user,id=net0,hostfwd=tcp::10022-:22,hostfwd=tcp::5900-:5900, -device vmxnet3,netdev=net0,id=net0,mac=52:54:00:09:49:17 -monitor stdio -boot menu=on -vga vmware
-QEMU 8.0.2 monitor - type 'help' for more information
-(qemu) ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
-ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
-ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
-ALSA lib conf.c:5704:(snd_config_expand) Evaluate error: No such file or directory
-ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM default
-alsa: Could not initialize DAC
-alsa: Failed to open `default':
-alsa: Reason: No such file or directory
-ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
-ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
-ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
-ALSA lib conf.c:5704:(snd_config_expand) Evaluate error: No such file or directory
-ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM default
-alsa: Could not initialize DAC
-alsa: Failed to open `default':
-alsa: Reason: No such file or directory
-audio: Could not create a backend for voice `dac'
-ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
-ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
-ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
-ALSA lib conf.c:5704:(snd_config_expand) Evaluate error: No such file or directory
-ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM default
-alsa: Could not initialize ADC
-alsa: Failed to open `default':
-alsa: Reason: No such file or directory
-ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
-ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
-ALSA lib confmisc.c:1334:(snd_func_refer) error evaluating name
-ALSA lib conf.c:5181:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
-ALSA lib conf.c:5704:(snd_config_expand) Evaluate error: No such file or directory
-ALSA lib pcm.c:2666:(snd_pcm_open_noupdate) Unknown PCM default
-alsa: Could not initialize ADC
-alsa: Failed to open `default':
-alsa: Reason: No such file or directory
-audio: Could not create a backend for voice `adc'
-qemu: terminating on signal 2
-kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
-[sudo] password for kushal:
-Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
-Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
-Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
-Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
-Hit:5 http://security.ubuntu.com/ubuntu jammy-security InRelease
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-All packages are up to date.
+PowerShell 7.4.3
 
-real    0m6.836s
-user    0m0.018s
-sys     0m0.017s
-Listing... Done
+   A new PowerShell stable release is available: v7.4.4
+   Upgrade now, or check out the release page at:
+     https://aka.ms/PowerShell-Release?tag=v7.4.4
 
-real    0m0.165s
-user    0m0.153s
-sys     0m0.010s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
-  libavdevice58 ffmpeg libpostproc55 libavcodec58 libavutil56 libswscale5
-  libavutil-dev libswresample3 libavformat58 libavcodec-dev libswresample-dev
-  libavfilter7
-Learn more about Ubuntu Pro at https://ubuntu.com/pro
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+PS C:\Users\kushal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-real    0m0.308s
-user    0m0.005s
-sys     0m0.000s
+Thursday, August 1, 2024 11:55:25 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.09s.
+Thursday, August 1, 2024 11:55:26 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 190ms
+Done in 2.46s.
+Thursday, August 1, 2024 11:55:28 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, August 1, 2024 11:55:28 AM
+[main 61d84b8] build application
+ 2 files changed, 328 insertions(+), 326 deletions(-)
+Thursday, August 1, 2024 11:55:29 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 1, 2024 11:55:30 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 2.29 KiB | 2.29 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   8b8c2bb..61d84b8  main -> main
+Thursday, August 1, 2024 11:55:31 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 1, 2024 4:00:06 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.09s.
+Thursday, August 1, 2024 4:00:07 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 162ms
+Done in 6.50s.
+Thursday, August 1, 2024 4:00:14 PM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, August 1, 2024 4:00:14 PM
+[main aa32846] build application
+ 2 files changed, 2 insertions(+)
+Thursday, August 1, 2024 4:00:14 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 1, 2024 4:00:15 PM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 419 bytes | 419.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   61d84b8..aa32846  main -> main
+Thursday, August 1, 2024 4:00:19 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Friday, August 2, 2024 6:22:29 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.08s.
+Friday, August 2, 2024 6:22:30 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 160ms
+Done in 2.25s.
+Friday, August 2, 2024 6:22:32 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, August 2, 2024 6:22:33 AM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Friday, August 2, 2024 6:22:33 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Friday, August 2, 2024 6:22:34 AM
+Everything up-to-date
+Friday, August 2, 2024 6:22:35 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\angular\mycanary\"; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; Remove-Item -Path "node_modules" -Recurse -Force; date; yarn; date; yarn run ng update; date; yarn run ng build; date; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; yarn run ng test; date; yarn run ng update @angular/core @angular/cli @angular/material; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; echo y | npx update-browserslist-db@latest; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; git remote show origin; date;
+
+Friday, August 2, 2024 6:22:40 AM
+remote: Enumerating objects: 74, done.
+remote: Counting objects: 100% (74/74), done.
+remote: Compressing objects: 100% (27/27), done.
+remote: Total 70 (delta 50), reused 49 (delta 29), pack-reused 0
+Unpacking objects: 100% (70/70), 11.12 KiB | 56.00 KiB/s, done.
+From github.com:mycanary/mycanary
+   40411fd..f69da03  master     -> origin/master
+Friday, August 2, 2024 6:22:41 AM
 On branch master
-Your branch is up to date with 'origin/master'.
+Your branch is behind 'origin/master' by 14 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
+nothing to commit, working tree clean
+Friday, August 2, 2024 6:22:41 AM
+Friday, August 2, 2024 6:22:41 AM
+On branch master
+Your branch is behind 'origin/master' by 14 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
 
-nothing added to commit but untracked files present (use "git add" to track)
-
-real    0m0.073s
-user    0m0.013s
-sys     0m0.235s
-remote: Enumerating objects: 565, done.
-remote: Counting objects: 100% (546/546), done.
-remote: Compressing objects: 100% (331/331), done.
-remote: Total 565 (delta 291), reused 374 (delta 214), pack-reused 19
-Receiving objects: 100% (565/565), 600.29 KiB | 6.67 MiB/s, done.
-Resolving deltas: 100% (294/294), completed with 60 local objects.
-From https://github.com/LadybirdBrowser/ladybird
-   93216a875e..963cf1c2c4  master     -> origin/master
-
-real    0m0.625s
-user    0m0.097s
-sys     0m0.057s
-From https://github.com/LadybirdBrowser/ladybird
- * branch                  master     -> FETCH_HEAD
-Updating 93216a875e..963cf1c2c4
+nothing to commit, working tree clean
+Friday, August 2, 2024 6:22:41 AM
+From github.com:mycanary/mycanary
+ * branch            master     -> FETCH_HEAD
+Updating 40411fd..f69da03
 Fast-forward
- .swift-format                                                                                              |   8 ++
- AK/Base64.cpp                                                                                              |   2 -
- AK/StdLibExtras.h                                                                                          |  42 +---------
- AK/String.cpp                                                                                              |   2 -
- AK/Utf16View.cpp                                                                                           |  11 ++-
- AK/Utf16View.h                                                                                             |   2 +
- AK/Utf8View.cpp                                                                                            |   2 -
- AK/module.modulemap                                                                                        |   6 ++
- CMakeLists.txt                                                                                             |   9 +--
- Ladybird/AppKit/Application/Application.h                                                                  |  10 ++-
- Ladybird/AppKit/Application/Application.mm                                                                 |  20 ++---
- Ladybird/AppKit/Application/ApplicationBridge.cpp                                                          |   9 +--
- Ladybird/AppKit/Application/ApplicationBridge.h                                                            |   9 ++-
- Ladybird/AppKit/Application/ApplicationDelegate.h                                                          |  13 +--
- Ladybird/AppKit/Application/ApplicationDelegate.mm                                                         |  45 ++---------
- Ladybird/AppKit/CMakeLists.txt                                                                             |  14 ----
- Ladybird/AppKit/UI/LadybirdWebView.mm                                                                      |   2 +-
- Ladybird/AppKit/UI/LadybirdWebViewBridge.cpp                                                               |  16 ++--
- Ladybird/AppKit/UI/LadybirdWebViewBridge.h                                                                 |  12 +--
- Ladybird/AppKit/UI/TabController.h                                                                         |   4 +-
- Ladybird/AppKit/UI/TabController.mm                                                                        |   7 +-
- Ladybird/AppKit/UI/TaskManager.swift                                                                       |  74 +++++++++--------
- Ladybird/AppKit/UI/TaskManagerController.swift                                                             |  52 ++++++------
- Ladybird/AppKit/main.mm                                                                                    |  97 +++++------------------
- Ladybird/CMakeLists.txt                                                                                    |   1 -
- Ladybird/HelperProcess.cpp                                                                                 |  48 ++++++-----
- Ladybird/HelperProcess.h                                                                                   |   4 +-
- Ladybird/ImageDecoder/main.cpp                                                                             |   7 ++
- Ladybird/Qt/Application.cpp                                                                                |  31 +++++---
- Ladybird/Qt/Application.h                                                                                  |  16 +++-
- Ladybird/Qt/BrowserWindow.cpp                                                                              |  26 +++---
- Ladybird/Qt/BrowserWindow.h                                                                                |   7 +-
- Ladybird/Qt/InspectorWidget.cpp                                                                            |   2 +-
- Ladybird/Qt/Tab.cpp                                                                                        |   4 +-
- Ladybird/Qt/Tab.h                                                                                          |   2 +-
- Ladybird/Qt/TaskManagerWindow.cpp                                                                          |   4 +-
- Ladybird/Qt/TaskManagerWindow.h                                                                            |   2 +-
- Ladybird/Qt/WebContentView.cpp                                                                             |  15 ++--
- Ladybird/Qt/WebContentView.h                                                                               |   8 +-
- Ladybird/Qt/main.cpp                                                                                       | 105 ++++++------------------
- Ladybird/RequestServer/main.cpp                                                                            |   6 ++
- Ladybird/Types.h                                                                                           |  67 ----------------
- Ladybird/WebContent/main.cpp                                                                               |  12 +--
- Ladybird/WebDriver/main.cpp                                                                                |  10 ++-
- Ladybird/WebWorker/main.cpp                                                                                |   6 ++
- {Ladybird/cmake => Meta/CMake/Swift}/GenerateSwiftHeader.cmake                                             |   0
- Meta/CMake/Swift/InitializeSwift.cmake                                                                     |  99 +++++++++++++++++++++++
- Meta/CMake/Swift/swift-settings.cmake                                                                      |  24 ++++++
- Meta/CMake/common_options.cmake                                                                            |   5 +-
- Meta/Lagom/CMakeLists.txt                                                                                  |  18 +++--
- Meta/Lagom/ReadMe.md                                                                                       |   2 -
- Meta/Lagom/Tools/CodeGenerators/LibWeb/BindingsGenerator/IDLGenerators.cpp                                 |  53 +++++++++----
- Meta/gn/secondary/Ladybird/BUILD.gn                                                                        |   1 -
- Tests/AK/TestUtf16.cpp                                                                                     |   8 ++
- Tests/LibWeb/Layout/expected/flex/abspos-flex-child-static-position-with-padding-on-flex-container.txt     |   6 +-
- Tests/LibWeb/Layout/expected/input-placeholder.txt                                                         |   8 +-
- Tests/LibWeb/Layout/expected/overflow-with-padding.txt                                                     |  57 +++++++++++++
- Tests/LibWeb/Layout/expected/position-absolute-ignores-padding-of-position-relative-floating-parent.txt    |   2 +-
- Tests/LibWeb/Layout/expected/table/avoid-div-by-zero-in-table-measures.txt                                 |   6 +-
- Tests/LibWeb/Layout/input/overflow-with-padding.html                                                       |  19 +++++
- Tests/LibWeb/Ref/reference/scrollable-contains-rotated-boxes-ref.html                                      |  46 +++++++++++
- Tests/LibWeb/Ref/reference/scrollable-contains-table-ref.html                                              |  82 +++++++++++++++++++
- Tests/LibWeb/Ref/scrollable-contains-rotated-boxes.html                                                    |  47 +++++++++++
- Tests/LibWeb/Ref/scrollable-contains-table.html                                                            | 101 +++++++++++++++++++++++
- Tests/LibWeb/Text/expected/input-selection-start-selection-end.txt                                         |   7 ++
- Tests/LibWeb/Text/input/input-selection-start-selection-end.html                                           |  24 ++++++
- Userland/Libraries/LibAudio/PlaybackStreamOboe.cpp                                                         |   1 -
- Userland/Libraries/LibCore/System.cpp                                                                      |   4 +-
- Userland/Libraries/LibGfx/CMakeLists.txt                                                                   |  22 ++++++
- Userland/Libraries/LibGfx/Color.cpp                                                                        | 114 +++++++++++++++-----------
- Userland/Libraries/LibGfx/Color.h                                                                          |   3 +-
- Userland/Libraries/LibGfx/Color.swift                                                                      |  85 ++++++++++++++++++++
- Userland/Libraries/LibGfx/Font/WOFF2/Loader.cpp                                                            |   1 -
- Userland/Libraries/LibGfx/module.modulemap                                                                 |   8 ++
- Userland/Libraries/LibJS/Runtime/Intl/Locale.cpp                                                           | 136 +++++++++++++------------------
- Userland/Libraries/LibJS/Runtime/Intl/Locale.h                                                             |  24 +++---
- Userland/Libraries/LibJS/Runtime/Intl/LocaleConstructor.cpp                                                |  74 ++++++++---------
- Userland/Libraries/LibJS/Runtime/Intl/LocalePrototype.cpp                                                  |  13 +--
- Userland/Libraries/LibJS/Tests/builtins/Date/Date.prototype.toLocaleString.js                              |  12 +--
- Userland/Libraries/LibJS/Tests/builtins/Date/Date.prototype.toLocaleTimeString.js                          |   8 +-
- Userland/Libraries/LibJS/Tests/builtins/Intl/DateTimeFormat/DateTimeFormat.prototype.format.js             |  56 ++++++-------
- Userland/Libraries/LibJS/Tests/builtins/Intl/DateTimeFormat/DateTimeFormat.prototype.formatRange.js        |  64 ++++++++-------
- Userland/Libraries/LibJS/Tests/builtins/Intl/DateTimeFormat/DateTimeFormat.prototype.formatRangeToParts.js |  40 +++++-----
- Userland/Libraries/LibJS/Tests/builtins/Intl/DateTimeFormat/DateTimeFormat.prototype.formatToParts.js      |   8 +-
- Userland/Libraries/LibJS/Tests/builtins/Intl/Locale/Locale.prototype.firstDayOfWeek.js                     |  38 ++++-----
- Userland/Libraries/LibUnicode/CharacterTypes.cpp                                                           |   2 -
- Userland/Libraries/LibUnicode/DateTimeFormat.cpp                                                           |  23 +++++-
- Userland/Libraries/LibUnicode/DisplayNames.cpp                                                             |   2 -
- Userland/Libraries/LibUnicode/DurationFormat.cpp                                                           |   2 -
- Userland/Libraries/LibUnicode/ICU.cpp                                                                      |   2 -
- Userland/Libraries/LibUnicode/ICU.h                                                                        |   2 -
- Userland/Libraries/LibUnicode/IDNA.cpp                                                                     |   2 -
- Userland/Libraries/LibUnicode/ListFormat.cpp                                                               |   2 -
- Userland/Libraries/LibUnicode/Locale.cpp                                                                   |   2 -
- Userland/Libraries/LibUnicode/Normalize.cpp                                                                |   2 -
- Userland/Libraries/LibUnicode/NumberFormat.cpp                                                             |   2 -
- Userland/Libraries/LibUnicode/RelativeTimeFormat.cpp                                                       |   2 -
- Userland/Libraries/LibUnicode/Segmenter.cpp                                                                |   2 -
- Userland/Libraries/LibUnicode/String.cpp                                                                   |   2 -
- Userland/Libraries/LibUnicode/TimeZone.cpp                                                                 |   2 -
- Userland/Libraries/LibUnicode/UnicodeKeywords.cpp                                                          |   2 -
- Userland/Libraries/LibWasm/AbstractMachine/AbstractMachine.cpp                                             | 598 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-------------------------------------------------------------------------------
- Userland/Libraries/LibWasm/AbstractMachine/Validator.cpp                                                   | 220 ++++++++++++++++++++-------------------------------
- Userland/Libraries/LibWasm/Parser/Parser.cpp                                                               |  38 +++++----
- Userland/Libraries/LibWasm/Printer/Printer.cpp                                                             |  42 +++++++++-
- Userland/Libraries/LibWasm/Types.h                                                                         | 120 ++++++++++++++++------------
- Userland/Libraries/LibWeb/Animations/Animatable.cpp                                                        |  38 ++++++++-
- Userland/Libraries/LibWeb/Animations/Animatable.h                                                          |  13 +--
- Userland/Libraries/LibWeb/Animations/KeyframeEffect.cpp                                                    |  22 ++++--
- Userland/Libraries/LibWeb/CSS/StyleComputer.cpp                                                            |  16 ++--
- Userland/Libraries/LibWeb/CSS/StyleInvalidation.cpp                                                        |   4 +-
- Userland/Libraries/LibWeb/DOM/CharacterData.h                                                              |   5 +-
- Userland/Libraries/LibWeb/DOM/Document.cpp                                                                 |  17 ++--
- Userland/Libraries/LibWeb/DOM/Document.h                                                                   |  20 +++--
- Userland/Libraries/LibWeb/DOM/Element.cpp                                                                  |  75 ++++++++++++------
- Userland/Libraries/LibWeb/DOM/Element.h                                                                    |   4 +
- Userland/Libraries/LibWeb/Fetch/Fetching/Fetching.cpp                                                      |   4 +
- Userland/Libraries/LibWeb/HTML/FormAssociatedElement.cpp                                                   |  63 ++++++++++++++-
- Userland/Libraries/LibWeb/HTML/FormAssociatedElement.h                                                     |   8 ++
- Userland/Libraries/LibWeb/HTML/HTMLAnchorElement.cpp                                                       |   8 ++
- Userland/Libraries/LibWeb/HTML/HTMLInputElement.cpp                                                        |  63 ++++++++++++++-
- Userland/Libraries/LibWeb/HTML/HTMLInputElement.h                                                          |   7 ++
- Userland/Libraries/LibWeb/HTML/HTMLInputElement.idl                                                        |   4 +-
- Userland/Libraries/LibWeb/HTML/HTMLTextAreaElement.cpp                                                     |  62 +--------------
- Userland/Libraries/LibWeb/HTML/HTMLTextAreaElement.h                                                       |   6 --
- Userland/Libraries/LibWeb/HTML/MessagePort.cpp                                                             |   2 +-
- Userland/Libraries/LibWeb/HTML/Parser/HTMLParser.cpp                                                       |   4 +-
- Userland/Libraries/LibWeb/Layout/LayoutState.cpp                                                           |  24 ++++--
- Userland/Libraries/LibWeb/Layout/Node.h                                                                    |   2 +
- Userland/Libraries/LibWeb/Layout/TreeBuilder.cpp                                                           |   3 +-
- Userland/Libraries/LibWeb/Page/EventHandler.cpp                                                            |   6 +-
- Userland/Libraries/LibWeb/Page/Page.h                                                                      |   2 +-
- Userland/Libraries/LibWeb/Painting/ClippableAndScrollable.cpp                                              |  12 +--
- Userland/Libraries/LibWeb/Painting/Command.h                                                               |   1 +
- Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.cpp                                               |   2 -
- Userland/Libraries/LibWeb/Painting/Paintable.h                                                             |   1 +
- Userland/Libraries/LibWeb/Painting/PaintableBox.cpp                                                        |  31 +++++---
- Userland/Libraries/LibWeb/Painting/PaintableBox.h                                                          |   6 +-
- Userland/Libraries/LibWeb/Painting/StackingContext.cpp                                                     |  18 ++---
- Userland/Libraries/LibWeb/Painting/ViewportPaintable.cpp                                                   |  23 ++++--
- Userland/Libraries/LibWeb/UIEvents/KeyCode.h                                                               |   7 ++
- Userland/Libraries/LibWeb/UIEvents/MouseEvent.h                                                            |   9 +++
- Userland/Libraries/LibWeb/WebAssembly/Table.cpp                                                            |   2 -
- Userland/Libraries/LibWeb/WebAssembly/WebAssembly.cpp                                                      |   9 ++-
- Userland/Libraries/LibWeb/WebAssembly/WebAssembly.h                                                        |   3 +
- Userland/Libraries/LibWebView/Application.cpp                                                              |  80 ++++++++++++++++++-
- Userland/Libraries/LibWebView/Application.h                                                                |  38 ++++++++-
- Userland/Libraries/LibWebView/ChromeProcess.cpp                                                            |  15 ++--
- Userland/Libraries/LibWebView/ChromeProcess.h                                                              |  13 +--
- Userland/Libraries/LibWebView/Options.h                                                                    | 100 +++++++++++++++++++++++
- Userland/Libraries/LibWebView/URL.cpp                                                                      |  16 ++++
- Userland/Libraries/LibWebView/URL.h                                                                        |   1 +
- Userland/Services/WebContent/PageClient.cpp                                                                |  34 ++++----
- Userland/Services/WebContent/PageClient.h                                                                  |   5 +-
- Userland/Services/WebDriver/main.cpp                                                                       |   2 +-
- Userland/Utilities/headless-browser.cpp                                                                    | 160 ++++++++++++++++++-------------------
- Userland/Utilities/wasm.cpp                                                                                |   2 +-
- 157 files changed, 2531 insertions(+), 1789 deletions(-)
- create mode 100644 .swift-format
- create mode 100644 AK/module.modulemap
- delete mode 100644 Ladybird/Types.h
- rename {Ladybird/cmake => Meta/CMake/Swift}/GenerateSwiftHeader.cmake (100%)
- create mode 100644 Meta/CMake/Swift/InitializeSwift.cmake
- create mode 100644 Meta/CMake/Swift/swift-settings.cmake
- create mode 100644 Tests/LibWeb/Layout/expected/overflow-with-padding.txt
- create mode 100644 Tests/LibWeb/Layout/input/overflow-with-padding.html
- create mode 100644 Tests/LibWeb/Ref/reference/scrollable-contains-rotated-boxes-ref.html
- create mode 100644 Tests/LibWeb/Ref/reference/scrollable-contains-table-ref.html
- create mode 100644 Tests/LibWeb/Ref/scrollable-contains-rotated-boxes.html
- create mode 100644 Tests/LibWeb/Ref/scrollable-contains-table.html
- create mode 100644 Tests/LibWeb/Text/expected/input-selection-start-selection-end.txt
- create mode 100644 Tests/LibWeb/Text/input/input-selection-start-selection-end.html
- create mode 100644 Userland/Libraries/LibGfx/Color.swift
- create mode 100644 Userland/Libraries/LibGfx/module.modulemap
- create mode 100644 Userland/Libraries/LibWebView/Options.h
+ .nx/cache/nx_files.nxt | Bin 4100 -> 4100 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+Friday, August 2, 2024 6:22:42 AM
+Everything up-to-date
+Friday, August 2, 2024 6:22:42 AM
+Friday, August 2, 2024 6:22:56 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+warning Pattern ["string-width@^4.2.3"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width-cjs@npm:string-width@^4.2.0"]. This could result in non-deterministic behavior, skipping.
+[3/4] Linking dependencies...
+warning " > @angular-eslint/eslint-plugin@18.2.0" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning "@angular-eslint/eslint-plugin > @angular-eslint/utils@18.2.0" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning " > @angular-eslint/eslint-plugin-template@18.2.0" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning " > @angular-eslint/schematics@18.2.0" has unmet peer dependency "@angular-devkit/core@>= 18.0.0 < 19.0.0".
+warning " > @angular-eslint/schematics@18.2.0" has unmet peer dependency "@angular-devkit/schematics@>= 18.0.0 < 19.0.0".
+[4/4] Building fresh packages...
+Done in 28.73s.
+Friday, August 2, 2024 6:23:25 AM
+yarn run v1.22.21
+$ ng update
+Using package manager: yarn
+Collecting installed dependencies...
+Found 41 dependencies.
+    We analyzed your package.json and everything seems to be in order. Good work!
+Done in 10.56s.
+Friday, August 2, 2024 6:23:36 AM
+yarn run v1.22.21
+$ ng build
+✔ Browser application bundle generation complete.
+✔ Copying assets complete.
+✔ Index html generation complete.
 
-real    0m0.472s
-user    0m0.095s
-sys     0m0.030s
+Initial chunk files | Names         |  Raw size
+vendor.js           | vendor        |   5.06 MB |
+polyfills.js        | polyfills     | 141.93 kB |
+main.js             | main          |  20.55 kB |
+runtime.js          | runtime       |   6.50 kB |
+styles.css          | styles        |   2.76 kB |
+
+                    | Initial total |   5.23 MB
+
+Build at: 2024-08-02T10:24:06.103Z - Hash: ab7533be52ec2222 - Time: 11651ms
+Done in 29.74s.
+Friday, August 2, 2024 6:24:06 AM
+Friday, August 2, 2024 6:24:06 AM
+Friday, August 2, 2024 6:24:06 AM
 On branch master
 Your branch is up to date with 'origin/master'.
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
+nothing to commit, working tree clean
+Friday, August 2, 2024 6:24:06 AM
+Friday, August 2, 2024 6:24:06 AM
+On branch master
+Your branch is up to date with 'origin/master'.
 
-nothing added to commit but untracked files present (use "git add" to track)
+nothing to commit, working tree clean
+Friday, August 2, 2024 6:24:07 AM
+From github.com:mycanary/mycanary
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Friday, August 2, 2024 6:24:07 AM
+Everything up-to-date
+Friday, August 2, 2024 6:24:08 AM
+yarn run v1.22.21
+$ ng test
+✔ Browser application bundle generation complete.
+02 08 2024 06:24:17.569:INFO [karma-server]: Karma v6.3.2 server started at http://localhost:9876/
+02 08 2024 06:24:17.571:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
+02 08 2024 06:24:17.594:INFO [launcher]: Starting browser Firefox
+02 08 2024 06:24:18.851:INFO [Firefox 129.0 (Windows 10)]: Connected on socket 4zZPdXv7nbMHMIpeAAAB with id 47982448
+LOG: 'test message'
+Firefox 129.0 (Windows 10): Executed 0 of 6 SUCCESS (0 secs / 0 secs)
+LOG: 'test message'
+Firefox 129.0 (Windows 10): Executed 1 of 6 SUCCESS (0 secs / 0.008 secs)
+LOG: 'second message'
+Firefox 129.0 (Windows 10): Executed 1 of 6 SUCCESS (0 secs / 0.008 secs)
+Firefox 129.0 (Windows 10): Executed 6 of 6 SUCCESS (0.063 secs / 0.046 secs)
+TOTAL: 6 SUCCESS
+TOTAL: 6 SUCCESS
+Done in 11.28s.
+Friday, August 2, 2024 6:24:19 AM
+yarn run v1.22.21
+$ ng update @angular/core @angular/cli @angular/material
+Using package manager: yarn
+Collecting installed dependencies...
+Found 41 dependencies.
+Fetching dependency metadata from registry...
+Package '@angular/core' is already up to date.
+Package '@angular/cli' is already up to date.
+Package '@angular/material' is already up to date.
+Done in 1.99s.
+Friday, August 2, 2024 6:24:21 AM
+On branch master
+Your branch is up to date with 'origin/master'.
 
-real    0m0.034s
-user    0m0.019s
-sys     0m0.009s
-Fri Aug  2 06:30:38 EDT 2024
-~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
-ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
-[0/2] Re-checking globbed directories...
-[1/2] Re-running CMake...
--- Running vcpkg install
-Detecting compiler hash for triplet x64-linux...
-Compiler found: /usr/bin/clang++-17
-All requested packages are currently installed.
-Total install time: 290 ns
--- Running vcpkg install - done
--- Found the following ICU libraries:
---   data (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicudata.a
---   i18n (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicui18n.a
---   uc (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicuuc.a
--- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
--- Configuring done (26.1s)
--- Generating done (0.4s)
--- Build files have been written to: /home/kushal/src/ladybird/Build/ladybird
-[0/2] Re-checking globbed directories...
-[2504/2504] Linking CXX executable bin/Ladybird
-QSocketNotifier: Can only be used with threads started with QThread
-QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
-qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
-26324.989 RequestServer(116564:116569): EnsureConnection: DNS-preload for https://github.githubassets.com/ done
-26324.989 RequestServer(116564:116569): EnsureConnection: DNS-preload for github.githubassets.com
-26324.989 RequestServer(116564:116573): EnsureConnection: DNS-preload for https://avatars.githubusercontent.com/ done
-26324.989 RequestServer(116564:116573): EnsureConnection: DNS-preload for avatars.githubusercontent.com
-26324.989 RequestServer(116564:116582): EnsureConnection: DNS-preload for https://user-images.githubusercontent.com/ done
-26324.989 RequestServer(116564:116568): EnsureConnection: DNS-preload for https://github-cloud.s3.amazonaws.com/ done
-26324.989 RequestServer(116564:116579): EnsureConnection: Pre-connect to https://github.githubassets.com/
-26324.989 RequestServer(116564:116568): EnsureConnection: DNS-preload for github-cloud.s3.amazonaws.com
-26324.989 RequestServer(116564:116582): EnsureConnection: DNS-preload for user-images.githubusercontent.com
-26324.989 RequestServer(116564:116580): EnsureConnection: Pre-connect to https://avatars.githubusercontent.com/
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
-26325.009 WebContent(116583): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-26325.149 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 0: Decoding failed: Could not find suitable image decoder plugin for data
-26325.169 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 1: Decoding failed: Could not find suitable image decoder plugin for data
-26325.759 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
-26325.759 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.write'
-26325.759 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
-26326.519 WebContent(116583): No property (from 4 properties) matched Token: Ident: none
-26326.519 WebContent(116583):     border-top-color
-26326.519 WebContent(116583):     border-right-color
-26326.519 WebContent(116583):     border-bottom-color
-26326.519 WebContent(116583):     border-left-color
-26326.519 WebContent(116583): No property (from 4 properties) matched Function: -var(--base-size-8)
-26326.519 WebContent(116583):     margin-top
-26326.519 WebContent(116583):     margin-right
-26326.519 WebContent(116583):     margin-bottom
-26326.519 WebContent(116583):     margin-left
-26327.059 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.autocomplete'
-26327.059 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.spellcheck'
-26327.499 WebContent(116583): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-26327.539 WebContent(116583): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'event'
-26329.990 RequestServer(116564:116571): ConnectionCache: Connection to https://collector.github.com/github/collect failed: connect: Connection refused (errno=111)
-26329.990 RequestServer(116564:116571): Request with a null socket finished for URL https://collector.github.com/github/collect
-26330.160 WebContent(116583): ResourceLoader: Failed load of: "https://collector.github.com/github/collect", Error: Load failed, Duration: 211ms
-26331.220 WebContent(116583): HTMLScriptElement: Refusing to run script because it has already started.
-26333.510 WebContent(116583): Unhandled JavaScript exception (in promise): AbortError: Media playback was paused
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feGaussianBlur' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
-26333.560 WebContent(116583): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
-26333.590 RequestServer(116564:116578): EnsureConnection: DNS-preload for https://github.githubassets.com/ done
-26333.590 RequestServer(116564:116578): EnsureConnection: DNS-preload for github.githubassets.com
-26333.590 RequestServer(116564:116576): EnsureConnection: DNS-preload for https://avatars.githubusercontent.com/ done
-26333.590 RequestServer(116564:116575): EnsureConnection: DNS-preload for https://github-cloud.s3.amazonaws.com/ done
-26333.590 RequestServer(116564:116581): EnsureConnection: DNS-preload for https://user-images.githubusercontent.com/ done
-26333.590 RequestServer(116564:116576): EnsureConnection: DNS-preload for avatars.githubusercontent.com
-26333.590 RequestServer(116564:116575): EnsureConnection: DNS-preload for github-cloud.s3.amazonaws.com
-26333.590 RequestServer(116564:116581): EnsureConnection: DNS-preload for user-images.githubusercontent.com
-26333.590 RequestServer(116564:116577): EnsureConnection: Pre-connect to https://github.githubassets.com/
-26333.590 RequestServer(116564:116567): EnsureConnection: Pre-connect to https://avatars.githubusercontent.com/
-26333.590 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 16: Decoding failed: Could not find suitable image decoder plugin for data
-26333.650 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 18: Decoding failed: Could not find suitable image decoder plugin for data
-26334.680 WebContent(116583): No property (from 4 properties) matched Token: Ident: none
-26334.680 WebContent(116583):     border-top-color
-26334.680 WebContent(116583):     border-right-color
-26334.680 WebContent(116583):     border-bottom-color
-26334.680 WebContent(116583):     border-left-color
-26334.680 WebContent(116583): No property (from 4 properties) matched Function: -var(--base-size-8)
-26334.680 WebContent(116583):     margin-top
-26334.680 WebContent(116583):     margin-right
-26334.680 WebContent(116583):     margin-bottom
-26334.680 WebContent(116583):     margin-left
-26335.060 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
-26335.060 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.write'
-26335.060 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
-26335.370 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.autocomplete'
-26335.370 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.spellcheck'
-26335.650 WebContent(116583): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-26335.700 WebContent(116583): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'event'
-26336.490 RequestServer(116564:116578): Request with a null socket finished for URL https://collector.github.com/github/collect
-26336.490 WebContent(116583): ResourceLoader: Failed load of: "https://collector.github.com/github/collect", Error: Load failed, Duration: 0ms
-26338.080 WebContent(116583): HTMLScriptElement: Refusing to run script because it has already started.
-26341.860 WebContent(116583): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
-26341.860 WebContent(116583): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
-26342.990 RequestServer(116564:116578): EnsureConnection: DNS-preload for https://github.githubassets.com/ done
-26342.990 RequestServer(116564:116570): EnsureConnection: DNS-preload for https://avatars.githubusercontent.com/ done
-26342.990 RequestServer(116564:116578): EnsureConnection: DNS-preload for github.githubassets.com
-26342.990 RequestServer(116564:116570): EnsureConnection: DNS-preload for avatars.githubusercontent.com
-26342.990 RequestServer(116564:116573): EnsureConnection: DNS-preload for https://github-cloud.s3.amazonaws.com/ done
-26342.990 RequestServer(116564:116573): EnsureConnection: DNS-preload for github-cloud.s3.amazonaws.com
-26342.990 RequestServer(116564:116576): EnsureConnection: DNS-preload for https://user-images.githubusercontent.com/ done
-26342.990 RequestServer(116564:116576): EnsureConnection: DNS-preload for user-images.githubusercontent.com
-26342.990 RequestServer(116564:116569): EnsureConnection: Pre-connect to https://github.githubassets.com/
-26342.990 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 35: Decoding failed: Could not find suitable image decoder plugin for data
-26342.990 RequestServer(116564:116572): EnsureConnection: Pre-connect to https://avatars.githubusercontent.com/
-26342.990 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 37: Decoding failed: Could not find suitable image decoder plugin for data
-26343.621 WebContent(116583): No property (from 4 properties) matched Token: Ident: none
-26343.621 WebContent(116583):     border-top-color
-26343.621 WebContent(116583):     border-right-color
-26343.621 WebContent(116583):     border-bottom-color
-26343.621 WebContent(116583):     border-left-color
-26343.621 WebContent(116583): No property (from 4 properties) matched Function: -var(--base-size-8)
-26343.621 WebContent(116583):     margin-top
-26343.621 WebContent(116583):     margin-right
-26343.621 WebContent(116583):     margin-bottom
-26343.621 WebContent(116583):     margin-left
-26344.181 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
-26344.181 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.write'
-26344.181 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
-26344.301 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.autocomplete'
-26344.301 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.spellcheck'
-26344.331 WebContent(116583): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-26344.361 WebContent(116583): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'event'
-26344.721 WebContent(116583): HTMLScriptElement: Refusing to run script because it has already started.
-26349.081 WebContent(116583): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
-26349.081 WebContent(116583): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
-26379.073 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
-26379.653 WebContent(116583): FIXME: Unimplemented Navigator.maxTouchPoints
-26379.693 WebContent(116583): (STUBBED) HTMLInputElement::set_selection_range(start=0, end=0, direction='None'). Called on: input.lst
-26379.703 WebContent(116583): ResourceLoader: Filtered request to: "https://clients1.google.com/generate_204"
-26379.703 WebContent(116583): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=i&ct=psnt&cad=&nt=null&ei=kresZrm1Jceo5NoPweLJ8QQ&zx=1722595219354&opi=89978449"
-26383.544 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.nonce'
-26393.754 WebContent(116583): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=csi&s=web&t=aft&lite=1&ei=oLesZvy9N7jcptQPhsSG4AQ&conn=-1&biw=1714&bih=818&ima=0&rt=prt.17,aft.17&zx=1722595233386"
-26394.074 WebContent(116583): ResourceLoader: Filtered request to: "https://www.google.com/gen_204?atyp=csi&s=web&t=all&lite=1&ei=oLesZvy9N7jcptQPhsSG4AQ&conn=-1&biw=1714&bih=818&ima=0&ime=0&imel=0&imex=0&imeh=5&imea=0&imeb=8&rt=prt.17,aft.17,ol.366,rqst.0,rspt.0&zx=1722595233719"
-26404.295 RequestServer(116564:116571): EnsureConnection: DNS-preload for https://github.githubassets.com/ done
-26404.295 RequestServer(116564:116571): EnsureConnection: DNS-preload for github.githubassets.com
-26404.295 RequestServer(116564:116569): EnsureConnection: DNS-preload for https://avatars.githubusercontent.com/ done
-26404.295 RequestServer(116564:116569): EnsureConnection: DNS-preload for avatars.githubusercontent.com
-26404.295 RequestServer(116564:116577): EnsureConnection: DNS-preload for https://github-cloud.s3.amazonaws.com/ done
-26404.295 RequestServer(116564:116578): EnsureConnection: DNS-preload for https://user-images.githubusercontent.com/ done
-26404.295 RequestServer(116564:116578): EnsureConnection: DNS-preload for user-images.githubusercontent.com
-26404.295 RequestServer(116564:116567): EnsureConnection: Pre-connect to https://github.githubassets.com/
-26404.295 RequestServer(116564:116577): EnsureConnection: DNS-preload for github-cloud.s3.amazonaws.com
-26404.295 RequestServer(116564:116575): EnsureConnection: Pre-connect to https://avatars.githubusercontent.com/
-26404.375 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 62: Decoding failed: Could not find suitable image decoder plugin for data
-26404.445 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 64: Decoding failed: Could not find suitable image decoder plugin for data
-26404.925 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
-26404.925 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.write'
-26404.925 WebContent(116583): FIXME: Unimplemented IDL interface: 'ClipboardPrototype.read'
-26405.845 WebContent(116583): No property (from 4 properties) matched Token: Ident: none
-26405.845 WebContent(116583):     border-top-color
-26405.845 WebContent(116583):     border-right-color
-26405.845 WebContent(116583):     border-bottom-color
-26405.845 WebContent(116583):     border-left-color
-26405.845 WebContent(116583): No property (from 4 properties) matched Function: -var(--base-size-8)
-26405.845 WebContent(116583):     margin-top
-26405.845 WebContent(116583):     margin-right
-26405.845 WebContent(116583):     margin-bottom
-26405.845 WebContent(116583):     margin-left
-26406.255 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.autocomplete'
-26406.255 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.spellcheck'
-26406.485 WebContent(116583): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
-26406.525 WebContent(116583): Potential FIXME: Returning from PerformanceObserver::observe() as we don't support the PerformanceEntry type 'event'
-26409.235 WebContent(116583): HTMLScriptElement: Refusing to run script because it has already started.
-26411.165 WebContent(116583): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
-26411.165 WebContent(116583): FIXME: Unimplemented IDL interface: 'HistoryPrototype.scrollRestoration'
-26433.326 WebContent(116583): Unhandled JavaScript exception: [TypeError] undefined is not a function (evaluated from 'performance.clearResourceTimings')
-26433.336 WebContent(116583):     at d (https://github.githubassets.com/assets/app_assets_modules_github_behaviors_ajax-error_ts-app_assets_modules_github_behaviors_include-467754-12b67c78b7f2.js:106:7790)
-    at s (https://github.githubassets.com/assets/app_assets_modules_github_behaviors_ajax-error_ts-app_assets_modules_github_behaviors_include-467754-12b67c78b7f2.js:106:6884)
-    at https://github.githubassets.com/assets/behaviors-3b2c76767cd8.js:33:9932
-    at <unknown>
-    at <unknown>
-    at p (https://github.githubassets.com/assets/vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js-858e043fcf76.js:1:5295)
-    at notifyApplicationAfterClickingLinkToLocation (https://github.githubassets.com/assets/vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js-858e043fcf76.js:15:33770)
-    at applicationAllowsFollowingLinkToLocation (https://github.githubassets.com/assets/vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js-858e043fcf76.js:15:33576)
-    at willFollowLinkToLocation (https://github.githubassets.com/assets/vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js-858e043fcf76.js:15:31495)
-    at https://github.githubassets.com/assets/vendors-node_modules_github_turbo_dist_turbo_es2017-esm_js-858e043fcf76.js:1:19626
+nothing to commit, working tree clean
+Friday, August 2, 2024 6:24:21 AM
+From github.com:mycanary/mycanary
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Friday, August 2, 2024 6:24:22 AM
+Everything up-to-date
+Friday, August 2, 2024 6:24:23 AM
+Latest version:     1.0.30001646
+Installed version:  none
+Removing old caniuse-lite from lock file
+Installing new caniuse-lite version
+$ yarn add -W caniuse-lite
+warning Pattern ["string-width@^4.2.3"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width-cjs@npm:string-width@^4.2.0"]. This could result in non-deterministic behavior, skipping.
+warning " > @angular-eslint/eslint-plugin@18.2.0" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning "@angular-eslint/eslint-plugin > @angular-eslint/utils@18.2.0" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning " > @angular-eslint/eslint-plugin-template@18.2.0" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning " > @angular-eslint/schematics@18.2.0" has unmet peer dependency "@angular-devkit/core@>= 18.0.0 < 19.0.0".
+warning " > @angular-eslint/schematics@18.2.0" has unmet peer dependency "@angular-devkit/schematics@>= 18.0.0 < 19.0.0".
+Cleaning package.json dependencies from caniuse-lite
+$ yarn remove -W caniuse-lite
+warning Pattern ["string-width@^4.2.3"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width-cjs@npm:string-width@^4.2.0"]. This could result in non-deterministic behavior, skipping.
+warning " > @angular-eslint/eslint-plugin@18.2.0" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning "@angular-eslint/eslint-plugin > @angular-eslint/utils@18.2.0" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning " > @angular-eslint/eslint-plugin-template@18.2.0" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning " > @angular-eslint/schematics@18.2.0" has unmet peer dependency "@angular-devkit/core@>= 18.0.0 < 19.0.0".
+warning " > @angular-eslint/schematics@18.2.0" has unmet peer dependency "@angular-devkit/schematics@>= 18.0.0 < 19.0.0".
+caniuse-lite has been successfully updated
 
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.657 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.667 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.697 WebContent(116583): HTMLScriptElement: Refusing to run script because scripting is disabled.
-26434.897 RequestServer(116564:116575): EnsureConnection: DNS-preload for https://github.githubassets.com/ done
-26434.897 RequestServer(116564:116575): EnsureConnection: DNS-preload for github.githubassets.com
-26434.897 RequestServer(116564:116581): EnsureConnection: DNS-preload for https://avatars.githubusercontent.com/ done
-26434.897 RequestServer(116564:116581): EnsureConnection: DNS-preload for avatars.githubusercontent.com
-26434.897 RequestServer(116564:116577): EnsureConnection: DNS-preload for https://github-cloud.s3.amazonaws.com/ done
-26434.897 RequestServer(116564:116577): EnsureConnection: DNS-preload for github-cloud.s3.amazonaws.com
-26434.897 RequestServer(116564:116570): EnsureConnection: DNS-preload for https://user-images.githubusercontent.com/ done
-26434.897 RequestServer(116564:116570): EnsureConnection: DNS-preload for user-images.githubusercontent.com
-26434.897 RequestServer(116564:116567): EnsureConnection: Pre-connect to https://github.githubassets.com/
-26434.897 RequestServer(116564:116580): EnsureConnection: Pre-connect to https://avatars.githubusercontent.com/
-26435.137 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 85: Decoding failed: Could not find suitable image decoder plugin for data
-26435.327 WebContent(116583): ImageDecoderClient: Failed to decode image with ID 87: Decoding failed: Could not find suitable image decoder plugin for data
-26438.247 WebContent(116583): (STUBBED) HTMLInputElement::set_custom_validity(error=). Called on: input#custom_scope_name.form-control
-26438.607 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLInputElementPrototype.autocomplete'
-26438.607 WebContent(116583): FIXME: Unimplemented IDL interface: 'HTMLElementPrototype.spellcheck'
-26440.197 WebContent(116583): HTMLScriptElement: Refusing to run script because it has already started.
-26440.767 RequestServer(116564:116576): Job: Malformed HTTP header: 'hub-cloud.s3.amazonaws.com objects.githubusercontent.com secured-user-images.githubusercontent.com/ user-images.githubusercontent.com/ private-user-images.githubusercontent.com opengraph.githubassets.com github-production-user-asset-6210df.s3.amazonaws.com customer-stories-feed.github.com spotlights-feed.github.com objects-origin.githubusercontent.com *.githubusercontent.com; manifest-src 'self'; media-src github.com user-images.githubusercontent.com/ secured-user-images.githubusercontent.com/ private-user-images.githubusercontent.com github-production-user-asset-6210df.s3.amazonaws.com gist.github.com; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; upgrade-insecure-requests; worker-src github.com/assets-cdn/worker/ gist.github.com/assets-cdn/worker/' (800)
-26441.087 WebContent(116583): ResourceLoader: Failed load of: "https://github.com/amirisback/automated-build-android-app-with-github-action/security/overall-count", Error: Load failed: 200, Duration: 591ms
-26649.472 WebContent(116583): ConnectionFromClient(0x000056316364f400) (id=1) had an error (IPC::transfer_message: Disconnected from peer), disconnecting.
+No target browser changes
+Friday, August 2, 2024 6:24:43 AM
+Friday, August 2, 2024 6:24:43 AM
+On branch master
+Your branch is up to date with 'origin/master'.
 
-real    14m10.755s
-user    111m13.796s
-sys     5m24.290s
-Fri Aug  2 06:44:49 EDT 2024
-kushal@kus2023:~/src/ladybird$
-kushal@kus2023:~/src/ladybird$
-kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+nothing to commit, working tree clean
+Friday, August 2, 2024 6:24:44 AM
+Friday, August 2, 2024 6:24:44 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Friday, August 2, 2024 6:24:44 AM
+From github.com:mycanary/mycanary
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Friday, August 2, 2024 6:24:44 AM
+Everything up-to-date
+Friday, August 2, 2024 6:24:45 AM
+* remote origin
+  Fetch URL: git@github.com:mycanary/mycanary.git
+  Push  URL: git@github.com:mycanary/mycanary.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Friday, August 2, 2024 6:24:45 AM
+
+PS C:\Users\kushal\src\angular\mycanary> cd "C:\Users\kushal\src\angular\angulareighteen\"; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; yarn; date; yarn run ng update; date; yarn run ng build; date; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; yarn run ng test; date; yarn run ng update @angular/core @angular/cli @angular/material; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; echo y | npx update-browserslist-db@latest; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; git remote show origin; date;
+
+Friday, August 2, 2024 6:29:12 AM
+Friday, August 2, 2024 6:29:13 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Friday, August 2, 2024 6:29:13 AM
+Friday, August 2, 2024 6:29:13 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Friday, August 2, 2024 6:29:13 AM
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Friday, August 2, 2024 6:29:13 AM
+Everything up-to-date
+Friday, August 2, 2024 6:29:14 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.26s.
+Friday, August 2, 2024 6:29:14 AM
+yarn run v1.22.21
+$ ng update
+Unknown error: Error [ERR_REQUIRE_ESM]: require() of ES Module C:\Users\kushal\src\angular\angulareighteen\node_modules\string-width\index.js from C:\Users\kushal\src\angular\angulareighteen\node_modules\cliui\build\index.cjs not supported.
+Instead change the require of index.js in C:\Users\kushal\src\angular\angulareighteen\node_modules\cliui\build\index.cjs to a dynamic import() which is available in all CommonJS modules.
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Friday, August 2, 2024 6:29:18 AM
+yarn run v1.22.21
+$ ng build
+Unknown error: Error [ERR_REQUIRE_ESM]: require() of ES Module C:\Users\kushal\src\angular\angulareighteen\node_modules\string-width\index.js from C:\Users\kushal\src\angular\angulareighteen\node_modules\cliui\build\index.cjs not supported.
+Instead change the require of index.js in C:\Users\kushal\src\angular\angulareighteen\node_modules\cliui\build\index.cjs to a dynamic import() which is available in all CommonJS modules.
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Friday, August 2, 2024 6:29:19 AM
+Friday, August 2, 2024 6:29:19 AM
+Friday, August 2, 2024 6:29:19 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Friday, August 2, 2024 6:29:19 AM
+Friday, August 2, 2024 6:29:19 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Friday, August 2, 2024 6:29:19 AM
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Friday, August 2, 2024 6:29:20 AM
+Everything up-to-date
+Friday, August 2, 2024 6:29:21 AM
+yarn run v1.22.21
+$ ng test
+Unknown error: Error [ERR_REQUIRE_ESM]: require() of ES Module C:\Users\kushal\src\angular\angulareighteen\node_modules\string-width\index.js from C:\Users\kushal\src\angular\angulareighteen\node_modules\cliui\build\index.cjs not supported.
+Instead change the require of index.js in C:\Users\kushal\src\angular\angulareighteen\node_modules\cliui\build\index.cjs to a dynamic import() which is available in all CommonJS modules.
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Friday, August 2, 2024 6:29:21 AM
+yarn run v1.22.21
+$ ng update @angular/core @angular/cli @angular/material
+Unknown error: Error [ERR_REQUIRE_ESM]: require() of ES Module C:\Users\kushal\src\angular\angulareighteen\node_modules\string-width\index.js from C:\Users\kushal\src\angular\angulareighteen\node_modules\cliui\build\index.cjs not supported.
+Instead change the require of index.js in C:\Users\kushal\src\angular\angulareighteen\node_modules\cliui\build\index.cjs to a dynamic import() which is available in all CommonJS modules.
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Friday, August 2, 2024 6:29:22 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Friday, August 2, 2024 6:29:22 AM
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Friday, August 2, 2024 6:29:22 AM
+Everything up-to-date
+Friday, August 2, 2024 6:29:23 AM
+Latest version:     1.0.30001646
+Installed version:  none
+Removing old caniuse-lite from lock file
+Installing new caniuse-lite version
+$ yarn add -W caniuse-lite
+warning Pattern ["string-width-cjs@npm:string-width@^4.2.0"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["string-width@^4.2.3"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["string-width@^4.2.0"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["wrap-ansi@^7.0.0"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-wrap-ansi-cjs-7.0.0-67e145cff510a6a6984bdf1152911d69d2eb9e43-integrity\\node_modules\\wrap-ansi-cjs" as pattern ["wrap-ansi-cjs@npm:wrap-ansi@^7.0.0"]. This could result in non-deterministic behavior, skipping.
+Cleaning package.json dependencies from caniuse-lite
+$ yarn remove -W caniuse-lite
+warning Pattern ["string-width-cjs@npm:string-width@^4.2.0"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["string-width@^4.2.3"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["string-width@^4.2.0"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["wrap-ansi@^7.0.0"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-wrap-ansi-cjs-7.0.0-67e145cff510a6a6984bdf1152911d69d2eb9e43-integrity\\node_modules\\wrap-ansi-cjs" as pattern ["wrap-ansi-cjs@npm:wrap-ansi@^7.0.0"]. This could result in non-deterministic behavior, skipping.
+caniuse-lite has been successfully updated
+
+No target browser changes
+Friday, August 2, 2024 6:29:36 AM
+Friday, August 2, 2024 6:29:36 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Friday, August 2, 2024 6:29:36 AM
+Friday, August 2, 2024 6:29:36 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Friday, August 2, 2024 6:29:36 AM
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Friday, August 2, 2024 6:29:37 AM
+Everything up-to-date
+Friday, August 2, 2024 6:29:37 AM
+* remote origin
+  Fetch URL: git@github.com:angulareighteen/angulareighteen.github.io.git
+  Push  URL: git@github.com:angulareighteen/angulareighteen.github.io.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Friday, August 2, 2024 6:29:38 AM
+
+PS C:\Users\kushal\src\angular\angulareighteen> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Friday, August 2, 2024 6:29:49 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.08s.
+Friday, August 2, 2024 6:29:50 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 162ms
+Done in 2.15s.
+Friday, August 2, 2024 6:29:52 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, August 2, 2024 6:29:52 AM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Friday, August 2, 2024 6:29:52 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Friday, August 2, 2024 6:29:54 AM
+Everything up-to-date
+Friday, August 2, 2024 6:29:54 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Friday, August 2, 2024 6:30:08 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Friday, August 2, 2024 6:30:08 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 104ms
+Done in 0.83s.
+Friday, August 2, 2024 6:30:09 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, August 2, 2024 6:30:10 AM
+[main c09d7e3] build application
+ 2 files changed, 946 insertions(+), 330 deletions(-)
+Friday, August 2, 2024 6:30:10 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Friday, August 2, 2024 6:30:10 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 4.00 KiB | 4.00 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   aa32846..c09d7e3  main -> main
+Friday, August 2, 2024 6:30:11 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Friday, August 2, 2024 6:30:27 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Friday, August 2, 2024 6:30:27 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 107ms
+Done in 0.82s.
+Friday, August 2, 2024 6:30:28 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, August 2, 2024 6:30:28 AM
+[main 6140fec] build application
+ 2 files changed, 456 insertions(+), 946 deletions(-)
+Friday, August 2, 2024 6:30:29 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Friday, August 2, 2024 6:30:29 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 2.46 KiB | 2.46 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   c09d7e3..6140fec  main -> main
+Friday, August 2, 2024 6:30:30 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Friday, August 2, 2024 6:30:37 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Friday, August 2, 2024 6:30:37 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 108ms
+Done in 0.83s.
+Friday, August 2, 2024 6:30:38 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, August 2, 2024 6:30:38 AM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Friday, August 2, 2024 6:30:38 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Friday, August 2, 2024 6:30:39 AM
+Everything up-to-date
+Friday, August 2, 2024 6:30:39 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Friday, August 2, 2024 6:45:04 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Friday, August 2, 2024 6:45:05 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 204ms
+Done in 1.29s.
+Friday, August 2, 2024 6:45:06 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, August 2, 2024 6:45:06 AM
+[main f1c9627] build application
+ 2 files changed, 1188 insertions(+)
+Friday, August 2, 2024 6:45:07 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Friday, August 2, 2024 6:45:07 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 9.39 KiB | 1.17 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   6140fec..f1c9627  main -> main
+Friday, August 2, 2024 6:45:08 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Friday, August 2, 2024 7:38:01 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.09s.
+Friday, August 2, 2024 7:38:01 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 172ms
+Done in 2.40s.
+Friday, August 2, 2024 7:38:04 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, August 2, 2024 7:38:04 AM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Friday, August 2, 2024 7:38:04 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Friday, August 2, 2024 7:38:06 AM
+Everything up-to-date
+Friday, August 2, 2024 7:38:06 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
