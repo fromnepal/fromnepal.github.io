@@ -1,499 +1,653 @@
-kushal@kus2023:~$ time sudo dpkg -r texlive-full
-[sudo] password for kushal:
-(Reading database ... 291785 files and directories currently installed.)
-Removing texlive-full (2021.20220204-1) ...
+PowerShell 7.4.3
 
-real    0m4.726s
-user    0m0.015s
-sys     0m0.008s
-kushal@kus2023:~$ time sudo apt-get remove texlive-*
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Note, selecting 'texlive-htmlxml' for glob 'texlive-*'
-Note, selecting 'texlive-pictures' for glob 'texlive-*'
-Note, selecting 'texlive-metapost-doc' for glob 'texlive-*'
-Note, selecting 'texlive-lang-portuguese' for glob 'texlive-*'
-Note, selecting 'texlive-binaries' for glob 'texlive-*'
-Note, selecting 'texlive-lang-spanish' for glob 'texlive-*'
-Note, selecting 'texlive-lang-european' for glob 'texlive-*'
-Note, selecting 'texlive-lang-greek' for glob 'texlive-*'
-Note, selecting 'texlive-lang-cyrillic' for glob 'texlive-*'
-Note, selecting 'texlive-font-utils' for glob 'texlive-*'
-Note, selecting 'texlive-humanities' for glob 'texlive-*'
-Note, selecting 'texlive-lang-korean' for glob 'texlive-*'
-Note, selecting 'texlive-music' for glob 'texlive-*'
-Note, selecting 'texlive-plain-generic' for glob 'texlive-*'
-Note, selecting 'texlive-latex-recommended-doc' for glob 'texlive-*'
-Note, selecting 'texlive-fonts-recommended-doc' for glob 'texlive-*'
-Note, selecting 'texlive-games' for glob 'texlive-*'
-Note, selecting 'texlive-lang-polish' for glob 'texlive-*'
-Note, selecting 'texlive-science-doc' for glob 'texlive-*'
-Note, selecting 'texlive-lang-italian' for glob 'texlive-*'
-Note, selecting 'texlive-common' for glob 'texlive-*'
-Note, selecting 'texlive-latex-base' for glob 'texlive-*'
-Note, selecting 'texlive-bibtex-extra' for glob 'texlive-*'
-Note, selecting 'texlive-lang-czechslovak' for glob 'texlive-*'
-Note, selecting 'texlive-lang-all' for glob 'texlive-*'
-Note, selecting 'texlive-lang-cjk' for glob 'texlive-*'
-Note, selecting 'texlive-fonts-extra-links' for glob 'texlive-*'
-Note, selecting 'texlive-pictures-doc' for glob 'texlive-*'
-Note, selecting 'texlive-latex-base-doc' for glob 'texlive-*'
-Note, selecting 'texlive-publishers' for glob 'texlive-*'
-Note, selecting 'texlive-latex-extra-doc' for glob 'texlive-*'
-Note, selecting 'texlive-lang-chinese' for glob 'texlive-*'
-Note, selecting 'texlive-formats-extra' for glob 'texlive-*'
-Note, selecting 'texlive-pstricks-doc' for glob 'texlive-*'
-Note, selecting 'texlive-math-extra' for glob 'texlive-*'
-Note, selecting 'texlive-lang-english' for glob 'texlive-*'
-Note, selecting 'texlive-full' for glob 'texlive-*'
-Note, selecting 'texlive-humanities-doc' for glob 'texlive-*'
-Note, selecting 'texlive-latex3' for glob 'texlive-*'
-Note, selecting 'texlive-base-bin' for glob 'texlive-*'
-Note, selecting 'texlive-xetex' for glob 'texlive-*'
-Note, selecting 'texlive-science' for glob 'texlive-*'
-Note, selecting 'texlive-lang-arabic' for glob 'texlive-*'
-Note, selecting 'texlive-lang-other' for glob 'texlive-*'
-Note, selecting 'texlive-base' for glob 'texlive-*'
-Note, selecting 'texlive-metapost' for glob 'texlive-*'
-Note, selecting 'texlive-fonts-extra' for glob 'texlive-*'
-Note, selecting 'texlive-lang-french' for glob 'texlive-*'
-Note, selecting 'texlive-context' for glob 'texlive-*'
-Note, selecting 'texlive-lang-german' for glob 'texlive-*'
-Note, selecting 'texlive-extra-utils' for glob 'texlive-*'
-Note, selecting 'texlive-latex-extra' for glob 'texlive-*'
-Note, selecting 'texlive-fonts-extra-doc' for glob 'texlive-*'
-Note, selecting 'texlive-fonts-recommended' for glob 'texlive-*'
-Note, selecting 'texlive-publishers-doc' for glob 'texlive-*'
-Note, selecting 'texlive-lang-arab' for glob 'texlive-*'
-Note, selecting 'texlive-lang-japanese' for glob 'texlive-*'
-Note, selecting 'texlive-latex-recommended' for glob 'texlive-*'
-Note, selecting 'texlive-pstricks' for glob 'texlive-*'
-Note, selecting 'texlive-luatex' for glob 'texlive-*'
-Note, selecting 'texlive-binaries' instead of 'texlive-base-bin'
-Note, selecting 'context' instead of 'texlive-context'
-Package 'texlive-latex3' is not installed, so not removed
-Package 'texlive-math-extra' is not installed, so not removed
-Package 'texlive-common' is not installed, so not removed
-Package 'texlive-lang-arab' is not installed, so not removed
-Package 'texlive-htmlxml' is not installed, so not removed
-Package 'texlive-full' is not installed, so not removed
-Package 'texlive-lang-all' is not installed, so not removed
-The following packages were automatically installed and are no longer required:
-  aglfn asymptote-doc biber chktex cups-bsd cups-client dvidvi dvisvgm fonts-adf-accanthis fonts-adf-berenis fonts-adf-gillius fonts-adf-universalis fonts-arphic-bkai00mp
-  fonts-arphic-bsmi00lp fonts-arphic-gbsn00lp fonts-arphic-gkai00mp fonts-baekmuk fonts-cabin fonts-cantarell fonts-comfortaa fonts-dejavu-extra fonts-ebgaramond fonts-ebgaramond-extra
-  fonts-font-awesome fonts-gfs-artemisia fonts-gfs-baskerville fonts-gfs-bodoni-classic fonts-gfs-complutum fonts-gfs-didot fonts-gfs-didot-classic fonts-gfs-gazis fonts-gfs-neohellenic
-  fonts-gfs-olga fonts-gfs-porson fonts-gfs-solomos fonts-gfs-theokritos fonts-go fonts-hosny-amiri fonts-junicode fonts-linuxlibertine fonts-lmodern fonts-lobster fonts-lobstertwo
-  fonts-noto-color-emoji fonts-noto-core fonts-oflb-asana-math fonts-open-sans fonts-roboto-unhinted fonts-sil-charis fonts-sil-gentium fonts-sil-gentium-basic fonts-sil-gentiumplus
-  fonts-sil-gentiumplus-compact fonts-sil-padauk fonts-stix fonts-tlwg-garuda fonts-tlwg-garuda-otf fonts-tlwg-kinnari fonts-tlwg-kinnari-otf fonts-tlwg-laksaman fonts-tlwg-laksaman-otf
-  fonts-tlwg-loma fonts-tlwg-loma-otf fonts-tlwg-mono fonts-tlwg-mono-otf fonts-tlwg-norasi fonts-tlwg-norasi-otf fonts-tlwg-purisa fonts-tlwg-purisa-otf fonts-tlwg-sawasdee
-  fonts-tlwg-sawasdee-otf fonts-tlwg-typewriter fonts-tlwg-typewriter-otf fonts-tlwg-typist fonts-tlwg-typist-otf fonts-tlwg-typo fonts-tlwg-typo-otf fonts-tlwg-umpush
-  fonts-tlwg-umpush-otf fonts-tlwg-waree fonts-tlwg-waree-otf fonts-unfonts-core fonts-unfonts-extra freeglut3 gsfonts gsfonts-x11 imagemagick imagemagick-6-common imagemagick-6.q16
-  lacheck latex-cjk-chinese-arphic-bkai00mp latex-cjk-chinese-arphic-bsmi00lp latex-cjk-chinese-arphic-gbsn00lp latex-cjk-chinese-arphic-gkai00mp latex-cjk-japanese-wadalab latexdiff
-  lcdf-typetools libalgorithm-c3-perl libapache-pom-java libautovivification-perl libb-hooks-endofscope-perl libb-hooks-op-check-perl libboost-filesystem1.74.0 libbtparse2
-  libbusiness-ismn-perl libbusiness-issn-perl libclass-accessor-perl libclass-c3-perl libclass-c3-xs-perl libclass-data-inheritable-perl libclass-inspector-perl
-  libclass-method-modifiers-perl libclass-singleton-perl libclass-xsaccessor-perl libcommon-sense-perl libcommons-logging-java libcommons-parent-java libdata-compare-perl
-  libdata-optlist-perl libdata-uniqid-perl libdate-simple-perl libdatetime-calendar-julian-perl libdatetime-format-builder-perl libdatetime-format-strptime-perl libdatetime-locale-perl
-  libdatetime-perl libdatetime-timezone-perl libde265-0 libdevel-callchecker-perl libdevel-caller-perl libdevel-globaldestruction-perl libdevel-lexalias-perl libdevel-stacktrace-perl
-  libdist-checkconflicts-perl libdjvulibre-text libdjvulibre21 libdynaloader-functions-perl libemail-date-format-perl libemf1 libencode-eucjpms-perl libencode-hanextra-perl
-  libencode-jis2k-perl libeval-closure-perl libexception-class-perl libexporter-tiny-perl libfftw3-double3 libfile-find-rule-perl libfile-homedir-perl libfile-sharedir-perl
-  libfile-slurper-perl libfile-which-perl libfontbox-java libglew2.2 libgsl27 libgslcblas0 libheif1 libilmbase25 libipc-run3-perl libipc-shareable-perl libjson-perl libjson-xs-perl
-  libjxr-tools libjxr0 libkpathsea6 liblingua-translit-perl liblist-allutils-perl liblist-moreutils-perl liblist-moreutils-xs-perl liblist-someutils-perl liblist-someutils-xs-perl
-  liblist-utilsby-perl liblog-dispatch-perl liblog-log4perl-perl liblqr-1-0 libltdl7 libmagick++-6.q16-8 libmagickcore-6.q16-6 libmagickcore-6.q16-6-extra libmagickwand-6.q16-6
-  libmail-sendmail-perl libmime-charset-perl libmime-lite-perl libmime-types-perl libmodule-implementation-perl libmodule-runtime-perl libmotif-common libmro-compat-perl
-  libnamespace-autoclean-perl libnamespace-clean-perl libnumber-compare-perl libopenexr25 libosp5 libostyle1c2 libpackage-stash-perl libpackage-stash-xs-perl libpadwalker-perl
-  libparams-classify-perl libparams-util-perl libparams-validate-perl libparams-validationcompiler-perl libparse-recdescent-perl libpdfbox-java libperlio-utf8-strict-perl libplot2c2
-  libpoppler-qt5-1 libpstoedit0c2a libptexenc1 libqt5core5a libqt5dbus5 libqt5gui5 libqt5network5 libqt5svg5 libqt5widgets5 libqt5xml5 libreadonly-perl libref-util-perl
-  libref-util-xs-perl libregexp-common-perl librole-tiny-perl libsombok3 libsort-key-perl libspecio-perl libstring-crc32-perl libsub-exporter-perl libsub-exporter-progressive-perl
-  libsub-identify-perl libsub-install-perl libsub-quote-perl libsynctex2 libsys-hostname-long-perl libtcl8.6 libteckit0 libtexlua53 libtexluajit2 libtext-bibtex-perl libtext-csv-perl
-  libtext-csv-xs-perl libtext-glob-perl libtext-roman-perl libtext-unidecode-perl libtie-cycle-perl libtk8.6 libtypes-serialiser-perl libunicode-linebreak-perl libvariable-magic-perl
-  libwebpdemux2 libwmflite-0.2-7 libwoff1 libxcb-xinerama0 libxm4 libxml-libxml-perl libxml-libxml-simple-perl libxml-libxslt-perl libxml-namespacesupport-perl libxml-sax-base-perl
-  libxml-sax-expat-perl libxml-sax-perl libxml-writer-perl libxstring-perl libyaml-tiny-perl libzip4 libzzip-0-13 lmodern openjade pfb2t1c2pfb preview-latex-style ps2eps pstoedit psutils
-  qt5-gtk-platformtheme qttranslations5-l10n sgml-base t1utils tcl tcl8.6 teckit tex-common tex-gyre texinfo tk tk8.6 xfonts-encodings xfonts-utils xpdf
-Use 'sudo apt autoremove' to remove them.
-The following packages will be REMOVED:
-  asymptote cm-super cm-super-minimal context context-modules dvipng feynmf fragmaster latex-cjk-all latex-cjk-chinese latex-cjk-common latex-cjk-japanese latex-cjk-korean latex-cjk-thai
-  latexmk prerex purifyeps texlive-base texlive-bibtex-extra texlive-binaries texlive-extra-utils texlive-font-utils texlive-fonts-extra texlive-fonts-extra-doc texlive-fonts-extra-links
-  texlive-fonts-recommended texlive-fonts-recommended-doc texlive-formats-extra texlive-games texlive-humanities texlive-humanities-doc texlive-lang-arabic texlive-lang-chinese
-  texlive-lang-cjk texlive-lang-cyrillic texlive-lang-czechslovak texlive-lang-english texlive-lang-european texlive-lang-french texlive-lang-german texlive-lang-greek
-  texlive-lang-italian texlive-lang-japanese texlive-lang-korean texlive-lang-other texlive-lang-polish texlive-lang-portuguese texlive-lang-spanish texlive-latex-base
-  texlive-latex-base-doc texlive-latex-extra texlive-latex-extra-doc texlive-latex-recommended texlive-latex-recommended-doc texlive-luatex texlive-metapost texlive-metapost-doc
-  texlive-music texlive-pictures texlive-pictures-doc texlive-plain-generic texlive-pstricks texlive-pstricks-doc texlive-publishers texlive-publishers-doc texlive-science
-  texlive-science-doc texlive-xetex tipa vprerex
-0 upgraded, 0 newly installed, 70 to remove and 0 not upgraded.
-3 not fully installed or removed.
-After this operation, 5788 MB disk space will be freed.
-Do you want to continue? [Y/n]
-(Reading database ... 291776 files and directories currently installed.)
-Removing context-modules (20210301-1) ...
-Removing context (2021.03.05.20220211-1) ...
-Removing asymptote (2.78+ds-2) ...
-Removing cm-super (0.3.4-17) ...
-Removing cm-super-minimal (0.3.4-17) ...
-Removing dvipng (1.15-1.1) ...
-Removing feynmf (1.08-13) ...
-Removing fragmaster (1.7-10) ...
-Removing latex-cjk-all (4.8.4+git20170127-4) ...
-Removing latex-cjk-chinese (4.8.4+git20170127-4) ...
-Removing latex-cjk-thai (4.8.4+git20170127-4) ...
-Removing latex-cjk-korean (4.8.4+git20170127-4) ...
-Removing latex-cjk-japanese (4.8.4+git20170127-4) ...
-Removing latexmk (1:4.76-1) ...
-Removing vprerex (1:6.5.1-1build1) ...
-Removing prerex (6.8.0-1) ...
-Removing purifyeps (1.1-3) ...
-Removing texlive-bibtex-extra (2021.20220204-1) ...
-Removing texlive-formats-extra (2021.20220204-1) ...
-Removing texlive-xetex (2021.20220204-1) ...
-Removing tipa (2:1.3-21) ...
-Removing texlive-science (2021.20220204-1) ...
-Removing texlive-extra-utils (2021.20220204-1) ...
-Removing texlive-fonts-extra (2021.20220204-1) ...
-Removing texlive-fonts-extra-doc (2021.20220204-1) ...
-Removing texlive-fonts-extra-links (2021.20220204-1) ...
-Removing texlive-fonts-recommended (2021.20220204-1) ...
-Removing texlive-fonts-recommended-doc (2021.20220204-1) ...
-Removing texlive-games (2021.20220204-1) ...
-Removing texlive-humanities (2021.20220204-1) ...
-Removing texlive-humanities-doc (2021.20220204-1) ...
-Removing texlive-lang-arabic (2021.20220204-1) ...
-Removing texlive-lang-chinese (2021.20220204-1) ...
-Removing texlive-lang-korean (2021.20220204-1) ...
-Removing texlive-lang-japanese (2021.20220204-1) ...
-Removing texlive-lang-cjk (2021.20220204-1) ...
-Removing texlive-lang-cyrillic (2021.20220204-1) ...
-Removing texlive-lang-czechslovak (2021.20220204-1) ...
-Removing texlive-lang-english (2021.20220204-1) ...
-Removing texlive-lang-european (2021.20220204-1) ...
-Removing texlive-lang-french (2021.20220204-1) ...
-Removing texlive-lang-german (2021.20220204-1) ...
-Removing texlive-lang-greek (2021.20220204-1) ...
-Removing texlive-lang-italian (2021.20220204-1) ...
-Removing texlive-lang-other (2021.20220204-1) ...
-Removing texlive-lang-polish (2021.20220204-1) ...
-Removing texlive-lang-portuguese (2021.20220204-1) ...
-Removing texlive-lang-spanish (2021.20220204-1) ...
-Removing texlive-publishers (2021.20220204-1) ...
-Removing texlive-music (2021.20220204-1) ...
-Removing texlive-latex-base-doc (2021.20220204-1) ...
-Removing texlive-latex-extra (2021.20220204-1) ...
-Removing texlive-latex-extra-doc (2021.20220204-1) ...
-Removing texlive-pstricks (2021.20220204-1) ...
-Removing texlive-pictures (2021.20220204-1) ...
-Removing texlive-latex-recommended (2021.20220204-1) ...
-Removing texlive-latex-recommended-doc (2021.20220204-1) ...
-Removing texlive-luatex (2021.20220204-1) ...
-Removing texlive-metapost (2021.20220204-1) ...
-Removing texlive-metapost-doc (2021.20220204-1) ...
-Removing texlive-pictures-doc (2021.20220204-1) ...
-Removing texlive-plain-generic (2021.20220204-1) ...
-Removing texlive-pstricks-doc (2021.20220204-1) ...
-Removing texlive-publishers-doc (2021.20220204-1) ...
-Removing texlive-science-doc (2021.20220204-1) ...
-Removing latex-cjk-common (4.8.4+git20170127-4) ...
-Removing texlive-font-utils (2021.20220204-1) ...
-Removing texlive-latex-base (2021.20220204-1) ...
-Removing texlive-base (2021.20220204-1) ...
-Removing texlive-binaries (2021.20210626.59705-1ubuntu0.2) ...
-Setting up ruby-rubygems (3.3.5-2) ...
-Processing triggers for tex-common (6.17) ...
-update-language: texlive-base not installed and configured, doing nothing!
-Processing triggers for sgml-base (1.30) ...
-Processing triggers for install-info (6.8-4build1) ...
-Processing triggers for fontconfig (2.13.1-4.2ubuntu5) ...
-Processing triggers for hicolor-icon-theme (0.17-2) ...
-Processing triggers for libglib2.0-0:amd64 (2.72.4-0ubuntu2.3) ...
-Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
-Processing triggers for man-db (2.10.2-1) ...
+   A new PowerShell stable release is available: v7.4.4
+   Upgrade now, or check out the release page at:
+     https://aka.ms/PowerShell-Release?tag=v7.4.4
 
-real    0m13.591s
-user    0m0.009s
-sys     0m0.000s
-kushal@kus2023:~$ time sudo apt-get update && time sudo apt-get install texlive-full
-Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
-Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
-Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
-Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
-Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
-Fetched 257 kB in 1s (448 kB/s)
-Reading package lists... Done
+Loading personal and system profiles took 505ms.
+PS C:\Users\kushal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-real    0m1.345s
-user    0m0.001s
-sys     0m0.005s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-The following additional packages will be installed:
-  asymptote cm-super cm-super-minimal context context-modules dvipng feynmf fragmaster latex-cjk-all latex-cjk-chinese latex-cjk-common latex-cjk-japanese latex-cjk-korean latex-cjk-thai
-  latexmk prerex purifyeps texlive-base texlive-bibtex-extra texlive-binaries texlive-extra-utils texlive-font-utils texlive-fonts-extra texlive-fonts-extra-doc texlive-fonts-extra-links
-  texlive-fonts-recommended texlive-fonts-recommended-doc texlive-formats-extra texlive-games texlive-humanities texlive-humanities-doc texlive-lang-arabic texlive-lang-chinese
-  texlive-lang-cjk texlive-lang-cyrillic texlive-lang-czechslovak texlive-lang-english texlive-lang-european texlive-lang-french texlive-lang-german texlive-lang-greek
-  texlive-lang-italian texlive-lang-japanese texlive-lang-korean texlive-lang-other texlive-lang-polish texlive-lang-portuguese texlive-lang-spanish texlive-latex-base
-  texlive-latex-base-doc texlive-latex-extra texlive-latex-extra-doc texlive-latex-recommended texlive-latex-recommended-doc texlive-luatex texlive-metapost texlive-metapost-doc
-  texlive-music texlive-pictures texlive-pictures-doc texlive-plain-generic texlive-pstricks texlive-pstricks-doc texlive-publishers texlive-publishers-doc texlive-science
-  texlive-science-doc texlive-xetex tipa vprerex
-Suggested packages:
-  asymptote-x11 perl-tk fontforge context-nonfree hbf-cns40-b5 hbf-jfs56 hbf-kanji48 xzdec default-jre-headless xindy icc-profiles libspreadsheet-parseexcel-perl dot2tex tipa-doc
-Recommended packages:
-  fonts-freefont
-The following NEW packages will be installed:
-  asymptote cm-super cm-super-minimal context context-modules dvipng feynmf fragmaster latex-cjk-all latex-cjk-chinese latex-cjk-common latex-cjk-japanese latex-cjk-korean latex-cjk-thai
-  latexmk prerex purifyeps texlive-base texlive-bibtex-extra texlive-binaries texlive-extra-utils texlive-font-utils texlive-fonts-extra texlive-fonts-extra-doc texlive-fonts-extra-links
-  texlive-fonts-recommended texlive-fonts-recommended-doc texlive-formats-extra texlive-full texlive-games texlive-humanities texlive-humanities-doc texlive-lang-arabic
-  texlive-lang-chinese texlive-lang-cjk texlive-lang-cyrillic texlive-lang-czechslovak texlive-lang-english texlive-lang-european texlive-lang-french texlive-lang-german
-  texlive-lang-greek texlive-lang-italian texlive-lang-japanese texlive-lang-korean texlive-lang-other texlive-lang-polish texlive-lang-portuguese texlive-lang-spanish texlive-latex-base
-  texlive-latex-base-doc texlive-latex-extra texlive-latex-extra-doc texlive-latex-recommended texlive-latex-recommended-doc texlive-luatex texlive-metapost texlive-metapost-doc
-  texlive-music texlive-pictures texlive-pictures-doc texlive-plain-generic texlive-pstricks texlive-pstricks-doc texlive-publishers texlive-publishers-doc texlive-science
-  texlive-science-doc texlive-xetex tipa vprerex
-0 upgraded, 71 newly installed, 0 to remove and 0 not upgraded.
-Need to get 0 B/3255 MB of archives.
-After this operation, 5788 MB of additional disk space will be used.
-Do you want to continue? [Y/n]
-Extracting templates from packages: 100%
-Preconfiguring packages ...
-Selecting previously unselected package texlive-binaries.
-(Reading database ... 91823 files and directories currently installed.)
-Preparing to unpack .../00-texlive-binaries_2021.20210626.59705-1ubuntu0.2_amd64.deb ...
-Unpacking texlive-binaries (2021.20210626.59705-1ubuntu0.2) ...
-Selecting previously unselected package texlive-base.
-Preparing to unpack .../01-texlive-base_2021.20220204-1_all.deb ...
-Unpacking texlive-base (2021.20220204-1) ...
-Selecting previously unselected package texlive-latex-base.
-Preparing to unpack .../02-texlive-latex-base_2021.20220204-1_all.deb ...
-Unpacking texlive-latex-base (2021.20220204-1) ...
-Selecting previously unselected package texlive-latex-recommended.
-Preparing to unpack .../03-texlive-latex-recommended_2021.20220204-1_all.deb ...
-Unpacking texlive-latex-recommended (2021.20220204-1) ...
-Selecting previously unselected package texlive-pictures.
-Preparing to unpack .../04-texlive-pictures_2021.20220204-1_all.deb ...
-Unpacking texlive-pictures (2021.20220204-1) ...
-Selecting previously unselected package texlive-plain-generic.
-Preparing to unpack .../05-texlive-plain-generic_2021.20220204-1_all.deb ...
-Unpacking texlive-plain-generic (2021.20220204-1) ...
-Selecting previously unselected package texlive-pstricks.
-Preparing to unpack .../06-texlive-pstricks_2021.20220204-1_all.deb ...
-Unpacking texlive-pstricks (2021.20220204-1) ...
-Selecting previously unselected package asymptote.
-Preparing to unpack .../07-asymptote_2.78+ds-2_amd64.deb ...
-Unpacking asymptote (2.78+ds-2) ...
-Selecting previously unselected package cm-super-minimal.
-Preparing to unpack .../08-cm-super-minimal_0.3.4-17_all.deb ...
-Unpacking cm-super-minimal (0.3.4-17) ...
-Selecting previously unselected package cm-super.
-Preparing to unpack .../09-cm-super_0.3.4-17_all.deb ...
-Unpacking cm-super (0.3.4-17) ...
-Selecting previously unselected package texlive-metapost.
-Preparing to unpack .../10-texlive-metapost_2021.20220204-1_all.deb ...
-Unpacking texlive-metapost (2021.20220204-1) ...
-Selecting previously unselected package context.
-Preparing to unpack .../11-context_2021.03.05.20220211-1_all.deb ...
-Unpacking context (2021.03.05.20220211-1) ...
-Selecting previously unselected package context-modules.
-Preparing to unpack .../12-context-modules_20210301-1_all.deb ...
-Unpacking context-modules (20210301-1) ...
-Selecting previously unselected package dvipng.
-Preparing to unpack .../13-dvipng_1.15-1.1_amd64.deb ...
-Unpacking dvipng (1.15-1.1) ...
-Selecting previously unselected package texlive-font-utils.
-Preparing to unpack .../14-texlive-font-utils_2021.20220204-1_all.deb ...
-Unpacking texlive-font-utils (2021.20220204-1) ...
-Selecting previously unselected package texlive-luatex.
-Preparing to unpack .../15-texlive-luatex_2021.20220204-1_all.deb ...
-Unpacking texlive-luatex (2021.20220204-1) ...
-Selecting previously unselected package texlive-extra-utils.
-Preparing to unpack .../16-texlive-extra-utils_2021.20220204-1_all.deb ...
-Unpacking texlive-extra-utils (2021.20220204-1) ...
-Selecting previously unselected package feynmf.
-Preparing to unpack .../17-feynmf_1.08-13_all.deb ...
-Unpacking feynmf (1.08-13) ...
-Selecting previously unselected package latex-cjk-common.
-Preparing to unpack .../18-latex-cjk-common_4.8.4+git20170127-4_amd64.deb ...
-Unpacking latex-cjk-common (4.8.4+git20170127-4) ...
-Selecting previously unselected package latex-cjk-chinese.
-Preparing to unpack .../19-latex-cjk-chinese_4.8.4+git20170127-4_amd64.deb ...
-Unpacking latex-cjk-chinese (4.8.4+git20170127-4) ...
-Selecting previously unselected package latex-cjk-japanese.
-Preparing to unpack .../20-latex-cjk-japanese_4.8.4+git20170127-4_amd64.deb ...
-Unpacking latex-cjk-japanese (4.8.4+git20170127-4) ...
-Selecting previously unselected package latex-cjk-korean.
-Preparing to unpack .../21-latex-cjk-korean_4.8.4+git20170127-4_all.deb ...
-Unpacking latex-cjk-korean (4.8.4+git20170127-4) ...
-Selecting previously unselected package texlive-lang-other.
-Preparing to unpack .../22-texlive-lang-other_2021.20220204-1_all.deb ...
-Unpacking texlive-lang-other (2021.20220204-1) ...
-Selecting previously unselected package latex-cjk-thai.
-Preparing to unpack .../23-latex-cjk-thai_4.8.4+git20170127-4_all.deb ...
-Unpacking latex-cjk-thai (4.8.4+git20170127-4) ...
-Selecting previously unselected package latex-cjk-all.
-Preparing to unpack .../24-latex-cjk-all_4.8.4+git20170127-4_all.deb ...
-Unpacking latex-cjk-all (4.8.4+git20170127-4) ...
-Selecting previously unselected package latexmk.
-Preparing to unpack .../25-latexmk_1%3a4.76-1_all.deb ...
-Unpacking latexmk (1:4.76-1) ...
-Selecting previously unselected package prerex.
-Preparing to unpack .../26-prerex_6.8.0-1_amd64.deb ...
-Unpacking prerex (6.8.0-1) ...
-Selecting previously unselected package purifyeps.
-Preparing to unpack .../27-purifyeps_1.1-3_all.deb ...
-Unpacking purifyeps (1.1-3) ...
-Selecting previously unselected package texlive-bibtex-extra.
-Preparing to unpack .../28-texlive-bibtex-extra_2021.20220204-1_all.deb ...
-Unpacking texlive-bibtex-extra (2021.20220204-1) ...
-Selecting previously unselected package texlive-fonts-extra.
-Preparing to unpack .../29-texlive-fonts-extra_2021.20220204-1_all.deb ...
-Unpacking texlive-fonts-extra (2021.20220204-1) ...
-Selecting previously unselected package texlive-fonts-extra-doc.
-Preparing to unpack .../30-texlive-fonts-extra-doc_2021.20220204-1_all.deb ...
-Unpacking texlive-fonts-extra-doc (2021.20220204-1) ...
-Selecting previously unselected package texlive-fonts-extra-links.
-Preparing to unpack .../31-texlive-fonts-extra-links_2021.20220204-1_all.deb ...
-Unpacking texlive-fonts-extra-links (2021.20220204-1) ...
-Selecting previously unselected package texlive-fonts-recommended.
-Preparing to unpack .../32-texlive-fonts-recommended_2021.20220204-1_all.deb ...
-Unpacking texlive-fonts-recommended (2021.20220204-1) ...
-Selecting previously unselected package texlive-fonts-recommended-doc.
-Preparing to unpack .../33-texlive-fonts-recommended-doc_2021.20220204-1_all.deb ...
-Unpacking texlive-fonts-recommended-doc (2021.20220204-1) ...
-Selecting previously unselected package texlive-latex-extra.
-Preparing to unpack .../34-texlive-latex-extra_2021.20220204-1_all.deb ...
-Unpacking texlive-latex-extra (2021.20220204-1) ...
-Selecting previously unselected package tipa.
-Preparing to unpack .../35-tipa_2%3a1.3-21_all.deb ...
-Unpacking tipa (2:1.3-21) ...
-Selecting previously unselected package texlive-xetex.
-Preparing to unpack .../36-texlive-xetex_2021.20220204-1_all.deb ...
-Unpacking texlive-xetex (2021.20220204-1) ...
-Selecting previously unselected package texlive-formats-extra.
-Preparing to unpack .../37-texlive-formats-extra_2021.20220204-1_all.deb ...
-Unpacking texlive-formats-extra (2021.20220204-1) ...
-Selecting previously unselected package fragmaster.
-Preparing to unpack .../38-fragmaster_1.7-10_all.deb ...
-Unpacking fragmaster (1.7-10) ...
-Selecting previously unselected package texlive-games.
-Preparing to unpack .../39-texlive-games_2021.20220204-1_all.deb ...
-Unpacking texlive-games (2021.20220204-1) ...
-Selecting previously unselected package texlive-humanities.
-Preparing to unpack .../40-texlive-humanities_2021.20220204-1_all.deb ...
-Unpacking texlive-humanities (2021.20220204-1) ...
-Selecting previously unselected package texlive-humanities-doc.
-Preparing to unpack .../41-texlive-humanities-doc_2021.20220204-1_all.deb ...
-Unpacking texlive-humanities-doc (2021.20220204-1) ...
-Selecting previously unselected package texlive-lang-arabic.
-Preparing to unpack .../42-texlive-lang-arabic_2021.20220204-1_all.deb ...
-Unpacking texlive-lang-arabic (2021.20220204-1) ...
-Selecting previously unselected package texlive-lang-cjk.
-Preparing to unpack .../43-texlive-lang-cjk_2021.20220204-1_all.deb ...
-Unpacking texlive-lang-cjk (2021.20220204-1) ...
-Selecting previously unselected package texlive-lang-chinese.
-Preparing to unpack .../44-texlive-lang-chinese_2021.20220204-1_all.deb ...
-Unpacking texlive-lang-chinese (2021.20220204-1) ...
-Selecting previously unselected package texlive-lang-cyrillic.
-Preparing to unpack .../45-texlive-lang-cyrillic_2021.20220204-1_all.deb ...
-Unpacking texlive-lang-cyrillic (2021.20220204-1) ...
-Selecting previously unselected package texlive-lang-english.
-Preparing to unpack .../46-texlive-lang-english_2021.20220204-1_all.deb ...
-Unpacking texlive-lang-english (2021.20220204-1) ...
-Selecting previously unselected package texlive-lang-european.
-Preparing to unpack .../47-texlive-lang-european_2021.20220204-1_all.deb ...
-Unpacking texlive-lang-european (2021.20220204-1) ...
-Selecting previously unselected package texlive-lang-french.
-Preparing to unpack .../48-texlive-lang-french_2021.20220204-1_all.deb ...
-Unpacking texlive-lang-french (2021.20220204-1) ...
-Selecting previously unselected package texlive-lang-german.
-Preparing to unpack .../49-texlive-lang-german_2021.20220204-1_all.deb ...
-Unpacking texlive-lang-german (2021.20220204-1) ...
-Selecting previously unselected package texlive-lang-italian.
-Preparing to unpack .../50-texlive-lang-italian_2021.20220204-1_all.deb ...
-Unpacking texlive-lang-italian (2021.20220204-1) ...
-Selecting previously unselected package texlive-lang-polish.
-Preparing to unpack .../51-texlive-lang-polish_2021.20220204-1_all.deb ...
-Unpacking texlive-lang-polish (2021.20220204-1) ...
-Selecting previously unselected package texlive-lang-spanish.
-Preparing to unpack .../52-texlive-lang-spanish_2021.20220204-1_all.deb ...
-Unpacking texlive-lang-spanish (2021.20220204-1) ...
-Selecting previously unselected package texlive-lang-czechslovak.
-Preparing to unpack .../53-texlive-lang-czechslovak_2021.20220204-1_all.deb ...
-Unpacking texlive-lang-czechslovak (2021.20220204-1) ...
-Selecting previously unselected package texlive-lang-greek.
-Preparing to unpack .../54-texlive-lang-greek_2021.20220204-1_all.deb ...
-Unpacking texlive-lang-greek (2021.20220204-1) ...
-Selecting previously unselected package texlive-lang-japanese.
-Preparing to unpack .../55-texlive-lang-japanese_2021.20220204-1_all.deb ...
-Unpacking texlive-lang-japanese (2021.20220204-1) ...
-Selecting previously unselected package texlive-lang-korean.
-Preparing to unpack .../56-texlive-lang-korean_2021.20220204-1_all.deb ...
-Unpacking texlive-lang-korean (2021.20220204-1) ...
-Selecting previously unselected package texlive-lang-portuguese.
-Preparing to unpack .../57-texlive-lang-portuguese_2021.20220204-1_all.deb ...
-Unpacking texlive-lang-portuguese (2021.20220204-1) ...
-Selecting previously unselected package texlive-latex-base-doc.
-Preparing to unpack .../58-texlive-latex-base-doc_2021.20220204-1_all.deb ...
-Unpacking texlive-latex-base-doc (2021.20220204-1) ...
-Selecting previously unselected package texlive-latex-extra-doc.
-Preparing to unpack .../59-texlive-latex-extra-doc_2021.20220204-1_all.deb ...
-Unpacking texlive-latex-extra-doc (2021.20220204-1) ...
-Selecting previously unselected package texlive-latex-recommended-doc.
-Preparing to unpack .../60-texlive-latex-recommended-doc_2021.20220204-1_all.deb ...
-Unpacking texlive-latex-recommended-doc (2021.20220204-1) ...
-Selecting previously unselected package texlive-metapost-doc.
-Preparing to unpack .../61-texlive-metapost-doc_2021.20220204-1_all.deb ...
-Unpacking texlive-metapost-doc (2021.20220204-1) ...
-Selecting previously unselected package texlive-music.
-Preparing to unpack .../62-texlive-music_2021.20220204-1_all.deb ...
-Unpacking texlive-music (2021.20220204-1) ...
-Selecting previously unselected package texlive-pictures-doc.
-Preparing to unpack .../63-texlive-pictures-doc_2021.20220204-1_all.deb ...
-Unpacking texlive-pictures-doc (2021.20220204-1) ...
-Selecting previously unselected package texlive-pstricks-doc.
-Preparing to unpack .../64-texlive-pstricks-doc_2021.20220204-1_all.deb ...
-Unpacking texlive-pstricks-doc (2021.20220204-1) ...
-Selecting previously unselected package texlive-publishers.
-Preparing to unpack .../65-texlive-publishers_2021.20220204-1_all.deb ...
-Unpacking texlive-publishers (2021.20220204-1) ...
-Selecting previously unselected package texlive-publishers-doc.
-Preparing to unpack .../66-texlive-publishers-doc_2021.20220204-1_all.deb ...
-Unpacking texlive-publishers-doc (2021.20220204-1) ...
-Selecting previously unselected package texlive-science.
-Preparing to unpack .../67-texlive-science_2021.20220204-1_all.deb ...
-Unpacking texlive-science (2021.20220204-1) ...
-Selecting previously unselected package texlive-science-doc.
-Preparing to unpack .../68-texlive-science-doc_2021.20220204-1_all.deb ...
-Unpacking texlive-science-doc (2021.20220204-1) ...
-Selecting previously unselected package vprerex.
-Preparing to unpack .../69-vprerex_1%3a6.5.1-1build1_amd64.deb ...
-Unpacking vprerex (1:6.5.1-1build1) ...
-Selecting previously unselected package texlive-full.
-Preparing to unpack .../70-texlive-full_2021.20220204-1_all.deb ...
-Unpacking texlive-full (2021.20220204-1) ...
-Setting up texlive-fonts-extra-links (2021.20220204-1) ...
-Setting up texlive-binaries (2021.20210626.59705-1ubuntu0.2) ...
-update-alternatives: using /usr/bin/xdvi-xaw to provide /usr/bin/xdvi.bin (xdvi.bin) in auto mode
-update-alternatives: using /usr/bin/bibtex.original to provide /usr/bin/bibtex (bibtex) in auto mode
-Setting up texlive-base (2021.20220204-1) ...
-/usr/bin/ucfr
-/usr/bin/ucfr
-/usr/bin/ucfr
-/usr/bin/ucfr
-mktexlsr: Updating /var/lib/texmf/ls-R-TEXLIVEDIST...
-mktexlsr: Updating /var/lib/texmf/ls-R-TEXMFMAIN...
-mktexlsr: Updating /var/lib/texmf/ls-R...
-mktexlsr: Done.
-tl-paper: setting paper size for dvips to a4: /var/lib/texmf/dvips/config/config-paper.ps
-tl-paper: setting paper size for dvipdfmx to a4: /var/lib/texmf/dvipdfmx/dvipdfmx-paper.cfg
-tl-paper: setting paper size for xdvi to a4: /var/lib/texmf/xdvi/XDvi-paper
-tl-paper: setting paper size for pdftex to a4: /var/lib/texmf/tex/generic/tex-ini-files/pdftexconfig.tex
-Setting up texlive-publishers-doc (2021.20220204-1) ...
-Setting up texlive-lang-german (2021.20220204-1) ...
-Setting up texlive-fonts-recommended-doc (2021.20220204-1) ...
-Setting up texlive-lang-spanish (2021.20220204-1) ...
-Setting up texlive-lang-portuguese (2021.20220204-1) ...
-Setting up texlive-metapost (2021.20220204-1) ...
-Setting up texlive-latex-extra-doc (2021.20220204-1) ...
-Setting up texlive-pstricks-doc (2021.20220204-1) ...
-Setting up texlive-luatex (2021.20220204-1) ...
-Setting up dvipng (1.15-1.1) ...
-Setting up texlive-plain-generic (2021.20220204-1) ...
-Setting up context (2021.03.05.20220211-1) ...
-Running mtxrun --generate. This may take some time... done.
-Pregenerating ConTeXt MarkIV format. This may take some time...
+Saturday, August 3, 2024 6:17:27 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.08s.
+Saturday, August 3, 2024 6:17:28 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 154ms
+Done in 2.21s.
+Saturday, August 3, 2024 6:17:30 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Saturday, August 3, 2024 6:17:30 AM
+[main 7b4200f] build application
+ 2 files changed, 80 insertions(+)
+Saturday, August 3, 2024 6:17:31 AM
+ssh: Could not resolve hostname github.com: Name or service not known
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Saturday, August 3, 2024 6:17:32 AM
+ssh: Could not resolve hostname github.com: Name or service not known
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Saturday, August 3, 2024 6:17:32 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Saturday, August 3, 2024 6:17:39 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Saturday, August 3, 2024 6:17:39 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 106ms
+Done in 0.78s.
+Saturday, August 3, 2024 6:17:40 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Saturday, August 3, 2024 6:17:40 AM
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+Saturday, August 3, 2024 6:17:40 AM
+ssh: Could not resolve hostname github.com: Name or service not known
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Saturday, August 3, 2024 6:17:40 AM
+ssh: Could not resolve hostname github.com: Name or service not known
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Saturday, August 3, 2024 6:17:40 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\angular\angulareighteen\"; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; yarn; date; yarn run ng update; date; yarn run ng build; date; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; yarn run ng test; date; yarn run ng update @angular/core @angular/cli @angular/material; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; echo y | npx update-browserslist-db@latest; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; git remote show origin; date;
+
+Saturday, August 3, 2024 6:17:51 AM
+ssh: Could not resolve hostname github.com: Name or service not known
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Saturday, August 3, 2024 6:17:51 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Saturday, August 3, 2024 6:17:51 AM
+Saturday, August 3, 2024 6:17:51 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Saturday, August 3, 2024 6:17:51 AM
+ssh: Could not resolve hostname github.com: Name or service not known
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Saturday, August 3, 2024 6:17:52 AM
+ssh: Could not resolve hostname github.com: Name or service not known
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Saturday, August 3, 2024 6:17:52 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.24s.
+Saturday, August 3, 2024 6:17:52 AM
+yarn run v1.22.21
+$ ng update
+Unknown error: Error [ERR_REQUIRE_ESM]: require() of ES Module C:\Users\kushal\src\angular\angulareighteen\node_modules\string-width\index.js from C:\Users\kushal\src\angular\angulareighteen\node_modules\cliui\build\index.cjs not supported.
+Instead change the require of index.js in C:\Users\kushal\src\angular\angulareighteen\node_modules\cliui\build\index.cjs to a dynamic import() which is available in all CommonJS modules.
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Saturday, August 3, 2024 6:17:56 AM
+yarn run v1.22.21
+$ ng build
+Unknown error: Error [ERR_REQUIRE_ESM]: require() of ES Module C:\Users\kushal\src\angular\angulareighteen\node_modules\string-width\index.js from C:\Users\kushal\src\angular\angulareighteen\node_modules\cliui\build\index.cjs not supported.
+Instead change the require of index.js in C:\Users\kushal\src\angular\angulareighteen\node_modules\cliui\build\index.cjs to a dynamic import() which is available in all CommonJS modules.
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Saturday, August 3, 2024 6:17:56 AM
+Saturday, August 3, 2024 6:17:56 AM
+Saturday, August 3, 2024 6:17:58 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Saturday, August 3, 2024 6:17:58 AM
+Saturday, August 3, 2024 6:17:58 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Saturday, August 3, 2024 6:17:58 AM
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Saturday, August 3, 2024 6:17:59 AM
+Everything up-to-date
+Saturday, August 3, 2024 6:18:00 AM
+yarn run v1.22.21
+$ ng test
+Unknown error: Error [ERR_REQUIRE_ESM]: require() of ES Module C:\Users\kushal\src\angular\angulareighteen\node_modules\string-width\index.js from C:\Users\kushal\src\angular\angulareighteen\node_modules\cliui\build\index.cjs not supported.
+Instead change the require of index.js in C:\Users\kushal\src\angular\angulareighteen\node_modules\cliui\build\index.cjs to a dynamic import() which is available in all CommonJS modules.
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Saturday, August 3, 2024 6:18:00 AM
+yarn run v1.22.21
+$ ng update @angular/core @angular/cli @angular/material
+Unknown error: Error [ERR_REQUIRE_ESM]: require() of ES Module C:\Users\kushal\src\angular\angulareighteen\node_modules\string-width\index.js from C:\Users\kushal\src\angular\angulareighteen\node_modules\cliui\build\index.cjs not supported.
+Instead change the require of index.js in C:\Users\kushal\src\angular\angulareighteen\node_modules\cliui\build\index.cjs to a dynamic import() which is available in all CommonJS modules.
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Saturday, August 3, 2024 6:18:01 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Saturday, August 3, 2024 6:18:01 AM
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Saturday, August 3, 2024 6:18:01 AM
+Everything up-to-date
+Saturday, August 3, 2024 6:18:02 AM
+Latest version:     1.0.30001647
+Installed version:  none
+Removing old caniuse-lite from lock file
+Installing new caniuse-lite version
+$ yarn add -W caniuse-lite
+warning Pattern ["string-width-cjs@npm:string-width@^4.2.0"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["string-width@^4.2.3"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["string-width@^4.2.0"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["wrap-ansi@^7.0.0"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-wrap-ansi-cjs-7.0.0-67e145cff510a6a6984bdf1152911d69d2eb9e43-integrity\\node_modules\\wrap-ansi-cjs" as pattern ["wrap-ansi-cjs@npm:wrap-ansi@^7.0.0"]. This could result in non-deterministic behavior, skipping.
+Cleaning package.json dependencies from caniuse-lite
+$ yarn remove -W caniuse-lite
+warning Pattern ["string-width-cjs@npm:string-width@^4.2.0"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["string-width@^4.2.3"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["string-width@^4.2.0"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["wrap-ansi@^7.0.0"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-wrap-ansi-cjs-7.0.0-67e145cff510a6a6984bdf1152911d69d2eb9e43-integrity\\node_modules\\wrap-ansi-cjs" as pattern ["wrap-ansi-cjs@npm:wrap-ansi@^7.0.0"]. This could result in non-deterministic behavior, skipping.
+caniuse-lite has been successfully updated
+
+No target browser changes
+Saturday, August 3, 2024 6:18:22 AM
+Saturday, August 3, 2024 6:18:23 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Saturday, August 3, 2024 6:18:23 AM
+Saturday, August 3, 2024 6:18:23 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Saturday, August 3, 2024 6:18:23 AM
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Saturday, August 3, 2024 6:18:24 AM
+Everything up-to-date
+Saturday, August 3, 2024 6:18:24 AM
+* remote origin
+  Fetch URL: git@github.com:angulareighteen/angulareighteen.github.io.git
+  Push  URL: git@github.com:angulareighteen/angulareighteen.github.io.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, August 3, 2024 6:18:25 AM
+
+PS C:\Users\kushal\src\angular\angulareighteen> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from theterminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Saturday, August 3, 2024 6:19:12 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Saturday, August 3, 2024 6:19:12 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 107ms
+Done in 0.82s.
+Saturday, August 3, 2024 6:19:13 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Saturday, August 3, 2024 6:19:13 AM
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+Saturday, August 3, 2024 6:19:13 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Saturday, August 3, 2024 6:19:13 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 583 bytes | 583.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   3ce154c..7b4200f  main -> main
+Saturday, August 3, 2024 6:19:14 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Saturday, August 3, 2024 6:19:20 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Saturday, August 3, 2024 6:19:20 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 102ms
+Done in 0.79s.
+Saturday, August 3, 2024 6:19:21 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Saturday, August 3, 2024 6:19:21 AM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Saturday, August 3, 2024 6:19:22 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Saturday, August 3, 2024 6:19:22 AM
+Everything up-to-date
+Saturday, August 3, 2024 6:19:23 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\angular\mycanary\"; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; Remove-Item -Path "node_modules" -Recurse -Force; date; yarn; date; yarn run ng update; date; yarn run ng build; date; date; gitfetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; yarn run ng test; date; yarn run ng update @angular/core @angular/cli @angular/material; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; echo y | npx update-browserslist-db@latest; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; git remote show origin; date;
+
+Saturday, August 3, 2024 6:19:27 AM
+remote: Enumerating objects: 50, done.
+remote: Counting objects: 100% (50/50), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 50 (delta 33), reused 47 (delta 30), pack-reused 0
+Unpacking objects: 100% (50/50), 9.71 KiB | 100.00 KiB/s, done.
+From github.com:mycanary/mycanary
+   169167d..fd41e63  master     -> origin/master
+Saturday, August 3, 2024 6:19:28 AM
+On branch master
+Your branch is behind 'origin/master' by 14 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+Saturday, August 3, 2024 6:19:28 AM
+Saturday, August 3, 2024 6:19:28 AM
+On branch master
+Your branch is behind 'origin/master' by 14 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+Saturday, August 3, 2024 6:19:28 AM
+From github.com:mycanary/mycanary
+ * branch            master     -> FETCH_HEAD
+Updating f69da03..fd41e63
+Fast-forward
+ .nx/cache/nx_files.nxt | Bin 4100 -> 4100 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+Saturday, August 3, 2024 6:19:29 AM
+Everything up-to-date
+Saturday, August 3, 2024 6:19:30 AM
+Saturday, August 3, 2024 6:19:44 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+warning Pattern ["string-width@^4.2.3"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width-cjs@npm:string-width@^4.2.0"]. This could result in non-deterministic behavior, skipping.
+[3/4] Linking dependencies...
+warning " > @angular-eslint/eslint-plugin@18.2.0" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning "@angular-eslint/eslint-plugin > @angular-eslint/utils@18.2.0" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning " > @angular-eslint/eslint-plugin-template@18.2.0" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning " > @angular-eslint/schematics@18.2.0" has unmet peer dependency "@angular-devkit/core@>= 18.0.0 < 19.0.0".
+warning " > @angular-eslint/schematics@18.2.0" has unmet peer dependency "@angular-devkit/schematics@>= 18.0.0 < 19.0.0".
+[4/4] Building fresh packages...
+Done in 22.92s.
+Saturday, August 3, 2024 6:20:07 AM
+yarn run v1.22.21
+$ ng update
+Using package manager: yarn
+Collecting installed dependencies...
+Found 41 dependencies.
+    We analyzed your package.json and everything seems to be in order. Good work!
+Done in 9.45s.
+Saturday, August 3, 2024 6:20:17 AM
+yarn run v1.22.21
+$ ng build
+✔ Browser application bundle generation complete.
+✔ Copying assets complete.
+✔ Index html generation complete.
+
+Initial chunk files | Names         |  Raw size
+vendor.js           | vendor        |   5.06 MB |
+polyfills.js        | polyfills     | 141.93 kB |
+main.js             | main          |  20.55 kB |
+runtime.js          | runtime       |   6.50 kB |
+styles.css          | styles        |   2.76 kB |
+
+                    | Initial total |   5.23 MB
+
+Build at: 2024-08-03T10:20:41.642Z - Hash: ab7533be52ec2222 - Time: 8810ms
+Done in 24.14s.
+Saturday, August 3, 2024 6:20:41 AM
+Saturday, August 3, 2024 6:20:41 AM
+Saturday, August 3, 2024 6:20:42 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Saturday, August 3, 2024 6:20:42 AM
+Saturday, August 3, 2024 6:20:42 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Saturday, August 3, 2024 6:20:42 AM
+From github.com:mycanary/mycanary
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Saturday, August 3, 2024 6:20:43 AM
+Everything up-to-date
+Saturday, August 3, 2024 6:20:43 AM
+yarn run v1.22.21
+$ ng test
+✔ Browser application bundle generation complete.
+03 08 2024 06:20:51.857:INFO [karma-server]: Karma v6.3.2 server started at http://localhost:9876/
+03 08 2024 06:20:51.858:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
+03 08 2024 06:20:51.893:INFO [launcher]: Starting browser Firefox
+03 08 2024 06:20:53.009:INFO [Firefox 129.0 (Windows 10)]: Connected on socket OulLkJevp9ADBWHSAAAB with id 99186755
+LOG: 'test message'
+Firefox 129.0 (Windows 10): Executed 1 of 6 SUCCESS (0 secs / 0.008 secs)
+LOG: 'test message'
+Firefox 129.0 (Windows 10): Executed 3 of 6 SUCCESS (0 secs / 0.015 secs)
+LOG: 'second message'
+Firefox 129.0 (Windows 10): Executed 3 of 6 SUCCESS (0 secs / 0.015 secs)
+Firefox 129.0 (Windows 10): Executed 6 of 6 SUCCESS (0.073 secs / 0.054 secs)
+TOTAL: 6 SUCCESS
+TOTAL: 6 SUCCESS
+Done in 10.15s.
+Saturday, August 3, 2024 6:20:53 AM
+yarn run v1.22.21
+$ ng update @angular/core @angular/cli @angular/material
+Using package manager: yarn
+Collecting installed dependencies...
+Found 41 dependencies.
+Fetching dependency metadata from registry...
+Package '@angular/core' is already up to date.
+Package '@angular/cli' is already up to date.
+Package '@angular/material' is already up to date.
+Done in 1.72s.
+Saturday, August 3, 2024 6:20:55 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Saturday, August 3, 2024 6:20:55 AM
+From github.com:mycanary/mycanary
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Saturday, August 3, 2024 6:20:56 AM
+Everything up-to-date
+Saturday, August 3, 2024 6:20:57 AM
+Latest version:     1.0.30001647
+Installed version:  none
+Removing old caniuse-lite from lock file
+Installing new caniuse-lite version
+$ yarn add -W caniuse-lite
+warning Pattern ["string-width@^4.2.3"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width-cjs@npm:string-width@^4.2.0"]. This could result in non-deterministic behavior, skipping.
+warning " > @angular-eslint/eslint-plugin@18.2.0" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning "@angular-eslint/eslint-plugin > @angular-eslint/utils@18.2.0" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning " > @angular-eslint/eslint-plugin-template@18.2.0" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning " > @angular-eslint/schematics@18.2.0" has unmet peer dependency "@angular-devkit/core@>= 18.0.0 < 19.0.0".
+warning " > @angular-eslint/schematics@18.2.0" has unmet peer dependency "@angular-devkit/schematics@>= 18.0.0 < 19.0.0".
+Cleaning package.json dependencies from caniuse-lite
+$ yarn remove -W caniuse-lite
+warning Pattern ["string-width@^4.2.3"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width-cjs@npm:string-width@^4.2.0"]. This could result in non-deterministic behavior, skipping.
+warning " > @angular-eslint/eslint-plugin@18.2.0" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning "@angular-eslint/eslint-plugin > @angular-eslint/utils@18.2.0" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning " > @angular-eslint/eslint-plugin-template@18.2.0" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning " > @angular-eslint/schematics@18.2.0" has unmet peer dependency "@angular-devkit/core@>= 18.0.0 < 19.0.0".
+warning " > @angular-eslint/schematics@18.2.0" has unmet peer dependency "@angular-devkit/schematics@>= 18.0.0 < 19.0.0".
+caniuse-lite has been successfully updated
+
+No target browser changes
+Saturday, August 3, 2024 6:21:11 AM
+Saturday, August 3, 2024 6:21:12 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Saturday, August 3, 2024 6:21:12 AM
+Saturday, August 3, 2024 6:21:12 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Saturday, August 3, 2024 6:21:12 AM
+From github.com:mycanary/mycanary
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Saturday, August 3, 2024 6:21:13 AM
+Everything up-to-date
+Saturday, August 3, 2024 6:21:13 AM
+* remote origin
+  Fetch URL: git@github.com:mycanary/mycanary.git
+  Push  URL: git@github.com:mycanary/mycanary.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, August 3, 2024 6:21:14 AM
+
+PS C:\Users\kushal\src\angular\mycanary> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Saturday, August 3, 2024 7:03:17 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.08s.
+Saturday, August 3, 2024 7:03:18 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 141ms
+Done in 2.25s.
+Saturday, August 3, 2024 7:03:20 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Saturday, August 3, 2024 7:03:20 AM
+[main fbfa9ad] build application
+ 2 files changed, 70 insertions(+), 448 deletions(-)
+Saturday, August 3, 2024 7:03:20 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Saturday, August 3, 2024 7:03:22 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.13 KiB | 1.13 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   7b4200f..fbfa9ad  main -> main
+Saturday, August 3, 2024 7:03:23 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Saturday, August 3, 2024 7:04:58 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Saturday, August 3, 2024 7:04:58 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 113ms
+Done in 0.89s.
+Saturday, August 3, 2024 7:04:59 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Saturday, August 3, 2024 7:04:59 AM
+[main 3dcb0ea] build application
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+Saturday, August 3, 2024 7:04:59 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Saturday, August 3, 2024 7:05:00 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 420 bytes | 420.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   fbfa9ad..3dcb0ea  main -> main
+Saturday, August 3, 2024 7:05:01 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Saturday, August 3, 2024 7:05:55 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Saturday, August 3, 2024 7:05:55 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 111ms
+Done in 0.82s.
+Saturday, August 3, 2024 7:05:56 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Saturday, August 3, 2024 7:05:56 AM
+[main 10cf881] build application
+ 2 files changed, 416 insertions(+), 62 deletions(-)
+Saturday, August 3, 2024 7:05:56 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Saturday, August 3, 2024 7:05:57 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 4.05 KiB | 4.05 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   3dcb0ea..10cf881  main -> main
+Saturday, August 3, 2024 7:05:57 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Saturday, August 3, 2024 7:16:39 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Saturday, August 3, 2024 7:16:39 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 131ms
+Done in 0.92s.
+Saturday, August 3, 2024 7:16:40 AM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Saturday, August 3, 2024 7:16:40 AM
+[main 766c8b9] build application
+ 2 files changed, 574 insertions(+)
+Saturday, August 3, 2024 7:16:40 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Saturday, August 3, 2024 7:16:41 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 6.14 KiB | 6.14 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   10cf881..766c8b9  main -> main
+Saturday, August 3, 2024 7:16:42 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
