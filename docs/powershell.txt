@@ -1,1 +1,31 @@
 kushal@kus2023:~$ time sudo apt-get remove texlive-*
+[sudo] password for kushal:
+E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 13305 (apt-get)
+N: Be aware that removing the lock file is not a solution and may break your system.
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+
+real    0m6.662s
+user    0m0.035s
+sys     0m0.009s
+kushal@kus2023:~$ time sudo apt-get remove texlive-*
+E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 13305 (apt-get)
+N: Be aware that removing the lock file is not a solution and may break your system.
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), is another process using it?
+
+real    0m0.026s
+user    0m0.004s
+sys     0m0.000s
+kushal@kus2023:~$ reboot
+Operation inhibited by "APT" (PID 13305 "apt-get", user root), reason is "APT is installing or removing packages".
+Please retry operation after closing inhibitors and logging out other users.
+Alternatively, ignore inhibitors and users with 'systemctl reboot -i'.
+kushal@kus2023:~$ systemctl reboot -i
+Failed to set wall message, ignoring: Interactive authentication required.
+Failed to reboot system via logind: Interactive authentication required.
+Failed to start reboot.target: Interactive authentication required.
+See system logs and 'systemctl status reboot.target' for details.
+kushal@kus2023:~$ sudo systemctl reboot -i
+kushal@kus2023:~$
+
+[process exited with code 1 (0x00000001)]
+You can now close this terminal with Ctrl+D, or press Enter to restart.
