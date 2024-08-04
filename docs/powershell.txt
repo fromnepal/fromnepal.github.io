@@ -283,3 +283,256 @@ real    0m2.388s
 user    0m0.001s
 sys     0m0.006s
 kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; timegit status; date; time ./Meta/ladybird.sh run ladybird; date;
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Fetched 257 kB in 1s (341 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+
+real    0m1.751s
+user    0m0.008s
+sys     0m0.000s
+Listing... Done
+
+real    0m0.179s
+user    0m0.160s
+sys     0m0.020s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages were automatically installed and are no longer required:
+  aglfn asymptote-doc biber chktex cups-bsd cups-client dvidvi dvisvgm fonts-adf-accanthis fonts-adf-berenis fonts-adf-gillius fonts-adf-universalis fonts-arphic-bkai00mp
+  fonts-arphic-bsmi00lp fonts-arphic-gbsn00lp fonts-arphic-gkai00mp fonts-baekmuk fonts-cabin fonts-cantarell fonts-comfortaa fonts-dejavu-extra fonts-ebgaramond fonts-ebgaramond-extra
+  fonts-font-awesome fonts-gfs-artemisia fonts-gfs-baskerville fonts-gfs-bodoni-classic fonts-gfs-complutum fonts-gfs-didot fonts-gfs-didot-classic fonts-gfs-gazis fonts-gfs-neohellenic
+  fonts-gfs-olga fonts-gfs-porson fonts-gfs-solomos fonts-gfs-theokritos fonts-go fonts-hosny-amiri fonts-junicode fonts-lato fonts-linuxlibertine fonts-lmodern fonts-lobster
+  fonts-lobstertwo fonts-noto-color-emoji fonts-noto-core fonts-oflb-asana-math fonts-open-sans fonts-roboto-unhinted fonts-sil-charis fonts-sil-gentium fonts-sil-gentium-basic
+  fonts-sil-gentiumplus fonts-sil-gentiumplus-compact fonts-sil-padauk fonts-stix fonts-tlwg-garuda fonts-tlwg-garuda-otf fonts-tlwg-kinnari fonts-tlwg-kinnari-otf fonts-tlwg-laksaman
+  fonts-tlwg-laksaman-otf fonts-tlwg-loma fonts-tlwg-loma-otf fonts-tlwg-mono fonts-tlwg-mono-otf fonts-tlwg-norasi fonts-tlwg-norasi-otf fonts-tlwg-purisa fonts-tlwg-purisa-otf
+  fonts-tlwg-sawasdee fonts-tlwg-sawasdee-otf fonts-tlwg-typewriter fonts-tlwg-typewriter-otf fonts-tlwg-typist fonts-tlwg-typist-otf fonts-tlwg-typo fonts-tlwg-typo-otf
+  fonts-tlwg-umpush fonts-tlwg-umpush-otf fonts-tlwg-waree fonts-tlwg-waree-otf fonts-unfonts-core fonts-unfonts-extra freeglut3 gsfonts gsfonts-x11 imagemagick imagemagick-6-common
+  imagemagick-6.q16 javascript-common lacheck latex-cjk-chinese-arphic-bkai00mp latex-cjk-chinese-arphic-bsmi00lp latex-cjk-chinese-arphic-gbsn00lp latex-cjk-chinese-arphic-gkai00mp
+  latex-cjk-japanese-wadalab latexdiff lcdf-typetools libalgorithm-c3-perl libapache-pom-java libautovivification-perl libb-hooks-endofscope-perl libb-hooks-op-check-perl
+  libboost-filesystem1.74.0 libbtparse2 libbusiness-ismn-perl libbusiness-issn-perl libclass-accessor-perl libclass-c3-perl libclass-c3-xs-perl libclass-data-inheritable-perl
+  libclass-inspector-perl libclass-method-modifiers-perl libclass-singleton-perl libclass-xsaccessor-perl libcmark-gfm-extensions0.29.0.gfm.3 libcmark-gfm0.29.0.gfm.3
+  libcommon-sense-perl libcommons-logging-java libcommons-parent-java libdata-compare-perl libdata-optlist-perl libdata-uniqid-perl libdate-simple-perl libdatetime-calendar-julian-perl
+  libdatetime-format-builder-perl libdatetime-format-strptime-perl libdatetime-locale-perl libdatetime-perl libdatetime-timezone-perl libde265-0 libdevel-callchecker-perl
+  libdevel-caller-perl libdevel-globaldestruction-perl libdevel-lexalias-perl libdevel-stacktrace-perl libdist-checkconflicts-perl libdjvulibre-text libdjvulibre21
+  libdynaloader-functions-perl libemail-date-format-perl libemf1 libencode-eucjpms-perl libencode-hanextra-perl libencode-jis2k-perl libeval-closure-perl libexception-class-perl
+  libexporter-tiny-perl libfftw3-double3 libfile-find-rule-perl libfile-homedir-perl libfile-sharedir-perl libfile-slurper-perl libfile-which-perl libfontbox-java libglew2.2 libgsl27
+  libgslcblas0 libheif1 libilmbase25 libipc-run3-perl libipc-shareable-perl libjs-jquery libjson-perl libjson-xs-perl libjxr-tools libjxr0 libkpathsea6 liblingua-translit-perl
+  liblist-allutils-perl liblist-moreutils-perl liblist-moreutils-xs-perl liblist-someutils-perl liblist-someutils-xs-perl liblist-utilsby-perl liblog-dispatch-perl liblog-log4perl-perl
+  liblqr-1-0 libltdl7 libmagick++-6.q16-8 libmagickcore-6.q16-6 libmagickcore-6.q16-6-extra libmagickwand-6.q16-6 libmail-sendmail-perl libmime-charset-perl libmime-lite-perl
+  libmime-types-perl libmodule-implementation-perl libmodule-runtime-perl libmotif-common libmro-compat-perl libnamespace-autoclean-perl libnamespace-clean-perl libnumber-compare-perl
+  libopenexr25 libosp5 libostyle1c2 libpackage-stash-perl libpackage-stash-xs-perl libpadwalker-perl libparams-classify-perl libparams-util-perl libparams-validate-perl
+  libparams-validationcompiler-perl libparse-recdescent-perl libpdfbox-java libperlio-utf8-strict-perl libplot2c2 libpoppler-qt5-1 libpstoedit0c2a libptexenc1 libqt5core5a libqt5dbus5
+  libqt5gui5 libqt5network5 libqt5svg5 libqt5widgets5 libqt5xml5 libreadonly-perl libref-util-perl libref-util-xs-perl libregexp-common-perl librole-tiny-perl libruby3.0 libsombok3
+  libsort-key-perl libspecio-perl libstring-crc32-perl libsub-exporter-perl libsub-exporter-progressive-perl libsub-identify-perl libsub-install-perl libsub-quote-perl libsynctex2
+  libsys-hostname-long-perl libtcl8.6 libteckit0 libtexlua53 libtexluajit2 libtext-bibtex-perl libtext-csv-perl libtext-csv-xs-perl libtext-glob-perl libtext-roman-perl
+  libtext-unidecode-perl libtie-cycle-perl libtk8.6 libtypes-serialiser-perl libunicode-linebreak-perl libvariable-magic-perl libwebpdemux2 libwmflite-0.2-7 libwoff1 libxcb-xinerama0
+  libxm4 libxml-libxml-perl libxml-libxml-simple-perl libxml-libxslt-perl libxml-namespacesupport-perl libxml-sax-base-perl libxml-sax-expat-perl libxml-sax-perl libxml-writer-perl
+  libxstring-perl libyaml-tiny-perl libzip4 libzzip-0-13 lmodern openjade pandoc-data pfb2t1c2pfb preview-latex-style ps2eps pstoedit psutils qt5-gtk-platformtheme qttranslations5-l10n
+  rake ruby ruby-net-telnet ruby-rubygems ruby-webrick ruby-xmlrpc ruby3.0 rubygems-integration sgml-base t1utils tcl tcl8.6 teckit tex-common tex-gyre texinfo tk tk8.6 xfonts-encodings
+  xfonts-utils xpdf
+Use 'sudo apt autoremove' to remove them.
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libheif1 imagemagick libavdevice58 ffmpeg libopenexr25 libmagick++-6.q16-8
+  libpostproc55 libmagickcore-6.q16-6-extra libavcodec58 libmagickwand-6.q16-6
+  libavutil56 imagemagick-6.q16 libswscale5 libmagickcore-6.q16-6
+  libavutil-dev libgsl27 libswresample3 imagemagick-6-common libavformat58
+  libgslcblas0 libavcodec-dev libde265-0 libswresample-dev libavfilter7
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+real    0m0.384s
+user    0m0.005s
+sys     0m0.000s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.090s
+user    0m0.036s
+sys     0m0.063s
+remote: Enumerating objects: 363, done.
+remote: Counting objects: 100% (358/358), done.
+remote: Compressing objects: 100% (229/229), done.
+remote: Total 363 (delta 179), reused 256 (delta 125), pack-reused 5
+Receiving objects: 100% (363/363), 368.57 KiB | 4.91 MiB/s, done.
+Resolving deltas: 100% (179/179), completed with 34 local objects.
+From https://github.com/LadybirdBrowser/ladybird
+   faebbbc281..a034d1e675  master     -> origin/master
+
+real    0m0.497s
+user    0m0.080s
+sys     0m0.040s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Updating faebbbc281..a034d1e675
+Fast-forward
+ Base/res/icons/16x16/network.png                                                   | Bin 0 -> 454 bytes
+ Ladybird/AppKit/Application/Application.mm                                         |   5 +++
+ Ladybird/AppKit/Application/ApplicationBridge.cpp                                  |   5 +++
+ Ladybird/AppKit/Application/ApplicationBridge.h                                    |   2 ++
+ Ladybird/AppKit/Application/ApplicationDelegate.mm                                 |   3 ++
+ Ladybird/Qt/BrowserWindow.cpp                                                      |  11 +++++++
+ Ladybird/Qt/BrowserWindow.h                                                        |   2 ++
+ Ladybird/Qt/WebContentView.cpp                                                     |   6 +---
+ Ladybird/cmake/ResourceFiles.cmake                                                 |   1 +
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/BindingsGenerator/IDLGenerators.cpp         |   1 +
+ Meta/gn/secondary/Ladybird/BUILD.gn                                                |   1 +
+ Tests/LibURL/TestURL.cpp                                                           |  33 ++++++++++++++-----
+ Tests/LibWeb/Ref/reference/text-overflow.html                                      |  10 ++++++
+ Tests/LibWeb/Ref/text-overflow.html                                                |  18 +++++++++++
+ Tests/LibWeb/Text/data/bad.xml                                                     |   3 +-
+ Tests/LibWeb/Text/expected/DOM/getElementsByClassName-multiple.txt                 |   4 +++
+ Tests/LibWeb/Text/expected/HTML/link-element-username-password-percent-encoded.txt |   2 ++
+ Tests/LibWeb/Text/expected/HTML/script-async-attribute.txt                         |   3 ++
+ Tests/LibWeb/Text/expected/URL/url.txt                                             |  40 +++++++++++++++++++++++
+ Tests/LibWeb/Text/expected/XML/error-page.txt                                      |   2 +-
+ Tests/LibWeb/Text/expected/all-window-properties.txt                               |   1 +
+ Tests/LibWeb/Text/expected/css/getComputedStyle-print-all.txt                      |   1 +
+ Tests/LibWeb/Text/expected/css/revert-all.txt                                      |   1 +
+ Tests/LibWeb/Text/expected/performance-navigation.txt                              |   3 ++
+ Tests/LibWeb/Text/expected/quirks-mode-case-insensitive-class-selector.txt         |   1 +
+ Tests/LibWeb/Text/input/DOM/getElementsByClassName-multiple.html                   |  17 ++++++++++
+ Tests/LibWeb/Text/input/HTML/link-element-username-password-percent-encoded.html   |   9 ++++++
+ Tests/LibWeb/Text/input/HTML/script-async-attribute.html                           |  15 +++++++++
+ Tests/LibWeb/Text/input/URL/url.html                                               |   2 ++
+ Tests/LibWeb/Text/input/css/revert-all.html                                        |   9 ++++++
+ Tests/LibWeb/Text/input/performance-navigation.html                                |   8 +++++
+ Tests/LibWeb/Text/input/quirks-mode-case-insensitive-class-selector.html           |   9 ++++++
+ Userland/Libraries/LibHTTP/HttpRequest.cpp                                         |   6 ++--
+ Userland/Libraries/LibProtocol/RequestClient.cpp                                   |   5 +++
+ Userland/Libraries/LibProtocol/RequestClient.h                                     |   2 ++
+ Userland/Libraries/LibURL/Parser.cpp                                               | 172 ++++++++++++++++++++++++++++++++++++++++++++++++++++---------------------------------------------
+ Userland/Libraries/LibURL/URL.cpp                                                  | 146 ++++++++++++++++++++++++++++++++++++++--------------------------------------------
+ Userland/Libraries/LibURL/URL.h                                                    | 160 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-------------------------------
+ Userland/Libraries/LibWeb/Animations/KeyframeEffect.cpp                            |   2 +-
+ Userland/Libraries/LibWeb/CMakeLists.txt                                           |   1 +
+ Userland/Libraries/LibWeb/CSS/Angle.cpp                                            |   6 ++++
+ Userland/Libraries/LibWeb/CSS/Angle.h                                              |   2 ++
+ Userland/Libraries/LibWeb/CSS/ComputedValues.h                                     |   4 +++
+ Userland/Libraries/LibWeb/CSS/Enums.json                                           |   4 +++
+ Userland/Libraries/LibWeb/CSS/Frequency.cpp                                        |   6 ++++
+ Userland/Libraries/LibWeb/CSS/Frequency.h                                          |   2 ++
+ Userland/Libraries/LibWeb/CSS/Identifiers.json                                     |   1 +
+ Userland/Libraries/LibWeb/CSS/Length.cpp                                           |  12 ++++++-
+ Userland/Libraries/LibWeb/CSS/Length.h                                             |   5 ++-
+ Userland/Libraries/LibWeb/CSS/PercentageOr.cpp                                     |  25 --------------
+ Userland/Libraries/LibWeb/CSS/PercentageOr.h                                       |  27 +++-------------
+ Userland/Libraries/LibWeb/CSS/Properties.json                                      |   9 ++++++
+ Userland/Libraries/LibWeb/CSS/SelectorEngine.cpp                                   |  16 ++++++---
+ Userland/Libraries/LibWeb/CSS/StyleComputer.cpp                                    | 117 ++++++++++++++++++++++++++++++++++++++----------------------------
+ Userland/Libraries/LibWeb/CSS/StyleComputer.h                                      |   4 +--
+ Userland/Libraries/LibWeb/CSS/StyleProperties.cpp                                  |  78 ++++++++++++++++++++++++++++++++++----------
+ Userland/Libraries/LibWeb/CSS/StyleProperties.h                                    |  42 ++++++++++++------------
+ Userland/Libraries/LibWeb/CSS/Time.cpp                                             |   6 ++++
+ Userland/Libraries/LibWeb/CSS/Time.h                                               |   2 ++
+ Userland/Libraries/LibWeb/DOM/Document.cpp                                         |  10 ++++++
+ Userland/Libraries/LibWeb/DOM/Document.h                                           |   7 ++++
+ Userland/Libraries/LibWeb/DOM/Element.cpp                                          |   2 +-
+ Userland/Libraries/LibWeb/DOM/Node.cpp                                             |  10 +++++-
+ Userland/Libraries/LibWeb/DOM/ParentNode.cpp                                       |   7 ++--
+ Userland/Libraries/LibWeb/DOMURL/DOMURL.cpp                                        |  12 +++----
+ Userland/Libraries/LibWeb/DOMURL/DOMURL.h                                          |   4 +--
+ Userland/Libraries/LibWeb/Fetch/Fetching/Fetching.cpp                              |   2 +-
+ Userland/Libraries/LibWeb/Forward.h                                                |   1 +
+ Userland/Libraries/LibWeb/HTML/BrowsingContext.cpp                                 |   8 ++---
+ Userland/Libraries/LibWeb/HTML/HTMLBodyElement.cpp                                 |   6 ++--
+ Userland/Libraries/LibWeb/HTML/HTMLHyperlinkElementUtils.cpp                       |   4 +--
+ Userland/Libraries/LibWeb/HTML/HTMLInputElement.cpp                                |   6 ++++
+ Userland/Libraries/LibWeb/HTML/HTMLScriptElement.cpp                               |   4 +++
+ Userland/Libraries/LibWeb/HTML/HTMLScriptElement.h                                 |   2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLTextAreaElement.cpp                             |   6 ++++
+ Userland/Libraries/LibWeb/HTML/History.cpp                                         |   4 +--
+ Userland/Libraries/LibWeb/HighResolutionTime/Performance.cpp                       |  15 +++++++++
+ Userland/Libraries/LibWeb/HighResolutionTime/Performance.h                         |   6 ++--
+ Userland/Libraries/LibWeb/HighResolutionTime/Performance.idl                       |  10 ++++--
+ Userland/Libraries/LibWeb/Layout/InlineFormattingContext.cpp                       |  42 +++++++++++++++++++++++-
+ Userland/Libraries/LibWeb/Layout/Node.cpp                                          |   3 ++
+ Userland/Libraries/LibWeb/NavigationTiming/PerformanceNavigation.cpp               |  39 ++++++++++++++++++++++
+ Userland/Libraries/LibWeb/NavigationTiming/PerformanceNavigation.h                 |  32 ++++++++++++++++++
+ Userland/Libraries/LibWeb/NavigationTiming/PerformanceNavigation.idl               |  10 ++++++
+ Userland/Libraries/LibWeb/idl_files.cmake                                          |   1 +
+ Userland/Libraries/LibXML/Parser/Parser.cpp                                        |  48 +++++++++++++--------------
+ Userland/Libraries/LibXML/Parser/Parser.h                                          |   6 ++--
+ Userland/Services/RequestServer/ConnectionFromClient.cpp                           |   5 +++
+ Userland/Services/RequestServer/ConnectionFromClient.h                             |   2 ++
+ Userland/Services/RequestServer/RequestServer.ipc                                  |   2 ++
+ Userland/Services/WebContent/ConnectionFromClient.cpp                              |   7 ++--
+ 91 files changed, 975 insertions(+), 438 deletions(-)
+ create mode 100644 Base/res/icons/16x16/network.png
+ create mode 100644 Tests/LibWeb/Ref/reference/text-overflow.html
+ create mode 100644 Tests/LibWeb/Ref/text-overflow.html
+ create mode 100644 Tests/LibWeb/Text/expected/DOM/getElementsByClassName-multiple.txt
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/link-element-username-password-percent-encoded.txt
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/script-async-attribute.txt
+ create mode 100644 Tests/LibWeb/Text/expected/css/revert-all.txt
+ create mode 100644 Tests/LibWeb/Text/expected/performance-navigation.txt
+ create mode 100644 Tests/LibWeb/Text/expected/quirks-mode-case-insensitive-class-selector.txt
+ create mode 100644 Tests/LibWeb/Text/input/DOM/getElementsByClassName-multiple.html
+ create mode 100644 Tests/LibWeb/Text/input/HTML/link-element-username-password-percent-encoded.html
+ create mode 100644 Tests/LibWeb/Text/input/HTML/script-async-attribute.html
+ create mode 100644 Tests/LibWeb/Text/input/css/revert-all.html
+ create mode 100644 Tests/LibWeb/Text/input/performance-navigation.html
+ create mode 100644 Tests/LibWeb/Text/input/quirks-mode-case-insensitive-class-selector.html
+ create mode 100644 Userland/Libraries/LibWeb/NavigationTiming/PerformanceNavigation.cpp
+ create mode 100644 Userland/Libraries/LibWeb/NavigationTiming/PerformanceNavigation.h
+ create mode 100644 Userland/Libraries/LibWeb/NavigationTiming/PerformanceNavigation.idl
+
+real    0m0.436s
+user    0m0.052s
+sys     0m0.041s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.030s
+user    0m0.010s
+sys     0m0.021s
+Sun Aug  4 16:19:59 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+[1/2] Re-running CMake...
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/clang++-17
+All requested packages are currently installed.
+Total install time: 220 ns
+-- Running vcpkg install - done
+-- Found the following ICU libraries:
+--   data (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicudata.a
+--   i18n (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicui18n.a
+--   uc (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicuuc.a
+-- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+-- Configuring done (32.9s)
+-- Generating done (0.4s)
+-- Build files have been written to: /home/kushal/src/ladybird/Build/ladybird
+[0/2] Re-checking globbed directories...
+[1833/1833] Linking CXX executable bin/Ladybird
+QSocketNotifier: Can only be used with threads started with QThread
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
+
+real    7m48.512s
+user    100m43.008s
+sys     5m36.672s
+Sun Aug  4 16:27:48 EDT 2024
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull originmaster; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
