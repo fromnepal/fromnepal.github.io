@@ -4,21 +4,388 @@ PowerShell 7.4.3
    Upgrade now, or check out the release page at:
      https://aka.ms/PowerShell-Release?tag=v7.4.4
 
-Loading personal and system profiles took 578ms.
-PS C:\Users\kushal>
-PS C:\Users\kushal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn;date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+PS C:\Users\kushal> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --restrict-filenames --add-metadata -i  --all-subs "https://www.instagram.com/reel/C-PQC3GNvn_"; date;
 
-Monday, August 5, 2024 8:37:13 AM
-Monday, August 5, 2024 8:37:13 AM
+Monday, August 5, 2024 9:31:39 AM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Monday, August 5, 2024 9:31:39 AM
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-i', '--all-subs', 'https://www.instagram.com/reel/C-PQC3GNvn_']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.01 from yt-dlp/yt-dlp [ffd7781d6] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C-PQC3GNvn_
+[Instagram] C-PQC3GNvn_: Setting up session
+[Instagram] C-PQC3GNvn_: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[debug] Default format spec: bestvideo*+bestaudio/best
+[info] C-PQC3GNvn_: Downloading 1 format(s): dash-459278883617100v+dash-1323040505335641ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://instagram.fagc3-1.fna.fbcdn.net/v/t39.25447-16/453658796_1011094373727108_2681695683862598153_n.mp4?_nc_cat=1&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=03-Sy1XalgQQ7kNvgHUTU_b&_nc_ht=instagram.fagc3-1.fna&oh=00_AYABxS-DTg8Vy_-KMNHYXRM2X_rovsi1bFgUduoH6WO-zg&oe=66B69ED2"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: Video_by_distorted.np-[C-PQC3GNvn_].fdash-459278883617100v.mp4
+[download] 100% of    6.65MiB in 00:00:01 at 5.91MiB/s
+[debug] Invoking http downloader on "https://instagram.fagc3-1.fna.fbcdn.net/v/t50.33967-16/454102938_1410749172947958_2964167143248022136_n.mp4?_nc_cat=1&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=rEoja-57X7kQ7kNvgFHRR01&_nc_ht=instagram.fagc3-1.fna&oh=00_AYDoR_OKD_rXkpVGFW1NQQmXIp2aZWrw64gqod-oZyfwGA&oe=66B6A37A"
+[download] Destination: Video_by_distorted.np-[C-PQC3GNvn_].fdash-1323040505335641ad.m4a
+[download] 100% of  180.56KiB in 00:00:00 at 807.10KiB/s
+[Merger] Merging formats into "Video_by_distorted.np-[C-PQC3GNvn_].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Video_by_distorted.np-[C-PQC3GNvn_].fdash-459278883617100v.mp4" -i "file:Video_by_distorted.np-[C-PQC3GNvn_].fdash-1323040505335641ad.m4a"-c copy -map 0:v:0 -map 1:a:0 -movflags +faststart "file:Video_by_distorted.np-[C-PQC3GNvn_].temp.mp4"
+Deleting original file Video_by_distorted.np-[C-PQC3GNvn_].fdash-1323040505335641ad.m4a (pass -k to keep)
+Deleting original file Video_by_distorted.np-[C-PQC3GNvn_].fdash-459278883617100v.mp4 (pass -k to keep)
+[Metadata] Adding metadata to "Video_by_distorted.np-[C-PQC3GNvn_].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Video_by_distorted.np-[C-PQC3GNvn_].mp4" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by distorted.np" -metadata "date=20240804" -metadata "description=my fav guru ji" -metadata "synopsis=my fav guru ji" -metadata "purl=https://www.instagram.com/reel/C-PQC3GNvn_" -metadata "comment=https://www.instagram.com/reel/C-PQC3GNvn_" -metadata "artist=Distorted Nepali Stories" -movflags +faststart "file:Video_by_distorted.np-[C-PQC3GNvn_].temp.mp4"
+Monday, August 5, 2024 9:31:55 AM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --restrict-filenames --add-metadata -i  --all-subs "https://www.instagram.com/reel/C7EoN5aOCup"; date;
+
+Monday, August 5, 2024 9:32:03 AM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Monday, August 5, 2024 9:32:03 AM
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-i', '--all-subs', 'https://www.instagram.com/reel/C7EoN5aOCup']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.01 from yt-dlp/yt-dlp [ffd7781d6] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C7EoN5aOCup
+[Instagram] C7EoN5aOCup: Setting up session
+[Instagram] C7EoN5aOCup: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[debug] Default format spec: bestvideo*+bestaudio/best
+[info] C7EoN5aOCup: Downloading 1 format(s): 8
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/o1/v/t16/f1/m82/094F3C6AFD13197C00993636C63926BA_video_dashinit.mp4?efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=107&vs=424507306961820_1667446604&_nc_vs=HBksFQIYT2lnX3hwdl9yZWVsc19wZXJtYW5lbnRfcHJvZC8wOTRGM0M2QUZEMTMxOTdDMDA5OTM2MzZDNjM5MjZCQV92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dQUlMtQmxlUE1Qc01ZNENBQ1RNQU9KbVFBWm9icV9FQUFBRhUCAsgBACgAGAAbABUAACbY6Pee95WBQBUCKAJDMywXQD2ij1wo9cMYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HAA%3D%3D&_nc_rid=c9a952362b&ccb=9-4&oh=00_AYD33JTmY4VlwWAyyesJDL2lChQ4H1Bl8bQ7hvKXtTntuA&oe=66B2B6A7&_nc_sid=2999b8"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: Video_by_mike_thecop-[C7EoN5aOCup].mp4
+[download] 100% of    5.06MiB in 00:00:00 at 9.12MiB/s
+[Metadata] Adding metadata to "Video_by_mike_thecop-[C7EoN5aOCup].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Video_by_mike_thecop-[C7EoN5aOCup].mp4" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by mike_thecop" -metadata"date=20240517" -metadata "description=As a mortgage originator this seems VERY high to be comfortable. Seems MORE than comfortable to me but hey, what do YOU think!? #income #realestate #mortgages" -metadata"synopsis=As a mortgage originator this seems VERY high to be comfortable. Seems MORE than comfortable to me but hey, what do YOU think!? #income #realestate #mortgages" -metadata "purl=https://www.instagram.com/reel/C7EoN5aOCup" -metadata "comment=https://www.instagram.com/reel/C7EoN5aOCup" -metadata "artist=Mike Edwards" -movflags +faststart "file:Video_by_mike_thecop-[C7EoN5aOCup].temp.mp4"
+Monday, August 5, 2024 9:32:10 AM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --restrict-filenames --add-metadata -i  --all-subs "https://www.instagram.com/reel/C-FHrxJJZjI"; date;
+
+Monday, August 5, 2024 9:32:18 AM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Monday, August 5, 2024 9:32:18 AM
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-i', '--all-subs', 'https://www.instagram.com/reel/C-FHrxJJZjI']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.01 from yt-dlp/yt-dlp [ffd7781d6] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C-FHrxJJZjI
+[Instagram] C-FHrxJJZjI: Setting up session
+[Instagram] C-FHrxJJZjI: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[debug] Default format spec: bestvideo*+bestaudio/best
+[info] C-FHrxJJZjI: Downloading 1 format(s): dash-853781490031807v+dash-2780641195428046ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://instagram.fagc3-1.fna.fbcdn.net/v/t39.25447-16/453495541_1012185653791179_6941244924953785136_n.mp4?_nc_cat=1&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=JBA4ZC4AcqYQ7kNvgFGbgxw&_nc_ht=instagram.fagc3-1.fna&oh=00_AYDCxWSXrWJwdbb5gk6LpKSsxGlU23MJMkbvDCXNhtK8bg&oe=66B6A656"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: Video_by_ips_builders10-[C-FHrxJJZjI].fdash-853781490031807v.mp4
+[download] 100% of   15.03MiB in 00:00:01 at 14.58MiB/s
+[debug] Invoking http downloader on "https://instagram.fagc3-1.fna.fbcdn.net/v/t50.33967-16/453476336_859829879378636_1703849269375140191_n.mp4?_nc_cat=1&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=kPtWpBhx8kcQ7kNvgEGx617&_nc_ht=instagram.fagc3-1.fna&oh=00_AYBcv91GEviCbJK4Q9wISfilFCpyNav2RNNaqSLS8vlrSw&oe=66B6B63E"
+[download] Destination: Video_by_ips_builders10-[C-FHrxJJZjI].fdash-2780641195428046ad.m4a
+[download] 100% of  708.62KiB in 00:00:00 at 4.23MiB/s
+[Merger] Merging formats into "Video_by_ips_builders10-[C-FHrxJJZjI].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Video_by_ips_builders10-[C-FHrxJJZjI].fdash-853781490031807v.mp4" -i "file:Video_by_ips_builders10-[C-FHrxJJZjI].fdash-2780641195428046ad.m4a" -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart "file:Video_by_ips_builders10-[C-FHrxJJZjI].temp.mp4"
+Deleting original file Video_by_ips_builders10-[C-FHrxJJZjI].fdash-853781490031807v.mp4 (pass -k to keep)
+Deleting original file Video_by_ips_builders10-[C-FHrxJJZjI].fdash-2780641195428046ad.m4a (pass -k to keep)
+[Metadata] Adding metadata to "Video_by_ips_builders10-[C-FHrxJJZjI].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Video_by_ips_builders10-[C-FHrxJJZjI].mp4" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by ips_builders10" -metadata "date=20240731" -metadata "description=Dm 'Property' for full course on Indian real estate market.
+ Tax before and after taxation and budget impact on real estate market .
+#raghavchadha #indexation #capitalgains #investmentproperty #investmenttax #taxstrategies #realestate #realestateinvestment #trend #propertytax #taxation #budget2024" -metadata "synopsis=Dm 'Property' for full course on Indian real estate market.
+ Tax before and after taxation and budget impact on real estate market .
+#raghavchadha #indexation #capitalgains #investmentproperty #investmenttax #taxstrategies #realestate #realestateinvestment #trend #propertytax #taxation #budget2024" -metadata "purl=https://www.instagram.com/reel/C-FHrxJJZjI" -metadata "comment=https://www.instagram.com/reel/C-FHrxJJZjI" -metadata "artist=IPS PROPERTY AND CONSTRUCTION" -movflags +faststart "file:Video_by_ips_builders10-[C-FHrxJJZjI].temp.mp4"
+Monday, August 5, 2024 9:32:26 AM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --restrict-filenames --add-metadata -i  --all-subs "https://www.instagram.com/reel/C-IL3kvy9-R"; date;
+
+Monday, August 5, 2024 9:32:33 AM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Monday, August 5, 2024 9:32:33 AM
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-i', '--all-subs', 'https://www.instagram.com/reel/C-IL3kvy9-R']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.01 from yt-dlp/yt-dlp [ffd7781d6] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C-IL3kvy9-R
+[Instagram] C-IL3kvy9-R: Setting up session
+[Instagram] C-IL3kvy9-R: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[debug] Default format spec: bestvideo*+bestaudio/best
+[info] C-IL3kvy9-R: Downloading 1 format(s): dash-1426194094577325v+dash-512308101260851ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/v/t39.25447-16/453406000_360004147141855_5547946268195266278_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=x014gAKC_wUQ7kNvgEF4UVS&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=00_AYA_HWMnlRbB1OLTcqTjstGCpWf8DfdtPxzrGIGtt29noA&oe=66B6B9AE"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: Video_by_pandit_dibyansh_awasthi_2062-[C-IL3kvy9-R].fdash-1426194094577325v.mp4
+[download] 100% of  534.71KiB in 00:00:00 at 1.68MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/v/t50.33967-16/453612513_852307350158216_7021157081484521733_n.mp4?_nc_cat=110&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=2dR6kr6KwogQ7kNvgF5-nmt&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=00_AYBdSLQgILyxzGWcD0gwjXraOYZ2KBlcGm4wMHfulFAdkA&oe=66B6B220"
+[download] Destination: Video_by_pandit_dibyansh_awasthi_2062-[C-IL3kvy9-R].fdash-512308101260851ad.m4a
+[download] 100% of  115.95KiB in 00:00:00 at 810.44KiB/s
+[Merger] Merging formats into "Video_by_pandit_dibyansh_awasthi_2062-[C-IL3kvy9-R].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Video_by_pandit_dibyansh_awasthi_2062-[C-IL3kvy9-R].fdash-1426194094577325v.mp4" -i "file:Video_by_pandit_dibyansh_awasthi_2062-[C-IL3kvy9-R].fdash-512308101260851ad.m4a" -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart "file:Video_by_pandit_dibyansh_awasthi_2062-[C-IL3kvy9-R].temp.mp4"
+Deleting original file Video_by_pandit_dibyansh_awasthi_2062-[C-IL3kvy9-R].fdash-1426194094577325v.mp4 (pass -k to keep)
+Deleting original file Video_by_pandit_dibyansh_awasthi_2062-[C-IL3kvy9-R].fdash-512308101260851ad.m4a (pass -k to keep)
+[Metadata] Adding metadata to "Video_by_pandit_dibyansh_awasthi_2062-[C-IL3kvy9-R].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Video_by_pandit_dibyansh_awasthi_2062-[C-IL3kvy9-R].mp4" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by pandit_dibyansh_awasthi_2062" -metadata "date=20240801" -metadata "description=होइन माता ले भन्नु खोजेको चाहिँ के?😁🤣
+
+ #viralpost2024 #comedyreels #viralvideoシ #viralreelschallenge #nepalireels #reelschallenge #nepali #hilights #trend" -metadata "synopsis=होइन माता ले भन्नु खोजेको चाहिँ के?😁🤣
+
+ #viralpost2024 #comedyreels #viralvideoシ #viralreelschallenge #nepalireels #reelschallenge #nepali #hilights #trend" -metadata "purl=https://www.instagram.com/reel/C-IL3kvy9-R" -metadata "comment=https://www.instagram.com/reel/C-IL3kvy9-R" -metadata "artist=पण्डित दिब्यान्श अवस्थी" -movflags +faststart "file:Video_by_pandit_dibyansh_awasthi_2062-[C-IL3kvy9-R].temp.mp4"
+Monday, August 5, 2024 9:32:36 AM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --restrict-filenames --add-metadata -i  --all-subs "https://www.instagram.com/reel/C9425WVyX4a"; date;
+
+Monday, August 5, 2024 9:32:49 AM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Monday, August 5, 2024 9:32:49 AM
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-i', '--all-subs', 'https://www.instagram.com/reel/C9425WVyX4a']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.01 from yt-dlp/yt-dlp [ffd7781d6] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C9425WVyX4a
+[Instagram] C9425WVyX4a: Setting up session
+[Instagram] C9425WVyX4a: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[debug] Default format spec: bestvideo*+bestaudio/best
+[info] C9425WVyX4a: Downloading 1 format(s): dash-3639133136335895v+dash-1909223262832264ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t39.25447-16/453061154_2592197914286147_4662786594405671363_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=Og4cIddt82sQ7kNvgEKFhJ_&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYAuW9YjO7gmpy5kUwt8w-YXi7EsQiiKKnN_hpYHJWxORg&oe=66B69DCB"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: Video_by_gadiwala_07-[C9425WVyX4a].fdash-3639133136335895v.mp4
+[download] 100% of    8.11MiB in 00:00:00 at 11.16MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/v/t50.33967-16/452872311_1195346684924973_7393028885620994654_n.mp4?_nc_cat=102&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=vwrjF5L0uLoQ7kNvgFhRbpj&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=00_AYBRbgOoir3NxQFFEXeZwTH-WxbFp_C9hiEM9Pk5MsoFuw&oe=66B69B36"
+[download] Destination: Video_by_gadiwala_07-[C9425WVyX4a].fdash-1909223262832264ad.m4a
+[download] 100% of  194.17KiB in 00:00:00 at 753.12KiB/s
+[Merger] Merging formats into "Video_by_gadiwala_07-[C9425WVyX4a].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Video_by_gadiwala_07-[C9425WVyX4a].fdash-3639133136335895v.mp4" -i "file:Video_by_gadiwala_07-[C9425WVyX4a].fdash-1909223262832264ad.m4a" -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart "file:Video_by_gadiwala_07-[C9425WVyX4a].temp.mp4"
+Deleting original file Video_by_gadiwala_07-[C9425WVyX4a].fdash-3639133136335895v.mp4 (pass -k to keep)
+Deleting original file Video_by_gadiwala_07-[C9425WVyX4a].fdash-1909223262832264ad.m4a (pass -k to keep)
+[Metadata] Adding metadata to "Video_by_gadiwala_07-[C9425WVyX4a].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Video_by_gadiwala_07-[C9425WVyX4a].mp4" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by gadiwala_07" -metadata"date=20240726" -metadata "description=खरं हाय बघा ही 🤣🤣" -metadata "synopsis=खरं हाय बघा ही 🤣🤣" -metadata "purl=https://www.instagram.com/reel/C9425WVyX4a" -metadata "comment=https://www.instagram.com/reel/C9425WVyX4a" -metadata "artist=𝟖𝟖𝟗𝟗 वाला 👑" -movflags +faststart "file:Video_by_gadiwala_07-[C9425WVyX4a].temp.mp4"
+Monday, August 5, 2024 9:32:59 AM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --restrict-filenames --add-metadata -i  --all-subs "https://www.instagram.com/reel/C-NWKipytCl"; date;
+
+Monday, August 5, 2024 9:33:07 AM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Monday, August 5, 2024 9:33:07 AM
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-i', '--all-subs', 'https://www.instagram.com/reel/C-NWKipytCl']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.01 from yt-dlp/yt-dlp [ffd7781d6] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C-NWKipytCl
+[Instagram] C-NWKipytCl: Setting up session
+[Instagram] C-NWKipytCl: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[debug] Default format spec: bestvideo*+bestaudio/best
+[info] C-NWKipytCl: Downloading 1 format(s): 8
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/o1/v/t16/f1/m86/C841F4562D97C5B733F02D745A1E0C98_video_dashinit.mp4?efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_cat=109&vs=1579480019632497_110728991&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC9DODQxRjQ1NjJEOTdDNUI3MzNGMDJENzQ1QTFFMEM5OF92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dIdlBCUnY1X3kyTFdPRUZBREd2MHFSejhRSXVicV9FQUFBRhUCAsgBACgAGAAbABUAACac9taOuqOFQBUCKAJDMywXQCEJul41P30YEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HAA%3D%3D&_nc_rid=c1d8abac3c&ccb=9-4&oh=00_AYCG3ERJ5DbhY-RI2VEagwEl7ycLf5TIZdLKUEwIFbGy5Q&oe=66B2BB3C&_nc_sid=2999b8"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: Video_by_nepalsjournal-[C-NWKipytCl].mp4
+[download] 100% of    1.20MiB in 00:00:00 at 3.92MiB/s
+[Metadata] Adding metadata to "Video_by_nepalsjournal-[C-NWKipytCl].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Video_by_nepalsjournal-[C-NWKipytCl].mp4" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by nepalsjournal" -metadata "date=20240803" -metadata "description=The road section of Pokhara - Mugling is under construction. With the deadline just a week later, the project has achieved just around 60 % physical progress. Around58 km of road has been blacktopped. #nepal #pokhara #pokharamuglinghighway #news" -metadata "synopsis=The road section of Pokhara - Mugling is under construction. With the deadline just a week later, the project has achieved just around 60 % physical progress. Around 58 km of road has been blacktopped. #nepal #pokhara #pokharamuglinghighway #news" -metadata "purl=https://www.instagram.com/reel/C-NWKipytCl" -metadata "comment=https://www.instagram.com/reel/C-NWKipytCl" -metadata "artist=Nepals Journal" -movflags +faststart "file:Video_by_nepalsjournal-[C-NWKipytCl].temp.mp4"
+Monday, August 5, 2024 9:33:14 AM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --restrict-filenames --add-metadata -i  --all-subs "https://www.instagram.com/reel/C-NobVRJ4Ur"; date;
+
+Monday, August 5, 2024 9:33:21 AM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Monday, August 5, 2024 9:33:21 AM
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-i', '--all-subs', 'https://www.instagram.com/reel/C-NobVRJ4Ur']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.01 from yt-dlp/yt-dlp [ffd7781d6] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C-NobVRJ4Ur
+[Instagram] C-NobVRJ4Ur: Setting up session
+[Instagram] C-NobVRJ4Ur: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[debug] Default format spec: bestvideo*+bestaudio/best
+[info] C-NobVRJ4Ur: Downloading 1 format(s): 7
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/o1/v/t16/f1/m86/4B4076333CBDBD14AAE63F52850FC09A_video_dashinit.mp4?efg=eyJxZV9ncm91cHMiOiJbXCJpZ193ZWJfZGVsaXZlcnlfdnRzX290ZlwiXSIsInZlbmNvZGVfdGFnIjoidnRzX3ZvZF91cmxnZW4uY2xpcHMuYzIuNzIwLmJhc2VsaW5lIn0&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_cat=101&vs=1067106271697356_701841017&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC80QjQwNzYzMzNDQkRCRDE0QUFFNjNGNTI4NTBGQzA5QV92aWRlb19kYXNoaW5pdC5tcDQVAALIAQAVAhg6cGFzc3Rocm91Z2hfZXZlcnN0b3JlL0dCVU1DUnVXdWZqbDQ3OEJBSE8yVUxtNHVZVXRicV9FQUFBRhUCAsgBACgAGAAbABUAACbe7OPZlri6PxUCKAJDMywXQFJGZmZmZmYYEmRhc2hfYmFzZWxpbmVfMV92MREAdf4HAA%3D%3D&_nc_rid=db0b84c3c3&ccb=9-4&oh=00_AYAOtpKfqS2BrkaRx6UWtOf8WYrJ2gmgxzx4QZ-K6ZddqQ&oe=66B2B0AD&_nc_sid=2999b8"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: Video_by_fmsmith319-[C-NobVRJ4Ur].mp4
+[download] 100% of    8.15MiB in 00:00:00 at 11.39MiB/s
+[Metadata] Adding metadata to "Video_by_fmsmith319-[C-NobVRJ4Ur].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Video_by_fmsmith319-[C-NobVRJ4Ur].mp4" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by fmsmith319" -metadata "date=20240803" -metadata "description=It’s important to address the problems we have in order to work together to find the solutions" -metadata "synopsis=It’s important to address the problems we have in orderto work together to find the solutions" -metadata "purl=https://www.instagram.com/reel/C-NobVRJ4Ur" -metadata "comment=https://www.instagram.com/reel/C-NobVRJ4Ur" -metadata "artist=Freddie Smith" -movflags +faststart "file:Video_by_fmsmith319-[C-NobVRJ4Ur].temp.mp4"
+Monday, August 5, 2024 9:33:28 AM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --restrict-filenames --add-metadata -i  --all-subs "https://youtu.be/aQ3sSHuqaqA"; date;
+
+Monday, August 5, 2024 9:34:08 AM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Monday, August 5, 2024 9:34:08 AM
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-i', '--all-subs', 'https://youtu.be/aQ3sSHuqaqA']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.01 from yt-dlp/yt-dlp [ffd7781d6] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://youtu.be/aQ3sSHuqaqA
+[youtube] aQ3sSHuqaqA: Downloading webpage
+[youtube] aQ3sSHuqaqA: Downloading ios player API JSON
+[youtube] aQ3sSHuqaqA: Downloading tv player API JSON
+[debug] Loading youtube-nsig.d2e656ee from cache
+[debug] [youtube] Decrypted nsig oB_q8_uoRh-fTRqB => 4C26fJXyKnHJBg
+[debug] Loading youtube-nsig.d2e656ee from cache
+[debug] [youtube] Decrypted nsig 5w585b2cJE7DLO7k => JUehwboebTP9Jg
+[youtube] aQ3sSHuqaqA: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[debug] Default format spec: bestvideo*+bestaudio/best
+[info] aQ3sSHuqaqA: Downloading 1 format(s): 313+251
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://rr6---sn-8xgp1vo-gpje.googlevideo.com/videoplayback?expire=1722886448&ei=0NSwZrK8HbmCkucP0bbG8Ac&ip=70.104.195.206&id=o-AARqCbJEZNye-T_FavnT8HXw_UK76wYHA_uagt3rmEUl&itag=313&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=Jc&mm=31%2C29&mn=sn-8xgp1vo-gpje%2Csn-8xgp1vo-p5qe7&ms=au%2Crdu&mv=m&mvi=6&pl=20&initcwndbps=1056250&vprv=1&svpuc=1&mime=video%2Fwebm&rqh=1&gir=yes&clen=989566702&dur=1293.233&lmt=1722862072574884&mt=1722864547&fvip=6&keepalive=yes&c=IOS&txp=630F224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgJfs51_y_ixQ9sI3pOmSf160lSVOAWHaUotW7-TI6RUgCIQC_fIoaoPJ13YuQckzWshoh2vgUXMBftyizhjaM-v9GZg%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRAIgWaqN7bhG5MnGgCTqPylOLeD-btoorFeB7zQVtmuGGCECIDu5Ei76xOfIJSQFH-56USrrjS_uJyLIhifGg7mZ1Ik4"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: ASUS_ProArt_P16_Review_-_The_BEST_Creator_Laptop_Tested_in_2024-[aQ3sSHuqaqA].f313.webm
+[download] 100% of  943.72MiB in 00:01:53 at 8.32MiB/s
+[debug] Invoking http downloader on "https://rr6---sn-8xgp1vo-gpje.googlevideo.com/videoplayback?expire=1722886448&ei=0NSwZqrOJLWEkucP4trEgAs&ip=70.104.195.206&id=o-AH0VOnfzEHdJoxa8T5uCoo-QsJ5C9U125piWY8T0EYkE&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=Jc&mm=31%2C29&mn=sn-8xgp1vo-gpje%2Csn-8xgp1vo-p5qe7&ms=au%2Crdu&mv=m&mvi=6&pl=20&initcwndbps=1056250&bui=AXc671LUumQEQWDUUaLlKEQh6bpkeXoEKzC1IO1XFUCFcAvZrg-9cjuIXuUKJfRuaQrDdDw7VFlKu72U&vprv=1&svpuc=1&mime=audio%2Fwebm&ns=t4rDoEnpo18FvP949OzANkUQ&rqh=1&gir=yes&clen=19172484&dur=1293.261&lmt=1722862289254528&mt=1722864547&fvip=6&keepalive=yes&lmw=1&c=TVHTML5&sefc=1&txp=6308224&n=JUehwboebTP9Jg&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgD8AjWkDh_yTXHs7RjgU7f-vrtWdiJGPjR9PlqgU_DX0CIQDFP0UvFae-ETHP4yaRF3Jf4v466nVL8ETgudc7LQzroA%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRQIga0lrsHK0-JGBT2iSM3QIdh08LfbcDbDZktps0C50hucCIQCuHbKMn9nTPV5xgkEvmVv5YT2yZX92w_ZCKCGN_E_a5A%3D%3D"
+[download] Destination: ASUS_ProArt_P16_Review_-_The_BEST_Creator_Laptop_Tested_in_2024-[aQ3sSHuqaqA].f251.webm
+[download] 100% of   18.28MiB in 00:00:03 at 6.07MiB/s
+[Merger] Merging formats into "ASUS_ProArt_P16_Review_-_The_BEST_Creator_Laptop_Tested_in_2024-[aQ3sSHuqaqA].webm"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:ASUS_ProArt_P16_Review_-_The_BEST_Creator_Laptop_Tested_in_2024-[aQ3sSHuqaqA].f313.webm" -i "file:ASUS_ProArt_P16_Review_-_The_BEST_Creator_Laptop_Tested_in_2024-[aQ3sSHuqaqA].f251.webm" -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart "file:ASUS_ProArt_P16_Review_-_The_BEST_Creator_Laptop_Tested_in_2024-[aQ3sSHuqaqA].temp.webm"
+Deleting original file ASUS_ProArt_P16_Review_-_The_BEST_Creator_Laptop_Tested_in_2024-[aQ3sSHuqaqA].f251.webm (pass -k to keep)
+Deleting original file ASUS_ProArt_P16_Review_-_The_BEST_Creator_Laptop_Tested_in_2024-[aQ3sSHuqaqA].f313.webm (pass -k to keep)
+[Metadata] Adding metadata to "ASUS_ProArt_P16_Review_-_The_BEST_Creator_Laptop_Tested_in_2024-[aQ3sSHuqaqA].webm"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:ASUS_ProArt_P16_Review_-_The_BEST_Creator_Laptop_Tested_in_2024-[aQ3sSHuqaqA].webm" -i "file:ASUS_ProArt_P16_Review_-_The_BEST_Creator_Laptop_Tested_in_2024-[aQ3sSHuqaqA].meta" -map 0 -dn -ignore_unknown -c copy -map_metadata 1 -write_id3v1 1 -metadata "title=ASUS ProArt P16 Review - The BEST Creator Laptop Tested in 2024!" -metadata "date=20240805" -metadata "description=ASUS ProArt P16 Review. Top spec version with Ryzen AI 9 HX 370 at 70W, RTX 4070, 64GB 7500MTs RAM, 4TB of storage, Wifi 7 and it runs Windows 11 Pro. More info and pricing: https://asus.click/p16_chris (non-affiliate)
+
+00:00 - Intro and key features overview
+01:08 - Weights and the charger
+01:29 - Build, keyboard, touchpad and ports
+05:08 - Internals and what can we upgrade?
+06:14 - The 4k OLED is stunning but has one con
+07:43 - What do the six speakers sound like?
+08:38 - Webcam sample
+08:58 - WIndows 11 and benchmarks, Geekbench, 3Dmark and Cinebench
+11:56 - SSD speeds and included software overview
+15:07 - ProArt Creator Hub overview
+16:18 - RTX 4070 gaming performance
+17:34 - 4k video editing and export time
+18:07 - Thermals in performance mode (70W CPU + 105W GPU)
+19:01 - Linux support?
+19:19 - My thoughts and battery life
+20:17 - The Pros and Cons" -metadata "synopsis=ASUS ProArt P16 Review. Top spec version with Ryzen AI 9 HX 370 at 70W, RTX 4070, 64GB 7500MTs RAM, 4TB of storage, Wifi 7 and it runs Windows 11 Pro. More info and pricing: https://asus.click/p16_chris (non-affiliate)
+
+00:00 - Intro and key features overview
+01:08 - Weights and the charger
+01:29 - Build, keyboard, touchpad and ports
+05:08 - Internals and what can we upgrade?
+06:14 - The 4k OLED is stunning but has one con
+07:43 - What do the six speakers sound like?
+08:38 - Webcam sample
+08:58 - WIndows 11 and benchmarks, Geekbench, 3Dmark and Cinebench
+11:56 - SSD speeds and included software overview
+15:07 - ProArt Creator Hub overview
+16:18 - RTX 4070 gaming performance
+17:34 - 4k video editing and export time
+18:07 - Thermals in performance mode (70W CPU + 105W GPU)
+19:01 - Linux support?
+19:19 - My thoughts and battery life
+20:17 - The Pros and Cons" -metadata "purl=https://www.youtube.com/watch?v=aQ3sSHuqaqA" -metadata "comment=https://www.youtube.com/watch?v=aQ3sSHuqaqA" -metadata "artist=TechTablets" -metadata:s:1 "language=eng" -movflags +faststart "file:ASUS_ProArt_P16_Review_-_The_BEST_Creator_Laptop_Tested_in_2024-[aQ3sSHuqaqA].temp.webm"
+Monday, August 5, 2024 9:39:25 AM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> date; C:\src\omnibus.ps1; date;
+
+Monday, August 5, 2024 9:41:39 AM
+Monday, August 5, 2024 9:41:39 AM
+home: 127.0.0.1
+PS C:\src\ping> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Monday, August 5, 2024 9:41:49 AM
+Monday, August 5, 2024 9:41:49 AM
 On branch main
 nothing to commit, working tree clean
-Monday, August 5, 2024 8:37:13 AM
-Monday, August 5, 2024 8:37:13 AM
+Monday, August 5, 2024 9:41:49 AM
+Monday, August 5, 2024 9:41:49 AM
 yarn install v1.22.21
 [1/4] Resolving packages...
 success Already up-to-date.
-Done in 0.15s.
-Monday, August 5, 2024 8:37:14 AM
+Done in 0.09s.
+Monday, August 5, 2024 9:41:50 AM
 yarn run v1.22.21
 $ tsc && vite build
 vite v5.2.13 building for production...
@@ -26,23 +393,378 @@ vite v5.2.13 building for production...
 docs/index.html                 0.53 kB │ gzip: 0.32 kB
 docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
 docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 164ms
-Done in 2.25s.
-Monday, August 5, 2024 8:37:16 AM
+✓ built in 159ms
+Done in 2.06s.
+Monday, August 5, 2024 9:41:52 AM
 warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Monday, August 5, 2024 8:37:16 AM
+Monday, August 5, 2024 9:41:52 AM
+[main 30302a8] build application
+ 2 files changed, 32 insertions(+), 5154 deletions(-)
+Monday, August 5, 2024 9:41:52 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Monday, August 5, 2024 9:41:54 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.17 KiB | 1.17 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   6c1553e..30302a8  main -> main
+Monday, August 5, 2024 9:41:55 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --restrict-filenames --add-metadata -i  --all-subs "https://youtu.be/dKuD1szdmjI"; date;
+
+Monday, August 5, 2024 10:14:35 AM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Monday, August 5, 2024 10:14:35 AM
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-i', '--all-subs', 'https://youtu.be/dKuD1szdmjI']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.01 from yt-dlp/yt-dlp [ffd7781d6] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://youtu.be/dKuD1szdmjI
+[youtube] dKuD1szdmjI: Downloading webpage
+[youtube] dKuD1szdmjI: Downloading ios player API JSON
+[youtube] dKuD1szdmjI: Downloading tv player API JSON
+[debug] Loading youtube-nsig.d2e656ee from cache
+[debug] [youtube] Decrypted nsig yxSg-Ew4JSQBj1jM => C4IoaKhbjvJ8JA
+[debug] Loading youtube-nsig.d2e656ee from cache
+[debug] [youtube] Decrypted nsig j3L6jJ3ihLSpNi66 => zSEn5H6p6YQFKA
+[youtube] dKuD1szdmjI: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[debug] Default format spec: bestvideo*+bestaudio/best
+[info] dKuD1szdmjI: Downloading 1 format(s): 313+251
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://rr1---sn-8xgp1vo-gpjl.googlevideo.com/videoplayback?expire=1722888877&ei=Td6wZqyiLJKHkucP0Kq8qQ8&ip=70.104.195.206&id=o-AFWh6WWX9J7vfuJ8j33YWaijPOopBlbkWm5KDJq4BM0H&itag=313&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=jR&mm=31%2C29&mn=sn-8xgp1vo-gpjl%2Csn-8xgp1vo-p5qe&ms=au%2Crdu&mv=m&mvi=1&pl=20&initcwndbps=1218750&vprv=1&svpuc=1&mime=video%2Fwebm&rqh=1&gir=yes&clen=39465221&dur=17.966&lmt=1721148874640385&mt=1722866955&fvip=5&keepalive=yes&c=IOS&txp=553C434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRgIhAJ9OYnyvKgqH5vAUunDEA4tgwuuAfNBW-7peeSTc-WcVAiEAkeB6GkEibCggUfXoIhgebFgjpeyyT3xUSwuuksnecGY%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRAIgBcruDYtGKLeD23uC0Xz9xcQKBYPGsex5V_PNpUGtfVACIGUENhZ9jGwQt-cDtjaU6MLrhhnqn91YGfDsscvKHwzI"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: Limousine_Stop_-_Drive_like_a_chauffeur-[dKuD1szdmjI].f313.webm
+[download] 100% of   37.64MiB in 00:00:03 at 10.40MiB/s
+[debug] Invoking http downloader on "https://rr1---sn-8xgp1vo-gpjl.googlevideo.com/videoplayback?expire=1722888877&ei=Td6wZoaiNYWGkucPqfKx0Ak&ip=70.104.195.206&id=o-ABqModiULPFI2GL2t-S20ZRJ2DzZZvvAVDQmZA0n6EjV&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=jR&mm=31%2C29&mn=sn-8xgp1vo-gpjl%2Csn-8xgp1vo-p5qe&ms=au%2Crdu&mv=m&mvi=1&pl=20&initcwndbps=1218750&bui=AXc671JgXS0jzuYmOGVr_17s36PrIWoxM7vuowl6PtlIjckhupqd8mHr8m1KW3zruMYoAzSrTAl6a-o7&vprv=1&svpuc=1&mime=audio%2Fwebm&ns=dzNk_vEUIevCB_If1plaE_8Q&rqh=1&gir=yes&clen=227579&dur=18.001&lmt=1721143612487806&mt=1722866955&fvip=5&keepalive=yes&lmw=1&c=TVHTML5&sefc=1&txp=5532434&n=zSEn5H6p6YQFKA&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRAIgX88PROyBxQHRbraWMl5EsTa7Krd8qREJ4QXJt6TP61ECICHaimiRnD8OGnY9mOunyWlLLeK41BPW4SgwEtyPQsED&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRAIgHNDA7RCll4gh2SB3UdcZVcMdUxgsjeZ85ZOU0PphaKACIC80pJvIfl8qdjRFuOUesfOrqjlAG2SGlkBIozshF8vW"
+[download] Destination: Limousine_Stop_-_Drive_like_a_chauffeur-[dKuD1szdmjI].f251.webm
+[download] 100% of  222.25KiB in 00:00:00 at 1.19MiB/s
+[Merger] Merging formats into "Limousine_Stop_-_Drive_like_a_chauffeur-[dKuD1szdmjI].webm"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Limousine_Stop_-_Drive_like_a_chauffeur-[dKuD1szdmjI].f313.webm" -i "file:Limousine_Stop_-_Drive_like_a_chauffeur-[dKuD1szdmjI].f251.webm"-c copy -map 0:v:0 -map 1:a:0 -movflags +faststart "file:Limousine_Stop_-_Drive_like_a_chauffeur-[dKuD1szdmjI].temp.webm"
+Deleting original file Limousine_Stop_-_Drive_like_a_chauffeur-[dKuD1szdmjI].f251.webm (pass -k to keep)
+Deleting original file Limousine_Stop_-_Drive_like_a_chauffeur-[dKuD1szdmjI].f313.webm (pass -k to keep)
+[Metadata] Adding metadata to "Limousine_Stop_-_Drive_like_a_chauffeur-[dKuD1szdmjI].webm"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Limousine_Stop_-_Drive_like_a_chauffeur-[dKuD1szdmjI].webm" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Limousine Stop - Drive like a chauffeur" -metadata "date=20240711" -metadata "description=Lots more car content on the channel!
+
+Link the link for the full video" -metadata "synopsis=Lots more car content on the channel!
+
+Link the link for the full video" -metadata "purl=https://www.youtube.com/watch?v=dKuD1szdmjI" -metadata "comment=https://www.youtube.com/watch?v=dKuD1szdmjI" -metadata "artist=Mick Drives Cars" -metadata:s:1"language=eng" -movflags +faststart "file:Limousine_Stop_-_Drive_like_a_chauffeur-[dKuD1szdmjI].temp.webm"
+Monday, August 5, 2024 10:14:50 AM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --restrict-filenames --add-metadata -i  --all-subs "https://youtu.be/NVnSmK0IaM4"; date;
+
+Monday, August 5, 2024 10:30:08 AM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Monday, August 5, 2024 10:30:08 AM
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-i', '--all-subs', 'https://youtu.be/NVnSmK0IaM4']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.01 from yt-dlp/yt-dlp [ffd7781d6] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://youtu.be/NVnSmK0IaM4
+[youtube] NVnSmK0IaM4: Downloading webpage
+[youtube] NVnSmK0IaM4: Downloading ios player API JSON
+[youtube] NVnSmK0IaM4: Downloading tv player API JSON
+[debug] Loading youtube-nsig.d2e656ee from cache
+[debug] [youtube] Decrypted nsig YheWFz50w4jHOT8N => ou5PKlhJ8CS6yA
+[debug] Loading youtube-nsig.d2e656ee from cache
+[debug] [youtube] Decrypted nsig SdmJ1VKpW8lPOJ3Y => ihw6b2cuHJjlgw
+[youtube] NVnSmK0IaM4: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[debug] Default format spec: bestvideo*+bestaudio/best
+[info] NVnSmK0IaM4: Downloading 1 format(s): 616+251
+[info] There are no subtitles for the requested languages
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1722889810/ei/8uGwZu7yL--KkucP9bSk-Qs/ip/70.104.195.206/id/3559d298ad0868ce/itag/616/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D29576617%3Bdur%3D58.224%3Bgir%3Dyes%3Bitag%3D356%3Blmt%3D1720237343624513/rqh/1/hls_chunk_host/rr2---sn-8xgp1vo-gpje.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/mh/i5/mm/31,29/mn/sn-8xgp1vo-gpje,sn-8xgp1vo-p5qe/ms/au,rdu/mv/m/mvi/2/pl/20/initcwndbps/1082500/vprv/1/playlist_type/DVR/dover/13/txp/543C434/mt/1722867910/fvip/5/short_key/1/keepalive/yes/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,vprv,playlist_type/sig/AJfQdSswRAIgGrAuC8k-JSLh_0W0tG6fu85HSnxvvDOqwa-3wpumh68CIAXyR0iRZuPoFbUWr469mqkEy1cJw0d_21PaCfBwg4CV/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl,initcwndbps/lsig/AGtxev0wRQIgGcdlfFUyMW0wXm6a3b5X3WwxSl28LdZlz9pRg7zIwwgCIQDl9woX0oMzpdPYEiANHvcV8UkyQQPJTl0gSyHBQv_25A%3D%3D/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 11
+[download] Destination: Dumb_Cop_Fires_on_Unarmed_Man_After_an_Acorn_Scares_Him_Shorts-[NVnSmK0IaM4].f616.mp4
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of   28.22MiB in 00:00:07 at 3.76MiB/s
+[debug] Invoking http downloader on "https://rr2---sn-8xgp1vo-gpje.googlevideo.com/videoplayback?expire=1722889810&ei=8uGwZprlN4-LkucPpabvkAc&ip=70.104.195.206&id=o-APbtLxKegsQNrAeh0aIqkN_TebGG3LDYJzSx-YAk0h8p&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=i5&mm=31%2C29&mn=sn-8xgp1vo-gpje%2Csn-8xgp1vo-p5qe&ms=au%2Crdu&mv=m&mvi=2&pl=20&initcwndbps=1082500&bui=AXc671JqPVbXpapma0tQSnYkjnp0hQVx_ftktSPfq5BB1z-pE4B854Nnn7k04WbxHFj50DjnjRobsMED&vprv=1&svpuc=1&mime=audio%2Fwebm&ns=Orn7xNUpnCza2I0_eGSc-fMQ&rqh=1&gir=yes&clen=1002722&dur=58.261&lmt=1708605988703381&mt=1722867910&fvip=5&keepalive=yes&lmw=1&c=TVHTML5&sefc=1&txp=5432434&n=ihw6b2cuHJjlgw&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgXeSjh-uU5KCm-nw52I3clYj4Tl-JUg53KCFclayKirICIQDvkmIFgOZawX-BqCMeYv7m8Avr59nP9wzuw6F78hcEWA%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRgIhAJx61nDj0AXoAGzH3xjcST8wL9euRV_1l46Lfp_FAXSyAiEAijlqukWanrhtwlw1ngs3m5ZXB7qxBf2fvRHImVcmwWI%3D"
+[download] Destination: Dumb_Cop_Fires_on_Unarmed_Man_After_an_Acorn_Scares_Him_Shorts-[NVnSmK0IaM4].f251.webm
+[download] 100% of  979.22KiB in 00:00:00 at 4.48MiB/s
+[Merger] Merging formats into "Dumb_Cop_Fires_on_Unarmed_Man_After_an_Acorn_Scares_Him_Shorts-[NVnSmK0IaM4].webm"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Dumb_Cop_Fires_on_Unarmed_Man_After_an_Acorn_Scares_Him_Shorts-[NVnSmK0IaM4].f616.mp4" -i "file:Dumb_Cop_Fires_on_Unarmed_Man_After_an_Acorn_Scares_Him_Shorts-[NVnSmK0IaM4].f251.webm" -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart "file:Dumb_Cop_Fires_on_Unarmed_Man_After_an_Acorn_Scares_Him_Shorts-[NVnSmK0IaM4].temp.webm"
+Deleting original file Dumb_Cop_Fires_on_Unarmed_Man_After_an_Acorn_Scares_Him_Shorts-[NVnSmK0IaM4].f251.webm (pass -k to keep)
+Deleting original file Dumb_Cop_Fires_on_Unarmed_Man_After_an_Acorn_Scares_Him_Shorts-[NVnSmK0IaM4].f616.mp4 (pass -k to keep)
+[Metadata] Adding metadata to "Dumb_Cop_Fires_on_Unarmed_Man_After_an_Acorn_Scares_Him_Shorts-[NVnSmK0IaM4].webm"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Dumb_Cop_Fires_on_Unarmed_Man_After_an_Acorn_Scares_Him_Shorts-[NVnSmK0IaM4].webm" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Dumb Cop Fires on Unarmed Man After an Acorn Scares Him #Shorts" -metadata "date=20240216" -metadata "description=Watch The Full Philip DeFranco Show: https://www.youtube.com/defranco?sub_confirmation=1
+Subscribe for more Quickie News: https://www.youtube.com/defranco?sub_confirmation=1
+
+——————————
+Produced by: Cory Ray, Philip DeFranco
+Edited by: James Girardier, Maxwell Enright, Julie Goldberg, Christian Meeks
+Art Department: William Crespo
+Writing/Research: Chris Tolve, Philip DeFranco
+————————————
+#Florida #Cop #Funny" -metadata "synopsis=Watch The Full Philip DeFranco Show: https://www.youtube.com/defranco?sub_confirmation=1
+Subscribe for more Quickie News: https://www.youtube.com/defranco?sub_confirmation=1
+
+——————————
+Produced by: Cory Ray, Philip DeFranco
+Edited by: James Girardier, Maxwell Enright, Julie Goldberg, Christian Meeks
+Art Department: William Crespo
+Writing/Research: Chris Tolve, Philip DeFranco
+————————————
+#Florida #Cop #Funny" -metadata "purl=https://www.youtube.com/watch?v=NVnSmK0IaM4" -metadata "comment=https://www.youtube.com/watch?v=NVnSmK0IaM4" -metadata "artist=Philip DeFranco" -movflags +faststart "file:Dumb_Cop_Fires_on_Unarmed_Man_After_an_Acorn_Scares_Him_Shorts-[NVnSmK0IaM4].temp.webm"
+Monday, August 5, 2024 10:30:26 AM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded>
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --restrict-filenames --add-metadata -i  --all-subs "https://youtu.be/K1txNl142IU"; date;
+
+Monday, August 5, 2024 12:59:14 PM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Monday, August 5, 2024 12:59:14 PM
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-i', '--all-subs', 'https://youtu.be/K1txNl142IU']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.01 from yt-dlp/yt-dlp [ffd7781d6] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://youtu.be/K1txNl142IU
+[youtube] K1txNl142IU: Downloading webpage
+[youtube] K1txNl142IU: Downloading ios player API JSON
+[youtube] K1txNl142IU: Downloading tv player API JSON
+[youtube] K1txNl142IU: Downloading player bd3293c9
+[debug] Saving youtube-nsig.bd3293c9 to cache
+[debug] [youtube] Decrypted nsig cgUbVCFPzZnyWqYU8CO => K_NeEFrbGlWouA
+[debug] Loading youtube-nsig.bd3293c9 from cache
+[debug] [youtube] Decrypted nsig 4CxwuueH27Ci7qG9F4_ => 3lFI9z51t-vCdw
+[youtube] K1txNl142IU: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[debug] Default format spec: bestvideo*+bestaudio/best
+[info] K1txNl142IU: Downloading 1 format(s): 313+251
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://rr4---sn-8xgp1vo-gpjl.googlevideo.com/videoplayback?expire=1722898758&ei=5gSxZsr3J-eLkucP36iM2Qk&ip=70.104.195.206&id=o-AG3F-BekseUpJCd1GiNKMLHiLEBaDceebQD4DthoroWz&itag=313&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=AZ&mm=31%2C29&mn=sn-8xgp1vo-gpjl%2Csn-8xgp1vo-p5qy&ms=au%2Crdu&mv=m&mvi=4&pl=20&initcwndbps=1191250&vprv=1&svpuc=1&mime=video%2Fwebm&rqh=1&gir=yes&clen=465153015&dur=582.882&lmt=1722869256703134&mt=1722876800&fvip=7&keepalive=yes&c=IOS&txp=630F224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIhAMeYQ-nyyG1EkcIo078qmDyN4sXfe-YR-UnOzuOGYKyAAiATUI4zTfDC1lspnOzLw3l4wqsTMk9ojb-OksiEWN79nQ%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRAIgVh37W8SeX4TF7Im6UBpUQcFG-j8PNPssRWqI0HQ8-aMCIAte7q6dOiDzrLwH3xud_AxslgBgLRIPaa7qGCiwch5s"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: Xiaomi_Mix_Flip_review-[K1txNl142IU].f313.webm
+[download] 100% of  443.60MiB in 00:01:58 at 3.74MiB/s
+[debug] Invoking http downloader on "https://rr4---sn-8xgp1vo-gpjl.googlevideo.com/videoplayback?expire=1722898758&ei=5gSxZqvELuiFkucP1ICm4Ak&ip=70.104.195.206&id=o-APadMgXfnyVJBef_Kcl3jAo4c0zsk7suETS1W9CFdW9y&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=AZ&mm=31%2C29&mn=sn-8xgp1vo-gpjl%2Csn-8xgp1vo-p5qy&ms=au%2Crdu&mv=m&mvi=4&pcm2cms=yes&pl=20&initcwndbps=1191250&bui=AXc671IKbI7ct9LY3jYe93uOCpnjfX2mWyPbHC3eDnfrj3YPyuz_czz-G30tPCqC8hi8KbdEPY1zFAhp&vprv=1&svpuc=1&mime=audio%2Fwebm&ns=1sJLQMYgSVUSy-9Uo6OWgo4Q&rqh=1&gir=yes&clen=9363681&dur=582.901&lmt=1722869494136711&mt=1722876800&fvip=7&keepalive=yes&lmw=1&c=TVHTML5&sefc=1&txp=6308224&n=3lFI9z51t-vCdw&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRAIgXDS1OyRxVUpAosGAowinZ18gTydr92C8eGDlf-RP7tcCIDTQDbLU6F8tIHj5Gqru4N8hqafpQ7Yw9igIoFhxZ5UW&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRQIhANhW7pEaJLAtBej85Jw479a8h6DULlmc9xqTqoFygwISAiAifDvtA6qJJ4ucQN0aXNTLag86i-n_X_SoETcWAfC00g%3D%3D"
+[download] Destination: Xiaomi_Mix_Flip_review-[K1txNl142IU].f251.webm
+[download] 100% of    8.93MiB in 00:00:02 at 3.35MiB/s
+[Merger] Merging formats into "Xiaomi_Mix_Flip_review-[K1txNl142IU].webm"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Xiaomi_Mix_Flip_review-[K1txNl142IU].f313.webm" -i "file:Xiaomi_Mix_Flip_review-[K1txNl142IU].f251.webm" -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart "file:Xiaomi_Mix_Flip_review-[K1txNl142IU].temp.webm"
+Deleting original file Xiaomi_Mix_Flip_review-[K1txNl142IU].f251.webm (pass -k to keep)
+Deleting original file Xiaomi_Mix_Flip_review-[K1txNl142IU].f313.webm (pass -k to keep)
+[Metadata] Adding metadata to "Xiaomi_Mix_Flip_review-[K1txNl142IU].webm"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Xiaomi_Mix_Flip_review-[K1txNl142IU].webm" -i "file:Xiaomi_Mix_Flip_review-[K1txNl142IU].meta" -map 0 -dn -ignore_unknown -c copy -map_metadata 1 -write_id3v1 1 -metadata "title=Xiaomi Mix Flip review" -metadata "date=20240805" -metadata "description=The Xiaomi Mix Flip is a thin and stylish compact foldable executed by following the most current trends. Check out our video review to learn ALL YOU NEED TO KNOW about the phone's top features, build and screen quality, battery life, performance, and camera image quality.
+
+▶ Check price
+https://www.gsmarena.com/where-to-buy.php3?p=13221
+Note: Commissions may be earned from the link above
+
+▶ Read our detailed text review
+https://www.gsmarena.com/xiaomi_mix_flip-review-2732.php
+
+▶ Check out the full specs
+https://www.gsmarena.com/xiaomi_mix_flip-13221.php
+
+▶ Our new Active use score for battery life is explained here:
+https://www.gsmarena.com/introducing_gsmarena_battery_test_v2-news-60397.php
+
+*******************
+00:00 - Intro
+00:37 - Design and build
+02:04 - Outter screen
+02:57 - Inner screen
+03:45 - Stereo speakers
+04:06 - Side-mounted fingerprint scanner & Storage options
+04:20 - Android 14, HyperOS
+04:51 - Snapdragon 8 Gen 3
+05:17 - Thermals
+05:49 - Battery life and charging speed test
+06:20 - Main cameras
+06:32 - Main camera: photo quality
+07:11 - Telephoto camera: photo quality
+07:57 - Selfie camera
+08:29 - Video quality
+09:07 - Conclusion" -metadata "synopsis=The Xiaomi Mix Flip is a thin and stylish compact foldable executed by following the most current trends. Check out our video review to learn ALL YOU NEED TO KNOW aboutthe phone's top features, build and screen quality, battery life, performance, and camera image quality.
+
+▶ Check price
+https://www.gsmarena.com/where-to-buy.php3?p=13221
+Note: Commissions may be earned from the link above
+
+▶ Read our detailed text review
+https://www.gsmarena.com/xiaomi_mix_flip-review-2732.php
+
+▶ Check out the full specs
+https://www.gsmarena.com/xiaomi_mix_flip-13221.php
+
+▶ Our new Active use score for battery life is explained here:
+https://www.gsmarena.com/introducing_gsmarena_battery_test_v2-news-60397.php
+
+*******************
+00:00 - Intro
+00:37 - Design and build
+02:04 - Outter screen
+02:57 - Inner screen
+03:45 - Stereo speakers
+04:06 - Side-mounted fingerprint scanner & Storage options
+04:20 - Android 14, HyperOS
+04:51 - Snapdragon 8 Gen 3
+05:17 - Thermals
+05:49 - Battery life and charging speed test
+06:20 - Main cameras
+06:32 - Main camera: photo quality
+07:11 - Telephoto camera: photo quality
+07:57 - Selfie camera
+08:29 - Video quality
+09:07 - Conclusion" -metadata "purl=https://www.youtube.com/watch?v=K1txNl142IU" -metadata "comment=https://www.youtube.com/watch?v=K1txNl142IU" -metadata "artist=GSMArena Official" -metadata:s:1 "language=eng" -movflags +faststart "file:Xiaomi_Mix_Flip_review-[K1txNl142IU].temp.webm"
+Monday, August 5, 2024 1:02:30 PM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --restrict-filenames --add-metadata -i  --all-subs "https://youtu.be/eeYRsVmYJjs"; date;
+
+Monday, August 5, 2024 1:02:47 PM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Monday, August 5, 2024 1:02:47 PM
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-i', '--all-subs', 'https://youtu.be/eeYRsVmYJjs']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.01 from yt-dlp/yt-dlp [ffd7781d6] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://youtu.be/eeYRsVmYJjs
+[youtube] eeYRsVmYJjs: Downloading webpage
+[youtube] eeYRsVmYJjs: Downloading ios player API JSON
+[youtube] eeYRsVmYJjs: Downloading tv player API JSON
+[debug] Loading youtube-nsig.bd3293c9 from cache
+[debug] [youtube] Decrypted nsig 8jNvxT3PCjsyeoOySws => 22J8mqm5qZct-A
+[debug] Loading youtube-nsig.bd3293c9 from cache
+[debug] [youtube] Decrypted nsig ie_zPVo5RekQRh2lv8m => 6ZTM_ekbBfDNdA
+[youtube] eeYRsVmYJjs: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[debug] Default format spec: bestvideo*+bestaudio/best
+[info] eeYRsVmYJjs: Downloading 1 format(s): 313+251
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://rr2---sn-8xgp1vo-gpje.googlevideo.com/videoplayback?expire=1722898969&ei=uQWxZvHYB_eBkucPmfWs6Qs&ip=70.104.195.206&id=o-AACvHBP7Wzbh3LnFtbT1nFWd12vtOclS1s3dhyfVyfAM&itag=313&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=bu&mm=31%2C29&mn=sn-8xgp1vo-gpje%2Csn-8xgp1vo-p5qe7&ms=au%2Crdu&mv=m&mvi=2&pl=20&initcwndbps=1152500&vprv=1&svpuc=1&mime=video%2Fwebm&rqh=1&gir=yes&clen=1350487780&dur=863.062&lmt=1722254548815048&mt=1722877034&fvip=7&keepalive=yes&c=IOS&txp=4432434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgKXQrdwEMp6Jas7PefM649cDJOcJJcmViBaUB20eGrcUCIQC1gZNOGgOQHwYIr7M7fO1HsfPkV2-KiW2Bb992hIu7Tg%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRgIhANJW7qdFfCgggvUSNBvvsDI19_f6RwO3Y10oFgr9yYklAiEA_RZijUGTrLVvyOIvcLnzh6vGGz01UO-bYb_XxMeaCfM%3D"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: Playing_Around_With_an_AliExpress_Gem_-_A_Mobile_Chipset_Motherboard_Review-[eeYRsVmYJjs].f313.webm
+[download] 100% of    1.26GiB in 00:01:13 at 17.45MiB/s
+[debug] Invoking http downloader on "https://rr2---sn-8xgp1vo-gpje.googlevideo.com/videoplayback?expire=1722898969&ei=uQWxZpbyDq-LkucPlqThUA&ip=70.104.195.206&id=o-AEujX_uuy4rIDph85gmuF5VtT4NXGfkU1nqvXLarqser&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=bu&mm=31%2C29&mn=sn-8xgp1vo-gpje%2Csn-8xgp1vo-p5qe7&ms=au%2Crdu&mv=m&mvi=2&pl=20&initcwndbps=1152500&bui=AXc671Id1j52OroOQ7IUqXcGe4J6K7SdxMYdbzTlFNMTMwYP5CVsuy4hGGO8qnqhyrjpM4XoH1rXg-fO&vprv=1&svpuc=1&mime=audio%2Fwebm&ns=8aIEEJAyoqBCYXr2YRY72AAQ&rqh=1&gir=yes&clen=15139929&dur=863.101&lmt=1722245525855134&mt=1722877034&fvip=7&keepalive=yes&lmw=1&c=TVHTML5&sefc=1&txp=4432434&n=6ZTM_ekbBfDNdA&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRAIgfZrJT6hE4mwL9r91PTjmO--6-egW1LYLcysVoFGZBrwCIAYdu67QwpxREzRw_F_PGNdxmx65ABrdldeV7ohY72WE&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRAIgaSiQZULillBnJ8YTH1NmByMLcn2v9aDU7CAOm8T_EgACIFbNBic-ssHnARAkh4h90tECtrFu07qLMO-GWTcSruml"
+[download] Destination: Playing_Around_With_an_AliExpress_Gem_-_A_Mobile_Chipset_Motherboard_Review-[eeYRsVmYJjs].f251.webm
+[download] 100% of   14.44MiB in 00:00:01 at 11.96MiB/s
+[Merger] Merging formats into "Playing_Around_With_an_AliExpress_Gem_-_A_Mobile_Chipset_Motherboard_Review-[eeYRsVmYJjs].webm"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Playing_Around_With_an_AliExpress_Gem_-_A_Mobile_Chipset_Motherboard_Review-[eeYRsVmYJjs].f313.webm" -i "file:Playing_Around_With_an_AliExpress_Gem_-_A_Mobile_Chipset_Motherboard_Review-[eeYRsVmYJjs].f251.webm" -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart "file:Playing_Around_With_an_AliExpress_Gem_-_A_Mobile_Chipset_Motherboard_Review-[eeYRsVmYJjs].temp.webm"
+Deleting original file Playing_Around_With_an_AliExpress_Gem_-_A_Mobile_Chipset_Motherboard_Review-[eeYRsVmYJjs].f251.webm (pass -k to keep)
+Deleting original file Playing_Around_With_an_AliExpress_Gem_-_A_Mobile_Chipset_Motherboard_Review-[eeYRsVmYJjs].f313.webm (pass -k to keep)
+[Metadata] Adding metadata to "Playing_Around_With_an_AliExpress_Gem_-_A_Mobile_Chipset_Motherboard_Review-[eeYRsVmYJjs].webm"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Playing_Around_With_an_AliExpress_Gem_-_A_Mobile_Chipset_Motherboard_Review-[eeYRsVmYJjs].webm" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Playing Around With an AliExpress Gem: A Mobile Chipset Motherboard Review" -metadata "date=20240805" -metadata "description=This AMD Ryzen 7 8845HS 9 bay / quad 2.5g / Dual NVMe NAS/Router AMD itx Motherboard looks pretty cool and Wendell has some ideas! Stay tuned for those.
+Check out the forum post here: https://youtu.be/eeYRsVmYJjs
+This is where we bought ours https://www.aliexpress.us/item/3256806388284807.html?gatewayAdapt=glo2usa4itemAdapt
+
+********************************
+Check us out online at the following places!
+https://bio.link/level1techs
+
+*IMPORTANT* Any email lacking “level1techs.com” should be ignored and immediately reported to Queries@level1techs.com.
+-------------------------------------------------------------------------------------------------------------
+Music: \"Bad Snacks\" by In the Atomosphere
+
+
+Edited by Autumn" -metadata "synopsis=This AMD Ryzen 7 8845HS 9 bay / quad 2.5g / Dual NVMe NAS/Router AMD itx Motherboard looks pretty cool and Wendell has some ideas! Stay tuned for those.
+Check out the forum post here: https://youtu.be/eeYRsVmYJjs
+This is where we bought ours https://www.aliexpress.us/item/3256806388284807.html?gatewayAdapt=glo2usa4itemAdapt
+
+********************************
+Check us out online at the following places!
+https://bio.link/level1techs
+
+*IMPORTANT* Any email lacking “level1techs.com” should be ignored and immediately reported to Queries@level1techs.com.
+-------------------------------------------------------------------------------------------------------------
+Music: \"Bad Snacks\" by In the Atomosphere
+
+
+Edited by Autumn" -metadata "purl=https://www.youtube.com/watch?v=eeYRsVmYJjs" -metadata "comment=https://www.youtube.com/watch?v=eeYRsVmYJjs" -metadata "artist=Level1Techs" -metadata:s:1 "language=eng" -movflags +faststart "file:Playing_Around_With_an_AliExpress_Gem_-_A_Mobile_Chipset_Motherboard_Review-[eeYRsVmYJjs].temp.webm"
+Monday, August 5, 2024 1:08:16 PM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebaseorigin main; date; git push origin main; date;
+
+Monday, August 5, 2024 1:18:59 PM
+Monday, August 5, 2024 1:18:59 PM
+On branch main
+nothing to commit, working tree clean
+Monday, August 5, 2024 1:18:59 PM
+Monday, August 5, 2024 1:18:59 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.09s.
+Monday, August 5, 2024 1:19:00 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 185ms
+Done in 2.24s.
+Monday, August 5, 2024 1:19:02 PM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Monday, August 5, 2024 1:19:02 PM
 On branch main
 Your branch is up to date with 'origin/main'.
 
 nothing to commit, working tree clean
-Monday, August 5, 2024 8:37:16 AM
+Monday, August 5, 2024 1:19:03 PM
 From github.com:fromnepal/fromnepal.github.io
  * branch            main       -> FETCH_HEAD
 Already up to date.
-Monday, August 5, 2024 8:37:18 AM
+Monday, August 5, 2024 1:19:04 PM
 Everything up-to-date
-Monday, August 5, 2024 8:37:18 AM
+Monday, August 5, 2024 1:19:05 PM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
