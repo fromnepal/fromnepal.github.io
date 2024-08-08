@@ -1,0 +1,78 @@
+always reply in plain text markdown escaped by ```sample``` so I can copy paste easily. 
+for the following text, please edit for grammar, punctuation, clarity, etc without changing the meaning of the text substantially. 
+
+
+hada-ionut
+Microsoft is a black hole of money and talent
+Published on August 8, 2024
+
+Before getting started, I think we need some context about my current situation. I am a webdev that has been asked to help another department at our company with some of their problems. At the time I have accepted this position I was not informed about their situation or why my help is needed. But I was asked very nicely and frankly speaking working on another bullshit React project bored me deeply. Right before joining them I learn what they work on "Microsoft Dynamics ERP". I believe this information was withheld from me until the last possible moment with full knowledge of the hissy fit I would of thrown when finding out I am working on a Microsoft product.
+Oh God its bad
+
+Before moving to this department I was not really aware of the ERP space, because it's one of the worst fields to ever exist. ERPs somehow manage to straddle the line between overly complicated messes that have to mold around the needs of every company in the world and some of the dullest, most boring work environments that can ever exist.
+
+Just so you know I am not making it up, the most common task we receive is something along the lines of "we need this column in this page URGENT!!!!". Why is having another column an urgent task? What do the numbers they just asked for mean? These questions will be left unanswered. But lets go back to the steaming pile of garbage Microsoft managed to create.
+
+Probably because it was developed some time around the 2015s, when Microsoft drank the cloud Cool Aid, they decided the best wait to host some of the most sensitive company information that their clients can ever have is in Azure. Behind the wall of a server side rendered web app, using a custom language they developed in house, just for this (and only this) platform. Now, if you look at how much money Microsoft is making you would believe they have some of the most competent developers behind this project and Dynamics is the peak of web development.
+
+That is true! If you look at their marketing that is :) Their reference and marketing material is some of the nicest looking and fastest loading websites I personally know of. But, like a Venus Flytrap, this is but the bait that lures in some bored/stupid consultant that will, like in a trance suggest you move all your dear, precious information into the Microsoft Cloud where, it will be trapped forever, chaining you forever to this rotting corpse of a company.
+Why am I this mean?
+
+Because they have forced my hand. When the landing page of this dumpster fire of a platform loads so slow my browser tries to kill it because "it appears to be stuck" they have left me no choice. There will come the day when I will dare look at their stupid JavaScript to see, how they managed to make the main thread be stuck during a request, but that day is nowhere in sight, my sanity has not gone down low enough, I don't (yet) want to see the nightmares beyond mortal comprehension that hide in those pesky files. Have they implemented their requests using XMLHttpRequests? Are they unpacking the data so slowly it blocks the main thread? Did someone do the classic sleep(1000) on every page load so they can "speed up" the application when some manager asks for a speed improvement? I don't want to know.
+
+What i can tell you is that this is how a page load looks like. WhatsApp Image 2024-08-07 at 14.05.57.jpeg
+
+Yes, almost 50.000ms for a page that only contains text, in addition I have seen JQuerry 3.5 being loaded among the thousands of other dependencies. To complete a single page load it takes 153 requests and a total of 16MB of data to be transferred, how? or better yet why? are questions that have to be answered by the big brains that designed this thing.
+
+According to my colleagues that have been working with this product for years it has been getting slower over time. HOW? YOU LOAD TEXT! YOU FUCKING IMBECILES. Have the React Andies eaten what is left of your brains this looks like a normal load time for a text only page? Or have they passed this project to the least payed team they have in India, given them no direction or motivation to try and called it a day?
+At least their custom language is good right?
+
+Of course not. If you have ever taken a programming languages course you know compilers/transpilers are very hard to build and require continuous effort from highly skilled engineers to keep running. Know imagine how a university level side project programming language would look like and tell me, is it good? If you don't like any of the nice to have features of any programming language then yes, it's kinda nice.
+
+You lack features such as lazy evaluation for conditional statements, a competent HTTP client, a coherent syntax, a sane way of handling errors, constants, a good way of interacting with the database or anything above simple functions with some ifs, fors and do...untils (yes, you are not tripping, do...untils, like baby's first loop in assembly).
+
+I mentioned error handling and HTTP there for a second and those 2 are so incredibly bad it leaves the realm of stupidity and becomes malice. Errors are particularly interesting, you have no try catch mechanism, nor the functional Maybe<T, Error> thing Haskell people are on about, nor errors as values like in Go. No, some functions just simply return a boolean, if true then your function had an error. What error you may ask? Who knows, the error acts like a quantum particle, you can know it happened but you cannot know its details. If this boolean is left unassigned to a variable then an error message is pushed to the screen in a modal, stopping all execution of the current call stack. Yes dear reader the under-payed Indians that developed this hellhole managed to make the first quantum programming language! They didn't need fancy billion dollar super conductors cooled to close to absolute 0 just pure bad design.
+
+HTTP, has caused me a different set of nightmares, even though I am network engineer (according to my university diploma) that has designed my own stupid networking protocol over WebRTC (and continue to do so for my masters degree), have made my own HTTP client and server in C from pure TCP and malice.
+
+Firstly seeing what you did wrong is an entire adventure because the HTTP client wraps everything in non-sense Request, Response objects that get out of scope very fast and are very tedious to serialize to observe them (yes another quantum mechanism). This makes every request more similar to pulling the lever on a slot machine then a science, because the most reliable way to craft a request is by moving the bits of code around until you stop getting errors.
+
+Secondly the properties on said objects change wildly while you are not touching them, one case that has annoyed me profusely is the content headers. Lets say you want to send a json to an API, and want to use the application/json content-type. To do that, you get the headers, set them appropriately and then take the serialized json and assign it to the request body. You just caused a wild change! Because you were stupid and serialized your JsonObject before assigning it to the body your Content-Type header has just changed to "string" :). This is not documented anywhere you have to learn using trial and error.
+
+The list of complaints can go on forever, but unlike said quantum programming language, my typing cannot (yet) explore the infinite space of complaints and write them in finite time, so we must move on.
+Tooling
+
+While my complaints from the previous chapters are somewhat minor and could be ignored, the "tooling" this language/platform offers are offensive on a deep spiritual level to me.
+
+Lets start with the LSP, firstly because Microsoft is allergic to sharing with others if you work in this stupid language you MUST use VSCode, editor that has become increasingly more annoying as I have started learning VIM these past months (and have used the JetBrains for the rest of my professional career). But VSCode can be made to feel acceptable, what can't is the LSP that is so incredibly stupid it MUST be a long running joke. It takes 5 minutes to start, if you go too fast it becomes confused and needs a restart, it's caching doesn't work, it lies about function definitions and sometimes just makes up errors that don't exist about code that has been deleted minutes ago.
+
+How did the company that fucking invented the Language Server Protocol fail so hard at making a Language Server for it's special Domain Language is beyond me.
+
+Finally, the act that managed to annoy me so hard I am sitting here at 2 in the morning furiously writing this article: **Updating your applications. **
+
+Our team seems to be suffering from success right now. We have about 5 applications released on the App Store associated with this platform and about 20-30 companies that use (and pay for) our applications. Generally that would be good, but when we release an update to one of our applications we need to manually go to every one of our clients and press a magical update button otherwise those updates will be forever scheduled for updating. At the start, I am told, this was a quick job, but seeing the growing number of clients and the slowing of their service it has started taking longer and longer.This updates must be made, by the way, at off hours because if done while someone is working everything will go down in flames (or so I am told).
+
+So to stop this time waster I was tasked with finding some solution to this problem, blissfully I didn't have to do a Rabbit R1 and use a web testing library for automatons because the big brains at Microsoft HQ made an API, but I swear to God they have tasked some brain dead intern with implementing it because it is the biggest peace of shit I have seen.
+
+Firstly: I need to go through the authentication step for EVERY SINGLE client I want to interact with, and receive a different Auth Token
+
+Secondly: Doing an update requires me to do about 5 different other requests to gather the data required to tell the app to update itself
+
+Thirly: I think they did the TCP server by hand because randomly it seems that it doesn't let go of my TCP socket even after it finishes sending the data
+
+Forthly: IT IS SLOWER THEN I THOUGHT POSSIBLE! Gathering about 10k of json data about the environments and the updates that need to be done on them takes somewhere between 20 seconds - 2 minutes how? idk Microsoft Magic or something. It is so slow that even having the requests maximally parallelized (each request sits on it's own thread) it still can take between 1 - 40 seconds to gather all the data. Possibly the edge function that servers me (more likely under-payed Indian man) needs smoke breaks? Or the sharks are nibbling at the internet cables to the underwater Azure servers?
+Conclusion
+
+I want to end with a little story from one client meeting I have observed. The client, a very modern factory from my city excitedly tries the demo environment we have prepared for them as they are about to sign away their soul to the Azure Gods. You can observe the excitement drain from the owner's face as every single interaction he has with the application takes just a bit tool long and he receives more cryptic information about what the form didn't like about his inputs.
+
+At the end of the meeting he asks one of the consultants that guided him through the demo "Is this how slow it always is?" to which my colleagues lie and say "No, it seems to be a bit slower today" and saved the contract from being severed right there on the spot.
+
+If this is the effect a multi-million-billion-dollar company that can effectivly spend infinite money on engineering has on a customer then this industry is truly rotten to it's very core. Microsoft in it's infinite wisdom adds Chat GPTs in every corner of their applications hoping the customers are stupid enough to not smell the putrid stench that emanets from their applications.
+
+The thing that offends me most is that you can see genius in some places, under all the garbage you can see that some competent person tried their best, but no matter how much effort they invested it was ultimately impossible fix the mountain of shit that stands before them.
+
+That should be a sin, I can only imagine the torment of the few good people that tried to make everything better, to give their customers a good product but were stopped by the incompetence of their management and peers.
+
+Subscribe via RSS / via Email.
+
+Powered by mataroa.blog.
