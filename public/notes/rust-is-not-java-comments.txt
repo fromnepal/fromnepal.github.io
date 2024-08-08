@@ -1,0 +1,50 @@
+can you please give me these comments in a single block of plain text? put in ```example``` and make sure we only have one block. remove words such as avatar and link which don't mean anything in plain text. remove duplicated usernames like franta avatar franta should be just franta
+ 
+franta avatar franta 6 hours ago | link
+While we could have written this as a service where UserRepo is an injected value, doing so would introduce the complexities we’ve already explored. There’s also no reason to write this as a service as we can still easily inject different implementations of UserRepo, such as providing an implementation that doesn’t hit a live database. The downside is our function signature can get a bit busy, but this level of “pain” is nothing compared to the alternatives.
+
+For me the big issue is the leaking/missing abstraction here. Everywhere I call this handler, I need a reference to UserRepo which is an implementation detail of the handler and I should not be bothered with it. Such dependencies should be injected once the handler is created – not plague all the code around.
+
+ 
+jgayfer avatar jgayfer 3 hours ago | link
+Hey! Original author here. Thanks for the feedback. Want to understand better.
+
+Are you suggesting that our UserRepo is something that should be stood up ahead of time, and injected into wherever we’re needing to invoke this handler? This is an approach I often use in a Java world, but I’ve found creating these type of “service objects” in Rust can get a bit unwieldy if UserRepo is a trait (though I’ve since walked back on trying to use traits for this kind of thing).
+
+Thanks again for the comment, would love to hear more.
+
+ 
+Halkcyon avatar Halkcyon 2 hours ago | link
+You talk about “complexity” but some things are inherently complex and shouldn’t be shunned into the closet. Handling dependencies is complex, but turning your code into an octopus to hide this fact isn’t laudable. In a framework like axum, you would turn your Repo type into a service that is injected into routes (basically exactly how spring-boot handles that problem).
+
+ 
+mattgreenrocks avatar mattgreenrocks 1 hour ago | link
+From my read, it seems like you decided the service abstraction wasn’t worth it because Rust was (per usual) making you contend with ownership, rather than services being the wrong fit for what you’re doing.
+
+Also, services are more about extreme late-binding than OOP, IMO.
+
+ 
+jgayfer avatar jgayfer 32 minutes ago | link
+That’s fairly accurate.
+
+At time time of writing, I wasn’t super familiar with things like enum dispatch, which make a lot of the awkwardness around trait objects in services go away. The UserRepo here is going to have a known number of implementations, making a trait overkill.
+
+ 
+franta avatar franta 57 minutes ago | link
+Are you suggesting that our UserRepo is something that should be stood up ahead of time, and injected into wherever we’re needing to invoke this handler?
+
+Yes
+
+This is an approach I often use in a Java world, but I’ve found creating these type of “service objects” in Rust can get a bit unwieldy if UserRepo is a trait
+
+I understand that this is the point of the article (that service objects are cumbersome in Rust). However, it is quite common that we may have several implementations and each has different dependencies (e.g. DatabaseStorage depends on a DB connection pool, while FileStorage depends on a directory). Then objects work better than functions because each object can encapsulate its own dependencies (and thus these dependencies do not clutter the client code). In the functional world, higher order functions might be the solution (similar to factories in OOP), but I am not sure whether/how is it possible in Rust. In either case, a function is often a too small unit – an object can couple several related functions/methods together. Even in C this pattern is common: pass a structure that contains pointers to functions and an opaque pointer that holds the state (or other functions and dependencies), which is equivalent of an object and even encapsulation works here (the opaque pointer still the same – one implementation may point it to a structure containing DB connection pool while other may point it to a directory and from the outside point of view, it is always just a void* pointer = same interface).
+
+ 
+jgayfer avatar jgayfer 12 minutes ago | link
+It’s certainly possible to write this in such a way that there is some dispatch struct that holds onto the various user and subscription repos, thus simplifying the surface area of the event dispatch API.
+
+It gets a bit tricker when we consider that these repos are mutable, and effectively singletons (as least in the context of an in memory implementation of persistence). We can get around that with an Arc though.
+
+ 
+jrwren avatar jrwren 30 minutes ago | link
+don’t write anything like it’s java, not even java.
