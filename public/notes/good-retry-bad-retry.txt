@@ -1,0 +1,201 @@
+https://medium.com/yandex/good-retry-bad-retry-an-incident-story-648072d3cee6
+
+Good Retry, Bad Retry: An Incident Story
+Denis Isaev
+Yandex
+
+Sometimes, a seemingly simple and obvious solution can lead to a series of problems later on. This is especially true when adding retries.
+My name is Denis Isaev, and I’d like to share my experience dealing with reliability issues caused by retries. This is based on real-life incidents in a system of 800 microservices at Yandex Go.
+The article is written as a fictional story about developer Ben.
+Terminology
+Let’s clarify a few terms to prevent any confusion:
+
+    Client: In the context of this article, a client refers to a backend microservice that sends a request to another backend microservice.
+    Server or Service: These terms are interchangeable and refer to the backend microservice that receives requests from the client.
+
+The Rise of Retries
+Ben, a backend developer, was part of the team building the order platform for a taxi app. One day, he was investigating a user complaint about app errors. The order service logs were full of 500 errors due to timeouts in the pricing service. “Another transient error,” thought Ben, and he decided to implement three retries for pricing service failures. He figured it would be safe since all the APIs were idempotent.
+The retries were implemented as a simple loop. During the code review, Alex, the product team lead, warned Ben about a potential retry storm issue: if the pricing service were to experience issues, the constant retries could overwhelm it and slow down recovery. Alex suggested using exponential backoff as a solution to this problem (see Appendix 1).
+Ben’s previous manager taught him that testing and validating algorithms in distributed systems is notoriously difficult, especially in corner cases. This is where simulations come in handy, as they help model the behavior of algorithms with intentional simplifications to the system. While less realistic than reproducing corner cases and conducting load testing, simulations offer a much faster approach.
+Ben decided to use a simulation to see if exponential backoff was really as helpful as he was told. And the results showed that it really did work well. Check out Appendix 2 for details.
+Alex was surprised that while exponential backoff worked, its effect in the simulation was really weak compared to what he expected. After skimming through the code, he noticed that new clients were being created regardless of the server’s health. In other words, the “clients + server” system was modeled as an open-loop system without any negative feedback. It was like an air conditioner without a thermostat: it just cooled continuously. A good air conditioner, on the other hand, adjusts its cooling power based on the current room temperature relative to the desired temperature. Such systems with negative feedback are called closed-loop systems.
+Alex knew that exponential backoff worked particularly well in such closed-loop systems. Ben asked, “How realistic is this? Is our production system really a closed-loop one?”
+“Well, not really. But it does exhibit some of its characteristics,” Alex explained, “For instance, many services operate on a ‘1 request — 1 thread’ model with a limit on the number of threads. If the latency of requests to another service increases significantly, all threads become occupied waiting for a response from the other service. So, a new request to the other service won’t be generated until at least one old request is completed. This creates a feedback loop.”
+Ben did a closed-loop simulation and found out that the effect of exponential backoff was much more pronounced there. For details, see Appendix 3.
+Ben was now convinced that exponential backoff was definitely worth using. The next problem Ben needed to solve was the client synchronization issue he discovered in the simulation.
+Client Synchronization
+Ben encountered a common issue across all simulations: during downtime, clients could synchronize with each other and start sending requests at the same time.
+Ben found a solution online: introducing a random delay (jitter) into the pause between retries. This jitter can be implemented in various ways. Ben opted for the Full Jitter method.
+Jitter in Pseudocode
+
+```
+    # Same code as in the exponential backoff
+
+    while True:
+        …  # Same code as in the exponential backoff
+
+        delay = min(DELAY_BASE_MS * pow(2, attempt_count), MAX_DELAY_MS)
+        delay = random_between(0, delay)
+        sleep(delay)
+```
+
+Ben validated the jitter idea using a simulation, which confirmed that jitter reduces client synchronization. You can learn more about it in Appendix 4.
+As a result, Ben was convinced that Alex’s proposal during the code review to implement exponential backoff was indeed very sound. Ben implemented both exponential backoff and jitter. He also extracted the retry logic from the service into a common HTTP client library within the userver framework. Thanks to the added retries, the initial problem was solved: transient errors due to timeouts to the pricing service completely disappeared. At the same time, the retries were safe, meaning there was no risk of causing a retry storm issue.
+Hour-long Outage
+Three years later, the system had grown to 500 microservices. Every other inter-service call was subject to retries. These retries were implemented correctly, with exponential backoff and jitter, using a common library.
+However, one day the entire backend went down for an entire hour. The new release of the order service introduced widespread errors. The release was rolled back within 10 minutes, but the backend didn’t recover. CPU usage of many services was 100%. Another 20 minutes later, the team realized that only a complete removal of the load from the backend would help. They used a rate limiter to allow traffic from only 1% of users. The system came back to life. They then gradually increased the load, allowing 5% of users at a time over the next half hour.
+
+Ben was the one who rolled out the failed release, so he prepared a post-mortem report. The incident was caused by a bug in a new feature, segfaulting the service on Redis timeouts. The post-mortem only included the following action items:
+
+    Fine-tune alerts to respond faster.
+    Fix the segfault bug.
+    Write tests for Redis and other DBMS timeouts.
+
+During the incident review, Sam, Ben’s manager, pointed out that neither the analysis nor the proposed solutions addressed the long recovery time. Ben proposed implementing pod autoscaling to speed up recovery. Sam expressed skepticism about this approach, arguing that reliably implementing autoscaling would be expensive, and besides, there is no certainty whether autoscaling would help in this specific situation.
+Sam glanced at the order service dashboard and noticed that the service was handling 9x the usual load during the recovery period. “What’s up with the load amplification?” he asked. Ben explained, “Users were eager to get going and kept trying to book taxis. We accumulated a large backlog of waiting users during the 10-minute rollback.”
+Becca, an order platform developer, checked the RPS chart for the orchestrator service (the only one that requests the order service). The chart showed that the load was only 3x the usual, not 9x, which suggested either that the orchestrator always made three requests or that the load was amplified by retries. This cast doubt on Ben’s theory about waiting users.
+
+Becca observed that the symptoms of the lengthy recovery resembled a metastable failure state (MFS) issue.
+“Typically, the system should self-recover after the trigger (a failed release) is removed. But if it doesn’t, that state is called MFS. This is what happened in this incident,” Becca explained. She hypothesized that retries could have been the culprit.
+Ben found the concept of MFS a bit puzzling, but he agreed that retries could indeed cause such issues. He went off to investigate why the orchestrator had amplified the load from 3x to 9x RPS.
+Is Exponential Backoff Enough?
+Ben checked that the orchestrator only made one request to the order service. However, there were two retries implemented with exponential backoff and jitter. This should have been safe, meaning the retries couldn’t have caused the load to triple. Unable to find the root cause of the load amplification, Ben sought help from John, a developer from the driver platform team.
+John explained that exponential backoff for retries doesn’t eliminate load amplification: it merely delays it. After a certain downtime threshold, exponential backoff becomes ineffective in reducing server load.
+John illustrated how retries affect the server. Each request takes exactly one second to process, and a new request arrives every second (represented by letters A–Z). Starting from the first second, all requests start returning an error. If a client makes three retries without exponential backoff, the load is already amplified 4x by the fourth second:
+
+With exponential delays of 1s → 2s → 4s, the same 4x load amplification will still occur — just a bit later, on the 11th second:
+
+John summarized: “Exponential backoff is a way to postpone retries for later. If we’re confident we can handle them successfully (for example, with short downtime or fast autoscaling), it’s a great option. Otherwise, the server will get overwhelmed by retries.”
+Ben’s world was slightly shaken. Three years ago, he learned about exponential backoff, read a dozen articles about it, confirmed its benefits through simulations, and even presented his research findings at a meetup! Ben couldn’t believe it right away, so he decided to validate John’s statement using his favorite method: simulations.
+The simulation confirmed that exponential backoff only delayed amplification. For details, see Appendix 5.
+The Fundamental Problem with Retries
+Ben now knew that exponential backoff wasn’t a silver bullet. But he didn’t understand one thing: why were retries and the load amplification a problem in the first place? If there were retries, then there were errors, and therefore the system was unhealthy — that was the issue, not the retries! Ben went to Jessica, the head of the driver platform, for advice.
+Jessica explained that one could look at a system with retries from two perspectives: before the trigger is resolved and afterwards. A trigger is the cause of the downtime, such as a failed release or configuration. As long as the trigger is active, the reasoning above is valid: even without retries, the system is unhealthy. But when the trigger is removed (for example, the release is rolled back), the system is healthy again and can handle at least the normal request flow.
+Jessica illustrated this with an example. Let’s say a system has a CPU headroom of x2 and clients don’t support retries:
+
+To simplify, we are intentionally ignoring the fact that some users don’t leave when they encounter errors but instead wait for the system to recover. They perform retries manually, so the requests should gradually increase during downtime.
+If clients perform two retries (a total of three requests to the server), we can assume that the situation will be like this:
+
+Requests that ended in errors or timeouts are marked red. Successful requests are marked green.
+In practice, though, things would be different:
+
+    When capacity is insufficient, the system will slow down. Request queues on the server will grow. Timeouts will begin on the clients, causing new retries.
+    Timeouts and errors will occur equally in both normal and retry requests. So, the area after trigger removal is highlighted in yellow. Some of these requests will be successful, while others will time out or return an error.
+
+That is what we’re likely to get in reality:
+
+Here’s the main issue: due to retries, the system doesn’t recover immediately after the trigger is eliminated. If there are no retries, recovery happens almost instantly.
+Jessica concluded that the recovery time after eliminating the trigger depends on the number of requests flooding the server. That’s why it’s crucial to reduce the server load to accelerate recovery. And retries, on the contrary, only increase the load. Moreover, recovery time grows more than linearly with increasing load. The chain reaction is as follows: more requests to the server → more timeouts or errors received by clients → more retries → even more requests to the server.
+Ben validated Jessica’s theses through simulation (see Appendix 6 for details). He then thanked Jessica and went to ponder over all this.
+Life Without Retries
+“OK, so the system recovers faster without retries. Let’s get rid of them altogether,” thought Ben. But what about occasional server errors in a normal system state if there are no retries at all?
+Ben discussed this with Leo, a developer from his team. Leo explained that it’s necessary to differentiate between scenarios when the service is healthy and when it’s experiencing problems. If the service is healthy, it can be retried because errors might be transient. If the service is having issues, retries should be stopped or minimized.
+“How do we know if the service is having problems? Should we calculate the percentage of errors from the service on the client side?” asked Ben. Leo suggested two techniques:
+
+    Retry circuit breaker: The service client completely disables retries if the percentage of service errors exceeds a certain threshold (for example, 10%). As soon as the percentage of errors within an arbitrary minute drops below the threshold, retries are resumed. If the service experiences problems, it won’t receive any additional load from retries.
+    Retry budget (or adaptive retry): Retries are always allowed, but within a budget, for example, no more than 10% of the number of successful requests. In case of service problems, it can receive no more than 10% of additional traffic.
+
+Both options guarantee that in case of service problems, clients will add no more than n% of additional load to it.
+Retry Circuit Breaker or Retry Budget?
+After examining these two techniques, Ben had several questions:
+
+    Which technique is best to apply in practice?
+    Why did he implement exponential backoff with jitter if retries should be minimized or eliminated? Would it be a good idea to combine exponential backoff with these techniques?
+    Should the overall error rate be calculated for all clients? How detrimental is it to calculate only local statistics?
+
+To answer the first question, Ben ran another simulation, which you can check out in Appendix 7.
+The simulation confirmed that both techniques effectively addressed load amplification. Each technique had its own pros and cons, so the choice between the two still wasn’t clear. Investigating popular open-source clients revealed the following:
+
+    AWS SDK employs retry budgets (HasRetryQuota).
+    The gRPC client for Go also employs retry budgets (RFC and code).
+
+“If they use it, so will I,” Ben concluded.
+Open-source clients also provided Ben with answers to the remaining two questions:
+
+    Exponential backoff and jitter are essential complements to the retry budget.
+    The percentage of retries can be calculated locally without complicating the system with global statistics synchronization.
+
+Ben conducted a simulation: for long-lived clients, local statistics behave identically to global ones, and exponential backoff doesn’t significantly impact amplification.
+Based on these findings, Ben decided to propose a new postmortem action item: implementing a retry budget with a 10% limit, in addition to the existing exponential backoff. There’s no need for global statistics synchronization — a local token bucket should be enough. The simulation provides an example implementation of this technique:
+
+Same Problem, Different Solutions
+At the incident review, Ben faced pushback on his proposal to implement a retry budget. Some colleagues questioned if it was necessary, given the existing exponential backoff.
+SRE lead Mary argued: “A retry budget adds complex logic to the client side, which goes against the thin client principle. Although these clients are back-end services and not front-end ones, the principle still holds. Each service should safeguard itself from retries.”
+Ben countered that if a server crashes, runs out of memory or CPU, it won’t be able to protect itself. Then Mary and Ben discussed whether load shedding on the server would help, but in the end, they decided that a thick client in this case was acceptable.
+B2B development lead Jake suggested using the circuit breaker pattern instead of limiting retries. This would completely halt requests if the error rate exceeded a certain threshold. If there were no requests to the service, there would be no retries. Ben agreed to this but wanted to validate it through simulations.
+Ben compared the circuit breaker with the retry budget in a simulation (see details in Appendix 8). The simulation revealed that circuit breakers were riskier than retry budgets. A circuit breaker could prematurely cut off all requests to a service, even if only one shard was failing. This meant that circuit breakers required a much higher error threshold than retry circuit breakers or budgets, for example, 50%. And that meant the allowable load amplification would be higher. Ultimately, the team concluded that circuit breakers should complement, rather than replace, retry budgets.
+Natalie from the reliability team also chimed in: “Have you considered using the deadline propagation pattern instead of a retry budget? In this approach, the client specifies a maximum response time for each request. The server periodically checks if this timeout has expired. If it has, the request is aborted with an error.”
+
+Ben couldn’t see how deadline propagation could be a substitute for disabling retries. They seemed like entirely different approaches. Natalie clarified, “When the server is overloaded and a timeout occurs, the client sends a retry. As it is happening, the server either hasn’t started executing the source request yet, or is in the process of doing so. However, with deadline propagation, the server can immediately abort the request in both cases. This effectively mitigates the amplification caused by retries.”
+
+“That sounds promising, but I’m not sure how well it would work in practice,” thought Ben. So back to simulating he went.
+The simulation (Appendix 9) revealed that while deadline propagation was effective, it wasn’t a complete solution. Ben was pleased to discover from the simulation that deadline propagation could partially address retry issues. While it wasn’t as efficient as a retry budget, it was still a valuable addition.
+Final Incident Review
+Ben decided to do one final retrospective on the hourly outage. He created a summary table of all the action items discussed:
+
+The team unanimously agreed with Ben’s suggestions, and the incident review was closed.
+Conclusion
+A couple of months after the incident review was completed, the platform team adopted the retry budget technique with a threshold of 10%. Over the following year, there were other incidents, but no amplification from retries was observed.
+Thanks to the incident review, Ben learned that “when encountering transient errors, add retries” is a risky approach. He gained an in-depth understanding of the risks involved, even with exponential backoff. He learned about exponential backoff and jitter techniques, Little’s Law and closed-loop systems, the concept of metastable failure state, the problem of retry amplification and techniques like retry circuit breaker and retry budget, as well as circuit breaker and deadline propagation mechanisms.
+Ben now has an even more exciting journey ahead of him, delving deeper into retries. But that’s the subject of another post.
+Thanks to Marc Brooker’s blog for inspiration, including this post and others.
+Appendix 1. Exponential Backoff Code
+
+```
+    MAX_RETRY_COUNT = 3
+    MAX_DELAY_MS = 1000
+    DELAY_BASE_MS = 50
+
+    attempt_count = 0
+    max_attempt_count = MAX_RETRY_COUNT + 1
+
+    while True:
+        result = do_network_request(...)
+        attempt_count += 1
+        if result.code == OK:
+            return result.data
+        if attempt_count == max_attempt_count:
+            raise Error(result.error)
+        
+        delay = min(DELAY_BASE_MS * pow(2, attempt_count), MAX_DELAY_MS)
+        sleep(delay)
+```
+
+Appendix 2. Exponential Backoff Simulation
+The simulation involves clients and a server. Each client makes a single request and waits for a response with a 100ms timeout. Server downtime is emulated within the interval [0.5s; 1s]: the server intentionally returns an error for 100% of requests (“Server Uptime” graph) with the usual response latency (10ms + 5ms for network round-trip). The client retries an error or a timeout three times, making up to four requests in total.
+Ben first ran a simulation with simple retries:
+
+The “Server Load Amplification” graph revealed that the server RPS quadrupled after the retries began. To denote this increase in the number of requests without a corresponding increase in natural load, we’ll use the term load amplification.
+Next, Ben implemented exponential backoff in the simulation:
+
+The benefits of exponential backoff (green line) were confirmed, as it reduced the load amplification significantly. Ben found it strange that the server load grew in jumps when using exponential backoff, but he saw no explanation as to why that could be happening.
+Appendix 3. Closed-Loop System
+Ben added a limit on the number of active clients in the simulation: those waiting for a server response or sleeping between retries.
+
+In the closed-loop system, load amplification was significantly reduced during server downtime. The difference between exponential backoff and simple retries became much more pronounced. Ben decided to investigate why that happened. He quickly realized that during downtime:
+
+    Request latency increases due to the exponential pauses between retries.
+    As a result, the number of active clients grows (Little’s Law states that a fivefold increase in latency leads to a fivefold increase in the number of active clients).
+    Consequently, the system quickly reaches its limit on the number of active clients.
+    No new requests to the server are generated until at least one active request completes.
+    Therefore, the load on the server decreases.
+
+Ben once again noticed strange artifacts on the load amplification graph: sinusoidal RPS patterns. It turned out that all clients who received the first error at t=0.5s were waiting for the same delay of 0.1s. Shortly thereafter, as soon as the limit on the number of active clients was reached, new requests stopped being sent to the server. And the old ones were not being sent either — they were still waiting for the 0.1s delay. This explained the first dip in RPS at t=0.6s.
+Next, the same clients waited for 0.2s, while new clients were unable to form new requests because no active client had yet completed all three retries. This explained the dip in RPS at t=0.8s.
+Clients were sending requests in waves, synchronizing with each other. As a result, the server load was low, which was not an efficient use of its resources. The sharp increase in RPS after recovery at t=1.25s was a consequence of this inefficiency. This was because all waiting clients were no longer constrained by the limit and were sending requests en masse.
+Appendix 4. Jitter and Client Synchronization
+Ben added jitter to the simulation using the Full Jitter method and obtained the following graphs:
+
+In the closed-loop system, load amplification was significantly reduced during server downtime. The difference between exponential backoff and simple retries became much more pronounced. Ben decided to investigate why that happened. He quickly realized that during downtime:
+
+    Request latency increases due to the exponential pauses between retries.
+    As a result, the number of active clients grows (Little’s Law states that a fivefold increase in latency leads to a fivefold increase in the number of active clients).
+    Consequently, the system quickly reaches its limit on the number of active clients.
+    No new requests to the server are generated until at least one active request completes.
+    Therefore, the load on the server decreases.
+
+Ben once again noticed strange artifacts on the load amplification graph: sinusoidal RPS patterns. It turned out that all clients who received the first error at t=0.5s were waiting for the same delay of 0.1s. Shortly thereafter, as soon as the limit on the number of active clients was reached, new requests stopped being sent to the server. And the old ones were not being sent either — they were still waiting for the 0.1s delay. This explained the first dip in RPS at t=0.6s.
+Next, the same clients waited for 0.2s, while new clients were unable to form new requests because no active client had yet completed all three retries. This explained the dip in RPS at t=0.8s.
+Clients were sending requests in waves, synchronizing with each other. As a result, the server load was low, which was not an efficient use of its resources. The sharp increase in RPS after recovery at t=1.25s was a consequence of this inefficiency. This was because all waiting clients were no longer constrained by the limit and were sending requests en masse.
+Appendix 4. Jitter and Client Synchronization
+Ben added jitter to the simulation using the Full Jitter method and obtained the following graphs:
