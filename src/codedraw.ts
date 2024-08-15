@@ -281,8 +281,8 @@ type Instruction = {
         }
       } catch (e) {
         console.table(e);
-        updateToast(e.message);
-      }
+        updateToast((e as Error).message);
+    }
     });
     editor?.setOption("value", text);
   });
