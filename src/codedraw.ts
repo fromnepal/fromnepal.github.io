@@ -2,7 +2,7 @@ import CodeMirror from 'codemirror';
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/addon/mode/simple';
 
-const editor = CodeMirror.fromTextArea(document.getElementById('code') as HTMLTextAreaElement, {
+let editor = CodeMirror.fromTextArea(document.getElementById('code') as HTMLTextAreaElement, {
   lineNumbers: true,
   mode: 'javascript',
   theme: 'neo',
