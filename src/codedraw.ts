@@ -186,35 +186,35 @@ type Instruction = {
   let errorToast: HTMLSpanElement | null = null;
   let docs: HTMLDivElement | null = null;
   
-  function toggleDocs() {
-    docs!.classList.toggle("hidden");
-  }
+//   function toggleDocs() {
+//     docs!.classList.toggle("hidden");
+//   }
   
-  function updateToast(text: string) {
-    if (text) {
-      errorToast!.innerText = text;
-      errorToast!.classList.remove("hidden");
-    } else {
-      errorToast!.classList.add("hidden");
-    }
-  }
+//   function updateToast(text: string) {
+//     if (text) {
+//       errorToast!.innerText = text;
+//       errorToast!.classList.remove("hidden");
+//     } else {
+//       errorToast!.classList.add("hidden");
+//     }
+//   }
   
-  function shareURL() {
-    if (!navigator.clipboard) {
-      throw new Error("Failed to copy to clipboard");
-    }
-    errorToast!.innerText = "Copied the link to your creation to your clipboard :^)";
-    errorToast!.classList.remove("hidden");
-    setTimeout(() => {
-      errorToast!.classList.add("hidden");
-    }, 3000);
-    navigator.clipboard.writeText(window.location.href.split("?")[0] + "?i=" + btoa(editor?.getValue()));
-  }
+//   function shareURL() {
+//     if (!navigator.clipboard) {
+//       throw new Error("Failed to copy to clipboard");
+//     }
+//     errorToast!.innerText = "Copied the link to your creation to your clipboard :^)";
+//     errorToast!.classList.remove("hidden");
+//     setTimeout(() => {
+//       errorToast!.classList.add("hidden");
+//     }, 3000);
+//     navigator.clipboard.writeText(window.location.href.split("?")[0] + "?i=" + btoa(editor?.getValue()));
+//   }
   
-  function exportImg() {
-    let url = draw?.board!.toDataURL();
-    window.open(url, "_blank");
-  }
+//   function exportImg() {
+//     let url = draw?.board!.toDataURL();
+//     window.open(url, "_blank");
+//   }
   
   window.onerror = (msg) => {
     updateToast(msg as string);
