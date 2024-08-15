@@ -1,5 +1,6 @@
 import CodeMirror from 'codemirror';
-import 'codemirror/mode/javascript/javascript'; // Import any modes you need
+import 'codemirror/mode/javascript/javascript';
+import 'codemirror/addon/mode/simple';
 
 const editor = CodeMirror.fromTextArea(document.getElementById('code') as HTMLTextAreaElement, {
   lineNumbers: true,
