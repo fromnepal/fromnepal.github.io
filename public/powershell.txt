@@ -205,3 +205,85 @@ info All dependencies
 Done in 8.93s.
 PS C:\Users\kushal\src\myhtml\fromnepal>
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 15, 2024 5:32:07 PM
+Thursday, August 15, 2024 5:32:07 PM
+On branch main
+nothing to commit, working tree clean
+Thursday, August 15, 2024 5:32:07 PM
+Thursday, August 15, 2024 5:32:07 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Thursday, August 15, 2024 5:32:07 PM
+yarn run v1.22.21
+$ tsc && vite build
+src/codedraw.ts:35:13 - error TS7029: Fallthrough case in switch.
+
+35             case "/": // skip comment
+               ~~~~~~~~~
+
+src/codedraw.ts:187:12 - error TS6133: 'toggleDocs' is declared but its value is never read.
+
+187   function toggleDocs() {
+               ~~~~~~~~~~
+
+src/codedraw.ts:200:12 - error TS6133: 'shareURL' is declared but its value is never read.
+
+200   function shareURL() {
+               ~~~~~~~~
+
+src/codedraw.ts:212:12 - error TS6133: 'exportImg' is declared but its value is never read.
+
+212   function exportImg() {
+               ~~~~~~~~~
+
+src/codedraw.ts:223:16 - error TS2339: Property 'defineSimpleMode' does not exist on type 'typeof CodeMirror'.
+
+223     CodeMirror.defineSimpleMode("codedraw", {
+                   ~~~~~~~~~~~~~~~~
+
+src/codedraw.ts:242:5 - error TS2588: Cannot assign to 'editor' because it is a constant.
+
+242     editor = CodeMirror.fromTextArea(document.getElementById("code") as HTMLTextAreaElement, {
+        ~~~~~~
+
+src/codedraw.ts:277:9 - error TS18047: 'draw' is possibly 'null'.
+
+277         draw.execute(instructions);
+            ~~~~
+
+src/codedraw.ts:280:21 - error TS18046: 'e' is of type 'unknown'.
+
+280         updateToast(e.message);
+                        ~
+
+
+Found 8 errors in the same file, starting at: src/codedraw.ts:35
+
+error Command failed with exit code 2.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Thursday, August 15, 2024 5:32:09 PM
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+Thursday, August 15, 2024 5:32:09 PM
+[main c51477f] build application
+ 4 files changed, 365 insertions(+), 1 deletion(-)
+ create mode 100644 src/codedraw.ts
+Thursday, August 15, 2024 5:32:09 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 15, 2024 5:32:09 PM
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 4.12 KiB | 4.12 MiB/s, done.
+Total 8 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   d654e60..c51477f  main -> main
+Thursday, August 15, 2024 5:32:10 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
