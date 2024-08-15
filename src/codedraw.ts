@@ -276,7 +276,9 @@ type Instruction = {
       }
       try {
         let instructions = parser(val);
-        draw.execute(instructions);
+        if (draw) {
+            draw.execute(instructions);
+        }
       } catch (e) {
         console.table(e);
         updateToast(e.message);
