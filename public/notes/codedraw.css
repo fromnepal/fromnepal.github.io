@@ -1,0 +1,176 @@
+:root {
+    --fg: #161616;
+    --fg10: #16161610;
+    --fg50: #16161650;
+    --bg: #ffffff;
+  }
+  * {
+    color: var(--fg);
+    box-sizing: border-box;
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+  }
+  body,
+  html {
+    background-image: radial-gradient(var(--fg10) 20%, transparent 20%),
+      radial-gradient(var(--fg10) 20%, transparent 20%);
+    background-color: var(--bg);
+    background-position: 0 0, 50px 50px;
+    background-size: 5px 5px;
+    height: 100%;
+    overflow: hidden;
+  }
+  main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .full-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  #board {
+    border: 1px solid var(--fg);
+    background-color: var(--bg);
+    box-shadow: 5px 5px;
+  }
+  .code-container {
+    min-width: 45%;
+    border: 1px solid var(--fg);
+    background-color: var(--bg);
+    box-shadow: 5px 5px;
+    padding: 0.25rem;
+    margin: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 512px;
+  }
+  .container {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .button {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border: 1px solid var(--fg);
+    background-color: var(--bg);
+    padding: 0.5rem;
+    box-shadow: 5px 5px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+  }
+  .button:disabled {
+    background-color: var(--fg50);
+    cursor: not-allowed;
+  }
+  .button:hover {
+    position: relative;
+    top: 5px;
+    box-shadow: 2px 2px;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  @media only screen and (max-width: 1000px) {
+    body {
+      overflow: auto;
+    }
+    main {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .code-container {
+      width: 512px;
+    }
+    .full-container {
+      align-items: normal;
+      margin-bottom: 2rem;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    main {
+      justify-content: start;
+    }
+    .code-container {
+      max-width: 512px;
+      width: 100%;
+      margin: 0;
+    }
+    .container {
+      max-width: 512px;
+      width: 100%;
+    }
+    .floating {
+      max-width: 300px;
+      margin-left: 1rem !important;
+      margin-right: 1.5rem !important;
+    }
+    #board {
+      height: 100%;
+      width: 100%;
+    }
+    .full-container {
+      align-items: normal;
+      padding-left: 0.25rem;
+      padding-right: 0.5rem;
+    }
+  }
+  .CodeMirror {
+    height: fit-content !important;
+  }
+  .hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 250ms ease-in-out;
+  }
+  .floating {
+    transition: visibility 0s, opacity 250ms ease-in-out;
+    visibility: visible;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30rem;
+    box-shadow: 5px 5px;
+    border: 1px solid var(--fg);
+    background-color: var(--bg);
+    padding: 0.5rem;
+  }
+  .instructions {
+    margin-bottom: 0.5rem;
+  }
+  #documentation {
+    z-index: 998 !important;
+    width: fit-content;
+    overflow-x: auto;
+  }
