@@ -141,3 +141,722 @@ To github.com:fromnepal/fromnepal.github.io.git
 Thursday, August 15, 2024 5:06:30 PM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 15, 2024 5:12:37 PM
+Thursday, August 15, 2024 5:12:37 PM
+On branch main
+nothing to commit, working tree clean
+Thursday, August 15, 2024 5:12:37 PM
+Thursday, August 15, 2024 5:12:37 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Thursday, August 15, 2024 5:12:37 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 196ms
+Done in 1.45s.
+Thursday, August 15, 2024 5:12:39 PM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, August 15, 2024 5:12:40 PM
+[main d654e60] build application
+ 8 files changed, 588 insertions(+), 4 deletions(-)
+ rename {src => docs/notes}/codedraw.css (100%)
+ rename {src => docs/notes}/codedraw.js (100%)
+ create mode 100644 public/notes/codedraw.css
+ create mode 100644 public/notes/codedraw.js
+Thursday, August 15, 2024 5:12:40 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 15, 2024 5:12:40 PM
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 1.11 KiB | 1.11 MiB/s, done.
+Total 8 (delta 7), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (7/7), completed with 7 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   b9e7555..d654e60  main -> main
+Thursday, August 15, 2024 5:12:41 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> yarn add --dev @types/codemirror
+yarn add v1.22.21
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+success Saved 2 new dependencies.
+info Direct dependencies
+└─ @types/codemirror@5.60.15
+info All dependencies
+├─ @types/codemirror@5.60.15
+└─ @types/tern@0.23.9
+Done in 8.93s.
+PS C:\Users\kushal\src\myhtml\fromnepal>
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 15, 2024 5:32:07 PM
+Thursday, August 15, 2024 5:32:07 PM
+On branch main
+nothing to commit, working tree clean
+Thursday, August 15, 2024 5:32:07 PM
+Thursday, August 15, 2024 5:32:07 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Thursday, August 15, 2024 5:32:07 PM
+yarn run v1.22.21
+$ tsc && vite build
+src/codedraw.ts:35:13 - error TS7029: Fallthrough case in switch.
+
+35             case "/": // skip comment
+               ~~~~~~~~~
+
+src/codedraw.ts:187:12 - error TS6133: 'toggleDocs' is declared but its value is never read.
+
+187   function toggleDocs() {
+               ~~~~~~~~~~
+
+src/codedraw.ts:200:12 - error TS6133: 'shareURL' is declared but its value is never read.
+
+200   function shareURL() {
+               ~~~~~~~~
+
+src/codedraw.ts:212:12 - error TS6133: 'exportImg' is declared but its value is never read.
+
+212   function exportImg() {
+               ~~~~~~~~~
+
+src/codedraw.ts:223:16 - error TS2339: Property 'defineSimpleMode' does not exist on type 'typeof CodeMirror'.
+
+223     CodeMirror.defineSimpleMode("codedraw", {
+                   ~~~~~~~~~~~~~~~~
+
+src/codedraw.ts:242:5 - error TS2588: Cannot assign to 'editor' because it is a constant.
+
+242     editor = CodeMirror.fromTextArea(document.getElementById("code") as HTMLTextAreaElement, {
+        ~~~~~~
+
+src/codedraw.ts:277:9 - error TS18047: 'draw' is possibly 'null'.
+
+277         draw.execute(instructions);
+            ~~~~
+
+src/codedraw.ts:280:21 - error TS18046: 'e' is of type 'unknown'.
+
+280         updateToast(e.message);
+                        ~
+
+
+Found 8 errors in the same file, starting at: src/codedraw.ts:35
+
+error Command failed with exit code 2.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Thursday, August 15, 2024 5:32:09 PM
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+Thursday, August 15, 2024 5:32:09 PM
+[main c51477f] build application
+ 4 files changed, 365 insertions(+), 1 deletion(-)
+ create mode 100644 src/codedraw.ts
+Thursday, August 15, 2024 5:32:09 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 15, 2024 5:32:09 PM
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 4.12 KiB | 4.12 MiB/s, done.
+Total 8 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   d654e60..c51477f  main -> main
+Thursday, August 15, 2024 5:32:10 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 15, 2024 5:35:45 PM
+Thursday, August 15, 2024 5:35:45 PM
+On branch main
+nothing to commit, working tree clean
+Thursday, August 15, 2024 5:35:45 PM
+Thursday, August 15, 2024 5:35:45 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Thursday, August 15, 2024 5:35:45 PM
+yarn run v1.22.21
+$ tsc && vite build
+src/codedraw.ts:35:13 - error TS7029: Fallthrough case in switch.
+
+35             case "/": // skip comment
+               ~~~~~~~~~
+
+src/codedraw.ts:187:12 - error TS6133: 'toggleDocs' is declared but its value is never read.
+
+187   function toggleDocs() {
+               ~~~~~~~~~~
+
+src/codedraw.ts:200:12 - error TS6133: 'shareURL' is declared but its value is never read.
+
+200   function shareURL() {
+               ~~~~~~~~
+
+src/codedraw.ts:212:12 - error TS6133: 'exportImg' is declared but its value is never read.
+
+212   function exportImg() {
+               ~~~~~~~~~
+
+src/codedraw.ts:223:16 - error TS2339: Property 'defineSimpleMode' does not exist on type 'typeof CodeMirror'.
+
+223     CodeMirror.defineSimpleMode("codedraw", {
+                   ~~~~~~~~~~~~~~~~
+
+src/codedraw.ts:242:5 - error TS2588: Cannot assign to 'editor' because it is a constant.
+
+242     editor = CodeMirror.fromTextArea(document.getElementById("code") as HTMLTextAreaElement, {
+        ~~~~~~
+
+src/codedraw.ts:277:9 - error TS18047: 'draw' is possibly 'null'.
+
+277         draw.execute(instructions);
+            ~~~~
+
+src/codedraw.ts:280:21 - error TS18046: 'e' is of type 'unknown'.
+
+280         updateToast(e.message);
+                        ~
+
+
+Found 8 errors in the same file, starting at: src/codedraw.ts:35
+
+error Command failed with exit code 2.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Thursday, August 15, 2024 5:35:46 PM
+warning: in the working copy of 'tsconfig.json', LF will be replaced by CRLF the next time Git touches it
+Thursday, August 15, 2024 5:35:46 PM
+[main e2b6e13] build application
+ 2 files changed, 86 insertions(+), 1 deletion(-)
+Thursday, August 15, 2024 5:35:46 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 15, 2024 5:35:47 PM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.37 KiB | 1.37 MiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   c51477f..e2b6e13  main -> main
+Thursday, August 15, 2024 5:35:48 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal>
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 15, 2024 5:36:56 PM
+Thursday, August 15, 2024 5:36:56 PM
+On branch main
+nothing to commit, working tree clean
+Thursday, August 15, 2024 5:36:56 PM
+Thursday, August 15, 2024 5:36:56 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Thursday, August 15, 2024 5:36:56 PM
+yarn run v1.22.21
+$ tsc && vite build
+src/codedraw.ts:188:12 - error TS6133: 'toggleDocs' is declared but its value is never read.
+
+188   function toggleDocs() {
+               ~~~~~~~~~~
+
+src/codedraw.ts:201:12 - error TS6133: 'shareURL' is declared but its value is never read.
+
+201   function shareURL() {
+               ~~~~~~~~
+
+src/codedraw.ts:213:12 - error TS6133: 'exportImg' is declared but its value is never read.
+
+213   function exportImg() {
+               ~~~~~~~~~
+
+src/codedraw.ts:224:16 - error TS2339: Property 'defineSimpleMode' does not exist on type 'typeof CodeMirror'.
+
+224     CodeMirror.defineSimpleMode("codedraw", {
+                   ~~~~~~~~~~~~~~~~
+
+src/codedraw.ts:243:5 - error TS2588: Cannot assign to 'editor' because it is a constant.
+
+243     editor = CodeMirror.fromTextArea(document.getElementById("code") as HTMLTextAreaElement, {
+        ~~~~~~
+
+src/codedraw.ts:278:9 - error TS18047: 'draw' is possibly 'null'.
+
+278         draw.execute(instructions);
+            ~~~~
+
+src/codedraw.ts:281:21 - error TS18046: 'e' is of type 'unknown'.
+
+281         updateToast(e.message);
+                        ~
+
+
+Found 7 errors in the same file, starting at: src/codedraw.ts:188
+
+error Command failed with exit code 2.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Thursday, August 15, 2024 5:36:57 PM
+Thursday, August 15, 2024 5:36:57 PM
+[main fc5af2a] build application
+ 2 files changed, 83 insertions(+)
+Thursday, August 15, 2024 5:36:57 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 15, 2024 5:36:58 PM
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 838 bytes | 838.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   e2b6e13..fc5af2a  main -> main
+Thursday, August 15, 2024 5:36:58 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal>
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 15, 2024 5:37:46 PM
+Thursday, August 15, 2024 5:37:46 PM
+On branch main
+nothing to commit, working tree clean
+Thursday, August 15, 2024 5:37:46 PM
+Thursday, August 15, 2024 5:37:46 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Thursday, August 15, 2024 5:37:46 PM
+yarn run v1.22.21
+$ tsc && vite build
+src/codedraw.ts:189:12 - error TS6133: 'toggleDocs' is declared but its value is never read.
+
+189   function toggleDocs() {
+               ~~~~~~~~~~
+
+src/codedraw.ts:202:12 - error TS6133: 'shareURL' is declared but its value is never read.
+
+202   function shareURL() {
+               ~~~~~~~~
+
+src/codedraw.ts:214:12 - error TS6133: 'exportImg' is declared but its value is never read.
+
+214   function exportImg() {
+               ~~~~~~~~~
+
+src/codedraw.ts:244:5 - error TS2588: Cannot assign to 'editor' because it is a constant.
+
+244     editor = CodeMirror.fromTextArea(document.getElementById("code") as HTMLTextAreaElement, {
+        ~~~~~~
+
+src/codedraw.ts:279:9 - error TS18047: 'draw' is possibly 'null'.
+
+279         draw.execute(instructions);
+            ~~~~
+
+src/codedraw.ts:282:21 - error TS18046: 'e' is of type 'unknown'.
+
+282         updateToast(e.message);
+                        ~
+
+
+Found 6 errors in the same file, starting at: src/codedraw.ts:189
+
+error Command failed with exit code 2.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Thursday, August 15, 2024 5:37:47 PM
+Thursday, August 15, 2024 5:37:47 PM
+[main 55e4edd] build application
+ 2 files changed, 78 insertions(+), 1 deletion(-)
+Thursday, August 15, 2024 5:37:47 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 15, 2024 5:37:47 PM
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 906 bytes | 906.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   fc5af2a..55e4edd  main -> main
+Thursday, August 15, 2024 5:37:48 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 15, 2024 5:38:37 PM
+Thursday, August 15, 2024 5:38:37 PM
+On branch main
+nothing to commit, working tree clean
+Thursday, August 15, 2024 5:38:37 PM
+Thursday, August 15, 2024 5:38:37 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Thursday, August 15, 2024 5:38:37 PM
+yarn run v1.22.21
+$ tsc && vite build
+src/codedraw.ts:189:12 - error TS6133: 'toggleDocs' is declared but its value is never read.
+
+189   function toggleDocs() {
+               ~~~~~~~~~~
+
+src/codedraw.ts:202:12 - error TS6133: 'shareURL' is declared but its value is never read.
+
+202   function shareURL() {
+               ~~~~~~~~
+
+src/codedraw.ts:214:12 - error TS6133: 'exportImg' is declared but its value is never read.
+
+214   function exportImg() {
+               ~~~~~~~~~
+
+src/codedraw.ts:279:9 - error TS18047: 'draw' is possibly 'null'.
+
+279         draw.execute(instructions);
+            ~~~~
+
+src/codedraw.ts:282:21 - error TS18046: 'e' is of type 'unknown'.
+
+282         updateToast(e.message);
+                        ~
+
+
+Found 5 errors in the same file, starting at: src/codedraw.ts:189
+
+error Command failed with exit code 2.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Thursday, August 15, 2024 5:38:38 PM
+Thursday, August 15, 2024 5:38:38 PM
+[main ec6868d] build application
+ 2 files changed, 71 insertions(+), 1 deletion(-)
+Thursday, August 15, 2024 5:38:38 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 15, 2024 5:38:39 PM
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 802 bytes | 80.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   55e4edd..ec6868d  main -> main
+Thursday, August 15, 2024 5:38:40 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 15, 2024 5:39:23 PM
+Thursday, August 15, 2024 5:39:23 PM
+On branch main
+nothing to commit, working tree clean
+Thursday, August 15, 2024 5:39:23 PM
+Thursday, August 15, 2024 5:39:23 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Thursday, August 15, 2024 5:39:23 PM
+yarn run v1.22.21
+$ tsc && vite build
+src/codedraw.ts:189:12 - error TS6133: 'toggleDocs' is declared but its value is never read.
+
+189   function toggleDocs() {
+               ~~~~~~~~~~
+
+src/codedraw.ts:202:12 - error TS6133: 'shareURL' is declared but its value is never read.
+
+202   function shareURL() {
+               ~~~~~~~~
+
+src/codedraw.ts:214:12 - error TS6133: 'exportImg' is declared but its value is never read.
+
+214   function exportImg() {
+               ~~~~~~~~~
+
+src/codedraw.ts:284:21 - error TS18046: 'e' is of type 'unknown'.
+
+284         updateToast(e.message);
+                        ~
+
+
+Found 4 errors in the same file, starting at: src/codedraw.ts:189
+
+error Command failed with exit code 2.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Thursday, August 15, 2024 5:39:24 PM
+Thursday, August 15, 2024 5:39:24 PM
+[main 39a4b72] build application
+ 2 files changed, 68 insertions(+), 1 deletion(-)
+Thursday, August 15, 2024 5:39:24 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 15, 2024 5:39:25 PM
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 754 bytes | 754.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   ec6868d..39a4b72  main -> main
+Thursday, August 15, 2024 5:39:25 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 15, 2024 5:39:47 PM
+Thursday, August 15, 2024 5:39:47 PM
+On branch main
+nothing to commit, working tree clean
+Thursday, August 15, 2024 5:39:47 PM
+Thursday, August 15, 2024 5:39:47 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Thursday, August 15, 2024 5:39:47 PM
+yarn run v1.22.21
+$ tsc && vite build
+src/codedraw.ts:189:12 - error TS6133: 'toggleDocs' is declared but its value is never read.
+
+189   function toggleDocs() {
+               ~~~~~~~~~~
+
+src/codedraw.ts:202:12 - error TS6133: 'shareURL' is declared but its value is never read.
+
+202   function shareURL() {
+               ~~~~~~~~
+
+src/codedraw.ts:214:12 - error TS6133: 'exportImg' is declared but its value is never read.
+
+214   function exportImg() {
+               ~~~~~~~~~
+
+
+Found 3 errors in the same file, starting at: src/codedraw.ts:189
+
+error Command failed with exit code 2.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Thursday, August 15, 2024 5:39:48 PM
+Thursday, August 15, 2024 5:39:48 PM
+[main 65ccffe] build application
+ 2 files changed, 62 insertions(+), 2 deletions(-)
+Thursday, August 15, 2024 5:39:48 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 15, 2024 5:39:49 PM
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 757 bytes | 757.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   39a4b72..65ccffe  main -> main
+Thursday, August 15, 2024 5:39:49 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 15, 2024 5:40:19 PM
+Thursday, August 15, 2024 5:40:19 PM
+On branch main
+nothing to commit, working tree clean
+Thursday, August 15, 2024 5:40:19 PM
+Thursday, August 15, 2024 5:40:19 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Thursday, August 15, 2024 5:40:19 PM
+yarn run v1.22.21
+$ tsc && vite build
+src/codedraw.ts:189:12 - error TS6133: 'toggleDocs' is declared but its value is never read.
+
+189   function toggleDocs() {
+               ~~~~~~~~~~
+
+src/codedraw.ts:202:12 - error TS6133: 'shareURL' is declared but its value is never read.
+
+202   function shareURL() {
+               ~~~~~~~~
+
+src/codedraw.ts:214:12 - error TS6133: 'exportImg' is declared but its value is never read.
+
+214   function exportImg() {
+               ~~~~~~~~~
+
+
+Found 3 errors in the same file, starting at: src/codedraw.ts:189
+
+error Command failed with exit code 2.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Thursday, August 15, 2024 5:40:20 PM
+Thursday, August 15, 2024 5:40:20 PM
+[main 234d724] build application
+ 1 file changed, 55 insertions(+)
+Thursday, August 15, 2024 5:40:20 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 15, 2024 5:40:21 PM
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 536 bytes | 536.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   65ccffe..234d724  main -> main
+Thursday, August 15, 2024 5:40:22 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 15, 2024 5:41:21 PM
+Thursday, August 15, 2024 5:41:21 PM
+On branch main
+nothing to commit, working tree clean
+Thursday, August 15, 2024 5:41:21 PM
+Thursday, August 15, 2024 5:41:21 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Thursday, August 15, 2024 5:41:21 PM
+yarn run v1.22.21
+$ tsc && vite build
+src/codedraw.ts:175:11 - error TS2304: Cannot find name 'updateToast'.
+
+175           updateToast("");
+              ~~~~~~~~~~~
+
+src/codedraw.ts:186:7 - error TS6133: 'errorToast' is declared but its value is never read.
+
+186   let errorToast: HTMLSpanElement | null = null;
+          ~~~~~~~~~~
+
+src/codedraw.ts:187:7 - error TS6133: 'docs' is declared but its value is never read.
+
+187   let docs: HTMLDivElement | null = null;
+          ~~~~
+
+src/codedraw.ts:220:5 - error TS2304: Cannot find name 'updateToast'.
+
+220     updateToast(msg as string);
+        ~~~~~~~~~~~
+
+src/codedraw.ts:284:9 - error TS2304: Cannot find name 'updateToast'.
+
+284         updateToast((e as Error).message);
+            ~~~~~~~~~~~
+
+
+Found 5 errors in the same file, starting at: src/codedraw.ts:175
+
+error Command failed with exit code 2.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Thursday, August 15, 2024 5:41:22 PM
+Thursday, August 15, 2024 5:41:22 PM
+[main cf487ba] build application
+ 2 files changed, 81 insertions(+), 26 deletions(-)
+Thursday, August 15, 2024 5:41:22 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 15, 2024 5:41:23 PM
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 994 bytes | 994.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   234d724..cf487ba  main -> main
+Thursday, August 15, 2024 5:41:23 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 15, 2024 5:41:46 PM
+Thursday, August 15, 2024 5:41:46 PM
+On branch main
+nothing to commit, working tree clean
+Thursday, August 15, 2024 5:41:46 PM
+Thursday, August 15, 2024 5:41:46 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Thursday, August 15, 2024 5:41:46 PM
+yarn run v1.22.21
+$ tsc && vite build
+src/codedraw.ts:187:7 - error TS6133: 'docs' is declared but its value is never read.
+
+187   let docs: HTMLDivElement | null = null;
+          ~~~~
+
+
+Found 1 error in src/codedraw.ts:187
+
+error Command failed with exit code 2.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Thursday, August 15, 2024 5:41:47 PM
+Thursday, August 15, 2024 5:41:47 PM
+[main 11de8d4] build application
+ 2 files changed, 73 insertions(+), 8 deletions(-)
+Thursday, August 15, 2024 5:41:47 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 15, 2024 5:41:47 PM
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.04 KiB | 1.04 MiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   cf487ba..11de8d4  main -> main
+Thursday, August 15, 2024 5:41:48 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;

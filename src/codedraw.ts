@@ -184,7 +184,7 @@ type Instruction = {
   // let editor: any = null;
   let draw: Draw | null = null;
   let errorToast: HTMLSpanElement | null = null;
-  let docs: HTMLDivElement | null = null;
+//   let docs: HTMLDivElement | null = null;
   
 //   function toggleDocs() {
 //     docs!.classList.toggle("hidden");
@@ -239,7 +239,7 @@ type Instruction = {
       },
     });
     errorToast = document.getElementById("error") as HTMLSpanElement;
-    docs = document.getElementById("documentation") as HTMLDivElement;
+    // docs = document.getElementById("documentation") as HTMLDivElement;
   
     editor = CodeMirror.fromTextArea(document.getElementById("code") as HTMLTextAreaElement, {
       lineNumbers: true,
