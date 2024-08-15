@@ -858,4 +858,6 @@ real    1m32.231s
 user    0m18.133s
 sys     0m5.839s
 Thu Aug 15 07:52:29 EDT 2024
-kushal@kus2023:~/src/ladybird$
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull originmaster; time git status; date; time ./Meta/ladybird.sh run ladybird; date;1589.641 RequestServer(18062:18079): TLS Socket read failed, error: recv: Connection reset by peer (errno=104)
+1599.651 RequestServer(18062:18079): ConnectionCache request finish handler, reconnection failed with Name or service not known
+1607.031 WebContent(18081): WebContent client disconnected during DidRequestCookie. Exiting peacefully.
