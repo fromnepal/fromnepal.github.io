@@ -3015,3 +3015,1303 @@ Everything up-to-date
 Thursday, August 15, 2024 12:31:23 PM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 15, 2024 12:32:34 PM
+Thursday, August 15, 2024 12:32:34 PM
+[main b3cba356] add all files
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 src/recruiting/om-background-check-confirmation.pdf
+Thursday, August 15, 2024 12:32:34 PM
+Thursday, August 15, 2024 12:32:34 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Thursday, August 15, 2024 12:32:34 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 150ms
+Done in 0.84s.
+Thursday, August 15, 2024 12:32:35 PM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, August 15, 2024 12:32:36 PM
+[main 4fe5c00] build application
+ 2 files changed, 170 insertions(+)
+Thursday, August 15, 2024 12:32:36 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 15, 2024 12:32:37 PM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 805 bytes | 805.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   f2d4d9c..4fe5c00  main -> main
+Thursday, August 15, 2024 12:32:37 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> ssh 192.168.0.102
+Linux colorado 6.1.0-23-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.99-1 (2024-07-15) x86_64The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Thu Aug 15 08:37:58 2024 from 192.168.0.100
+kushal@colorado:~$ sudo su -
+[sudo] password for kushal:
+root@colorado:~# apt update; apt upgrade -y; apt autoremove -y;
+Hit:1 http://deb.debian.org/debian bookworm InRelease
+Hit:2 http://security.debian.org/debian-security bookworm-security InRelease
+Get:3 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Fetched 55.4 kB in 0s (114 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+root@colorado:~# exit
+logout
+kushal@colorado:~$ node --version
+v20.16.0
+kushal@colorado:~$ ls -a
+.   .bash_history  .bashrc  .config  .docker    .dotnet    duckdns  .face.icon  .gnupg  .mozilla  .nvm      .profile  .selected_editor  .ssh                       Templates  Videos          .wget-hsts
+..  .bash_logout   .cache   Desktop  Documents  Downloads  .face    .gitconfig  .local  Music     Pictures  Public    source            .sudo_as_admin_successful  test.txt   .vscode-server
+kushal@colorado:~$ ls ~/source/
+docker-wyze-bridge
+kushal@colorado:~$ cat ~/.ssh/
+authorized_keys  id_rsa           id_rsa.pub       known_hosts      known_hosts.old
+kushal@colorado:~$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCTFAtTQBNlqzEi59aILAREoQyJhBqjJ4PNrNiOtTO1kB91lk76TwpfzKkkocUvzfskqZMuF0ZXUzZjy1EL7ydfgZc+/R3Iu41TEp+zNgCGkaG1Wmns6BkUuutP3ImKa3yqDz7luK7fam4Qq3Iqxk5J2byYGN17LCrh2ZB42hf2miccEN1PxQrEZIa5bl3Yx0DUzHDl1wM15BLdJY+HnmEKIAtxPQsQ3/5LnGQv911aEns04wMUx6GVl8J98KfThpSKxzmwqdBa3AEnUG/09EWOOXRHE/Lw25Dr9dgvAvjBxvVsMBQlihupSnRFqb1ub4AHsuwfT5f64AvFPg4oC+GJrwkUbziCRY434mCv5z/dn6nJuubKYe2D3nNIhFKgaiiVufCaiM/96C/RZjKlLRCqIuCs/YxZMrr7ilZe9dbGHx16xx3ZXCUvGW2yFwc+ZEee24gAhI1Gr97xhQ+jx9n0wvy/uqjSOOWgUr0Y5sytSsI4GRhHXMOopUcU1TZXh414KgkBG16R8nGL/RiVRhia6MDgsKUoyL0FrcOYgPxuuUhmPa0pIblIzDw2W+97nqXzMO7OJyzN8KasXTXfZvjKkoFViUSBgncvyuZcMxyOSDBoaZHXkTfbjWWa2h/mOcDEDKiKTNbCISckLLSCoIeho0nu2beEvd2SfdxW/35IsQ== kushaldeveloper@gmail.com
+kushal@colorado:~$ cd ~/source/; git clone git@github.com:angulareighteen/angulareighteen.github.io.git angulareighteen
+Cloning into 'angulareighteen'...
+remote: Enumerating objects: 197, done.
+remote: Counting objects: 100% (197/197), done.
+remote: Compressing objects: 100% (127/127), done.
+remote: Total 197 (delta 119), reused 145 (delta 67), pack-reused 0 (from 0)
+Receiving objects: 100% (197/197), 556.64 KiB | 4.28 MiB/s, done.
+Resolving deltas: 100% (119/119), done.
+kushal@colorado:~/source$ cd ~/source/angulareighteen/; nvm --version; node --version; npm --version; npm install --global yarn; date;
+0.40.0
+v20.16.0
+10.8.1
+
+added 1 package in 1s
+npm notice
+npm notice New patch version of npm available! 10.8.1 -> 10.8.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.8.2
+npm notice To update run: npm install -g npm@10.8.2
+npm notice
+Thu Aug 15 12:46:41 PM EDT 2024
+kushal@colorado:~/source/angulareighteen$ date; cd ~/source/angulareighteen/; nvm --version; nvm install --lts; node --version; npm --version; npm install --global yarn; date; time yarn; date;
+Thu Aug 15 12:47:25 PM EDT 2024
+0.40.0
+Installing latest LTS version.
+v20.16.0 is already installed.
+Now using node v20.16.0 (npm v10.8.1)
+v20.16.0
+10.8.1
+
+changed 1 package in 711ms
+Thu Aug 15 12:47:27 PM EDT 2024
+yarn install v1.22.22
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+warning Pattern ["string-width-cjs@npm:string-width@^4.2.0"] is trying to unpack in the same destination "/home/kushal/.cache/yarn/v6/npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity/node_modules/string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["string-width@^4.2.3"] is trying to unpack in the same destination "/home/kushal/.cache/yarn/v6/npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity/node_modules/string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["string-width@^4.2.0"] is trying to unpack in the same destination "/home/kushal/.cache/yarn/v6/npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity/node_modules/string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["wrap-ansi@^7.0.0"] is trying to unpack in the same destination "/home/kushal/.cache/yarn/v6/npm-wrap-ansi-cjs-7.0.0-67e145cff510a6a6984bdf1152911d69d2eb9e43-integrity/node_modules/wrap-ansi-cjs" as pattern ["wrap-ansi-cjs@npm:wrap-ansi@^7.0.0"]. This could result in non-deterministic behavior, skipping.
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+Done in 43.90s.
+
+real    0m44.265s
+user    0m49.076s
+sys     0m14.787s
+Thu Aug 15 12:48:11 PM EDT 2024
+kushal@colorado:~/source/angulareighteen$ date; cd ~/source/angulareighteen/; nvm --version; nvm install --lts; node --version; npm --version; npm install --global yarn; date; time yarn; date; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; yarn; date; yarn runng update; date; yarn run ng build; date; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; yarn run ng test; date; yarn run ng update @angular/core @angular/cli @angular/material; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; echo y | npx update-browserslist-db@latest; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; git remote show origin; date;
+Thu Aug 15 12:50:31 PM EDT 2024
+0.40.0
+Installing latest LTS version.
+v20.16.0 is already installed.
+Now using node v20.16.0 (npm v10.8.1)
+v20.16.0
+10.8.1
+
+changed 1 package in 707ms
+Thu Aug 15 12:50:33 PM EDT 2024
+yarn install v1.22.22
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.68s.
+
+real    0m0.913s
+user    0m1.580s
+sys     0m0.083s
+Thu Aug 15 12:50:33 PM EDT 2024
+Thu Aug 15 12:50:33 PM EDT 2024
+Thu Aug 15 12:50:34 PM EDT 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thu Aug 15 12:50:34 PM EDT 2024
+Thu Aug 15 12:50:34 PM EDT 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thu Aug 15 12:50:34 PM EDT 2024
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Thu Aug 15 12:50:35 PM EDT 2024
+Everything up-to-date
+Thu Aug 15 12:50:35 PM EDT 2024
+yarn install v1.22.22
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.67s.
+Thu Aug 15 12:50:36 PM EDT 2024
+yarn run v1.22.22
+$ ng update
+Unknown error: Error [ERR_REQUIRE_ESM]: require() of ES Module /home/kushal/source/angulareighteen/node_modules/string-width/index.js from /home/kushal/source/angulareighteen/node_modules/cliui/build/index.cjs not supported.
+Instead change the require of index.js in /home/kushal/source/angulareighteen/node_modules/cliui/build/index.cjs to a dynamic import() which is available in all CommonJS modules.
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Thu Aug 15 12:50:37 PM EDT 2024
+yarn run v1.22.22
+$ ng build
+Unknown error: Error [ERR_REQUIRE_ESM]: require() of ES Module /home/kushal/source/angulareighteen/node_modules/string-width/index.js from /home/kushal/source/angulareighteen/node_modules/cliui/build/index.cjs not supported.
+Instead change the require of index.js in /home/kushal/source/angulareighteen/node_modules/cliui/build/index.cjs to a dynamic import() which is available in all CommonJS modules.
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Thu Aug 15 12:50:37 PM EDT 2024
+Thu Aug 15 12:50:37 PM EDT 2024
+Thu Aug 15 12:50:38 PM EDT 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thu Aug 15 12:50:38 PM EDT 2024
+Thu Aug 15 12:50:38 PM EDT 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thu Aug 15 12:50:38 PM EDT 2024
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Thu Aug 15 12:50:38 PM EDT 2024
+Everything up-to-date
+Thu Aug 15 12:50:39 PM EDT 2024
+yarn run v1.22.22
+$ ng test
+Unknown error: Error [ERR_REQUIRE_ESM]: require() of ES Module /home/kushal/source/angulareighteen/node_modules/string-width/index.js from /home/kushal/source/angulareighteen/node_modules/cliui/build/index.cjs not supported.
+Instead change the require of index.js in /home/kushal/source/angulareighteen/node_modules/cliui/build/index.cjs to a dynamic import() which is available in all CommonJS modules.
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Thu Aug 15 12:50:39 PM EDT 2024
+yarn run v1.22.22
+$ ng update @angular/core @angular/cli @angular/material
+Unknown error: Error [ERR_REQUIRE_ESM]: require() of ES Module /home/kushal/source/angulareighteen/node_modules/string-width/index.js from /home/kushal/source/angulareighteen/node_modules/cliui/build/index.cjs not supported.
+Instead change the require of index.js in /home/kushal/source/angulareighteen/node_modules/cliui/build/index.cjs to a dynamic import() which is available in all CommonJS modules.
+error Command failed with exit code 127.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Thu Aug 15 12:50:40 PM EDT 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thu Aug 15 12:50:40 PM EDT 2024
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Thu Aug 15 12:50:41 PM EDT 2024
+Everything up-to-date
+Thu Aug 15 12:50:41 PM EDT 2024
+npm warn exec The following package was not found and will be installed: update-browserslist-db@1.1.0
+Latest version:     1.0.30001651
+Installed version:  1.0.30001644
+Removing old caniuse-lite from lock file
+Installing new caniuse-lite version
+$ yarn add -W caniuse-lite
+warning Pattern ["string-width-cjs@npm:string-width@^4.2.0"] is trying to unpack in the same destination "/home/kushal/.cache/yarn/v6/npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity/node_modules/string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["string-width@^4.2.3"] is trying to unpack in the same destination "/home/kushal/.cache/yarn/v6/npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity/node_modules/string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["string-width@^4.2.0"] is trying to unpack in the same destination "/home/kushal/.cache/yarn/v6/npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity/node_modules/string-width-cjs" as pattern ["string-width@^4.1.0"]. This could result in non-deterministic behavior, skipping.
+warning Pattern ["wrap-ansi@^7.0.0"] is trying to unpack in the same destination "/home/kushal/.cache/yarn/v6/npm-wrap-ansi-cjs-7.0.0-67e145cff510a6a6984bdf1152911d69d2eb9e43-integrity/node_modules/wrap-ansi-cjs" as pattern ["wrap-ansi-cjs@npm:wrap-ansi@^7.0.0"]. This could result in non-deterministic behavior, skipping.
+Cleaning package.json dependencies from caniuse-lite
+$ yarn remove -W caniuse-lite
+caniuse-lite has been successfully updated
+
+No target browser changes
+Thu Aug 15 12:50:57 PM EDT 2024
+Thu Aug 15 12:50:57 PM EDT 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   yarn.lock
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Thu Aug 15 12:50:57 PM EDT 2024
+Thu Aug 15 12:50:57 PM EDT 2024
+[master ae6d0e3] add all files
+ 1 file changed, 31 insertions(+), 8 deletions(-)
+Thu Aug 15 12:50:57 PM EDT 2024
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Current branch master is up to date.
+Thu Aug 15 12:50:58 PM EDT 2024
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 502 bytes | 502.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:angulareighteen/angulareighteen.github.io.git
+   6c1958e..ae6d0e3  master -> master
+Thu Aug 15 12:50:59 PM EDT 2024
+* remote origin
+  Fetch URL: git@github.com:angulareighteen/angulareighteen.github.io.git
+  Push  URL: git@github.com:angulareighteen/angulareighteen.github.io.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Thu Aug 15 12:50:59 PM EDT 2024
+kushal@colorado:~/source/angulareighteen$
+kushal@colorado:~/source/angulareighteen$ yarn upgrade
+yarn upgrade v1.22.22
+[1/4] Resolving packages...
+warning karma > glob@7.2.3: Glob versions prior to v9 are no longer supported
+warning karma > rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+warning karma > rimraf > glob@7.2.3: Glob versions prior to v9 are no longer supported
+warning karma > glob > inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Rebuilding all packages...
+success Saved lockfile.
+success Saved 594 new dependencies.
+info Direct dependencies
+├─ @angular-devkit/build-angular@18.2.0
+├─ @angular/animations@18.2.0
+├─ @angular/cdk@18.2.0
+├─ @angular/cli@18.2.0
+├─ @angular/common@18.2.0
+├─ @angular/compiler-cli@18.2.0
+├─ @angular/compiler@18.2.0
+├─ @angular/core@18.2.0
+├─ @angular/forms@18.2.0
+├─ @angular/material@18.2.0
+├─ @angular/platform-browser-dynamic@18.2.0
+├─ @angular/platform-browser@18.2.0
+├─ @angular/router@18.2.0
+├─ @types/jasmine@5.1.4
+├─ add@2.0.6
+├─ jasmine-core@5.1.2
+├─ karma-chrome-launcher@3.2.0
+├─ karma-coverage@2.2.1
+├─ karma-firefox-launcher@2.1.3
+├─ karma-jasmine-html-reporter@2.1.0
+├─ karma-jasmine@5.1.0
+├─ karma@6.4.4
+├─ ng@0.0.0
+├─ typescript@5.4.5
+└─ zone.js@0.14.10
+info All dependencies
+├─ @angular-devkit/build-angular@18.2.0
+├─ @angular-devkit/build-webpack@0.1802.0
+├─ @angular/animations@18.2.0
+├─ @angular/build@18.2.0
+├─ @angular/cdk@18.2.0
+├─ @angular/cli@18.2.0
+├─ @angular/common@18.2.0
+├─ @angular/compiler-cli@18.2.0
+├─ @angular/compiler@18.2.0
+├─ @angular/core@18.2.0
+├─ @angular/forms@18.2.0
+├─ @angular/material@18.2.0
+├─ @angular/platform-browser-dynamic@18.2.0
+├─ @angular/platform-browser@18.2.0
+├─ @angular/router@18.2.0
+├─ @babel/code-frame@7.24.7
+├─ @babel/compat-data@7.25.2
+├─ @babel/generator@7.25.0
+├─ @babel/helper-builder-binary-assignment-operator-visitor@7.24.7
+├─ @babel/helper-compilation-targets@7.25.2
+├─ @babel/helper-module-transforms@7.25.2
+├─ @babel/helper-plugin-utils@7.24.8
+├─ @babel/helper-remap-async-to-generator@7.25.0
+├─ @babel/helper-string-parser@7.24.8
+├─ @babel/helper-wrap-function@7.25.0
+├─ @babel/helpers@7.25.0
+├─ @babel/highlight@7.24.7
+├─ @babel/parser@7.25.3
+├─ @babel/plugin-bugfix-firefox-class-in-computed-class-key@7.25.3
+├─ @babel/plugin-bugfix-safari-class-field-initializer-scope@7.25.0
+├─ @babel/plugin-bugfix-safari-id-destructuring-collision-in-function-expression@7.25.0
+├─ @babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining@7.24.7
+├─ @babel/plugin-bugfix-v8-static-class-fields-redefine-readonly@7.25.0
+├─ @babel/plugin-proposal-private-property-in-object@7.21.0-placeholder-for-preset-env.2
+├─ @babel/plugin-syntax-class-properties@7.12.13
+├─ @babel/plugin-syntax-import-assertions@7.24.7
+├─ @babel/plugin-syntax-import-attributes@7.24.7
+├─ @babel/plugin-syntax-import-meta@7.10.4
+├─ @babel/plugin-syntax-top-level-await@7.14.5
+├─ @babel/plugin-syntax-unicode-sets-regex@7.18.6
+├─ @babel/plugin-transform-arrow-functions@7.24.7
+├─ @babel/plugin-transform-async-generator-functions@7.25.0
+├─ @babel/plugin-transform-async-to-generator@7.24.7
+├─ @babel/plugin-transform-block-scoped-functions@7.24.7
+├─ @babel/plugin-transform-block-scoping@7.25.0
+├─ @babel/plugin-transform-class-properties@7.24.7
+├─ @babel/plugin-transform-class-static-block@7.24.7
+├─ @babel/plugin-transform-classes@7.25.0
+├─ @babel/plugin-transform-computed-properties@7.24.7
+├─ @babel/plugin-transform-destructuring@7.24.8
+├─ @babel/plugin-transform-dotall-regex@7.24.7
+├─ @babel/plugin-transform-duplicate-keys@7.24.7
+├─ @babel/plugin-transform-duplicate-named-capturing-groups-regex@7.25.0
+├─ @babel/plugin-transform-dynamic-import@7.24.7
+├─ @babel/plugin-transform-exponentiation-operator@7.24.7
+├─ @babel/plugin-transform-export-namespace-from@7.24.7
+├─ @babel/plugin-transform-for-of@7.24.7
+├─ @babel/plugin-transform-function-name@7.25.1
+├─ @babel/plugin-transform-json-strings@7.24.7
+├─ @babel/plugin-transform-literals@7.25.2
+├─ @babel/plugin-transform-logical-assignment-operators@7.24.7
+├─ @babel/plugin-transform-member-expression-literals@7.24.7
+├─ @babel/plugin-transform-modules-amd@7.24.7
+├─ @babel/plugin-transform-modules-commonjs@7.24.8
+├─ @babel/plugin-transform-modules-systemjs@7.25.0
+├─ @babel/plugin-transform-modules-umd@7.24.7
+├─ @babel/plugin-transform-named-capturing-groups-regex@7.24.7
+├─ @babel/plugin-transform-new-target@7.24.7
+├─ @babel/plugin-transform-nullish-coalescing-operator@7.24.7
+├─ @babel/plugin-transform-numeric-separator@7.24.7
+├─ @babel/plugin-transform-object-rest-spread@7.24.7
+├─ @babel/plugin-transform-object-super@7.24.7
+├─ @babel/plugin-transform-optional-catch-binding@7.24.7
+├─ @babel/plugin-transform-optional-chaining@7.24.8
+├─ @babel/plugin-transform-private-methods@7.24.7
+├─ @babel/plugin-transform-private-property-in-object@7.24.7
+├─ @babel/plugin-transform-property-literals@7.24.7
+├─ @babel/plugin-transform-regenerator@7.24.7
+├─ @babel/plugin-transform-reserved-words@7.24.7
+├─ @babel/plugin-transform-runtime@7.24.7
+├─ @babel/plugin-transform-shorthand-properties@7.24.7
+├─ @babel/plugin-transform-spread@7.24.7
+├─ @babel/plugin-transform-sticky-regex@7.24.7
+├─ @babel/plugin-transform-template-literals@7.24.7
+├─ @babel/plugin-transform-typeof-symbol@7.24.8
+├─ @babel/plugin-transform-unicode-escapes@7.24.7
+├─ @babel/plugin-transform-unicode-property-regex@7.24.7
+├─ @babel/plugin-transform-unicode-regex@7.24.7
+├─ @babel/plugin-transform-unicode-sets-regex@7.24.7
+├─ @babel/preset-env@7.25.3
+├─ @babel/preset-modules@0.1.6-no-external-plugins
+├─ @babel/regjsgen@0.8.0
+├─ @babel/runtime@7.25.0
+├─ @babel/traverse@7.25.3
+├─ @colors/colors@1.5.0
+├─ @discoveryjs/json-ext@0.6.1
+├─ @esbuild/linux-x64@0.23.0
+├─ @inquirer/checkbox@2.4.7
+├─ @inquirer/confirm@3.1.22
+├─ @inquirer/editor@2.1.22
+├─ @inquirer/expand@2.1.22
+├─ @inquirer/input@2.2.9
+├─ @inquirer/number@1.0.10
+├─ @inquirer/password@2.1.22
+├─ @inquirer/prompts@5.3.8
+├─ @inquirer/rawlist@2.2.4
+├─ @inquirer/search@1.0.7
+├─ @inquirer/select@2.4.7
+├─ @isaacs/cliui@8.0.2
+├─ @istanbuljs/schema@0.1.3
+├─ @jridgewell/resolve-uri@3.1.2
+├─ @jridgewell/set-array@1.2.1
+├─ @jridgewell/source-map@0.3.6
+├─ @jridgewell/trace-mapping@0.3.25
+├─ @jsonjoy.com/base64@1.1.2
+├─ @jsonjoy.com/json-pack@1.1.0
+├─ @jsonjoy.com/util@1.3.0
+├─ @leichtgewicht/ip-codec@2.0.5
+├─ @listr2/prompt-adapter-inquirer@2.0.15
+├─ @lmdb/lmdb-linux-x64@3.0.13
+├─ @msgpackr-extract/msgpackr-extract-linux-x64@3.0.3
+├─ @ngtools/webpack@18.2.0
+├─ @nodelib/fs.scandir@2.1.5
+├─ @nodelib/fs.stat@2.0.5
+├─ @nodelib/fs.walk@1.2.8
+├─ @npmcli/agent@2.2.2
+├─ @npmcli/fs@3.1.1
+├─ @npmcli/installed-package-contents@2.1.0
+├─ @npmcli/node-gyp@3.0.0
+├─ @npmcli/package-json@5.2.0
+├─ @npmcli/redact@2.0.1
+├─ @npmcli/run-script@8.1.0
+├─ @pkgjs/parseargs@0.11.0
+├─ @rollup/rollup-linux-x64-gnu@4.20.0
+├─ @rollup/rollup-linux-x64-musl@4.20.0
+├─ @schematics/angular@18.2.0
+├─ @sigstore/sign@2.3.2
+├─ @sigstore/tuf@2.3.4
+├─ @sigstore/verify@1.2.1
+├─ @sindresorhus/merge-streams@2.3.0
+├─ @socket.io/component-emitter@3.1.2
+├─ @tufjs/canonical-json@2.0.0
+├─ @tufjs/models@2.0.1
+├─ @types/body-parser@1.19.5
+├─ @types/bonjour@3.5.13
+├─ @types/connect-history-api-fallback@1.5.4
+├─ @types/connect@3.4.38
+├─ @types/cookie@0.4.1
+├─ @types/cors@2.8.17
+├─ @types/eslint-scope@3.7.7
+├─ @types/eslint@9.6.0
+├─ @types/express-serve-static-core@4.19.5
+├─ @types/express@4.17.21
+├─ @types/http-errors@2.0.4
+├─ @types/http-proxy@1.17.15
+├─ @types/jasmine@5.1.4
+├─ @types/json-schema@7.0.15
+├─ @types/mime@1.3.5
+├─ @types/mute-stream@0.0.4
+├─ @types/node-forge@1.3.11
+├─ @types/range-parser@1.2.7
+├─ @types/retry@0.12.2
+├─ @types/serve-index@1.9.4
+├─ @types/serve-static@1.15.7
+├─ @types/sockjs@0.3.36
+├─ @types/wrap-ansi@3.0.0
+├─ @types/ws@8.5.12
+├─ @webassemblyjs/floating-point-hex-parser@1.11.6
+├─ @webassemblyjs/helper-numbers@1.11.6
+├─ @webassemblyjs/helper-wasm-section@1.12.1
+├─ @webassemblyjs/wasm-edit@1.12.1
+├─ @webassemblyjs/wasm-opt@1.12.1
+├─ @webassemblyjs/wast-printer@1.12.1
+├─ @xtuc/ieee754@1.2.0
+├─ @yarnpkg/lockfile@1.1.0
+├─ abbrev@2.0.0
+├─ acorn-import-attributes@1.9.5
+├─ acorn@8.12.1
+├─ add@2.0.6
+├─ adjust-sourcemap-loader@4.0.0
+├─ agent-base@7.1.1
+├─ aggregate-error@3.1.0
+├─ ajv-formats@2.1.1
+├─ ajv-keywords@5.1.0
+├─ ansi-colors@4.1.3
+├─ ansi-html-community@0.0.8
+├─ anymatch@3.1.3
+├─ argparse@2.0.1
+├─ array-flatten@1.1.1
+├─ autoprefixer@10.4.20
+├─ babel-loader@9.1.3
+├─ babel-plugin-polyfill-corejs3@0.10.6
+├─ base64-js@1.5.1
+├─ base64id@2.0.0
+├─ batch@0.6.1
+├─ big.js@5.2.2
+├─ binary-extensions@2.3.0
+├─ bl@4.1.0
+├─ body-parser@1.20.2
+├─ bonjour-service@1.2.1
+├─ brace-expansion@1.1.11
+├─ braces@3.0.3
+├─ buffer-from@1.1.2
+├─ buffer@5.7.1
+├─ bundle-name@4.1.0
+├─ call-bind@1.0.7
+├─ callsites@3.1.0
+├─ chardet@0.7.0
+├─ chokidar@3.6.0
+├─ chownr@2.0.0
+├─ chrome-trace-event@1.0.4
+├─ clean-stack@2.2.0
+├─ cli-cursor@3.1.0
+├─ cli-spinners@2.9.2
+├─ cli-truncate@4.0.0
+├─ cli-width@4.1.0
+├─ cliui@8.0.1
+├─ clone-deep@4.0.1
+├─ clone@1.0.4
+├─ color-convert@2.0.1
+├─ color-name@1.1.4
+├─ colorette@2.0.20
+├─ commander@2.20.3
+├─ common-path-prefix@3.0.0
+├─ compressible@2.0.18
+├─ compression@1.7.4
+├─ concat-map@0.0.1
+├─ connect-history-api-fallback@2.0.0
+├─ connect@3.7.0
+├─ content-disposition@0.5.4
+├─ content-type@1.0.5
+├─ convert-source-map@1.9.0
+├─ cookie-signature@1.0.6
+├─ cookie@0.6.0
+├─ copy-anything@2.0.6
+├─ copy-webpack-plugin@12.0.2
+├─ core-js-compat@3.38.0
+├─ core-util-is@1.0.3
+├─ cosmiconfig@9.0.0
+├─ cross-spawn@7.0.3
+├─ css-loader@7.1.2
+├─ css-select@5.1.0
+├─ css-what@6.1.0
+├─ cssesc@3.0.0
+├─ custom-event@1.0.1
+├─ default-browser-id@5.0.0
+├─ default-browser@5.2.1
+├─ default-gateway@6.0.3
+├─ defaults@1.0.4
+├─ define-data-property@1.1.4
+├─ define-lazy-prop@3.0.0
+├─ detect-libc@2.0.3
+├─ detect-node@2.1.0
+├─ di@0.0.1
+├─ dns-packet@5.6.1
+├─ dom-serialize@2.2.1
+├─ eastasianwidth@0.2.0
+├─ electron-to-chromium@1.5.8
+├─ emojis-list@3.0.0
+├─ encoding@0.1.13
+├─ engine.io-parser@5.2.3
+├─ engine.io@6.5.5
+├─ enhanced-resolve@5.17.1
+├─ ent@2.2.1
+├─ env-paths@2.2.1
+├─ environment@1.1.0
+├─ err-code@2.0.3
+├─ errno@0.1.8
+├─ error-ex@1.3.2
+├─ es-module-lexer@1.5.4
+├─ esbuild-wasm@0.23.0
+├─ esbuild@0.23.0
+├─ escape-string-regexp@1.0.5
+├─ eslint-scope@5.1.1
+├─ esrecurse@4.3.0
+├─ estraverse@4.3.0
+├─ esutils@2.0.3
+├─ eventemitter3@4.0.7
+├─ events@3.3.0
+├─ execa@5.1.1
+├─ exponential-backoff@3.1.1
+├─ express@4.19.2
+├─ extend@3.0.2
+├─ external-editor@3.1.0
+├─ fast-json-stable-stringify@2.1.0
+├─ fast-uri@3.0.1
+├─ fastq@1.17.1
+├─ faye-websocket@0.11.4
+├─ fill-range@7.1.1
+├─ finalhandler@1.1.2
+├─ find-cache-dir@4.0.0
+├─ find-up@6.3.0
+├─ flat@5.0.2
+├─ flatted@3.3.1
+├─ follow-redirects@1.15.6
+├─ foreground-child@3.3.0
+├─ forwarded@0.2.0
+├─ fraction.js@4.3.7
+├─ fs-extra@8.1.0
+├─ fs.realpath@1.0.0
+├─ gensync@1.0.0-beta.2
+├─ get-intrinsic@1.2.4
+├─ get-stream@6.0.1
+├─ glob-parent@5.1.2
+├─ glob@10.4.5
+├─ globby@14.0.2
+├─ handle-thing@2.0.1
+├─ has-property-descriptors@1.0.2
+├─ has-proto@1.0.3
+├─ has-symbols@1.0.3
+├─ hasown@2.0.2
+├─ hpack.js@2.1.6
+├─ html-entities@2.5.2
+├─ html-escaper@2.0.2
+├─ htmlparser2@8.0.2
+├─ http-cache-semantics@4.1.1
+├─ http-deceiver@1.2.7
+├─ http-parser-js@0.5.8
+├─ http-proxy-agent@7.0.2
+├─ http-proxy-middleware@3.0.0
+├─ https-proxy-agent@7.0.5
+├─ human-signals@2.1.0
+├─ hyperdyperid@1.2.0
+├─ iconv-lite@0.4.24
+├─ ieee754@1.2.1
+├─ ignore-walk@6.0.5
+├─ ignore@5.3.2
+├─ image-size@0.5.5
+├─ immutable@4.3.7
+├─ import-fresh@3.3.0
+├─ imurmurhash@0.1.4
+├─ indent-string@4.0.0
+├─ inflight@1.0.6
+├─ inherits@2.0.4
+├─ ini@4.1.3
+├─ ip-address@9.0.5
+├─ ipaddr.js@2.2.0
+├─ is-arrayish@0.2.1
+├─ is-binary-path@2.1.0
+├─ is-core-module@2.15.0
+├─ is-docker@2.2.1
+├─ is-extglob@2.1.1
+├─ is-glob@4.0.3
+├─ is-interactive@1.0.0
+├─ is-lambda@1.0.1
+├─ is-network-error@1.1.0
+├─ is-number@7.0.0
+├─ is-plain-object@2.0.4
+├─ is-stream@2.0.1
+├─ is-what@3.14.1
+├─ is-wsl@2.2.0
+├─ isarray@1.0.0
+├─ isbinaryfile@4.0.10
+├─ isobject@3.0.1
+├─ istanbul-lib-instrument@6.0.3
+├─ istanbul-lib-source-maps@4.0.1
+├─ istanbul-reports@3.1.7
+├─ jackspeak@3.4.3
+├─ jasmine-core@5.1.2
+├─ jest-worker@27.5.1
+├─ jiti@1.21.6
+├─ js-tokens@4.0.0
+├─ js-yaml@4.1.0
+├─ jsbn@1.1.0
+├─ jsesc@2.5.2
+├─ json-parse-even-better-errors@2.3.1
+├─ json-schema-traverse@1.0.0
+├─ json5@2.2.3
+├─ jsonfile@4.0.0
+├─ jsonparse@1.3.1
+├─ karma-chrome-launcher@3.2.0
+├─ karma-coverage@2.2.1
+├─ karma-firefox-launcher@2.1.3
+├─ karma-jasmine-html-reporter@2.1.0
+├─ karma-jasmine@5.1.0
+├─ karma-source-map-support@1.4.0
+├─ karma@6.4.4
+├─ launch-editor@2.8.1
+├─ less-loader@12.2.0
+├─ less@4.2.0
+├─ license-webpack-plugin@4.0.2
+├─ lines-and-columns@1.2.4
+├─ lmdb@3.0.13
+├─ loader-runner@4.3.0
+├─ locate-path@7.2.0
+├─ lodash.debounce@4.0.8
+├─ lodash@4.17.21
+├─ log-symbols@4.1.0
+├─ log-update@6.1.0
+├─ log4js@6.9.1
+├─ make-dir@2.1.0
+├─ media-typer@0.3.0
+├─ memfs@4.11.1
+├─ merge-descriptors@1.0.1
+├─ merge2@1.4.1
+├─ methods@1.1.2
+├─ micromatch@4.0.7
+├─ mime-db@1.52.0
+├─ mime-types@2.1.35
+├─ mime@1.6.0
+├─ mimic-fn@2.1.0
+├─ mimic-function@5.0.1
+├─ mini-css-extract-plugin@2.9.0
+├─ minimalistic-assert@1.0.1
+├─ minimist@1.2.8
+├─ minipass-collect@2.0.1
+├─ minipass-sized@1.0.3
+├─ mkdirp@0.5.6
+├─ ms@2.1.2
+├─ msgpackr-extract@3.0.3
+├─ msgpackr@1.11.0
+├─ multicast-dns@7.2.5
+├─ nanoid@3.3.7
+├─ needle@3.3.1
+├─ negotiator@0.6.3
+├─ ng@0.0.0
+├─ nice-napi@1.0.2
+├─ node-addon-api@3.2.1
+├─ node-forge@1.3.1
+├─ node-gyp-build-optional-packages@5.2.2
+├─ node-gyp-build@4.8.1
+├─ node-gyp@10.2.0
+├─ node-releases@2.0.18
+├─ nopt@7.2.1
+├─ normalize-package-data@6.0.2
+├─ normalize-range@0.1.2
+├─ npm-bundled@3.0.1
+├─ npm-install-checks@6.3.0
+├─ npm-packlist@8.0.2
+├─ npm-registry-fetch@17.1.0
+├─ npm-run-path@4.0.1
+├─ nth-check@2.1.1
+├─ object-assign@4.1.1
+├─ object-inspect@1.13.2
+├─ obuf@1.1.2
+├─ on-headers@1.0.2
+├─ onetime@5.1.2
+├─ open@10.1.0
+├─ ordered-binary@1.5.1
+├─ os-tmpdir@1.0.2
+├─ p-limit@4.0.0
+├─ p-locate@6.0.0
+├─ p-map@4.0.0
+├─ p-retry@6.2.0
+├─ package-json-from-dist@1.0.0
+├─ pacote@18.0.6
+├─ parent-module@1.0.1
+├─ parse-json@5.2.0
+├─ parse-node-version@1.0.1
+├─ parse5-sax-parser@7.0.0
+├─ parse5@7.1.2
+├─ path-exists@5.0.0
+├─ path-is-absolute@1.0.1
+├─ path-key@3.1.1
+├─ path-parse@1.0.7
+├─ path-scurry@1.11.1
+├─ path-to-regexp@0.1.7
+├─ path-type@5.0.0
+├─ picomatch@2.3.1
+├─ pify@4.0.1
+├─ pkg-dir@7.0.0
+├─ postcss-loader@8.1.1
+├─ postcss-media-query-parser@0.2.3
+├─ postcss-modules-extract-imports@3.1.0
+├─ postcss-modules-local-by-default@4.0.5
+├─ postcss-modules-scope@3.2.0
+├─ postcss-modules-values@4.0.0
+├─ postcss-selector-parser@6.1.2
+├─ postcss-value-parser@4.2.0
+├─ postcss@8.4.41
+├─ proc-log@4.2.0
+├─ process-nextick-args@2.0.1
+├─ promise-inflight@1.0.1
+├─ proxy-addr@2.0.7
+├─ prr@1.0.1
+├─ punycode@1.4.1
+├─ qjobs@1.2.0
+├─ queue-microtask@1.2.3
+├─ randombytes@2.1.0
+├─ raw-body@2.5.2
+├─ readable-stream@3.6.2
+├─ readdirp@3.6.0
+├─ reflect-metadata@0.2.2
+├─ regenerate-unicode-properties@10.1.1
+├─ regenerator-runtime@0.14.1
+├─ regenerator-transform@0.15.2
+├─ regex-parser@2.3.0
+├─ regexpu-core@5.3.2
+├─ regjsparser@0.9.1
+├─ require-from-string@2.0.2
+├─ requires-port@1.0.0
+├─ resolve-from@4.0.0
+├─ resolve-url-loader@5.0.0
+├─ resolve@1.22.8
+├─ restore-cursor@3.1.0
+├─ retry@0.12.0
+├─ reusify@1.0.4
+├─ rfdc@1.4.1
+├─ rimraf@3.0.2
+├─ rollup@4.20.0
+├─ run-applescript@7.0.0
+├─ run-parallel@1.2.0
+├─ safe-buffer@5.2.1
+├─ safer-buffer@2.1.2
+├─ sass-loader@16.0.0
+├─ sax@1.4.1
+├─ select-hose@2.0.0
+├─ selfsigned@2.4.1
+├─ semver@7.6.3
+├─ serialize-javascript@6.0.2
+├─ serve-index@1.9.1
+├─ serve-static@1.15.0
+├─ set-function-length@1.2.2
+├─ shallow-clone@3.0.1
+├─ shebang-command@2.0.0
+├─ shebang-regex@3.0.0
+├─ shell-quote@1.8.1
+├─ side-channel@1.0.6
+├─ sigstore@2.3.1
+├─ slash@5.1.0
+├─ slice-ansi@5.0.0
+├─ smart-buffer@4.2.0
+├─ socket.io-adapter@2.5.5
+├─ socket.io-parser@4.2.4
+├─ socket.io@4.7.5
+├─ sockjs@0.3.24
+├─ socks-proxy-agent@8.0.4
+├─ socks@2.8.3
+├─ source-map-js@1.2.0
+├─ source-map-loader@5.0.0
+├─ source-map-support@0.5.21
+├─ source-map@0.6.1
+├─ spdx-correct@3.2.0
+├─ spdx-exceptions@2.5.0
+├─ spdy-transport@3.0.0
+├─ spdy@4.0.2
+├─ sprintf-js@1.1.3
+├─ streamroller@3.1.5
+├─ string_decoder@1.3.0
+├─ string-width-cjs@4.2.3
+├─ strip-ansi-cjs@6.0.1
+├─ strip-final-newline@2.0.0
+├─ supports-preserve-symlinks-flag@1.0.0
+├─ symbol-observable@4.0.0
+├─ tapable@2.2.1
+├─ tar@6.2.1
+├─ terser-webpack-plugin@5.3.10
+├─ terser@5.31.6
+├─ thingies@1.21.0
+├─ thunky@1.1.0
+├─ tmp@0.2.3
+├─ to-fast-properties@2.0.0
+├─ to-regex-range@5.0.1
+├─ toidentifier@1.0.1
+├─ tree-dump@1.0.2
+├─ tree-kill@1.2.2
+├─ tuf-js@2.2.1
+├─ type-fest@0.21.3
+├─ typed-assert@1.0.9
+├─ typescript@5.4.5
+├─ ua-parser-js@0.7.38
+├─ undici-types@6.18.2
+├─ unicode-canonical-property-names-ecmascript@2.0.0
+├─ unicode-match-property-ecmascript@2.0.0
+├─ unicode-match-property-value-ecmascript@2.1.0
+├─ unicode-property-aliases-ecmascript@2.1.0
+├─ unicorn-magic@0.1.0
+├─ unique-filename@3.0.0
+├─ unique-slug@4.0.0
+├─ universalify@0.1.2
+├─ update-browserslist-db@1.1.0
+├─ uri-js@4.4.1
+├─ util-deprecate@1.0.2
+├─ uuid@8.3.2
+├─ validate-npm-package-license@3.0.4
+├─ validate-npm-package-name@5.0.1
+├─ void-elements@2.0.1
+├─ wbuf@1.7.3
+├─ wcwidth@1.0.1
+├─ weak-lru-cache@1.2.2
+├─ webpack-dev-middleware@7.3.0
+├─ webpack-dev-server@5.0.4
+├─ webpack-merge@6.0.1
+├─ webpack-sources@3.2.3
+├─ webpack-subresource-integrity@5.1.0
+├─ webpack@5.93.0
+├─ websocket-driver@0.7.4
+├─ websocket-extensions@0.1.4
+├─ wildcard@2.0.1
+├─ wrap-ansi-cjs@7.0.0
+├─ yargs-parser@21.1.1
+├─ yargs@17.7.2
+├─ yocto-queue@1.1.1
+└─ zone.js@0.14.10
+Done in 32.77s.
+kushal@colorado:~/source/angulareighteen$
+kushal@colorado:~/source/angulareighteen$ date; cd ~/source/angulareighteen/; nvm --version; nvm install --lts; node --version; npm --version; npm install --global yarn; date; time yarn; date; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; yarn; date; yarn runng update; date; yarn run ng build; date; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; yarn run ng test; date; yarn run ng update @angular/core @angular/cli @angular/material; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; echo y | npx update-browserslist-db@latest; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; git remote show origin; date;
+Thu Aug 15 12:53:17 PM EDT 2024
+0.40.0
+Installing latest LTS version.
+v20.16.0 is already installed.
+Now using node v20.16.0 (npm v10.8.1)
+v20.16.0
+10.8.1
+
+changed 1 package in 978ms
+Thu Aug 15 12:53:19 PM EDT 2024
+yarn install v1.22.22
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.65s.
+
+real    0m0.908s
+user    0m1.516s
+sys     0m0.095s
+Thu Aug 15 12:53:20 PM EDT 2024
+Thu Aug 15 12:53:20 PM EDT 2024
+Thu Aug 15 12:53:21 PM EDT 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   yarn.lock
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Thu Aug 15 12:53:21 PM EDT 2024
+Thu Aug 15 12:53:21 PM EDT 2024
+[master 1ce28c7] add all files
+ 1 file changed, 726 insertions(+), 823 deletions(-)
+Thu Aug 15 12:53:21 PM EDT 2024
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Current branch master is up to date.
+Thu Aug 15 12:53:21 PM EDT 2024
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 17.12 KiB | 1.71 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:angulareighteen/angulareighteen.github.io.git
+   ae6d0e3..1ce28c7  master -> master
+Thu Aug 15 12:53:22 PM EDT 2024
+yarn install v1.22.22
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.65s.
+Thu Aug 15 12:53:23 PM EDT 2024
+yarn run v1.22.22
+$ ng update
+Using package manager: yarn
+Collecting installed dependencies...
+Found 27 dependencies.
+    We analyzed your package.json and everything seems to be in order. Good work!
+Done in 2.33s.
+Thu Aug 15 12:53:25 PM EDT 2024
+yarn run v1.22.22
+$ ng build
+
+Would you like to share pseudonymous usage data about this project with the Angular Team
+at Google under Google's Privacy Policy at https://policies.google.com/privacy. For more
+details and how to change this setting, see https://angular.dev/cli/analytics.
+
+   no
+Global setting: not set
+Local setting: disabled
+Effective status: disabled
+Initial chunk files   | Names         |  Raw size | Estimated transfer size
+chunk-4IDNITDM.js     | -             | 110.70 kB |                32.61 kB
+main-JWNQWUMJ.js      | main          |  98.84 kB |                25.02 kB
+styles-YO4FQUH5.css   | styles        |  55.98 kB |                 5.95 kB
+polyfills-SCHOHYNV.js | polyfills     |  34.52 kB |                11.29 kB
+
+                      | Initial total | 300.05 kB |                74.86 kB
+
+Lazy chunk files      | Names         |  Raw size | Estimated transfer size
+chunk-DVPUVDW6.js     | browser       |  67.21 kB |                17.46 kB
+
+Application bundle generation complete. [12.068 seconds]
+
+Output location: /home/kushal/source/angulareighteen/docs
+
+Done in 22.57s.
+Thu Aug 15 12:53:48 PM EDT 2024
+Thu Aug 15 12:53:48 PM EDT 2024
+Thu Aug 15 12:53:49 PM EDT 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   angular.json
+        modified:   docs/3rdpartylicenses.txt
+        deleted:    docs/chunk-2OZ2EVAN.js
+        deleted:    docs/chunk-LTO6OPGX.js
+        modified:   docs/index.html
+        deleted:    docs/main-FXPAJVQX.js
+        deleted:    docs/styles-WLX5J3KO.css
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        docs/chunk-4IDNITDM.js
+        docs/chunk-DVPUVDW6.js
+        docs/main-JWNQWUMJ.js
+        docs/styles-YO4FQUH5.css
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Thu Aug 15 12:53:49 PM EDT 2024
+Thu Aug 15 12:53:49 PM EDT 2024
+[master 98934b5] add all files
+ 10 files changed, 192 insertions(+), 191 deletions(-)
+ create mode 100644 docs/chunk-4IDNITDM.js
+ rename docs/{chunk-2OZ2EVAN.js => chunk-DVPUVDW6.js} (94%)
+ delete mode 100644 docs/chunk-LTO6OPGX.js
+ delete mode 100644 docs/main-FXPAJVQX.js
+ create mode 100644 docs/main-JWNQWUMJ.js
+ delete mode 100644 docs/styles-WLX5J3KO.css
+ create mode 100644 docs/styles-YO4FQUH5.css
+Thu Aug 15 12:53:49 PM EDT 2024
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Current branch master is up to date.
+Thu Aug 15 12:53:49 PM EDT 2024
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 90.41 KiB | 6.46 MiB/s, done.
+Total 10 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:angulareighteen/angulareighteen.github.io.git
+   1ce28c7..98934b5  master -> master
+Thu Aug 15 12:53:50 PM EDT 2024
+yarn run v1.22.22
+$ ng test
+✔ Browser application bundle generation complete.
+15 08 2024 12:54:14.583:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
+15 08 2024 12:54:14.585:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
+15 08 2024 12:54:14.595:INFO [launcher]: Starting browser Firefox
+15 08 2024 12:54:19.733:INFO [Firefox 115.0 (Linux x86_64)]: Connected on socket go6qLvd1o8mW0lQmAAAB with id 85523473
+Firefox 115.0 (Linux x86_64): Executed 3 of 3 SUCCESS (0.277 secs / 0.26 secs)
+TOTAL: 3 SUCCESS
+Done in 30.00s.
+Thu Aug 15 12:54:20 PM EDT 2024
+yarn run v1.22.22
+$ ng update @angular/core @angular/cli @angular/material
+Using package manager: yarn
+Collecting installed dependencies...
+Found 27 dependencies.
+Fetching dependency metadata from registry...
+Package '@angular/core' is already up to date.
+Package '@angular/cli' is already up to date.
+Package '@angular/material' is already up to date.
+Done in 1.88s.
+Thu Aug 15 12:54:23 PM EDT 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thu Aug 15 12:54:23 PM EDT 2024
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Thu Aug 15 12:54:23 PM EDT 2024
+Everything up-to-date
+Thu Aug 15 12:54:24 PM EDT 2024
+Latest version:     1.0.30001651
+Installed version:  1.0.30001651
+caniuse-lite is up to date
+caniuse-lite has been successfully updated
+
+No target browser changes
+Thu Aug 15 12:54:27 PM EDT 2024
+Thu Aug 15 12:54:27 PM EDT 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thu Aug 15 12:54:27 PM EDT 2024
+Thu Aug 15 12:54:27 PM EDT 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thu Aug 15 12:54:27 PM EDT 2024
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Thu Aug 15 12:54:28 PM EDT 2024
+Everything up-to-date
+Thu Aug 15 12:54:28 PM EDT 2024
+* remote origin
+  Fetch URL: git@github.com:angulareighteen/angulareighteen.github.io.git
+  Push  URL: git@github.com:angulareighteen/angulareighteen.github.io.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Thu Aug 15 12:54:29 PM EDT 2024
+kushal@colorado:~/source/angulareighteen$
+kushal@colorado:~/source/angulareighteen$ date; cd ~/source/angulareighteen/; nvm --version; nvm install --lts; node --version; npm --version; npm install --global yarn; date; time yarn; date; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; yarn; date; yarn runng update; date; yarn run ng build; date; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; yarn run ng test; date; yarn run ng update @angular/core @angular/cli @angular/material; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; echo y | npx update-browserslist-db@latest; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; git remote show origin; date;
+Thu Aug 15 12:55:18 PM EDT 2024
+0.40.0
+Installing latest LTS version.
+v20.16.0 is already installed.
+Now using node v20.16.0 (npm v10.8.1)
+v20.16.0
+10.8.1
+
+changed 1 package in 724ms
+Thu Aug 15 12:55:19 PM EDT 2024
+yarn install v1.22.22
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.64s.
+
+real    0m0.875s
+user    0m1.535s
+sys     0m0.058s
+Thu Aug 15 12:55:20 PM EDT 2024
+Thu Aug 15 12:55:20 PM EDT 2024
+Thu Aug 15 12:55:21 PM EDT 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thu Aug 15 12:55:21 PM EDT 2024
+Thu Aug 15 12:55:21 PM EDT 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thu Aug 15 12:55:21 PM EDT 2024
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Thu Aug 15 12:55:21 PM EDT 2024
+Everything up-to-date
+Thu Aug 15 12:55:22 PM EDT 2024
+yarn install v1.22.22
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.65s.
+Thu Aug 15 12:55:23 PM EDT 2024
+yarn run v1.22.22
+$ ng update
+Using package manager: yarn
+Collecting installed dependencies...
+Found 27 dependencies.
+    We analyzed your package.json and everything seems to be in order. Good work!
+Done in 2.48s.
+Thu Aug 15 12:55:26 PM EDT 2024
+yarn run v1.22.22
+$ ng build
+Initial chunk files   | Names         |  Raw size | Estimated transfer size
+chunk-4IDNITDM.js     | -             | 110.70 kB |                32.61 kB
+main-JWNQWUMJ.js      | main          |  98.84 kB |                25.02 kB
+styles-YO4FQUH5.css   | styles        |  55.98 kB |                 5.95 kB
+polyfills-SCHOHYNV.js | polyfills     |  34.52 kB |                11.29 kB
+
+                      | Initial total | 300.05 kB |                74.86 kB
+
+Lazy chunk files      | Names         |  Raw size | Estimated transfer size
+chunk-DVPUVDW6.js     | browser       |  67.21 kB |                17.46 kB
+
+Application bundle generation complete. [8.446 seconds]
+
+Output location: /home/kushal/source/angulareighteen/docs
+
+Done in 9.57s.
+Thu Aug 15 12:55:35 PM EDT 2024
+Thu Aug 15 12:55:35 PM EDT 2024
+Thu Aug 15 12:55:36 PM EDT 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thu Aug 15 12:55:36 PM EDT 2024
+Thu Aug 15 12:55:36 PM EDT 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thu Aug 15 12:55:36 PM EDT 2024
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Thu Aug 15 12:55:37 PM EDT 2024
+Everything up-to-date
+Thu Aug 15 12:55:37 PM EDT 2024
+yarn run v1.22.22
+$ ng test
+✔ Browser application bundle generation complete.
+15 08 2024 12:55:43.490:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
+15 08 2024 12:55:43.494:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
+15 08 2024 12:55:43.506:INFO [launcher]: Starting browser Firefox
+15 08 2024 12:55:46.183:INFO [Firefox 115.0 (Linux x86_64)]: Connected on socket Yq0hB0GwTEU3IMclAAAB with id 69230498
+Firefox 115.0 (Linux x86_64): Executed 3 of 3 SUCCESS (0.334 secs / 0.29 secs)
+TOTAL: 3 SUCCESS
+Done in 9.79s.
+Thu Aug 15 12:55:47 PM EDT 2024
+yarn run v1.22.22
+$ ng update @angular/core @angular/cli @angular/material
+Using package manager: yarn
+Collecting installed dependencies...
+Found 27 dependencies.
+Fetching dependency metadata from registry...
+Package '@angular/core' is already up to date.
+Package '@angular/cli' is already up to date.
+Package '@angular/material' is already up to date.
+Done in 1.82s.
+Thu Aug 15 12:55:49 PM EDT 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thu Aug 15 12:55:49 PM EDT 2024
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Thu Aug 15 12:55:50 PM EDT 2024
+Everything up-to-date
+Thu Aug 15 12:55:50 PM EDT 2024
+Latest version:     1.0.30001651
+Installed version:  1.0.30001651
+caniuse-lite is up to date
+caniuse-lite has been successfully updated
+
+No target browser changes
+Thu Aug 15 12:55:53 PM EDT 2024
+Thu Aug 15 12:55:53 PM EDT 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thu Aug 15 12:55:54 PM EDT 2024
+Thu Aug 15 12:55:54 PM EDT 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thu Aug 15 12:55:54 PM EDT 2024
+From github.com:angulareighteen/angulareighteen.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Thu Aug 15 12:55:54 PM EDT 2024
+Everything up-to-date
+Thu Aug 15 12:55:54 PM EDT 2024
+* remote origin
+  Fetch URL: git@github.com:angulareighteen/angulareighteen.github.io.git
+  Push  URL: git@github.com:angulareighteen/angulareighteen.github.io.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Thu Aug 15 12:55:55 PM EDT 2024
+kushal@colorado:~/source/angulareighteen$ exit
+logout
+Connection to 192.168.0.102 closed.
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
