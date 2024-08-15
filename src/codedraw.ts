@@ -40,6 +40,7 @@ type Instruction = {
                 }
                 continue;
               }
+              break;
             case '"': {
               column++; // skip "
               char = chars[column];
