@@ -1,5 +1,4 @@
 import '@exampledev/new.css';
-import './codedraw';
 import './styles.css';
 // Define the interface for a blog post based on the JSON structure
 interface BlogPost {
