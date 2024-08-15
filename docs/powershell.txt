@@ -1,75 +1,17 @@
 PowerShell 7.4.4
-Loading personal and system profiles took 549ms.
-PS C:\Users\kushal>
-PS C:\Users\kushal>
-PS C:\Users\kushal> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"  --sponsorblock-mark all --sponsorblock-remove all -i "https://youtu.be/OCFxwSZ7LCo"; date;
+PS C:\Users\kushal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn;date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
-Thursday, August 15, 2024 4:42:27 PM
-
-Drive        :
-Provider     : Microsoft.PowerShell.Core\FileSystem
-ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
-Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
-
-Thursday, August 15, 2024 4:42:27 PM
-[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '-i', 'https://youtu.be/OCFxwSZ7LCo']
-[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
-[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
-[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
-[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
-[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
-[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
-[debug] Proxy map: {}
-[debug] Request Handlers: urllib, requests, websockets, curl_cffi
-[debug] Loaded 1830 extractors
-[youtube] Extracting URL: https://youtu.be/OCFxwSZ7LCo
-[youtube] OCFxwSZ7LCo: Downloading webpage
-[youtube] OCFxwSZ7LCo: Downloading ios player API JSON
-[youtube] OCFxwSZ7LCo: Downloading web creator player API JSON
-[youtube] OCFxwSZ7LCo: Downloading player 53afa3ce
-[debug] Saving youtube-nsig.53afa3ce to cache
-[debug] [youtube] Decrypted nsig eiCSkU0E_Mfl5QxxW => KMJbWDpOPZRP9g
-[debug] Loading youtube-nsig.53afa3ce from cache
-[debug] [youtube] Decrypted nsig 7z2fMHePUt5h9dlKW => -2Nj9gsP_Kq8Mg
-[youtube] OCFxwSZ7LCo: Downloading m3u8 information
-[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
-[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
-[SponsorBlock] Fetching SponsorBlock segments
-[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/8e94?service=YouTube&categories=%5B%22music_offtopic%22%2C+%22outro%22%2C+%22filler%22%2C+%22chapter%22%2C+%22intro%22%2C+%22selfpromo%22%2C+%22sponsor%22%2C+%22preview%22%2C+%22poi_highlight%22%2C+%22interaction%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
-[SponsorBlock] No matching segments were found in the SponsorBlock database
-[info] OCFxwSZ7LCo: Downloading 1 format(s): 623+140
-[info] There are no subtitles for the requested languages
-[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1723776152/ei/OGi-Zr-eDND1j-8P0Yu3yQM/ip/70.104.195.206/id/382171c1267b2c2a/itag/623/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D61618355%3Bdur%3D59.266%3Bgir%3Dyes%3Bitag%3D308%3Blmt%3D1719886929156006/rqh/1/hls_chunk_host/rr3---sn-8xgp1vo-gpje.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/mh/Iw/mm/31,29/mn/sn-8xgp1vo-gpje,sn-8xgp1vo-p5qy/ms/au,rdu/mv/m/mvi/3/pl/20/initcwndbps/1160000/vprv/1/playlist_type/DVR/dover/13/txp/553C434/mt/1723754235/fvip/2/short_key/1/keepalive/yes/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,vprv,playlist_type/sig/AJfQdSswRQIgUw8EY2BOLTSccutetgX4nmv2TrHKE67pkJiJ60UEGlUCIQDB1LwqDdqV75w5yitPn_PgrXXKN9CIKSXM9mos7yTT3Q%3D%3D/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl,initcwndbps/lsig/AGtxev0wRgIhAIJnj1FwIQZCTNLX41KN5RbnkPBcXtlQ40l6Y_Oykvu7AiEAtiQnjhTWXQD1Bvyrr5D1GY44M8rUtO3y0aOpceuZ4q8%3D/playlist/index.m3u8"
-[hlsnative] Downloading m3u8 manifest
-[hlsnative] Total fragments: 13
-[download] Destination: Release_the_negative_terminal_of_the_battery_for_10_seconds_and_the_engine_fault_light_will_go_out-[OCFxwSZ7LCo].f623.mp4
-[debug] File locking is not supported. Proceeding without locking
-[download] 100% of   58.78MiB in 00:00:31 at 1.84MiB/s
-[debug] Invoking http downloader on "https://rr3---sn-8xgp1vo-gpje.googlevideo.com/videoplayback?expire=1723776152&ei=OGi-Zr-eDND1j-8P0Yu3yQM&ip=70.104.195.206&id=o-AL365eW_6CpPZWQ_XHio_hJK0-K-jXjJlK8eCbE7X8uw&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=Iw&mm=31%2C29&mn=sn-8xgp1vo-gpje%2Csn-8xgp1vo-p5qy&ms=au%2Crdu&mv=m&mvi=3&pl=20&initcwndbps=1160000&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=961107&dur=59.326&lmt=1716023290551873&mt=1723754235&fvip=2&keepalive=yes&c=IOS&txp=5532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRgIhAMbJosrnY7Umk6PcXs9VsPQn5js2OzmS23_PAvjjSpFVAiEAyZgch9ecGuanB4PdyNeji6TsqBYXV1HusaBoczluDNA%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRAIgQWzVXoXubpnU-y6UauBGTNM8zQv9D62_-EQf-G00coYCIF5pIhIJcDZqARBoOIAV1EH4BMHH8-MLbjaxCdkEi1fN"
-[download] Destination: Release_the_negative_terminal_of_the_battery_for_10_seconds_and_the_engine_fault_light_will_go_out-[OCFxwSZ7LCo].f140.m4a
-[download] 100% of  938.58KiB in 00:00:00 at 1.70MiB/s
-[Merger] Merging formats into "Release_the_negative_terminal_of_the_battery_for_10_seconds_and_the_engine_fault_light_will_go_out-[OCFxwSZ7LCo].mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Release_the_negative_terminal_of_the_battery_for_10_seconds_and_the_engine_fault_light_will_go_out-[OCFxwSZ7LCo].f623.mp4" -i "file:Release_the_negative_terminal_of_the_battery_for_10_seconds_and_the_engine_fault_light_will_go_out-[OCFxwSZ7LCo].f140.m4a" -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart "file:Release_the_negative_terminal_of_the_battery_for_10_seconds_and_the_engine_fault_light_will_go_out-[OCFxwSZ7LCo].temp.mp4"
-Deleting original file Release_the_negative_terminal_of_the_battery_for_10_seconds_and_the_engine_fault_light_will_go_out-[OCFxwSZ7LCo].f140.m4a (pass -k to keep)
-Deleting original file Release_the_negative_terminal_of_the_battery_for_10_seconds_and_the_engine_fault_light_will_go_out-[OCFxwSZ7LCo].f623.mp4 (pass -k to keep)
-[ModifyChapters] SponsorBlock information is unavailable
-[Metadata] Adding metadata to "Release_the_negative_terminal_of_the_battery_for_10_seconds_and_the_engine_fault_light_will_go_out-[OCFxwSZ7LCo].mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Release_the_negative_terminal_of_the_battery_for_10_seconds_and_the_engine_fault_light_will_go_out-[OCFxwSZ7LCo].mp4" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Release the negative terminal of the battery for 10 seconds and the engine fault light will go out" -metadata "date=20240411" -metadata "purl=https://www.youtube.com/watch?v=OCFxwSZ7LCo" -metadata "comment=https://www.youtube.com/watch?v=OCFxwSZ7LCo" -metadata "artist=chequanxiaoqiao" -metadata:s:1 "language=eng" -movflags +faststart "file:Release_the_negative_terminal_of_the_battery_for_10_seconds_and_the_engine_fault_light_will_go_out-[OCFxwSZ7LCo].temp.mp4"
-Thursday, August 15, 2024 4:44:06 PM
-
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
-
-Thursday, August 15, 2024 4:44:50 PM
-Thursday, August 15, 2024 4:44:50 PM
+Thursday, August 15, 2024 5:02:22 PM
+Thursday, August 15, 2024 5:02:22 PM
 On branch main
 nothing to commit, working tree clean
-Thursday, August 15, 2024 4:44:50 PM
-Thursday, August 15, 2024 4:44:50 PM
+Thursday, August 15, 2024 5:02:22 PM
+Thursday, August 15, 2024 5:02:22 PM
 yarn install v1.22.21
 [1/4] Resolving packages...
 success Already up-to-date.
-Done in 0.08s.
-Thursday, August 15, 2024 4:44:50 PM
+Done in 0.06s.
+Thursday, August 15, 2024 5:02:23 PM
 yarn run v1.22.21
 $ tsc && vite build
 vite v5.2.13 building for production...
@@ -77,23 +19,78 @@ vite v5.2.13 building for production...
 docs/index.html                 0.53 kB │ gzip: 0.32 kB
 docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
 docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
-✓ built in 213ms
-Done in 2.23s.
-Thursday, August 15, 2024 4:44:53 PM
+✓ built in 155ms
+Done in 0.93s.
+Thursday, August 15, 2024 5:02:24 PM
 warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Thursday, August 15, 2024 4:44:54 PM
-On branch main
-Your branch is up to date with 'origin/main'.
-
-nothing to commit, working tree clean
-Thursday, August 15, 2024 4:44:54 PM
+Thursday, August 15, 2024 5:02:24 PM
+[main d18b6d8] build application
+ 3 files changed, 597 insertions(+)
+ create mode 100644 codedraw.html
+ create mode 100644 src/codedraw.css
+ create mode 100644 src/codedraw.js
+Thursday, August 15, 2024 5:02:24 PM
 From github.com:fromnepal/fromnepal.github.io
  * branch            main       -> FETCH_HEAD
-Already up to date.
-Thursday, August 15, 2024 4:44:56 PM
-Everything up-to-date
-Thursday, August 15, 2024 4:44:56 PM
+Current branch main is up to date.
+Thursday, August 15, 2024 5:02:25 PM
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 4.95 KiB | 4.95 MiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:fromnepal/fromnepal.github.io.git
+   8335d26..d18b6d8  main -> main
+Thursday, August 15, 2024 5:02:26 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 15, 2024 5:04:29 PM
+Thursday, August 15, 2024 5:04:29 PM
+On branch main
+nothing to commit, working tree clean
+Thursday, August 15, 2024 5:04:29 PM
+Thursday, August 15, 2024 5:04:29 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Thursday, August 15, 2024 5:04:29 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.2.13 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-BUJcqj8w.js   4.81 kB │ gzip: 2.11 kB
+✓ built in 177ms
+Done in 1.38s.
+Thursday, August 15, 2024 5:04:31 PM
+warning: in the working copy of 'docs/assets/index-BUJcqj8w.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, August 15, 2024 5:04:31 PM
+[main 98b3f2f] build application
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ rename codedraw.html => src/codedraw.html (100%)
+Thursday, August 15, 2024 5:04:32 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 15, 2024 5:04:32 PM
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 338 bytes | 338.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   d18b6d8..98b3f2f  main -> main
+Thursday, August 15, 2024 5:04:33 PM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
