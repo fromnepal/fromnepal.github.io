@@ -12,3 +12,578 @@ Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_
 This message is shown once a day. To disable it please create the
 /home/kushal/.hushlogin file.
 kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; timegit status; date; time ./Meta/ladybird.sh run ladybird; date;
+[sudo] password for kushal:
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1946 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [344 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [17.8 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [2322 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [400 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1111 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [259 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [25.9 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [28.8 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.5 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [672 B]
+Get:17 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1727 kB]
+Get:18 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [286 kB]
+Get:19 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [13.1 kB]
+Get:20 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [2247 kB]
+Get:21 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [387 kB]
+Get:22 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [890 kB]
+Get:23 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [175 kB]
+Get:24 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [19.0 kB]
+Fetched 12.6 MB in 2s (7971 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+12 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+real    0m8.998s
+user    0m0.023s
+sys     0m0.008s
+Listing... Done
+busybox-initramfs/jammy-updates,jammy-security 1:1.30.1-7ubuntu3.1 amd64 [upgradable from: 1:1.30.1-7ubuntu3]
+busybox-static/jammy-updates,jammy-security 1:1.30.1-7ubuntu3.1 amd64 [upgradable from: 1:1.30.1-7ubuntu3]
+qemu-block-extra/jammy-updates,jammy-security 1:6.2+dfsg-2ubuntu6.22 amd64 [upgradable from: 1:6.2+dfsg-2ubuntu6.21]
+qemu-system-common/jammy-updates,jammy-security 1:6.2+dfsg-2ubuntu6.22 amd64 [upgradable from: 1:6.2+dfsg-2ubuntu6.21]
+qemu-system-data/jammy-updates,jammy-security 1:6.2+dfsg-2ubuntu6.22 all [upgradable from: 1:6.2+dfsg-2ubuntu6.21]
+qemu-system-gui/jammy-updates,jammy-security 1:6.2+dfsg-2ubuntu6.22 amd64 [upgradable from: 1:6.2+dfsg-2ubuntu6.21]
+qemu-system-x86/jammy-updates,jammy-security 1:6.2+dfsg-2ubuntu6.22 amd64 [upgradable from: 1:6.2+dfsg-2ubuntu6.21]
+qemu-utils/jammy-updates,jammy-security 1:6.2+dfsg-2ubuntu6.22 amd64 [upgradable from: 1:6.2+dfsg-2ubuntu6.21]
+qemu/jammy-updates,jammy-security 1:6.2+dfsg-2ubuntu6.22 amd64 [upgradable from: 1:6.2+dfsg-2ubuntu6.21]
+ubuntu-minimal/jammy-updates 1.481.3 amd64 [upgradable from: 1.481.2]
+ubuntu-standard/jammy-updates 1.481.3 amd64 [upgradable from: 1.481.2]
+ubuntu-wsl/jammy-updates 1.481.3 amd64 [upgradable from: 1.481.2]
+
+real    0m0.178s
+user    0m0.146s
+sys     0m0.031s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages were automatically installed and are no longer required:
+  aglfn asymptote-doc biber chktex cups-bsd cups-client dvidvi dvisvgm fonts-adf-accanthis fonts-adf-berenis fonts-adf-gillius fonts-adf-universalis fonts-arphic-bkai00mp
+  fonts-arphic-bsmi00lp fonts-arphic-gbsn00lp fonts-arphic-gkai00mp fonts-baekmuk fonts-cabin fonts-cantarell fonts-comfortaa fonts-dejavu-extra fonts-ebgaramond fonts-ebgaramond-extra
+  fonts-font-awesome fonts-gfs-artemisia fonts-gfs-baskerville fonts-gfs-bodoni-classic fonts-gfs-complutum fonts-gfs-didot fonts-gfs-didot-classic fonts-gfs-gazis fonts-gfs-neohellenic
+  fonts-gfs-olga fonts-gfs-porson fonts-gfs-solomos fonts-gfs-theokritos fonts-go fonts-hosny-amiri fonts-junicode fonts-lato fonts-linuxlibertine fonts-lmodern fonts-lobster
+  fonts-lobstertwo fonts-noto-color-emoji fonts-noto-core fonts-oflb-asana-math fonts-open-sans fonts-roboto-unhinted fonts-sil-charis fonts-sil-gentium fonts-sil-gentium-basic
+  fonts-sil-gentiumplus fonts-sil-gentiumplus-compact fonts-sil-padauk fonts-stix fonts-tlwg-garuda fonts-tlwg-garuda-otf fonts-tlwg-kinnari fonts-tlwg-kinnari-otf fonts-tlwg-laksaman
+  fonts-tlwg-laksaman-otf fonts-tlwg-loma fonts-tlwg-loma-otf fonts-tlwg-mono fonts-tlwg-mono-otf fonts-tlwg-norasi fonts-tlwg-norasi-otf fonts-tlwg-purisa fonts-tlwg-purisa-otf
+  fonts-tlwg-sawasdee fonts-tlwg-sawasdee-otf fonts-tlwg-typewriter fonts-tlwg-typewriter-otf fonts-tlwg-typist fonts-tlwg-typist-otf fonts-tlwg-typo fonts-tlwg-typo-otf
+  fonts-tlwg-umpush fonts-tlwg-umpush-otf fonts-tlwg-waree fonts-tlwg-waree-otf fonts-unfonts-core fonts-unfonts-extra freeglut3 gsfonts gsfonts-x11 imagemagick imagemagick-6-common
+  imagemagick-6.q16 javascript-common lacheck latex-cjk-chinese-arphic-bkai00mp latex-cjk-chinese-arphic-bsmi00lp latex-cjk-chinese-arphic-gbsn00lp latex-cjk-chinese-arphic-gkai00mp
+  latex-cjk-japanese-wadalab latexdiff lcdf-typetools libalgorithm-c3-perl libapache-pom-java libautovivification-perl libb-hooks-endofscope-perl libb-hooks-op-check-perl
+  libboost-filesystem1.74.0 libbtparse2 libbusiness-ismn-perl libbusiness-issn-perl libclass-accessor-perl libclass-c3-perl libclass-c3-xs-perl libclass-data-inheritable-perl
+  libclass-inspector-perl libclass-method-modifiers-perl libclass-singleton-perl libclass-xsaccessor-perl libcmark-gfm-extensions0.29.0.gfm.3 libcmark-gfm0.29.0.gfm.3
+  libcommon-sense-perl libcommons-logging-java libcommons-parent-java libdata-compare-perl libdata-optlist-perl libdata-uniqid-perl libdate-simple-perl libdatetime-calendar-julian-perl
+  libdatetime-format-builder-perl libdatetime-format-strptime-perl libdatetime-locale-perl libdatetime-perl libdatetime-timezone-perl libde265-0 libdevel-callchecker-perl
+  libdevel-caller-perl libdevel-globaldestruction-perl libdevel-lexalias-perl libdevel-stacktrace-perl libdist-checkconflicts-perl libdjvulibre-text libdjvulibre21
+  libdynaloader-functions-perl libemail-date-format-perl libemf1 libencode-eucjpms-perl libencode-hanextra-perl libencode-jis2k-perl libeval-closure-perl libexception-class-perl
+  libexporter-tiny-perl libfftw3-double3 libfile-find-rule-perl libfile-homedir-perl libfile-sharedir-perl libfile-slurper-perl libfile-which-perl libfontbox-java libglew2.2 libgsl27
+  libgslcblas0 libheif1 libilmbase25 libipc-run3-perl libipc-shareable-perl libjs-jquery libjson-perl libjson-xs-perl libjxr-tools libjxr0 libkpathsea6 liblingua-translit-perl
+  liblist-allutils-perl liblist-moreutils-perl liblist-moreutils-xs-perl liblist-someutils-perl liblist-someutils-xs-perl liblist-utilsby-perl liblog-dispatch-perl liblog-log4perl-perl
+  liblqr-1-0 libltdl7 libmagick++-6.q16-8 libmagickcore-6.q16-6 libmagickcore-6.q16-6-extra libmagickwand-6.q16-6 libmail-sendmail-perl libmime-charset-perl libmime-lite-perl
+  libmime-types-perl libmodule-implementation-perl libmodule-runtime-perl libmotif-common libmro-compat-perl libnamespace-autoclean-perl libnamespace-clean-perl libnumber-compare-perl
+  libopenexr25 libosp5 libostyle1c2 libpackage-stash-perl libpackage-stash-xs-perl libpadwalker-perl libparams-classify-perl libparams-util-perl libparams-validate-perl
+  libparams-validationcompiler-perl libparse-recdescent-perl libpdfbox-java libperlio-utf8-strict-perl libplot2c2 libpoppler-qt5-1 libpstoedit0c2a libptexenc1 libqt5core5a libqt5dbus5
+  libqt5gui5 libqt5network5 libqt5svg5 libqt5widgets5 libqt5xml5 libreadonly-perl libref-util-perl libref-util-xs-perl libregexp-common-perl librole-tiny-perl libruby3.0 libsombok3
+  libsort-key-perl libspecio-perl libstring-crc32-perl libsub-exporter-perl libsub-exporter-progressive-perl libsub-identify-perl libsub-install-perl libsub-quote-perl libsynctex2
+  libsys-hostname-long-perl libtcl8.6 libteckit0 libtexlua53 libtexluajit2 libtext-bibtex-perl libtext-csv-perl libtext-csv-xs-perl libtext-glob-perl libtext-roman-perl
+  libtext-unidecode-perl libtie-cycle-perl libtk8.6 libtypes-serialiser-perl libunicode-linebreak-perl libvariable-magic-perl libwebpdemux2 libwmflite-0.2-7 libwoff1 libxcb-xinerama0
+  libxm4 libxml-libxml-perl libxml-libxml-simple-perl libxml-libxslt-perl libxml-namespacesupport-perl libxml-sax-base-perl libxml-sax-expat-perl libxml-sax-perl libxml-writer-perl
+  libxstring-perl libyaml-tiny-perl libzip4 libzzip-0-13 lmodern openjade pandoc-data pfb2t1c2pfb preview-latex-style ps2eps pstoedit psutils qt5-gtk-platformtheme qttranslations5-l10n
+  rake ruby ruby-net-telnet ruby-rubygems ruby-webrick ruby-xmlrpc ruby3.0 rubygems-integration sgml-base t1utils tcl tcl8.6 teckit tex-common tex-gyre texinfo tk tk8.6 xfonts-encodings
+  xfonts-utils xpdf
+Use 'sudo apt autoremove' to remove them.
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libheif1 imagemagick libavdevice58 ffmpeg libopenexr25 libmagick++-6.q16-8
+  libpostproc55 libmagickcore-6.q16-6-extra libavcodec58 libmagickwand-6.q16-6
+  libavutil56 imagemagick-6.q16 libswscale5 libmagickcore-6.q16-6
+  libavutil-dev libgsl27 libswresample3 imagemagick-6-common libavformat58
+  libgslcblas0 libavcodec-dev libde265-0 libswresample-dev libavfilter7
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+The following packages will be upgraded:
+  busybox-initramfs busybox-static qemu qemu-block-extra qemu-system-common qemu-system-data qemu-system-gui qemu-system-x86 qemu-utils ubuntu-minimal ubuntu-standard ubuntu-wsl
+12 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+9 standard LTS security updates
+Need to get 16.6 MB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ubuntu-minimal amd64 1.481.3 [2742 B]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 busybox-static amd64 1:1.30.1-7ubuntu3.1 [1019 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ubuntu-standard amd64 1.481.3 [2764 B]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 busybox-initramfs amd64 1:1.30.1-7ubuntu3.1 [177 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 qemu amd64 1:6.2+dfsg-2ubuntu6.22 [14.0 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 qemu-system-gui amd64 1:6.2+dfsg-2ubuntu6.22 [220 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 qemu-block-extra amd64 1:6.2+dfsg-2ubuntu6.22 [68.1 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 qemu-system-x86 amd64 1:6.2+dfsg-2ubuntu6.22 [10.0 MB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 qemu-system-common amd64 1:6.2+dfsg-2ubuntu6.22 [2048 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 qemu-utils amd64 1:6.2+dfsg-2ubuntu6.22 [1525 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 qemu-system-data all 1:6.2+dfsg-2ubuntu6.22 [1431 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ubuntu-wsl amd64 1.481.3 [2586 B]
+Fetched 16.6 MB in 1s (22.9 MB/s)
+(Reading database ... 91813 files and directories currently installed.)
+Preparing to unpack .../00-ubuntu-minimal_1.481.3_amd64.deb ...
+Unpacking ubuntu-minimal (1.481.3) over (1.481.2) ...
+Preparing to unpack .../01-busybox-static_1%3a1.30.1-7ubuntu3.1_amd64.deb ...
+Unpacking busybox-static (1:1.30.1-7ubuntu3.1) over (1:1.30.1-7ubuntu3) ...
+Preparing to unpack .../02-ubuntu-standard_1.481.3_amd64.deb ...
+Unpacking ubuntu-standard (1.481.3) over (1.481.2) ...
+Preparing to unpack .../03-busybox-initramfs_1%3a1.30.1-7ubuntu3.1_amd64.deb ...
+Unpacking busybox-initramfs (1:1.30.1-7ubuntu3.1) over (1:1.30.1-7ubuntu3) ...
+Preparing to unpack .../04-qemu_1%3a6.2+dfsg-2ubuntu6.22_amd64.deb ...
+Unpacking qemu (1:6.2+dfsg-2ubuntu6.22) over (1:6.2+dfsg-2ubuntu6.21) ...
+Preparing to unpack .../05-qemu-system-gui_1%3a6.2+dfsg-2ubuntu6.22_amd64.deb ...
+Unpacking qemu-system-gui (1:6.2+dfsg-2ubuntu6.22) over (1:6.2+dfsg-2ubuntu6.21) ...
+Preparing to unpack .../06-qemu-block-extra_1%3a6.2+dfsg-2ubuntu6.22_amd64.deb ...
+Unpacking qemu-block-extra (1:6.2+dfsg-2ubuntu6.22) over (1:6.2+dfsg-2ubuntu6.21) ...
+Preparing to unpack .../07-qemu-system-x86_1%3a6.2+dfsg-2ubuntu6.22_amd64.deb ...
+Unpacking qemu-system-x86 (1:6.2+dfsg-2ubuntu6.22) over (1:6.2+dfsg-2ubuntu6.21) ...
+Preparing to unpack .../08-qemu-system-common_1%3a6.2+dfsg-2ubuntu6.22_amd64.deb ...
+Unpacking qemu-system-common (1:6.2+dfsg-2ubuntu6.22) over (1:6.2+dfsg-2ubuntu6.21) ...
+Preparing to unpack .../09-qemu-utils_1%3a6.2+dfsg-2ubuntu6.22_amd64.deb ...
+Unpacking qemu-utils (1:6.2+dfsg-2ubuntu6.22) over (1:6.2+dfsg-2ubuntu6.21) ...
+Preparing to unpack .../10-qemu-system-data_1%3a6.2+dfsg-2ubuntu6.22_all.deb ...
+Unpacking qemu-system-data (1:6.2+dfsg-2ubuntu6.22) over (1:6.2+dfsg-2ubuntu6.21) ...
+Preparing to unpack .../11-ubuntu-wsl_1.481.3_amd64.deb ...
+Unpacking ubuntu-wsl (1.481.3) over (1.481.2) ...
+Setting up qemu (1:6.2+dfsg-2ubuntu6.22) ...
+Setting up qemu-system-common (1:6.2+dfsg-2ubuntu6.22) ...
+Setting up ubuntu-minimal (1.481.3) ...
+Setting up ubuntu-wsl (1.481.3) ...
+Setting up busybox-static (1:1.30.1-7ubuntu3.1) ...
+Setting up busybox-initramfs (1:1.30.1-7ubuntu3.1) ...
+Setting up qemu-system-data (1:6.2+dfsg-2ubuntu6.22) ...
+Setting up qemu-utils (1:6.2+dfsg-2ubuntu6.22) ...
+Setting up qemu-block-extra (1:6.2+dfsg-2ubuntu6.22) ...
+Setting up qemu-system-x86 (1:6.2+dfsg-2ubuntu6.22) ...
+Setting up ubuntu-standard (1.481.3) ...
+Setting up qemu-system-gui (1:6.2+dfsg-2ubuntu6.22) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for man-db (2.10.2-1) ...
+
+real    0m4.441s
+user    0m0.001s
+sys     0m0.010s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.185s
+user    0m0.033s
+sys     0m0.100s
+remote: Enumerating objects: 493, done.
+remote: Counting objects: 100% (493/493), done.
+remote: Compressing objects: 100% (274/274), done.
+remote: Total 493 (delta 281), reused 386 (delta 214), pack-reused 0 (from 0)
+Receiving objects: 100% (493/493), 443.13 KiB | 5.54 MiB/s, done.
+Resolving deltas: 100% (281/281), completed with 31 local objects.
+From https://github.com/LadybirdBrowser/ladybird
+   7e57cc7b09..dc0d5da086  master     -> origin/master
+
+real    0m0.477s
+user    0m0.077s
+sys     0m0.023s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Updating 7e57cc7b09..dc0d5da086
+Fast-forward
+ AK/Span.h                                                                                      |   6 +++
+ Documentation/RunningTests.md                                                                  |  21 +++++++++
+ Meta/WPT.sh                                                                                    | 155 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Tests/AK/TestSpan.cpp                                                                          |   8 ++++
+ Tests/AK/TestStringFloatingPointConversions.cpp                                                |   6 ++-
+ Tests/LibWeb/Layout/expected/css-dir-selector.txt                                              |  18 ++++----
+ Tests/LibWeb/Layout/expected/writing-modes-direction-flex.txt                                  |  53 ++++++++++++++++++++++
+ Tests/LibWeb/Layout/expected/writing-modes-direction-inline.txt                                |  24 ++++++++++
+ Tests/LibWeb/Layout/input/writing-modes-direction-flex.html                                    |   5 ++
+ Tests/LibWeb/Layout/input/writing-modes-direction-inline.html                                  |   4 ++
+ Tests/LibWeb/Ref/clip-border-radius-with-css-transform.html                                    |  33 ++++++++++++++
+ Tests/LibWeb/Ref/reference/clip-border-radius-with-css-transform-ref.html                      |  21 +++++++++
+ Tests/LibWeb/Text/expected/HTML/invalid-url-attribute-values.txt                               |   2 +
+ Tests/LibWeb/Text/expected/HTML/tabIndex-attribute.txt                                         |  12 +++++
+ Tests/LibWeb/Text/expected/URL/search-params-delete.txt                                        |   5 ++
+ Tests/LibWeb/Text/expected/URL/search-params-has.txt                                           |   5 ++
+ Tests/LibWeb/Text/expected/URL/search-params-with-no-query.txt                                 |   2 +
+ Tests/LibWeb/Text/expected/URL/set-href-with-valid-hostname-but-invalid-port.txt               |   2 +
+ Tests/LibWeb/Text/expected/{ => URL}/url-search-params-iterator-iterator.txt                   |   0
+ Tests/LibWeb/Text/expected/URL/url-search-params-sort-order-stable.txt                         |   5 ++
+ Tests/LibWeb/Text/expected/base/link-element-base.txt                                          |   1 +
+ Tests/LibWeb/Text/expected/css/getComputedStyle-print-all.txt                                  |   2 +-
+ Tests/LibWeb/Text/expected/focus-events.txt                                                    |  12 ++---
+ Tests/LibWeb/Text/expected/link-element-media-change-off.txt                                   |   1 +
+ Tests/LibWeb/Text/expected/link-element-media-change.txt                                       |   1 +
+ Tests/LibWeb/Text/input/HTML/invalid-url-attribute-values.html                                 |  15 ++++++
+ Tests/LibWeb/Text/input/HTML/tabIndex-attribute.html                                           |  41 +++++++++++++++++
+ Tests/LibWeb/Text/input/URL/search-params-delete.html                                          |  15 ++++++
+ Tests/LibWeb/Text/input/URL/search-params-has.html                                             |  11 +++++
+ Tests/LibWeb/Text/input/URL/search-params-with-no-query.html                                   |   9 ++++
+ Tests/LibWeb/Text/input/URL/set-href-with-valid-hostname-but-invalid-port.html                 |  10 ++++
+ Tests/LibWeb/Text/input/{ => URL}/url-search-params-iterator-iterator.html                     |   2 +-
+ Tests/LibWeb/Text/input/URL/url-search-params-sort-order-stable.html                           |  11 +++++
+ Tests/LibWeb/Text/input/base/link-element-base.html                                            |  17 +++++++
+ Tests/LibWeb/Text/input/focus-events.html                                                      |  31 ++++---------
+ Tests/LibWeb/Text/input/link-element-media-change-off.html                                     |  16 +++++++
+ Tests/LibWeb/Text/input/link-element-media-change.html                                         |  16 +++++++
+ Userland/Libraries/LibJS/Runtime/Date.cpp                                                      |  10 ++--
+ Userland/Libraries/LibJS/Runtime/Intl/DurationFormat.cpp                                       |  77 +++++++++++++++++++++----------
+ Userland/Libraries/LibJS/Runtime/Temporal/Duration.cpp                                         |  39 ++++++++++++++++
+ Userland/Libraries/LibJS/Runtime/Temporal/ISO8601.cpp                                          |   5 +-
+ Userland/Libraries/LibJS/Tests/builtins/Intl/DurationFormat/DurationFormat.prototype.format.js |  35 ++++++++++++++
+ Userland/Libraries/LibJS/Tests/builtins/Temporal/Duration/Duration.from.js                     |  22 +++++++++
+ Userland/Libraries/LibJS/Tests/builtins/Temporal/TimeZone/TimeZone.js                          |   6 ++-
+ Userland/Libraries/LibTest/Macros.h                                                            | 212 +++++++++++++++++++++++++++++++++++++++++++++++++++----------------------------------
+ Userland/Libraries/LibURL/Parser.cpp                                                           |  19 ++++----
+ Userland/Libraries/LibURL/Parser.h                                                             |   4 +-
+ Userland/Libraries/LibWeb/Bindings/MainThreadVM.cpp                                            |  24 +++++-----
+ Userland/Libraries/LibWeb/CSS/CSSStyleSheet.cpp                                                |   5 +-
+ Userland/Libraries/LibWeb/CSS/CSSStyleSheet.h                                                  |   1 +
+ Userland/Libraries/LibWeb/CSS/ComputedValues.h                                                 |   6 ++-
+ Userland/Libraries/LibWeb/CSS/Enums.json                                                       |   6 +++
+ Userland/Libraries/LibWeb/CSS/Properties.json                                                  |   7 ++-
+ Userland/Libraries/LibWeb/CSS/StyleProperties.cpp                                              |   6 +++
+ Userland/Libraries/LibWeb/CSS/StyleProperties.h                                                |   1 +
+ Userland/Libraries/LibWeb/DOM/Document.cpp                                                     |   9 ++--
+ Userland/Libraries/LibWeb/DOM/Document.h                                                       |   1 -
+ Userland/Libraries/LibWeb/DOM/Element.cpp                                                      |   1 -
+ Userland/Libraries/LibWeb/DOMURL/DOMURL.cpp                                                    |  56 +++++++----------------
+ Userland/Libraries/LibWeb/DOMURL/DOMURL.h                                                      |   2 +-
+ Userland/Libraries/LibWeb/DOMURL/URLSearchParams.cpp                                           | 139 +++++++++++++++++++++++++++++++-------------------------
+ Userland/Libraries/LibWeb/DOMURL/URLSearchParams.h                                             |  24 +++++-----
+ Userland/Libraries/LibWeb/DOMURL/URLSearchParams.idl                                           |   4 +-
+ Userland/Libraries/LibWeb/Fetch/Body.cpp                                                       |   5 +-
+ Userland/Libraries/LibWeb/Fetch/BodyInit.cpp                                                   |   2 +-
+ Userland/Libraries/LibWeb/Fetch/Fetching/Fetching.cpp                                          |  12 +++--
+ Userland/Libraries/LibWeb/HTML/AttributeNames.h                                                |   3 ++
+ Userland/Libraries/LibWeb/HTML/Focus.cpp                                                       |  44 ++++++++++--------
+ Userland/Libraries/LibWeb/HTML/HTMLFormElement.cpp                                             |   8 ++--
+ Userland/Libraries/LibWeb/HTML/HTMLFormElement.idl                                             |   9 +++-
+ Userland/Libraries/LibWeb/HTML/HTMLFrameElement.idl                                            |   2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLHyperlinkElementUtils.cpp                                   |  42 ++++++-----------
+ Userland/Libraries/LibWeb/HTML/HTMLIFrameElement.idl                                           |   2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLImageElement.cpp                                            |   5 +-
+ Userland/Libraries/LibWeb/HTML/HTMLImageElement.idl                                            |   4 +-
+ Userland/Libraries/LibWeb/HTML/HTMLInputElement.idl                                            |   2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLLinkElement.cpp                                             |   8 +++-
+ Userland/Libraries/LibWeb/HTML/HTMLMediaElement.idl                                            |  11 ++++-
+ Userland/Libraries/LibWeb/HTML/HTMLObjectElement.cpp                                           |   7 ++-
+ Userland/Libraries/LibWeb/HTML/HTMLObjectElement.idl                                           |   2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLScriptElement.cpp                                           |   4 ++
+ Userland/Libraries/LibWeb/HTML/HTMLSelectElement.idl                                           |   2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLTextAreaElement.idl                                         |   2 +-
+ Userland/Libraries/LibWeb/HTML/Location.cpp                                                    |   2 +-
+ Userland/Libraries/LibWeb/HTML/Navigable.cpp                                                   |   2 -
+ Userland/Libraries/LibWeb/HTML/Scripting/Fetching.cpp                                          |  39 +++++++++++++++-
+ Userland/Libraries/LibWeb/HTML/Scripting/Fetching.h                                            |   5 +-
+ Userland/Libraries/LibWeb/HTML/Scripting/ImportMap.cpp                                         |  65 ++++++++++++++++++++++++--
+ Userland/Libraries/LibWeb/HTML/Scripting/ImportMap.h                                           |   7 +++
+ Userland/Libraries/LibWeb/Layout/FlexFormattingContext.cpp                                     |  13 ++++++
+ Userland/Libraries/LibWeb/Layout/FlexFormattingContext.h                                       |   2 +-
+ Userland/Libraries/LibWeb/Layout/LineBuilder.cpp                                               |   9 ++++
+ Userland/Libraries/LibWeb/Layout/Node.cpp                                                      |   3 ++
+ Userland/Libraries/LibWeb/Painting/ClipFrame.cpp                                               |   5 --
+ Userland/Libraries/LibWeb/Painting/ClipFrame.h                                                 |   1 -
+ Userland/Libraries/LibWeb/Painting/ClippableAndScrollable.cpp                                  |   7 +++
+ Userland/Libraries/LibWeb/Painting/ClippableAndScrollable.h                                    |   4 ++
+ Userland/Libraries/LibWeb/Painting/Paintable.h                                                 |  24 ++++++++++
+ Userland/Libraries/LibWeb/Painting/PaintableBox.cpp                                            |   9 ++--
+ Userland/Libraries/LibWeb/Painting/SVGSVGPaintable.cpp                                         |   2 +-
+ Userland/Libraries/LibWeb/Painting/ViewportPaintable.cpp                                       |  63 +++++++++----------------
+ Userland/Libraries/LibWeb/Painting/ViewportPaintable.h                                         |   3 --
+ Userland/Libraries/LibWeb/SVG/SVGAElement.cpp                                                  |   7 +++
+ Userland/Libraries/LibWeb/SVG/SVGAElement.h                                                    |   1 +
+ Userland/Libraries/LibWeb/UIEvents/FocusEvent.cpp                                              |   7 ++-
+ Userland/Libraries/LibWeb/UIEvents/FocusEvent.h                                                |   1 +
+ 106 files changed, 1321 insertions(+), 455 deletions(-)
+ create mode 100755 Meta/WPT.sh
+ create mode 100644 Tests/LibWeb/Layout/expected/writing-modes-direction-flex.txt
+ create mode 100644 Tests/LibWeb/Layout/expected/writing-modes-direction-inline.txt
+ create mode 100644 Tests/LibWeb/Layout/input/writing-modes-direction-flex.html
+ create mode 100644 Tests/LibWeb/Layout/input/writing-modes-direction-inline.html
+ create mode 100644 Tests/LibWeb/Ref/clip-border-radius-with-css-transform.html
+ create mode 100644 Tests/LibWeb/Ref/reference/clip-border-radius-with-css-transform-ref.html
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/invalid-url-attribute-values.txt
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/tabIndex-attribute.txt
+ create mode 100644 Tests/LibWeb/Text/expected/URL/search-params-delete.txt
+ create mode 100644 Tests/LibWeb/Text/expected/URL/search-params-has.txt
+ create mode 100644 Tests/LibWeb/Text/expected/URL/search-params-with-no-query.txt
+ create mode 100644 Tests/LibWeb/Text/expected/URL/set-href-with-valid-hostname-but-invalid-port.txt
+ rename Tests/LibWeb/Text/expected/{ => URL}/url-search-params-iterator-iterator.txt (100%)
+ create mode 100644 Tests/LibWeb/Text/expected/URL/url-search-params-sort-order-stable.txt
+ create mode 100644 Tests/LibWeb/Text/expected/base/link-element-base.txt
+ create mode 100644 Tests/LibWeb/Text/expected/link-element-media-change-off.txt
+ create mode 100644 Tests/LibWeb/Text/expected/link-element-media-change.txt
+ create mode 100644 Tests/LibWeb/Text/input/HTML/invalid-url-attribute-values.html
+ create mode 100644 Tests/LibWeb/Text/input/HTML/tabIndex-attribute.html
+ create mode 100644 Tests/LibWeb/Text/input/URL/search-params-delete.html
+ create mode 100644 Tests/LibWeb/Text/input/URL/search-params-has.html
+ create mode 100644 Tests/LibWeb/Text/input/URL/search-params-with-no-query.html
+ create mode 100644 Tests/LibWeb/Text/input/URL/set-href-with-valid-hostname-but-invalid-port.html
+ rename Tests/LibWeb/Text/input/{ => URL}/url-search-params-iterator-iterator.html (91%)
+ create mode 100644 Tests/LibWeb/Text/input/URL/url-search-params-sort-order-stable.html
+ create mode 100644 Tests/LibWeb/Text/input/base/link-element-base.html
+ create mode 100644 Tests/LibWeb/Text/input/link-element-media-change-off.html
+ create mode 100644 Tests/LibWeb/Text/input/link-element-media-change.html
+
+real    0m0.205s
+user    0m0.059s
+sys     0m0.029s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.030s
+user    0m0.009s
+sys     0m0.019s
+Thu Aug 15 07:29:39 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+[2508/2508] Linking CXX executable bin/Ladybird
+QSocketNotifier: Can only be used with threads started with QThread
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
+772.081 WebContent(13641): No property (from 4 properties) matched Token: Ident: none
+772.081 WebContent(13641):     margin-top
+772.081 WebContent(13641):     margin-right
+772.081 WebContent(13641):     margin-bottom
+772.081 WebContent(13641):     margin-left
+772.091 WebContent(13641): (STUBBED) Document::set_domain(domain='nytimes.com')
+772.261 WebContent(13641): Potential FIXME: Removing unsupported PerformanceEntry type 'paint' from list of observed types in PerformanceObserver::observe()
+772.261 WebContent(13641): ResourceLoader: Filtered request to: "https://a.et.nytimes.com/track"
+772.261 WebContent(13641): ResourceLoader: Filtered request to: "https://als-svc.nytimes.com/als?uri=https%3A%2F%2Fwww.nytimes.com%2Fpages%2Findex.html&typ=hp&prop=nyt&plat=web"
+772.261 WebContent(13641): ResourceLoader: Filtered request to: "https://rumcdn.geoedge.be/b3960cc6-bfd2-4adc-910c-6e917e8a6a0e/grumi-ip.js"
+772.261 WebContent(13641): ResourceLoader: Filtered request to: "https://c.amazon-adsystem.com/aax2/apstag.js"
+772.271 RequestServer(13622:13637): ConnectionCache: Connection to https://www.datadoghq-browser-agent.com/us1/v5/datadog-rum.js failed: connect: Connection refused (errno=111)
+772.271 RequestServer(13622:13637): Request with a null socket finished for URL https://www.datadoghq-browser-agent.com/us1/v5/datadog-rum.js
+772.281 WebContent(13641): ResourceLoader: Filtered request to: "https://www.googletagmanager.com/gtm.js?id=GTM-P528B3&gtm_auth=tfAzqo1rYDLgYhmTnSjPqw&gtm_preview=env-130&gtm_cookies_win=x"
+772.431 WebContent(13641): ResourceLoader: Failed load of: "https://www.datadoghq-browser-agent.com/us1/v5/datadog-rum.js", Error: Load failed, Duration: 170ms
+772.471 WebContent(13641): HTMLScriptElement: Refusing to run script because the element's result is null.
+772.481 WebContent(13641): HTMLScriptElement: Refusing to run script because the element's result is null.
+772.621 WebContent(13641): HTMLScriptElement: Refusing to run script because the element's result is null.
+773.581 RequestServer(13622:13628): TLS Socket write error: send: Broken pipe (errno=32)
+773.961 WebContent(13641): FIXME: Unimplemented IDL interface: 'LocationPrototype.ancestorOrigins'
+774.191 WebContent(13641): ResourceLoader: Filtered request to: "https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+774.191 WebContent(13641): ResourceLoader: Filtered request to: "https://tlx.3lift.com/header/auction?lib=prebid&v=8.50.0&referrer=https%3A%2F%2Fwww.nytimes.com%2F&tmax=10000"
+774.191 WebContent(13641): ResourceLoader: Filtered request to: "https://hbopenbid.pubmatic.com/translator?source=prebid-client"
+774.191 WebContent(13641): ResourceLoader: Filtered request to: "https://htlb.casalemedia.com/openrtb/pbjs?s=995821"
+774.191 WebContent(13641): ResourceLoader: Filtered request to: "https://bidder.criteo.com/cdb?profileId=207&av=36&wv=8.50.0&cb=72780483674&lsavail=0"
+774.191 WebContent(13641): ResourceLoader: Filtered request to: "https://rtb.openx.net/openrtbb/prebidjs"
+774.191 WebContent(13641): ResourceLoader: Filtered request to: "https://ib.adnxs.com/ut/v3/prebid"
+774.191 WebContent(13641): ResourceLoader: Filtered request to: "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=12330&site_id=378266&zone_id=2088370&size_id=2&alt_size_ids=55%2C57&p_pos=atf&rf=https%3A%2F%2Fwww.nytimes.com%2F&kw=news%2Cliveupdates%2Clatestnews%2Cbreakingnews%2Clocalnews%2Ccurrentevents%2Ctopstories%2Clivestream%2Clivevideo%2Cworldnews%2Cusnews&tg_i.domain=nytimes.com&tg_i.page=https%3A%2F%2Fwww.nytimes.com%2F&tg_i.invCode=nyt_home_top&tg_i.pbadslot=dfp-ad-top&tk_flint=pbjs_lite_v8.50.0&l_pb_bid_id=38e926e79ce926e&p_screen_res=2560x1440&rp_secure=1&rp_maxbids=1&slots=1&rand=0.8770893946935165"
+774.191 WebContent(13641): ResourceLoader: Filtered request to: "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=12330&site_id=378266&zone_id=2088372&size_id=2&alt_size_ids=55%2C57&p_pos=btf&rf=https%3A%2F%2Fwww.nytimes.com%2F&kw=news%2Cliveupdates%2Clatestnews%2Cbreakingnews%2Clocalnews%2Ccurrentevents%2Ctopstories%2Clivestream%2Clivevideo%2Cworldnews%2Cusnews&tg_i.domain=nytimes.com&tg_i.page=https%3A%2F%2Fwww.nytimes.com%2F&tg_i.invCode=nyt_home_mid1&tg_i.pbadslot=dfp-ad-mid1&tk_flint=pbjs_lite_v8.50.0&l_pb_bid_id=394920c9ba4920c&p_screen_res=2560x1440&rp_secure=1&rp_maxbids=1&slots=1&rand=0.9621650976972107"
+774.191 WebContent(13641): ResourceLoader: Filtered request to: "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=12330&site_id=378266&zone_id=2088372&size_id=2&alt_size_ids=55%2C57&p_pos=btf&rf=https%3A%2F%2Fwww.nytimes.com%2F&kw=news%2Cliveupdates%2Clatestnews%2Cbreakingnews%2Clocalnews%2Ccurrentevents%2Ctopstories%2Clivestream%2Clivevideo%2Cworldnews%2Cusnews&tg_i.domain=nytimes.com&tg_i.page=https%3A%2F%2Fwww.nytimes.com%2F&tg_i.invCode=nyt_home_mid2&tg_i.pbadslot=dfp-ad-mid2&tk_flint=pbjs_lite_v8.50.0&l_pb_bid_id=4015cef27315cef&p_screen_res=2560x1440&rp_secure=1&rp_maxbids=1&slots=1&rand=0.15780368125015024"
+774.201 WebContent(13641): ResourceLoader: Filtered request to: "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=12330&site_id=378266&zone_id=2088372&size_id=2&alt_size_ids=55%2C57&p_pos=btf&rf=https%3A%2F%2Fwww.nytimes.com%2F&kw=news%2Cliveupdates%2Clatestnews%2Cbreakingnews%2Clocalnews%2Ccurrentevents%2Ctopstories%2Clivestream%2Clivevideo%2Cworldnews%2Cusnews&tg_i.domain=nytimes.com&tg_i.page=https%3A%2F%2Fwww.nytimes.com%2F&tg_i.invCode=nyt_home_mid3&tg_i.pbadslot=dfp-ad-mid3&tk_flint=pbjs_lite_v8.50.0&l_pb_bid_id=41a86647bda8664&p_screen_res=2560x1440&rp_secure=1&rp_maxbids=1&slots=1&rand=0.8051465653826358"
+774.201 WebContent(13641): ResourceLoader: Filtered request to: "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=12330&site_id=378266&zone_id=2088374&size_id=2&alt_size_ids=55%2C57&p_pos=btf&rf=https%3A%2F%2Fwww.nytimes.com%2F&kw=news%2Cliveupdates%2Clatestnews%2Cbreakingnews%2Clocalnews%2Ccurrentevents%2Ctopstories%2Clivestream%2Clivevideo%2Cworldnews%2Cusnews&tg_i.domain=nytimes.com&tg_i.page=https%3A%2F%2Fwww.nytimes.com%2F&tg_i.invCode=nyt_home_bottom&tg_i.pbadslot=dfp-ad-bottom&tk_flint=pbjs_lite_v8.50.0&l_pb_bid_id=4210e364fc10e36&p_screen_res=2560x1440&rp_secure=1&rp_maxbids=1&slots=1&rand=0.4452254098014034"
+774.201 WebContent(13641): ResourceLoader: Filtered request to: "https://prebid.media.net/rtb/prebid?cid=8CU4WQK98"
+774.471 WebContent(13641): HTMLScriptElement: Refusing to run script because the element's result is null.
+777.401 WebContent(13641): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
+777.641 WebContent(13641): ResourceLoader: Filtered request to: "https://u.openx.net/w/1.0/pd?ph=2d1251ae-7f3a-47cf-bd2a-2f288854a0ba"
+777.641 WebContent(13641): ResourceLoader: Filtered request to: "https://image8.pubmatic.com/AdServer/ImgSync?p=163427"
+777.641 WebContent(13641): ResourceLoader: Filtered request to: "https://dsum.casalemedia.com/pbusermatch?origin=prebid&site_id=995821&p=1&i=0&gdpr=0&gdpr_consent=&us_privacy="
+777.641 WebContent(13641): ResourceLoader: Filtered request to: "https://ssp-sync.criteo.com/user-sync/redirect?profile=207&gpp="
+777.641 WebContent(13641): ResourceLoader: Filtered request to: "https://eb2.3lift.com/sync?px=1&src=prebid&"
+780.591 WebContent(13641): No property (from 4 properties) matched Function: linear-gradient( 0deg,rgba(255,255,255,0.16),rgba(255,255,255,0.16) )
+780.591 WebContent(13641):     border-top-color
+780.591 WebContent(13641):     border-right-color
+780.591 WebContent(13641):     border-bottom-color
+780.591 WebContent(13641):     border-left-color
+780.631 WebContent(13641): No property (from 4 properties) matched Token: String: 0 40px
+780.631 WebContent(13641):     margin-top
+780.631 WebContent(13641):     margin-right
+780.631 WebContent(13641):     margin-bottom
+780.631 WebContent(13641):     margin-left
+780.631 WebContent(13641): No property (from 4 properties) matched Token: String: 0
+780.631 WebContent(13641):     margin-top
+780.631 WebContent(13641):     margin-right
+780.631 WebContent(13641):     margin-bottom
+780.631 WebContent(13641):     margin-left
+780.681 WebContent(13641): No property (from 4 properties) matched Token: String: 0 40px
+780.681 WebContent(13641):     margin-top
+780.681 WebContent(13641):     margin-right
+780.681 WebContent(13641):     margin-bottom
+780.681 WebContent(13641):     margin-left
+780.751 WebContent(13641): FIXME: Unimplemented Navigator.maxTouchPoints
+780.751 WebContent(13641): FIXME: Unimplemented Navigator.maxTouchPoints
+780.851 WebContent(13641): (js log) "<!--\n         0000000                         000        0000000\n       111111111      11111111100          000      111111111\n       00000        111111111111111111      00000      000000\n       000        1111111111111111111111111100000         000\n       000        1111       1111111111111111100          000\n       000         11       0     1111111100              000\n       000          1      00             1               000\n       000               00      00       1               000\n       000
+    000    00000       1               000\n    00000            0000  00000000       1                00000\n  11111            000 00    000000      000                 11111\n    00000         0000      000000     00000              00000\n       000        10000      000000      000              0000\n       000        00000      000000       1               000\n  000        000000     10000        1     0         000\n       000        1000000 00              1    00         000\n       000         1111111                1 0000          000\n   000          1111111100           000000           000\n       0000          111111111111111110000000            0000\n       111111111        111111111111100000          111111111\n      0000000              00000000              0000000\n\n      NYTimes.com: All the code that's fit to window.print()!\n      We're hiring: https://boards.greenhouse.io/thenewyorktimes\n   -->"
+780.851 WebContent(13641): HTMLScriptElement: Refusing to run script because the element's result is null.
+782.051 WebContent(13641): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
+782.051 WebContent(13641): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
+782.051 WebContent(13641): ResourceLoader: Filtered request to: "https://api.rlcdn.com/api/identity/v2/envelope?pid=14158&it=4&iv=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+782.051 WebContent(13641): (js error) "There has been a problem with your fetch operation: " [TypeError] Request with 'cors' response tainting failed CORS check
+782.351 WebContent(13641): FIXME: Unimplemented Navigator.maxTouchPoints
+783.461 WebContent(13641): ResourceLoader: Filtered request to: "https://a.et.nytimes.com//.status"
+783.821 WebContent(13641): FIXME: Unimplemented Navigator.maxTouchPoints
+784.851 WebContent(13641): (js error) "et track blocked" [TypeError] Request was blocked
+784.981 WebContent(13641): FIXME: Unimplemented Navigator.maxTouchPoints
+785.931 WebContent(13641): ResourceLoader: Filtered request to: "https://static.criteo.net/js/ld/publishertag.prebid.144.js"
+786.571 WebContent(13641): HTMLScriptElement: Refusing to run script because the element's result is null.
+787.291 WebContent(13641): FIXME: Unimplemented Navigator.maxTouchPoints
+788.501 WebContent(13641): FIXME: Unimplemented Navigator.maxTouchPoints
+789.581 WebContent(13641): FIXME: Unimplemented Navigator.maxTouchPoints
+790.511 WebContent(13641): ResourceLoader: Filtered request to: "https://a.et.nytimes.com/track"
+795.681 WebContent(13641): FIXME: Unimplemented Navigator.maxTouchPoints
+796.801 WebContent(13641): Unhandled JavaScript exception: [TypeError] Cannot access property "getAttribute" on null object "document.activeElement"
+796.801 WebContent(13641):     at t (https://www.nytimes.com/vi-assets/static-assets/main-712bea2b0b8d14b29756.js:13:199917)
+
+796.811 WebContent(13641): Unhandled JavaScript exception: [TypeError] Cannot access property "getAttribute" on null object "document.activeElement"
+796.811 WebContent(13641):     at e (https://www.nytimes.com/vi-assets/static-assets/main-712bea2b0b8d14b29756.js:13:199771)
+
+799.891 WebContent(13641): Unhandled JavaScript exception: [TypeError] Cannot access property "getAttribute" on null object "document.activeElement"
+799.891 WebContent(13641):     at t (https://www.nytimes.com/vi-assets/static-assets/main-712bea2b0b8d14b29756.js:13:199917)
+
+800.451 WebContent(13641): Unhandled JavaScript exception: [TypeError] Cannot access property "getAttribute" on null object "document.activeElement"
+800.451 WebContent(13641):     at e (https://www.nytimes.com/vi-assets/static-assets/main-712bea2b0b8d14b29756.js:13:199771)
+
+807.401 WebContent(13641): Unhandled JavaScript exception: [TypeError] Cannot access property "getAttribute" on null object "document.activeElement"
+807.401 WebContent(13641):     at t (https://www.nytimes.com/vi-assets/static-assets/main-712bea2b0b8d14b29756.js:13:199917)
+
+807.811 WebContent(13641): Unhandled JavaScript exception: [TypeError] Cannot access property "getAttribute" on null object "document.activeElement"
+807.811 WebContent(13641):     at e (https://www.nytimes.com/vi-assets/static-assets/main-712bea2b0b8d14b29756.js:13:199771)
+
+854.891 WebContent(13641): Unhandled JavaScript exception: [TypeError] Cannot access property "getAttribute" on null object "document.activeElement"
+854.891 WebContent(13641):     at t (https://www.nytimes.com/vi-assets/static-assets/main-712bea2b0b8d14b29756.js:13:199917)
+
+855.391 WebContent(13641): Unhandled JavaScript exception: [TypeError] Cannot access property "getAttribute" on null object "document.activeElement"
+855.391 WebContent(13641):     at e (https://www.nytimes.com/vi-assets/static-assets/main-712bea2b0b8d14b29756.js:13:199771)
+
+872.841 WebContent(13641): Unhandled JavaScript exception: [TypeError] Cannot access property "getAttribute" on null object "document.activeElement"
+872.841 WebContent(13641):     at t (https://www.nytimes.com/vi-assets/static-assets/main-712bea2b0b8d14b29756.js:13:199917)
+
+873.221 WebContent(13641): Unhandled JavaScript exception: [TypeError] Cannot access property "getAttribute" on null object "document.activeElement"
+873.221 WebContent(13641):     at e (https://www.nytimes.com/vi-assets/static-assets/main-712bea2b0b8d14b29756.js:13:199771)
+
+879.861 WebContent(13641): (STUBBED) Document::set_domain(domain='nytimes.com')
+879.901 WebContent(13641): Potential FIXME: Removing unsupported PerformanceEntry type 'paint' from list of observed types in PerformanceObserver::observe()
+879.901 WebContent(13641): ResourceLoader: Filtered request to: "https://a.et.nytimes.com/track"
+879.901 WebContent(13641): ResourceLoader: Filtered request to: "https://als-svc.nytimes.com/als?uri=nyt%3A%2F%2Farticle%2Fbdfbdfe7-b410-516b-904a-9525ffe6689a&typ=art&prop=nyt&plat=web"
+879.901 WebContent(13641): ResourceLoader: Filtered request to: "https://rumcdn.geoedge.be/b3960cc6-bfd2-4adc-910c-6e917e8a6a0e/grumi-ip.js"
+879.901 WebContent(13641): ResourceLoader: Filtered request to: "https://c.amazon-adsystem.com/aax2/apstag.js"
+879.911 WebContent(13641): ResourceLoader: Filtered request to: "https://www.googletagmanager.com/gtm.js?id=GTM-P528B3&gtm_auth=tfAzqo1rYDLgYhmTnSjPqw&gtm_preview=env-130&gtm_cookies_win=x"
+879.931 WebContent(13641): HTMLScriptElement: Refusing to run script because the element's result is null.
+879.931 WebContent(13641): HTMLScriptElement: Refusing to run script because the element's result is null.
+879.971 RequestServer(13622:13625): Request with a null socket finished for URL https://www.datadoghq-browser-agent.com/us1/v5/datadog-rum.js
+879.971 WebContent(13641): ResourceLoader: Failed load of: "https://www.datadoghq-browser-agent.com/us1/v5/datadog-rum.js", Error: Load failed, Duration: 71ms
+879.971 WebContent(13641): HTMLScriptElement: Refusing to run script because the element's result is null.
+880.101 WebContent(13641): (js warn) "userinfo data unavailable"
+880.141 WebContent(13641): ResourceLoader: Filtered request to: "https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+880.241 WebContent(13641): HTMLScriptElement: Refusing to run script because the element's result is null.
+880.481 RequestServer(13622:13631): TLS Socket write error: send: Broken pipe (errno=32)
+880.631 WebContent(13641): FIXME: Unimplemented IDL interface: 'LocationPrototype.ancestorOrigins'
+880.741 WebContent(13641): ResourceLoader: Filtered request to: "https://hbopenbid.pubmatic.com/translator?source=prebid-client"
+880.741 WebContent(13641): ResourceLoader: Filtered request to: "https://tlx.3lift.com/header/auction?lib=prebid&v=8.50.0&referrer=https%3A%2F%2Fwww.nytimes.com%2F2024%2F08%2F15%2Fbusiness%2Fuk-housing-crisis-new-towns.html&tmax=10000"
+880.741 WebContent(13641): ResourceLoader: Filtered request to: "https://ib.adnxs.com/ut/v3/prebid"
+880.741 WebContent(13641): ResourceLoader: Filtered request to: "https://bidder.criteo.com/cdb?profileId=207&av=36&wv=8.50.0&cb=77273655676&lsavail=0"
+880.741 WebContent(13641): ResourceLoader: Filtered request to: "https://htlb.casalemedia.com/openrtb/pbjs?s=995821"
+880.741 WebContent(13641): ResourceLoader: Filtered request to: "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=12330&site_id=378266&zone_id=2088370&size_id=2&alt_size_ids=55%2C57&p_pos=atf&rf=https%3A%2F%2Fwww.nytimes.com%2F2024%2F08%2F15%2Fbusiness%2Fuk-housing-crisis-new-towns.html&tg_i.domain=nytimes.com&tg_i.page=https%3A%2F%2Fwww.nytimes.com%2F2024%2F08%2F15%2Fbusiness%2Fuk-housing-crisis-new-towns.html&tg_i.ref=https%3A%2F%2Fwww.nytimes.com%2F&tg_i.invCode=nyt_business_top&tg_i.pbadslot=top&tk_flint=pbjs_lite_v8.50.0&l_pb_bid_id=4740273dc040273&p_screen_res=2560x1440&rp_secure=1&rp_maxbids=1&slots=1&rand=0.9986308747899325"
+880.751 WebContent(13641): ResourceLoader: Filtered request to: "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=12330&site_id=378266&zone_id=2088372&size_id=2&alt_size_ids=55%2C57&p_pos=btf&rf=https%3A%2F%2Fwww.nytimes.com%2F2024%2F08%2F15%2Fbusiness%2Fuk-housing-crisis-new-towns.html&tg_i.domain=nytimes.com&tg_i.page=https%3A%2F%2Fwww.nytimes.com%2F2024%2F08%2F15%2Fbusiness%2Fuk-housing-crisis-new-towns.html&tg_i.ref=https%3A%2F%2Fwww.nytimes.com%2F&tg_i.invCode=nyt_business_mid1&tg_i.pbadslot=story-ad-1&tk_flint=pbjs_lite_v8.50.0&l_pb_bid_id=4849bfdd2049bfd&p_screen_res=2560x1440&rp_secure=1&rp_maxbids=1&slots=1&rand=0.15124149204959197"
+880.751 WebContent(13641): ResourceLoader: Filtered request to: "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=12330&site_id=378266&zone_id=2088372&size_id=2&alt_size_ids=55%2C57&p_pos=btf&rf=https%3A%2F%2Fwww.nytimes.com%2F2024%2F08%2F15%2Fbusiness%2Fuk-housing-crisis-new-towns.html&tg_i.domain=nytimes.com&tg_i.page=https%3A%2F%2Fwww.nytimes.com%2F2024%2F08%2F15%2Fbusiness%2Fuk-housing-crisis-new-towns.html&tg_i.ref=https%3A%2F%2Fwww.nytimes.com%2F&tg_i.invCode=nyt_business_mid2&tg_i.pbadslot=story-ad-2&tk_flint=pbjs_lite_v8.50.0&l_pb_bid_id=494a8ccfcc4a8cd&p_screen_res=2560x1440&rp_secure=1&rp_maxbids=1&slots=1&rand=0.3281890122052722"
+880.751 WebContent(13641): ResourceLoader: Filtered request to: "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=12330&site_id=378266&zone_id=2088372&size_id=2&alt_size_ids=55%2C57&p_pos=btf&rf=https%3A%2F%2Fwww.nytimes.com%2F2024%2F08%2F15%2Fbusiness%2Fuk-housing-crisis-new-towns.html&tg_i.domain=nytimes.com&tg_i.page=https%3A%2F%2Fwww.nytimes.com%2F2024%2F08%2F15%2Fbusiness%2Fuk-housing-crisis-new-towns.html&tg_i.ref=https%3A%2F%2Fwww.nytimes.com%2F&tg_i.invCode=nyt_business_mid3&tg_i.pbadslot=story-ad-3&tk_flint=pbjs_lite_v8.50.0&l_pb_bid_id=50114b1262114b1&p_screen_res=2560x1440&rp_secure=1&rp_maxbids=1&slots=1&rand=0.07356678509934964"
+880.751 WebContent(13641): ResourceLoader: Filtered request to: "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=12330&site_id=378266&zone_id=2088372&size_id=2&alt_size_ids=55%2C57&p_pos=btf&rf=https%3A%2F%2Fwww.nytimes.com%2F2024%2F08%2F15%2Fbusiness%2Fuk-housing-crisis-new-towns.html&tg_i.domain=nytimes.com&tg_i.page=https%3A%2F%2Fwww.nytimes.com%2F2024%2F08%2F15%2Fbusiness%2Fuk-housing-crisis-new-towns.html&tg_i.ref=https%3A%2F%2Fwww.nytimes.com%2F&tg_i.invCode=nyt_business_mid4&tg_i.pbadslot=story-ad-4&tk_flint=pbjs_lite_v8.50.0&l_pb_bid_id=51c6e74bdcc6e74&p_screen_res=2560x1440&rp_secure=1&rp_maxbids=1&slots=1&rand=0.5952024943184113"
+880.751 WebContent(13641): ResourceLoader: Filtered request to: "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=12330&site_id=378266&zone_id=2088372&size_id=2&alt_size_ids=55%2C57&p_pos=btf&rf=https%3A%2F%2Fwww.nytimes.com%2F2024%2F08%2F15%2Fbusiness%2Fuk-housing-crisis-new-towns.html&tg_i.domain=nytimes.com&tg_i.page=https%3A%2F%2Fwww.nytimes.com%2F2024%2F08%2F15%2Fbusiness%2Fuk-housing-crisis-new-towns.html&tg_i.ref=https%3A%2F%2Fwww.nytimes.com%2F&tg_i.invCode=nyt_business_mid5&tg_i.pbadslot=story-ad-5&tk_flint=pbjs_lite_v8.50.0&l_pb_bid_id=52b95ae7d8b95ae&p_screen_res=2560x1440&rp_secure=1&rp_maxbids=1&slots=1&rand=0.926397010201215"
+880.751 WebContent(13641): ResourceLoader: Filtered request to: "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=12330&site_id=378266&zone_id=2088372&size_id=2&alt_size_ids=55%2C57&p_pos=btf&rf=https%3A%2F%2Fwww.nytimes.com%2F2024%2F08%2F15%2Fbusiness%2Fuk-housing-crisis-new-towns.html&tg_i.domain=nytimes.com&tg_i.page=https%3A%2F%2Fwww.nytimes.com%2F2024%2F08%2F15%2Fbusiness%2Fuk-housing-crisis-new-towns.html&tg_i.ref=https%3A%2F%2Fwww.nytimes.com%2F&tg_i.invCode=nyt_business_mid6&tg_i.pbadslot=story-ad-6&tk_flint=pbjs_lite_v8.50.0&l_pb_bid_id=535799765057997&p_screen_res=2560x1440&rp_secure=1&rp_maxbids=1&slots=1&rand=0.9084248747463396"
+880.761 WebContent(13641): ResourceLoader: Filtered request to: "https://fastlane.rubiconproject.com/a/api/fastlane.json?account_id=12330&site_id=378266&zone_id=2088374&size_id=2&alt_size_ids=55%2C57&p_pos=btf&rf=https%3A%2F%2Fwww.nytimes.com%2F2024%2F08%2F15%2Fbusiness%2Fuk-housing-crisis-new-towns.html&tg_i.domain=nytimes.com&tg_i.page=https%3A%2F%2Fwww.nytimes.com%2F2024%2F08%2F15%2Fbusiness%2Fuk-housing-crisis-new-towns.html&tg_i.ref=https%3A%2F%2Fwww.nytimes.com%2F&tg_i.invCode=nyt_business_bottom&tg_i.pbadslot=bottom&tk_flint=pbjs_lite_v8.50.0&l_pb_bid_id=54fbdf6b9ffbdf6&p_screen_res=2560x1440&rp_secure=1&rp_maxbids=1&slots=1&rand=0.3166880233484991"
+880.761 WebContent(13641): ResourceLoader: Filtered request to: "https://prebid.media.net/rtb/prebid?cid=8CU4WQK98"
+880.761 WebContent(13641): ResourceLoader: Filtered request to: "https://rtb.openx.net/openrtbb/prebidjs"
+883.701 WebContent(13641): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
+884.211 WebContent(13641): ResourceLoader: Filtered request to: "https://ssp-sync.criteo.com/user-sync/redirect?profile=207&gpp="
+884.211 WebContent(13641): ResourceLoader: Filtered request to: "https://eb2.3lift.com/sync?px=1&src=prebid&"
+884.211 WebContent(13641): ResourceLoader: Filtered request to: "https://dsum.casalemedia.com/pbusermatch?origin=prebid&site_id=995821&p=1&i=0&gdpr=0&gdpr_consent=&us_privacy="
+884.211 WebContent(13641): ResourceLoader: Filtered request to: "https://image8.pubmatic.com/AdServer/ImgSync?p=163427"
+884.211 WebContent(13641): ResourceLoader: Filtered request to: "https://u.openx.net/w/1.0/pd?ph=2d1251ae-7f3a-47cf-bd2a-2f288854a0ba"
+886.431 WebContent(13641): No property (from 4 properties) matched Function: linear-gradient( 0deg,rgba(255,255,255,0.16),rgba(255,255,255,0.16) )
+886.431 WebContent(13641):     border-top-color
+886.431 WebContent(13641):     border-right-color
+886.431 WebContent(13641):     border-bottom-color
+886.431 WebContent(13641):     border-left-color
+886.481 WebContent(13641): No property (from 4 properties) matched Token: String: 0 40px
+886.481 WebContent(13641):     margin-top
+886.481 WebContent(13641):     margin-right
+886.481 WebContent(13641):     margin-bottom
+886.481 WebContent(13641):     margin-left
+886.481 WebContent(13641): No property (from 4 properties) matched Token: String: 0
+886.481 WebContent(13641):     margin-top
+886.481 WebContent(13641):     margin-right
+886.481 WebContent(13641):     margin-bottom
+886.481 WebContent(13641):     margin-left
+886.531 WebContent(13641): No property (from 4 properties) matched Token: String: 0 40px
+886.531 WebContent(13641):     margin-top
+886.531 WebContent(13641):     margin-right
+886.531 WebContent(13641):     margin-bottom
+886.531 WebContent(13641):     margin-left
+886.541 WebContent(13641): No property (from 4 properties) matched Token: Ident: none
+886.541 WebContent(13641):     margin-top
+886.541 WebContent(13641):     margin-right
+886.541 WebContent(13641):     margin-bottom
+886.541 WebContent(13641):     margin-left
+886.591 WebContent(13641): FIXME: Unimplemented Navigator.maxTouchPoints
+886.591 WebContent(13641): FIXME: Unimplemented Navigator.maxTouchPoints
+886.661 WebContent(13641): (js log) "<!--\n         0000000                         000        0000000\n       111111111      11111111100          000      111111111\n       00000        111111111111111111      00000      000000\n       000        1111111111111111111111111100000         000\n       000        1111       1111111111111111100          000\n       000         11       0     1111111100              000\n       000          1      00             1               000\n       000               00      00       1               000\n       000
+    000    00000       1               000\n    00000            0000  00000000       1                00000\n  11111            000 00    000000      000                 11111\n    00000         0000      000000     00000              00000\n       000        10000      000000      000              0000\n       000        00000      000000       1               000\n  000        000000     10000        1     0         000\n       000        1000000 00              1    00         000\n       000         1111111                1 0000          000\n   000          1111111100           000000           000\n       0000          111111111111111110000000            0000\n       111111111        111111111111100000          111111111\n      0000000              00000000              0000000\n\n      NYTimes.com: All the code that's fit to window.print()!\n      We're hiring: https://boards.greenhouse.io/thenewyorktimes\n   -->"
+886.661 WebContent(13641): HTMLScriptElement: Refusing to run script because the element's result is null.
+887.301 WebContent(13641): (js warn) "Warning: fragment with name RecirculationItem_personalized already exists.\ngraphql-tag enforces all fragment names across your application to be unique; read more about\nthis in the docs: http://dev.apollodata.com/core/fragments.html#unique-names"
+891.221 WebContent(13641): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
+891.221 WebContent(13641): Call to NavigatorIDMixin::vendor, using Chrome compatibility mode
+891.221 WebContent(13641): ResourceLoader: Filtered request to: "https://api.rlcdn.com/api/identity/v2/envelope?pid=14158&it=4&iv=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+891.231 WebContent(13641): (js error) "There has been a problem with your fetch operation: " [TypeError] Request with 'cors' response tainting failed CORS check
+891.291 WebContent(13641): ResourceLoader: Filtered request to: "https://static.criteo.net/js/ld/publishertag.prebid.144.js"
+891.341 WebContent(13641): HTMLScriptElement: Refusing to run script because the element's result is null.
+891.851 WebContent(13641): ResourceLoader: Filtered request to: "https://a.et.nytimes.com//.status"
+892.531 WebContent(13641): (js error) "et track blocked" [TypeError] Request was blocked
+892.981 WebContent(13641): Unhandled JavaScript exception: [TypeError] Cannot access property "getAttribute" on null object "document.activeElement"
+892.981 WebContent(13641):     at t (https://www.nytimes.com/vi-assets/static-assets/main-712bea2b0b8d14b29756.js:13:199917)
+
+893.111 WebContent(13641): Unhandled JavaScript exception: [TypeError] Cannot access property "getAttribute" on null object "document.activeElement"
+893.111 WebContent(13641):     at e (https://www.nytimes.com/vi-assets/static-assets/main-712bea2b0b8d14b29756.js:13:199771)
+
+893.441 WebContent(13641): FIXME: Unimplemented Navigator.maxTouchPoints
+893.471 WebContent(13641): FIXME: Unimplemented Navigator.maxTouchPoints
+893.521 WebContent(13641): FIXME: Unimplemented Navigator.maxTouchPoints
+893.521 WebContent(13641): FIXME: Unimplemented Navigator.maxTouchPoints
+894.091 WebContent(13641): (js warn) "Warning: fragment with name RecirculationItem_item already exists.\ngraphql-tag enforces all fragment names across your application to be unique; read more about\nthis in the docs: http://dev.apollodata.com/core/fragments.html#unique-names"
+894.111 WebContent(13641): (js warn) "Warning: fragment with name RecirculationItem_personalized already exists.\ngraphql-tag enforces all fragment names across your application to be unique; read more about\nthis in the docs: http://dev.apollodata.com/core/fragments.html#unique-names"
+894.641 WebContent(13641): FIXME: Unimplemented Navigator.maxTouchPoints
+895.921 WebContent(13641): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
+895.921 WebContent(13641): Potential FIXME: Creating unknown generic element 'animate' in namespace 'http://www.w3.org/2000/svg'
+898.221 WebContent(13641): ResourceLoader: Filtered request to: "https://s.go-mpulse.net/boomerang/ATH8A-MAMN8-XPXCH-N5KAX-8D239"
+898.271 WebContent(13641): ResourceLoader: Filtered request to: "https://a.et.nytimes.com/track"
+901.431 WebContent(13641): ResourceLoader: Filtered request to: "https://a.et.nytimes.com/track"
+902.071 WebContent(13641): ResourceLoader: Filtered request to: "https://a.et.nytimes.com/track"
+902.071 WebContent(13641): ResourceLoader: Filtered request to: "https://a.et.nytimes.com/track"
+902.641 WebContent(13641): ResourceLoader: Filtered request to: "https://a.et.nytimes.com/track"
+908.881 RequestServer(13622:13626): ConnectionCache: Connection to https://top-fwz1.mail.ru/js/code.js failed: connect: Connection refused (errno=111)
+908.881 RequestServer(13622:13626): Request with a null socket finished for URL https://top-fwz1.mail.ru/js/code.js
+908.881 WebContent(13641): ResourceLoader: Failed load of: "https://top-fwz1.mail.ru/js/code.js", Error: Load failed, Duration: 30ms
+908.891 WebContent(13641): HTMLScriptElement: Refusing to run script because the element's result is null.
+908.911 RequestServer(13622:13629): ConnectionCache: Connection to https://70.104.195.206.us.inc8.0.pixel.archive.fo/x.gif failed: Name or service not known
+908.911 RequestServer(13622:13629): Request with a null socket finished for URL https://70.104.195.206.us.inc8.0.pixel.archive.fo/x.gif
+908.911 WebContent(13641): ResourceLoader: Failed load of: "https://70.104.195.206.us.inc8.0.pixel.archive.fo/x.gif", Error: Load failed, Duration: 60ms
+922.781 RequestServer(13622:13640): Request with a null socket finished for URL https://top-fwz1.mail.ru/js/code.js
+922.781 WebContent(13641): ResourceLoader: Failed load of: "https://top-fwz1.mail.ru/js/code.js", Error: Load failed, Duration: 50ms
+922.801 WebContent(13641): ImageDecoderClient: Failed to decode image with ID 79: Decoding failed: Could not find suitable image decoder plugin for data
+922.801 WebContent(13641): HTMLScriptElement: Refusing to run script because the element's result is null.
+922.811 RequestServer(13622:13625): ConnectionCache: Connection to https://70.104.195.206.us.inc8.390181112.pixel.archive.fo/x.gif failed: Name or service not known
+922.811 RequestServer(13622:13625): Request with a null socket finished for URL https://70.104.195.206.us.inc8.390181112.pixel.archive.fo/x.gif
+922.811 WebContent(13641): ResourceLoader: Failed load of: "https://70.104.195.206.us.inc8.390181112.pixel.archive.fo/x.gif", Error: Load failed, Duration: 80ms
+
+real    12m38.783s
+user    108m58.318s
+sys     5m53.221s
+Thu Aug 15 07:42:17 EDT 2024
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull originmaster; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
