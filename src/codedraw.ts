@@ -190,14 +190,14 @@ type Instruction = {
 //     docs!.classList.toggle("hidden");
 //   }
   
-//   function updateToast(text: string) {
-//     if (text) {
-//       errorToast!.innerText = text;
-//       errorToast!.classList.remove("hidden");
-//     } else {
-//       errorToast!.classList.add("hidden");
-//     }
-//   }
+  function updateToast(text: string) {
+    if (text) {
+      errorToast!.innerText = text;
+      errorToast!.classList.remove("hidden");
+    } else {
+      errorToast!.classList.add("hidden");
+    }
+  }
   
 //   function shareURL() {
 //     if (!navigator.clipboard) {
