@@ -68,38 +68,7 @@ async function displayFooter() {
     throw new Error('App container not found');
   }  
   const footerElement = document.createElement(`footer`);
-  footerElement.innerHTML = `
-    **General Disclaimers**
-
-    <p>May contain nuts, but not the kind that'll make you smarter.<p>
-    <p>Side effects of using this website may include: procrastination, eye strain, and a sudden urge to watch cat videos.<p>
-    <p>Not responsible for any spontaneous outbursts of laughter, tears, or existential crises.<p>
-
-    **Financial Disclaimers**
-
-    <p>Investments may go down in value, but our excuses for why they did will always be creative.<p>
-    <p>Past performance is not indicative of future success, but hey, at least we tried.<p>
-    <p>Risk of financial loss is high, but the risk of boredom is even higher if you don't take a chance.<p>
-
-    **Health and Wellness Disclaimers**
-
-    <p>Our fitness advice is not intended to replace medical professionals, but our trainers are pretty sure they know what they're doing.<p>
-    <p>Results not typical, but we'll make you feel guilty for not achieving them anyway.<p>
-    <p>Side effects of our wellness program may include: increased energy, improved mood, and a sudden urge to post about it on social media.<p>
-
-    **Technology Disclaimers**
-
-    <p>Our website may be down for maintenance, but our excuses for why it's down will always be up.<p>
-    <p>Not responsible for any data lost, stolen, or used for nefarious purposes (but let's be real, it's probably just a cat video).<p>
-    <p>Our app is not intended for use while operating heavy machinery, but we won't judge you if you do.<p>
-
-    **Miscellaneous Disclaimers**
-
-    <p>Our opinions are not facts, but they're definitely more interesting than facts.<p>
-    <p>Not responsible for any relationships ruined by our dating advice, but we'll take credit for the ones that work out.<p>
-    <p>Our website is not intended for use by anyone under the age of 13, but let's be real, kids are way more tech-savvy than we are.<p>
-    
-    Posts are also available as a <code>json</code> file at <a href="/posts.json">/posts.json</a>`;
+  footerElement.innerHTML = `Posts are also available as a <code>json</code> file at <a href="/posts.json">/posts.json</a>`;
   postsContainer.appendChild(footerElement);
 }
 
