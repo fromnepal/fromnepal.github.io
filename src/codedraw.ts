@@ -184,7 +184,7 @@ type Instruction = {
   // let editor: any = null;
   let draw: Draw | null = null;
   let errorToast: HTMLSpanElement | null = null;
-//   let docs: HTMLDivElement | null = null;
+  let docs: HTMLDivElement | null = null;
   
 //   function toggleDocs() {
 //     docs!.classList.toggle("hidden");
