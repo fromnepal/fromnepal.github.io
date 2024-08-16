@@ -3,4 +3,141 @@ https://www.instagram.com/reel/C-nLzX5tgBB/?igsh=MW1oZXVybjJhejZnMA==
 
 cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" -i "https://www.instagram.com/reel/C-nLzX5tgBB/"; date;
 
-cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"  --sponsorblock-mark all --sponsorblock-remove all -i "https://youtu.be/DORZA_S7f9w"; date; 
+cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"  --sponsorblock-mark all --sponsorblock-remove all -i "https://youtu.be/DORZA_S7f9w"; date;
+
+
+
+
+$url = "https://youtu.be/agWX23xZrh0"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4"; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/16/2024  4:44 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://youtu.be/agWX23xZrh0']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://youtu.be/agWX23xZrh0
+[youtube] agWX23xZrh0: Downloading webpage
+[youtube] agWX23xZrh0: Downloading ios player API JSON
+[youtube] agWX23xZrh0: Downloading web creator player API JSON
+[debug] Loading youtube-nsig.53afa3ce from cache
+[debug] [youtube] Decrypted nsig 5ANcaK27_oxE3UOpm => nOHdyheo7vJ-3g
+[youtube] agWX23xZrh0: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/4039?service=YouTube&categories=%5B%22chapter%22%2C+%22outro%22%2C+%22interaction%22%2C+%22music_offtopic%22%2C+%22filler%22%2C+%22poi_highlight%22%2C+%22selfpromo%22%2C+%22sponsor%22%2C+%22preview%22%2C+%22intro%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+[SponsorBlock] No matching segments were found in the SponsorBlock database
+[info] Testing format 616
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 11
+[download] Destination: C:\Users\kushal\src\myhtml\fromnepal\tmpsrl1a6_o.tmp
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of    712.00B in 00:00:00 at 7.73KiB/s
+[info] agWX23xZrh0: Downloading 1 format(s): 616+140
+[info] There are no subtitles for the requested languages
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1723862652/ei/HLq_ZqzbHb2AkucP7bLssAc/ip/70.104.195.206/id/6a0597db7c59ae1d/itag/616/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D25973667%3Bdur%3D59.726%3Bgir%3Dyes%3Bitag%3D356%3Blmt%3D1723771187589378/rqh/1/hls_chunk_host/rr1---sn-8xgp1vo-gpjl.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/mh/qZ/mm/31,29/mn/sn-8xgp1vo-gpjl,sn-8xgp1vo-p5qe/ms/au,rdu/mv/m/mvi/1/pl/20/initcwndbps/1285000/vprv/1/playlist_type/DVR/dover/13/txp/543C434/mt/1723840886/fvip/5/short_key/1/keepalive/yes/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,vprv,playlist_type/sig/AJfQdSswRAIgNepjacVJXh2nOovg45_45L9xEiLlQbwoCQq9JREvW1UCIGhBxyTvb5dSGyiUj9yEuqhb6dLh3qQE7zQMzGQoySVV/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl,initcwndbps/lsig/AGtxev0wRAIfD5Em4byWGcNEsm_HAPPHPqNIbN9rzFhDtQu7ZMCi5wIhAKMBG_GUsKmuYMyJ8pNrgkJueaCj2p68RIugU5N7qG0h/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 11
+[download] Destination: C:\Temp\yt-dlp\Philosophical_Security_System.f616.mp4
+[download] 100% of   24.78MiB in 00:00:04 at 5.92MiB/s
+[debug] Invoking http downloader on "https://rr1---sn-8xgp1vo-gpjl.googlevideo.com/videoplayback?expire=1723862652&ei=HLq_ZqzbHb2AkucP7bLssAc&ip=70.104.195.206&id=o-APFXBAqMGUlRuc15fmhgeigZ-iHPg6sQcFhFJvionCLi&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=qZ&mm=31%2C29&mn=sn-8xgp1vo-gpjl%2Csn-8xgp1vo-p5qe&ms=au%2Crdu&mv=m&mvi=1&pl=20&initcwndbps=1285000&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=968792&dur=59.791&lmt=1723769565748823&mt=1723840886&fvip=5&keepalive=yes&c=IOS&txp=5432434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgP0dHueBFpe3MiQtobmCLgIePJ__gBIrqMz3F_MvYOeICIQC7X0CfJ5-KasXvCBubZk3vjNqGhD_AG7ylYEXzqOsZWw%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRQIhAOQoF-YoubXjDlaS4yv_rfcK47q7S2Vwn0JEUKlOXkm2AiAITGN1EsqLBQi7RHQ5_7YRLeZEpp7Zp9XXpz6NBEpu4Q%3D%3D"
+[download] Destination: C:\Temp\yt-dlp\Philosophical_Security_System.f140.m4a
+[download] 100% of  946.09KiB in 00:00:00 at 1.96MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Philosophical_Security_System.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Philosophical_Security_System.f616.mp4 -i file:C:\Temp\yt-dlp\Philosophical_Security_System.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Philosophical_Security_System.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Philosophical_Security_System.f140.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Philosophical_Security_System.f616.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Philosophical_Security_System.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Philosophical_Security_System.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Philosophical Security System" -metadata "date=20240815" -metadata "purl=https://www.youtube.com/watch?v=agWX23xZrh0" -metadata "comment=https://www.youtube.com/watch?v=agWX23xZrh0" -metadata "artist=Studio C" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\Philosophical_Security_System.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Philosophical_Security_System.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Philosophical Security System
+    artist          : Studio C
+    date            : 20240815
+    encoder         : Lavf61.1.100
+    comment         : https://www.youtube.com/watch?v=agWX23xZrh0
+  Duration: 00:00:59.79, start: 0.000000, bitrate: 3609 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 3477 kb/s, 29.97 fps, 29.97 tbr, 16k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 08/16/2024.
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000002358e6beb80] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000002358e6beb80] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 000002358e6beb80] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Philosophical_Security_System_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Philosophical Security System
+    artist          : Studio C
+    date            : 20240815
+    comment         : https://www.youtube.com/watch?v=agWX23xZrh0
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 29.97 fps, 30k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 08/16/2024.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 000002358e836c40] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000002358e6be840] video:22382KiB audio:950KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.278542%
+frame= 1790 fps=137 q=-1.0 Lsize=   23397KiB time=00:00:59.65 bitrate=3212.7kbits/s speed=4.57x
+[libx264 @ 000002358e6beb80] frame I:18    Avg QP:19.46  size: 79500
+[libx264 @ 000002358e6beb80] frame P:452   Avg QP:21.82  size: 27520
+[libx264 @ 000002358e6beb80] frame B:1320  Avg QP:24.74  size:  6855
+[libx264 @ 000002358e6beb80] consecutive B-frames:  1.2%  1.0%  1.0% 96.8%
+[libx264 @ 000002358e6beb80] mb I  I16..4: 17.8% 61.1% 21.1%
+[libx264 @ 000002358e6beb80] mb P  I16..4:  5.6% 11.5%  1.1%  P16..4: 38.9%  8.6%  3.7%  0.0%  0.0%    skip:30.6%
+[libx264 @ 000002358e6beb80] mb B  I16..4:  0.6%  0.9%  0.1%  B16..8: 32.1%  1.9%  0.3%  direct: 1.4%  skip:62.7%  L0:45.5% L1:51.3% BI: 3.1%
+[libx264 @ 000002358e6beb80] 8x8 transform intra:61.9% inter:81.0%
+[libx264 @ 000002358e6beb80] coded y,uvDC,uvAC intra: 30.9% 34.4% 6.1% inter: 7.0% 8.9% 0.0%
+[libx264 @ 000002358e6beb80] i16 v,h,dc,p: 28% 39% 10% 23%
+[libx264 @ 000002358e6beb80] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 25% 24% 29%  3%  4%  4%  4%  3%  3%
+[libx264 @ 000002358e6beb80] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 29% 27% 12%  4%  7%  6%  7%  4%  4%
+[libx264 @ 000002358e6beb80] i8c dc,h,v,p: 53% 26% 18%  3%
+[libx264 @ 000002358e6beb80] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 000002358e6beb80] ref P L0: 59.7% 10.9% 21.8%  7.6%
+[libx264 @ 000002358e6beb80] ref B L0: 87.5% 10.0%  2.5%
+[libx264 @ 000002358e6beb80] ref B L1: 95.2%  4.8%
+[libx264 @ 000002358e6beb80] kb/s:3069.78
+[aac @ 000002358e680340] Qavg: 819.274
