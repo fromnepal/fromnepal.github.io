@@ -2991,3 +2991,1767 @@ To github.com:fromnepal/fromnepal.github.io.git
 Friday, August 16, 2024 4:58:20 PM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Friday, August 16, 2024 4:58:31 PM
+Friday, August 16, 2024 4:58:31 PM
+On branch main
+nothing to commit, working tree clean
+Friday, August 16, 2024 4:58:32 PM
+Friday, August 16, 2024 4:58:32 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Friday, August 16, 2024 4:58:32 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.1 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 144ms
+Done in 0.92s.
+Friday, August 16, 2024 4:58:33 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, August 16, 2024 4:58:33 PM
+[main 40777d1] build application
+ 2 files changed, 92 insertions(+), 2 deletions(-)
+Friday, August 16, 2024 4:58:33 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Friday, August 16, 2024 4:58:34 PM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 667 bytes | 667.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   77cf7ca..40777d1  main -> main
+Friday, August 16, 2024 4:58:35 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Friday, August 16, 2024 6:28:10 PM
+Friday, August 16, 2024 6:28:11 PM
+On branch main
+nothing to commit, working tree clean
+Friday, August 16, 2024 6:28:11 PM
+Friday, August 16, 2024 6:28:11 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Friday, August 16, 2024 6:28:11 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.1 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 199ms
+Done in 1.23s.
+Friday, August 16, 2024 6:28:12 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, August 16, 2024 6:28:13 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Friday, August 16, 2024 6:28:13 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Friday, August 16, 2024 6:28:14 PM
+Everything up-to-date
+Friday, August 16, 2024 6:28:14 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C-sH8MhSQuX"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$($subtitleFile.FullName)'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/16/2024  6:31 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C-sH8MhSQuX']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C-sH8MhSQuX
+[Instagram] C-sH8MhSQuX: Setting up session
+[Instagram] C-sH8MhSQuX: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C-sH8MhSQuX: Downloading 1 format(s): dash-1214143802952288v+dash-1684347905734184ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t39.25447-16/455027991_1489160465295880_6277475080533680375_n.mp4?_nc_cat=100&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5LWhmcl9xOTAiLCJ2aWRlb19pZCI6bnVsbH0%3D&_nc_ohc=oSAtAhPvByYQ7kNvgHVdGZ6&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYAIAPMpEK0eyuZPP6iNPyriWlLoJUeA5S7yIl9qd4ZtZg&oe=66C5B870"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.fdash-1214143802952288v.mp4
+[download] 100% of   15.25MiB in 00:00:01 at 8.38MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/v/t50.33967-16/453990424_1386144995707433_3872815254910211326_n.mp4?_nc_cat=107&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=M5mEa6oPPUYQ7kNvgEx0L9x&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=00_AYAeYt-zbYVV7N_TLSKvuj3IluSTvWnfqV2MxMlgy0ABqw&oe=66C5C064"
+[download] Destination: C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.fdash-1684347905734184ad.m4a
+[download] 100% of  154.19KiB in 00:00:00 at 394.18KiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.fdash-1214143802952288v.mp4 -i file:C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.fdash-1684347905734184ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.fdash-1214143802952288v.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.fdash-1684347905734184ad.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by muktinathnepalofficial" -metadata "date=20240815" -metadata "description=House on sale at Budhanilkantha .
+
+For more information DM Me .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+#lalpurjanepal #viral #house #budhanilkantha #trending #forsale #fyp #banglow #foryou" -metadata "synopsis=House on sale at Budhanilkantha .
+
+For more information DM Me .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+#lalpurjanepal #viral #house #budhanilkantha #trending #forsale #fyp #banglow #foryou" -metadata "purl=https://www.instagram.com/reel/C-sH8MhSQuX" -metadata "comment=https://www.instagram.com/reel/C-sH8MhSQuX" -metadata "artist=Mukti Nath Nepal" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by muktinathnepalofficial
+    artist          : Mukti Nath Nepal
+    date            : 20240815
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C-sH8MhSQuX
+    description     : House on sale at Budhanilkantha .
+                    :
+                    : For more information DM Me .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : #lalpurjanepal #viral #house #budhanilkantha #trending #forsale #fyp #banglow #foryou
+    synopsis        : House on sale at Budhanilkantha .
+                    :
+                    : For more information DM Me .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : #lalpurjanepal #viral #house #budhanilkantha #trending #forsale #fyp #banglow #foryou
+  Duration: 00:00:18.09, start: 0.000000, bitrate: 7143 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 7084 kb/s, 59.99 fps, 59.99 tbr, 29997 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+      Side data:
+        Ambient Viewing Environment, ambient_illuminance=314.000000, ambient_light_x=0.312700, ambient_light_y=0.329000
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 67 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000002799cd6e200] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000002799cd6e200] profile High, level 4.2, 4:2:0, 8-bit
+[libx264 @ 000002799cd6e200] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_muktinathnepalofficial_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by muktinathnepalofficial
+    artist          : Mukti Nath Nepal
+    date            : 20240815
+    synopsis        : House on sale at Budhanilkantha .
+                    :
+                    : For more information DM Me .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : #lalpurjanepal #viral #house #budhanilkantha #trending #forsale #fyp #banglow #foryou
+    comment         : https://www.instagram.com/reel/C-sH8MhSQuX
+    description     : House on sale at Budhanilkantha .
+                    :
+                    : For more information DM Me .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : #lalpurjanepal #viral #house #budhanilkantha #trending #forsale #fyp #banglow #foryou
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 59.99 fps, 29997 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+        Ambient Viewing Environment, ambient_illuminance=314.000000, ambient_light_x=0.312700, ambient_light_y=0.329000
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 000002799cd6eb40] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000002799cd6d980] video:11242KiB audio:283KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.268589%
+frame= 1083 fps=133 q=-1.0 Lsize=   11556KiB time=00:00:18.01 bitrate=5253.7kbits/s speed=2.22x
+[libx264 @ 000002799cd6e200] frame I:5     Avg QP:21.04  size:142220
+[libx264 @ 000002799cd6e200] frame P:273   Avg QP:23.86  size: 26911
+[libx264 @ 000002799cd6e200] frame B:805   Avg QP:26.98  size:  4290
+[libx264 @ 000002799cd6e200] consecutive B-frames:  0.7%  0.4%  0.3% 98.6%
+[libx264 @ 000002799cd6e200] mb I  I16..4: 12.7% 60.4% 26.9%
+[libx264 @ 000002799cd6e200] mb P  I16..4:  2.3%  5.8%  0.3%  P16..4: 40.3% 12.3%  6.7%  0.0%  0.0%    skip:32.2%
+[libx264 @ 000002799cd6e200] mb B  I16..4:  0.1%  0.1%  0.0%  B16..8: 35.3%  1.4%  0.2%  direct: 0.6%  skip:62.2%  L0:45.0% L1:52.9% BI: 2.0%
+[libx264 @ 000002799cd6e200] 8x8 transform intra:66.4% inter:77.9%
+[libx264 @ 000002799cd6e200] coded y,uvDC,uvAC intra: 21.4% 23.6% 5.8% inter: 5.3% 4.3% 0.1%
+[libx264 @ 000002799cd6e200] i16 v,h,dc,p: 31% 31% 14% 24%
+[libx264 @ 000002799cd6e200] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 19% 18% 49%  2%  2%  2%  3%  2%  3%
+[libx264 @ 000002799cd6e200] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 30% 26% 13%  3%  4%  4% 11%  3%  5%
+[libx264 @ 000002799cd6e200] i8c dc,h,v,p: 66% 18% 15%  1%
+[libx264 @ 000002799cd6e200] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 000002799cd6e200] ref P L0: 64.7% 15.4% 15.1%  4.8%
+[libx264 @ 000002799cd6e200] ref B L0: 93.8%  4.9%  1.3%
+[libx264 @ 000002799cd6e200] ref B L1: 96.7%  3.3%
+[libx264 @ 000002799cd6e200] kb/s:5101.29
+[aac @ 000002799cd3b300] Qavg: 216.396
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C-uVRFbysNe"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$($subtitleFile.FullName)'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/16/2024  6:33 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C-uVRFbysNe']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C-uVRFbysNe
+[Instagram] C-uVRFbysNe: Setting up session
+[Instagram] C-uVRFbysNe: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C-uVRFbysNe: Downloading 1 format(s): dash-857582869631353v+dash-1004467348141242ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/v/t39.25447-16/455794690_948197690397963_8038711547408057121_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=IdpUCi6BDkYQ7kNvgGsSIUb&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=00_AYBFbU2gq8Nb-YSKwJ05pagjskhrCvPvQyQriE2pie0Ogw&oe=66C5B3E9"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_lalpurjanp.fdash-857582869631353v.mp4
+[download] 100% of   16.42MiB in 00:00:02 at 7.91MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t50.33967-16/453895027_492113763455975_7618915094731229946_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=8faUOTaoxpgQ7kNvgEOVibz&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYAXKTBmrgrPo32VcX0RNN4g2KBUDd1BNp7nliwMiPZlCw&oe=66C5BE87"
+[download] Destination: C:\Temp\yt-dlp\Video_by_lalpurjanp.fdash-1004467348141242ad.m4a
+[download] 100% of  435.58KiB in 00:00:00 at 1.60MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_lalpurjanp.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_lalpurjanp.fdash-857582869631353v.mp4 -i file:C:\Temp\yt-dlp\Video_by_lalpurjanp.fdash-1004467348141242ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_lalpurjanp.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_lalpurjanp.fdash-1004467348141242ad.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_lalpurjanp.fdash-857582869631353v.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_lalpurjanp.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_lalpurjanp.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by lalpurjanp" -metadata "date=20240816" -metadata "description=यदि तपाईलाई ऋण (Loan) सम्बन्धी कुनै अन्योलता छ भने, यो भिडियो पूरा हेर्नुहोस्।
+
+For loan consultation, do contact - +977 985-1352605
+
+#lalpurja #lalpurjanepal #lalpurjamortgage" -metadata "synopsis=यदि तपाईलाई ऋण (Loan) सम्बन्धी कुनै अन्योलता छ भने, यो भिडियो पूरा हेर्नुहोस्।
+
+For loan consultation, do contact - +977 985-1352605
+
+#lalpurja #lalpurjanepal #lalpurjamortgage" -metadata "purl=https://www.instagram.com/reel/C-uVRFbysNe" -metadata "comment=https://www.instagram.com/reel/C-uVRFbysNe" -metadata "artist=Lalpurja Nepal™️ | Realestate Agency In Nepal" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_lalpurjanp.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_lalpurjanp.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by lalpurjanp
+    artist          : Lalpurja Nepal™️ | Realestate Agency In Nepal
+    date            : 20240816
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C-uVRFbysNe
+    description     : यदि तपाईलाई ऋण (Loan) सम्बन्धी कुनै अन्योलता छ भने, यो भिडियो पूरा हेर्नुहोस्।
+                    :
+                    : For loan consultation, do contact - +977 985-1352605
+                    :
+                    : #lalpurja #lalpurjanepal #lalpurjamortgage
+    synopsis        : यदि तपाईलाई ऋण (Loan) सम्बन्धी कुनै अन्योलता छ भने, यो भिडियो पूरा हेर्नुहोस्।
+                    :
+                    : For loan consultation, do contact - +977 985-1352605
+                    :
+                    : #lalpurja #lalpurjanepal #lalpurjamortgage
+  Duration: 00:00:58.26, start: 0.000000, bitrate: 2427 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 2363 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 59 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000024d246b4500] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000024d246b4500] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0000024d246b4500] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_lalpurjanp_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by lalpurjanp
+    artist          : Lalpurja Nepal™️ | Realestate Agency In Nepal
+    date            : 20240816
+    synopsis        : यदि तपाईलाई ऋण (Loan) सम्बन्धी कुनै अन्योलता छ भने, यो भिडियो पूरा हेर्नुहोस्।
+                    :
+                    : For loan consultation, do contact - +977 985-1352605
+                    :
+                    : #lalpurja #lalpurjanepal #lalpurjamortgage
+    comment         : https://www.instagram.com/reel/C-uVRFbysNe
+    description     : यदि तपाईलाई ऋण (Loan) सम्बन्धी कुनै अन्योलता छ भने, यो भिडियो पूरा हेर्नुहोस्।
+                    :
+                    : For loan consultation, do contact - +977 985-1352605
+                    :
+                    : #lalpurja #lalpurjanepal #lalpurjamortgage
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 0000024d246a1700] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000024d246b5400] video:23388KiB audio:918KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.259093%
+frame= 1747 fps=142 q=-1.0 Lsize=   24369KiB time=00:00:58.16 bitrate=3432.1kbits/s speed=4.74x
+[libx264 @ 0000024d246b4500] frame I:11    Avg QP:19.09  size: 58370
+[libx264 @ 0000024d246b4500] frame P:587   Avg QP:22.61  size: 23692
+[libx264 @ 0000024d246b4500] frame B:1149  Avg QP:25.93  size:  8181
+[libx264 @ 0000024d246b4500] consecutive B-frames:  8.5%  8.7%  8.4% 74.4%
+[libx264 @ 0000024d246b4500] mb I  I16..4: 31.8% 53.7% 14.5%
+[libx264 @ 0000024d246b4500] mb P  I16..4:  7.9% 15.0%  2.0%  P16..4: 23.9%  6.7%  2.2%  0.0%  0.0%    skip:42.4%
+[libx264 @ 0000024d246b4500] mb B  I16..4:  1.0%  1.7%  0.2%  B16..8: 28.8%  3.0%  0.4%  direct: 1.1%  skip:64.0%  L0:47.0% L1:47.4% BI: 5.6%
+[libx264 @ 0000024d246b4500] 8x8 transform intra:59.9% inter:84.5%
+[libx264 @ 0000024d246b4500] coded y,uvDC,uvAC intra: 31.6% 30.5% 7.7% inter: 6.5% 5.5% 0.3%
+[libx264 @ 0000024d246b4500] i16 v,h,dc,p: 37% 31%  6% 26%
+[libx264 @ 0000024d246b4500] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 18% 26%  4%  5%  6%  5%  5%  4%
+[libx264 @ 0000024d246b4500] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 35% 24% 16%  3%  6%  6%  4%  4%  2%
+[libx264 @ 0000024d246b4500] i8c dc,h,v,p: 63% 16% 17%  4%
+[libx264 @ 0000024d246b4500] Weighted P-Frames: Y:5.6% UV:4.1%
+[libx264 @ 0000024d246b4500] ref P L0: 63.4% 13.8% 15.7%  6.8%  0.2%
+[libx264 @ 0000024d246b4500] ref B L0: 88.9%  8.8%  2.3%
+[libx264 @ 0000024d246b4500] ref B L1: 97.1%  2.9%
+[libx264 @ 0000024d246b4500] kb/s:3290.04
+[aac @ 0000024d24c48000] Qavg: 431.018
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C-sH8MhSQuX"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$($subtitleFile.FullName)'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/16/2024  7:37 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C-sH8MhSQuX']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C-sH8MhSQuX
+[Instagram] C-sH8MhSQuX: Setting up session
+[Instagram] C-sH8MhSQuX: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C-sH8MhSQuX: Downloading 1 format(s): dash-1214143802952288v+dash-1684347905734184ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t39.25447-16/455027991_1489160465295880_6277475080533680375_n.mp4?_nc_cat=100&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5LWhmcl9xOTAiLCJ2aWRlb19pZCI6bnVsbH0%3D&_nc_ohc=oSAtAhPvByYQ7kNvgHVdGZ6&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYAIAPMpEK0eyuZPP6iNPyriWlLoJUeA5S7yIl9qd4ZtZg&oe=66C5B870"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.fdash-1214143802952288v.mp4
+[download] 100% of   15.25MiB in 00:00:01 at 10.00MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/v/t50.33967-16/453990424_1386144995707433_3872815254910211326_n.mp4?_nc_cat=107&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=M5mEa6oPPUYQ7kNvgEx0L9x&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=00_AYAeYt-zbYVV7N_TLSKvuj3IluSTvWnfqV2MxMlgy0ABqw&oe=66C5C064"
+[download] Destination: C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.fdash-1684347905734184ad.m4a
+[download] 100% of  154.19KiB in 00:00:00 at 1.00MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.fdash-1214143802952288v.mp4 -i file:C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.fdash-1684347905734184ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.fdash-1214143802952288v.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.fdash-1684347905734184ad.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by muktinathnepalofficial" -metadata "date=20240815" -metadata "description=House on sale at Budhanilkantha .
+
+For more information DM Me .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+#lalpurjanepal #viral #house #budhanilkantha #trending #forsale #fyp #banglow #foryou" -metadata "synopsis=House on sale at Budhanilkantha .
+
+For more information DM Me .
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+#lalpurjanepal #viral #house #budhanilkantha #trending #forsale #fyp #banglow #foryou" -metadata "purl=https://www.instagram.com/reel/C-sH8MhSQuX" -metadata "comment=https://www.instagram.com/reel/C-sH8MhSQuX" -metadata "artist=Mukti Nath Nepal" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by muktinathnepalofficial
+    artist          : Mukti Nath Nepal
+    date            : 20240815
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C-sH8MhSQuX
+    description     : House on sale at Budhanilkantha .
+                    :
+                    : For more information DM Me .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : #lalpurjanepal #viral #house #budhanilkantha #trending #forsale #fyp #banglow #foryou
+    synopsis        : House on sale at Budhanilkantha .
+                    :
+                    : For more information DM Me .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : #lalpurjanepal #viral #house #budhanilkantha #trending #forsale #fyp #banglow #foryou
+  Duration: 00:00:18.09, start: 0.000000, bitrate: 7143 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 7084 kb/s, 59.99 fps, 59.99 tbr, 29997 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+      Side data:
+        Ambient Viewing Environment, ambient_illuminance=314.000000, ambient_light_x=0.312700, ambient_light_y=0.329000
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 67 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 00000206c6d3e200] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 00000206c6d3e200] profile High, level 4.2, 4:2:0, 8-bit
+[libx264 @ 00000206c6d3e200] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_muktinathnepalofficial_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by muktinathnepalofficial
+    artist          : Mukti Nath Nepal
+    date            : 20240815
+    synopsis        : House on sale at Budhanilkantha .
+                    :
+                    : For more information DM Me .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : #lalpurjanepal #viral #house #budhanilkantha #trending #forsale #fyp #banglow #foryou
+    comment         : https://www.instagram.com/reel/C-sH8MhSQuX
+    description     : House on sale at Budhanilkantha .
+                    :
+                    : For more information DM Me .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : .
+                    : #lalpurjanepal #viral #house #budhanilkantha #trending #forsale #fyp #banglow #foryou
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 59.99 fps, 29997 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+        Ambient Viewing Environment, ambient_illuminance=314.000000, ambient_light_x=0.312700, ambient_light_y=0.329000
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 00000206c6d3eb40] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 00000206c6d3d980] video:11242KiB audio:283KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.268589%
+frame= 1083 fps=130 q=-1.0 Lsize=   11556KiB time=00:00:18.01 bitrate=5253.7kbits/s speed=2.16x
+[libx264 @ 00000206c6d3e200] frame I:5     Avg QP:21.04  size:142220
+[libx264 @ 00000206c6d3e200] frame P:273   Avg QP:23.86  size: 26911
+[libx264 @ 00000206c6d3e200] frame B:805   Avg QP:26.98  size:  4290
+[libx264 @ 00000206c6d3e200] consecutive B-frames:  0.7%  0.4%  0.3% 98.6%
+[libx264 @ 00000206c6d3e200] mb I  I16..4: 12.7% 60.4% 26.9%
+[libx264 @ 00000206c6d3e200] mb P  I16..4:  2.3%  5.8%  0.3%  P16..4: 40.3% 12.3%  6.7%  0.0%  0.0%    skip:32.2%
+[libx264 @ 00000206c6d3e200] mb B  I16..4:  0.1%  0.1%  0.0%  B16..8: 35.3%  1.4%  0.2%  direct: 0.6%  skip:62.2%  L0:45.0% L1:52.9% BI: 2.0%
+[libx264 @ 00000206c6d3e200] 8x8 transform intra:66.4% inter:77.9%
+[libx264 @ 00000206c6d3e200] coded y,uvDC,uvAC intra: 21.4% 23.6% 5.8% inter: 5.3% 4.3% 0.1%
+[libx264 @ 00000206c6d3e200] i16 v,h,dc,p: 31% 31% 14% 24%
+[libx264 @ 00000206c6d3e200] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 19% 18% 49%  2%  2%  2%  3%  2%  3%
+[libx264 @ 00000206c6d3e200] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 30% 26% 13%  3%  4%  4% 11%  3%  5%
+[libx264 @ 00000206c6d3e200] i8c dc,h,v,p: 66% 18% 15%  1%
+[libx264 @ 00000206c6d3e200] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 00000206c6d3e200] ref P L0: 64.7% 15.4% 15.1%  4.8%
+[libx264 @ 00000206c6d3e200] ref B L0: 93.8%  4.9%  1.3%
+[libx264 @ 00000206c6d3e200] ref B L1: 96.7%  3.3%
+[libx264 @ 00000206c6d3e200] kb/s:5101.29
+[aac @ 00000206c6d0acc0] Qavg: 216.396
+Move-Item: The file exists.
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C-uVRFbysNe"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$($subtitleFile.FullName)'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/16/2024  7:38 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C-uVRFbysNe']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C-uVRFbysNe
+[Instagram] C-uVRFbysNe: Setting up session
+[Instagram] C-uVRFbysNe: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C-uVRFbysNe: Downloading 1 format(s): dash-857582869631353v+dash-1004467348141242ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/v/t39.25447-16/455794690_948197690397963_8038711547408057121_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=IdpUCi6BDkYQ7kNvgGsSIUb&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=00_AYBFbU2gq8Nb-YSKwJ05pagjskhrCvPvQyQriE2pie0Ogw&oe=66C5B3E9"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_lalpurjanp.fdash-857582869631353v.mp4
+[download] 100% of   16.42MiB in 00:00:01 at 9.70MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t50.33967-16/453895027_492113763455975_7618915094731229946_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=8faUOTaoxpgQ7kNvgEOVibz&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYAXKTBmrgrPo32VcX0RNN4g2KBUDd1BNp7nliwMiPZlCw&oe=66C5BE87"
+[download] Destination: C:\Temp\yt-dlp\Video_by_lalpurjanp.fdash-1004467348141242ad.m4a
+[download] 100% of  435.58KiB in 00:00:00 at 2.29MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_lalpurjanp.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_lalpurjanp.fdash-857582869631353v.mp4 -i file:C:\Temp\yt-dlp\Video_by_lalpurjanp.fdash-1004467348141242ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_lalpurjanp.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_lalpurjanp.fdash-1004467348141242ad.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_lalpurjanp.fdash-857582869631353v.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_lalpurjanp.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_lalpurjanp.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by lalpurjanp" -metadata "date=20240816" -metadata "description=यदि तपाईलाई ऋण (Loan) सम्बन्धी कुनै अन्योलता छ भने, यो भिडियो पूरा हेर्नुहोस्।
+
+For loan consultation, do contact - +977 985-1352605
+
+#lalpurja #lalpurjanepal #lalpurjamortgage" -metadata "synopsis=यदि तपाईलाई ऋण (Loan) सम्बन्धी कुनै अन्योलता छ भने, यो भिडियो पूरा हेर्नुहोस्।
+
+For loan consultation, do contact - +977 985-1352605
+
+#lalpurja #lalpurjanepal #lalpurjamortgage" -metadata "purl=https://www.instagram.com/reel/C-uVRFbysNe" -metadata "comment=https://www.instagram.com/reel/C-uVRFbysNe" -metadata "artist=Lalpurja Nepal™️ | Realestate Agency In Nepal" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_lalpurjanp.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_lalpurjanp.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by lalpurjanp
+    artist          : Lalpurja Nepal™️ | Realestate Agency In Nepal
+    date            : 20240816
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C-uVRFbysNe
+    description     : यदि तपाईलाई ऋण (Loan) सम्बन्धी कुनै अन्योलता छ भने, यो भिडियो पूरा हेर्नुहोस्।
+                    :
+                    : For loan consultation, do contact - +977 985-1352605
+                    :
+                    : #lalpurja #lalpurjanepal #lalpurjamortgage
+    synopsis        : यदि तपाईलाई ऋण (Loan) सम्बन्धी कुनै अन्योलता छ भने, यो भिडियो पूरा हेर्नुहोस्।
+                    :
+                    : For loan consultation, do contact - +977 985-1352605
+                    :
+                    : #lalpurja #lalpurjanepal #lalpurjamortgage
+  Duration: 00:00:58.26, start: 0.000000, bitrate: 2427 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 2363 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 59 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000001bdebd04500] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001bdebd04500] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 000001bdebd04500] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_lalpurjanp_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by lalpurjanp
+    artist          : Lalpurja Nepal™️ | Realestate Agency In Nepal
+    date            : 20240816
+    synopsis        : यदि तपाईलाई ऋण (Loan) सम्बन्धी कुनै अन्योलता छ भने, यो भिडियो पूरा हेर्नुहोस्।
+                    :
+                    : For loan consultation, do contact - +977 985-1352605
+                    :
+                    : #lalpurja #lalpurjanepal #lalpurjamortgage
+    comment         : https://www.instagram.com/reel/C-uVRFbysNe
+    description     : यदि तपाईलाई ऋण (Loan) सम्बन्धी कुनै अन्योलता छ भने, यो भिडियो पूरा हेर्नुहोस्।
+                    :
+                    : For loan consultation, do contact - +977 985-1352605
+                    :
+                    : #lalpurja #lalpurjanepal #lalpurjamortgage
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 000001bdebcf1700] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001bdebd05400] video:23388KiB audio:918KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.259093%
+frame= 1747 fps=123 q=-1.0 Lsize=   24369KiB time=00:00:58.16 bitrate=3432.1kbits/s speed=4.09x
+[libx264 @ 000001bdebd04500] frame I:11    Avg QP:19.09  size: 58370
+[libx264 @ 000001bdebd04500] frame P:587   Avg QP:22.61  size: 23692
+[libx264 @ 000001bdebd04500] frame B:1149  Avg QP:25.93  size:  8181
+[libx264 @ 000001bdebd04500] consecutive B-frames:  8.5%  8.7%  8.4% 74.4%
+[libx264 @ 000001bdebd04500] mb I  I16..4: 31.8% 53.7% 14.5%
+[libx264 @ 000001bdebd04500] mb P  I16..4:  7.9% 15.0%  2.0%  P16..4: 23.9%  6.7%  2.2%  0.0%  0.0%    skip:42.4%
+[libx264 @ 000001bdebd04500] mb B  I16..4:  1.0%  1.7%  0.2%  B16..8: 28.8%  3.0%  0.4%  direct: 1.1%  skip:64.0%  L0:47.0% L1:47.4% BI: 5.6%
+[libx264 @ 000001bdebd04500] 8x8 transform intra:59.9% inter:84.5%
+[libx264 @ 000001bdebd04500] coded y,uvDC,uvAC intra: 31.6% 30.5% 7.7% inter: 6.5% 5.5% 0.3%
+[libx264 @ 000001bdebd04500] i16 v,h,dc,p: 37% 31%  6% 26%
+[libx264 @ 000001bdebd04500] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 18% 26%  4%  5%  6%  5%  5%  4%
+[libx264 @ 000001bdebd04500] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 35% 24% 16%  3%  6%  6%  4%  4%  2%
+[libx264 @ 000001bdebd04500] i8c dc,h,v,p: 63% 16% 17%  4%
+[libx264 @ 000001bdebd04500] Weighted P-Frames: Y:5.6% UV:4.1%
+[libx264 @ 000001bdebd04500] ref P L0: 63.4% 13.8% 15.7%  6.8%  0.2%
+[libx264 @ 000001bdebd04500] ref B L0: 88.9%  8.8%  2.3%
+[libx264 @ 000001bdebd04500] ref B L1: 97.1%  2.9%
+[libx264 @ 000001bdebd04500] kb/s:3290.04
+[aac @ 000001bdec294ec0] Qavg: 431.018
+Move-Item: The file exists.
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C-vdZD-N6ze"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$($subtitleFile.FullName)'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/16/2024  7:39 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C-vdZD-N6ze']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C-vdZD-N6ze
+[Instagram] C-vdZD-N6ze: Setting up session
+[Instagram] C-vdZD-N6ze: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C-vdZD-N6ze: Downloading 1 format(s): dash-3820468308189798v+dash-373558648911711ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t39.25447-16/455038706_1066326968482476_2783791224712956362_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=UP6VMcb6Gu4Q7kNvgFro1uA&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYCCF_uh6Ur924aOEAC1iFb6nJvqn9zl-10djs__RASEtw&oe=66C5B356"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_homes.tastrophes.fdash-3820468308189798v.mp4
+[download] 100% of    6.11MiB in 00:00:00 at 8.78MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t50.33967-16/455911315_1201768131165748_2066841748911884633_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=l4xyRKYXHaYQ7kNvgG3pE6-&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYD6VFo26VQj5TuBN9RXp7acwFpgQULtmGzKLOwi63nK1w&oe=66C5B78A"
+[download] Destination: C:\Temp\yt-dlp\Video_by_homes.tastrophes.fdash-373558648911711ad.m4a
+[download] 100% of  370.54KiB in 00:00:00 at 5.60MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_homes.tastrophes.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_homes.tastrophes.fdash-3820468308189798v.mp4 -i file:C:\Temp\yt-dlp\Video_by_homes.tastrophes.fdash-373558648911711ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_homes.tastrophes.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_homes.tastrophes.fdash-373558648911711ad.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_homes.tastrophes.fdash-3820468308189798v.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_homes.tastrophes.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_homes.tastrophes.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by homes.tastrophes" -metadata "date=20240816" -metadata "description=Check out this home with an insane backyard man cave 😍🏡 Check out this listing on @homesdotcom link in our story!!" -metadata "synopsis=Check out this home with an insane backyard man cave 😍🏡 Check out this listing on @homesdotcom link in our story!!" -metadata "purl=https://www.instagram.com/reel/C-vdZD-N6ze" -metadata "comment=https://www.instagram.com/reel/C-vdZD-N6ze" -metadata "artist=Homes.tastrophes" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_homes.tastrophes.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_homes.tastrophes.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by homes.tastrophes
+    artist          : Homes.tastrophes
+    date            : 20240816
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C-vdZD-N6ze
+    description     : Check out this home with an insane backyard man cave 😍🏡 Check out this listing on @homesdotcom link in our story!!
+    synopsis        : Check out this home with an insane backyard man cave 😍🏡 Check out this listing on @homesdotcom link in our story!!
+  Duration: 00:01:04.63, start: 0.000000, bitrate: 842 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 576x1024, 791 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 45 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000012c8c7e7400] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000012c8c7e7400] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 0000012c8c7e7400] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_homes.tastrophes_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by homes.tastrophes
+    artist          : Homes.tastrophes
+    date            : 20240816
+    synopsis        : Check out this home with an insane backyard man cave 😍🏡 Check out this listing on @homesdotcom link in our story!!
+    comment         : https://www.instagram.com/reel/C-vdZD-N6ze
+    description     : Check out this home with an insane backyard man cave 😍🏡 Check out this listing on @homesdotcom link in our story!!
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 576x1024, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 0000012c8c7491c0] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000012c8c7490c0] video:4257KiB audio:1006KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 1.336960%
+frame= 1939 fps=884 q=-1.0 Lsize=    5333KiB time=00:01:04.52 bitrate= 677.0kbits/s speed=29.4x
+[libx264 @ 0000012c8c7e7400] frame I:19    Avg QP:15.88  size: 85177
+[libx264 @ 0000012c8c7e7400] frame P:492   Avg QP:20.74  size:  4207
+[libx264 @ 0000012c8c7e7400] frame B:1428  Avg QP:27.32  size:   469
+[libx264 @ 0000012c8c7e7400] consecutive B-frames:  1.3%  1.1%  1.2% 96.3%
+[libx264 @ 0000012c8c7e7400] mb I  I16..4: 22.0% 48.0% 30.1%
+[libx264 @ 0000012c8c7e7400] mb P  I16..4:  0.1%  0.5%  0.2%  P16..4:  7.2%  3.3%  2.2%  0.0%  0.0%    skip:86.4%
+[libx264 @ 0000012c8c7e7400] mb B  I16..4:  0.0%  0.1%  0.0%  B16..8:  6.3%  1.0%  0.2%  direct: 0.1%  skip:92.3%  L0:42.0% L1:47.5% BI:10.5%
+[libx264 @ 0000012c8c7e7400] 8x8 transform intra:51.3% inter:54.6%
+[libx264 @ 0000012c8c7e7400] coded y,uvDC,uvAC intra: 59.2% 52.3% 35.5% inter: 2.0% 1.2% 0.1%
+[libx264 @ 0000012c8c7e7400] i16 v,h,dc,p: 67% 24%  6%  3%
+[libx264 @ 0000012c8c7e7400] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 23% 26% 16%  5%  5%  5%  8%  5%  9%
+[libx264 @ 0000012c8c7e7400] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 20% 27%  9%  6%  7%  6% 10%  5%  9%
+[libx264 @ 0000012c8c7e7400] i8c dc,h,v,p: 58% 25% 11%  6%
+[libx264 @ 0000012c8c7e7400] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0000012c8c7e7400] ref P L0: 63.2% 13.7% 16.8%  6.3%
+[libx264 @ 0000012c8c7e7400] ref B L0: 89.7%  8.3%  2.0%
+[libx264 @ 0000012c8c7e7400] ref B L1: 94.2%  5.8%
+[libx264 @ 0000012c8c7e7400] kb/s:539.47
+[aac @ 0000012c8c7edf80] Qavg: 572.618
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C-qZBZDSEvR"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$($subtitleFile.FullName)'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/16/2024  7:39 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C-qZBZDSEvR']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C-qZBZDSEvR
+[Instagram] C-qZBZDSEvR: Setting up session
+[Instagram] C-qZBZDSEvR: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C-qZBZDSEvR: Downloading 1 format(s): dash-1717956575699413v+dash-1201053984537823ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t66.30100-16/53889835_896951179119560_3366596809808984471_n.mp4?_nc_cat=103&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfYmFzZWxpbmVfMTA4MHBfdjEiLCJ2aWRlb19pZCI6bnVsbH0%3D&_nc_ohc=M8dOJgNdYwMQ7kNvgGbBBag&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYACoKZVh-_6rTM8dhe6SrBMtdckfMpW6TJl14QxwqDLwQ&oe=66C5C414"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_lucky_housingandreal_esate.fdash-1717956575699413v.mp4
+[download] 100% of   14.94MiB in 00:00:01 at 9.38MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/v/t50.33967-16/455299218_1148684402859442_1683190022380253352_n.mp4?_nc_cat=101&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=AA0ukRaDrqMQ7kNvgFp964r&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=00_AYAeGmN8_G8Aed0WIQ3mNLJd3O84c7R4eulNTynnm9A7pg&oe=66C5A026"
+[download] Destination: C:\Temp\yt-dlp\Video_by_lucky_housingandreal_esate.fdash-1201053984537823ad.m4a
+[download] 100% of  205.53KiB in 00:00:00 at 855.06KiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_lucky_housingandreal_esate.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_lucky_housingandreal_esate.fdash-1717956575699413v.mp4 -i file:C:\Temp\yt-dlp\Video_by_lucky_housingandreal_esate.fdash-1201053984537823ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_lucky_housingandreal_esate.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_lucky_housingandreal_esate.fdash-1717956575699413v.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_lucky_housingandreal_esate.fdash-1201053984537823ad.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_lucky_housingandreal_esate.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_lucky_housingandreal_esate.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by lucky_housingandreal_esate" -metadata "date=20240814" -metadata "description=Booking open budhanilkantha sundarbasti 4 ana contact 9823013235" -metadata "synopsis=Booking open budhanilkantha sundarbasti 4 ana contact 9823013235" -metadata "purl=https://www.instagram.com/reel/C-qZBZDSEvR" -metadata "comment=https://www.instagram.com/reel/C-qZBZDSEvR" -metadata "artist=Lucky Housing & Real Estate" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_lucky_housingandreal_esate.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_lucky_housingandreal_esate.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Video by lucky_housingandreal_esate
+    artist          : Lucky Housing & Real Estate
+    date            : 20240814
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C-qZBZDSEvR
+    description     : Booking open budhanilkantha sundarbasti 4 ana contact 9823013235
+    synopsis        : Booking open budhanilkantha sundarbasti 4 ana contact 9823013235
+  Duration: 00:00:30.54, start: 0.000000, bitrate: 4162 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, 4102 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : AVC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 53 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 00000141eb64c140] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 00000141eb64c140] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 00000141eb64c140] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_lucky_housingandreal_esate_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Video by lucky_housingandreal_esate
+    artist          : Lucky Housing & Real Estate
+    date            : 20240814
+    synopsis        : Booking open budhanilkantha sundarbasti 4 ana contact 9823013235
+    comment         : https://www.instagram.com/reel/C-qZBZDSEvR
+    description     : Booking open budhanilkantha sundarbasti 4 ana contact 9823013235
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 00000141eb64b1c0] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 00000141eb6660c0] video:21957KiB audio:477KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.152112%
+frame=  916 fps=125 q=-1.0 Lsize=   22468KiB time=00:00:30.46 bitrate=6041.2kbits/s speed=4.15x
+[libx264 @ 00000141eb64c140] frame I:5     Avg QP:22.40  size:337766
+[libx264 @ 00000141eb64c140] frame P:238   Avg QP:23.88  size: 68042
+[libx264 @ 00000141eb64c140] frame B:673   Avg QP:29.43  size:  6835
+[libx264 @ 00000141eb64c140] consecutive B-frames:  0.8%  3.3%  1.6% 94.3%
+[libx264 @ 00000141eb64c140] mb I  I16..4:  5.0% 55.8% 39.2%
+[libx264 @ 00000141eb64c140] mb P  I16..4:  2.4%  4.0%  1.1%  P16..4: 42.5% 25.0% 14.0%  0.0%  0.0%    skip:11.1%
+[libx264 @ 00000141eb64c140] mb B  I16..4:  0.2%  0.2%  0.0%  B16..8: 32.7%  2.7%  0.8%  direct: 1.0%  skip:62.4%  L0:45.5% L1:45.7% BI: 8.7%
+[libx264 @ 00000141eb64c140] 8x8 transform intra:54.3% inter:70.7%
+[libx264 @ 00000141eb64c140] coded y,uvDC,uvAC intra: 48.1% 64.8% 30.9% inter: 13.3% 10.3% 2.1%
+[libx264 @ 00000141eb64c140] i16 v,h,dc,p: 38% 26% 15% 21%
+[libx264 @ 00000141eb64c140] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 19% 28% 28%  3%  3%  3%  6%  3%  7%
+[libx264 @ 00000141eb64c140] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 17% 33% 11%  4%  6%  4% 13%  4% 10%
+[libx264 @ 00000141eb64c140] i8c dc,h,v,p: 46% 26% 20%  8%
+[libx264 @ 00000141eb64c140] Weighted P-Frames: Y:1.3% UV:0.4%
+[libx264 @ 00000141eb64c140] ref P L0: 68.6% 19.9%  9.6%  1.8%  0.1%
+[libx264 @ 00000141eb64c140] ref B L0: 91.8%  7.5%  0.7%
+[libx264 @ 00000141eb64c140] ref B L1: 99.4%  0.6%
+[libx264 @ 00000141eb64c140] kb/s:5890.72
+[aac @ 00000141ebf93100] Qavg: 704.866
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C9CCICkS9CB"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$($subtitleFile.FullName)'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/16/2024  7:40 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C9CCICkS9CB']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C9CCICkS9CB
+[Instagram] C9CCICkS9CB: Setting up session
+[Instagram] C9CCICkS9CB: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C9CCICkS9CB: Downloading 1 format(s): dash-1609007496563398v+dash-1125630518543279ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://instagram.fagc3-1.fna.fbcdn.net/o1/v/t16/f2/m69/An8U_-d46I7LZhOlWsBZUOb5VNmoUF-NOV2SbGeVPNiIk9341OErArI35kGKyBbbmbAMcl33D309XUCmla0-eJlr.mp4?efg=eyJvaWxfdXJsZ2VuX2FwcF9pZCI6OTM2NjE5NzQzMzkyNDU5LCJjbGllbnRfbmFtZSI6ImlnIiwidmlkZW9faWQiOm51bGwsInZlbmNvZGVfdGFnIjoiaWcteHB2ZHMuY2xpcHMuYzItQzMuZGFzaF9iYXNlbGluZV8xMDgwcF92MSJ9&_nc_ht=instagram.fagc3-1.fna.fbcdn.net&_nc_cat=107&strext=1&ccb=9-4&oh=00_AYDGMTGHWQV38TJ9V3OyfTF4koVEPvQpLMl0NLbU1i9qfA&oe=66C1C384&_nc_sid=9ca052"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.fdash-1609007496563398v.mp4
+[download] 100% of   45.55MiB in 00:00:04 at 10.34MiB/s
+[debug] Invoking http downloader on "https://instagram.fagc3-1.fna.fbcdn.net/o1/v/t16/f2/m69/An8QK2EROQV-_pkjJV-wJEyzn6kq3NC1kPkJ21nCwhl6jrAF2zstwTObtEhJ9ssSePw8gB_V7JUaOiNcYMbvvrg2.mp4?efg=eyJvaWxfdXJsZ2VuX2FwcF9pZCI6OTM2NjE5NzQzMzkyNDU5LCJjbGllbnRfbmFtZSI6ImlnIiwidmlkZW9faWQiOm51bGwsInZlbmNvZGVfdGFnIjoiaWcteHB2ZHMuY2xpcHMuYzItQzMuZGFzaF9sbl9oZWFhY192YnIzX2F1ZGlvIn0&_nc_ht=instagram.fagc3-1.fna.fbcdn.net&_nc_cat=110&strext=1&ccb=9-4&oh=00_AYDWrFzcj-dZDL_BTrM2TZiI2sNzkdKYOCZc0eg0Evb9Lw&oe=66C1A7FB&_nc_sid=9ca052"
+[download] Destination: C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.fdash-1125630518543279ad.m4a
+[download] 100% of    1.46MiB in 00:00:00 at 4.07MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.fdash-1609007496563398v.mp4 -i file:C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.fdash-1125630518543279ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.fdash-1125630518543279ad.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.fdash-1609007496563398v.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by muktinathnepalofficial" -metadata "date=20240705" -metadata "description=Brand New Bunglow on sale at Soltemode. | Lalpurja Nepal |
+
+Property ID - 1827
+
+For more information
++977 9851352606
+
+Contact:
+
+For Buyer: 📞 9769763706
+
+For Sellers: 📞 9851352612
+
+Download Lalpurja Nepal App and search 1827 to get all the details with full video.
+
+Why Lalpurja Nepal
+————————————
+-  Huge Property Options
+
+-  Experienced Team Members
+
+-  Easy Loan Process For Our Client
+
+-  Trustworthy Legal Support
+
+-  Professional Customer Service
+
+———————————————
+लालपुर्जा नेपाल - जस्तो नाम तेस्तै काम।
+जय लालपुर्जा !! 👏
+—————————
+Realestate Company In Nepal | Realestate Agency In Nepal | Realestate Broker in Nepal | Realestate Agent In Nepal | Property in Nepal | Realestate Agency in Kathmandu | Realestate in Nepal | Ghar Jagga Nepal | Ghar Jagga Kathmandu | Lalpurja Nepal Realestate | Realestate Sewa inNepal | Realestate Solution in Nepal | Realestate Sewakendra in Nepal | Hajurko Realestate
+——————————————
+For More:
+——————
+Lalpurja Nepal Pvt. Ltd.
+📍 Sorakhutte, Kathmandu, Nepal
+📞 +977 014352618 | 9851342035
+📧 contact@lalpurjanepal.com.np
+🌏 www.lalpurjanepal.com.np
+————————————-
+#lalpurjanepal #lalpurja #budhanilkantha #lalpurjanepalbranch | #newroad #lalpurjanepalheadoffice #realestatenepal #nepalrealestate #propertyinnepal #matra #10crore #soltemode #residential #houseonsale #houseforsale #affordable #bunglow" -metadata "synopsis=Brand New Bunglow on sale at Soltemode. | Lalpurja Nepal |
+
+Property ID - 1827
+
+For more information
++977 9851352606
+
+Contact:
+
+For Buyer: 📞 9769763706
+
+For Sellers: 📞 9851352612
+
+Download Lalpurja Nepal App and search 1827 to get all the details with full video.
+
+Why Lalpurja Nepal
+————————————
+-  Huge Property Options
+
+-  Experienced Team Members
+
+-  Easy Loan Process For Our Client
+
+-  Trustworthy Legal Support
+
+-  Professional Customer Service
+
+———————————————
+लालपुर्जा नेपाल - जस्तो नाम तेस्तै काम।
+जय लालपुर्जा !! 👏
+—————————
+Realestate Company In Nepal | Realestate Agency In Nepal | Realestate Broker in Nepal | Realestate Agent In Nepal | Property in Nepal | Realestate Agency in Kathmandu | Realestate in Nepal | Ghar Jagga Nepal | Ghar Jagga Kathmandu | Lalpurja Nepal Realestate | Realestate Sewa inNepal | Realestate Solution in Nepal | Realestate Sewakendra in Nepal | Hajurko Realestate
+——————————————
+For More:
+——————
+Lalpurja Nepal Pvt. Ltd.
+📍 Sorakhutte, Kathmandu, Nepal
+📞 +977 014352618 | 9851342035
+📧 contact@lalpurjanepal.com.np
+🌏 www.lalpurjanepal.com.np
+————————————-
+#lalpurjanepal #lalpurja #budhanilkantha #lalpurjanepalbranch | #newroad #lalpurjanepalheadoffice #realestatenepal #nepalrealestate #propertyinnepal #matra #10crore #soltemode #residential #houseonsale #houseforsale #affordable #bunglow" -metadata "purl=https://www.instagram.com/reel/C9CCICkS9CB" -metadata "comment=https://www.instagram.com/reel/C9CCICkS9CB" -metadata "artist=Mukti Nath Nepal" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_muktinathnepalofficial.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Video by muktinathnepalofficial
+    artist          : Mukti Nath Nepal
+    date            : 20240705
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C9CCICkS9CB
+    description     : Brand New Bunglow on sale at Soltemode. | Lalpurja Nepal |
+                    :
+                    : Property ID - 1827
+                    :
+                    : For more information
+                    : +977 9851352606
+                    :
+                    : Contact:
+                    :
+                    : For Buyer: 📞 9769763706
+                    :
+                    : For Sellers: 📞 9851352612
+                    :
+                    : Download Lalpurja Nepal App and search 1827 to get all the details with full video.
+                    :
+                    : Why Lalpurja Nepal
+                    : ————————————
+                    : -  Huge Property Options
+                    :
+                    : -  Experienced Team Members
+                    :
+                    : -  Easy Loan Process For Our Client
+                    :
+                    : -  Trustworthy Legal Support
+                    :
+                    : -  Professional Customer Service
+                    :
+                    : ———————————————
+                    : लालपुर्जा नेपाल - जस्तो नाम तेस्तै काम।
+                    : जय लालपुर्जा !! 👏
+                    : —————————
+                    : Realestate Company In Nepal | Realestate Agency In Nepal | Realestate Broker in Nepal | Realestate Agent In Nepal | Property in Nepal | Realestate Agency in Kathmandu | Realestate in Nepal | Ghar Jagga Nepal | Ghar Jagga Kathmandu | Lalpurja Nepal Realest
+                    : ——————————————
+                    : For More:
+                    : ——————
+                    : Lalpurja Nepal Pvt. Ltd.
+                    : 📍 Sorakhutte, Kathmandu, Nepal
+                    : 📞 +977 014352618 | 9851342035
+                    : 📧 contact@lalpurjanepal.com.np
+                    : 🌏 www.lalpurjanepal.com.np
+                    : ————————————-
+                    : #lalpurjanepal #lalpurja #budhanilkantha #lalpurjanepalbranch | #newroad #lalpurjanepalheadoffice #realestatenepal #nepalrealestate #propertyinnepal #matra #10crore #soltemode #residential #houseonsale #houseforsale #affordable #bunglow
+    synopsis        : Brand New Bunglow on sale at Soltemode. | Lalpurja Nepal |
+                    :
+                    : Property ID - 1827
+                    :
+                    : For more information
+                    : +977 9851352606
+                    :
+                    : Contact:
+                    :
+                    : For Buyer: 📞 9769763706
+                    :
+                    : For Sellers: 📞 9851352612
+                    :
+                    : Download Lalpurja Nepal App and search 1827 to get all the details with full video.
+                    :
+                    : Why Lalpurja Nepal
+                    : ————————————
+                    : -  Huge Property Options
+                    :
+                    : -  Experienced Team Members
+                    :
+                    : -  Easy Loan Process For Our Client
+                    :
+                    : -  Trustworthy Legal Support
+                    :
+                    : -  Professional Customer Service
+                    :
+                    : ———————————————
+                    : लालपुर्जा नेपाल - जस्तो नाम तेस्तै काम।
+                    : जय लालपुर्जा !! 👏
+                    : —————————
+                    : Realestate Company In Nepal | Realestate Agency In Nepal | Realestate Broker in Nepal | Realestate Agent In Nepal | Property in Nepal | Realestate Agency in Kathmandu | Realestate in Nepal | Ghar Jagga Nepal | Ghar Jagga Kathmandu | Lalpurja Nepal Realest
+                    : ——————————————
+                    : For More:
+                    : ——————
+                    : Lalpurja Nepal Pvt. Ltd.
+                    : 📍 Sorakhutte, Kathmandu, Nepal
+                    : 📞 +977 014352618 | 9851342035
+                    : 📧 contact@lalpurjanepal.com.np
+                    : 🌏 www.lalpurjanepal.com.np
+                    : ————————————-
+                    : #lalpurjanepal #lalpurja #budhanilkantha #lalpurjanepalbranch | #newroad #lalpurjanepalheadoffice #realestatenepal #nepalrealestate #propertyinnepal #matra #10crore #soltemode #residential #houseonsale #houseforsale #affordable #bunglow
+  Duration: 00:02:53.90, start: 0.000000, bitrate: 2270 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, 2194 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : AVC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 68 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000017c0e98e480] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000017c0e98e480] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0000017c0e98e480] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_muktinathnepalofficial_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Video by muktinathnepalofficial
+    artist          : Mukti Nath Nepal
+    date            : 20240705
+    synopsis        : Brand New Bunglow on sale at Soltemode. | Lalpurja Nepal |
+                    :
+                    : Property ID - 1827
+                    :
+                    : For more information
+                    : +977 9851352606
+                    :
+                    : Contact:
+                    :
+                    : For Buyer: 📞 9769763706
+                    :
+                    : For Sellers: 📞 9851352612
+                    :
+                    : Download Lalpurja Nepal App and search 1827 to get all the details with full video.
+                    :
+                    : Why Lalpurja Nepal
+                    : ————————————
+                    : -  Huge Property Options
+                    :
+                    : -  Experienced Team Members
+                    :
+                    : -  Easy Loan Process For Our Client
+                    :
+                    : -  Trustworthy Legal Support
+                    :
+                    : -  Professional Customer Service
+                    :
+                    : ———————————————
+                    : लालपुर्जा नेपाल - जस्तो नाम तेस्तै काम।
+                    : जय लालपुर्जा !! 👏
+                    : —————————
+                    : Realestate Company In Nepal | Realestate Agency In Nepal | Realestate Broker in Nepal | Realestate Agent In Nepal | Property in Nepal | Realestate Agency in Kathmandu | Realestate in Nepal | Ghar Jagga Nepal | Ghar Jagga Kathmandu | Lalpurja Nepal Realest
+                    : ——————————————
+                    : For More:
+                    : ——————
+                    : Lalpurja Nepal Pvt. Ltd.
+                    : 📍 Sorakhutte, Kathmandu, Nepal
+                    : 📞 +977 014352618 | 9851342035
+                    : 📧 contact@lalpurjanepal.com.np
+                    : 🌏 www.lalpurjanepal.com.np
+                    : ————————————-
+                    : #lalpurjanepal #lalpurja #budhanilkantha #lalpurjanepalbranch | #newroad #lalpurjanepalheadoffice #realestatenepal #nepalrealestate #propertyinnepal #matra #10crore #soltemode #residential #houseonsale #houseforsale #affordable #bunglow
+    comment         : https://www.instagram.com/reel/C9CCICkS9CB
+    description     : Brand New Bunglow on sale at Soltemode. | Lalpurja Nepal |
+                    :
+                    : Property ID - 1827
+                    :
+                    : For more information
+                    : +977 9851352606
+                    :
+                    : Contact:
+                    :
+                    : For Buyer: 📞 9769763706
+                    :
+                    : For Sellers: 📞 9851352612
+                    :
+                    : Download Lalpurja Nepal App and search 1827 to get all the details with full video.
+                    :
+                    : Why Lalpurja Nepal
+                    : ————————————
+                    : -  Huge Property Options
+                    :
+                    : -  Experienced Team Members
+                    :
+                    : -  Easy Loan Process For Our Client
+                    :
+                    : -  Trustworthy Legal Support
+                    :
+                    : -  Professional Customer Service
+                    :
+                    : ———————————————
+                    : लालपुर्जा नेपाल - जस्तो नाम तेस्तै काम।
+                    : जय लालपुर्जा !! 👏
+                    : —————————
+                    : Realestate Company In Nepal | Realestate Agency In Nepal | Realestate Broker in Nepal | Realestate Agent In Nepal | Property in Nepal | Realestate Agency in Kathmandu | Realestate in Nepal | Ghar Jagga Nepal | Ghar Jagga Kathmandu | Lalpurja Nepal Realest
+                    : ——————————————
+                    : For More:
+                    : ——————
+                    : Lalpurja Nepal Pvt. Ltd.
+                    : 📍 Sorakhutte, Kathmandu, Nepal
+                    : 📞 +977 014352618 | 9851342035
+                    : 📧 contact@lalpurjanepal.com.np
+                    : 🌏 www.lalpurjanepal.com.np
+                    : ————————————-
+                    : #lalpurjanepal #lalpurja #budhanilkantha #lalpurjanepalbranch | #newroad #lalpurjanepalheadoffice #realestatenepal #nepalrealestate #propertyinnepal #matra #10crore #soltemode #residential #houseonsale #houseforsale #affordable #bunglow
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 0000017c0e8da840] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000017c0e8da700] video:67876KiB audio:2770KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.266166%
+frame= 5217 fps=140 q=-1.0 Lsize=   70834KiB time=00:02:53.83 bitrate=3338.1kbits/s speed=4.67x
+[libx264 @ 0000017c0e98e480] frame I:36    Avg QP:18.39  size: 93519
+[libx264 @ 0000017c0e98e480] frame P:1549  Avg QP:21.19  size: 29903
+[libx264 @ 0000017c0e98e480] frame B:3632  Avg QP:25.29  size:  5456
+[libx264 @ 0000017c0e98e480] consecutive B-frames:  3.0% 11.4%  3.2% 82.4%
+[libx264 @ 0000017c0e98e480] mb I  I16..4: 25.7% 57.9% 16.5%
+[libx264 @ 0000017c0e98e480] mb P  I16..4:  8.2% 15.2%  0.9%  P16..4: 35.4% 11.3%  4.9%  0.0%  0.0%    skip:24.0%
+[libx264 @ 0000017c0e98e480] mb B  I16..4:  0.6%  0.7%  0.0%  B16..8: 27.8%  1.8%  0.3%  direct: 1.5%  skip:67.3%  L0:46.4% L1:48.3% BI: 5.2%
+[libx264 @ 0000017c0e98e480] 8x8 transform intra:61.3% inter:80.4%
+[libx264 @ 0000017c0e98e480] coded y,uvDC,uvAC intra: 21.1% 28.2% 3.4% inter: 6.7% 6.9% 0.0%
+[libx264 @ 0000017c0e98e480] i16 v,h,dc,p: 34% 27% 12% 27%
+[libx264 @ 0000017c0e98e480] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 38% 21% 28%  2%  2%  2%  2%  2%  3%
+[libx264 @ 0000017c0e98e480] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 37% 25% 15%  3%  4%  5%  5%  3%  4%
+[libx264 @ 0000017c0e98e480] i8c dc,h,v,p: 55% 20% 20%  4%
+[libx264 @ 0000017c0e98e480] Weighted P-Frames: Y:6.6% UV:5.9%
+[libx264 @ 0000017c0e98e480] ref P L0: 65.2% 13.2% 17.5%  4.1%  0.1%
+[libx264 @ 0000017c0e98e480] ref B L0: 86.8% 11.6%  1.6%
+[libx264 @ 0000017c0e98e480] ref B L1: 97.9%  2.1%
+[libx264 @ 0000017c0e98e480] kb/s:3197.45
+[aac @ 0000017c0e98a840] Qavg: 704.503
+Move-Item: The file exists.
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C4vJ8OLS9ZU"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$($subtitleFile.FullName)'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/16/2024  7:41 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C4vJ8OLS9ZU']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C4vJ8OLS9ZU
+[Instagram] C4vJ8OLS9ZU: Setting up session
+[Instagram] C4vJ8OLS9ZU: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C4vJ8OLS9ZU: Downloading 1 format(s): dash-381968204647989vd+dash-340605515116950ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://instagram.fagc3-1.fna.fbcdn.net/o1/v/t16/f1/m82/0E4CE324CA7C6BA665C1D3CF778A00AB_video_dashinit.mp4?efg=eyJ2aWRlb19pZCI6bnVsbCwidmVuY29kZV90YWciOiJpZy14cHZkcy5jbGlwcy5jMi1DMy5kYXNoX2Jhc2VsaW5lXzFfdjEifQ&_nc_ht=instagram.fagc3-1.fna.fbcdn.net&_nc_cat=104&ccb=9-4&oh=00_AYCuImea3SvoC0rh5Si-aTF9ScFVdoT3z5qeab1LH-L5mg&oe=66C1C192&_nc_sid=9ca052"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_propertyinnepal.fdash-381968204647989vd.mp4
+[download] 100% of    6.49MiB in 00:00:00 at 7.67MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t50.33967-16/434042284_942248397445928_8679610279496382403_n.mp4?_nc_cat=103&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfYmFzZWxpbmVfYXVkaW9fdjEiLCJ2aWRlb19pZCI6bnVsbH0%3D&_nc_ohc=J7KGMjdF860Q7kNvgELABEm&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYAQReFel8P-QPI-WsP6O7vKAxG_gRQpcRcjC1ayxKpGkQ&oe=66C5A83B"
+[download] Destination: C:\Temp\yt-dlp\Video_by_propertyinnepal.fdash-340605515116950ad.m4a
+[download] 100% of  252.02KiB in 00:00:00 at 1.43MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_propertyinnepal.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_propertyinnepal.fdash-381968204647989vd.mp4 -i file:C:\Temp\yt-dlp\Video_by_propertyinnepal.fdash-340605515116950ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_propertyinnepal.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_propertyinnepal.fdash-340605515116950ad.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_propertyinnepal.fdash-381968204647989vd.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_propertyinnepal.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_propertyinnepal.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by propertyinnepal" -metadata "date=20240320" -metadata "description=📞 9851221475 :  BOOK YOUR APPOINTMENT #property #propertyinnepal #propertynepal #realestateinnepal" -metadata "synopsis=📞 9851221475 :  BOOK YOUR APPOINTMENT #property #propertyinnepal #propertynepal #realestateinnepal" -metadata "purl=https://www.instagram.com/reel/C4vJ8OLS9ZU" -metadata "comment=https://www.instagram.com/reel/C4vJ8OLS9ZU" -metadata "artist=Property In Nepal Pvt.Ltd" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_propertyinnepal.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_propertyinnepal.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Video by propertyinnepal
+    artist          : Property In Nepal Pvt.Ltd
+    date            : 20240320
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C4vJ8OLS9ZU
+    description     : 📞 9851221475 :  BOOK YOUR APPOINTMENT #property #propertyinnepal #propertynepal #realestateinnepal
+    synopsis        : 📞 9851221475 :  BOOK YOUR APPOINTMENT #property #propertyinnepal #propertynepal #realestateinnepal
+  Duration: 00:00:25.47, start: 0.000000, bitrate: 2220 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 720x1280, 2133 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : AVC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 79 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000018d30c9e500] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000018d30c9e500] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 0000018d30c9e500] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_propertyinnepal_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Video by propertyinnepal
+    artist          : Property In Nepal Pvt.Ltd
+    date            : 20240320
+    synopsis        : 📞 9851221475 :  BOOK YOUR APPOINTMENT #property #propertyinnepal #propertynepal #realestateinnepal
+    comment         : https://www.instagram.com/reel/C4vJ8OLS9ZU
+    description     : 📞 9851221475 :  BOOK YOUR APPOINTMENT #property #propertyinnepal #propertynepal #realestateinnepal
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 720x1280, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 0000018d30bed440] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000018d30bed340] video:7045KiB audio:399KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.386671%
+frame=  764 fps=288 q=-1.0 Lsize=    7474KiB time=00:00:25.40 bitrate=2410.4kbits/s speed=9.59x
+[libx264 @ 0000018d30c9e500] frame I:4     Avg QP:21.22  size: 64108
+[libx264 @ 0000018d30c9e500] frame P:214   Avg QP:22.18  size: 24151
+[libx264 @ 0000018d30c9e500] frame B:546   Avg QP:27.06  size:  3277
+[libx264 @ 0000018d30c9e500] consecutive B-frames:  1.4%  9.2%  2.0% 87.4%
+[libx264 @ 0000018d30c9e500] mb I  I16..4: 15.4% 60.5% 24.1%
+[libx264 @ 0000018d30c9e500] mb P  I16..4:  4.0% 10.9%  1.5%  P16..4: 31.3% 20.7%  9.8%  0.0%  0.0%    skip:21.8%
+[libx264 @ 0000018d30c9e500] mb B  I16..4:  0.2%  0.3%  0.0%  B16..8: 36.6%  3.2%  0.6%  direct: 0.9%  skip:58.1%  L0:42.1% L1:48.5% BI: 9.4%
+[libx264 @ 0000018d30c9e500] 8x8 transform intra:65.6% inter:71.6%
+[libx264 @ 0000018d30c9e500] coded y,uvDC,uvAC intra: 42.4% 30.9% 4.3% inter: 10.5% 4.3% 0.2%
+[libx264 @ 0000018d30c9e500] i16 v,h,dc,p: 30% 21% 14% 34%
+[libx264 @ 0000018d30c9e500] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 22% 15% 31%  5%  6%  4%  7%  4%  6%
+[libx264 @ 0000018d30c9e500] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26% 17% 16%  6%  9%  6% 10%  5%  6%
+[libx264 @ 0000018d30c9e500] i8c dc,h,v,p: 60% 20% 17%  3%
+[libx264 @ 0000018d30c9e500] Weighted P-Frames: Y:3.3% UV:2.8%
+[libx264 @ 0000018d30c9e500] ref P L0: 67.3% 19.2%  9.8%  3.6%  0.0%
+[libx264 @ 0000018d30c9e500] ref B L0: 93.3%  5.7%  1.0%
+[libx264 @ 0000018d30c9e500] ref B L1: 96.1%  3.9%
+[libx264 @ 0000018d30c9e500] kb/s:2266.13
+[aac @ 0000018d315db740] Qavg: 527.013
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C8jF7V1SJZt"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$($subtitleFile.FullName)'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/16/2024  7:42 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C8jF7V1SJZt']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C8jF7V1SJZt
+[Instagram] C8jF7V1SJZt: Setting up session
+[Instagram] C8jF7V1SJZt: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C8jF7V1SJZt: Downloading 1 format(s): dash-1271468483827755v+dash-1022660986094625ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t39.25447-16/448677213_790637703218683_6371630834210378177_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=PkGNJQgDxVkQ7kNvgEa8iRo&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYAGmaSOCuESoLDrpFjNI9NTdzOo5g1DAcljRgW-wA1huw&oe=66C5A462"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_freew.nepal.fdash-1271468483827755v.mp4
+[download] 100% of   10.98MiB in 00:00:01 at 9.29MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t50.33967-16/448666303_2798946243587656_7105628164419811960_n.mp4?_nc_cat=103&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=iVAXELdSAScQ7kNvgEL2xUH&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYDoSZUWGJiuIPeidpHRjhTMdoVTAbl7UmTR0oawXWV3Ig&oe=66C5AFDE"
+[download] Destination: C:\Temp\yt-dlp\Video_by_freew.nepal.fdash-1022660986094625ad.m4a
+[download] 100% of  125.04KiB in 00:00:00 at 3.50MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_freew.nepal.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_freew.nepal.fdash-1271468483827755v.mp4 -i file:C:\Temp\yt-dlp\Video_by_freew.nepal.fdash-1022660986094625ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_freew.nepal.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_freew.nepal.fdash-1022660986094625ad.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_freew.nepal.fdash-1271468483827755v.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_freew.nepal.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_freew.nepal.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by freew.nepal" -metadata "date=20240623" -metadata "description=🤟Join our group class in chabahil & sitapaila
+
+🏍️Guided by a team of skilled women, we are your premier riding school.
+
+☑️ Join our class
+
+🔗 link in Bio
+
+🏍️Women-led 2 wheels training in Nepal 🇳🇵
+
+🛵Book your class for scooter & Motorcycle
+
+📍Chabahil & sitapaila
+
+#freewnepal #kathmandu #nepal
+#femaleridingschoolnepal #femaledrivingtrainer #kathmandudrivingcenter #femaledrivingschoolnepal
+#1stfemaleroadcaptainNepal #feamaleridinginstructor #femaletrainer" -metadata "synopsis=🤟Join our group class in chabahil & sitapaila
+
+🏍️Guided by a team of skilled women, we are your premier riding school.
+
+☑️ Join our class
+
+🔗 link in Bio
+
+🏍️Women-led 2 wheels training in Nepal 🇳🇵
+
+🛵Book your class for scooter & Motorcycle
+
+📍Chabahil & sitapaila
+
+#freewnepal #kathmandu #nepal
+#femaleridingschoolnepal #femaledrivingtrainer #kathmandudrivingcenter #femaledrivingschoolnepal
+#1stfemaleroadcaptainNepal #feamaleridinginstructor #femaletrainer" -metadata "purl=https://www.instagram.com/reel/C8jF7V1SJZt" -metadata "comment=https://www.instagram.com/reel/C8jF7V1SJZt" -metadata "artist=FreeW.Nepal" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_freew.nepal.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_freew.nepal.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by freew.nepal
+    artist          : FreeW.Nepal
+    date            : 20240623
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C8jF7V1SJZt
+    description     : 🤟Join our group class in chabahil & sitapaila
+                    :
+                    : 🏍️Guided by a team of skilled women, we are your premier riding school.
+                    :
+                    : ☑️ Join our class
+                    :
+                    : 🔗 link in Bio
+                    :
+                    : 🏍️Women-led 2 wheels training in Nepal 🇳🇵
+                    :
+                    : 🛵Book your class for scooter & Motorcycle
+                    :
+                    : 📍Chabahil & sitapaila
+                    :
+                    : #freewnepal #kathmandu #nepal
+                    : #femaleridingschoolnepal #femaledrivingtrainer #kathmandudrivingcenter #femaledrivingschoolnepal
+                    : #1stfemaleroadcaptainNepal #feamaleridinginstructor #femaletrainer
+    synopsis        : 🤟Join our group class in chabahil & sitapaila
+                    :
+                    : 🏍️Guided by a team of skilled women, we are your premier riding school.
+                    :
+                    : ☑️ Join our class
+                    :
+                    : 🔗 link in Bio
+                    :
+                    : 🏍️Women-led 2 wheels training in Nepal 🇳🇵
+                    :
+                    : 🛵Book your class for scooter & Motorcycle
+                    :
+                    : 📍Chabahil & sitapaila
+                    :
+                    : #freewnepal #kathmandu #nepal
+                    : #femaleridingschoolnepal #femaledrivingtrainer #kathmandudrivingcenter #femaledrivingschoolnepal
+                    : #1stfemaleroadcaptainNepal #feamaleridinginstructor #femaletrainer
+  Duration: 00:00:18.37, start: 0.000000, bitrate: 5072 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, smpte170m/bt470bg/smpte170m), 1080x1920, 5040 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 53 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000001c5cc40de80] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001c5cc40de80] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 000001c5cc40de80] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_freew.nepal_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by freew.nepal
+    artist          : FreeW.Nepal
+    date            : 20240623
+    synopsis        : 🤟Join our group class in chabahil & sitapaila
+                    :
+                    : 🏍️Guided by a team of skilled women, we are your premier riding school.
+                    :
+                    : ☑️ Join our class
+                    :
+                    : 🔗 link in Bio
+                    :
+                    : 🏍️Women-led 2 wheels training in Nepal 🇳🇵
+                    :
+                    : 🛵Book your class for scooter & Motorcycle
+                    :
+                    : 📍Chabahil & sitapaila
+                    :
+                    : #freewnepal #kathmandu #nepal
+                    : #femaleridingschoolnepal #femaledrivingtrainer #kathmandudrivingcenter #femaledrivingschoolnepal
+                    : #1stfemaleroadcaptainNepal #feamaleridinginstructor #femaletrainer
+    comment         : https://www.instagram.com/reel/C8jF7V1SJZt
+    description     : 🤟Join our group class in chabahil & sitapaila
+                    :
+                    : 🏍️Guided by a team of skilled women, we are your premier riding school.
+                    :
+                    : ☑️ Join our class
+                    :
+                    : 🔗 link in Bio
+                    :
+                    : 🏍️Women-led 2 wheels training in Nepal 🇳🇵
+                    :
+                    : 🛵Book your class for scooter & Motorcycle
+                    :
+                    : 📍Chabahil & sitapaila
+                    :
+                    : #freewnepal #kathmandu #nepal
+                    : #femaleridingschoolnepal #femaledrivingtrainer #kathmandudrivingcenter #femaledrivingschoolnepal
+                    : #1stfemaleroadcaptainNepal #feamaleridinginstructor #femaletrainer
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, smpte170m/bt470bg/smpte170m, progressive), 1080x1920, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 000001c5cc36d180] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001c5cc36d040] video:11723KiB audio:288KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.175495%
+frame=  548 fps=111 q=-1.0 Lsize=   12033KiB time=00:00:18.20 bitrate=5416.1kbits/s speed=3.69x
+[libx264 @ 000001c5cc40de80] frame I:3     Avg QP:20.73  size:165604
+[libx264 @ 000001c5cc40de80] frame P:233   Avg QP:23.98  size: 37150
+[libx264 @ 000001c5cc40de80] frame B:312   Avg QP:27.00  size:  9139
+[libx264 @ 000001c5cc40de80] consecutive B-frames: 21.5%  5.5%  6.6% 66.4%
+[libx264 @ 000001c5cc40de80] mb I  I16..4:  8.1% 71.3% 20.5%
+[libx264 @ 000001c5cc40de80] mb P  I16..4:  3.4% 10.6%  1.2%  P16..4: 45.0% 12.4%  5.6%  0.0%  0.0%    skip:21.8%
+[libx264 @ 000001c5cc40de80] mb B  I16..4:  0.4%  0.8%  0.0%  B16..8: 42.7%  3.7%  0.6%  direct: 1.2%  skip:50.6%  L0:45.0% L1:50.4% BI: 4.6%
+[libx264 @ 000001c5cc40de80] 8x8 transform intra:69.3% inter:78.8%
+[libx264 @ 000001c5cc40de80] coded y,uvDC,uvAC intra: 44.5% 38.6% 6.4% inter: 15.0% 11.2% 0.3%
+[libx264 @ 000001c5cc40de80] i16 v,h,dc,p: 23% 34% 11% 32%
+[libx264 @ 000001c5cc40de80] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 23% 23% 26%  4%  4%  4%  5%  4%  6%
+[libx264 @ 000001c5cc40de80] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 28% 27% 14%  4%  6%  5%  7%  4%  5%
+[libx264 @ 000001c5cc40de80] i8c dc,h,v,p: 58% 22% 17%  3%
+[libx264 @ 000001c5cc40de80] Weighted P-Frames: Y:9.0% UV:0.9%
+[libx264 @ 000001c5cc40de80] ref P L0: 67.1% 24.1%  6.7%  1.9%  0.2%
+[libx264 @ 000001c5cc40de80] ref B L0: 96.3%  3.0%  0.7%
+[libx264 @ 000001c5cc40de80] ref B L1: 98.1%  1.9%
+[libx264 @ 000001c5cc40de80] kb/s:5257.23
+[aac @ 000001c5cc3c1540] Qavg: 1311.473
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
