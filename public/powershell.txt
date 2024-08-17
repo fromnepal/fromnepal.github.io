@@ -1360,3 +1360,1201 @@ Deleting original file Worker_at_a_disposable_vape_factory_tests_up_to_10_000_va
 Saturday, August 17, 2024 3:08:25 PM
 
 PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebaseorigin main; date; git push origin main; date;
+
+Saturday, August 17, 2024 4:22:55 PM
+Saturday, August 17, 2024 4:22:55 PM
+On branch main
+nothing to commit, working tree clean
+Saturday, August 17, 2024 4:22:55 PM
+Saturday, August 17, 2024 4:22:55 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.09s.
+Saturday, August 17, 2024 4:22:56 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.1 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 266ms
+Done in 2.61s.
+Saturday, August 17, 2024 4:22:58 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Saturday, August 17, 2024 4:23:00 PM
+[main 8cf8b64] build application
+ 4 files changed, 548 insertions(+), 2 deletions(-)
+ create mode 100644 docs/notes/2017-NEC-Code-2.pdf
+ create mode 100644 public/notes/2017-NEC-Code-2.pdf
+Saturday, August 17, 2024 4:23:00 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Saturday, August 17, 2024 4:23:02 PM
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 6.44 MiB | 6.36 MiB/s, done.
+Total 7 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   287bfdc..8cf8b64  main -> main
+Saturday, August 17, 2024 4:23:04 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.youtube.com/shorts/QqXay_-zx7Y"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/17/2024  4:36 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.youtube.com/shorts/QqXay_-zx7Y']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://www.youtube.com/shorts/QqXay_-zx7Y
+[youtube] QqXay_-zx7Y: Downloading webpage
+[youtube] QqXay_-zx7Y: Downloading ios player API JSON
+[youtube] QqXay_-zx7Y: Downloading web creator player API JSON
+[debug] Loading youtube-nsig.53afa3ce from cache
+[debug] [youtube] Decrypted nsig zD7IxS264e_W2IOjZ => nOGv1YL8wwDDpg
+[debug] Loading youtube-nsig.53afa3ce from cache
+[debug] [youtube] Decrypted nsig YPcFzylRugVSXkZ0a => y9ngS5xhMr0MvA
+[youtube] QqXay_-zx7Y: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/5297?service=YouTube&categories=%5B%22filler%22%2C+%22interaction%22%2C+%22intro%22%2C+%22poi_highlight%22%2C+%22preview%22%2C+%22chapter%22%2C+%22selfpromo%22%2C+%22outro%22%2C+%22music_offtopic%22%2C+%22sponsor%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+[SponsorBlock] No matching segments were found in the SponsorBlock database
+[info] QqXay_-zx7Y: Downloading 1 format(s): 616+140
+[info] There are no subtitles for the requested languages
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1723948569/ei/uQnBZrW1F7O2kucPsYeuiQc/ip/70.104.195.206/id/42a5dacbffb3c7b6/itag/616/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D17192288%3Bdur%3D59.800%3Bgir%3Dyes%3Bitag%3D356%3Blmt%3D1723763362198884/rqh/1/hls_chunk_host/rr3---sn-8xgp1vo-gpjl.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/mh/LB/mm/31,29/mn/sn-8xgp1vo-gpjl,sn-8xgp1vo-p5qy/ms/au,rdu/mv/m/mvi/3/pcm2cms/yes/pl/20/initcwndbps/1177500/vprv/1/playlist_type/DVR/dover/13/txp/553C434/mt/1723926553/fvip/1/short_key/1/keepalive/yes/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,vprv,playlist_type/sig/AJfQdSswRAIgY8ypgz5hUiFcVZMe-q8CR4CmDG4nrPiOZgiAvcliqWICIFDCtNuo_SbCQGbwb3U53i9yne4ieMzz4zxn_NVsQk_T/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,initcwndbps/lsig/AGtxev0wRgIhAKpcCdmoVUMZ6HxX9LtP8Y6JVvyM-s7gqKvPn5OH2a47AiEA4y7XSFJOBSXWzY-wQUetUMlgtfXrsK38_CXsCVjViaA%3D/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 12
+[download] Destination: C:\Temp\yt-dlp\DEFORMED_HOOF_Transformation_SHORT_horse_farrier_horsecare_equestrian_farrierlife_horsemanship.f616.mp4
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of   16.41MiB in 00:00:01 at 13.83MiB/s
+[debug] Invoking http downloader on "https://rr3---sn-8xgp1vo-gpjl.googlevideo.com/videoplayback?expire=1723948569&ei=uQnBZrW1F7O2kucPsYeuiQc&ip=70.104.195.206&id=o-AIsnxJyCGncCF-kuFo7t0Da_HU9sWxT1kHfOjFjNCjWO&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=LB&mm=31%2C29&mn=sn-8xgp1vo-gpjl%2Csn-8xgp1vo-p5qy&ms=au%2Crdu&mv=m&mvi=3&pcm2cms=yes&pl=20&initcwndbps=1177500&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=969985&dur=59.861&lmt=1723761931211869&mt=1723926553&fvip=1&keepalive=yes&c=IOS&txp=5532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIhAPgICF-eOZvtywDr3_xLzNrIVtmNpWYSCWnaIwbSwQ_RAiA3iK2tQ5gHRmfu634PFMNBpJzz9sB6pDZPposoYNeMCg%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRAIgA-zcLK4WBnRXkLb6X2LVrp4EsS2IurSXqVDz9vHRn6YCIE9JfXBsFG9E4MFN1SOVcknQ0oVtT19sJUF-y4OeOmsH"
+[download] Destination: C:\Temp\yt-dlp\DEFORMED_HOOF_Transformation_SHORT_horse_farrier_horsecare_equestrian_farrierlife_horsemanship.f140.m4a
+[download] 100% of  947.25KiB in 00:00:00 at 18.93MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\DEFORMED_HOOF_Transformation_SHORT_horse_farrier_horsecare_equestrian_farrierlife_horsemanship.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\DEFORMED_HOOF_Transformation_SHORT_horse_farrier_horsecare_equestrian_farrierlife_horsemanship.f616.mp4 -i file:C:\Temp\yt-dlp\DEFORMED_HOOF_Transformation_SHORT_horse_farrier_horsecare_equestrian_farrierlife_horsemanship.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\DEFORMED_HOOF_Transformation_SHORT_horse_farrier_horsecare_equestrian_farrierlife_horsemanship.temp.mp4
+Deleting original file C:\Temp\yt-dlp\DEFORMED_HOOF_Transformation_SHORT_horse_farrier_horsecare_equestrian_farrierlife_horsemanship.f140.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\DEFORMED_HOOF_Transformation_SHORT_horse_farrier_horsecare_equestrian_farrierlife_horsemanship.f616.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\DEFORMED_HOOF_Transformation_SHORT_horse_farrier_horsecare_equestrian_farrierlife_horsemanship.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\DEFORMED_HOOF_Transformation_SHORT_horse_farrier_horsecare_equestrian_farrierlife_horsemanship.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=DEFORMED HOOF Transformation SHORT #horse #farrier #horsecare #equestrian #farrierlife #horsemanship" -metadata "date=20240810" -metadata "description=@idahohorseshoeingschool" -metadata "synopsis=@idahohorseshoeingschool" -metadata "purl=https://www.youtube.com/watch?v=QqXay_-zx7Y" -metadata "comment=https://www.youtube.com/watch?v=QqXay_-zx7Y" -metadata "artist=Idaho Horseshoeing School" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\DEFORMED_HOOF_Transformation_SHORT_horse_farrier_horsecare_equestrian_farrierlife_horsemanship.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\DEFORMED_HOOF_Transformation_SHORT_horse_farrier_horsecare_equestrian_farrierlife_horsemanship.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : DEFORMED HOOF Transformation SHORT #horse #farrier #horsecare #equestrian #farrierlife #horsemanship
+    artist          : Idaho Horseshoeing School
+    date            : 20240810
+    encoder         : Lavf61.1.100
+    comment         : https://www.youtube.com/watch?v=QqXay_-zx7Y
+    description     : @idahohorseshoeingschool
+    synopsis        : @idahohorseshoeingschool
+  Duration: 00:00:59.86, start: 0.000000, bitrate: 2432 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 2298 kb/s, 30 fps, 30 tbr, 16k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 08/17/2024.
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000019265594400] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000019265594400] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0000019265594400] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\DEFORMED_HOOF_Transformation_SHORT_horse_farrier_horsecare_equestrian_farrierlife_horsemanship_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : DEFORMED HOOF Transformation SHORT #horse #farrier #horsecare #equestrian #farrierlife #horsemanship
+    artist          : Idaho Horseshoeing School
+    date            : 20240810
+    synopsis        : @idahohorseshoeingschool
+    comment         : https://www.youtube.com/watch?v=QqXay_-zx7Y
+    description     : @idahohorseshoeingschool
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 08/17/2024.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 000001926541ed00] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001926541ec00] video:24921KiB audio:945KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.244805%
+frame= 1794 fps=114 q=-1.0 Lsize=   25929KiB time=00:00:59.73 bitrate=3555.9kbits/s speed= 3.8x
+[libx264 @ 0000019265594400] frame I:23    Avg QP:20.32  size: 46849
+[libx264 @ 0000019265594400] frame P:663   Avg QP:22.99  size: 24686
+[libx264 @ 0000019265594400] frame B:1108  Avg QP:25.20  size:  7287
+[libx264 @ 0000019265594400] consecutive B-frames: 14.0%  6.9% 12.2% 66.9%
+[libx264 @ 0000019265594400] mb I  I16..4: 19.6% 75.3%  5.1%
+[libx264 @ 0000019265594400] mb P  I16..4: 11.1% 25.4%  0.7%  P16..4: 36.8%  6.7%  1.6%  0.0%  0.0%    skip:17.7%
+[libx264 @ 0000019265594400] mb B  I16..4:  1.3%  2.1%  0.0%  B16..8: 35.3%  1.7%  0.2%  direct: 0.8%  skip:58.6%  L0:50.9% L1:47.3% BI: 1.8%
+[libx264 @ 0000019265594400] 8x8 transform intra:68.0% inter:91.5%
+[libx264 @ 0000019265594400] coded y,uvDC,uvAC intra: 31.7% 26.1% 0.8% inter: 8.2% 8.3% 0.0%
+[libx264 @ 0000019265594400] i16 v,h,dc,p: 22% 24%  6% 48%
+[libx264 @ 0000019265594400] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 34% 20% 18%  4%  5%  5%  4%  6%  4%
+[libx264 @ 0000019265594400] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 32% 23% 14%  4%  8%  8%  6%  4%  3%
+[libx264 @ 0000019265594400] i8c dc,h,v,p: 62% 16% 19%  3%
+[libx264 @ 0000019265594400] Weighted P-Frames: Y:1.1% UV:0.8%
+[libx264 @ 0000019265594400] ref P L0: 71.5% 14.1% 11.4%  3.1%  0.0%
+[libx264 @ 0000019265594400] ref B L0: 95.0%  4.2%  0.8%
+[libx264 @ 0000019265594400] ref B L1: 98.7%  1.3%
+[libx264 @ 0000019265594400] kb/s:3413.79
+[aac @ 00000192653e2200] Qavg: 532.276
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/Y8rRRxiCh7E"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile =Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/17/2024  4:39 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://youtu.be/Y8rRRxiCh7E']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://youtu.be/Y8rRRxiCh7E
+[youtube] Y8rRRxiCh7E: Downloading webpage
+[youtube] Y8rRRxiCh7E: Downloading ios player API JSON
+[youtube] Y8rRRxiCh7E: Downloading web creator player API JSON
+[debug] Loading youtube-nsig.53afa3ce from cache
+[debug] [youtube] Decrypted nsig fjmqHx5nsMzsjTPu9 => oRzESZj1RD-O6w
+[debug] Loading youtube-nsig.53afa3ce from cache
+[debug] [youtube] Decrypted nsig jWI9P_ApFuNPpuUs2 => tY5i-1HRIB8b1w
+[youtube] Y8rRRxiCh7E: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/8d28?service=YouTube&categories=%5B%22sponsor%22%2C+%22interaction%22%2C+%22preview%22%2C+%22filler%22%2C+%22music_offtopic%22%2C+%22chapter%22%2C+%22outro%22%2C+%22selfpromo%22%2C+%22poi_highlight%22%2C+%22intro%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+[SponsorBlock] No matching segments were found in the SponsorBlock database
+[info] Y8rRRxiCh7E: Downloading 1 format(s): 609+140
+[info] There are no subtitles for the requested languages
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1723948762/ei/egrBZvzUI6uIkucP7_X9gAY/ip/70.104.195.206/id/63cad147188287b1/itag/609/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D1427038%3Bdur%3D11.966%3Bgir%3Dyes%3Bitag%3D247%3Blmt%3D1722218394253059/rqh/1/hls_chunk_host/rr6---sn-8xgp1vo-gpje.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/mh/-4/mm/31,29/mn/sn-8xgp1vo-gpje,sn-8xgp1vo-p5qe7/ms/au,rdu/mv/m/mvi/6/pl/20/initcwndbps/1180000/vprv/1/playlist_type/DVR/dover/13/txp/553C434/mt/1723926795/fvip/4/short_key/1/keepalive/yes/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,vprv,playlist_type/sig/AJfQdSswRQIhAOc56BXYWM9IaowwXq7E1TXQUUWVv1xOWpMFDXp2aZ-VAiARpriJsxFSTGTLTd_XWOxAYXAqRFLM9ggQYA0esT2IrA%3D%3D/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl,initcwndbps/lsig/AGtxev0wRQIhAKI3vobd1jQI4B9r_ybXIStjHClD7omsMvqH-AC5LOl8AiBthnXTzuty46w67f8t0PQLB73HKsmW4d_Z9KkP8EVnnw%3D%3D/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 2
+[download] Destination: C:\Temp\yt-dlp\what_did_the_cop_say.f609.mp4
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of    1.36MiB in 00:00:00 at 6.35MiB/s
+[debug] Invoking http downloader on "https://rr6---sn-8xgp1vo-gpje.googlevideo.com/videoplayback?expire=1723948762&ei=egrBZvzUI6uIkucP7_X9gAY&ip=70.104.195.206&id=o-AC22bH3hUjQWW4eIe2xP07HbIip1Ue2X9Gtst_OZhMRU&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=-4&mm=31%2C29&mn=sn-8xgp1vo-gpje%2Csn-8xgp1vo-p5qe7&ms=au%2Crdu&mv=m&mvi=6&pl=20&initcwndbps=1180000&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=195505&dur=12.027&lmt=1722216986302478&mt=1723926795&fvip=4&keepalive=yes&c=IOS&txp=5532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgKYW9K8wwE6qQFlj-KUjLrBS_eUlaC9Lg5MGlgoJe578CIQCVeu87RWoyx68YDC0SZydKHxLqm3mQRLJo9PUBz-Y-Uw%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRQIhAIt-ufMoG8CtdvvfQg2EnM-YaVVXtDR1tyItWwwJbXFWAiBe_8RmvIEqUcHZ-N6TXsvyqAlYHURFVYA16RJ3v4flSQ%3D%3D"
+[download] Destination: C:\Temp\yt-dlp\what_did_the_cop_say.f140.m4a
+[download] 100% of  190.92KiB in 00:00:00 at 4.87MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\what_did_the_cop_say.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\what_did_the_cop_say.f609.mp4 -i file:C:\Temp\yt-dlp\what_did_the_cop_say.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\what_did_the_cop_say.temp.mp4
+Deleting original file C:\Temp\yt-dlp\what_did_the_cop_say.f140.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\what_did_the_cop_say.f609.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\what_did_the_cop_say.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\what_did_the_cop_say.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=what did the cop say" -metadata "date=20240726" -metadata "purl=https://www.youtube.com/watch?v=Y8rRRxiCh7E" -metadata "comment=https://www.youtube.com/watch?v=Y8rRRxiCh7E" -metadata "artist=john_wolf_creek" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\what_did_the_cop_say.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\what_did_the_cop_say.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : what did the cop say
+    artist          : john_wolf_creek
+    date            : 20240726
+    encoder         : Lavf61.1.100
+    comment         : https://www.youtube.com/watch?v=Y8rRRxiCh7E
+  Duration: 00:00:12.03, start: 0.000000, bitrate: 1084 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, smpte170m/bt470bg/bt709), 576x1024, 952 kb/s, 30 fps, 30 tbr, 16k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 08/17/2024.
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 127 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 00000280b8213600] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 00000280b8213600] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 00000280b8213600] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\what_did_the_cop_say_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : what did the cop say
+    artist          : john_wolf_creek
+    date            : 20240726
+    comment         : https://www.youtube.com/watch?v=Y8rRRxiCh7E
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, smpte170m/bt470bg/bt709, progressive), 576x1024, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 08/17/2024.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 00000280b8716040] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 00000280b81fbdc0] video:2021KiB audio:188KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.639300%
+frame=  359 fps=0.0 q=-1.0 Lsize=    2223KiB time=00:00:11.90 bitrate=1530.2kbits/s speed=  12x
+[libx264 @ 00000280b8213600] frame I:2     Avg QP:22.17  size: 31030
+[libx264 @ 00000280b8213600] frame P:118   Avg QP:23.26  size: 11460
+[libx264 @ 00000280b8213600] frame B:239   Avg QP:26.84  size:  2738
+[libx264 @ 00000280b8213600] consecutive B-frames:  8.1%  6.1% 10.0% 75.8%
+[libx264 @ 00000280b8213600] mb I  I16..4: 16.2% 64.8% 19.1%
+[libx264 @ 00000280b8213600] mb P  I16..4:  9.1% 17.1%  1.8%  P16..4: 36.6% 13.2%  5.3%  0.0%  0.0%    skip:16.9%
+[libx264 @ 00000280b8213600] mb B  I16..4:  0.8%  1.2%  0.1%  B16..8: 45.4%  4.7%  0.6%  direct: 0.9%  skip:46.4%  L0:49.7% L1:43.9% BI: 6.4%
+[libx264 @ 00000280b8213600] 8x8 transform intra:60.8% inter:75.6%
+[libx264 @ 00000280b8213600] coded y,uvDC,uvAC intra: 28.3% 32.9% 4.6% inter: 9.5% 7.5% 0.2%
+[libx264 @ 00000280b8213600] i16 v,h,dc,p: 18% 42%  9% 31%
+[libx264 @ 00000280b8213600] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26% 20% 26%  3%  6%  8%  5%  3%  3%
+[libx264 @ 00000280b8213600] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 25% 21% 18%  3% 10% 11%  7%  3%  3%
+[libx264 @ 00000280b8213600] i8c dc,h,v,p: 58% 23% 15%  4%
+[libx264 @ 00000280b8213600] Weighted P-Frames: Y:8.5% UV:5.9%
+[libx264 @ 00000280b8213600] ref P L0: 61.1% 18.6% 15.1%  5.1%  0.1%
+[libx264 @ 00000280b8213600] ref B L0: 92.1%  6.4%  1.5%
+[libx264 @ 00000280b8213600] ref B L1: 96.5%  3.5%
+[libx264 @ 00000280b8213600] kb/s:1382.95
+[aac @ 00000280b8277340] Qavg: 5453.887
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/6PVVo6fkVeg"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile =Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/17/2024  4:46 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://youtu.be/6PVVo6fkVeg']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://youtu.be/6PVVo6fkVeg
+[youtube] 6PVVo6fkVeg: Downloading webpage
+[youtube] 6PVVo6fkVeg: Downloading ios player API JSON
+[youtube] 6PVVo6fkVeg: Downloading web creator player API JSON
+[debug] Loading youtube-nsig.53afa3ce from cache
+[debug] [youtube] Decrypted nsig NXQ1IDn1EcMmyfX8s => w_C2Ya_wbRcybg
+[debug] Loading youtube-nsig.53afa3ce from cache
+[debug] [youtube] Decrypted nsig aQGCZgvfw74h4YeI0 => 3HIqJz1QPRoLjg
+[youtube] 6PVVo6fkVeg: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/3332?service=YouTube&categories=%5B%22preview%22%2C+%22filler%22%2C+%22selfpromo%22%2C+%22outro%22%2C+%22intro%22%2C+%22sponsor%22%2C+%22interaction%22%2C+%22music_offtopic%22%2C+%22chapter%22%2C+%22poi_highlight%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+[SponsorBlock] No matching segments were found in the SponsorBlock database
+[info] 6PVVo6fkVeg: Downloading 1 format(s): 617+140
+[info] There are no subtitles for the requested languages
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1723949195/ei/KwzBZpCOOY2LkucPm4630Ak/ip/70.104.195.206/id/e8f555a3a7e455e8/itag/617/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D15181813%3Bdur%3D59.666%3Bgir%3Dyes%3Bitag%3D303%3Blmt%3D1711201806869560/rqh/1/hls_chunk_host/rr8---sn-8xgp1vo-gpje.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/mh/VV/mm/31,29/mn/sn-8xgp1vo-gpje,sn-8xgp1vo-p5qee/ms/au,rdu/mv/m/mvi/8/pl/20/initcwndbps/1197500/vprv/1/playlist_type/DVR/dover/13/txp/630A224/mt/1723927281/fvip/5/short_key/1/keepalive/yes/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,vprv,playlist_type/sig/AJfQdSswRAIge7jyLUkctjU_wjkb-zR616OTKVz710Vkoh6NNz4u3DkCIAcj3wUW_hn7pP5blq0X1Omkxe-Q_ulD8S0EX_dSw66J/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl,initcwndbps/lsig/AGtxev0wRQIhAP1UX2XtniVtG-AoH1q1OGyBVgoQyMonVaRr1TrXXTwtAiAHpa_q7cXo5c9rTLKKOxEGRfddOTZAZWiCdspaatCHsw%3D%3D/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 11
+[download] Destination: C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.f617.mp4
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of   14.50MiB in 00:00:01 at 11.22MiB/s
+[debug] Invoking http downloader on "https://rr8---sn-8xgp1vo-gpje.googlevideo.com/videoplayback?expire=1723949195&ei=KwzBZpCOOY2LkucPm4630Ak&ip=70.104.195.206&id=o-AJ8yel2eMQrOkdApsNeyQihq_AWWURx1VsJdux8zmQAi&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=VV&mm=31%2C29&mn=sn-8xgp1vo-gpje%2Csn-8xgp1vo-p5qee&ms=au%2Crdu&mv=m&mvi=8&pl=20&initcwndbps=1197500&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=967452&dur=59.721&lmt=1711201781936559&mt=1723927281&fvip=5&keepalive=yes&c=IOS&txp=6308224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIhANvnCxwJ2GeJpSKg9Ioi-LypixExg5Dl55EpBICu-gamAiBDdYJ17wlr71xwBQKryfVQwVnvu13fQrZBobo9dqd5sA%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRQIhAIwo5fto_V6NDlhVIj72jVzG55EYZa5X9icrBvczsI-nAiBYdhfgIjHa0zMZRoNPxX0IuQQsfSMmpWZc084tWUJAvw%3D%3D"
+[download] Destination: C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.f140.m4a
+[download] 100% of  944.78KiB in 00:00:00 at 13.25MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.f617.mp4 -i file:C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.f140.m4a-c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.temp.mp4
+Deleting original file C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.f140.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.f617.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=World’s Rarest Dryer? 🤔 #oddlysatisfying #rare" -metadata "date=20240323" -metadata "purl=https://www.youtube.com/watch?v=6PVVo6fkVeg" -metadata "comment=https://www.youtube.com/watch?v=6PVVo6fkVeg" -metadata "artist=MrLintGuy" -movflags +faststart file:C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : World’s Rarest Dryer? 🤔 #oddlysatisfying #rare
+    artist          : MrLintGuy
+    date            : 20240323
+    encoder         : Lavf61.1.100
+    comment         : https://www.youtube.com/watch?v=6PVVo6fkVeg
+  Duration: 00:00:59.72, start: 0.000000, bitrate: 2170 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 2032 kb/s, 60 fps, 60 tbr, 16k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 08/17/2024.
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000001a9cec9c080] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001a9cec9c080] profile High, level 4.2, 4:2:0, 8-bit
+[libx264 @ 000001a9cec9c080] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : World’s Rarest Dryer? 🤔 #oddlysatisfying #rare
+    artist          : MrLintGuy
+    date            : 20240323
+    comment         : https://www.youtube.com/watch?v=6PVVo6fkVeg
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 60 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 08/17/2024.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 000001a9ced12bc0] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001a9cf286940] video:37356KiB audio:960KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.252142%
+frame= 3580 fps=121 q=-1.0 Lsize=   38413KiB time=00:00:59.63 bitrate=5276.9kbits/s speed=2.02x
+[libx264 @ 000001a9cec9c080] frame I:29    Avg QP:21.50  size: 36676
+[libx264 @ 000001a9cec9c080] frame P:973   Avg QP:24.44  size: 20316
+[libx264 @ 000001a9cec9c080] frame B:2578  Avg QP:26.29  size:  6758
+[libx264 @ 000001a9cec9c080] consecutive B-frames:  1.7%  4.1%  8.4% 85.8%
+[libx264 @ 000001a9cec9c080] mb I  I16..4: 27.4% 69.4%  3.2%
+[libx264 @ 000001a9cec9c080] mb P  I16..4: 16.0% 26.7%  0.4%  P16..4: 32.8%  4.2%  1.0%  0.0%  0.0%    skip:18.8%
+[libx264 @ 000001a9cec9c080] mb B  I16..4:  1.8%  2.2%  0.0%  B16..8: 32.8%  1.5%  0.1%  direct: 1.2%  skip:60.3%  L0:48.4% L1:49.9% BI: 1.7%
+[libx264 @ 000001a9cec9c080] 8x8 transform intra:61.0% inter:95.3%
+[libx264 @ 000001a9cec9c080] coded y,uvDC,uvAC intra: 19.8% 21.8% 0.9% inter: 5.3% 7.1% 0.0%
+[libx264 @ 000001a9cec9c080] i16 v,h,dc,p: 24% 28% 10% 38%
+[libx264 @ 000001a9cec9c080] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 29% 20% 28%  3%  5%  5%  4%  3%  3%
+[libx264 @ 000001a9cec9c080] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 22% 15%  4% 12%  8%  8%  4%  3%
+[libx264 @ 000001a9cec9c080] i8c dc,h,v,p: 67% 16% 15%  2%
+[libx264 @ 000001a9cec9c080] Weighted P-Frames: Y:4.2% UV:1.4%
+[libx264 @ 000001a9cec9c080] ref P L0: 64.6% 12.4% 17.1%  5.7%  0.2%
+[libx264 @ 000001a9cec9c080] ref B L0: 91.5%  6.8%  1.7%
+[libx264 @ 000001a9cec9c080] ref B L1: 97.2%  2.8%
+[libx264 @ 000001a9cec9c080] kb/s:5128.80
+[aac @ 000001a9cf2502c0] Qavg: 719.356
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/ZwEQTJt1r1M"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile =Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/17/2024  4:48 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://youtu.be/ZwEQTJt1r1M']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://youtu.be/ZwEQTJt1r1M
+[youtube] ZwEQTJt1r1M: Downloading webpage
+[youtube] ZwEQTJt1r1M: Downloading ios player API JSON
+[youtube] ZwEQTJt1r1M: Downloading web creator player API JSON
+[debug] Loading youtube-nsig.53afa3ce from cache
+[debug] [youtube] Decrypted nsig 5VSPh1cEoWfzyodPq => 20C9hUHA7Lf-fw
+[youtube] ZwEQTJt1r1M: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/ad70?service=YouTube&categories=%5B%22selfpromo%22%2C+%22chapter%22%2C+%22interaction%22%2C+%22poi_highlight%22%2C+%22filler%22%2C+%22intro%22%2C+%22music_offtopic%22%2C+%22preview%22%2C+%22sponsor%22%2C+%22outro%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+[SponsorBlock] No matching segments were found in the SponsorBlock database
+[info] ZwEQTJt1r1M: Downloading 1 format(s): 616+140
+[info] There are no subtitles for the requested languages
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1723949316/ei/pAzBZpDaBNiHkucPrYCOyQ0/ip/70.104.195.206/id/6701104c9b75af53/itag/616/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D24697892%3Bdur%3D42.366%3Bgir%3Dyes%3Bitag%3D356%3Blmt%3D1723658282385898/rqh/1/hls_chunk_host/rr4---sn-8xgp1vo-gpjl.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/mh/gM/mm/31,29/mn/sn-8xgp1vo-gpjl,sn-8xgp1vo-p5qe7/ms/au,rdu/mv/m/mvi/4/pl/20/initcwndbps/1235000/vprv/1/playlist_type/DVR/dover/13/txp/553C434/mt/1723927281/fvip/5/short_key/1/keepalive/yes/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,vprv,playlist_type/sig/AJfQdSswRAIgKXWE9sfbTsg0UIGiDqx1RMeHagtjQhQddbJcW7-GlMQCIB9EpT6RsOa96Pn-YzwQMl6moJdj2WatLzwEUfkofJk_/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl,initcwndbps/lsig/AGtxev0wRAIgI3VZA1IiE032tFNTEEKBsmDhOV0rVQfEFO8zMZ3sxKYCIE9yILTPbJ5cXGcT2N9d0Qs1k7H42lr6ieoO6VeQTgVO/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 7
+[download] Destination: C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.f616.mp4
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of   23.56MiB in 00:00:01 at 13.96MiB/s
+[debug] Invoking http downloader on "https://rr4---sn-8xgp1vo-gpjl.googlevideo.com/videoplayback?expire=1723949316&ei=pAzBZpDaBNiHkucPrYCOyQ0&ip=70.104.195.206&id=o-AN-jbfJuQF3GHMpIGKNEIKOulc2RDDO-gwS06uBdvFCO&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=gM&mm=31%2C29&mn=sn-8xgp1vo-gpjl%2Csn-8xgp1vo-p5qe7&ms=au%2Crdu&mv=m&mvi=4&pl=20&initcwndbps=1235000&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=687784&dur=42.446&lmt=1723656513829707&mt=1723927281&fvip=5&keepalive=yes&c=IOS&txp=5532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgEXqE95Unqwj_cUpI90x0BX4cWiKTm0NlL_h6uYaPGckCIQCidolbIA23R5cJ6R-C6CGedBa-LnGfd9IRboHw1Giezg%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRQIhANJMEvs8xg7wY3ApZrYgqFso-KNkqLai5nGUQDk2qP8mAiBcRmKQ4ZpaRmjbeb1JxlnjDR4vsqeXIBgpbkFw7CdpiQ%3D%3D"
+[download] Destination: C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.f140.m4a
+[download] 100% of  671.66KiB in 00:00:00 at 8.00MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.f616.mp4 -i file:C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.temp.mp4
+Deleting original file C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.f616.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.f140.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=KAREN cops cant hold it 🙂 #funny #police #lawenforcement" -metadata "date=20240813" -metadata "description=cops and law
+#viralshorts #cops #police" -metadata "synopsis=cops and law
+#viralshorts #cops #police" -metadata "purl=https://www.youtube.com/watch?v=ZwEQTJt1r1M" -metadata "comment=https://www.youtube.com/watch?v=ZwEQTJt1r1M" -metadata "artist=COPS&LAW NETWORK" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : KAREN cops cant hold it 🙂 #funny #police #lawenforcement
+    artist          : COPS&LAW NETWORK
+    date            : 20240813
+    encoder         : Lavf61.1.100
+    comment         : https://www.youtube.com/watch?v=ZwEQTJt1r1M
+    description     : cops and law
+                    : #viralshorts #cops #police
+    synopsis        : cops and law
+                    : #viralshorts #cops #police
+  Duration: 00:00:42.45, start: 0.000000, bitrate: 4789 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 4661 kb/s, 30 fps, 30 tbr, 16k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 08/17/2024.
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 127 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000001dbb3993c00] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001dbb3993c00] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 000001dbb3993c00] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : KAREN cops cant hold it 🙂 #funny #police #lawenforcement
+    artist          : COPS&LAW NETWORK
+    date            : 20240813
+    synopsis        : cops and law
+                    : #viralshorts #cops #police
+    comment         : https://www.youtube.com/watch?v=ZwEQTJt1r1M
+    description     : cops and law
+                    : #viralshorts #cops #police
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 08/17/2024.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 000001dbb3e7d480] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001dbb3ffedc0] video:16825KiB audio:672KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.264785%
+frame= 1271 fps=207 q=-1.0 Lsize=   17544KiB time=00:00:42.30 bitrate=3397.6kbits/s speed=6.88x
+[libx264 @ 000001dbb3993c00] frame I:6     Avg QP:16.31  size:176503
+[libx264 @ 000001dbb3993c00] frame P:383   Avg QP:19.65  size: 31868
+[libx264 @ 000001dbb3993c00] frame B:882   Avg QP:25.56  size:  4494
+[libx264 @ 000001dbb3993c00] consecutive B-frames:  5.1%  5.8%  3.8% 85.3%
+[libx264 @ 000001dbb3993c00] mb I  I16..4: 23.8% 52.8% 23.4%
+[libx264 @ 000001dbb3993c00] mb P  I16..4:  0.7%  1.5%  0.7%  P16..4: 13.5%  7.9%  6.3%  0.0%  0.0%    skip:69.4%
+[libx264 @ 000001dbb3993c00] mb B  I16..4:  0.1%  0.1%  0.0%  B16..8: 16.4%  2.9%  0.8%  direct: 0.5%  skip:79.2%  L0:42.5% L1:42.6% BI:14.9%
+[libx264 @ 000001dbb3993c00] 8x8 transform intra:50.8% inter:52.0%
+[libx264 @ 000001dbb3993c00] coded y,uvDC,uvAC intra: 40.4% 39.3% 12.8% inter: 5.7% 2.6% 0.0%
+[libx264 @ 000001dbb3993c00] i16 v,h,dc,p: 49% 31% 10% 10%
+[libx264 @ 000001dbb3993c00] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 31% 17% 31%  3%  3%  3%  4%  3%  5%
+[libx264 @ 000001dbb3993c00] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 22% 28% 17%  5%  6%  6%  5%  5%  6%
+[libx264 @ 000001dbb3993c00] i8c dc,h,v,p: 60% 23% 13%  3%
+[libx264 @ 000001dbb3993c00] Weighted P-Frames: Y:1.3% UV:0.3%
+[libx264 @ 000001dbb3993c00] ref P L0: 68.6% 19.4%  9.8%  2.3%  0.0%
+[libx264 @ 000001dbb3993c00] ref B L0: 94.3%  5.0%  0.7%
+[libx264 @ 000001dbb3993c00] ref B L1: 97.1%  2.9%
+[libx264 @ 000001dbb3993c00] kb/s:3253.22
+[aac @ 000001dbb3fce7c0] Qavg: 725.608
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/cz7QxQsksg8"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile =Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/17/2024  4:50 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://youtu.be/cz7QxQsksg8']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://youtu.be/cz7QxQsksg8
+[youtube] cz7QxQsksg8: Downloading webpage
+[youtube] cz7QxQsksg8: Downloading ios player API JSON
+[youtube] cz7QxQsksg8: Downloading web creator player API JSON
+[debug] Loading youtube-nsig.53afa3ce from cache
+[debug] [youtube] Decrypted nsig 2hp13lVri73H8V5kP => StM10v2DGz0wcw
+[debug] Loading youtube-nsig.53afa3ce from cache
+[debug] [youtube] Decrypted nsig CkH6VlfpIgdY8eWVD => v3MptUAomH1c8g
+[youtube] cz7QxQsksg8: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/41f0?service=YouTube&categories=%5B%22outro%22%2C+%22poi_highlight%22%2C+%22selfpromo%22%2C+%22sponsor%22%2C+%22preview%22%2C+%22chapter%22%2C+%22music_offtopic%22%2C+%22intro%22%2C+%22filler%22%2C+%22interaction%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+[SponsorBlock] No matching segments were found in the SponsorBlock database
+[info] Testing format 609
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 10
+[download] Destination: C:\Users\kushal\src\myhtml\fromnepal\tmpbc4qzoex.tmp
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of    712.00B in 00:00:00 at 12.23KiB/s
+[info] cz7QxQsksg8: Downloading 1 format(s): 609+140
+[info] There are no subtitles for the requested languages
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1723949453/ei/LQ3BZsurM7m3kucPoL3G2Ac/ip/70.104.195.206/id/733ed0c50b24b20f/itag/609/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D3345762%3Bdur%3D60.033%3Bgir%3Dyes%3Bitag%3D247%3Blmt%3D1723842337206223/rqh/1/hls_chunk_host/rr5---sn-8xgp1vo-gpjl.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/mh/qW/mm/31,29/mn/sn-8xgp1vo-gpjl,sn-8xgp1vo-p5qee/ms/au,rdu/mv/m/mvi/5/pl/20/initcwndbps/1225000/vprv/1/playlist_type/DVR/dover/13/txp/630A224/mt/1723927515/fvip/5/short_key/1/keepalive/yes/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,vprv,playlist_type/sig/AJfQdSswRQIgeVxVjIe8jZuXrJyxuhOzvwE-zdHCjV9wClmwOwZQqfYCIQDmHEpdXsueop28tM90gFQwS6CmauIZgOkGqBeM0tIrHQ%3D%3D/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl,initcwndbps/lsig/AGtxev0wRQIhAKPCk_lxOVVI88oIdlKtLZJG4ksPH82hFY63g2ywF00pAiBFT2sLdgSWr5EirT-vp8SvePyhmUcm9_Njk0PsXuL60Q%3D%3D/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 10
+[download] Destination: C:\Temp\yt-dlp\Karen_Cops_Gets_Absolutely_Owned_by_Citizen_Pt.2.f609.mp4
+[download] 100% of    3.20MiB in 00:00:00 at 7.70MiB/s
+[debug] Invoking http downloader on "https://rr5---sn-8xgp1vo-gpjl.googlevideo.com/videoplayback?expire=1723949453&ei=LQ3BZsurM7m3kucPoL3G2Ac&ip=70.104.195.206&id=o-ADiREICGTFop7NIJ55-daoO1E0p9dU0V2Lb5lowtBQlH&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=qW&mm=31%2C29&mn=sn-8xgp1vo-gpjl%2Csn-8xgp1vo-p5qee&ms=au%2Crdu&mv=m&mvi=5&pl=20&initcwndbps=1225000&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=973410&dur=60.093&lmt=1723926042950478&mt=1723927515&fvip=5&keepalive=yes&c=IOS&txp=5432434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgRy-58OYhQClsBuV91bpy9ewhPImozUjTvEPG5C85p4YCIQDK1yZNJSQGMKPHqnycigJF2wWfhoEu17l1fSl1YbCNQQ%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRQIgXE5As6aJp0dLCbS5_n_dPC8w13-TVKs9npldS7zrBI4CIQC2Qg0CtFhszZ5-Of6aJTxCdwlDSk88LMYxoL-ch5IOew%3D%3D"
+[download] Destination: C:\Temp\yt-dlp\Karen_Cops_Gets_Absolutely_Owned_by_Citizen_Pt.2.f140.m4a
+[download] 100% of  950.60KiB in 00:00:00 at 2.88MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Karen_Cops_Gets_Absolutely_Owned_by_Citizen_Pt.2.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Karen_Cops_Gets_Absolutely_Owned_by_Citizen_Pt.2.f609.mp4 -i file:C:\Temp\yt-dlp\Karen_Cops_Gets_Absolutely_Owned_by_Citizen_Pt.2.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Karen_Cops_Gets_Absolutely_Owned_by_Citizen_Pt.2.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Karen_Cops_Gets_Absolutely_Owned_by_Citizen_Pt.2.f609.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Karen_Cops_Gets_Absolutely_Owned_by_Citizen_Pt.2.f140.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Karen_Cops_Gets_Absolutely_Owned_by_Citizen_Pt.2.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Karen_Cops_Gets_Absolutely_Owned_by_Citizen_Pt.2.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Karen Cops Gets Absolutely Owned by Citizen (Pt.2)" -metadata "date=20240817" -metadata "description=⚠️ EDUCATIONAL PURPOSES ONLY ⚠️
+
+#policechase #policeofficer  #hitandrun #police #suspect #news #criminal #shorts #shortsvideos #bodycam #cops #policepowerabuse
+#shooting #firstamendmentaudit #1stamendment" -metadata "synopsis=⚠️ EDUCATIONAL PURPOSES ONLY ⚠️
+
+#policechase #policeofficer  #hitandrun #police #suspect #news #criminal #shorts #shortsvideos #bodycam #cops #policepowerabuse
+#shooting #firstamendmentaudit #1stamendment" -metadata "purl=https://www.youtube.com/watch?v=cz7QxQsksg8" -metadata "comment=https://www.youtube.com/watch?v=cz7QxQsksg8" -metadata "artist=PD Bodycam" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\Karen_Cops_Gets_Absolutely_Owned_by_Citizen_Pt.2.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Karen_Cops_Gets_Absolutely_Owned_by_Citizen_Pt.2.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Karen Cops Gets Absolutely Owned by Citizen (Pt.2)
+    artist          : PD Bodycam
+    date            : 20240817
+    encoder         : Lavf61.1.100
+    comment         : https://www.youtube.com/watch?v=cz7QxQsksg8
+    description     : ⚠️ EDUCATIONAL PURPOSES ONLY ⚠️
+                    :
+                    : #policechase #policeofficer  #hitandrun #police #suspect #news #criminal #shorts #shortsvideos #bodycam #cops #policepowerabuse
+                    : #shooting #firstamendmentaudit #1stamendment
+    synopsis        : ⚠️ EDUCATIONAL PURPOSES ONLY ⚠️
+                    :
+                    : #policechase #policeofficer  #hitandrun #police #suspect #news #criminal #shorts #shortsvideos #bodycam #cops #policepowerabuse
+                    : #shooting #firstamendmentaudit #1stamendment
+  Duration: 00:01:00.09, start: 0.000000, bitrate: 580 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 720x1280, 444 kb/s, 30 fps, 30 tbr, 16k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 08/17/2024.
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 127 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000001ad4f8cb300] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001ad4f8cb300] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 000001ad4f8cb300] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Karen_Cops_Gets_Absolutely_Owned_by_Citizen_Pt.2_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Karen Cops Gets Absolutely Owned by Citizen (Pt.2)
+    artist          : PD Bodycam
+    date            : 20240817
+    synopsis        : ⚠️ EDUCATIONAL PURPOSES ONLY ⚠️
+                    :
+                    : #policechase #policeofficer  #hitandrun #police #suspect #news #criminal #shorts #shortsvideos #bodycam #cops #policepowerabuse
+                    : #shooting #firstamendmentaudit #1stamendment
+    comment         : https://www.youtube.com/watch?v=cz7QxQsksg8
+    description     : ⚠️ EDUCATIONAL PURPOSES ONLY ⚠️
+                    :
+                    : #policechase #policeofficer  #hitandrun #police #suspect #news #criminal #shorts #shortsvideos #bodycam #cops #policepowerabuse
+                    : #shooting #firstamendmentaudit #1stamendment
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 720x1280, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 08/17/2024.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 000001ad4f335e00] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001ad4f2fc580] video:8252KiB audio:947KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.706385%
+frame= 1801 fps=342 q=-1.0 Lsize=    9264KiB time=00:00:59.96 bitrate=1265.5kbits/s speed=11.4x
+[libx264 @ 000001ad4f8cb300] frame I:11    Avg QP:17.36  size: 23563
+[libx264 @ 000001ad4f8cb300] frame P:564   Avg QP:20.41  size:  9045
+[libx264 @ 000001ad4f8cb300] frame B:1226  Avg QP:22.94  size:  2519
+[libx264 @ 000001ad4f8cb300] consecutive B-frames:  6.9%  5.1%  5.3% 82.6%
+[libx264 @ 000001ad4f8cb300] mb I  I16..4: 21.0% 74.4%  4.6%
+[libx264 @ 000001ad4f8cb300] mb P  I16..4:  5.4% 20.0%  0.4%  P16..4: 29.9%  7.0%  2.4%  0.0%  0.0%    skip:35.0%
+[libx264 @ 000001ad4f8cb300] mb B  I16..4:  0.4%  0.9%  0.0%  B16..8: 28.5%  1.6%  0.2%  direct: 1.8%  skip:66.5%  L0:48.0% L1:49.5% BI: 2.4%
+[libx264 @ 000001ad4f8cb300] 8x8 transform intra:76.3% inter:89.3%
+[libx264 @ 000001ad4f8cb300] coded y,uvDC,uvAC intra: 23.0% 30.9% 4.4% inter: 5.5% 7.6% 0.0%
+[libx264 @ 000001ad4f8cb300] i16 v,h,dc,p: 38% 33%  9% 20%
+[libx264 @ 000001ad4f8cb300] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 31% 16% 36%  3%  3%  3%  3%  4%  3%
+[libx264 @ 000001ad4f8cb300] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 29% 17% 16%  5%  8%  8%  6%  7%  3%
+[libx264 @ 000001ad4f8cb300] i8c dc,h,v,p: 62% 18% 16%  5%
+[libx264 @ 000001ad4f8cb300] Weighted P-Frames: Y:3.2% UV:0.7%
+[libx264 @ 000001ad4f8cb300] ref P L0: 64.2% 15.0% 15.5%  5.2%  0.1%
+[libx264 @ 000001ad4f8cb300] ref B L0: 90.9%  7.5%  1.7%
+[libx264 @ 000001ad4f8cb300] ref B L1: 96.8%  3.2%
+[libx264 @ 000001ad4f8cb300] kb/s:1125.93
+[aac @ 000001ad4f6fe0c0] Qavg: 805.614
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/gcHTNjVr6e0"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile =Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/17/2024  4:52 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://youtu.be/gcHTNjVr6e0']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://youtu.be/gcHTNjVr6e0
+[youtube] gcHTNjVr6e0: Downloading webpage
+[youtube] gcHTNjVr6e0: Downloading ios player API JSON
+[youtube] gcHTNjVr6e0: Downloading web creator player API JSON
+[debug] Loading youtube-nsig.53afa3ce from cache
+[debug] [youtube] Decrypted nsig lGtnblSPKEwaOL8hY => VqeFcmK_Bjxk1w
+[debug] Loading youtube-nsig.53afa3ce from cache
+[debug] [youtube] Decrypted nsig nAiRXULQqDpnoXxP1 => Kj4ddLz6GvvhGg
+[youtube] gcHTNjVr6e0: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/6a06?service=YouTube&categories=%5B%22filler%22%2C+%22poi_highlight%22%2C+%22chapter%22%2C+%22sponsor%22%2C+%22preview%22%2C+%22outro%22%2C+%22music_offtopic%22%2C+%22selfpromo%22%2C+%22interaction%22%2C+%22intro%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+[SponsorBlock] No matching segments were found in the SponsorBlock database
+[info] gcHTNjVr6e0: Downloading 1 format(s): 620+140
+[info] There are no subtitles for the requested languages
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1723949553/ei/kQ3BZqT1C7yJkucP0aS5iQc/ip/70.104.195.206/id/81c1d336356be9ed/itag/620/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D55033765%3Bdur%3D59.100%3Bgir%3Dyes%3Bitag%3D271%3Blmt%3D1720431235648106/rqh/1/hls_chunk_host/rr5---sn-8xgp1vo-gpjl.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/mh/yo/mm/31,29/mn/sn-8xgp1vo-gpjl,sn-8xgp1vo-p5qy/ms/au,rdu/mv/m/mvi/5/pl/20/initcwndbps/1225000/vprv/1/playlist_type/DVR/dover/13/txp/553C434/mt/1723927515/fvip/8/short_key/1/keepalive/yes/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,vprv,playlist_type/sig/AJfQdSswRAIgXDEW7JUjdKYTe24AemwYCo8BxM3sbHYmZ0j8F43FfZICIDQyH1dGXvZ4KcGk6LQXs8HZTyzVfbvS3bNjZhy9ryxE/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl,initcwndbps/lsig/AGtxev0wRgIhAPiDbu2d1kw-2IxlWea0Q3HB9XtM-zKSUH9yPtSqEMXuAiEAmPrcF-DjO5E0aE9DEzazc2V5wp6bcUVCqFy180LKyks%3D/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 11
+[download] Destination: C:\Temp\yt-dlp\Dumb_Cops_Owned_Do_Walk_Of_Shame_ID_Refusal_Intimidation_Tactics_Fail_1st_Amendment_Audit_shorts.f620.mp4
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of   52.49MiB in 00:00:03 at 14.74MiB/s
+[debug] Invoking http downloader on "https://rr5---sn-8xgp1vo-gpjl.googlevideo.com/videoplayback?expire=1723949553&ei=kQ3BZqT1C7yJkucP0aS5iQc&ip=70.104.195.206&id=o-AB9GkJ80C9RB4S1fegMxNs5dE_3PPHoX_irAqYFWBt9n&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=yo&mm=31%2C29&mn=sn-8xgp1vo-gpjl%2Csn-8xgp1vo-p5qy&ms=au%2Crdu&mv=m&mvi=5&pl=20&initcwndbps=1225000&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=958558&dur=59.187&lmt=1709162143876609&mt=1723927515&fvip=8&keepalive=yes&c=IOS&txp=5532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgC_7cCBnbFEnhBLdqSOXaIfkVT3q9Gf1KKhWm0mJbKLwCIQC4a4a1ADosCfPbxGjyT4llFElL8C6drXfrBVeOIPVmDg%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRgIhAKnhFjKwGrd28aphHYU15cwWe2ujO4AWTYpjFpPrpTIpAiEA_fbJhR0vxZeZJA1i7FV0T-gYaFsSv2xD9lYRiZFVvAs%3D"
+[download] Destination: C:\Temp\yt-dlp\Dumb_Cops_Owned_Do_Walk_Of_Shame_ID_Refusal_Intimidation_Tactics_Fail_1st_Amendment_Audit_shorts.f140.m4a
+[download] 100% of  936.09KiB in 00:00:00 at 2.91MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Dumb_Cops_Owned_Do_Walk_Of_Shame_ID_Refusal_Intimidation_Tactics_Fail_1st_Amendment_Audit_shorts.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Dumb_Cops_Owned_Do_Walk_Of_Shame_ID_Refusal_Intimidation_Tactics_Fail_1st_Amendment_Audit_shorts.f620.mp4 -i file:C:\Temp\yt-dlp\Dumb_Cops_Owned_Do_Walk_Of_Shame_ID_Refusal_Intimidation_Tactics_Fail_1st_Amendment_Audit_shorts.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Dumb_Cops_Owned_Do_Walk_Of_Shame_ID_Refusal_Intimidation_Tactics_Fail_1st_Amendment_Audit_shorts.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Dumb_Cops_Owned_Do_Walk_Of_Shame_ID_Refusal_Intimidation_Tactics_Fail_1st_Amendment_Audit_shorts.f140.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Dumb_Cops_Owned_Do_Walk_Of_Shame_ID_Refusal_Intimidation_Tactics_Fail_1st_Amendment_Audit_shorts.f620.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Dumb_Cops_Owned_Do_Walk_Of_Shame_ID_Refusal_Intimidation_Tactics_Fail_1st_Amendment_Audit_shorts.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Dumb_Cops_Owned_Do_Walk_Of_Shame_ID_Refusal_Intimidation_Tactics_Fail_1st_Amendment_Audit_shorts.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Dumb Cops Owned Do Walk Of Shame! ID Refusal Intimidation Tactics Fail 1st Amendment Audit #shorts" -metadata "date=20240217" -metadata "description=#shorts
+You Can't Film Civilians! Dumb Cops Owned Do Walk Of Shame! ID Refusal Intimidation Tactics Fail
+
+Welcome to the channel!
+Join me by clicking SUBSCRIBE!
+
+With this channel, I hope to provide value to the community by providing my commentary and ideas over the top of videos that have been released online. You may find unique reactions to audit clips, civilians owning cops, ID refusals, I don't answer questions, police corruption, dirty cops, and much more!
+
+Don't forget to support the channel to help these videos get out there that show the police corruption and how many dirty, tyrant cops we have receiving and taking money from the taxpayers!
+Help spread these videos to bring awareness to the people so that they know how to defend themselves from tyrant cops and help end police misconduct.
+
+Keeping Them Liable (AL) - https://www.youtube.com/watch?v=AHhqyZ7NqDs
+
+Fair Use Notice This video may contain copyrighted material, the use of which has not been specifically authorized by the copyright owner. We are making such material available for the purposes of criticism, comment, review, and news reporting, which constitute the fair use of any such copyrighted material as provided for in Section 107 of the US Copyright Law. Notwithstanding the provisions of Sections 106 and 106A, the fair use of a copyrighted work for purposes such as criticism, comment, review, and news reporting is not an infringement of copyright.
+
+#police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmentaudit #Trespassing #4thamendment  #5thamendment #walkofshame  #1aAudits #Tyrants #Tyranny #copwatcher  #CopsGetOwned  #CopsGettingOwned  #lawenforcement" -metadata"synopsis=#shorts
+You Can't Film Civilians! Dumb Cops Owned Do Walk Of Shame! ID Refusal Intimidation Tactics Fail
+
+Welcome to the channel!
+Join me by clicking SUBSCRIBE!
+
+With this channel, I hope to provide value to the community by providing my commentary and ideas over the top of videos that have been released online. You may find unique reactions to audit clips, civilians owning cops, ID refusals, I don't answer questions, police corruption, dirty cops, and much more!
+
+Don't forget to support the channel to help these videos get out there that show the police corruption and how many dirty, tyrant cops we have receiving and taking money from the taxpayers!
+Help spread these videos to bring awareness to the people so that they know how to defend themselves from tyrant cops and help end police misconduct.
+
+Keeping Them Liable (AL) - https://www.youtube.com/watch?v=AHhqyZ7NqDs
+
+Fair Use Notice This video may contain copyrighted material, the use of which has not been specifically authorized by the copyright owner. We are making such material available for the purposes of criticism, comment, review, and news reporting, which constitute the fair use of any such copyrighted material as provided for in Section 107 of the US Copyright Law. Notwithstanding the provisions of Sections 106 and 106A, the fair use of a copyrighted work for purposes such as criticism, comment, review, and news reporting is not an infringement of copyright.
+
+#police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmentaudit #Trespassing #4thamendment  #5thamendment #walkofshame  #1aAudits #Tyrants #Tyranny #copwatcher  #CopsGetOwned  #CopsGettingOwned  #lawenforcement" -metadata"purl=https://www.youtube.com/watch?v=gcHTNjVr6e0" -metadata "comment=https://www.youtube.com/watch?v=gcHTNjVr6e0" -metadata "artist=People's Court Audit" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\Dumb_Cops_Owned_Do_Walk_Of_Shame_ID_Refusal_Intimidation_Tactics_Fail_1st_Amendment_Audit_shorts.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Dumb_Cops_Owned_Do_Walk_Of_Shame_ID_Refusal_Intimidation_Tactics_Fail_1st_Amendment_Audit_shorts.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Dumb Cops Owned Do Walk Of Shame! ID Refusal Intimidation Tactics Fail 1st Amendment Audit #shorts
+    artist          : People's Court Audit
+    date            : 20240217
+    encoder         : Lavf61.1.100
+    comment         : https://www.youtube.com/watch?v=gcHTNjVr6e0
+    description     : #shorts
+                    : You Can't Film Civilians! Dumb Cops Owned Do Walk Of Shame! ID Refusal Intimidation Tactics Fail
+                    :
+                    : Welcome to the channel!
+                    : Join me by clicking SUBSCRIBE!
+                    :
+                    : With this channel, I hope to provide value to the community by providing my commentary and ideas over the top of videos that have been released online. You may find unique reactions to audit clips, civilians owning cops, ID refusals, I don't answer questi
+                    :
+                    : Don't forget to support the channel to help these videos get out there that show the police corruption and how many dirty, tyrant cops we have receiving and taking money from the taxpayers!
+                    : Help spread these videos to bring awareness to the people so that they know how to defend themselves from tyrant cops and help end police misconduct.
+                    :
+                    : Keeping Them Liable (AL) - https://www.youtube.com/watch?v=AHhqyZ7NqDs
+                    :
+                    : Fair Use Notice This video may contain copyrighted material, the use of which has not been specifically authorized by the copyright owner. We are making such material available for the purposes of criticism, comment, review, and news reporting, which cons
+                    :
+                    : #police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmenta
+    synopsis        : #shorts
+                    : You Can't Film Civilians! Dumb Cops Owned Do Walk Of Shame! ID Refusal Intimidation Tactics Fail
+                    :
+                    : Welcome to the channel!
+                    : Join me by clicking SUBSCRIBE!
+                    :
+                    : With this channel, I hope to provide value to the community by providing my commentary and ideas over the top of videos that have been released online. You may find unique reactions to audit clips, civilians owning cops, ID refusals, I don't answer questi
+                    :
+                    : Don't forget to support the channel to help these videos get out there that show the police corruption and how many dirty, tyrant cops we have receiving and taking money from the taxpayers!
+                    : Help spread these videos to bring awareness to the people so that they know how to defend themselves from tyrant cops and help end police misconduct.
+                    :
+                    : Keeping Them Liable (AL) - https://www.youtube.com/watch?v=AHhqyZ7NqDs
+                    :
+                    : Fair Use Notice This video may contain copyrighted material, the use of which has not been specifically authorized by the copyright owner. We are making such material available for the purposes of criticism, comment, review, and news reporting, which cons
+                    :
+                    : #police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmenta
+  Duration: 00:00:59.19, start: 0.000000, bitrate: 7573 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1440x2560, 7447 kb/s, 30 fps, 30 tbr, 16k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 08/17/2024.
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 127 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000019e25c9c400] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000019e25c9c400] profile High, level 5.0, 4:2:0, 8-bit
+[libx264 @ 0000019e25c9c400] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Dumb_Cops_Owned_Do_Walk_Of_Shame_ID_Refusal_Intimidation_Tactics_Fail_1st_Amendment_Audit_shorts_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Dumb Cops Owned Do Walk Of Shame! ID Refusal Intimidation Tactics Fail 1st Amendment Audit #shorts
+    artist          : People's Court Audit
+    date            : 20240217
+    synopsis        : #shorts
+                    : You Can't Film Civilians! Dumb Cops Owned Do Walk Of Shame! ID Refusal Intimidation Tactics Fail
+                    :
+                    : Welcome to the channel!
+                    : Join me by clicking SUBSCRIBE!
+                    :
+                    : With this channel, I hope to provide value to the community by providing my commentary and ideas over the top of videos that have been released online. You may find unique reactions to audit clips, civilians owning cops, ID refusals, I don't answer questi
+                    :
+                    : Don't forget to support the channel to help these videos get out there that show the police corruption and how many dirty, tyrant cops we have receiving and taking money from the taxpayers!
+                    : Help spread these videos to bring awareness to the people so that they know how to defend themselves from tyrant cops and help end police misconduct.
+                    :
+                    : Keeping Them Liable (AL) - https://www.youtube.com/watch?v=AHhqyZ7NqDs
+                    :
+                    : Fair Use Notice This video may contain copyrighted material, the use of which has not been specifically authorized by the copyright owner. We are making such material available for the purposes of criticism, comment, review, and news reporting, which cons
+                    :
+                    : #police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmenta
+    comment         : https://www.youtube.com/watch?v=gcHTNjVr6e0
+    description     : #shorts
+                    : You Can't Film Civilians! Dumb Cops Owned Do Walk Of Shame! ID Refusal Intimidation Tactics Fail
+                    :
+                    : Welcome to the channel!
+                    : Join me by clicking SUBSCRIBE!
+                    :
+                    : With this channel, I hope to provide value to the community by providing my commentary and ideas over the top of videos that have been released online. You may find unique reactions to audit clips, civilians owning cops, ID refusals, I don't answer questi
+                    :
+                    : Don't forget to support the channel to help these videos get out there that show the police corruption and how many dirty, tyrant cops we have receiving and taking money from the taxpayers!
+                    : Help spread these videos to bring awareness to the people so that they know how to defend themselves from tyrant cops and help end police misconduct.
+                    :
+                    : Keeping Them Liable (AL) - https://www.youtube.com/watch?v=AHhqyZ7NqDs
+                    :
+                    : Fair Use Notice This video may contain copyrighted material, the use of which has not been specifically authorized by the copyright owner. We are making such material available for the purposes of criticism, comment, review, and news reporting, which cons
+                    :
+                    : #police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmenta
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1440x2560, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 08/17/2024.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 0000019e25c14dc0] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000019e25c45f80] video:53376KiB audio:934KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.117879%
+frame= 1773 fps= 60 q=-1.0 Lsize=   54373KiB time=00:00:59.03 bitrate=7545.3kbits/s speed=2.01x
+[libx264 @ 0000019e25c9c400] frame I:27    Avg QP:20.15  size:119756
+[libx264 @ 0000019e25c9c400] frame P:903   Avg QP:23.58  size: 42644
+[libx264 @ 0000019e25c9c400] frame B:843   Avg QP:24.79  size: 15320
+[libx264 @ 0000019e25c9c400] consecutive B-frames: 30.1% 14.3% 15.4% 40.2%
+[libx264 @ 0000019e25c9c400] mb I  I16..4: 20.9% 64.8% 14.3%
+[libx264 @ 0000019e25c9c400] mb P  I16..4:  8.9% 20.9%  0.8%  P16..4: 33.5%  7.1%  2.0%  0.0%  0.0%    skip:26.7%
+[libx264 @ 0000019e25c9c400] mb B  I16..4:  1.7%  1.9%  0.0%  B16..8: 35.7%  2.4%  0.3%  direct: 3.2%  skip:54.8%  L0:51.0% L1:46.8% BI: 2.2%
+[libx264 @ 0000019e25c9c400] 8x8 transform intra:66.6% inter:89.9%
+[libx264 @ 0000019e25c9c400] coded y,uvDC,uvAC intra: 26.3% 40.7% 3.8% inter: 9.6% 14.8% 0.1%
+[libx264 @ 0000019e25c9c400] i16 v,h,dc,p: 27% 41%  7% 25%
+[libx264 @ 0000019e25c9c400] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 28% 22% 29%  3%  4%  4%  5%  4%  3%
+[libx264 @ 0000019e25c9c400] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 25% 26%  9%  4%  9%  8%  9%  6%  4%
+[libx264 @ 0000019e25c9c400] i8c dc,h,v,p: 51% 25% 16%  8%
+[libx264 @ 0000019e25c9c400] Weighted P-Frames: Y:0.1% UV:0.0%
+[libx264 @ 0000019e25c9c400] ref P L0: 75.7% 14.7%  7.6%  2.1%  0.0%
+[libx264 @ 0000019e25c9c400] ref B L0: 92.8%  6.2%  1.0%
+[libx264 @ 0000019e25c9c400] ref B L1: 98.3%  1.7%
+[libx264 @ 0000019e25c9c400] kb/s:7398.44
+[aac @ 0000019e2604f840] Qavg: 617.974
+
+PS C:\Users\kushal\src\myhtml\fromnepal>
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/zbiLrshOHyc"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile =Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/17/2024  4:53 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://youtu.be/zbiLrshOHyc']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://youtu.be/zbiLrshOHyc
+[youtube] zbiLrshOHyc: Downloading webpage
+[youtube] zbiLrshOHyc: Downloading ios player API JSON
+[youtube] zbiLrshOHyc: Downloading web creator player API JSON
+[debug] Loading youtube-nsig.53afa3ce from cache
+[debug] [youtube] Decrypted nsig 7-xGmM8qvkjWZRi3w => 7Upbq7P8LinwOQ
+[debug] Loading youtube-nsig.53afa3ce from cache
+[debug] [youtube] Decrypted nsig PoiJk-8RkB6yjZTan => sUzGUOLQ7XqUQw
+[youtube] zbiLrshOHyc: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/6479?service=YouTube&categories=%5B%22chapter%22%2C+%22selfpromo%22%2C+%22sponsor%22%2C+%22music_offtopic%22%2C+%22poi_highlight%22%2C+%22preview%22%2C+%22outro%22%2C+%22intro%22%2C+%22filler%22%2C+%22interaction%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+[SponsorBlock] No matching segments were found in the SponsorBlock database
+[info] zbiLrshOHyc: Downloading 1 format(s): 620+140
+[info] There are no subtitles for the requested languages
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1723949604/ei/xA3BZq6hPMu3kucPzqGawQM/ip/70.104.195.206/id/cdb88baec84e1f27/itag/620/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D30838680%3Bdur%3D56.200%3Bgir%3Dyes%3Bitag%3D271%3Blmt%3D1720578719253090/rqh/1/hls_chunk_host/rr8---sn-8xgp1vo-gpje.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/mh/K0/mm/31,29/mn/sn-8xgp1vo-gpje,sn-8xgp1vo-p5qe/ms/au,rdu/mv/m/mvi/8/pl/20/initcwndbps/1158750/vprv/1/playlist_type/DVR/dover/13/txp/553C434/mt/1723927515/fvip/6/short_key/1/keepalive/yes/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,vprv,playlist_type/sig/AJfQdSswRQIhAOF44HW4Zt8oZHg4s3NphiPy6K1TFIVUeHYZtyUT4jwVAiBylw3cT_XyOHb5XoB8-faW12rDbyu_3nZssCrTQLiRMg%3D%3D/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl,initcwndbps/lsig/AGtxev0wRQIgXJifoOgB76oaswiR24pBZFRD1B-aiFWtoFGyGgUIfPsCIQDV3_9PO1MvcNSDe7eiF26sAMgFYA9Q6F60aD6X1Jf9Wg%3D%3D/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 11
+[download] Destination: C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal.f620.mp4
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of   29.42MiB in 00:00:01 at 14.91MiB/s
+[debug] Invoking http downloader on "https://rr8---sn-8xgp1vo-gpje.googlevideo.com/videoplayback?expire=1723949604&ei=xA3BZq6hPMu3kucPzqGawQM&ip=70.104.195.206&id=o-AMETtEEZSsc2c77E0u35loclUnlm57D98zd7YEdJCG48&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=K0&mm=31%2C29&mn=sn-8xgp1vo-gpje%2Csn-8xgp1vo-p5qe&ms=au%2Crdu&mv=m&mvi=8&pl=20&initcwndbps=1158750&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=911709&dur=56.285&lmt=1713568813451908&mt=1723927515&fvip=6&keepalive=yes&c=IOS&txp=5532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRgIhAPfjPlrF8JnvY0UNDYQRQvUN2VRnjbEPk74vJAhEHjdlAiEAqq7ZmZYrwdUTXC1ltmgRUhOu3L1p39glJkjDHhrA-cg%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRgIhANDDIlMbHBFuYre1FdvnbMm_7K_ttyUOaCB9Qip_tKESAiEAy3ViWCpMyVAkc6hct6WDFTaTkTQUyrsDO3EHQK0Z7FE%3D"
+[download] Destination: C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal.f140.m4a
+[download] 100% of  890.34KiB in 00:00:00 at 3.05MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal.f620.mp4 -i file:C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal.f620.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal.f140.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal.mp4 -map 0 -dn -ignore_unknown-c copy -write_id3v1 1 -metadata "title=Police Corruption! Arrested For Walking On The Street By Dirty Cops! Unlawful Orders & ID Refusal" -metadata "date=20240419" -metadata "description=#shorts
+Police Corruption! Arrested For Walking On The Street By Dirty Cops! Unlawful Orders & ID Refusal
+
+Welcome to the channel!
+Join me by clicking SUBSCRIBE!
+
+With this channel, I hope to provide value to the community by providing my commentary and ideas over the top of videos that have been released online. You may find unique reactions to audit clips, civilians owning cops, ID refusals, I don't answer questions, police corruption, dirty cops, and much more!
+
+Don't forget to support the channel to help these videos get out there that show the police corruption and how many dirty, tyrant cops we have receiving and taking money from the taxpayers!
+Help spread these videos to bring awareness to the people so that they know how to defend themselves from tyrant cops and help end police misconduct.
+
+News now 303 - https://www.youtube.com/watch?v=cd8ir0FQbnc&t=5s&ab_channel=Newsnow303
+https://www.youtube.com/watch?v=z8jTVYuRISU&t=6s&ab_channel=Newsnow303
+
+Fair Use Notice This video may contain copyrighted material, the use of which has not been specifically authorized by the copyright owner. We are making such material available for the purposes of criticism, comment, review, and news reporting, which constitute the fair use of any such copyrighted material as provided for in Section 107 of the US Copyright Law. Notwithstanding the provisions of Sections 106 and 106A, the fair use of a copyrighted work for purposes such as criticism, comment, review, and news reporting is not an infringement of copyright.
+
+#police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmentaudit #Trespassing #4thamendment  #5thamendment #walkofshame  #1aAudits #Tyrants #Tyranny #copwatcher  #CopsGetOwned  #CopsGettingOwned  #lawenforcement" -metadata"synopsis=#shorts
+Police Corruption! Arrested For Walking On The Street By Dirty Cops! Unlawful Orders & ID Refusal
+
+Welcome to the channel!
+Join me by clicking SUBSCRIBE!
+
+With this channel, I hope to provide value to the community by providing my commentary and ideas over the top of videos that have been released online. You may find unique reactions to audit clips, civilians owning cops, ID refusals, I don't answer questions, police corruption, dirty cops, and much more!
+
+Don't forget to support the channel to help these videos get out there that show the police corruption and how many dirty, tyrant cops we have receiving and taking money from the taxpayers!
+Help spread these videos to bring awareness to the people so that they know how to defend themselves from tyrant cops and help end police misconduct.
+
+News now 303 - https://www.youtube.com/watch?v=cd8ir0FQbnc&t=5s&ab_channel=Newsnow303
+https://www.youtube.com/watch?v=z8jTVYuRISU&t=6s&ab_channel=Newsnow303
+
+Fair Use Notice This video may contain copyrighted material, the use of which has not been specifically authorized by the copyright owner. We are making such material available for the purposes of criticism, comment, review, and news reporting, which constitute the fair use of any such copyrighted material as provided for in Section 107 of the US Copyright Law. Notwithstanding the provisions of Sections 106 and 106A, the fair use of a copyrighted work for purposes such as criticism, comment, review, and news reporting is not an infringement of copyright.
+
+#police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmentaudit #Trespassing #4thamendment  #5thamendment #walkofshame  #1aAudits #Tyrants #Tyranny #copwatcher  #CopsGetOwned  #CopsGettingOwned  #lawenforcement" -metadata"purl=https://www.youtube.com/watch?v=zbiLrshOHyc" -metadata "comment=https://www.youtube.com/watch?v=zbiLrshOHyc" -metadata "artist=People's Court Audit" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Police Corruption! Arrested For Walking On The Street By Dirty Cops! Unlawful Orders & ID Refusal
+    artist          : People's Court Audit
+    date            : 20240419
+    encoder         : Lavf61.1.100
+    comment         : https://www.youtube.com/watch?v=zbiLrshOHyc
+    description     : #shorts
+                    : Police Corruption! Arrested For Walking On The Street By Dirty Cops! Unlawful Orders & ID Refusal
+                    :
+                    : Welcome to the channel!
+                    : Join me by clicking SUBSCRIBE!
+                    :
+                    : With this channel, I hope to provide value to the community by providing my commentary and ideas over the top of videos that have been released online. You may find unique reactions to audit clips, civilians owning cops, ID refusals, I don't answer questi
+                    :
+                    : Don't forget to support the channel to help these videos get out there that show the police corruption and how many dirty, tyrant cops we have receiving and taking money from the taxpayers!
+                    : Help spread these videos to bring awareness to the people so that they know how to defend themselves from tyrant cops and help end police misconduct.
+                    :
+                    : News now 303 - https://www.youtube.com/watch?v=cd8ir0FQbnc&t=5s&ab_channel=Newsnow303
+                    : https://www.youtube.com/watch?v=z8jTVYuRISU&t=6s&ab_channel=Newsnow303
+                    :
+                    : Fair Use Notice This video may contain copyrighted material, the use of which has not been specifically authorized by the copyright owner. We are making such material available for the purposes of criticism, comment, review, and news reporting, which cons
+                    :
+                    : #police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmenta
+    synopsis        : #shorts
+                    : Police Corruption! Arrested For Walking On The Street By Dirty Cops! Unlawful Orders & ID Refusal
+                    :
+                    : Welcome to the channel!
+                    : Join me by clicking SUBSCRIBE!
+                    :
+                    : With this channel, I hope to provide value to the community by providing my commentary and ideas over the top of videos that have been released online. You may find unique reactions to audit clips, civilians owning cops, ID refusals, I don't answer questi
+                    :
+                    : Don't forget to support the channel to help these videos get out there that show the police corruption and how many dirty, tyrant cops we have receiving and taking money from the taxpayers!
+                    : Help spread these videos to bring awareness to the people so that they know how to defend themselves from tyrant cops and help end police misconduct.
+                    :
+                    : News now 303 - https://www.youtube.com/watch?v=cd8ir0FQbnc&t=5s&ab_channel=Newsnow303
+                    : https://www.youtube.com/watch?v=z8jTVYuRISU&t=6s&ab_channel=Newsnow303
+                    :
+                    : Fair Use Notice This video may contain copyrighted material, the use of which has not been specifically authorized by the copyright owner. We are making such material available for the purposes of criticism, comment, review, and news reporting, which cons
+                    :
+                    : #police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmenta
+  Duration: 00:00:56.29, start: 0.000000, bitrate: 4518 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1440x2560, 4387 kb/s, 30 fps, 30 tbr, 16k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 08/17/2024.
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 127 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000001ca5481fb40] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001ca5481fb40] profile High, level 5.0, 4:2:0, 8-bit
+[libx264 @ 000001ca5481fb40] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Police Corruption! Arrested For Walking On The Street By Dirty Cops! Unlawful Orders & ID Refusal
+    artist          : People's Court Audit
+    date            : 20240419
+    synopsis        : #shorts
+                    : Police Corruption! Arrested For Walking On The Street By Dirty Cops! Unlawful Orders & ID Refusal
+                    :
+                    : Welcome to the channel!
+                    : Join me by clicking SUBSCRIBE!
+                    :
+                    : With this channel, I hope to provide value to the community by providing my commentary and ideas over the top of videos that have been released online. You may find unique reactions to audit clips, civilians owning cops, ID refusals, I don't answer questi
+                    :
+                    : Don't forget to support the channel to help these videos get out there that show the police corruption and how many dirty, tyrant cops we have receiving and taking money from the taxpayers!
+                    : Help spread these videos to bring awareness to the people so that they know how to defend themselves from tyrant cops and help end police misconduct.
+                    :
+                    : News now 303 - https://www.youtube.com/watch?v=cd8ir0FQbnc&t=5s&ab_channel=Newsnow303
+                    : https://www.youtube.com/watch?v=z8jTVYuRISU&t=6s&ab_channel=Newsnow303
+                    :
+                    : Fair Use Notice This video may contain copyrighted material, the use of which has not been specifically authorized by the copyright owner. We are making such material available for the purposes of criticism, comment, review, and news reporting, which cons
+                    :
+                    : #police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmenta
+    comment         : https://www.youtube.com/watch?v=zbiLrshOHyc
+    description     : #shorts
+                    : Police Corruption! Arrested For Walking On The Street By Dirty Cops! Unlawful Orders & ID Refusal
+                    :
+                    : Welcome to the channel!
+                    : Join me by clicking SUBSCRIBE!
+                    :
+                    : With this channel, I hope to provide value to the community by providing my commentary and ideas over the top of videos that have been released online. You may find unique reactions to audit clips, civilians owning cops, ID refusals, I don't answer questi
+                    :
+                    : Don't forget to support the channel to help these videos get out there that show the police corruption and how many dirty, tyrant cops we have receiving and taking money from the taxpayers!
+                    : Help spread these videos to bring awareness to the people so that they know how to defend themselves from tyrant cops and help end police misconduct.
+                    :
+                    : News now 303 - https://www.youtube.com/watch?v=cd8ir0FQbnc&t=5s&ab_channel=Newsnow303
+                    : https://www.youtube.com/watch?v=z8jTVYuRISU&t=6s&ab_channel=Newsnow303
+                    :
+                    : Fair Use Notice This video may contain copyrighted material, the use of which has not been specifically authorized by the copyright owner. We are making such material available for the purposes of criticism, comment, review, and news reporting, which cons
+                    :
+                    : #police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmenta
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1440x2560, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 08/17/2024.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 000001ca5481f040] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001ca542bb480] video:33902KiB audio:882KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.181075%
+frame= 1686 fps= 68 q=-1.0 Lsize=   34847KiB time=00:00:56.13 bitrate=5085.5kbits/s speed=2.25x
+[libx264 @ 000001ca5481fb40] frame I:18    Avg QP:19.39  size: 82415
+[libx264 @ 000001ca5481fb40] frame P:694   Avg QP:22.46  size: 32798
+[libx264 @ 000001ca5481fb40] frame B:974   Avg QP:24.35  size: 10750
+[libx264 @ 000001ca5481fb40] consecutive B-frames: 19.1%  8.5%  9.3% 63.1%
+[libx264 @ 000001ca5481fb40] mb I  I16..4: 21.6% 69.4%  9.0%
+[libx264 @ 000001ca5481fb40] mb P  I16..4:  9.9% 19.6%  0.5%  P16..4: 34.5%  5.8%  1.4%  0.0%  0.0%    skip:28.2%
+[libx264 @ 000001ca5481fb40] mb B  I16..4:  1.1%  1.3%  0.0%  B16..8: 35.1%  1.5%  0.1%  direct: 1.0%  skip:59.9%  L0:50.4% L1:48.9% BI: 0.7%
+[libx264 @ 000001ca5481fb40] 8x8 transform intra:64.4% inter:92.5%
+[libx264 @ 000001ca5481fb40] coded y,uvDC,uvAC intra: 20.9% 20.0% 0.8% inter: 6.2% 6.8% 0.0%
+[libx264 @ 000001ca5481fb40] i16 v,h,dc,p: 21% 36%  7% 35%
+[libx264 @ 000001ca5481fb40] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 31% 23% 26%  3%  4%  4%  4%  3%  3%
+[libx264 @ 000001ca5481fb40] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 29% 27% 13%  3%  8%  7%  7%  3%  3%
+[libx264 @ 000001ca5481fb40] i8c dc,h,v,p: 67% 17% 14%  2%
+[libx264 @ 000001ca5481fb40] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 000001ca5481fb40] ref P L0: 78.4% 10.9%  7.9%  2.8%
+[libx264 @ 000001ca5481fb40] ref B L0: 92.6%  6.1%  1.3%
+[libx264 @ 000001ca5481fb40] ref B L1: 96.2%  3.8%
+[libx264 @ 000001ca5481fb40] kb/s:4941.65
+[aac @ 000001ca54830880] Qavg: 756.710
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
