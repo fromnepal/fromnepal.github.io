@@ -1,0 +1,51 @@
+Second's an Eternity
+What digging into text rendering made me appreciate
+Thorsten Ball
+Aug 17
+
+Do you know how long a second is for a computer that’s built today? How much such a computer can do in the time it takes you to say Mississippi? What a computer does while you type out Hello?
+
+If we had a magical printer that could print out every instruction a computer is executing and why it’s executing it, while it’s executing it, in real time, we’d never ever again wiggle our cursors in boredom for the shock following the realisation of how much power that cursor wields won’t let us.
+
+There are many examples to pick from — how many times is data equivalent in size to all of Shakespeare’s writing moved around in memory in the time it takes one to butcher a double-click? how many requests originating from how many people could a standard MacBook Pro handle per second without a fan turning on? — but lately I’ve been digging into text rendering and knowing that all of that happens all the time is marvelous.
+
+Naively, you’d think that displaying text is second nature to a computer by now. After a good 50 years of computers displaying text, surely that’s baked in by now, somehow, and not something a computer really has to strain for — right?
+
+But no, rendering text is all strain and it happens all the time.
+
+Rendering text requires shaping text, to figure out how to display the text you have with what’s in the font file you want to use. Finding the right glyph for each character (what’s a character by the way?), paying attention to ligatures and position-dependent variants of glyphs and marks and combinations of characters and kerning and, of course, your custom ligature and font feature preferences.
+
+Once you’ve shaped the text and know which glyphs to render you need to, guess what, actually render them and that means taking the contours contained in the font file and turning them into curves and paying attention to the nine required tables in TrueType files and knowing what compound glyphs are and then once you know what the glyph should look like, guess what again, you need actually display it.
+
+That means turning the curves into pixels, as best as you can because no one likes blurry text, and maybe doing that with the CPU or maybe doing that with the GPU but ultimately ending up with pixels on the GPU and then the GPU positions the pixels according to all the calculations you did for positioning, line-breaks, character spacing, line spacing, font weight, and every other damn thing you can apparently do with fonts.
+
+And then the GPU and the CPU and the OS and the whole family turn this into the thing that you can then look at, including all the other things that all the other applications also want to display, including your wishes for transparency and blurry backgrounds and scaled display resolutions and zoom levels.
+
+And all of this happens, at the swipe of your finger, one hundred and twenty times per second.
+
+So, look at this line, look at where the letters and the commas sit and recognize it for what it is: a miracle.
+	
+	
+Joy & Curiosity
+
+This is a new section of Register Spill that I want to experiment with, true to the original idea of this newsletter containing “what I’d send you if you were to ask me what’s on my mind this week.“ In this section I want to share things from the previous week I find interesting.
+
+    The flickerless animations of text in a terminal, shown in the first video here, made me go: whoa.
+
+    This HN comment in which someone explains that the feature keeping them in iTerm2 is “selection respects soft-boundaries”, so they can select text between two | characters, for example in weechat. Mind-blowing how niche and yet must-have features in developer tooling can be. That matches by experience now with the Zed issue tracker.
+
+    I found these thoughts by Nick Hobbs, who works at Google on AI, very interesting: “Instead of shipping something great, the team reverts to the obvious tiny step: let's throw a sparkle icon somewhere that writes you a draft!”
+
+    This article by Aaron Francis is now in my hall of fame of writing about attention management in times of social media. Notable other member: Craig Mod’s How I Got My Attention Back.
+
+    How to force the `true` command to return `false`: reminded me that “it’s extraordinarily important that we in computer science keep fun in computing.”
+
+    I tweeted about a user keeping files unsaved in Sublime Text for 9 years and someone replied to say that they had a user who kept all their email folders as subfolders of the Trash folder. There’s more horror/fun stories like that in the other replies.
+
+    Had a bit of a mind-blow moment last week with AI. I was sick, lying on the couch, watching YouTube coding videos. Watched a video on RAII and saw some C++ code I didn’t understand. Then I thought “maybe…?” and took a screenshot of the code in the video, sent it to ChatGPT, said “explain this line by line to me”, which it did, and then I said “isn’t this part weird?”, and ChatGPT said “yes there are two bugs in this program”, and the two bugs it pointed out were exactly the two bugs all YouTube commenters had pointed out.
+    	
+Register Spill is free today. But if you enjoyed this post, you can tell Register Spill that their writing is valuable by pledging a future subscription. You won't be charged unless they enable payments.
+
+© 2024 Thorsten Ball
+548 Market Street PMB 72296, San Francisco, CA 94104
+Unsubscribe
