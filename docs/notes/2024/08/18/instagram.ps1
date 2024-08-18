@@ -1,6 +1,3 @@
-There might be a more efficient way to handle this, especially if you want to process multiple URLs in a loop rather than concatenating them all into a single string. Here's an improved version of the script that processes each URL individually in a loop:
-
-```powershell
 $urls = @(
     "https://www.instagram.com/reel/C-OlF11tQ0T",
     "https://www.instagram.com/reel/C-qUuPFxDg1",
@@ -56,8 +53,11 @@ New-Item -ItemType Directory -Path $tempDir -Force
 
 foreach ($url in $urls) {
     yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url
-    $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1
-    $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1
+}
+
+$videoFiles = Get-ChildItem -Path $tempDir -Filter *.mp4
+foreach ($videoFile in $videoFiles) {
+    $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Where-Object { $_.BaseName -eq $videoFile.BaseName }
     if ($subtitleFile) {
         $subtitlePath = $subtitleFile.FullName
         ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4"
@@ -65,9 +65,6 @@ foreach ($url in $urls) {
         ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4"
     }
     Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"
-    Remove-Item -Path $tempDir -Recurse -Force
-    New-Item -ItemType Directory -Path $tempDir -Force
 }
-```
 
-This script processes each URL in a loop, which is more efficient and easier to manage. If you have any other questions or need further adjustments, feel free to ask!
+Remove-Item -Path $tempDir -Recurse -Force
