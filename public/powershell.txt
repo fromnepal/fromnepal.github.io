@@ -1,7 +1,7 @@
 PowerShell 7.4.4
 Loading personal and system profiles took 554ms.
 PS C:\Users\kushal>
-PS C:\Users\kushal> $url = "https://v.redd.it/sio0bgg766jd1"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$($subtitleFile.FullName)'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+PS C:\Users\kushal> $url = "https://v.redd.it/sio0bgg766jd1"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$($subtitleFile.FullName)'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strictexperimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
 
     Directory: C:\Temp
 
@@ -87,7 +87,7 @@ Error opening output file C:\Temp\yt-dlp\When_i_tried_to_be_an_actor_reencoded.m
 Error opening output files: Invalid argument
 Move-Item: Cannot find path 'C:\Temp\yt-dlp\When_i_tried_to_be_an_actor_reencoded.mp4' because it does not exist.
 
-PS C:\Users\kushal> $url = "https://v.redd.it/sio0bgg766jd1"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$($subtitleFile.FullName)'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+PS C:\Users\kushal> $url = "https://v.redd.it/sio0bgg766jd1"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$($subtitleFile.FullName)'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strictexperimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
 
     Directory: C:\Temp
 
@@ -603,7 +603,7 @@ Error opening output file C:\Temp\yt-dlp\When_i_tried_to_be_an_actor_reencoded.m
 Error opening output files: Invalid argument
 Move-Item: Cannot find path 'C:\Temp\yt-dlp\When_i_tried_to_be_an_actor_reencoded.mp4' because it does not exist.
 
-PS C:\Users\kushal> $url = "https://www.youtube.com/watch?v=fc6_NtD9soI"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName;ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+PS C:\Users\kushal> $url = "https://www.youtube.com/watch?v=fc6_NtD9soI"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
 
     Directory: C:\Temp
 
@@ -649,7 +649,7 @@ Deleting original file C:\Temp\yt-dlp\Modularizing_the_Monolith_-_Jimmy_Bogard_-
 Deleting original file C:\Temp\yt-dlp\Modularizing_the_Monolith_-_Jimmy_Bogard_-_NDC_Oslo_2024.f616.mp4 (pass -k to keep)
 [ModifyChapters] SponsorBlock information is unavailable
 [Metadata] Adding metadata to "C:\Temp\yt-dlp\Modularizing_the_Monolith_-_Jimmy_Bogard_-_NDC_Oslo_2024.mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Modularizing_the_Monolith_-_Jimmy_Bogard_-_NDC_Oslo_2024.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Modularizing the Monolith - Jimmy Bogard - NDC Oslo 2024" -metadata "date=20240811" -metadata "description=This talk was recorded at NDC Oslo in Oslo, Norway. #ndcoslo #ndcconferences #developer #softwaredeveloper
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Modularizing_the_Monolith_-_Jimmy_Bogard_-_NDC_Oslo_2024.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Modularizing the Monolith - Jimmy Bogard - NDC Oslo 2024" -metadata"date=20240811" -metadata "description=This talk was recorded at NDC Oslo in Oslo, Norway. #ndcoslo #ndcconferences #developer #softwaredeveloper
 
 Attend the next NDC conference near you:
 https://ndcconferences.com
@@ -668,9 +668,9 @@ https://www.instagram.com/ndc_conferences/
 
 The journey into microservices started clean - we had small, independent services that worked great on our local machine. Everything was greenfield and productivity couldn't be higher. Until the production switch flipped and nothing worked in a proper distributed environment.
 
-Something went horribly awry in our microservice megadisaster, but monoliths can ease the pain by removing the distributed nature of our system. However, we don't want to repeat our mistakes of creating a bigball of mud, or a big ball of distributed mud. Enter the modular monolith, an architecture that preserves the beneficial aspects of a single application and the advantages of isolated areas of data and behavior.
+Something went horribly awry in our microservice megadisaster, but monoliths can ease the pain by removing the distributed nature of our system. However, we don't want to repeat our mistakes of creating a big ball of mud, or a big ball of distributed mud. Enter the modular monolith, an architecture that preserves the beneficial aspects of a single application and the advantages of isolated areas of data and behavior.
 
-In this talk, we'll look at the various patterns of modularizing a monolith. We'll answer such questions as \"what even is a Module?\", how to draw module boundaries, and evolutionary design techniques to migrate an existing monolith. Finally, we'll look at techniques to extract modules into services, giving the best possible chance for a microservice architecture to thrive." -metadata "synopsis=This talk was recorded at NDC Oslo in Oslo, Norway. #ndcoslo #ndcconferences #developer #softwaredeveloper
+In this talk, we'll look at the various patterns of modularizing a monolith. We'll answer such questions as \"what even is a Module?\", how to draw module boundaries, and evolutionary design techniques to migrate an existing monolith. Finally, we'll look at techniques to extractmodules into services, giving the best possible chance for a microservice architecture to thrive." -metadata "synopsis=This talk was recorded at NDC Oslo in Oslo, Norway. #ndcoslo #ndcconferences #developer #softwaredeveloper
 
 Attend the next NDC conference near you:
 https://ndcconferences.com
@@ -689,9 +689,9 @@ https://www.instagram.com/ndc_conferences/
 
 The journey into microservices started clean - we had small, independent services that worked great on our local machine. Everything was greenfield and productivity couldn't be higher. Until the production switch flipped and nothing worked in a proper distributed environment.
 
-Something went horribly awry in our microservice megadisaster, but monoliths can ease the pain by removing the distributed nature of our system. However, we don't want to repeat our mistakes of creating a bigball of mud, or a big ball of distributed mud. Enter the modular monolith, an architecture that preserves the beneficial aspects of a single application and the advantages of isolated areas of data and behavior.
+Something went horribly awry in our microservice megadisaster, but monoliths can ease the pain by removing the distributed nature of our system. However, we don't want to repeat our mistakes of creating a big ball of mud, or a big ball of distributed mud. Enter the modular monolith, an architecture that preserves the beneficial aspects of a single application and the advantages of isolated areas of data and behavior.
 
-In this talk, we'll look at the various patterns of modularizing a monolith. We'll answer such questions as \"what even is a Module?\", how to draw module boundaries, and evolutionary design techniques to migrate an existing monolith. Finally, we'll look at techniques to extract modules into services, giving the best possible chance for a microservice architecture to thrive." -metadata "purl=https://www.youtube.com/watch?v=fc6_NtD9soI" -metadata "comment=https://www.youtube.com/watch?v=fc6_NtD9soI" -metadata "artist=NDC Conferences" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\Modularizing_the_Monolith_-_Jimmy_Bogard_-_NDC_Oslo_2024.temp.mp4
+In this talk, we'll look at the various patterns of modularizing a monolith. We'll answer such questions as \"what even is a Module?\", how to draw module boundaries, and evolutionary design techniques to migrate an existing monolith. Finally, we'll look at techniques to extractmodules into services, giving the best possible chance for a microservice architecture to thrive." -metadata "purl=https://www.youtube.com/watch?v=fc6_NtD9soI" -metadata "comment=https://www.youtube.com/watch?v=fc6_NtD9soI" -metadata "artist=NDC Conferences" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\Modularizing_the_Monolith_-_Jimmy_Bogard_-_NDC_Oslo_2024.temp.mp4
 ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
   built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
   configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
@@ -862,7 +862,7 @@ frame=85078 fps=353 q=-1.0 Lsize=  242909KiB time=00:56:43.04 bitrate= 584.7kbit
 [libx264 @ 0000029177817b80] kb/s:450.51
 [aac @ 00000291777fc780] Qavg: 597.229
 
-PS C:\Users\kushal> $url = "https://v.redd.it/sio0bgg766jd1"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+PS C:\Users\kushal> $url = "https://v.redd.it/sio0bgg766jd1"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded";Remove-Item -Path $tempDir -Recurse -Force
 
     Directory: C:\Temp
 
@@ -949,7 +949,7 @@ Error opening output files: Invalid argument
 Move-Item: Cannot find path 'C:\Temp\yt-dlp\When_i_tried_to_be_an_actor_reencoded.mp4' because it does not exist.
 
 PS C:\Users\kushal>
-PS C:\Users\kushal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn;date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+PS C:\Users\kushal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
 Saturday, August 17, 2024 8:10:07 AM
 Saturday, August 17, 2024 8:10:07 AM
@@ -1356,10 +1356,10 @@ Deleting original file Worker_at_a_disposable_vape_factory_tests_up_to_10_000_va
 Deleting original file Worker_at_a_disposable_vape_factory_tests_up_to_10_000_vapes_a_day-[r8afwx4r29jd1].fhls-1943.mp4 (pass -k to keep)
 [ModifyChapters] SponsorBlock information is unavailable
 [Metadata] Adding metadata to "Worker_at_a_disposable_vape_factory_tests_up_to_10_000_vapes_a_day-[r8afwx4r29jd1].mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Worker_at_a_disposable_vape_factory_tests_up_to_10_000_vapes_a_day-[r8afwx4r29jd1].mp4" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Worker at a disposable vape factory tests up to 10,000 vapes a day" -metadata "date=20240817" -metadata "purl=https://www.reddit.com/r/Damnthatsinteresting/comments/1eulmld/worker_at_a_disposable_vape_factory_tests_up_to/?rdt=37640" -metadata "comment=https://www.reddit.com/r/Damnthatsinteresting/comments/1eulmld/worker_at_a_disposable_vape_factory_tests_up_to/?rdt=37640" -metadata "artist=HORROR_VIBE_OFFICIAL" -metadata:s:1 "language=eng" -movflags +faststart "file:Worker_at_a_disposable_vape_factory_tests_up_to_10_000_vapes_a_day-[r8afwx4r29jd1].temp.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Worker_at_a_disposable_vape_factory_tests_up_to_10_000_vapes_a_day-[r8afwx4r29jd1].mp4" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Worker at a disposable vape factory tests up to 10,000vapes a day" -metadata "date=20240817" -metadata "purl=https://www.reddit.com/r/Damnthatsinteresting/comments/1eulmld/worker_at_a_disposable_vape_factory_tests_up_to/?rdt=37640" -metadata "comment=https://www.reddit.com/r/Damnthatsinteresting/comments/1eulmld/worker_at_a_disposable_vape_factory_tests_up_to/?rdt=37640" -metadata "artist=HORROR_VIBE_OFFICIAL" -metadata:s:1 "language=eng" -movflags +faststart "file:Worker_at_a_disposable_vape_factory_tests_up_to_10_000_vapes_a_day-[r8afwx4r29jd1].temp.mp4"
 Saturday, August 17, 2024 3:08:25 PM
 
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebaseorigin main; date; git push origin main; date;
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
 
 Saturday, August 17, 2024 4:22:55 PM
 Saturday, August 17, 2024 4:22:55 PM
@@ -1406,7 +1406,7 @@ To github.com:fromnepal/fromnepal.github.io.git
    287bfdc..8cf8b64  main -> main
 Saturday, August 17, 2024 4:23:04 PM
 
-PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.youtube.com/shorts/QqXay_-zx7Y"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.youtube.com/shorts/QqXay_-zx7Y"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
 
     Directory: C:\Temp
 
@@ -1541,7 +1541,7 @@ frame= 1794 fps=114 q=-1.0 Lsize=   25929KiB time=00:00:59.73 bitrate=3555.9kbit
 [libx264 @ 0000019265594400] kb/s:3413.79
 [aac @ 00000192653e2200] Qavg: 532.276
 
-PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/Y8rRRxiCh7E"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile =Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/Y8rRRxiCh7E"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
 
     Directory: C:\Temp
 
@@ -1672,7 +1672,7 @@ frame=  359 fps=0.0 q=-1.0 Lsize=    2223KiB time=00:00:11.90 bitrate=1530.2kbit
 [libx264 @ 00000280b8213600] kb/s:1382.95
 [aac @ 00000280b8277340] Qavg: 5453.887
 
-PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/6PVVo6fkVeg"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile =Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/6PVVo6fkVeg"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
 
     Directory: C:\Temp
 
@@ -1715,7 +1715,7 @@ d----           8/17/2024  4:46 PM                yt-dlp
 [download] Destination: C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.f140.m4a
 [download] 100% of  944.78KiB in 00:00:00 at 13.25MiB/s
 [Merger] Merging formats into "C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.f617.mp4 -i file:C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.f140.m4a-c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.temp.mp4
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.f617.mp4 -i file:C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.temp.mp4
 Deleting original file C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.f140.m4a (pass -k to keep)
 Deleting original file C:\Temp\yt-dlp\World_s_Rarest_Dryer_oddlysatisfying_rare.f617.mp4 (pass -k to keep)
 [ModifyChapters] SponsorBlock information is unavailable
@@ -1803,7 +1803,7 @@ frame= 3580 fps=121 q=-1.0 Lsize=   38413KiB time=00:00:59.63 bitrate=5276.9kbit
 [libx264 @ 000001a9cec9c080] kb/s:5128.80
 [aac @ 000001a9cf2502c0] Qavg: 719.356
 
-PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/ZwEQTJt1r1M"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile =Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/ZwEQTJt1r1M"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
 
     Directory: C:\Temp
 
@@ -1844,7 +1844,7 @@ d----           8/17/2024  4:48 PM                yt-dlp
 [download] Destination: C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.f140.m4a
 [download] 100% of  671.66KiB in 00:00:00 at 8.00MiB/s
 [Merger] Merging formats into "C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.f616.mp4 -i file:C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.temp.mp4
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.f616.mp4 -i file:C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststartfile:C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.temp.mp4
 Deleting original file C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.f616.mp4 (pass -k to keep)
 Deleting original file C:\Temp\yt-dlp\KAREN_cops_cant_hold_it_funny_police_lawenforcement.f140.m4a (pass -k to keep)
 [ModifyChapters] SponsorBlock information is unavailable
@@ -1942,7 +1942,7 @@ frame= 1271 fps=207 q=-1.0 Lsize=   17544KiB time=00:00:42.30 bitrate=3397.6kbit
 [libx264 @ 000001dbb3993c00] kb/s:3253.22
 [aac @ 000001dbb3fce7c0] Qavg: 725.608
 
-PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/cz7QxQsksg8"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile =Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/cz7QxQsksg8"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
 
     Directory: C:\Temp
 
@@ -2100,7 +2100,7 @@ frame= 1801 fps=342 q=-1.0 Lsize=    9264KiB time=00:00:59.96 bitrate=1265.5kbit
 [libx264 @ 000001ad4f8cb300] kb/s:1125.93
 [aac @ 000001ad4f6fe0c0] Qavg: 805.614
 
-PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/gcHTNjVr6e0"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile =Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/gcHTNjVr6e0"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
 
     Directory: C:\Temp
 
@@ -2163,7 +2163,7 @@ Keeping Them Liable (AL) - https://www.youtube.com/watch?v=AHhqyZ7NqDs
 
 Fair Use Notice This video may contain copyrighted material, the use of which has not been specifically authorized by the copyright owner. We are making such material available for the purposes of criticism, comment, review, and news reporting, which constitute the fair use of any such copyrighted material as provided for in Section 107 of the US Copyright Law. Notwithstanding the provisions of Sections 106 and 106A, the fair use of a copyrighted work for purposes such as criticism, comment, review, and news reporting is not an infringement of copyright.
 
-#police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmentaudit #Trespassing #4thamendment  #5thamendment #walkofshame  #1aAudits #Tyrants #Tyranny #copwatcher  #CopsGetOwned  #CopsGettingOwned  #lawenforcement" -metadata"synopsis=#shorts
+#police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmentaudit #Trespassing #4thamendment  #5thamendment #walkofshame  #1aAudits #Tyrants #Tyranny #copwatcher  #CopsGetOwned  #CopsGettingOwned  #lawenforcement" -metadata "synopsis=#shorts
 You Can't Film Civilians! Dumb Cops Owned Do Walk Of Shame! ID Refusal Intimidation Tactics Fail
 
 Welcome to the channel!
@@ -2178,7 +2178,7 @@ Keeping Them Liable (AL) - https://www.youtube.com/watch?v=AHhqyZ7NqDs
 
 Fair Use Notice This video may contain copyrighted material, the use of which has not been specifically authorized by the copyright owner. We are making such material available for the purposes of criticism, comment, review, and news reporting, which constitute the fair use of any such copyrighted material as provided for in Section 107 of the US Copyright Law. Notwithstanding the provisions of Sections 106 and 106A, the fair use of a copyrighted work for purposes such as criticism, comment, review, and news reporting is not an infringement of copyright.
 
-#police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmentaudit #Trespassing #4thamendment  #5thamendment #walkofshame  #1aAudits #Tyrants #Tyranny #copwatcher  #CopsGetOwned  #CopsGettingOwned  #lawenforcement" -metadata"purl=https://www.youtube.com/watch?v=gcHTNjVr6e0" -metadata "comment=https://www.youtube.com/watch?v=gcHTNjVr6e0" -metadata "artist=People's Court Audit" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\Dumb_Cops_Owned_Do_Walk_Of_Shame_ID_Refusal_Intimidation_Tactics_Fail_1st_Amendment_Audit_shorts.temp.mp4
+#police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmentaudit #Trespassing #4thamendment  #5thamendment #walkofshame  #1aAudits #Tyrants #Tyranny #copwatcher  #CopsGetOwned  #CopsGettingOwned  #lawenforcement" -metadata "purl=https://www.youtube.com/watch?v=gcHTNjVr6e0" -metadata "comment=https://www.youtube.com/watch?v=gcHTNjVr6e0" -metadata "artist=People'sCourt Audit" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\Dumb_Cops_Owned_Do_Walk_Of_Shame_ID_Refusal_Intimidation_Tactics_Fail_1st_Amendment_Audit_shorts.temp.mp4
 ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
   built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
   configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
@@ -2326,7 +2326,7 @@ frame= 1773 fps= 60 q=-1.0 Lsize=   54373KiB time=00:00:59.03 bitrate=7545.3kbit
 [aac @ 0000019e2604f840] Qavg: 617.974
 
 PS C:\Users\kushal\src\myhtml\fromnepal>
-PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/zbiLrshOHyc"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile =Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/zbiLrshOHyc"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
 
     Directory: C:\Temp
 
@@ -2374,7 +2374,7 @@ Deleting original file C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_
 Deleting original file C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal.f140.m4a (pass -k to keep)
 [ModifyChapters] SponsorBlock information is unavailable
 [Metadata] Adding metadata to "C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal.mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal.mp4 -map 0 -dn -ignore_unknown-c copy -write_id3v1 1 -metadata "title=Police Corruption! Arrested For Walking On The Street By Dirty Cops! Unlawful Orders & ID Refusal" -metadata "date=20240419" -metadata "description=#shorts
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Police Corruption! Arrested For Walking On The Street By Dirty Cops! Unlawful Orders & ID Refusal" -metadata "date=20240419" -metadata "description=#shorts
 Police Corruption! Arrested For Walking On The Street By Dirty Cops! Unlawful Orders & ID Refusal
 
 Welcome to the channel!
@@ -2390,7 +2390,7 @@ https://www.youtube.com/watch?v=z8jTVYuRISU&t=6s&ab_channel=Newsnow303
 
 Fair Use Notice This video may contain copyrighted material, the use of which has not been specifically authorized by the copyright owner. We are making such material available for the purposes of criticism, comment, review, and news reporting, which constitute the fair use of any such copyrighted material as provided for in Section 107 of the US Copyright Law. Notwithstanding the provisions of Sections 106 and 106A, the fair use of a copyrighted work for purposes such as criticism, comment, review, and news reporting is not an infringement of copyright.
 
-#police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmentaudit #Trespassing #4thamendment  #5thamendment #walkofshame  #1aAudits #Tyrants #Tyranny #copwatcher  #CopsGetOwned  #CopsGettingOwned  #lawenforcement" -metadata"synopsis=#shorts
+#police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmentaudit #Trespassing #4thamendment  #5thamendment #walkofshame  #1aAudits #Tyrants #Tyranny #copwatcher  #CopsGetOwned  #CopsGettingOwned  #lawenforcement" -metadata "synopsis=#shorts
 Police Corruption! Arrested For Walking On The Street By Dirty Cops! Unlawful Orders & ID Refusal
 
 Welcome to the channel!
@@ -2406,7 +2406,7 @@ https://www.youtube.com/watch?v=z8jTVYuRISU&t=6s&ab_channel=Newsnow303
 
 Fair Use Notice This video may contain copyrighted material, the use of which has not been specifically authorized by the copyright owner. We are making such material available for the purposes of criticism, comment, review, and news reporting, which constitute the fair use of any such copyrighted material as provided for in Section 107 of the US Copyright Law. Notwithstanding the provisions of Sections 106 and 106A, the fair use of a copyrighted work for purposes such as criticism, comment, review, and news reporting is not an infringement of copyright.
 
-#police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmentaudit #Trespassing #4thamendment  #5thamendment #walkofshame  #1aAudits #Tyrants #Tyranny #copwatcher  #CopsGetOwned  #CopsGettingOwned  #lawenforcement" -metadata"purl=https://www.youtube.com/watch?v=zbiLrshOHyc" -metadata "comment=https://www.youtube.com/watch?v=zbiLrshOHyc" -metadata "artist=People's Court Audit" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal.temp.mp4
+#police  #cops  #LEO  #idrefusal  #copgetsowned  #firstamendmentaudits  #copdismissed  #rookiecop #policeharassment  #dismissed #4thAmendment #copwatch   #Trespassing #Dismissed #copdismissed  #rookiecops  #1aAudit #Cop #Police #copsowned   #1stamendmentaudit #Trespassing #4thamendment  #5thamendment #walkofshame  #1aAudits #Tyrants #Tyranny #copwatcher  #CopsGetOwned  #CopsGettingOwned  #lawenforcement" -metadata "purl=https://www.youtube.com/watch?v=zbiLrshOHyc" -metadata "comment=https://www.youtube.com/watch?v=zbiLrshOHyc" -metadata "artist=People'sCourt Audit" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\Police_Corruption_Arrested_For_Walking_On_The_Street_By_Dirty_Cops_Unlawful_Orders_ID_Refusal.temp.mp4
 ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
   built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
   configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
@@ -2689,5 +2689,1242 @@ Sunday, August 18, 2024 10:06:30 AM
 Scoop is up to date.
 Everything is ok!
 Sunday, August 18, 2024 10:06:31 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Sunday, August 18, 2024 10:08:11 AM
+Sunday, August 18, 2024 10:08:11 AM
+On branch main
+nothing to commit, working tree clean
+Sunday, August 18, 2024 10:08:11 AM
+Sunday, August 18, 2024 10:08:11 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.10s.
+Sunday, August 18, 2024 10:08:11 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.1 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 199ms
+Done in 1.14s.
+Sunday, August 18, 2024 10:08:13 AM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Sunday, August 18, 2024 10:08:13 AM
+[main 2b0380f] build application
+ 2 files changed, 268 insertions(+), 2 deletions(-)
+Sunday, August 18, 2024 10:08:13 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Sunday, August 18, 2024 10:08:14 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.58 KiB | 808.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   2513661..2b0380f  main -> main
+Sunday, August 18, 2024 10:08:15 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C9nEiR6uMp_"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/18/2024 10:14 AM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C9nEiR6uMp_']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C9nEiR6uMp_
+[Instagram] C9nEiR6uMp_: Setting up session
+[Instagram] C9nEiR6uMp_: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C9nEiR6uMp_: Downloading 1 format(s): dash-1914196625712691v+dash-798082128975648ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/v/t39.25447-16/451987060_1006183804078370_2407396792460760834_n.mp4?_nc_cat=107&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=YQu7av3_k3wQ7kNvgHOCh-S&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=00_AYA0rXjUfLnWpY6_9SjsVV914mpQq_hnkEcmOWXxlJLn0Q&oe=66C7CD9C"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_bobbyparrish.fdash-1914196625712691v.mp4
+[download] 100% of   10.05MiB in 00:00:00 at 20.83MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/v/t50.33967-16/448483166_460512320273403_898488713142741481_n.mp4?_nc_cat=110&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=Ua6qwoqlPt4Q7kNvgFhUBTa&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=00_AYCXqEwIudUHVvaYblTkB5KUo7d729A1zLw9tRzC4a0NAQ&oe=66C7CE3C"
+[download] Destination: C:\Temp\yt-dlp\Video_by_bobbyparrish.fdash-798082128975648ad.m4a
+[download] 100% of  256.27KiB in 00:00:00 at 3.23MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_bobbyparrish.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_bobbyparrish.fdash-1914196625712691v.mp4 -i file:C:\Temp\yt-dlp\Video_by_bobbyparrish.fdash-798082128975648ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_bobbyparrish.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_bobbyparrish.fdash-798082128975648ad.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_bobbyparrish.fdash-1914196625712691v.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_bobbyparrish.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_bobbyparrish.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by bobbyparrish" -metadata "date=20240719" -metadata "description=Stop washing chicken! 💦🍗 If you really want to eliminate harmful bacteria, cook your chicken to 165F!" -metadata "synopsis=Stop washing chicken! 💦🍗 If you really want to eliminate harmful bacteria, cook your chicken to 165F!" -metadata "purl=https://www.instagram.com/reel/C9nEiR6uMp_" -metadata "comment=https://www.instagram.com/reel/C9nEiR6uMp_" -metadata "artist=Bobby Parrish aka FlavCity" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_bobbyparrish.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_bobbyparrish.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by bobbyparrish
+    artist          : Bobby Parrish aka FlavCity
+    date            : 20240719
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C9nEiR6uMp_
+    description     : Stop washing chicken! 💦🍗 If you really want to eliminate harmful bacteria, cook your chicken to 165F!
+    synopsis        : Stop washing chicken! 💦🍗 If you really want to eliminate harmful bacteria, cook your chicken to 165F!
+  Duration: 00:00:38.90, start: 0.000000, bitrate: 2222 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 2164 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 52 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000001c347864640] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001c347864640] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 000001c347864640] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_bobbyparrish_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by bobbyparrish
+    artist          : Bobby Parrish aka FlavCity
+    date            : 20240719
+    synopsis        : Stop washing chicken! 💦🍗 If you really want to eliminate harmful bacteria, cook your chicken to 165F!
+    comment         : https://www.instagram.com/reel/C9nEiR6uMp_
+    description     : Stop washing chicken! 💦🍗 If you really want to eliminate harmful bacteria, cook your chicken to 165F!
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 000001c3472ad300] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001c34735eec0] video:14152KiB audio:607KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.291156%
+frame= 1167 fps=160 q=-1.0 Lsize=   14802KiB time=00:00:38.83 bitrate=3122.4kbits/s speed=5.32x
+[libx264 @ 000001c347864640] frame I:5     Avg QP:18.87  size:156584
+[libx264 @ 000001c347864640] frame P:306   Avg QP:21.91  size: 29707
+[libx264 @ 000001c347864640] frame B:856   Avg QP:26.69  size:  5394
+[libx264 @ 000001c347864640] consecutive B-frames:  1.5%  1.2%  3.1% 94.3%
+[libx264 @ 000001c347864640] mb I  I16..4: 10.3% 58.8% 30.9%
+[libx264 @ 000001c347864640] mb P  I16..4:  4.0% 11.7%  1.7%  P16..4: 30.3%  8.7%  4.4%  0.0%  0.0%    skip:39.3%
+[libx264 @ 000001c347864640] mb B  I16..4:  0.4%  1.0%  0.1%  B16..8: 24.5%  2.0%  0.3%  direct: 0.7%  skip:71.1%  L0:44.4% L1:52.2% BI: 3.4%
+[libx264 @ 000001c347864640] 8x8 transform intra:67.4% inter:79.2%
+[libx264 @ 000001c347864640] coded y,uvDC,uvAC intra: 39.4% 44.0% 10.7% inter: 6.7% 6.1% 0.1%
+[libx264 @ 000001c347864640] i16 v,h,dc,p: 26% 29% 11% 33%
+[libx264 @ 000001c347864640] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 22% 19% 23%  5%  7%  5% 10%  4%  4%
+[libx264 @ 000001c347864640] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26% 21% 12%  5%  7%  5% 17%  4%  3%
+[libx264 @ 000001c347864640] i8c dc,h,v,p: 54% 21% 19%  5%
+[libx264 @ 000001c347864640] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 000001c347864640] ref P L0: 62.2% 19.6% 13.2%  5.0%
+[libx264 @ 000001c347864640] ref B L0: 91.0%  7.3%  1.7%
+[libx264 @ 000001c347864640] ref B L1: 96.7%  3.3%
+[libx264 @ 000001c347864640] kb/s:2980.12
+[aac @ 000001c34783ef80] Qavg: 631.109
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C9uXZU-BYqw"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/18/2024 10:15 AM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C9uXZU-BYqw']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C9uXZU-BYqw
+[Instagram] C9uXZU-BYqw: Setting up session
+[Instagram] C9uXZU-BYqw: Downloading JSON metadata
+WARNING: [Instagram] unable to extract username; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+ERROR: [Instagram] C9uXZU-BYqw: Unable to extract video url; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+  File "yt_dlp\extractor\common.py", line 740, in extract
+  File "yt_dlp\extractor\instagram.py", line 490, in _real_extract
+  File "yt_dlp\extractor\common.py", line 1479, in _og_search_video_url
+  File "yt_dlp\extractor\common.py", line 1369, in _html_search_regex
+  File "yt_dlp\extractor\common.py", line 1333, in _search_regex
+
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+[in#0 @ 000002c05cd8a000] Error opening input: Invalid argument
+Error opening input file .
+Error opening input files: Invalid argument
+Move-Item: Cannot find path 'C:\Temp\yt-dlp\_reencoded.mp4' because it does not exist.
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C9uXZU-BYqw"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/18/2024 10:15 AM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C9uXZU-BYqw']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C9uXZU-BYqw
+[Instagram] C9uXZU-BYqw: Setting up session
+[Instagram] C9uXZU-BYqw: Downloading JSON metadata
+WARNING: [Instagram] unable to extract username; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+ERROR: [Instagram] C9uXZU-BYqw: Unable to extract video url; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+  File "yt_dlp\extractor\common.py", line 740, in extract
+  File "yt_dlp\extractor\instagram.py", line 490, in _real_extract
+  File "yt_dlp\extractor\common.py", line 1479, in _og_search_video_url
+  File "yt_dlp\extractor\common.py", line 1369, in _html_search_regex
+  File "yt_dlp\extractor\common.py", line 1333, in _search_regex
+
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+[in#0 @ 0000019545f1a000] Error opening input: Invalid argument
+Error opening input file .
+Error opening input files: Invalid argument
+Move-Item: Cannot find path 'C:\Temp\yt-dlp\_reencoded.mp4' because it does not exist.
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C9uXZU-BYqw"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/18/2024 10:16 AM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C9uXZU-BYqw']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C9uXZU-BYqw
+[Instagram] C9uXZU-BYqw: Setting up session
+[Instagram] C9uXZU-BYqw: Downloading JSON metadata
+WARNING: [Instagram] unable to extract username; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+ERROR: [Instagram] C9uXZU-BYqw: Unable to extract video url; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+  File "yt_dlp\extractor\common.py", line 740, in extract
+  File "yt_dlp\extractor\instagram.py", line 490, in _real_extract
+  File "yt_dlp\extractor\common.py", line 1479, in _og_search_video_url
+  File "yt_dlp\extractor\common.py", line 1369, in _html_search_regex
+  File "yt_dlp\extractor\common.py", line 1333, in _search_regex
+
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+[in#0 @ 000002647419a000] Error opening input: Invalid argument
+Error opening input file .
+Error opening input files: Invalid argument
+Move-Item: Cannot find path 'C:\Temp\yt-dlp\_reencoded.mp4' because it does not exist.
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C6ZIr8ENLKn"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/18/2024 10:16 AM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C6ZIr8ENLKn']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C6ZIr8ENLKn
+[Instagram] C6ZIr8ENLKn: Setting up session
+[Instagram] C6ZIr8ENLKn: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C6ZIr8ENLKn: Downloading 1 format(s): dash-803881561204564vd+dash-749103940546670ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://instagram.fagc3-1.fna.fbcdn.net/o1/v/t16/f1/m82/394328E036CE280BF90D271DEE041EA3_video_dashinit.mp4?efg=eyJ2aWRlb19pZCI6bnVsbCwidmVuY29kZV90YWciOiJpZy14cHZkcy5jbGlwcy5jMi1DMy5kYXNoX2Jhc2VsaW5lXzFfdjEifQ&_nc_ht=instagram.fagc3-1.fna.fbcdn.net&_nc_cat=107&ccb=9-4&oh=00_AYC4qBUveiWoZpdc72kgpAmyb-mfz9fmPVW6NW6qCwzfbQ&oe=66C3CD63&_nc_sid=9ca052"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_howhistorylooks.fdash-803881561204564vd.mp4
+[download] 100% of    1.79MiB in 00:00:00 at 7.36MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/v/t50.33967-16/440658340_1178824853298743_1178534720919650033_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfYmFzZWxpbmVfYXVkaW9fdjEiLCJ2aWRlb19pZCI6bnVsbH0%3D&_nc_ohc=T3KB_SUPoRAQ7kNvgFf_3Z9&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=00_AYCNlWK-vQfonCEvcBp6AHYmfwbLgLieHfAs5Fo7xzI5sA&oe=66C7D6EF"
+[download] Destination: C:\Temp\yt-dlp\Video_by_howhistorylooks.fdash-749103940546670ad.m4a
+[download] 100% of  237.51KiB in 00:00:00 at 1.51MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_howhistorylooks.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_howhistorylooks.fdash-803881561204564vd.mp4 -i file:C:\Temp\yt-dlp\Video_by_howhistorylooks.fdash-749103940546670ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_howhistorylooks.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_howhistorylooks.fdash-803881561204564vd.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_howhistorylooks.fdash-749103940546670ad.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_howhistorylooks.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_howhistorylooks.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by howhistorylooks" -metadata "date=20240430" -metadata "description=Frankie Lymon performance before the audience realised he was black in #1960
+
+#blackhistory #liveperformance #blm #blacklove #historyfacts #didyouknow" -metadata "synopsis=Frankie Lymon performance before the audience realised he was black in #1960
+
+#blackhistory #liveperformance #blm #blacklove #historyfacts #didyouknow" -metadata "purl=https://www.instagram.com/reel/C6ZIr8ENLKn" -metadata "comment=https://www.instagram.com/reel/C6ZIr8ENLKn" -metadata "artist=How History Looks" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_howhistorylooks.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_howhistorylooks.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Video by howhistorylooks
+    artist          : How History Looks
+    date            : 20240430
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C6ZIr8ENLKn
+    description     : Frankie Lymon performance before the audience realised he was black in #1960
+                    :
+                    : #blackhistory #liveperformance #blm #blacklove #historyfacts #didyouknow
+    synopsis        : Frankie Lymon performance before the audience realised he was black in #1960
+                    :
+                    : #blackhistory #liveperformance #blm #blacklove #historyfacts #didyouknow
+  Duration: 00:00:37.87, start: 0.000000, bitrate: 450 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 720x1280, 393 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : AVC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 49 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 00000207870c4680] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 00000207870c4680] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 00000207870c4680] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_howhistorylooks_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Video by howhistorylooks
+    artist          : How History Looks
+    date            : 20240430
+    synopsis        : Frankie Lymon performance before the audience realised he was black in #1960
+                    :
+                    : #blackhistory #liveperformance #blm #blacklove #historyfacts #didyouknow
+    comment         : https://www.instagram.com/reel/C6ZIr8ENLKn
+    description     : Frankie Lymon performance before the audience realised he was black in #1960
+                    :
+                    : #blackhistory #liveperformance #blm #blacklove #historyfacts #didyouknow
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 720x1280, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 000002078707d600] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000020787098a80] video:2129KiB audio:598KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 1.541981%
+frame= 1136 fps=556 q=-1.0 Lsize=    2770KiB time=00:00:37.80 bitrate= 600.3kbits/s speed=18.5x
+[libx264 @ 00000207870c4680] frame I:5     Avg QP:17.00  size: 31115
+[libx264 @ 00000207870c4680] frame P:404   Avg QP:20.62  size:  3874
+[libx264 @ 00000207870c4680] frame B:727   Avg QP:20.65  size:   631
+[libx264 @ 00000207870c4680] consecutive B-frames:  0.8% 41.4%  0.8% 57.0%
+[libx264 @ 00000207870c4680] mb I  I16..4: 32.8% 49.4% 17.9%
+[libx264 @ 00000207870c4680] mb P  I16..4:  3.5%  6.0%  0.4%  P16..4: 14.1%  3.7%  0.9%  0.0%  0.0%    skip:71.3%
+[libx264 @ 00000207870c4680] mb B  I16..4:  0.2%  0.2%  0.0%  B16..8:  9.0%  0.4%  0.0%  direct: 0.2%  skip:90.0%  L0:45.4% L1:52.9% BI: 1.6%
+[libx264 @ 00000207870c4680] 8x8 transform intra:59.5% inter:94.5%
+[libx264 @ 00000207870c4680] coded y,uvDC,uvAC intra: 34.0% 1.8% 0.1% inter: 1.8% 0.3% 0.0%
+[libx264 @ 00000207870c4680] i16 v,h,dc,p: 42% 25%  4% 30%
+[libx264 @ 00000207870c4680] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 28% 21% 17%  5%  6%  7%  6%  7%  4%
+[libx264 @ 00000207870c4680] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 42% 25% 13%  3%  4%  4%  3%  3%  2%
+[libx264 @ 00000207870c4680] i8c dc,h,v,p: 93%  2%  5%  0%
+[libx264 @ 00000207870c4680] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 00000207870c4680] ref P L0: 70.7%  9.4% 15.0%  4.9%
+[libx264 @ 00000207870c4680] ref B L0: 88.3% 10.0%  1.7%
+[libx264 @ 00000207870c4680] ref B L1: 99.3%  0.7%
+[libx264 @ 00000207870c4680] kb/s:460.50
+[aac @ 000002078774cfc0] Qavg: 1280.477
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C8pBGwGse0Q"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/18/2024 10:17 AM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C8pBGwGse0Q']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C8pBGwGse0Q
+[Instagram] C8pBGwGse0Q: Setting up session
+[Instagram] C8pBGwGse0Q: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C8pBGwGse0Q: Downloading 1 format(s): dash-8048904441816073v+dash-994688118984984ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/v/t39.25447-16/449035365_1024823422343123_884900565463898224_n.mp4?_nc_cat=110&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=FkCyBc5Y4UgQ7kNvgFN_KY5&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=00_AYB5wJ2wPKoWtTPxg7p68Cs3U1zdoghKTVGpv_DKjgL1jA&oe=66C7BF66"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_britlife_.fdash-8048904441816073v.mp4
+[download] 100% of    5.79MiB in 00:00:00 at 18.30MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t50.33967-16/448669957_3783602148589603_275676292587385713_n.mp4?_nc_cat=103&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=Rh3Icqsgn-YQ7kNvgHlMSTU&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYCcBMmT04kmHgMJhaYoMVG6zhoaqzHWcpnb-ycLVHBf3w&oe=66C7D7D9"
+[download] Destination: C:\Temp\yt-dlp\Video_by_britlife_.fdash-994688118984984ad.m4a
+[download] 100% of  346.66KiB in 00:00:00 at 1.67MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_britlife_.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_britlife_.fdash-8048904441816073v.mp4 -i file:C:\Temp\yt-dlp\Video_by_britlife_.fdash-994688118984984ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_britlife_.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_britlife_.fdash-994688118984984ad.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_britlife_.fdash-8048904441816073v.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_britlife_.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_britlife_.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by britlife_" -metadata "date=20240625" -metadata "description=Welcome to the USA 😂🇺🇸
+
+📸 @lewis.mills" -metadata "synopsis=Welcome to the USA 😂🇺🇸
+
+📸 @lewis.mills" -metadata "purl=https://www.instagram.com/reel/C8pBGwGse0Q" -metadata "comment=https://www.instagram.com/reel/C8pBGwGse0Q" -metadata "artist=Brit Life" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_britlife_.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_britlife_.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by britlife_
+    artist          : Brit Life
+    date            : 20240625
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C8pBGwGse0Q
+    description     : Welcome to the USA 😂🇺🇸
+                    :
+                    : 📸 @lewis.mills
+    synopsis        : Welcome to the USA 😂🇺🇸
+                    :
+                    : 📸 @lewis.mills
+  Duration: 00:01:00.53, start: 0.000000, bitrate: 851 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 720x1280, 801 kb/s, 29.90 fps, 29.90 tbr, 29901 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 45 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000016498355c40] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000016498355c40] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 0000016498355c40] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_britlife__reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by britlife_
+    artist          : Brit Life
+    date            : 20240625
+    synopsis        : Welcome to the USA 😂🇺🇸
+                    :
+                    : 📸 @lewis.mills
+    comment         : https://www.instagram.com/reel/C8pBGwGse0Q
+    description     : Welcome to the USA 😂🇺🇸
+                    :
+                    : 📸 @lewis.mills
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 720x1280, q=2-31, 29.90 fps, 29901 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 0000016498385a80] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000016498385980] video:8354KiB audio:948KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.704506%
+frame= 1810 fps=391 q=-1.0 Lsize=    9367KiB time=00:01:00.46 bitrate=1269.1kbits/s speed=  13x
+[libx264 @ 0000016498355c40] frame I:8     Avg QP:18.48  size: 61799
+[libx264 @ 0000016498355c40] frame P:507   Avg QP:21.07  size:  8795
+[libx264 @ 0000016498355c40] frame B:1295  Avg QP:27.28  size:  2780
+[libx264 @ 0000016498355c40] consecutive B-frames:  2.6%  3.8%  6.8% 86.9%
+[libx264 @ 0000016498355c40] mb I  I16..4: 20.4% 55.6% 24.0%
+[libx264 @ 0000016498355c40] mb P  I16..4:  5.3% 14.8%  0.8%  P16..4: 18.8%  4.9%  1.3%  0.0%  0.0%    skip:54.1%
+[libx264 @ 0000016498355c40] mb B  I16..4:  0.7%  1.3%  0.0%  B16..8: 19.8%  2.2%  0.3%  direct: 1.3%  skip:74.4%  L0:48.2% L1:48.0% BI: 3.8%
+[libx264 @ 0000016498355c40] 8x8 transform intra:68.7% inter:89.4%
+[libx264 @ 0000016498355c40] coded y,uvDC,uvAC intra: 39.6% 52.5% 9.0% inter: 5.5% 7.8% 0.1%
+[libx264 @ 0000016498355c40] i16 v,h,dc,p: 23% 30%  6% 42%
+[libx264 @ 0000016498355c40] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 20% 20%  5%  6%  7%  7%  6%  6%
+[libx264 @ 0000016498355c40] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 29% 24% 13%  4%  8%  7%  6%  4%  4%
+[libx264 @ 0000016498355c40] i8c dc,h,v,p: 49% 23% 20%  8%
+[libx264 @ 0000016498355c40] Weighted P-Frames: Y:0.2% UV:0.0%
+[libx264 @ 0000016498355c40] ref P L0: 64.7% 16.5% 13.3%  5.5%  0.0%
+[libx264 @ 0000016498355c40] ref B L0: 91.2%  7.1%  1.7%
+[libx264 @ 0000016498355c40] ref B L1: 97.1%  2.9%
+[libx264 @ 0000016498355c40] kb/s:1130.46
+[aac @ 00000164983f18c0] Qavg: 752.459
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C8YaPk5vQMo"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/18/2024 10:17 AM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C8YaPk5vQMo']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C8YaPk5vQMo
+[Instagram] C8YaPk5vQMo: Setting up session
+[Instagram] C8YaPk5vQMo: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C8YaPk5vQMo: Downloading 1 format(s): dash-1510302979914970v+dash-1927276614373600ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://instagram.fagc3-1.fna.fbcdn.net/o1/v/t16/f2/m69/An8l263DF4v1AoDkUTipoh3rPsZ9StUGUFBXTrxuEgWXgAaX6YEJJutDSMq20V4SNd9KcNIVrhvm97wFahkajfgu.mp4?efg=eyJvaWxfdXJsZ2VuX2FwcF9pZCI6OTM2NjE5NzQzMzkyNDU5LCJjbGllbnRfbmFtZSI6ImlnIiwidmlkZW9faWQiOm51bGwsInZlbmNvZGVfdGFnIjoiaWcteHB2ZHMuY2xpcHMuYzItQzMuZGFzaF9yMmV2ZXZwOS1yMWdlbjJ2cDlfcTkwIn0&_nc_ht=instagram.fagc3-1.fna.fbcdn.net&_nc_cat=110&strext=1&ccb=9-4&oh=00_AYB4W1rdMaJgf78Sq_so1ONUBFkAOZ_FC0wvKOSFMHqVAQ&oe=66C3F1AF&_nc_sid=9ca052"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_daleroxxu.fdash-1510302979914970v.mp4
+[download] 100% of   41.39MiB in 00:00:01 at 28.40MiB/s
+[debug] Invoking http downloader on "https://instagram.fagc3-1.fna.fbcdn.net/o1/v/t16/f2/m69/An8andCZBVSu25nDEdXvMHoSd413jR2wnii5WZoMIoQnbS-w_maSkK_KtjjZIAeNPxfQes6oY4JVnU9q95myaq-t.mp4?efg=eyJvaWxfdXJsZ2VuX2FwcF9pZCI6OTM2NjE5NzQzMzkyNDU5LCJjbGllbnRfbmFtZSI6ImlnIiwidmlkZW9faWQiOm51bGwsInZlbmNvZGVfdGFnIjoiaWcteHB2ZHMuY2xpcHMuYzItQzMuZGFzaF9sbl9oZWFhY192YnIzX2F1ZGlvIn0&_nc_ht=instagram.fagc3-1.fna.fbcdn.net&_nc_cat=101&strext=1&ccb=9-4&oh=00_AYBaIqbQWmFUWVxjMb3DaGSRulqSKUxbODnTUyYOWRVUvw&oe=66C3F0E2&_nc_sid=9ca052"
+[download] Destination: C:\Temp\yt-dlp\Video_by_daleroxxu.fdash-1927276614373600ad.m4a
+[download] 100% of  547.74KiB in 00:00:00 at 1.99MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_daleroxxu.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_daleroxxu.fdash-1510302979914970v.mp4 -i file:C:\Temp\yt-dlp\Video_by_daleroxxu.fdash-1927276614373600ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_daleroxxu.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_daleroxxu.fdash-1510302979914970v.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_daleroxxu.fdash-1927276614373600ad.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_daleroxxu.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_daleroxxu.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by daleroxxu" -metadata "date=20240619" -metadata "description=Pork Meatballs in Bandung, Indonesia🇮🇩 #travel #streetfood #IndonesianFood" -metadata "synopsis=Pork Meatballs in Bandung, Indonesia 🇮🇩 #travel #streetfood #IndonesianFood" -metadata "purl=https://www.instagram.com/reel/C8YaPk5vQMo" -metadata "comment=https://www.instagram.com/reel/C8YaPk5vQMo" -metadata "artist=Dale Philip" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_daleroxxu.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_daleroxxu.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by daleroxxu
+    artist          : Dale Philip
+    date            : 20240619
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C8YaPk5vQMo
+    description     : Pork Meatballs in Bandung, Indonesia 🇮🇩 #travel #streetfood #IndonesianFood
+    synopsis        : Pork Meatballs in Bandung, Indonesia 🇮🇩 #travel #streetfood #IndonesianFood
+  Duration: 00:01:00.03, start: 0.000000, bitrate: 5861 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 5786 kb/s, 25 fps, 25 tbr, 12800 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 73 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 00000189f6d738c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 00000189f6d738c0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 00000189f6d738c0] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_daleroxxu_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by daleroxxu
+    artist          : Dale Philip
+    date            : 20240619
+    synopsis        : Pork Meatballs in Bandung, Indonesia 🇮🇩 #travel #streetfood #IndonesianFood
+    comment         : https://www.instagram.com/reel/C8YaPk5vQMo
+    description     : Pork Meatballs in Bandung, Indonesia 🇮🇩 #travel #streetfood #IndonesianFood
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 25 fps, 12800 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 00000189f6d70ec0] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 00000189f6d51580] video:56444KiB audio:947KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.087027%
+frame= 1500 fps= 84 q=-1.0 Lsize=   57441KiB time=00:00:59.92 bitrate=7853.1kbits/s speed=3.35x
+[libx264 @ 00000189f6d738c0] frame I:11    Avg QP:21.53  size:104669
+[libx264 @ 00000189f6d738c0] frame P:490   Avg QP:24.66  size: 59159
+[libx264 @ 00000189f6d738c0] frame B:999   Avg QP:27.21  size: 27686
+[libx264 @ 00000189f6d738c0] consecutive B-frames:  8.1%  5.9% 10.6% 75.5%
+[libx264 @ 00000189f6d738c0] mb I  I16..4: 13.2% 74.6% 12.3%
+[libx264 @ 00000189f6d738c0] mb P  I16..4:  9.4% 29.4%  2.9%  P16..4: 33.5% 13.0%  4.0%  0.0%  0.0%    skip: 7.7%
+[libx264 @ 00000189f6d738c0] mb B  I16..4:  2.6%  6.3%  0.7%  B16..8: 40.6%  8.8%  1.6%  direct: 5.4%  skip:34.1%  L0:46.9% L1:42.8% BI:10.3%
+[libx264 @ 00000189f6d738c0] 8x8 transform intra:69.2% inter:81.4%
+[libx264 @ 00000189f6d738c0] coded y,uvDC,uvAC intra: 47.0% 63.6% 16.5% inter: 24.4% 25.8% 0.3%
+[libx264 @ 00000189f6d738c0] i16 v,h,dc,p: 26% 26%  9% 39%
+[libx264 @ 00000189f6d738c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 23% 22% 16%  5%  7%  7%  7%  6%  6%
+[libx264 @ 00000189f6d738c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 21% 23% 13%  5% 11%  8%  9%  5%  5%
+[libx264 @ 00000189f6d738c0] i8c dc,h,v,p: 43% 24% 22% 10%
+[libx264 @ 00000189f6d738c0] Weighted P-Frames: Y:1.8% UV:0.8%
+[libx264 @ 00000189f6d738c0] ref P L0: 61.8% 18.2% 14.7%  5.1%  0.1%
+[libx264 @ 00000189f6d738c0] ref B L0: 92.6%  5.8%  1.6%
+[libx264 @ 00000189f6d738c0] ref B L1: 97.6%  2.4%
+[libx264 @ 00000189f6d738c0] kb/s:7706.39
+[aac @ 00000189f73a3740] Qavg: 463.729
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C-s7VQRyHx8"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/18/2024 10:18 AM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C-s7VQRyHx8']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C-s7VQRyHx8
+[Instagram] C-s7VQRyHx8: Setting up session
+[Instagram] C-s7VQRyHx8: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C-s7VQRyHx8: Downloading 1 format(s): dash-568271735529625v+dash-1039876391000615ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/v/t39.25447-16/455179299_508544711857854_2489544121946554488_n.mp4?_nc_cat=110&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=6Zqgc0IySgQQ7kNvgHPsXCQ&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=00_AYDo9r6ggqxPJQUfDY_lVmLq9RP65Cu0zRnGlW1nXhFXLA&oe=66C7C3E9"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_roteirosemdetalhes.fdash-568271735529625v.mp4
+[download] 100% of    1.96MiB in 00:00:00 at 7.78MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t50.33967-16/455831865_2004151223374469_6224179322022037497_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=Wvia21nriM4Q7kNvgFm1HtW&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYBUa3cKm1cGZo3PoKO5TbXGrJGt8NkrEKePt2UMoiOkig&oe=66C7C16D"
+[download] Destination: C:\Temp\yt-dlp\Video_by_roteirosemdetalhes.fdash-1039876391000615ad.m4a
+[download] 100% of   75.23KiB in 00:00:00 at 202.04KiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_roteirosemdetalhes.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_roteirosemdetalhes.fdash-568271735529625v.mp4 -i file:C:\Temp\yt-dlp\Video_by_roteirosemdetalhes.fdash-1039876391000615ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_roteirosemdetalhes.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_roteirosemdetalhes.fdash-1039876391000615ad.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_roteirosemdetalhes.fdash-568271735529625v.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_roteirosemdetalhes.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_roteirosemdetalhes.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by roteirosemdetalhes" -metadata "date=20240815" -metadata "description=✈️🌎 Roteiros personalizados, assessoria de viagens, cotações de passagens, hotéis, passeios e aluguel de carros. No link da bio.
+
+✅️ Siga @roteirosemdetalhes para explorar lugares incríveis.
+✅ Salve para a sua próxima viagem.
+✅️ Compartilhe com aquele amigo que ama viajar.
+
+#viagem #viajar #roteirosdeviagem #férias #destinos #melhoresdestinos #passagens #turismo #europa #asia #eua #dicasdeviagem #viagemperfeita #viagemdossonhos #exploreomundo" -metadata "synopsis=✈️🌎 Roteiros personalizados, assessoria de viagens, cotações de passagens, hotéis, passeios e aluguel de carros. No link da bio.
+
+✅️ Siga @roteirosemdetalhes para explorar lugares incríveis.
+✅ Salve para a sua próxima viagem.
+✅️ Compartilhe com aquele amigo que ama viajar.
+
+#viagem #viajar #roteirosdeviagem #férias #destinos #melhoresdestinos #passagens #turismo #europa #asia #eua #dicasdeviagem #viagemperfeita #viagemdossonhos #exploreomundo" -metadata "purl=https://www.instagram.com/reel/C-s7VQRyHx8" -metadata "comment=https://www.instagram.com/reel/C-s7VQRyHx8" -metadata "artist=Bárbara Bertoti" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_roteirosemdetalhes.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_roteirosemdetalhes.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by roteirosemdetalhes
+    artist          : Bárbara Bertoti
+    date            : 20240815
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C-s7VQRyHx8
+    description     : ✈️🌎 Roteiros personalizados, assessoria de viagens, cotações de passagens, hotéis, passeios e aluguel de carros. No link da bio.
+                    :
+                    : ✅️ Siga @roteirosemdetalhes para explorar lugares incríveis.
+                    : ✅ Salve para a sua próxima viagem.
+                    : ✅️ Compartilhe com aquele amigo que ama viajar.
+                    :
+                    : #viagem #viajar #roteirosdeviagem #férias #destinos #melhoresdestinos #passagens #turismo #europa #asia #eua #dicasdeviagem #viagemperfeita #viagemdossonhos #exploreomundo
+    synopsis        : ✈️🌎 Roteiros personalizados, assessoria de viagens, cotações de passagens, hotéis, passeios e aluguel de carros. No link da bio.
+                    :
+                    : ✅️ Siga @roteirosemdetalhes para explorar lugares incríveis.
+                    : ✅ Salve para a sua próxima viagem.
+                    : ✅️ Compartilhe com aquele amigo que ama viajar.
+                    :
+                    : #viagem #viajar #roteirosdeviagem #férias #destinos #melhoresdestinos #passagens #turismo #europa #asia #eua #dicasdeviagem #viagemperfeita #viagemdossonhos #exploreomundo
+  Duration: 00:00:07.36, start: 0.000000, bitrate: 2317 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 2268 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 80 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000001553f779840] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001553f779840] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 000001553f779840] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_roteirosemdetalhes_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by roteirosemdetalhes
+    artist          : Bárbara Bertoti
+    date            : 20240815
+    synopsis        : ✈️🌎 Roteiros personalizados, assessoria de viagens, cotações de passagens, hotéis, passeios e aluguel de carros. No link da bio.
+                    :
+                    : ✅️ Siga @roteirosemdetalhes para explorar lugares incríveis.
+                    : ✅ Salve para a sua próxima viagem.
+                    : ✅️ Compartilhe com aquele amigo que ama viajar.
+                    :
+                    : #viagem #viajar #roteirosdeviagem #férias #destinos #melhoresdestinos #passagens #turismo #europa #asia #eua #dicasdeviagem #viagemperfeita #viagemdossonhos #exploreomundo
+    comment         : https://www.instagram.com/reel/C-s7VQRyHx8
+    description     : ✈️🌎 Roteiros personalizados, assessoria de viagens, cotações de passagens, hotéis, passeios e aluguel de carros. No link da bio.
+                    :
+                    : ✅️ Siga @roteirosemdetalhes para explorar lugares incríveis.
+                    : ✅ Salve para a sua próxima viagem.
+                    : ✅️ Compartilhe com aquele amigo que ama viajar.
+                    :
+                    : #viagem #viajar #roteirosdeviagem #férias #destinos #melhoresdestinos #passagens #turismo #europa #asia #eua #dicasdeviagem #viagemperfeita #viagemdossonhos #exploreomundo
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 000001553f77c280] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001553f7758c0] video:2349KiB audio:116KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.415942%
+frame=  217 fps=126 q=-1.0 Lsize=    2475KiB time=00:00:07.16 bitrate=2829.6kbits/s speed=4.16x
+[libx264 @ 000001553f779840] frame I:1     Avg QP:20.93  size:177673
+[libx264 @ 000001553f779840] frame P:54    Avg QP:21.74  size: 31578
+[libx264 @ 000001553f779840] frame B:162   Avg QP:26.01  size:  3222
+[libx264 @ 000001553f779840] consecutive B-frames:  0.5%  0.0%  0.0% 99.5%
+[libx264 @ 000001553f779840] mb I  I16..4:  8.0% 80.0% 12.1%
+[libx264 @ 000001553f779840] mb P  I16..4:  0.8%  0.7%  0.0%  P16..4: 46.5% 12.9%  9.6%  0.0%  0.0%    skip:29.4%
+[libx264 @ 000001553f779840] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8: 35.9%  0.4%  0.0%  direct: 0.1%  skip:63.6%  L0:42.4% L1:52.5% BI: 5.1%
+[libx264 @ 000001553f779840] 8x8 transform intra:63.3% inter:78.3%
+[libx264 @ 000001553f779840] coded y,uvDC,uvAC intra: 56.3% 67.0% 17.8% inter: 7.9% 9.8% 0.2%
+[libx264 @ 000001553f779840] i16 v,h,dc,p:  3% 68%  6% 24%
+[libx264 @ 000001553f779840] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu:  7% 47% 18%  3%  3%  2%  8%  2% 11%
+[libx264 @ 000001553f779840] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 14% 43%  9%  3%  5%  4% 10%  3%  8%
+[libx264 @ 000001553f779840] i8c dc,h,v,p: 41% 43% 11%  5%
+[libx264 @ 000001553f779840] Weighted P-Frames: Y:1.9% UV:0.0%
+[libx264 @ 000001553f779840] ref P L0: 63.1% 16.5% 17.0%  3.4%  0.1%
+[libx264 @ 000001553f779840] ref B L0: 96.0%  3.5%  0.5%
+[libx264 @ 000001553f779840] ref B L1: 98.3%  1.7%
+[libx264 @ 000001553f779840] kb/s:2659.82
+[aac @ 000001553fd0be80] Qavg: 844.484
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C-aeRNpS4Mw"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/18/2024 10:18 AM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C-aeRNpS4Mw']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C-aeRNpS4Mw
+[Instagram] C-aeRNpS4Mw: Setting up session
+[Instagram] C-aeRNpS4Mw: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C-aeRNpS4Mw: Downloading 1 format(s): dash-521323193732133v+dash-2425011477694691ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t39.25447-16/454505944_377266011808905_8860293589971079090_n.mp4?_nc_cat=103&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=lZHQG_PhiEMQ7kNvgEsBqQm&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYCTvBs1e7Vun-LOTEeSscWouJWFbRa1ciFiz8-hFZinOQ&oe=66C7C929"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_thefriendssite.fdash-521323193732133v.mp4
+[download] 100% of    6.74MiB in 00:00:00 at 17.62MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/v/t50.33967-16/454550702_1988790514975261_3241055786003140144_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=qPTVtcckPQQQ7kNvgEEp-Kw&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=00_AYC0GCZG9vWBvyNeCOqquAPpRVak0zVyoBRvl7UJwAl_fA&oe=66C7D040"
+[download] Destination: C:\Temp\yt-dlp\Video_by_thefriendssite.fdash-2425011477694691ad.m4a
+[download] 100% of  602.46KiB in 00:00:00 at 3.19MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_thefriendssite.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_thefriendssite.fdash-521323193732133v.mp4 -i file:C:\Temp\yt-dlp\Video_by_thefriendssite.fdash-2425011477694691ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_thefriendssite.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_thefriendssite.fdash-2425011477694691ad.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_thefriendssite.fdash-521323193732133v.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_thefriendssite.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_thefriendssite.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by thefriendssite" -metadata "date=20240808" -metadata "description=Omg thats so true 😁" -metadata "synopsis=Omg thats so true 😁" -metadata "purl=https://www.instagram.com/reel/C-aeRNpS4Mw" -metadata "comment=https://www.instagram.com/reel/C-aeRNpS4Mw" -metadata "artist=F.R.I.E.N.D.S" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_thefriendssite.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_thefriendssite.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by thefriendssite
+    artist          : F.R.I.E.N.D.S
+    date            : 20240808
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C-aeRNpS4Mw
+    description     : Omg thats so true 😁
+    synopsis        : Omg thats so true 😁
+  Duration: 00:01:26.42, start: 0.000000, bitrate: 711 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 652 kb/s, 24 fps, 24 tbr, 12288 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 55 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 00000145de19e680] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 00000145de19e680] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 00000145de19e680] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=24 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_thefriendssite_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by thefriendssite
+    artist          : F.R.I.E.N.D.S
+    date            : 20240808
+    synopsis        : Omg thats so true 😁
+    comment         : https://www.instagram.com/reel/C-aeRNpS4Mw
+    description     : Omg thats so true 😁
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 24 fps, 12288 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 00000145ddbbc9c0] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 00000145ddbd4540] video:10024KiB audio:1348KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.585401%
+frame= 2074 fps=296 q=-1.0 Lsize=   11439KiB time=00:01:26.33 bitrate=1085.4kbits/s speed=12.3x
+[libx264 @ 00000145de19e680] frame I:9     Avg QP:11.66  size: 60535
+[libx264 @ 00000145de19e680] frame P:540   Avg QP:15.00  size: 11384
+[libx264 @ 00000145de19e680] frame B:1525  Avg QP:21.10  size:  2342
+[libx264 @ 00000145de19e680] consecutive B-frames:  1.2%  1.6%  2.3% 94.9%
+[libx264 @ 00000145de19e680] mb I  I16..4: 46.5% 43.4% 10.0%
+[libx264 @ 00000145de19e680] mb P  I16..4:  0.8%  2.6%  0.6%  P16..4:  9.9%  3.5%  1.7%  0.0%  0.0%    skip:80.9%
+[libx264 @ 00000145de19e680] mb B  I16..4:  0.1%  0.2%  0.0%  B16..8:  9.5%  1.0%  0.2%  direct: 0.2%  skip:88.8%  L0:45.8% L1:48.7% BI: 5.5%
+[libx264 @ 00000145de19e680] 8x8 transform intra:59.7% inter:80.5%
+[libx264 @ 00000145de19e680] coded y,uvDC,uvAC intra: 47.9% 45.5% 17.5% inter: 2.1% 1.7% 0.0%
+[libx264 @ 00000145de19e680] i16 v,h,dc,p: 67% 22%  3%  9%
+[libx264 @ 00000145de19e680] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26% 23% 16%  4%  6%  7%  6%  6%  6%
+[libx264 @ 00000145de19e680] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 32% 24%  9%  4%  7%  7%  7%  5%  5%
+[libx264 @ 00000145de19e680] i8c dc,h,v,p: 53% 21% 21%  6%
+[libx264 @ 00000145de19e680] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 00000145de19e680] ref P L0: 63.5% 15.6% 14.5%  6.4%
+[libx264 @ 00000145de19e680] ref B L0: 89.4%  8.4%  2.2%
+[libx264 @ 00000145de19e680] ref B L1: 95.9%  4.1%
+[libx264 @ 00000145de19e680] kb/s:950.21
+[aac @ 00000145ddfea140] Qavg: 749.510
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C-VRMH2ut1X"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/18/2024 10:19 AM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C-VRMH2ut1X']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C-VRMH2ut1X
+[Instagram] C-VRMH2ut1X: Setting up session
+[Instagram] C-VRMH2ut1X: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C-VRMH2ut1X: Downloading 1 format(s): dash-3632512087059331v+dash-1886839455077621ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t39.25447-16/454273660_1049759360058585_1694379446487317584_n.mp4?_nc_cat=100&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=AFE4IA_r6AoQ7kNvgHA6vym&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYD6m_fAN3AARH9iRlN6kGFKzsKaV7Fhw-uTmirprziRug&oe=66C7D120"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_laj_chaina.fdash-3632512087059331v.mp4
+[download] 100% of    5.54MiB in 00:00:00 at 10.57MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/v/t50.33967-16/454360244_364295830048583_645117298894320121_n.mp4?_nc_cat=101&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=mJ1ydeGBJSAQ7kNvgHP6OTr&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=00_AYBJbQ20h99NjjvVNHciahOGWQ8MSPOvFInSnIIh-zuVCw&oe=66C7E340"
+[download] Destination: C:\Temp\yt-dlp\Video_by_laj_chaina.fdash-1886839455077621ad.m4a
+[download] 100% of  337.59KiB in 00:00:00 at 1.46MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_laj_chaina.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_laj_chaina.fdash-3632512087059331v.mp4 -i file:C:\Temp\yt-dlp\Video_by_laj_chaina.fdash-1886839455077621ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_laj_chaina.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_laj_chaina.fdash-3632512087059331v.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_laj_chaina.fdash-1886839455077621ad.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_laj_chaina.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_laj_chaina.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by laj_chaina" -metadata "date=20240806" -metadata "description=Taking the bio data of the taxi driver is mandatory #nepalicomedy #nepaligirl #fyp #explorepage" -metadata "synopsis=Taking the bio data of the taxi driver is mandatory #nepalicomedy #nepaligirl #fyp #explorepage" -metadata "purl=https://www.instagram.com/reel/C-VRMH2ut1X" -metadata "comment=https://www.instagram.com/reel/C-VRMH2ut1X" -metadata "artist=Lajja Uprety" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_laj_chaina.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_laj_chaina.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by laj_chaina
+    artist          : Lajja Uprety
+    date            : 20240806
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C-VRMH2ut1X
+    description     : Taking the bio data of the taxi driver is mandatory #nepalicomedy #nepaligirl #fyp #explorepage
+    synopsis        : Taking the bio data of the taxi driver is mandatory #nepalicomedy #nepaligirl #fyp #explorepage
+  Duration: 00:00:47.47, start: 0.000000, bitrate: 1038 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 720x1280, 976 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 56 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000018688c15780] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000018688c15780] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 0000018688c15780] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_laj_chaina_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by laj_chaina
+    artist          : Lajja Uprety
+    date            : 20240806
+    synopsis        : Taking the bio data of the taxi driver is mandatory #nepalicomedy #nepaligirl #fyp #explorepage
+    comment         : https://www.instagram.com/reel/C-VRMH2ut1X
+    description     : Taking the bio data of the taxi driver is mandatory #nepalicomedy #nepaligirl #fyp #explorepage
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 720x1280, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 0000018688c1be40] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000018688cbed00] video:6558KiB audio:741KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.709667%
+frame= 1424 fps=344 q=-1.0 Lsize=    7351KiB time=00:00:47.40 bitrate=1270.4kbits/s speed=11.5x
+[libx264 @ 0000018688c15780] frame I:8     Avg QP:17.82  size: 73454
+[libx264 @ 0000018688c15780] frame P:406   Avg QP:21.53  size: 10507
+[libx264 @ 0000018688c15780] frame B:1010  Avg QP:25.65  size:  1843
+[libx264 @ 0000018688c15780] consecutive B-frames:  4.1%  2.9%  3.4% 89.6%
+[libx264 @ 0000018688c15780] mb I  I16..4: 11.5% 57.6% 30.8%
+[libx264 @ 0000018688c15780] mb P  I16..4:  2.4%  7.8%  0.9%  P16..4: 28.8%  9.2%  4.3%  0.0%  0.0%    skip:46.6%
+[libx264 @ 0000018688c15780] mb B  I16..4:  0.3%  0.6%  0.0%  B16..8: 23.1%  1.6%  0.2%  direct: 0.8%  skip:73.3%  L0:44.0% L1:51.9% BI: 4.1%
+[libx264 @ 0000018688c15780] 8x8 transform intra:68.9% inter:76.9%
+[libx264 @ 0000018688c15780] coded y,uvDC,uvAC intra: 37.0% 35.4% 7.8% inter: 5.9% 5.6% 0.0%
+[libx264 @ 0000018688c15780] i16 v,h,dc,p: 31% 25% 11% 34%
+[libx264 @ 0000018688c15780] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 16% 30%  3%  7%  5%  6%  4%  4%
+[libx264 @ 0000018688c15780] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 19% 11%  5% 11%  9%  9%  7%  5%
+[libx264 @ 0000018688c15780] i8c dc,h,v,p: 61% 19% 16%  4%
+[libx264 @ 0000018688c15780] Weighted P-Frames: Y:2.7% UV:1.2%
+[libx264 @ 0000018688c15780] ref P L0: 61.2% 21.6% 12.9%  4.1%  0.1%
+[libx264 @ 0000018688c15780] ref B L0: 92.0%  6.8%  1.2%
+[libx264 @ 0000018688c15780] ref B L1: 97.2%  2.8%
+[libx264 @ 0000018688c15780] kb/s:1131.70
+[aac @ 00000186891a64c0] Qavg: 564.775
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C-z6CohM_YE"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/18/2024 10:24 AM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C-z6CohM_YE']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C-z6CohM_YE
+[Instagram] C-z6CohM_YE: Setting up session
+[Instagram] C-z6CohM_YE: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C-z6CohM_YE: Downloading 1 format(s): dash-493536739984740v+dash-446139145093698ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://instagram.fagc3-1.fna.fbcdn.net/o1/v/t16/f2/m69/An-kqNAm3g89VD1CaCEOXraNgrURO3b5LS5dT78XSee8ojnBhEkPuV13htTG8uTWhbB6k8srxdJlN4BfAyJ6XzCk.mp4?efg=eyJvaWxfdXJsZ2VuX2FwcF9pZCI6OTM2NjE5NzQzMzkyNDU5LCJjbGllbnRfbmFtZSI6ImlnIiwidmlkZW9faWQiOm51bGwsInZlbmNvZGVfdGFnIjoiaWcteHB2ZHMuY2xpcHMuYzItQzMuZGFzaF9yMmV2ZXZwOS1yMWdlbjJ2cDlfcTkwIn0&_nc_ht=instagram.fagc3-1.fna.fbcdn.net&_nc_cat=108&strext=1&ccb=9-4&oh=00_AYCDfRo-akufEmPJz3mPlXeCEtX8QbEFF2tKiJgGVd5ySA&oe=66C3C71D&_nc_sid=9ca052"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_lokantarnews.fdash-493536739984740v.mp4
+[download] 100% of   12.31MiB in 00:00:00 at 15.21MiB/s
+[debug] Invoking http downloader on "https://instagram.fagc3-1.fna.fbcdn.net/o1/v/t16/f2/m69/An-eWji9wue1h6jD2V7YKRcOJOQcpULuFhsQT5yS5UFL_9yfHO9gsfAHcom5bdUojRYF9o5dYYFIe__IswiivIs.mp4?efg=eyJvaWxfdXJsZ2VuX2FwcF9pZCI6OTM2NjE5NzQzMzkyNDU5LCJjbGllbnRfbmFtZSI6ImlnIiwidmlkZW9faWQiOm51bGwsInZlbmNvZGVfdGFnIjoiaWcteHB2ZHMuY2xpcHMuYzItQzMuZGFzaF9sbl9oZWFhY192YnIzX2F1ZGlvIn0&_nc_ht=instagram.fagc3-1.fna.fbcdn.net&_nc_cat=103&strext=1&ccb=9-4&oh=00_AYA9OEkJmXE_VxBuSVsZmBkz-xnqqm_uEHLBxaGuX-r79w&oe=66C3D046&_nc_sid=9ca052"
+[download] Destination: C:\Temp\yt-dlp\Video_by_lokantarnews.fdash-446139145093698ad.m4a
+[download] 100% of  193.59KiB in 00:00:00 at 1.65MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_lokantarnews.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_lokantarnews.fdash-493536739984740v.mp4 -i file:C:\Temp\yt-dlp\Video_by_lokantarnews.fdash-446139145093698ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_lokantarnews.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_lokantarnews.fdash-446139145093698ad.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_lokantarnews.fdash-493536739984740v.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_lokantarnews.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_lokantarnews.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by lokantarnews" -metadata "date=20240818" -metadata "description=कमलादी र इमाडोलपछि यसरी भासियोबानेश्वरको सडक" -metadata "synopsis=कमलादी र इमाडोलपछि यसरी भासियो बानेश्वरको सडक" -metadata "purl=https://www.instagram.com/reel/C-z6CohM_YE" -metadata "comment=https://www.instagram.com/reel/C-z6CohM_YE" -metadata "artist=Lokantar News" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_lokantarnews.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_lokantarnews.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by lokantarnews
+    artist          : Lokantar News
+    date            : 20240818
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C-z6CohM_YE
+    description     : कमलादी र इमाडोलपछि यसरी भासियो बानेश्वरको सडक
+    synopsis        : कमलादी र इमाडोलपछि यसरी भासियो बानेश्वरको सडक
+  Duration: 00:00:20.50, start: 0.000000, bitrate: 5116 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv), 1080x1920, 5042 kb/s, 25 fps, 25 tbr, 12800 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+  Stream #0:1[0x2](eng): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 75 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000026ca031a480] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000026ca031a480] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0000026ca031a480] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_lokantarnews_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by lokantarnews
+    artist          : Lokantar News
+    date            : 20240818
+    synopsis        : कमलादी र इमाडोलपछि यसरी भासियो बानेश्वरको सडक
+    comment         : https://www.instagram.com/reel/C-z6CohM_YE
+    description     : कमलादी र इमाडोलपछि यसरी भासियो बानेश्वरको सडक
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1080x1920, q=2-31, 25 fps, 12800 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 0000026c9fdfecc0] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000026c9fde5500] video:12230KiB audio:321KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.128718%
+frame=  512 fps=119 q=-1.0 Lsize=   12567KiB time=00:00:20.40 bitrate=5046.5kbits/s speed=4.72x
+[libx264 @ 0000026ca031a480] frame I:3     Avg QP:21.16  size:181779
+[libx264 @ 0000026ca031a480] frame P:266   Avg QP:22.26  size: 34588
+[libx264 @ 0000026ca031a480] frame B:243   Avg QP:24.83  size: 11429
+[libx264 @ 0000026ca031a480] consecutive B-frames: 29.7% 17.6% 10.5% 42.2%
+[libx264 @ 0000026ca031a480] mb I  I16..4: 12.4% 58.1% 29.5%
+[libx264 @ 0000026ca031a480] mb P  I16..4:  5.0% 13.7%  1.7%  P16..4: 25.1% 10.1%  3.8%  0.0%  0.0%    skip:40.5%
+[libx264 @ 0000026ca031a480] mb B  I16..4:  0.8%  1.5%  0.2%  B16..8: 31.5%  5.4%  0.9%  direct: 2.1%  skip:57.7%  L0:48.8% L1:43.7% BI: 7.5%
+[libx264 @ 0000026ca031a480] 8x8 transform intra:66.0% inter:72.0%
+[libx264 @ 0000026ca031a480] coded y,uvDC,uvAC intra: 48.5% 27.7% 4.8% inter: 13.9% 5.4% 0.3%
+[libx264 @ 0000026ca031a480] i16 v,h,dc,p: 26% 29%  5% 39%
+[libx264 @ 0000026ca031a480] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 23% 23% 17%  6%  6%  5%  7%  6%  8%
+[libx264 @ 0000026ca031a480] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 25% 28% 12%  5%  6%  5%  7%  4%  6%
+[libx264 @ 0000026ca031a480] i8c dc,h,v,p: 60% 17% 20%  3%
+[libx264 @ 0000026ca031a480] Weighted P-Frames: Y:0.4% UV:0.0%
+[libx264 @ 0000026ca031a480] ref P L0: 73.1% 19.1%  6.2%  1.7%  0.0%
+[libx264 @ 0000026ca031a480] ref B L0: 95.5%  3.9%  0.6%
+[libx264 @ 0000026ca031a480] ref B L1: 98.9%  1.1%
+[libx264 @ 0000026ca031a480] kb/s:4891.77
+[aac @ 0000026c9fdc2440] Qavg: 462.608
 
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
