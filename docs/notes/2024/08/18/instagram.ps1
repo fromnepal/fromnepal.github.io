@@ -1,11 +1,21 @@
 $urls = @(
-    "https://www.instagram.com/reel/C-SvuHFvV1t",
-    "https://www.instagram.com/reel/C-qUuPFxDg1",
-    "https://www.instagram.com/reel/C-OlF11tQ0T",
-    "https://www.instagram.com/reel/C-o6TseNxZO",
-    "https://www.instagram.com/reel/C9kDAA5uyHP",
-    "https://www.instagram.com/reel/C7VHg8YiqSV",
-    "https://www.instagram.com/reel/C-CNNnevlY3",
+    "https://www.instagram.com/reel/C-vv9DkPukQ",
+    "https://www.instagram.com/reel/C-YKfCwyzUe",
+    "https://www.instagram.com/reel/C-0I8WZyxwU",
+    "https://www.instagram.com/reel/C8ru4e0oCuX",
+    "https://www.instagram.com/reel/C9Nx2CbRIYj",
+    "https://www.instagram.com/reel/C-xRjYrMkGJ",
+    "https://www.instagram.com/reel/C-PcfPBpZzx",
+    "https://www.instagram.com/reel/C-muG9tyXh2",
+    "https://www.instagram.com/reel/C-kTLb_MILz",
+    "https://www.instagram.com/reel/C-kWELKNz1y",
+    "https://www.instagram.com/reel/C7xpBaZt4Zx",
+    "https://www.instagram.com/reel/C-p0bcZocfS",
+    "https://www.instagram.com/reel/C-uKvsloEkX",
+    "https://www.instagram.com/reel/C-wrLKtMI2M",
+    "https://www.instagram.com/reel/C-w9ZJioynN",
+    "https://www.instagram.com/reel/C-hyFX6g26Q",
+    "https://www.instagram.com/reel/C81nVsZJzir",
     "https://www.instagram.com/reel/C-soIt8OP0q"
 )
 
