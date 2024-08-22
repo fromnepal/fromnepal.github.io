@@ -1,1799 +1,217 @@
 PowerShell 7.4.4
-Loading personal and system profiles took 546ms.
-PS C:\Users\kushal> ssh kusfedoravm
-kushal@kusfedoravm's password:
-Last login: Sat Aug 17 14:16:19 2024 from fe80::975c:f636:bfb:5026%eth0
-kushal@kusfedoravm:~$ sudo echo "Current date and time: $(date)"; free -h; df -h; time ping -c 20 pcna.duckdns.org; sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot;
-[sudo] password for kushal:
-Current date and time: Sun Aug 18 12:58:28 PM EDT 2024
-               total        used        free      shared  buff/cache   available
-Mem:           7.7Gi       889Mi       5.9Gi        10Mi       1.3Gi       6.9Gi
-Swap:          7.7Gi          0B       7.7Gi
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda3        31G  4.4G   26G  15% /
-devtmpfs        4.0M     0  4.0M   0% /dev
-tmpfs           3.9G     0  3.9G   0% /dev/shm
-efivarfs        128M  6.8K  128M   1% /sys/firmware/efi/efivars
-tmpfs           1.6G  1.1M  1.6G   1% /run
-tmpfs           3.9G  8.0K  3.9G   1% /tmp
-/dev/sda3        31G  4.4G   26G  15% /home
-/dev/sda2       974M  335M  572M  37% /boot
-/dev/sda1       599M   20M  580M   4% /boot/efi
-tmpfs           794M   88K  794M   1% /run/user/42
-tmpfs           794M   72K  794M   1% /run/user/1000
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.466 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.434 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.483 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.498 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.563 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.558 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.535 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.426 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.440 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.526 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.516 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.523 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.512 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.558 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.473 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.525 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.387 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.528 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.529 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.477 ms
-
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19461ms
-rtt min/avg/max/mdev = 0.387/0.497/0.563/0.047 ms
-
-real    0m19.501s
-user    0m0.000s
-sys     0m0.005s
-Current date and time: Sun Aug 18 12:58:51 PM EDT 2024
-Fedora 40 - x86_64                                        14 MB/s |  20 MB     00:01
-Fedora 40 openh264 (From Cisco) - x86_64                                       3.7 kB/s | 1.4 kB     00:00
-Fedora 40 - x86_64 - Updates                                        10 MB/s | 9.4 MB     00:00
-Dependencies resolved.
-========================================================================================================================================================================================================================================================================================
- Package                                                                      Architecture                                                  Version  Repository                                                      Size
-========================================================================================================================================================================================================================================================================================
-Upgrading:
- amd-gpu-firmware                                                             noarch                                                        20240811-2.fc40  updates                                                         21 M
- amd-ucode-firmware                                                           noarch                                                        20240811-2.fc40  updates                                                        246 k
- atheros-firmware                                                             noarch                                                        20240811-2.fc40  updates                                                         26 M
- brcmfmac-firmware                                                            noarch                                                        20240811-2.fc40  updates                                                        9.6 M
- cirrus-audio-firmware                                                        noarch                                                        20240811-2.fc40  updates                                                        1.1 M
- intel-audio-firmware                                                         noarch                                                        20240811-2.fc40  updates                                                        3.2 M
- intel-gpu-firmware                                                           noarch                                                        20240811-2.fc40  updates                                                        8.8 M
- iwlegacy-firmware                                                            noarch                                                        20240811-2.fc40  updates                                                        153 k
- iwlwifi-dvm-firmware                                                         noarch                                                        20240811-2.fc40  updates                                                        1.9 M
- iwlwifi-mvm-firmware                                                         noarch                                                        20240811-2.fc40  updates                                                         55 M
- libertas-firmware                                                            noarch                                                        20240811-2.fc40  updates                                                        1.3 M
- linux-firmware                                                               noarch                                                        20240811-2.fc40  updates                                                         37 M
- linux-firmware-whence                                                        noarch                                                        20240811-2.fc40  updates                                                         63 k
- mt7xxx-firmware                                                              noarch                                                        20240811-2.fc40  updates                                                         12 M
- nvidia-gpu-firmware                                                          noarch                                                        20240811-2.fc40  updates                                                         38 M
- nxpwireless-firmware                                                         noarch                                                        20240811-2.fc40  updates                                                        935 k
- python3-boto3                                                                noarch                                                        1.34.162-1.fc40  updates                                                        386 k
- python3-botocore                                                             noarch                                                        1.34.162-1.fc40  updates                                                        7.2 M
- realtek-firmware                                                             noarch                                                        20240811-2.fc40  updates                                                        3.3 M
- skopeo                                                                       x86_64                                                        1:1.16.0-1.fc40  updates                                                        8.3 M
- tiwilink-firmware                                                            noarch                                                        20240811-2.fc40  updates                                                        4.6 M
-
-Transaction Summary
-========================================================================================================================================================================================================================================================================================
-Upgrade  21 Packages
-
-Total download size: 240 M
-DNF will only download packages, install gpg keys, and check the transaction.
-Downloading Packages:
-(1/21): amd-ucode-firmware-20240811-2.fc40.noarch.rpm                                       875 kB/s | 246 kB     00:00
-(2/21): brcmfmac-firmware-20240811-2.fc40.noarch.rpm                                       8.9 MB/s | 9.6 MB     00:01
-(3/21): cirrus-audio-firmware-20240811-2.fc40.noarch.rpm                                       4.4 MB/s | 1.1 MB     00:00
-(4/21): amd-gpu-firmware-20240811-2.fc40.noarch.rpm                                        12 MB/s |  21 MB     00:01
-(5/21): intel-audio-firmware-20240811-2.fc40.noarch.rpm                                       8.2 MB/s | 3.2 MB     00:00
-(6/21): iwlegacy-firmware-20240811-2.fc40.noarch.rpm                                       1.2 MB/s | 153 kB     00:00
-(7/21): atheros-firmware-20240811-2.fc40.noarch.rpm                                        12 MB/s |  26 MB     00:02
-(8/21): iwlwifi-dvm-firmware-20240811-2.fc40.noarch.rpm                                       7.6 MB/s | 1.9 MB     00:00
-(9/21): intel-gpu-firmware-20240811-2.fc40.noarch.rpm                                        15 MB/s | 8.8 MB     00:00
-(10/21): libertas-firmware-20240811-2.fc40.noarch.rpm                                       6.8 MB/s | 1.3 MB     00:00
-(11/21): linux-firmware-whence-20240811-2.fc40.noarch.rpm                                       718 kB/s |  63 kB     00:00
-(12/21): mt7xxx-firmware-20240811-2.fc40.noarch.rpm                                       7.2 MB/s |  12 MB     00:01
-(13/21): linux-firmware-20240811-2.fc40.noarch.rpm                                        13 MB/s |  37 MB     00:02
-(14/21): nxpwireless-firmware-20240811-2.fc40.noarch.rpm                                       7.8 MB/s | 935 kB     00:00
-(15/21): python3-boto3-1.34.162-1.fc40.noarch.rpm                                       5.1 MB/s | 386 kB     00:00
-(16/21): iwlwifi-mvm-firmware-20240811-2.fc40.noarch.rpm                                        15 MB/s |  55 MB     00:03
-(17/21): python3-botocore-1.34.162-1.fc40.noarch.rpm                                        12 MB/s | 7.2 MB     00:00
-(18/21): realtek-firmware-20240811-2.fc40.noarch.rpm                                        13 MB/s | 3.3 MB     00:00
-(19/21): tiwilink-firmware-20240811-2.fc40.noarch.rpm                                        13 MB/s | 4.6 MB     00:00
-(20/21): skopeo-1.16.0-1.fc40.x86_64.rpm                                        14 MB/s | 8.3 MB     00:00
-(21/21): nvidia-gpu-firmware-20240811-2.fc40.noarch.rpm                                        12 MB/s |  38 MB     00:03
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Total                                        32 MB/s | 240 MB     00:07
-Running transaction check
-Transaction check succeeded.
-Running transaction test
-Transaction test succeeded.
-Complete!
-Transaction saved to /var/lib/dnf/system-upgrade/system-upgrade-transaction.json.
-Download complete! Use 'dnf offline-upgrade reboot' to start the upgrade.
-To remove cached metadata and transaction use 'dnf offline-upgrade clean'
-The downloaded packages were saved in cache until the next successful transaction.
-You can remove cached packages by executing 'dnf clean packages'.
-
-real    0m18.295s
-user    0m0.006s
-sys     0m0.020s
-
-Broadcast message from root@kusfedoravm on pts/1 (Sun 2024-08-18 12:59:10 EDT):
-
-The system will reboot now!
-
-Connection to kusfedoravm closed by remote host.
-Connection to kusfedoravm closed.
-PS C:\Users\kushal> ssh kusfedoravm
-ssh: Could not resolve hostname kusfedoravm: No such host is known.
-PS C:\Users\kushal> ssh kusfedoravm
-kushal@kusfedoravm's password:
-Last login: Sun Aug 18 12:58:16 2024 from fe80::975c:f636:bfb:5026%eth0
-kushal@kusfedoravm:~$ sudo echo "Current date and time: $(date)"; free -h; df -h; time ping -c 20 pcna.duckdns.org; sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot;
-[sudo] password for kushal:
-Current date and time: Sun Aug 18 04:16:24 PM EDT 2024
-               total        used        free      shared  buff/cache   available
-Mem:           7.7Gi       876Mi       6.0Gi        10Mi       1.1Gi       6.9Gi
-Swap:          7.7Gi          0B       7.7Gi
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda3        31G  4.4G   26G  15% /
-devtmpfs        4.0M     0  4.0M   0% /dev
-tmpfs           3.9G     0  3.9G   0% /dev/shm
-efivarfs        128M  6.8K  128M   1% /sys/firmware/efi/efivars
-tmpfs           1.6G  1.1M  1.6G   1% /run
-tmpfs           3.9G  8.0K  3.9G   1% /tmp
-/dev/sda3        31G  4.4G   26G  15% /home
-/dev/sda2       974M  335M  572M  37% /boot
-/dev/sda1       599M   20M  580M   4% /boot/efi
-tmpfs           794M   88K  794M   1% /run/user/42
-tmpfs           794M   72K  794M   1% /run/user/1000
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.400 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.457 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.641 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.405 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.389 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.475 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.454 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.417 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.374 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.347 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.475 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.389 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.435 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.401 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.438 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.402 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.415 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.459 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.400 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.392 ms
-
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19435ms
-rtt min/avg/max/mdev = 0.347/0.428/0.641/0.059 ms
-
-real    0m19.478s
-user    0m0.002s
-sys     0m0.004s
-Current date and time: Sun Aug 18 04:16:47 PM EDT 2024
-Fedora 40 - x86_64                                                                                                                                                                14 MB/s |  20 MB     00:01
-Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                         2.9 kB/s | 1.4 kB     00:00
-Fedora 40 - x86_64 - Updates                                                                                                                                                     2.2 MB/s | 9.4 MB     00:04
-Dependencies resolved.
-Nothing to do.
-Complete!
-The system-upgrade transaction is empty, your system is already up-to-date.
-
-real    0m12.706s
-user    0m0.007s
-sys     0m0.016s
-Error: system is not ready for upgrade
-
-real    0m0.191s
-user    0m0.006s
-sys     0m0.017s
-kushal@kusfedoravm:~$ sudo echo "Current date and time: $(date)"; free -h; df -h; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot;
-Current date and time: Sun Aug 18 04:17:55 PM EDT 2024
-               total        used        free      shared  buff/cache   available
-Mem:           7.7Gi       855Mi       5.8Gi        10Mi       1.3Gi       6.9Gi
-Swap:          7.7Gi          0B       7.7Gi
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda3        31G  4.4G   26G  15% /
-devtmpfs        4.0M     0  4.0M   0% /dev
-tmpfs           3.9G     0  3.9G   0% /dev/shm
-efivarfs        128M  6.8K  128M   1% /sys/firmware/efi/efivars
-tmpfs           1.6G  1.1M  1.6G   1% /run
-tmpfs           3.9G  8.0K  3.9G   1% /tmp
-/dev/sda3        31G  4.4G   26G  15% /home
-/dev/sda2       974M  335M  572M  37% /boot
-/dev/sda1       599M   20M  580M   4% /boot/efi
-tmpfs           794M   88K  794M   1% /run/user/42
-tmpfs           794M   72K  794M   1% /run/user/1000
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.573 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.480 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.405 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.342 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.382 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.347 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.483 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.351 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.395 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.375 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.426 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.417 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.347 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.372 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.418 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.420 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.408 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.393 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.389 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.352 ms
-
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19471ms
-rtt min/avg/max/mdev = 0.342/0.403/0.573/0.054 ms
-
-real    0m35.109s
-user    0m0.001s
-sys     0m0.004s
-PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.480 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.495 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.415 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.479 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.482 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.445 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.401 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.464 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.347 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.372 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.442 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.399 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.353 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.522 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.419 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.454 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.457 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.369 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.424 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.638 ms
-
---- kalimati.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19447ms
-rtt min/avg/max/mdev = 0.347/0.442/0.638/0.065 ms
-
-real    0m32.513s
-user    0m0.002s
-sys     0m0.003s
-PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.562 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.459 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.332 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.346 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.474 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.441 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.321 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.416 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.322 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.421 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.399 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.584 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.416 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.431 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.433 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.379 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.386 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.435 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.543 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.529 ms
-
---- colorado.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19438ms
-rtt min/avg/max/mdev = 0.321/0.431/0.584/0.075 ms
-
-real    0m20.480s
-user    0m0.001s
-sys     0m0.003s
-Current date and time: Sun Aug 18 04:19:23 PM EDT 2024
-Fedora 40 - x86_64                                                                                                                                                               244 kB/s |  28 kB     00:00
-Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                          15 kB/s | 989  B     00:00
-Fedora 40 - x86_64 - Updates                                                                                                                                                     183 kB/s |  26 kB     00:00
-Dependencies resolved.
-Nothing to do.
-Complete!
-The system-upgrade transaction is empty, your system is already up-to-date.
-
-real    0m1.278s
-user    0m0.007s
-sys     0m0.015s
-Error: system is not ready for upgrade
-
-real    0m0.181s
-user    0m0.006s
-sys     0m0.016s
-kushal@kusfedoravm:~$ time traceroute pcna.duckdns.org
-traceroute to pcna.duckdns.org (70.104.195.206), 30 hops max, 60 byte packets
- 1  pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206)  0.648 ms  0.799 ms  0.977 ms
-
-real    0m3.050s
-user    0m0.000s
-sys     0m0.003s
-kushal@kusfedoravm:~$ time traceroute colorado.duckdns.org
-traceroute to colorado.duckdns.org (70.104.195.206), 30 hops max, 60 byte packets
- 1  pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206)  0.600 ms  0.916 ms  0.819 ms
-
-real    0m7.215s
-user    0m0.000s
-sys     0m0.003s
-kushal@kusfedoravm:~$ time traceroute kalimati.duckdns.org
-traceroute to kalimati.duckdns.org (70.104.195.206), 30 hops max, 60 byte packets
- 1  pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206)  0.637 ms  0.729 ms  0.810 ms
-
-real    0m2.042s
-user    0m0.002s
-sys     0m0.001s
-kushal@kusfedoravm:~$ time traceroute queenslibrary.org
-traceroute to queenslibrary.org (63.247.174.134), 30 hops max, 60 byte packets
- 1  _gateway (192.168.0.1)  0.429 ms  0.628 ms  0.806 ms
- 2  lo0-100.NRFLVA-VFTTP-309.verizon-gni.net (70.104.193.1)  10.698 ms  10.717 ms  10.671 ms
- 3  100.41.25.86 (100.41.25.86)  17.043 ms  17.030 ms 100.41.25.84 (100.41.25.84)  12.982 ms
- 4  * * *
- 5  ash-b2-link.ip.twelve99.net (80.239.135.178)  22.503 ms  20.072 ms  19.269 ms
- 6  rest-bb1-link.ip.twelve99.net (62.115.123.122)  21.703 ms rest-bb1-link.ip.twelve99.net (62.115.138.191)  10.303 ms ash-bb2-link.ip.twelve99.net (62.115.123.124)  18.573 ms
- 7  nyk-bb2-link.ip.twelve99.net (62.115.136.200)  20.964 ms  20.103 ms nyk-bb1-link.ip.twelve99.net (62.115.141.245)  24.064 ms
- 8  nyk-b7-link.ip.twelve99.net (62.115.143.13)  20.898 ms nyk-b7-link.ip.twelve99.net (62.115.143.11)  24.058 ms nyk-b7-link.ip.twelve99.net (62.115.143.13)  23.190 ms
- 9  cscholdings-ic-321220.ip.twelve99-cust.net (62.115.153.105)  22.368 ms  20.754 ms  23.137 ms
-10  64.15.5.81 (64.15.5.81)  23.896 ms 64.15.5.83 (64.15.5.83)  21.447 ms 64.15.4.231 (64.15.4.231)  26.226 ms
-11  64.15.3.147 (64.15.3.147)  26.996 ms  26.191 ms  24.358 ms
-12  * * *
-13  * * *
-14  63.117.227.2 (63.117.227.2)  20.924 ms  17.729 ms  21.656 ms
-15  * * *
-16  * * *
-17  * * *
-18  * * *
-19  * * *
-20  * * *
-21  * * *
-22  * * *
-23  * * *
-24  * * *
-25  * * *
-26  * * *
-27  * * *
-28  * * *
-29  * * *
-30  * * *
-
-real    0m15.920s
-user    0m0.005s
-sys     0m0.006s
-kushal@kusfedoravm:~$ sudo echo "Current date and time: $(date)"; free -h; df -h; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot;
-Current date and time: Sun Aug 18 04:22:26 PM EDT 2024
-               total        used        free      shared  buff/cache   available
-Mem:           7.7Gi       852Mi       5.8Gi        10Mi       1.3Gi       6.9Gi
-Swap:          7.7Gi          0B       7.7Gi
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda3        31G  4.4G   26G  15% /
-devtmpfs        4.0M     0  4.0M   0% /dev
-tmpfs           3.9G     0  3.9G   0% /dev/shm
-efivarfs        128M  6.8K  128M   1% /sys/firmware/efi/efivars
-tmpfs           1.6G  1.1M  1.6G   1% /run
-tmpfs           3.9G  8.0K  3.9G   1% /tmp
-/dev/sda3        31G  4.4G   26G  15% /home
-/dev/sda2       974M  335M  572M  37% /boot
-/dev/sda1       599M   20M  580M   4% /boot/efi
-tmpfs           794M   88K  794M   1% /run/user/42
-tmpfs           794M   72K  794M   1% /run/user/1000
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.411 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.412 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.466 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.454 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.564 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.439 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.450 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.331 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.432 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.375 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.418 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.375 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.524 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.445 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.445 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.439 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.389 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.655 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.455 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=1.72 ms
-
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19447ms
-rtt min/avg/max/mdev = 0.331/0.509/1.718/0.285 ms
-
-real    0m20.483s
-user    0m0.000s
-sys     0m0.005s
-PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.485 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.449 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.388 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.537 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.563 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.439 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.415 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.378 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.545 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.390 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.345 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.384 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.331 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.384 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.571 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.513 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.392 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.391 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.395 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.369 ms
-
---- kalimati.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19454ms
-rtt min/avg/max/mdev = 0.331/0.433/0.571/0.073 ms
-
-real    0m21.567s
-user    0m0.000s
-sys     0m0.005s
-PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.483 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.396 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.480 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.369 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.440 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.345 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.437 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.452 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.386 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.412 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.452 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.388 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.376 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.407 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.366 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.471 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.450 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.404 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.465 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.428 ms
-
---- colorado.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19458ms
-rtt min/avg/max/mdev = 0.345/0.420/0.483/0.040 ms
-
-real    0m22.592s
-user    0m0.000s
-sys     0m0.004s
-Current date and time: Sun Aug 18 04:23:31 PM EDT 2024
-Fedora 40 - x86_64                                                                                                                                                               255 kB/s |  28 kB     00:00
-Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                          16 kB/s | 989  B     00:00
-Fedora 40 - x86_64 - Updates                                                                                                                                                     128 kB/s |  26 kB     00:00
-Dependencies resolved.
-Nothing to do.
-Complete!
-The system-upgrade transaction is empty, your system is already up-to-date.
-
-real    0m1.332s
-user    0m0.009s
-sys     0m0.014s
-Error: system is not ready for upgrade
-
-real    0m0.185s
-user    0m0.005s
-sys     0m0.018s
-kushal@kusfedoravm:~$ sudo echo "Current date and time: $(date)"; free -h; df -h; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot;
-[sudo] password for kushal:
-Current date and time: Sun Aug 18 04:48:11 PM EDT 2024
-               total        used        free      shared  buff/cache   available
-Mem:           7.7Gi       858Mi       5.8Gi        10Mi       1.3Gi       6.9Gi
-Swap:          7.7Gi          0B       7.7Gi
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda3        31G  4.4G   26G  15% /
-devtmpfs        4.0M     0  4.0M   0% /dev
-tmpfs           3.9G     0  3.9G   0% /dev/shm
-efivarfs        128M  6.8K  128M   1% /sys/firmware/efi/efivars
-tmpfs           1.6G  1.1M  1.6G   1% /run
-tmpfs           3.9G  8.0K  3.9G   1% /tmp
-/dev/sda3        31G  4.4G   26G  15% /home
-/dev/sda2       974M  335M  572M  37% /boot
-/dev/sda1       599M   20M  580M   4% /boot/efi
-tmpfs           794M   88K  794M   1% /run/user/42
-tmpfs           794M   72K  794M   1% /run/user/1000
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.421 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.490 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.392 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.423 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.456 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.483 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.438 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.444 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.552 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.572 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.651 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.428 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.432 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.541 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.330 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.392 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.363 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.425 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.490 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.382 ms
-
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19463ms
-rtt min/avg/max/mdev = 0.330/0.455/0.651/0.075 ms
-
-real    0m19.505s
-user    0m0.000s
-sys     0m0.005s
-PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.458 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.491 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.383 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.349 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.389 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.491 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.452 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.359 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.425 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.378 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.466 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.502 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.579 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.501 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.397 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.447 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.436 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.383 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.569 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.509 ms
-
---- kalimati.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19467ms
-rtt min/avg/max/mdev = 0.349/0.448/0.579/0.064 ms
-
-real    0m19.520s
-user    0m0.002s
-sys     0m0.003s
-PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.476 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.380 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.431 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.344 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.454 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.717 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.555 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.494 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.653 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.432 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.446 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.432 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.408 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.403 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.575 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.484 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.432 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.425 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.401 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.383 ms
-
---- colorado.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19445ms
-rtt min/avg/max/mdev = 0.344/0.466/0.717/0.091 ms
-
-real    0m19.520s
-user    0m0.004s
-sys     0m0.000s
-Current date and time: Sun Aug 18 04:49:14 PM EDT 2024
-Fedora 40 - x86_64                                                                                                                                                               178 kB/s |  28 kB     00:00
-Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                          14 kB/s | 989  B     00:00
-Fedora 40 - x86_64 - Updates                                                                                                                                                     137 kB/s |  26 kB     00:00
-Dependencies resolved.
-Nothing to do.
-Complete!
-The system-upgrade transaction is empty, your system is already up-to-date.
-
-real    0m1.390s
-user    0m0.007s
-sys     0m0.016s
-Error: system is not ready for upgrade
-
-real    0m0.190s
-user    0m0.006s
-sys     0m0.016s
-kushal@kusfedoravm:~$ client_loop: send disconnect: Connection reset
-PS C:\Users\kushal> ssh kusfedoravm
-kushal@kusfedoravm's password:
-Last login: Sun Aug 18 16:15:35 2024 from fe80::975c:f636:bfb:5026%eth0
-kushal@kusfedoravm:~$ cd ~/bin; cat update_helloworld.sh; ./update_helloworld.sh
-#!/bin/bash
-
-# Define the repository owner and name
-OWNER="kusl"
-REPO="hellorust20240711"
-
-# Fetch the latest release tag including pre-releases using the GitHub API
-LATEST_RELEASE=$(curl -s "https://api.github.com/repos/$OWNER/$REPO/releases" | grep -m 1 "tag_name" | cut -d '"' -f 4)
-if [ -z "$LATEST_RELEASE" ]; then
-    echo "Error: Could not fetch the latest release tag."
-    exit 1
-fi
-echo "Latest release: $LATEST_RELEASE"
-
-# Construct the download URL
-DOWNLOAD_URL="https://github.com/$OWNER/$REPO/releases/download/$LATEST_RELEASE/helloworld"
-echo "Download URL: $DOWNLOAD_URL"
-
-# Download the latest release
-cd ~/bin/
-rm -f helloworld
-wget $DOWNLOAD_URL -O helloworld
-if [ $? -ne 0 ]; then
-    echo "Error: Failed to download the file."
-    exit 1
-fi
-chmod +x helloworld
-./helloworld
-Latest release: 202408082026
-Download URL: https://github.com/kusl/hellorust20240711/releases/download/202408082026/helloworld
-helloworld           100% [==============================================================================================================================================================>]    3.69M   18.09MB/s
-                          [Files: 1  Bytes: 3.69M [5.42MB/s] Redirects: 1  Todo: 0  Errors: 0                                                                                             ]
-Guess the number!
-Remember, you can update your consent by running this application with the --update-consent flag.
-Please input your guess.
-1
-You guessed: 1
-Too small!
-The sum of your guess and the secret number is: 84
-The product of your guess and the secret number is: 83
-The greatest common divisor of your guess and the secret number is: 1
-Please input your guess.
-87
-You guessed: 87
-Too big!
-The sum of your guess and the secret number is: 170
-The product of your guess and the secret number is: 7221
-The greatest common divisor of your guess and the secret number is: 1
-Please input your guess.
-86
-You guessed: 86
-Too big!
-The sum of your guess and the secret number is: 169
-The product of your guess and the secret number is: 7138
-The greatest common divisor of your guess and the secret number is: 1
-Please input your guess.
-85
-You guessed: 85
-Too big!
-The sum of your guess and the secret number is: 168
-The product of your guess and the secret number is: 7055
-The greatest common divisor of your guess and the secret number is: 1
-Please input your guess.
-84
-You guessed: 84
-Too big!
-The sum of your guess and the secret number is: 167
-The product of your guess and the secret number is: 6972
-The greatest common divisor of your guess and the secret number is: 1
-Please input your guess.
-83
-You guessed: 83
-You win!
-Game Statistics:
-Attempts: [1, 87, 86, 85, 84, 83]
-Secret Number: 83
-Guesses: [1, 87, 86, 85, 84, 83]
-All Games History:
-Game 1: Attempts: [12, 95], Secret Number: 95, Guesses: [12, 95]
-Game 2: Attempts: [34, 90], Secret Number: 90, Guesses: [34, 90]
-Game 3: Attempts: [24, 89, 88, 87], Secret Number: 87, Guesses: [24, 89, 88, 87]
-Game 4: Attempts: [68, 55], Secret Number: 55, Guesses: [68, 55]
-Game 5: Attempts: [10, 80, 89], Secret Number: 89, Guesses: [10, 80, 89]
-Game 6: Attempts: [1, 31], Secret Number: 31, Guesses: [1, 31]
-Game 7: Attempts: [1, 87, 86, 85, 84, 83], Secret Number: 83, Guesses: [1, 87, 86, 85, 84, 83]
-Press Enter to exit...
-
-kushal@kusfedoravm:~/bin$ sudo echo "Current date and time: $(date)"; free -h; df -h; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot;
-[sudo] password for kushal:
-Current date and time: Sun Aug 18 09:20:44 PM EDT 2024
-               total        used        free      shared  buff/cache   available
-Mem:           7.7Gi       862Mi       5.8Gi        10Mi       1.4Gi       6.9Gi
-Swap:          7.7Gi          0B       7.7Gi
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda3        31G  4.4G   26G  15% /
-devtmpfs        4.0M     0  4.0M   0% /dev
-tmpfs           3.9G     0  3.9G   0% /dev/shm
-efivarfs        128M  6.8K  128M   1% /sys/firmware/efi/efivars
-tmpfs           1.6G  1.1M  1.6G   1% /run
-tmpfs           3.9G  8.0K  3.9G   1% /tmp
-/dev/sda3        31G  4.4G   26G  15% /home
-/dev/sda2       974M  335M  572M  37% /boot
-/dev/sda1       599M   20M  580M   4% /boot/efi
-tmpfs           794M   88K  794M   1% /run/user/42
-tmpfs           794M   72K  794M   1% /run/user/1000
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.366 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.373 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.458 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.419 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.436 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.332 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.433 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.384 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.482 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.339 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.448 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.412 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.421 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.554 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.982 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.380 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.416 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.501 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.374 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.518 ms
-
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19443ms
-rtt min/avg/max/mdev = 0.332/0.451/0.982/0.134 ms
-
-real    0m19.491s
-user    0m0.000s
-sys     0m0.005s
-PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.534 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.461 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.433 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.456 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.520 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.379 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.448 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.520 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.613 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.477 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.393 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.480 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.361 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.449 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.541 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.517 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.398 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.516 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.550 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.362 ms
-
---- kalimati.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19464ms
-rtt min/avg/max/mdev = 0.361/0.470/0.613/0.067 ms
-
-real    0m19.520s
-user    0m0.000s
-sys     0m0.005s
-PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.400 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.475 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.415 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.441 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.385 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.466 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.574 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.399 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.425 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.423 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.370 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.412 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.508 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.596 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.663 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.580 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.673 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.404 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.393 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.440 ms
-
---- colorado.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19477ms
-rtt min/avg/max/mdev = 0.370/0.472/0.673/0.091 ms
-
-real    0m19.520s
-user    0m0.000s
-sys     0m0.005s
-Current date and time: Sun Aug 18 09:21:46 PM EDT 2024
-Fedora 40 - x86_64                                                                                                                                                               261 kB/s |  28 kB     00:00
-Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                          12 kB/s | 989  B     00:00
-Fedora 40 - x86_64 - Updates                                                                                                                                                     177 kB/s |  26 kB     00:00
-Dependencies resolved.
-Nothing to do.
-Complete!
-The system-upgrade transaction is empty, your system is already up-to-date.
-
-real    0m1.280s
-user    0m0.005s
-sys     0m0.018s
-Error: system is not ready for upgrade
-
-real    0m0.182s
-user    0m0.006s
-sys     0m0.018s
-kushal@kusfedoravm:~/bin$ exit
-logout
-Connection to kusfedoravm closed.
-PS C:\Users\kushal> ssh kusfedoravm
-kushal@kusfedoravm's password:
-Last login: Sun Aug 18 21:20:10 2024 from fe80::975c:f636:bfb:5026%eth0
-kushal@kusfedoravm:~$ sudo echo "Current date and time: $(date)"; free -h; df -h; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot;
-[sudo] password for kushal:
-Current date and time: Mon Aug 19 03:53:05 PM EDT 2024
-               total        used        free      shared  buff/cache   available
-Mem:           7.7Gi       887Mi       5.7Gi        10Mi       1.5Gi       6.9Gi
-Swap:          7.7Gi          0B       7.7Gi
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda3        31G  4.4G   26G  15% /
-devtmpfs        4.0M     0  4.0M   0% /dev
-tmpfs           3.9G     0  3.9G   0% /dev/shm
-efivarfs        128M  6.8K  128M   1% /sys/firmware/efi/efivars
-tmpfs           1.6G  1.1M  1.6G   1% /run
-tmpfs           3.9G  8.0K  3.9G   1% /tmp
-/dev/sda3        31G  4.4G   26G  15% /home
-/dev/sda2       974M  335M  572M  37% /boot
-/dev/sda1       599M   20M  580M   4% /boot/efi
-tmpfs           794M   88K  794M   1% /run/user/42
-tmpfs           794M   72K  794M   1% /run/user/1000
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.369 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.773 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.464 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.521 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.491 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.452 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.592 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.403 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.412 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.341 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.386 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.380 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.433 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.456 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.418 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.383 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.424 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.535 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.473 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.410 ms
-
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19465ms
-rtt min/avg/max/mdev = 0.341/0.455/0.773/0.094 ms
-
-real    0m29.693s
-user    0m0.002s
-sys     0m0.004s
-PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.379 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.445 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.343 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.421 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.392 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.444 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.477 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.513 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.501 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.669 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.328 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.431 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.345 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.344 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.433 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.683 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.393 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.383 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.555 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.403 ms
-
---- kalimati.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19463ms
-rtt min/avg/max/mdev = 0.328/0.444/0.683/0.097 ms
-
-real    0m26.752s
-user    0m0.005s
-sys     0m0.000s
-PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.527 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.538 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.359 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.464 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.425 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.449 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.494 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.420 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.639 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.454 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.365 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.680 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.334 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.618 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.408 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.677 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.414 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.533 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.384 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.638 ms
-
---- colorado.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19453ms
-rtt min/avg/max/mdev = 0.334/0.491/0.680/0.107 ms
-
-real    0m29.761s
-user    0m0.000s
-sys     0m0.005s
-Current date and time: Mon Aug 19 03:54:34 PM EDT 2024
-Fedora 40 - x86_64                                                                                                                                                               257 kB/s |  28 kB     00:00
-Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                         7.6 kB/s | 989  B     00:00
-Fedora 40 - x86_64 - Updates                                                                                                                                                     267 kB/s |  26 kB     00:00
-Fedora 40 - x86_64 - Updates                                                                                                                                                     4.0 MB/s | 3.6 MB     00:00
-Dependencies resolved.
-Nothing to do.
-Complete!
-The system-upgrade transaction is empty, your system is already up-to-date.
-
-real    0m4.046s
-user    0m0.008s
-sys     0m0.015s
-Error: system is not ready for upgrade
-
-real    0m0.182s
-user    0m0.008s
-sys     0m0.014s
-kushal@kusfedoravm:~$ cd ~/bin; cat update_helloworld.sh; ./update_helloworld.sh
-#!/bin/bash
-
-# Define the repository owner and name
-OWNER="kusl"
-REPO="hellorust20240711"
-
-# Fetch the latest release tag including pre-releases using the GitHub API
-LATEST_RELEASE=$(curl -s "https://api.github.com/repos/$OWNER/$REPO/releases" | grep -m 1 "tag_name" | cut -d '"' -f 4)
-if [ -z "$LATEST_RELEASE" ]; then
-    echo "Error: Could not fetch the latest release tag."
-    exit 1
-fi
-echo "Latest release: $LATEST_RELEASE"
-
-# Construct the download URL
-DOWNLOAD_URL="https://github.com/$OWNER/$REPO/releases/download/$LATEST_RELEASE/helloworld"
-echo "Download URL: $DOWNLOAD_URL"
-
-# Download the latest release
-cd ~/bin/
-rm -f helloworld
-wget $DOWNLOAD_URL -O helloworld
-if [ $? -ne 0 ]; then
-    echo "Error: Failed to download the file."
-    exit 1
-fi
-chmod +x helloworld
-./helloworld
-Latest release: 202408082026
-Download URL: https://github.com/kusl/hellorust20240711/releases/download/202408082026/helloworld
-helloworld           100% [==============================================================================================================================================================>]    3.69M   26.26MB/s
-                          [Files: 1  Bytes: 3.69M [7.23MB/s] Redirects: 1  Todo: 0  Errors: 0                                                                                             ]
-Guess the number!
-Remember, you can update your consent by running this application with the --update-consent flag.
-Please input your guess.
-1
-You guessed: 1
-Too small!
-The sum of your guess and the secret number is: 80
-The product of your guess and the secret number is: 79
-The greatest common divisor of your guess and the secret number is: 1
-Please input your guess.
-79
-You guessed: 79
-You win!
-Game Statistics:
-Attempts: [1, 79]
-Secret Number: 79
-Guesses: [1, 79]
-All Games History:
-Game 1: Attempts: [12, 95], Secret Number: 95, Guesses: [12, 95]
-Game 2: Attempts: [34, 90], Secret Number: 90, Guesses: [34, 90]
-Game 3: Attempts: [24, 89, 88, 87], Secret Number: 87, Guesses: [24, 89, 88, 87]
-Game 4: Attempts: [68, 55], Secret Number: 55, Guesses: [68, 55]
-Game 5: Attempts: [10, 80, 89], Secret Number: 89, Guesses: [10, 80, 89]
-Game 6: Attempts: [1, 31], Secret Number: 31, Guesses: [1, 31]
-Game 7: Attempts: [1, 87, 86, 85, 84, 83], Secret Number: 83, Guesses: [1, 87, 86, 85, 84, 83]
-Game 8: Attempts: [1, 79], Secret Number: 79, Guesses: [1, 79]
-Press Enter to exit...
-
-kushal@kusfedoravm:~/bin$ exit
-logout
-Connection to kusfedoravm closed.
-PS C:\Users\kushal> ssh kusfedoravm
-kushal@kusfedoravm's password:
-Last login: Mon Aug 19 15:53:01 2024 from fe80::975c:f636:bfb:5026%eth0
-kushal@kusfedoravm:~$ sudo echo "Current date and time: $(date)"; free -h; df -h; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot;
-[sudo] password for kushal:
-Current date and time: Tue Aug 20 05:43:02 PM EDT 2024
-               total        used        free      shared  buff/cache   available
-Mem:           7.7Gi       892Mi       5.5Gi        10Mi       1.6Gi       6.9Gi
-Swap:          7.7Gi          0B       7.7Gi
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda3        31G  4.4G   26G  15% /
-devtmpfs        4.0M     0  4.0M   0% /dev
-tmpfs           3.9G     0  3.9G   0% /dev/shm
-efivarfs        128M  6.8K  128M   1% /sys/firmware/efi/efivars
-tmpfs           1.6G  1.1M  1.6G   1% /run
-tmpfs           3.9G  8.0K  3.9G   1% /tmp
-/dev/sda3        31G  4.4G   26G  15% /home
-/dev/sda2       974M  335M  572M  37% /boot
-/dev/sda1       599M   20M  580M   4% /boot/efi
-tmpfs           794M   88K  794M   1% /run/user/42
-tmpfs           794M   72K  794M   1% /run/user/1000
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.533 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.457 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.376 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.368 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.416 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.339 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.366 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.365 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.401 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.450 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=1.36 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.360 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.381 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.381 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.396 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.330 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.507 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.451 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.425 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.306 ms
-
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19469ms
-rtt min/avg/max/mdev = 0.306/0.448/1.357/0.215 ms
-
-real    0m19.511s
-user    0m0.003s
-sys     0m0.003s
-PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.398 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.382 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.484 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.581 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.433 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.386 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.379 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.336 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.350 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.598 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.510 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.417 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.391 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.459 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.434 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.389 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.509 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.372 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.475 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.513 ms
-
---- kalimati.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19476ms
-rtt min/avg/max/mdev = 0.336/0.439/0.598/0.072 ms
-
-real    0m19.521s
-user    0m0.000s
-sys     0m0.005s
-PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.454 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.417 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.421 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.466 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.380 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.463 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.452 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.445 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.421 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.390 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.381 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.410 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.647 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.307 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.401 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.504 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.472 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.573 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.351 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.367 ms
-
---- colorado.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19481ms
-rtt min/avg/max/mdev = 0.307/0.436/0.647/0.074 ms
-
-real    0m19.520s
-user    0m0.003s
-sys     0m0.002s
-Current date and time: Tue Aug 20 05:44:05 PM EDT 2024
-Fedora 40 - x86_64                                                                                                                                                                70 kB/s |  28 kB     00:00
-Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                          10 kB/s | 989  B     00:00
-Fedora 40 - x86_64 - Updates                                                                                                                                                     261 kB/s |  26 kB     00:00
-Fedora 40 - x86_64 - Updates                                                                                                                                                     3.1 MB/s | 4.1 MB     00:01
-Dependencies resolved.
-=================================================================================================================================================================================================================
- Package                                                      Architecture                               Version                                              Repository                                    Size
-=================================================================================================================================================================================================================
-Installing:
- kernel                                                       x86_64                                     6.10.5-200.fc40                                      updates                                      176 k
- kernel-core                                                  x86_64                                     6.10.5-200.fc40                                      updates                                       17 M
- kernel-modules                                               x86_64                                     6.10.5-200.fc40                                      updates                                       63 M
- kernel-modules-core                                          x86_64                                     6.10.5-200.fc40                                      updates                                       38 M
- kernel-modules-extra                                         x86_64                                     6.10.5-200.fc40                                      updates                                      2.9 M
-Upgrading:
- dnf                                                          noarch                                     4.21.1-1.fc40                                        updates                                      475 k
- dnf-data                                                     noarch                                     4.21.1-1.fc40                                        updates                                       39 k
- dnf-plugins-core                                             noarch                                     4.9.0-1.fc40                                         updates                                       41 k
- fpaste                                                       noarch                                     0.5.0.0-1.fc40                                       updates                                       34 k
- libdnf                                                       x86_64                                     0.73.3-1.fc40                                        updates                                      698 k
- librepo                                                      x86_64                                     1.18.1-1.fc40                                        updates                                       99 k
- mesa-dri-drivers                                             x86_64                                     24.1.6-1.fc40                                        updates                                       26 M
- mesa-filesystem                                              x86_64                                     24.1.6-1.fc40                                        updates                                       21 k
- mesa-libEGL                                                  x86_64                                     24.1.6-1.fc40                                        updates                                      140 k
- mesa-libGL                                                   x86_64                                     24.1.6-1.fc40                                        updates                                      176 k
- mesa-libgbm                                                  x86_64                                     24.1.6-1.fc40                                        updates                                       48 k
- mesa-libglapi                                                x86_64                                     24.1.6-1.fc40                                        updates                                       51 k
- mesa-va-drivers                                              x86_64                                     24.1.6-1.fc40                                        updates                                      4.0 M
- mesa-vulkan-drivers                                          x86_64                                     24.1.6-1.fc40                                        updates                                       17 M
- podman                                                       x86_64                                     5:5.2.1-1.fc40                                       updates                                       15 M
- python3-dnf                                                  noarch                                     4.21.1-1.fc40                                        updates                                      621 k
- python3-dnf-plugins-core                                     noarch                                     4.9.0-1.fc40                                         updates                                      321 k
- python3-hawkey                                               x86_64                                     0.73.3-1.fc40                                        updates                                      105 k
- python3-libdnf                                               x86_64                                     0.73.3-1.fc40                                        updates                                      847 k
- yum                                                          noarch                                     4.21.1-1.fc40                                        updates                                       37 k
-Removing:
- kernel                                                       x86_64                                     6.9.12-200.fc40                                      @updates                                       0
- kernel-core                                                  x86_64                                     6.9.12-200.fc40                                      @updates                                      69 M
- kernel-modules                                               x86_64                                     6.9.12-200.fc40                                      @updates                                      61 M
- kernel-modules-core                                          x86_64                                     6.9.12-200.fc40                                      @updates                                      36 M
- kernel-modules-extra                                         x86_64                                     6.9.12-200.fc40                                      @updates                                     2.6 M
-
-Transaction Summary
-=================================================================================================================================================================================================================
-Install   5 Packages
-Upgrade  20 Packages
-Remove    5 Packages
-
-Total download size: 187 M
-DNF will only download packages, install gpg keys, and check the transaction.
-Downloading Packages:
-(1/25): kernel-6.10.5-200.fc40.x86_64.rpm                                                                                                                                        613 kB/s | 176 kB     00:00
-(2/25): kernel-core-6.10.5-200.fc40.x86_64.rpm                                                                                                                                   5.0 MB/s |  17 MB     00:03
-(3/25): kernel-modules-6.10.5-200.fc40.x86_64.rpm                                                                                                                                 12 MB/s |  63 MB     00:05
-(4/25): dnf-4.21.1-1.fc40.noarch.rpm                                                                                                                                             269 kB/s | 475 kB     00:01
-(5/25): dnf-data-4.21.1-1.fc40.noarch.rpm                                                                                                                                         65 kB/s |  39 kB     00:00
-(6/25): dnf-plugins-core-4.9.0-1.fc40.noarch.rpm                                                                                                                                  72 kB/s |  41 kB     00:00
-(7/25): fpaste-0.5.0.0-1.fc40.noarch.rpm                                                                                                                                          50 kB/s |  34 kB     00:00
-(8/25): kernel-modules-core-6.10.5-200.fc40.x86_64.rpm                                                                                                                           3.8 MB/s |  38 MB     00:09
-(9/25): libdnf-0.73.3-1.fc40.x86_64.rpm                                                                                                                                          596 kB/s | 698 kB     00:01
-(10/25): kernel-modules-extra-6.10.5-200.fc40.x86_64.rpm                                                                                                                         424 kB/s | 2.9 MB     00:06
-(11/25): librepo-1.18.1-1.fc40.x86_64.rpm                                                                                                                                        354 kB/s |  99 kB     00:00
-(12/25): mesa-filesystem-24.1.6-1.fc40.x86_64.rpm                                                                                                                                 41 kB/s |  21 kB     00:00
-(13/25): mesa-libEGL-24.1.6-1.fc40.x86_64.rpm                                                                                                                                    163 kB/s | 140 kB     00:00
-(14/25): mesa-libGL-24.1.6-1.fc40.x86_64.rpm                                                                                                                                     230 kB/s | 176 kB     00:00
-(15/25): mesa-libgbm-24.1.6-1.fc40.x86_64.rpm                                                                                                                                    119 kB/s |  48 kB     00:00
-(16/25): mesa-libglapi-24.1.6-1.fc40.x86_64.rpm                                                                                                                                  108 kB/s |  51 kB     00:00
-(17/25): mesa-dri-drivers-24.1.6-1.fc40.x86_64.rpm                                                                                                                               4.8 MB/s |  26 MB     00:05
-(18/25): mesa-vulkan-drivers-24.1.6-1.fc40.x86_64.rpm                                                                                                                            2.8 MB/s |  17 MB     00:06
-(19/25): python3-dnf-4.21.1-1.fc40.noarch.rpm                                                                                                                                    478 kB/s | 621 kB     00:01
-(20/25): podman-5.2.1-1.fc40.x86_64.rpm                                                                                                                                          3.3 MB/s |  15 MB     00:04
-(21/25): python3-dnf-plugins-core-4.9.0-1.fc40.noarch.rpm                                                                                                                        460 kB/s | 321 kB     00:00
-(22/25): mesa-va-drivers-24.1.6-1.fc40.x86_64.rpm                                                                                                                                480 kB/s | 4.0 MB     00:08
-(23/25): python3-hawkey-0.73.3-1.fc40.x86_64.rpm                                                                                                                                 794 kB/s | 105 kB     00:00
-(24/25): python3-libdnf-0.73.3-1.fc40.x86_64.rpm                                                                                                                                 5.1 MB/s | 847 kB     00:00
-(25/25): yum-4.21.1-1.fc40.noarch.rpm                                                                                                                                            419 kB/s |  37 kB     00:00
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Total                                                                                                                                                                            9.1 MB/s | 187 MB     00:20
-Running transaction check
-Transaction check succeeded.
-Running transaction test
-Transaction test succeeded.
-Complete!
-Transaction saved to /var/lib/dnf/system-upgrade/system-upgrade-transaction.json.
-Download complete! Use 'dnf offline-upgrade reboot' to start the upgrade.
-To remove cached metadata and transaction use 'dnf offline-upgrade clean'
-The downloaded packages were saved in cache until the next successful transaction.
-You can remove cached packages by executing 'dnf clean packages'.
-
-real    0m27.351s
-user    0m0.009s
-sys     0m0.020s
-
-Broadcast message from root@kusfedoravm on pts/1 (Tue 2024-08-20 17:44:32 EDT):
-
-The system will reboot now!
-
-Connection to kusfedoravm closed by remote host.
-Connection to kusfedoravm closed.
-PS C:\Users\kushal> ssh kusfedoravm
-kushal@kusfedoravm's password:
-Last login: Tue Aug 20 17:42:56 2024 from fe80::975c:f636:bfb:5026%eth0
-kushal@kusfedoravm:~$ sudo echo "Current date and time: $(date)"; free -h; df -h; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot;
-[sudo] password for kushal:
-Current date and time: Tue Aug 20 06:02:03 PM EDT 2024
-               total        used        free      shared  buff/cache   available
-Mem:           7.7Gi       864Mi       6.0Gi        10Mi       1.1Gi       6.9Gi
-Swap:          7.7Gi          0B       7.7Gi
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda3        31G  4.4G   26G  15% /
-devtmpfs        4.0M     0  4.0M   0% /dev
-tmpfs           3.9G     0  3.9G   0% /dev/shm
-efivarfs        128M  6.8K  128M   1% /sys/firmware/efi/efivars
-tmpfs           1.6G  1.1M  1.6G   1% /run
-tmpfs           3.9G  8.0K  3.9G   1% /tmp
-/dev/sda3        31G  4.4G   26G  15% /home
-/dev/sda2       974M  336M  571M  38% /boot
-/dev/sda1       599M   20M  580M   4% /boot/efi
-tmpfs           794M   88K  794M   1% /run/user/42
-tmpfs           794M   72K  794M   1% /run/user/1000
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.345 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.460 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.679 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.338 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.563 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.440 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=1.08 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.601 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.399 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.394 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.443 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.447 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.421 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.362 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.380 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.511 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.367 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.384 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.353 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.418 ms
-
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19440ms
-rtt min/avg/max/mdev = 0.338/0.469/1.084/0.165 ms
-
-real    0m19.478s
-user    0m0.003s
-sys     0m0.003s
-PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.359 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.359 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.421 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.464 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.364 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.447 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.437 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.490 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.411 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.408 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.416 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.481 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.360 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.455 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.331 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.386 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.414 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.488 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.466 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.325 ms
-
---- kalimati.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19475ms
-rtt min/avg/max/mdev = 0.325/0.414/0.490/0.050 ms
-
-real    0m19.520s
-user    0m0.000s
-sys     0m0.005s
-PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.612 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.530 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.431 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.354 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.718 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.528 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.538 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.486 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.523 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.535 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.470 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.623 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.576 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.696 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.347 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.426 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.473 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.363 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.407 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.444 ms
-
---- colorado.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19479ms
-rtt min/avg/max/mdev = 0.347/0.504/0.718/0.102 ms
-
-real    0m19.520s
-user    0m0.000s
-sys     0m0.005s
-Current date and time: Tue Aug 20 06:05:16 PM EDT 2024
-Fedora 40 - x86_64                                                                                                                                                                12 MB/s |  20 MB     00:01
-Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                         2.3 kB/s | 1.4 kB     00:00
-Fedora 40 - x86_64 - Updates                                                                                                                                                     2.6 MB/s | 9.4 MB     00:03
-Dependencies resolved.
-Nothing to do.
-Complete!
-The system-upgrade transaction is empty, your system is already up-to-date.
-
-real    0m12.519s
-user    0m0.013s
-sys     0m0.012s
-Error: system is not ready for upgrade
-
-real    0m0.186s
-user    0m0.010s
-sys     0m0.012s
-kushal@kusfedoravm:~$ client_loop: send disconnect: Connection reset
-PS C:\Users\kushal> ssh kusfedoravm
-kushal@kusfedoravm's password:
-Last login: Tue Aug 20 18:01:46 2024 from fe80::975c:f636:bfb:5026%eth0
-kushal@kusfedoravm:~$ sudo echo "Current date and time: $(date)"; free -h; df -h; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot;
-[sudo] password for kushal:
-Current date and time: Wed Aug 21 04:54:09 PM EDT 2024
-               total        used        free      shared  buff/cache   available
-Mem:           7.7Gi       899Mi       5.6Gi        10Mi       1.6Gi       6.9Gi
-Swap:          7.7Gi          0B       7.7Gi
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda3        31G  4.5G   26G  15% /
-devtmpfs        4.0M     0  4.0M   0% /dev
-tmpfs           3.9G     0  3.9G   0% /dev/shm
-efivarfs        128M  6.8K  128M   1% /sys/firmware/efi/efivars
-tmpfs           1.6G  1.1M  1.6G   1% /run
-tmpfs           3.9G  8.0K  3.9G   1% /tmp
-/dev/sda3        31G  4.5G   26G  15% /home
-/dev/sda2       974M  336M  571M  38% /boot
-/dev/sda1       599M   20M  580M   4% /boot/efi
-tmpfs           794M   88K  794M   1% /run/user/42
-tmpfs           794M   72K  794M   1% /run/user/1000
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.455 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.424 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.361 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.422 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.437 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.474 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.452 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.479 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.490 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.554 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.389 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.500 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.402 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.442 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.537 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.385 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.478 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.451 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.463 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.387 ms
-
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19417ms
-rtt min/avg/max/mdev = 0.361/0.449/0.554/0.049 ms
-
-real    0m19.460s
-user    0m0.000s
-sys     0m0.005s
-PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.342 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.435 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.439 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.353 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.340 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.443 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.469 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.512 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.482 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.468 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.305 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.397 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.396 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.361 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.530 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.423 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.407 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.363 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.422 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.391 ms
-
---- kalimati.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19485ms
-rtt min/avg/max/mdev = 0.305/0.413/0.530/0.058 ms
-
-real    0m19.520s
-user    0m0.002s
-sys     0m0.003s
-PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.376 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.310 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.432 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.414 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.333 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.448 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.907 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.471 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.440 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.600 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.417 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.615 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.489 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.522 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.615 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.310 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.642 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.442 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.556 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.414 ms
-
---- colorado.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19478ms
-rtt min/avg/max/mdev = 0.310/0.487/0.907/0.136 ms
-
-real    0m19.520s
-user    0m0.000s
-sys     0m0.005s
-Current date and time: Wed Aug 21 04:55:12 PM EDT 2024
-Fedora 40 - x86_64                                                                                                                                                               139 kB/s |  28 kB     00:00
-Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                         5.5 kB/s | 989  B     00:00
-Fedora 40 - x86_64 - Updates                                                                                                                                                     151 kB/s |  26 kB     00:00
-Fedora 40 - x86_64 - Updates                                                                                                                                                     5.9 MB/s | 3.6 MB     00:00
-Dependencies resolved.
-=================================================================================================================================================================================================================
- Package                                             Architecture                                   Version                                                Repository                                       Size
-=================================================================================================================================================================================================================
-Upgrading:
- btrfs-progs                                         x86_64                                         6.10.1-1.fc40                                          updates                                         1.2 M
- rpcbind                                             x86_64                                         1.2.7-1.fc40                                           updates                                          58 k
-
-Transaction Summary
-=================================================================================================================================================================================================================
-Upgrade  2 Packages
-
-Total download size: 1.3 M
-DNF will only download packages, install gpg keys, and check the transaction.
-Downloading Packages:
-(1/2): rpcbind-1.2.7-1.fc40.x86_64.rpm                                                                                                                                           536 kB/s |  58 kB     00:00
-(2/2): btrfs-progs-6.10.1-1.fc40.x86_64.rpm                                                                                                                                      5.6 MB/s | 1.2 MB     00:00
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Total                                                                                                                                                                            3.7 MB/s | 1.3 MB     00:00
-Running transaction check
-Transaction check succeeded.
-Running transaction test
-Transaction test succeeded.
-Complete!
-Transaction saved to /var/lib/dnf/system-upgrade/system-upgrade-transaction.json.
-Download complete! Use 'dnf offline-upgrade reboot' to start the upgrade.
-To remove cached metadata and transaction use 'dnf offline-upgrade clean'
-The downloaded packages were saved in cache until the next successful transaction.
-You can remove cached packages by executing 'dnf clean packages'.
-
-real    0m5.313s
-user    0m0.006s
-sys     0m0.018s
-
-Broadcast message from root@kusfedoravm on pts/1 (Wed 2024-08-21 16:55:17 EDT):
-
-The system will reboot now!
-
-Connection to kusfedoravm closed by remote host.
-Connection to kusfedoravm closed.
-PS C:\Users\kushal> ssh kusfedoravm
-kushal@kusfedoravm's password:
-Last login: Wed Aug 21 16:44:43 2024 from fe80::975c:f636:bfb:5026%eth0
-kushal@kusfedoravm:~$ sudo echo "Current date and time: $(date)"; free -h; df -h; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot;
-[sudo] password for kushal:
-Current date and time: Wed Aug 21 05:33:47 PM EDT 2024
-               total        used        free      shared  buff/cache   available
-Mem:           7.7Gi       858Mi       6.0Gi        10Mi       1.1Gi       6.9Gi
-Swap:          7.7Gi          0B       7.7Gi
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda3        31G  4.4G   26G  15% /
-devtmpfs        4.0M     0  4.0M   0% /dev
-tmpfs           3.9G     0  3.9G   0% /dev/shm
-efivarfs        128M  6.8K  128M   1% /sys/firmware/efi/efivars
-tmpfs           1.6G  1.1M  1.6G   1% /run
-tmpfs           3.9G  8.0K  3.9G   1% /tmp
-/dev/sda3        31G  4.4G   26G  15% /home
-/dev/sda2       974M  336M  571M  38% /boot
-/dev/sda1       599M   20M  580M   4% /boot/efi
-tmpfs           794M   88K  794M   1% /run/user/42
-tmpfs           794M   72K  794M   1% /run/user/1000
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.516 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.404 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.392 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.376 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.496 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.474 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.473 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.482 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.664 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.597 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.677 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.500 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.446 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.396 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.329 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.419 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.466 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.423 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.490 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.501 ms
-
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19449ms
-rtt min/avg/max/mdev = 0.329/0.476/0.677/0.086 ms
-
-real    0m19.496s
-user    0m0.003s
-sys     0m0.003s
-PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.370 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.407 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.475 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.570 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.457 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.430 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.360 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.381 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.395 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.405 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.344 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.354 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.413 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.380 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.389 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.443 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.382 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.368 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.389 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.361 ms
-
---- kalimati.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19476ms
-rtt min/avg/max/mdev = 0.344/0.403/0.570/0.051 ms
-
-real    0m19.520s
-user    0m0.001s
-sys     0m0.003s
-PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.396 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.398 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.359 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.371 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.554 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.508 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=3.45 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.430 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.418 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.476 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.396 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.406 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.452 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.456 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.432 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.431 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.382 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.615 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.434 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.458 ms
-
---- colorado.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19477ms
-rtt min/avg/max/mdev = 0.359/0.591/3.448/0.658 ms
-
-real    0m19.520s
-user    0m0.000s
-sys     0m0.005s
-Current date and time: Wed Aug 21 05:34:51 PM EDT 2024
-Fedora 40 - x86_64                                                                                                                                                               769 kB/s |  20 MB     00:26
-Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                         5.6 kB/s | 1.4 kB     00:00
-Fedora 40 - x86_64 - Updates                                                                                                                                                     9.3 MB/s | 9.5 MB     00:01
-Dependencies resolved.
-Nothing to do.
-Complete!
-The system-upgrade transaction is empty, your system is already up-to-date.
-
-real    0m34.173s
-user    0m0.011s
-sys     0m0.018s
-Error: system is not ready for upgrade
-
-real    0m0.196s
-user    0m0.008s
-sys     0m0.016s
-kushal@kusfedoravm:~$ client_loop: send disconnect: Connection reset
-PS C:\Users\kushal> ssh kusfedoravm
-kushal@kusfedoravm's password:
-Last login: Wed Aug 21 17:33:44 2024 from fe80::975c:f636:bfb:5026%eth0
-kushal@kusfedoravm:~$ sudo echo "Current date and time: $(date)"; free -h; df -h; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot;
-[sudo] password for kushal:
-Current date and time: Thu Aug 22 05:16:03 PM EDT 2024
-               total        used        free      shared  buff/cache   available
-Mem:           7.7Gi       884Mi       5.6Gi        10Mi       1.5Gi       6.9Gi
-Swap:          7.7Gi          0B       7.7Gi
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda3        31G  4.5G   26G  15% /
-devtmpfs        4.0M     0  4.0M   0% /dev
-tmpfs           3.9G     0  3.9G   0% /dev/shm
-efivarfs        128M  6.8K  128M   1% /sys/firmware/efi/efivars
-tmpfs           1.6G  1.1M  1.6G   1% /run
-tmpfs           3.9G  8.0K  3.9G   1% /tmp
-/dev/sda3        31G  4.5G   26G  15% /home
-/dev/sda2       974M  336M  571M  38% /boot
-/dev/sda1       599M   20M  580M   4% /boot/efi
-tmpfs           794M   88K  794M   1% /run/user/42
-tmpfs           794M   72K  794M   1% /run/user/1000
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.421 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.431 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.527 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.491 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.427 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.378 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.393 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.397 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.378 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.448 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.428 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.592 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.343 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.417 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.501 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.413 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.786 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.386 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.573 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.375 ms
-
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19465ms
-rtt min/avg/max/mdev = 0.343/0.455/0.786/0.100 ms
-
-real    0m19.509s
-user    0m0.000s
-sys     0m0.005s
-PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.459 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.397 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.350 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.428 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.510 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.699 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.469 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.298 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.389 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.497 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.544 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.487 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.459 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.466 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.437 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.494 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.410 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.365 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.489 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.333 ms
-
---- kalimati.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19480ms
-rtt min/avg/max/mdev = 0.298/0.449/0.699/0.085 ms
-
-real    0m19.520s
-user    0m0.002s
-sys     0m0.003s
-PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.377 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.517 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.550 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.521 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.574 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.332 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.367 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.358 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.369 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.430 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.434 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.370 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.375 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.428 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.352 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.474 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.399 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.541 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.361 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.453 ms
-
---- colorado.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19476ms
-rtt min/avg/max/mdev = 0.332/0.429/0.574/0.073 ms
-
-real    0m19.520s
-user    0m0.000s
-sys     0m0.004s
-Current date and time: Thu Aug 22 05:17:05 PM EDT 2024
-Fedora 40 - x86_64                                                                                                                                                               230 kB/s |  29 kB     00:00
-Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                         8.5 kB/s | 989  B     00:00
-Fedora 40 - x86_64 - Updates                                                                                                                                                     298 kB/s |  27 kB     00:00
-Fedora 40 - x86_64 - Updates                                                                                                                                                     2.1 MB/s | 3.5 MB     00:01
-Dependencies resolved.
-=================================================================================================================================================================================================================
- Package                                                 Architecture                                  Version                                              Repository                                      Size
-=================================================================================================================================================================================================================
-Upgrading:
- epiphany-runtime                                        x86_64                                        1:46.3-1.fc40                                        updates                                        835 k
-
-Transaction Summary
-=================================================================================================================================================================================================================
-Upgrade  1 Package
-
-Total download size: 835 k
-DNF will only download packages, install gpg keys, and check the transaction.
-Downloading Packages:
-epiphany-runtime-46.3-1.fc40.x86_64.rpm                                                                                                                                          2.0 MB/s | 835 kB     00:00
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Total                                                                                                                                                                            1.5 MB/s | 835 kB     00:00
-Running transaction check
-Transaction check succeeded.
-Running transaction test
-Transaction test succeeded.
-Complete!
-Transaction saved to /var/lib/dnf/system-upgrade/system-upgrade-transaction.json.
-Download complete! Use 'dnf offline-upgrade reboot' to start the upgrade.
-To remove cached metadata and transaction use 'dnf offline-upgrade clean'
-The downloaded packages were saved in cache until the next successful transaction.
-You can remove cached packages by executing 'dnf clean packages'.
-
-real    0m5.604s
-user    0m0.007s
-sys     0m0.017s
-
-Broadcast message from root@kusfedoravm on pts/1 (Thu 2024-08-22 17:17:11 EDT):
-
-The system will reboot now!
-
-Connection to kusfedoravm closed by remote host.
-Connection to kusfedoravm closed.
-PS C:\Users\kushal> ssh kusfedoravm
-kushal@kusfedoravm's password:
-Last login: Thu Aug 22 17:16:00 2024 from fe80::975c:f636:bfb:5026%eth0
-kushal@kusfedoravm:~$
+Loading personal and system profiles took 581ms.
+PS C:\Users\kushal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 22, 2024 5:41:33 PM
+Thursday, August 22, 2024 5:41:33 PM
+[main 6d33a687] add all files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 src/resume/kushal-hada-2024-08-22.pdf
+Thursday, August 22, 2024 5:41:33 PM
+Thursday, August 22, 2024 5:41:33 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Thursday, August 22, 2024 5:41:33 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.1 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 233ms
+Done in 1.10s.
+Thursday, August 22, 2024 5:41:35 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, August 22, 2024 5:41:35 PM
+[main 4e13863] build application
+ 2 files changed, 3598 insertions(+), 16338 deletions(-)
+Thursday, August 22, 2024 5:41:35 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, August 22, 2024 5:41:36 PM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 11.32 KiB | 1.26 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   26e2af0..4e13863  main -> main
+Thursday, August 22, 2024 5:41:37 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> date; scoop status; date; scoop bucket rm main; date; scoop bucket add main; date; scoop bucket rm extras; date; scoop bucket add extras; date; scoop status; date; scoop update; date; scoop update *; date; scoop cache show; date; scoop cache rm *; date; scoop status; date;
+
+Thursday, August 22, 2024 5:41:57 PM
+WARN  Scoop bucket(s) out of date. Run 'scoop update' to get the latest changes.
+Thursday, August 22, 2024 5:41:59 PM
+The main bucket was removed successfully.
+Thursday, August 22, 2024 5:41:59 PM
+Checking repo... OK
+The main bucket was added successfully.
+Thursday, August 22, 2024 5:42:06 PM
+The extras bucket was removed successfully.
+Thursday, August 22, 2024 5:42:06 PM
+Checking repo... OK
+The extras bucket was added successfully.
+Thursday, August 22, 2024 5:42:15 PM
+Scoop is up to date.
+
+Name                 : dapr-cli
+Installed Version    : 1.14.0
+Latest Version       : 1.14.1
+Missing Dependencies :
+Info                 :
+
+
+Name                 : nodejs-lts
+Installed Version    : 20.16.0
+Latest Version       : 20.17.0
+Missing Dependencies :
+Info                 :
+
+
+Name                 : podman
+Installed Version    : 5.2.1
+Latest Version       : 5.2.2
+Missing Dependencies :
+Info                 :
+
+Thursday, August 22, 2024 5:42:16 PM
+Updating Scoop...
+Updating Buckets...
+Scoop was updated successfully!
+Thursday, August 22, 2024 5:42:21 PM
+dapr-cli: 1.14.0 -> 1.14.1
+nodejs-lts: 20.16.0 -> 20.17.0
+podman: 5.2.1 -> 5.2.2
+Updating 3 outdated apps:
+Updating 'dapr-cli' (1.14.0 -> 1.14.1)
+Downloading new version
+dapr_windows_amd64.zip (35.3 MB) [============================================================================================================================================================================================================================================] 100%
+Checking hash of dapr_windows_amd64.zip ... ok.
+Uninstalling 'dapr-cli' (1.14.0)
+Removing shim 'dapr.shim'.
+Removing shim 'dapr.exe'.
+Unlinking ~\scoop\apps\dapr-cli\current
+Installing 'dapr-cli' (1.14.1) [64bit] from 'main' bucket
+Loading dapr_windows_amd64.zip from cache
+Extracting dapr_windows_amd64.zip ... done.
+Linking ~\scoop\apps\dapr-cli\current => ~\scoop\apps\dapr-cli\1.14.1
+Creating shim for 'dapr'.
+'dapr-cli' (1.14.1) was installed successfully!
+Updating 'nodejs-lts' (20.16.0 -> 20.17.0)
+Downloading new version
+node-v20.17.0-win-x64.7z (18.0 MB) [==========================================================================================================================================================================================================================================] 100%
+Checking hash of node-v20.17.0-win-x64.7z ... ok.
+Uninstalling 'nodejs-lts' (20.16.0)
+Unlinking ~\scoop\apps\nodejs-lts\current
+Removing ~\scoop\apps\nodejs-lts\current\bin from your path.
+Removing ~\scoop\apps\nodejs-lts\current from your path.
+Installing 'nodejs-lts' (20.17.0) [64bit] from 'main' bucket
+Loading node-v20.17.0-win-x64.7z from cache
+Extracting node-v20.17.0-win-x64.7z ... done.
+Linking ~\scoop\apps\nodejs-lts\current => ~\scoop\apps\nodejs-lts\20.17.0
+Adding ~\scoop\apps\nodejs-lts\current\bin to your path.
+Adding ~\scoop\apps\nodejs-lts\current to your path.
+Persisting bin
+Persisting cache
+Running post_install script...done.
+'nodejs-lts' (20.17.0) was installed successfully!
+Updating 'podman' (5.2.1 -> 5.2.2)
+Downloading new version
+podman-5.2.2-setup.exe (30.2 MB) [============================================================================================================================================================================================================================================] 100%
+Checking hash of podman-5.2.2-setup.exe ... ok.
+Uninstalling 'podman' (5.2.1)
+Removing shim 'podman.shim'.
+Removing shim 'podman.exe'.
+Unlinking ~\scoop\apps\podman\current
+Installing 'podman' (5.2.2) [64bit] from 'main' bucket
+Loading podman-5.2.2-setup.exe from cache
+Running installer script...done.
+Linking ~\scoop\apps\podman\current => ~\scoop\apps\podman\5.2.2
+Creating shim for 'podman'.
+'podman' (5.2.2) was installed successfully!
+Thursday, August 22, 2024 5:42:38 PM
+
+Name    : dapr-cli
+Version : 1.14.1
+Length  : 37009422
+
+
+Name    : magic-wormhole-rs
+Version : 0.6.1
+Length  : 10584576
+
+
+Name    : nodejs-lts
+Version : 20.17.0
+Length  : 18898026
+
+
+Name    : podman
+Version : 5.2.2
+Length  : 31707656
+
+Total: 4 files, 93.7 MB
+Thursday, August 22, 2024 5:42:38 PM
+Removing dapr-cli#1.14.1#344d119.zip...
+Removing magic-wormhole-rs#0.6.1#463205b.exe...
+Removing nodejs-lts#20.17.0#6064944.7z...
+Removing podman#5.2.2#3aa733e.exe...
+Deleted: 4 files, 93.7 MB
+Thursday, August 22, 2024 5:42:38 PM
+Scoop is up to date.
+Everything is ok!
+Thursday, August 22, 2024 5:42:39 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, August 22, 2024 5:43:38 PM
+Thursday, August 22, 2024 5:43:38 PM
+On branch main
+nothing to commit, working tree clean
+Thursday, August 22, 2024 5:43:38 PM
+Thursday, August 22, 2024 5:43:38 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Thursday, August 22, 2024 5:43:39 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.1 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 188ms
+Done in 0.98s.
+Thursday, August 22, 2024 5:43:40 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, August 22, 2024 5:43:41 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Thursday, August 22, 2024 5:43:41 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Thursday, August 22, 2024 5:43:42 PM
+Everything up-to-date
+Thursday, August 22, 2024 5:43:42 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> date; c:\src\omnibus.ps1; date;
+
+Thursday, August 22, 2024 5:49:35 PM
+Thursday, August 22, 2024 5:49:35 PM
+home: 127.0.0.1
