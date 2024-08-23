@@ -3169,3 +3169,335 @@ To github.com:fromnepal/fromnepal.github.io.git
 Friday, August 23, 2024 4:35:23 PM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Friday, August 23, 2024 4:35:32 PM
+Friday, August 23, 2024 4:35:32 PM
+On branch main
+nothing to commit, working tree clean
+Friday, August 23, 2024 4:35:32 PM
+Friday, August 23, 2024 4:35:32 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Friday, August 23, 2024 4:35:32 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.1 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 183ms
+Done in 0.98s.
+Friday, August 23, 2024 4:35:33 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, August 23, 2024 4:35:34 PM
+[main 2f6d01b] build application
+ 2 files changed, 90 insertions(+)
+Friday, August 23, 2024 4:35:34 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Friday, August 23, 2024 4:35:35 PM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 622 bytes | 622.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   67b707f..2f6d01b  main -> main
+Friday, August 23, 2024 4:35:35 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C-1VOBfMtf4"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/23/2024  5:47 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C-1VOBfMtf4']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C-1VOBfMtf4
+[Instagram] C-1VOBfMtf4: Setting up session
+[Instagram] C-1VOBfMtf4: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C-1VOBfMtf4: Downloading 1 format(s): dash-477777598481040v+dash-1064576897874123ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t39.25447-16/456166607_420139931087907_4557381435028846363_n.mp4?_nc_cat=100&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMxLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=bOOmTl33hhMQ7kNvgFJmxRA&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYBvs3IsleFENQjZy_Px2HONexPBd2Q-NKXBo33CN4zR_g&oe=66CEE035"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_destannygotmerepoed.fdash-477777598481040v.mp4
+[download] 100% of    2.97MiB in 00:00:00 at 11.69MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t50.33967-16/456238276_809550551383408_5321346572155551420_n.mp4?_nc_cat=106&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMxLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=nIPdk12aj6AQ7kNvgHHMOkp&_nc_ht=scontent-iad3-2.cdninstagram.com&oh=00_AYBKhL7KkskLlkISvQNVlH667rGr6wdV7qaKq57RUgWYYg&oe=66CEF1C9"
+[download] Destination: C:\Temp\yt-dlp\Video_by_destannygotmerepoed.fdash-1064576897874123ad.m4a
+[download] 100% of  115.65KiB in 00:00:00 at 3.96MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_destannygotmerepoed.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_destannygotmerepoed.fdash-477777598481040v.mp4 -i file:C:\Temp\yt-dlp\Video_by_destannygotmerepoed.fdash-1064576897874123ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_destannygotmerepoed.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_destannygotmerepoed.fdash-477777598481040v.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_destannygotmerepoed.fdash-1064576897874123ad.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_destannygotmerepoed.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_destannygotmerepoed.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by destannygotmerepoed" -metadata "date=20240819" -metadata "description=EVERYONE is APPROVED 🇺🇸❗️
+Just come in person and get approved 😜
+
+ACEPTAMOS A TODOS🇲🇽❗️
+ nomas venga en persona ✨
+
+#DESTIN2DRIVE🌻 #femalecarsales #carsaleswoman #carsaleslady #carsaleshumor #carsaleswomanproblems #carsalesspecialfinances⚠️ #badcredit ✅ #nocredit #goodcredit #ITINaccepted‼️ #habloespañol✨" -metadata "synopsis=EVERYONE is APPROVED 🇺🇸❗️
+Just come in person and get approved 😜
+
+ACEPTAMOS A TODOS🇲🇽❗️
+ nomas venga en persona ✨
+
+#DESTIN2DRIVE🌻 #femalecarsales #carsaleswoman #carsaleslady #carsaleshumor #carsaleswomanproblems #carsalesspecialfinances⚠️ #badcredit ✅ #nocredit #goodcredit #ITINaccepted‼️ #habloespañol✨" -metadata "purl=https://www.instagram.com/reel/C-1VOBfMtf4" -metadata "comment=https://www.instagram.com/reel/C-1VOBfMtf4" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_destannygotmerepoed.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_destannygotmerepoed.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by destannygotmerepoed
+    date            : 20240819
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C-1VOBfMtf4
+    description     : EVERYONE is APPROVED 🇺🇸❗️
+                    : Just come in person and get approved 😜
+                    :
+                    : ACEPTAMOS A TODOS🇲🇽❗️
+                    :  nomas venga en persona ✨
+                    :
+                    : #DESTIN2DRIVE🌻 #femalecarsales #carsaleswoman #carsaleslady #carsaleshumor #carsaleswomanproblems #carsalesspecialfinances⚠️ #badcredit ✅ #nocredit #goodcredit #ITINaccepted‼️ #habloespañol✨
+    synopsis        : EVERYONE is APPROVED 🇺🇸❗️
+                    : Just come in person and get approved 😜
+                    :
+                    : ACEPTAMOS A TODOS🇲🇽❗️
+                    :  nomas venga en persona ✨
+                    :
+                    : #DESTIN2DRIVE🌻 #femalecarsales #carsaleswoman #carsaleslady #carsaleshumor #carsaleswomanproblems #carsalesspecialfinances⚠️ #badcredit ✅ #nocredit #goodcredit #ITINaccepted‼️ #habloespañol✨
+  Duration: 00:00:14.87, start: 0.000000, bitrate: 1741 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 1674 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+      Side data:
+        Ambient Viewing Environment, ambient_illuminance=314.000000, ambient_light_x=0.312700, ambient_light_y=0.329000
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 84 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000014af44181c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000014af44181c0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0000014af44181c0] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_destannygotmerepoed_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by destannygotmerepoed
+    date            : 20240819
+    synopsis        : EVERYONE is APPROVED 🇺🇸❗️
+                    : Just come in person and get approved 😜
+                    :
+                    : ACEPTAMOS A TODOS🇲🇽❗️
+                    :  nomas venga en persona ✨
+                    :
+                    : #DESTIN2DRIVE🌻 #femalecarsales #carsaleswoman #carsaleslady #carsaleshumor #carsaleswomanproblems #carsalesspecialfinances⚠️ #badcredit ✅ #nocredit #goodcredit #ITINaccepted‼️ #habloespañol✨
+    comment         : https://www.instagram.com/reel/C-1VOBfMtf4
+    description     : EVERYONE is APPROVED 🇺🇸❗️
+                    : Just come in person and get approved 😜
+                    :
+                    : ACEPTAMOS A TODOS🇲🇽❗️
+                    :  nomas venga en persona ✨
+                    :
+                    : #DESTIN2DRIVE🌻 #femalecarsales #carsaleswoman #carsaleslady #carsaleshumor #carsaleswomanproblems #carsalesspecialfinances⚠️ #badcredit ✅ #nocredit #goodcredit #ITINaccepted‼️ #habloespañol✨
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+        Ambient Viewing Environment, ambient_illuminance=314.000000, ambient_light_x=0.312700, ambient_light_y=0.329000
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 0000014af44a0680] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000014af49d0d40] video:4593KiB audio:171KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.315978%
+frame=  446 fps=144 q=-1.0 Lsize=    4779KiB time=00:00:10.84 bitrate=3609.6kbits/s speed=3.51x
+[libx264 @ 0000014af44181c0] frame I:3     Avg QP:18.29  size:155987
+[libx264 @ 0000014af44181c0] frame P:133   Avg QP:21.48  size: 23423
+[libx264 @ 0000014af44181c0] frame B:310   Avg QP:25.95  size:  3610
+[libx264 @ 0000014af44181c0] consecutive B-frames:  7.0%  0.9%  0.7% 91.5%
+[libx264 @ 0000014af44181c0] mb I  I16..4:  7.8% 71.8% 20.3%
+[libx264 @ 0000014af44181c0] mb P  I16..4:  2.1%  5.4%  0.8%  P16..4: 33.8%  9.8%  5.4%  0.0%  0.0%    skip:42.7%
+[libx264 @ 0000014af44181c0] mb B  I16..4:  0.1%  0.1%  0.0%  B16..8: 30.8%  0.9%  0.1%  direct: 0.2%  skip:67.8%  L0:43.9% L1:54.1% BI: 2.1%
+[libx264 @ 0000014af44181c0] 8x8 transform intra:66.3% inter:80.1%
+[libx264 @ 0000014af44181c0] coded y,uvDC,uvAC intra: 44.9% 38.8% 13.5% inter: 5.6% 4.8% 0.2%
+[libx264 @ 0000014af44181c0] i16 v,h,dc,p: 28% 36% 11% 25%
+[libx264 @ 0000014af44181c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 23% 25% 23%  4%  4%  4%  6%  4%  5%
+[libx264 @ 0000014af44181c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 30% 27% 12%  5%  6%  5%  6%  4%  4%
+[libx264 @ 0000014af44181c0] i8c dc,h,v,p: 55% 24% 18%  3%
+[libx264 @ 0000014af44181c0] Weighted P-Frames: Y:1.5% UV:0.8%
+[libx264 @ 0000014af44181c0] ref P L0: 63.9% 19.5% 12.8%  3.9%  0.0%
+[libx264 @ 0000014af44181c0] ref B L0: 93.1%  5.9%  1.0%
+[libx264 @ 0000014af44181c0] ref B L1: 95.8%  4.2%
+[libx264 @ 0000014af44181c0] kb/s:2530.49
+[aac @ 0000014af4464b40] Qavg: 456.664
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://www.instagram.com/reel/C_AjwciuWIN"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt| Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/23/2024  5:47 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://www.instagram.com/reel/C_AjwciuWIN']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C_AjwciuWIN
+[Instagram] C_AjwciuWIN: Setting up session
+[Instagram] C_AjwciuWIN: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C_AjwciuWIN: Downloading 1 format(s): dash-807095481449242v+dash-688679870145842ad
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/v/t39.25447-16/456490438_490569940270863_5391951509558670251_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMxLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=ekLkFup8u3wQ7kNvgGKn6tf&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=00_AYD_E0l8qjdM6zaHapV5gVIbvabSH8R5_nJBYVQxGUTmcw&oe=66CED4CE"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Video_by_ca.anupama_sangraula.fdash-807095481449242v.mp4
+[download] 100% of   10.19MiB in 00:00:00 at 20.61MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/v/t50.33967-16/456683836_1009530570865704_808913540179652501_n.mp4?_nc_cat=104&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMxLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=3NmZ_SukdcAQ7kNvgFzXlnO&_nc_ht=scontent-iad3-1.cdninstagram.com&oh=00_AYC44vscgEcikMefYSndhIAoLwWJlHI2VLfn4zS3jrki2Q&oe=66CEDAE3"
+[download] Destination: C:\Temp\yt-dlp\Video_by_ca.anupama_sangraula.fdash-688679870145842ad.m4a
+[download] 100% of  286.21KiB in 00:00:00 at 8.14MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Video_by_ca.anupama_sangraula.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_ca.anupama_sangraula.fdash-807095481449242v.mp4 -i file:C:\Temp\yt-dlp\Video_by_ca.anupama_sangraula.fdash-688679870145842ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Video_by_ca.anupama_sangraula.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Video_by_ca.anupama_sangraula.fdash-688679870145842ad.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Video_by_ca.anupama_sangraula.fdash-807095481449242v.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Video_by_ca.anupama_sangraula.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Video_by_ca.anupama_sangraula.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by ca.anupama_sangraula" -metadata "date=20240823" -metadata "description=Amount equivalent to the monthly remuneration to be paid once a year. The employee not completing 1 year of service is entitled to the allowance on a proportional basis. #dashain #salary #festival #bonus #employment #financialliteracy #caanupama" -metadata "synopsis=Amount equivalent to the monthly remuneration to be paid once a year. The employee not completing 1 year of service is entitled to the allowance on a proportional basis. #dashain #salary #festival #bonus #employment #financialliteracy #caanupama" -metadata "purl=https://www.instagram.com/reel/C_AjwciuWIN" -metadata "comment=https://www.instagram.com/reel/C_AjwciuWIN" -metadata "artist=Anupama Sangraula" -movflags +faststart file:C:\Temp\yt-dlp\Video_by_ca.anupama_sangraula.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Video_by_ca.anupama_sangraula.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by ca.anupama_sangraula
+    artist          : Anupama Sangraula
+    date            : 20240823
+    encoder         : Lavf61.1.100
+    comment         : https://www.instagram.com/reel/C_AjwciuWIN
+    description     : Amount equivalent to the monthly remuneration to be paid once a year. The employee not completing 1 year of service is entitled to the allowance on a proportional basis. #dashain #salary #festival #bonus #employment #financialliteracy #caanupama
+    synopsis        : Amount equivalent to the monthly remuneration to be paid once a year. The employee not completing 1 year of service is entitled to the allowance on a proportional basis. #dashain #salary #festival #bonus #employment #financialliteracy #caanupama
+  Duration: 00:00:25.60, start: 0.000000, bitrate: 3431 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 3336 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 89 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000017b0e69ebc0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000017b0e69ebc0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0000017b0e69ebc0] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Video_by_ca.anupama_sangraula_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by ca.anupama_sangraula
+    artist          : Anupama Sangraula
+    date            : 20240823
+    synopsis        : Amount equivalent to the monthly remuneration to be paid once a year. The employee not completing 1 year of service is entitled to the allowance on a proportional basis. #dashain #salary #festival #bonus #employment #financialliteracy #caanupama
+    comment         : https://www.instagram.com/reel/C_AjwciuWIN
+    description     : Amount equivalent to the monthly remuneration to be paid once a year. The employee not completing 1 year of service is entitled to the allowance on a proportional basis. #dashain #salary #festival #bonus #employment #financialliteracy #caanupama
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 0000017b0e0f6480] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000017b0e1ae580] video:13342KiB audio:402KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.211007%
+frame=  768 fps=134 q=-1.0 Lsize=   13773KiB time=00:00:25.52 bitrate=4421.2kbits/s speed=4.44x
+[libx264 @ 0000017b0e69ebc0] frame I:9     Avg QP:17.55  size: 74413
+[libx264 @ 0000017b0e69ebc0] frame P:230   Avg QP:22.98  size: 34170
+[libx264 @ 0000017b0e69ebc0] frame B:529   Avg QP:24.97  size:  9703
+[libx264 @ 0000017b0e69ebc0] consecutive B-frames:  3.3% 10.4% 12.9% 73.4%
+[libx264 @ 0000017b0e69ebc0] mb I  I16..4: 29.5% 59.0% 11.5%
+[libx264 @ 0000017b0e69ebc0] mb P  I16..4:  6.9% 19.0%  2.3%  P16..4: 23.6%  8.2%  3.0%  0.0%  0.0%    skip:37.1%
+[libx264 @ 0000017b0e69ebc0] mb B  I16..4:  1.4%  2.5%  0.3%  B16..8: 25.2%  3.7%  0.6%  direct: 1.7%  skip:64.7%  L0:49.9% L1:42.8% BI: 7.3%
+[libx264 @ 0000017b0e69ebc0] 8x8 transform intra:65.1% inter:77.2%
+[libx264 @ 0000017b0e69ebc0] coded y,uvDC,uvAC intra: 35.2% 46.0% 10.1% inter: 7.8% 8.2% 0.2%
+[libx264 @ 0000017b0e69ebc0] i16 v,h,dc,p: 33% 29% 10% 28%
+[libx264 @ 0000017b0e69ebc0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 28% 19% 23%  4%  5%  6%  5%  5%  4%
+[libx264 @ 0000017b0e69ebc0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 28% 18% 15%  5%  9% 10%  7%  6%  4%
+[libx264 @ 0000017b0e69ebc0] i8c dc,h,v,p: 49% 22% 22%  7%
+[libx264 @ 0000017b0e69ebc0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0000017b0e69ebc0] ref P L0: 64.1% 13.9% 14.6%  7.4%
+[libx264 @ 0000017b0e69ebc0] ref B L0: 89.6%  8.4%  2.0%
+[libx264 @ 0000017b0e69ebc0] ref B L1: 97.7%  2.3%
+[libx264 @ 0000017b0e69ebc0] kb/s:4269.20
+[aac @ 0000017b0e6713c0] Qavg: 518.471
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
