@@ -506,3 +506,250 @@ To github.com:fromnepal/fromnepal.github.io.git
 Friday, August 23, 2024 6:55:23 PM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Friday, August 23, 2024 6:55:54 PM
+Friday, August 23, 2024 6:55:54 PM
+On branch main
+nothing to commit, working tree clean
+Friday, August 23, 2024 6:55:54 PM
+Friday, August 23, 2024 6:55:54 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Friday, August 23, 2024 6:55:55 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.1 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 178ms
+Done in 0.94s.
+Friday, August 23, 2024 6:55:56 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, August 23, 2024 6:55:56 PM
+[main ef49673] build application
+ 2 files changed, 454 insertions(+)
+Friday, August 23, 2024 6:55:56 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Friday, August 23, 2024 6:55:57 PM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 995 bytes | 995.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   c4a1742..ef49673  main -> main
+Friday, August 23, 2024 6:55:58 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://youtu.be/LhCwE6dv6wI"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/23/2024  7:51 PM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://youtu.be/LhCwE6dv6wI']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://youtu.be/LhCwE6dv6wI
+[youtube] LhCwE6dv6wI: Downloading webpage
+[youtube] LhCwE6dv6wI: Downloading ios player API JSON
+[youtube] LhCwE6dv6wI: Downloading web creator player API JSON
+[youtube] LhCwE6dv6wI: Downloading player a87a9450
+[debug] Saving youtube-nsig.a87a9450 to cache
+[debug] [youtube] Decrypted nsig 5gkldL5SpO6A4KdT => ouw1VWXE9ke7-A
+[debug] Loading youtube-nsig.a87a9450 from cache
+[debug] [youtube] Decrypted nsig iAAgfMQi6MLisF6m => lI-6t98Ywc0RHQ
+[youtube] LhCwE6dv6wI: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/6994?service=YouTube&categories=%5B%22interaction%22%2C+%22sponsor%22%2C+%22poi_highlight%22%2C+%22filler%22%2C+%22music_offtopic%22%2C+%22intro%22%2C+%22outro%22%2C+%22selfpromo%22%2C+%22preview%22%2C+%22chapter%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+[SponsorBlock] No matching segments were found in the SponsorBlock database
+[info] Testing format 614
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 19
+[download] Destination: C:\Users\kushal\src\myhtml\fromnepal\tmphgtohsjy.tmp
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of    712.00B in 00:00:00 at 11.41KiB/s
+[info] LhCwE6dv6wI: Downloading 1 format(s): 614+140
+[info] There are no subtitles for the requested languages
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1724478686/ei/fiDJZvDBOLGKkucPnrbeyQE/ip/70.104.195.206/id/2e10b013a76feb02/itag/614/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D20693436%3Bdur%3D114.781%3Bgir%3Dyes%3Bitag%3D248%3Blmt%3D1724415665322609/rqh/1/hls_chunk_host/rr2---sn-8xgp1vo-gpjl.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/mh/ga/mm/31,29/mn/sn-8xgp1vo-gpjl,sn-8xgp1vo-p5ql/ms/au,rdu/mv/m/mvi/2/pl/20/initcwndbps/1215000/vprv/1/playlist_type/DVR/dover/13/txp/530F224/mt/1724456718/fvip/2/short_key/1/keepalive/yes/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,vprv,playlist_type/sig/AJfQdSswRQIgduG6UToxNTQGdf7XToCGQt-kyFnrLm-ZyKZ_a_jSUIkCIQDsR-kpWe-mG4G3iDIihrrs0o-3hbeL9XxCuS3YZSwm0g%3D%3D/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl,initcwndbps/lsig/AGtxev0wRAIgEtDpAvhH4ufrYy3ZGbt7w_9ibdjNRLr0VK0fqmQkzWcCIA86ypVNGvoBe4WBzSwpeY_RDIY5UUqcFbYyDcRTyekc/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 19
+[download] Destination: C:\Temp\yt-dlp\Amtrak_starts_service_at_new_Newport_News_Transportation_Center.f614.mp4
+[download] 100% of   19.75MiB in 00:00:01 at 11.43MiB/s
+[debug] Invoking http downloader on "https://rr2---sn-8xgp1vo-gpjl.googlevideo.com/videoplayback?expire=1724478686&ei=fiDJZvDBOLGKkucPnrbeyQE&ip=70.104.195.206&id=o-ANIVAjhQeGQo9xOjMwUKHYXNC1_8qI7T5V70H9K-CDC7&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=ga&mm=31%2C29&mn=sn-8xgp1vo-gpjl%2Csn-8xgp1vo-p5ql&ms=au%2Crdu&mv=m&mvi=2&pl=20&initcwndbps=1215000&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=1859465&dur=114.845&lmt=1724415738406519&mt=1724456718&fvip=2&keepalive=yes&c=IOS&txp=5318224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRgIhAOz316zbahG7HV6xqmQQwncmIJhG_jIM67vGG4B3WLOyAiEA4-_ESCkvCAabrO76DLRRNsTRX53h6ovudaa3-Vm7qII%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AGtxev0wRAIge-KkzPxvyp5qkQF54OVCeHg1RbTq0ySTZ1Z9FxuIGEICIEYw_ZLKL9ByQYiuCaZinEYGLCH_TlIaVtzdhGVSmGak"
+[download] Destination: C:\Temp\yt-dlp\Amtrak_starts_service_at_new_Newport_News_Transportation_Center.f140.m4a
+[download] 100% of    1.77MiB in 00:00:00 at 14.81MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Amtrak_starts_service_at_new_Newport_News_Transportation_Center.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Amtrak_starts_service_at_new_Newport_News_Transportation_Center.f614.mp4 -i file:C:\Temp\yt-dlp\Amtrak_starts_service_at_new_Newport_News_Transportation_Center.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Amtrak_starts_service_at_new_Newport_News_Transportation_Center.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Amtrak_starts_service_at_new_Newport_News_Transportation_Center.f614.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Amtrak_starts_service_at_new_Newport_News_Transportation_Center.f140.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Amtrak_starts_service_at_new_Newport_News_Transportation_Center.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Amtrak_starts_service_at_new_Newport_News_Transportation_Center.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Amtrak starts service at new Newport News Transportation Center" -metadata "date=20240823" -metadata "description=Amtrak’s Newport News service moved to the brand new Newport News Transportation Center starting on Thursday.
+
+Subscribe to the WAVY YouTube Channel: https://bit.ly/3AL4Dnp
+-------------
+Get updates on local news, weather, sports and more impacting Hampton Roads and Northeastern North Carolina. Follow WAVY TV 10 on our website and social channels.
+
+https://www.wavy.com/
+https://www.wavy.com/news/local-news/
+https://www.wavy.com/living-local/
+https://www.wavy.com/weather/
+https://www.wavy.com/sports/local-sports/" -metadata "synopsis=Amtrak’s Newport News service moved to the brand new Newport News Transportation Center starting on Thursday.
+
+Subscribe to the WAVY YouTube Channel: https://bit.ly/3AL4Dnp
+-------------
+Get updates on local news, weather, sports and more impacting Hampton Roads and Northeastern North Carolina. Follow WAVY TV 10 on our website and social channels.
+
+https://www.wavy.com/
+https://www.wavy.com/news/local-news/
+https://www.wavy.com/living-local/
+https://www.wavy.com/weather/
+https://www.wavy.com/sports/local-sports/" -metadata "purl=https://www.youtube.com/watch?v=LhCwE6dv6wI" -metadata "comment=https://www.youtube.com/watch?v=LhCwE6dv6wI" -metadata "artist=WAVY TV 10" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\Amtrak_starts_service_at_new_Newport_News_Transportation_Center.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Amtrak_starts_service_at_new_Newport_News_Transportation_Center.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Amtrak starts service at new Newport News Transportation Center
+    artist          : WAVY TV 10
+    date            : 20240823
+    encoder         : Lavf61.1.100
+    comment         : https://www.youtube.com/watch?v=LhCwE6dv6wI
+    description     : Amtrak’s Newport News service moved to the brand new Newport News Transportation Center starting on Thursday.
+                    :
+                    : Subscribe to the WAVY YouTube Channel: https://bit.ly/3AL4Dnp
+                    : -------------
+                    : Get updates on local news, weather, sports and more impacting Hampton Roads and Northeastern North Carolina. Follow WAVY TV 10 on our website and social channels.
+                    :
+                    : https://www.wavy.com/
+                    : https://www.wavy.com/news/local-news/
+                    : https://www.wavy.com/living-local/
+                    : https://www.wavy.com/weather/
+                    : https://www.wavy.com/sports/local-sports/
+    synopsis        : Amtrak’s Newport News service moved to the brand new Newport News Transportation Center starting on Thursday.
+                    :
+                    : Subscribe to the WAVY YouTube Channel: https://bit.ly/3AL4Dnp
+                    : -------------
+                    : Get updates on local news, weather, sports and more impacting Hampton Roads and Northeastern North Carolina. Follow WAVY TV 10 on our website and social channels.
+                    :
+                    : https://www.wavy.com/
+                    : https://www.wavy.com/news/local-news/
+                    : https://www.wavy.com/living-local/
+                    : https://www.wavy.com/weather/
+                    : https://www.wavy.com/sports/local-sports/
+  Duration: 00:01:54.85, start: 0.000000, bitrate: 1576 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1920x1080, 1440 kb/s, 29.97 fps, 29.97 tbr, 16k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 08/23/2024.
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 127 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000002b520b25000] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000002b520b25000] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 000002b520b25000] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Amtrak_starts_service_at_new_Newport_News_Transportation_Center_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Amtrak starts service at new Newport News Transportation Center
+    artist          : WAVY TV 10
+    date            : 20240823
+    synopsis        : Amtrak’s Newport News service moved to the brand new Newport News Transportation Center starting on Thursday.
+                    :
+                    : Subscribe to the WAVY YouTube Channel: https://bit.ly/3AL4Dnp
+                    : -------------
+                    : Get updates on local news, weather, sports and more impacting Hampton Roads and Northeastern North Carolina. Follow WAVY TV 10 on our website and social channels.
+                    :
+                    : https://www.wavy.com/
+                    : https://www.wavy.com/news/local-news/
+                    : https://www.wavy.com/living-local/
+                    : https://www.wavy.com/weather/
+                    : https://www.wavy.com/sports/local-sports/
+    comment         : https://www.youtube.com/watch?v=LhCwE6dv6wI
+    description     : Amtrak’s Newport News service moved to the brand new Newport News Transportation Center starting on Thursday.
+                    :
+                    : Subscribe to the WAVY YouTube Channel: https://bit.ly/3AL4Dnp
+                    : -------------
+                    : Get updates on local news, weather, sports and more impacting Hampton Roads and Northeastern North Carolina. Follow WAVY TV 10 on our website and social channels.
+                    :
+                    : https://www.wavy.com/
+                    : https://www.wavy.com/news/local-news/
+                    : https://www.wavy.com/living-local/
+                    : https://www.wavy.com/weather/
+                    : https://www.wavy.com/sports/local-sports/
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080, q=2-31, 29.97 fps, 30k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 08/23/2024.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 000002b520bd8240] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000002b52109d580] video:38945KiB audio:1817KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.303457%
+frame= 3440 fps=149 q=-1.0 Lsize=   40886KiB time=00:01:54.71 bitrate=2919.7kbits/s speed=4.96x
+[libx264 @ 000002b520b25000] frame I:32    Avg QP:17.90  size:103586
+[libx264 @ 000002b520b25000] frame P:965   Avg QP:21.21  size: 25207
+[libx264 @ 000002b520b25000] frame B:2443  Avg QP:25.49  size:  5010
+[libx264 @ 000002b520b25000] consecutive B-frames:  4.0%  2.9%  3.5% 89.7%
+[libx264 @ 000002b520b25000] mb I  I16..4: 21.5% 62.2% 16.3%
+[libx264 @ 000002b520b25000] mb P  I16..4:  4.6%  8.9%  0.7%  P16..4: 30.9%  7.5%  3.5%  0.0%  0.0%    skip:43.9%
+[libx264 @ 000002b520b25000] mb B  I16..4:  0.5%  0.6%  0.0%  B16..8: 24.9%  1.3%  0.2%  direct: 1.5%  skip:71.1%  L0:43.6% L1:53.0% BI: 3.4%
+[libx264 @ 000002b520b25000] 8x8 transform intra:61.7% inter:83.2%
+[libx264 @ 000002b520b25000] coded y,uvDC,uvAC intra: 33.3% 49.9% 14.9% inter: 6.1% 8.8% 0.4%
+[libx264 @ 000002b520b25000] i16 v,h,dc,p: 34% 34%  9% 24%
+[libx264 @ 000002b520b25000] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 28% 23% 27%  3%  4%  4%  4%  3%  4%
+[libx264 @ 000002b520b25000] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 34% 28% 12%  3%  5%  5%  6%  4%  4%
+[libx264 @ 000002b520b25000] i8c dc,h,v,p: 52% 23% 21%  5%
+[libx264 @ 000002b520b25000] Weighted P-Frames: Y:1.7% UV:1.7%
+[libx264 @ 000002b520b25000] ref P L0: 66.6% 13.0% 15.9%  4.6%  0.0%
+[libx264 @ 000002b520b25000] ref B L0: 92.0%  6.8%  1.2%
+[libx264 @ 000002b520b25000] ref B L1: 97.0%  3.0%
+[libx264 @ 000002b520b25000] kb/s:2779.48
+[aac @ 000002b5211d6f00] Qavg: 827.490
+
+PS C:\Users\kushal\src\myhtml\fromnepal>
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
