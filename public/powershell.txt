@@ -939,3 +939,271 @@ Saturday, August 24, 2024 8:20:11 AM
 PS C:\Users\kushal\src\myhtml\fromnepal>
 PS C:\Users\kushal\src\myhtml\fromnepal>
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Saturday, August 24, 2024 8:29:45 AM
+Saturday, August 24, 2024 8:29:45 AM
+[main bb64470e] add all files
+ 1 file changed, 119 insertions(+)
+ create mode 100644 src/recruiting/mtech-copilot.txt
+Saturday, August 24, 2024 8:29:46 AM
+Saturday, August 24, 2024 8:29:46 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Saturday, August 24, 2024 8:29:46 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.1 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 236ms
+Done in 1.08s.
+Saturday, August 24, 2024 8:29:47 AM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Saturday, August 24, 2024 8:29:48 AM
+[main 7b248a3] build application
+ 2 files changed, 94 insertions(+)
+Saturday, August 24, 2024 8:29:48 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Saturday, August 24, 2024 8:29:49 AM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 679 bytes | 679.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   ace9754..7b248a3  main -> main
+Saturday, August 24, 2024 8:29:49 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Saturday, August 24, 2024 8:30:35 AM
+Saturday, August 24, 2024 8:30:35 AM
+[main b83067e2] add all files
+ 1 file changed, 38 insertions(+)
+Saturday, August 24, 2024 8:30:35 AM
+Saturday, August 24, 2024 8:30:35 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Saturday, August 24, 2024 8:30:36 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.1 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 186ms
+Done in 0.99s.
+Saturday, August 24, 2024 8:30:37 AM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Saturday, August 24, 2024 8:30:37 AM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Saturday, August 24, 2024 8:30:37 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Saturday, August 24, 2024 8:30:38 AM
+Everything up-to-date
+Saturday, August 24, 2024 8:30:39 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://fb.watch/u9AepIRp6c/"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----           8/24/2024  8:51 AM                yt-dlp
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://fb.watch/u9AepIRp6c/']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[generic] Extracting URL: https://fb.watch/u9AepIRp6c/
+[generic] u9AepIRp6c: Downloading webpage
+[redirect] Following redirect to https://www.facebook.com/AdventurebyMetDaan/videos/427983086940972/?share_url=https%3A%2F%2Ffb.watch%2Fu9AepIRp6c%2F
+[facebook] Extracting URL: https://www.facebook.com/AdventurebyMetDaan/videos/427983086940972/?share_url=https%3A%2F%2Ffb.watch%2Fu9AepIRp6c%2F
+[facebook] 427983086940972: Downloading webpage
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Facebook
+[info] 427983086940972: Downloading 1 format(s): 1048947440272551v+322052324234937a
+[info] There are no subtitles for the requested languages
+[debug] Invoking http downloader on "https://video-iad3-2.xx.fbcdn.net/v/t39.25447-2/456720660_7974992445942972_6746271563711420941_n.mp4?_nc_cat=1&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImRhc2hfcjJhdjEtcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjo0Mjc5ODMwODY5NDA5NzJ9&_nc_ohc=EgDGZ2fFQ6IQ7kNvgH_P_c8&_nc_ht=video-iad3-2.xx&oh=00_AYA3G6JCPF818tGOX2_d7iMs5MAXaila7deE1ESvVQXqtw&oe=66CFB2E6"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\Smart_inventions_that_produce_oil_naturally.f1048947440272551v.mp4
+[download] 100% of    3.99MiB in 00:00:00 at 14.14MiB/s
+[debug] Invoking http downloader on "https://video-iad3-2.xx.fbcdn.net/v/t39.25447-2/455044201_26197756919871135_8685162932791034609_n.mp4?_nc_cat=1&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImRhc2hfYXVkaW9fYWFjcF82NF9mbm9ybTE0X2ZyYWdfMl9hdWRpbyIsInZpZGVvX2lkIjo0Mjc5ODMwODY5NDA5NzJ9&_nc_ohc=0iO1RKNimYkQ7kNvgEjhNgz&_nc_ht=video-iad3-2.xx&oh=00_AYCPWZ_89Ay_aFpGRaKFU6o5IthxlVEDP23JbOZInKX6CA&oe=66CFB5D3"
+[download] Destination: C:\Temp\yt-dlp\Smart_inventions_that_produce_oil_naturally.f322052324234937a.m4a
+[download] 100% of  154.15KiB in 00:00:00 at 4.76MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Smart_inventions_that_produce_oil_naturally.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Smart_inventions_that_produce_oil_naturally.f1048947440272551v.mp4 -i file:C:\Temp\yt-dlp\Smart_inventions_that_produce_oil_naturally.f322052324234937a.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags+faststart file:C:\Temp\yt-dlp\Smart_inventions_that_produce_oil_naturally.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Smart_inventions_that_produce_oil_naturally.f1048947440272551v.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Smart_inventions_that_produce_oil_naturally.f322052324234937a.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Smart_inventions_that_produce_oil_naturally.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Smart_inventions_that_produce_oil_naturally.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Smart inventions that produce oil naturally 🌽" -metadata "date=20240813" -metadata "description=Smart inventions that produce oil naturally 🌽" -metadata "synopsis=Smart inventions that produce oil naturally 🌽" -metadata "purl=https://www.facebook.com/AdventurebyMetDaan/videos/427983086940972/?share_url=https%3A%2F%2Ffb.watch%2Fu9AepIRp6c%2F" -metadata "comment=https://www.facebook.com/AdventurebyMetDaan/videos/427983086940972/?share_url=https%3A%2F%2Ffb.watch%2Fu9AepIRp6c%2F" -metadata "artist=MetDaan Adventure" -movflags +faststart file:C:\Temp\yt-dlp\Smart_inventions_that_produce_oil_naturally.temp.mp4
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Smart_inventions_that_produce_oil_naturally.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomav01iso2mp41
+    title           : Smart inventions that produce oil naturally 🌽
+    artist          : MetDaan Adventure
+    date            : 20240813
+    encoder         : Lavf61.1.100
+    comment         : https://www.facebook.com/AdventurebyMetDaan/videos/427983086940972/?share_url=https%3A%2F%2Ffb.watch%2Fu9AepIRp6c%2F
+    description     : Smart inventions that produce oil naturally 🌽
+    synopsis        : Smart inventions that produce oil naturally 🌽
+  Duration: 00:00:19.09, start: 0.000000, bitrate: 1821 kb/s
+  Stream #0:0[0x1](und): Video: av1 (libdav1d) (Main) (av01 / 0x31307661), yuv420p(tv, bt709), 1080x1350, 1754 kb/s, 25 fps, 25 tbr, 12800 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : AOM Coding
+  Stream #0:1[0x2](eng): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 64 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (av1 (libdav1d) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000026740a68800] using SAR=1/1
+[libx264 @ 0000026740a68800] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000026740a68800] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0000026740a68800] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\Smart_inventions_that_produce_oil_naturally_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomav01iso2mp41
+    title           : Smart inventions that produce oil naturally 🌽
+    artist          : MetDaan Adventure
+    date            : 20240813
+    synopsis        : Smart inventions that produce oil naturally 🌽
+    comment         : https://www.facebook.com/AdventurebyMetDaan/videos/427983086940972/?share_url=https%3A%2F%2Ffb.watch%2Fu9AepIRp6c%2F
+    description     : Smart inventions that produce oil naturally 🌽
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1350 [SAR 1:1 DAR 4:5], q=2-31, 25 fps, 12800 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 0000026740a6de00] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000026740a73f40] video:7144KiB audio:300KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.214598%
+frame=  477 fps=162 q=-1.0 Lsize=    7460KiB time=00:00:19.00 bitrate=3216.4kbits/s speed=6.47x
+[libx264 @ 0000026740a68800] frame I:5     Avg QP:20.06  size: 96443
+[libx264 @ 0000026740a68800] frame P:138   Avg QP:23.52  size: 32291
+[libx264 @ 0000026740a68800] frame B:334   Avg QP:25.74  size:  7116
+[libx264 @ 0000026740a68800] consecutive B-frames:  3.1%  8.0%  7.5% 81.3%
+[libx264 @ 0000026740a68800] mb I  I16..4: 17.5% 67.2% 15.3%
+[libx264 @ 0000026740a68800] mb P  I16..4:  7.0% 18.3%  1.9%  P16..4: 36.4% 10.8%  5.0%  0.0%  0.0%    skip:20.6%
+[libx264 @ 0000026740a68800] mb B  I16..4:  1.0%  2.7%  0.3%  B16..8: 30.1%  2.5%  0.5%  direct: 1.5%  skip:61.6%  L0:49.0% L1:43.3% BI: 7.7%
+[libx264 @ 0000026740a68800] 8x8 transform intra:67.6% inter:82.7%
+[libx264 @ 0000026740a68800] coded y,uvDC,uvAC intra: 52.6% 57.0% 14.5% inter: 10.7% 11.8% 0.4%
+[libx264 @ 0000026740a68800] i16 v,h,dc,p: 17% 43%  5% 35%
+[libx264 @ 0000026740a68800] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 25% 22% 14%  5%  7%  8%  7%  7%  6%
+[libx264 @ 0000026740a68800] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 29% 18% 10%  5% 11% 10%  8%  6%  4%
+[libx264 @ 0000026740a68800] i8c dc,h,v,p: 44% 27% 20%  9%
+[libx264 @ 0000026740a68800] Weighted P-Frames: Y:1.4% UV:0.0%
+[libx264 @ 0000026740a68800] ref P L0: 62.1% 18.0% 14.9%  4.8%  0.1%
+[libx264 @ 0000026740a68800] ref B L0: 90.9%  7.6%  1.5%
+[libx264 @ 0000026740a68800] ref B L1: 97.4%  2.6%
+[libx264 @ 0000026740a68800] kb/s:3067.15
+[aac @ 0000026740ac8000] Qavg: 440.914
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"  --sponsorblock-mark all --sponsorblock-remove all -i "https://v.redd.it/kpc9y42urjkd1"; date;
+
+Saturday, August 24, 2024 9:26:33 AM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Saturday, August 24, 2024 9:26:33 AM
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '-i', 'https://v.redd.it/kpc9y42urjkd1']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[generic] Extracting URL: https://v.redd.it/kpc9y42urjkd1
+[generic] kpc9y42urjkd1: Downloading webpage
+[redirect] Following redirect to https://www.reddit.com/r/TikTokCringe/comments/1ezxud0/that_wasnt_hard_at_all/?rdt=43888
+[Reddit] Extracting URL: https://www.reddit.com/r/TikTokCringe/comments/1ezxud0/that_wasnt_hard_at_all/?rdt=43888
+[Reddit] 1ezxud0: Downloading JSON metadata
+[Reddit] 1ezxud0: Downloading m3u8 information
+[Reddit] 1ezxud0: Downloading MPD manifest
+[info] kpc9y42urjkd1: Downloading subtitles: en
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Reddit
+[info] kpc9y42urjkd1: Downloading 1 format(s): hls-776+dash-6
+[info] Writing video subtitles to: That_wasn_t_hard_at_all-[kpc9y42urjkd1].en.vtt
+[debug] Invoking hlsnative downloader on "https://v.redd.it/kpc9y42urjkd1/wh_ben_en/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 3
+[download] Destination: That_wasn_t_hard_at_all-[kpc9y42urjkd1].en.vtt
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of   27.90KiB in 00:00:00 at 41.98KiB/s
+[debug] Invoking hlsnative downloader on "https://v.redd.it/kpc9y42urjkd1/HLS_480.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 19
+[download] Destination: That_wasn_t_hard_at_all-[kpc9y42urjkd1].fhls-776.mp4
+[download] 100% of    5.37MiB in 00:00:06 at 905.41KiB/s
+[debug] Invoking http downloader on "https://v.redd.it/kpc9y42urjkd1/DASH_AUDIO_128.mp4"
+[download] Destination: That_wasn_t_hard_at_all-[kpc9y42urjkd1].fdash-6.m4a
+[download] 100% of    1.10MiB in 00:00:00 at 5.57MiB/s
+[Merger] Merging formats into "That_wasn_t_hard_at_all-[kpc9y42urjkd1].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:That_wasn_t_hard_at_all-[kpc9y42urjkd1].fhls-776.mp4" -i "file:That_wasn_t_hard_at_all-[kpc9y42urjkd1].fdash-6.m4a" -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart "file:That_wasn_t_hard_at_all-[kpc9y42urjkd1].temp.mp4"
+Deleting original file That_wasn_t_hard_at_all-[kpc9y42urjkd1].fdash-6.m4a (pass -k to keep)
+Deleting original file That_wasn_t_hard_at_all-[kpc9y42urjkd1].fhls-776.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "That_wasn_t_hard_at_all-[kpc9y42urjkd1].mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:That_wasn_t_hard_at_all-[kpc9y42urjkd1].mp4" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=That wasn’t hard at all " -metadata "date=20240824" -metadata "purl=https://www.reddit.com/r/TikTokCringe/comments/1ezxud0/that_wasnt_hard_at_all/?rdt=43888" -metadata "comment=https://www.reddit.com/r/TikTokCringe/comments/1ezxud0/that_wasnt_hard_at_all/?rdt=43888" -metadata "artist=ThaanksIHateIt" -movflags +faststart "file:That_wasn_t_hard_at_all-[kpc9y42urjkd1].temp.mp4"
+Saturday, August 24, 2024 9:26:49 AM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
