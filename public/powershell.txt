@@ -1,438 +1,1160 @@
-PowerShell 7.4.4
+Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_64)
 
-   A new PowerShell stable release is available: v7.4.5
-   Upgrade now, or check out the release page at:
-     https://aka.ms/PowerShell-Release?tag=v7.4.5
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
 
-PS C:\Users\kushal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn;date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
 
-Sunday, August 25, 2024 8:09:23 AM
-Sunday, August 25, 2024 8:09:23 AM
-On branch main
-nothing to commit, working tree clean
-Sunday, August 25, 2024 8:09:24 AM
-Sunday, August 25, 2024 8:09:24 AM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.09s.
-Sunday, August 25, 2024 8:09:24 AM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.4.1 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
-✓ built in 281ms
-Done in 2.28s.
-Sunday, August 25, 2024 8:09:27 AM
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Sunday, August 25, 2024 8:09:28 AM
-On branch main
-Your branch is up to date with 'origin/main'.
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
 
-nothing to commit, working tree clean
-Sunday, August 25, 2024 8:09:28 AM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Already up to date.
-Sunday, August 25, 2024 8:09:30 AM
-Everything up-to-date
-Sunday, August 25, 2024 8:09:31 AM
-
-PS C:\Users\kushal\src\myhtml\fromnepal> $url = "https://fb.watch/uaS6Ta7ZQK/"; $tempDir = "C:\Temp\yt-dlp"; New-Item -ItemType Directory -Path $tempDir -Force; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title)s.%(ext)s" $url; $videoFile =Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1; $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1; if ($subtitleFile) { $subtitlePath = $subtitleFile.FullName; ffmpeg -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" } else { ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4" }; Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"; Remove-Item -Path $tempDir -Recurse -Force
-
-    Directory: C:\Temp
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d----           8/25/2024  8:09 AM                yt-dlp
-[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title)s.%(ext)s', 'https://fb.watch/uaS6Ta7ZQK/']
-[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
-[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
-[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
-[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
-[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
-[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
-[debug] Proxy map: {}
-[debug] Request Handlers: urllib, requests, websockets, curl_cffi
-[debug] Loaded 1830 extractors
-[generic] Extracting URL: https://fb.watch/uaS6Ta7ZQK/
-[generic] uaS6Ta7ZQK: Downloading webpage
-[redirect] Following redirect to https://www.facebook.com/SimplelifebyMetDaan/videos/1144304100005592/?share_url=https%3A%2F%2Ffb.watch%2FuaS6Ta7ZQK%2F
-[facebook] Extracting URL: https://www.facebook.com/SimplelifebyMetDaan/videos/1144304100005592/?share_url=https%3A%2F%2Ffb.watch%2FuaS6Ta7ZQK%2F
-[facebook] 1144304100005592: Downloading webpage
-[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
-[SponsorBlock] SponsorBlock is not supported for Facebook
-[info] 1144304100005592: Downloading 1 format(s): 509913064986316v+1058554372536039a
-[info] There are no subtitles for the requested languages
-[debug] Invoking http downloader on "https://video.fagc3-1.fna.fbcdn.net/v/t39.25447-2/456311716_1192640715214961_4079884191155155363_n.mp4?_nc_cat=1&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImRhc2hfcjJhdjEtcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjoxMTQ0MzA0MTAwMDA1NTkyfQ==&_nc_ohc=4a-99eTLfC4Q7kNvgHugfNF&_nc_ht=video.fagc3-1.fna&oh=00_AYDPZtv9aopoOyGLLnZViBoEu7j59AOMbJylU5fvJqhJMA&oe=66D0E2DE"
-[debug] File locking is not supported. Proceeding without locking
-[download] Destination: C:\Temp\yt-dlp\Completely_obsessed_with_these_amazing_items.f509913064986316v.mp4
-[download] 100% of   12.29MiB in 00:00:00 at 21.62MiB/s
-[debug] Invoking http downloader on "https://video.fagc3-1.fna.fbcdn.net/v/t39.25447-2/456439781_1913111995878169_5014222580303806480_n.mp4?_nc_cat=1&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImRhc2hfYXVkaW9fYWFjcF82NF9mbm9ybTE0X2ZyYWdfMl9hdWRpbyIsInZpZGVvX2lkIjoxMTQ0MzA0MTAwMDA1NTkyfQ==&_nc_ohc=Ts5q6xnDGHYQ7kNvgEJE3_r&_nc_ht=video.fagc3-1.fna&oh=00_AYCaEuKceMzRFV07kQ-blj85As_hiX074xvwDDwKImmGnw&oe=66D0FA4B"
-[download] Destination: C:\Temp\yt-dlp\Completely_obsessed_with_these_amazing_items.f1058554372536039a.m4a
-[download] 100% of  439.03KiB in 00:00:00 at 8.73MiB/s
-[Merger] Merging formats into "C:\Temp\yt-dlp\Completely_obsessed_with_these_amazing_items.mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Completely_obsessed_with_these_amazing_items.f509913064986316v.mp4 -i file:C:\Temp\yt-dlp\Completely_obsessed_with_these_amazing_items.f1058554372536039a.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Completely_obsessed_with_these_amazing_items.temp.mp4
-Deleting original file C:\Temp\yt-dlp\Completely_obsessed_with_these_amazing_items.f509913064986316v.mp4 (pass -k to keep)
-Deleting original file C:\Temp\yt-dlp\Completely_obsessed_with_these_amazing_items.f1058554372536039a.m4a (pass -k to keep)
-[ModifyChapters] SponsorBlock information is unavailable
-[Metadata] Adding metadata to "C:\Temp\yt-dlp\Completely_obsessed_with_these_amazing_items.mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Completely_obsessed_with_these_amazing_items.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Completely obsessed with these amazing items!" -metadata "date=20240820" -metadata "description=Completely obsessed with these amazing items!" -metadata "synopsis=Completely obsessed with these amazing items!" -metadata "purl=https://www.facebook.com/SimplelifebyMetDaan/videos/1144304100005592/?share_url=https%3A%2F%2Ffb.watch%2FuaS6Ta7ZQK%2F" -metadata "comment=https://www.facebook.com/SimplelifebyMetDaan/videos/1144304100005592/?share_url=https%3A%2F%2Ffb.watch%2FuaS6Ta7ZQK%2F" -metadata "artist=Simple Life" -movflags +faststart file:C:\Temp\yt-dlp\Completely_obsessed_with_these_amazing_items.temp.mp4
-ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
-  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
-  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
-  libavutil      59.  8.100 / 59.  8.100
-  libavcodec     61.  3.100 / 61.  3.100
-  libavformat    61.  1.100 / 61.  1.100
-  libavdevice    61.  1.100 / 61.  1.100
-  libavfilter    10.  1.100 / 10.  1.100
-  libswscale      8.  1.100 /  8.  1.100
-  libswresample   5.  1.100 /  5.  1.100
-  libpostproc    58.  1.100 / 58.  1.100
-Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\Completely_obsessed_with_these_amazing_items.mp4':
-  Metadata:
-    major_brand     : isom
-    minor_version   : 512
-    compatible_brands: isomav01iso2mp41
-    title           : Completely obsessed with these amazing items!
-    artist          : Simple Life
-    date            : 20240820
-    encoder         : Lavf61.1.100
-    comment         : https://www.facebook.com/SimplelifebyMetDaan/videos/1144304100005592/?share_url=https%3A%2F%2Ffb.watch%2FuaS6Ta7ZQK%2F
-    description     : Completely obsessed with these amazing items!
-    synopsis        : Completely obsessed with these amazing items!
-  Duration: 00:00:54.81, start: 0.000000, bitrate: 1949 kb/s
-  Stream #0:0[0x1](und): Video: av1 (libdav1d) (Main) (av01 / 0x31307661), yuv420p(tv), 1080x1350, 1880 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
-      Metadata:
-        handler_name    : VideoHandler
-        vendor_id       : [0][0][0][0]
-        encoder         : AOM Coding
-  Stream #0:1[0x2](eng): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 64 kb/s (default)
-      Metadata:
-        handler_name    : SoundHandler
-        vendor_id       : [0][0][0][0]
-Stream mapping:
-  Stream #0:0 -> #0:0 (av1 (libdav1d) -> h264 (libx264))
-  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
-Press [q] to stop, [?] for help
-[libx264 @ 000002c91d0c5400] using SAR=1/1
-[libx264 @ 000002c91d0c5400] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
-[libx264 @ 000002c91d0c5400] profile High, level 4.0, 4:2:0, 8-bit
-[libx264 @ 000002c91d0c5400] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
-Output #0, mp4, to 'C:\Temp\yt-dlp\Completely_obsessed_with_these_amazing_items_reencoded.mp4':
-  Metadata:
-    major_brand     : isom
-    minor_version   : 512
-    compatible_brands: isomav01iso2mp41
-    title           : Completely obsessed with these amazing items!
-    artist          : Simple Life
-    date            : 20240820
-    synopsis        : Completely obsessed with these amazing items!
-    comment         : https://www.facebook.com/SimplelifebyMetDaan/videos/1144304100005592/?share_url=https%3A%2F%2Ffb.watch%2FuaS6Ta7ZQK%2F
-    description     : Completely obsessed with these amazing items!
-    encoder         : Lavf61.1.100
-  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1080x1350 [SAR 1:1 DAR 4:5], q=2-31, 30 fps, 15360 tbn (default)
-      Metadata:
-        handler_name    : VideoHandler
-        vendor_id       : [0][0][0][0]
-        encoder         : Lavc61.3.100 libx264
-      Side data:
-        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
-  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
-      Metadata:
-        handler_name    : SoundHandler
-        vendor_id       : [0][0][0][0]
-        encoder         : Lavc61.3.100 aac
-[mp4 @ 000002c91d0c3bc0] Starting second pass: moving the moov atom to the beginning of the file
-[out#0/mp4 @ 000002c91d0a2240] video:23007KiB audio:879KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.250991%
-frame= 1644 fps=171 q=-1.0 Lsize=   23946KiB time=00:00:54.73 bitrate=3584.0kbits/s speed=5.69x
-[libx264 @ 000002c91d0c5400] frame I:41    Avg QP:19.52  size: 65008
-[libx264 @ 000002c91d0c5400] frame P:572   Avg QP:23.47  size: 21935
-[libx264 @ 000002c91d0c5400] frame B:1031  Avg QP:25.41  size:  8096
-[libx264 @ 000002c91d0c5400] consecutive B-frames:  9.0% 19.3%  8.4% 63.3%
-[libx264 @ 000002c91d0c5400] mb I  I16..4: 17.2% 69.4% 13.4%
-[libx264 @ 000002c91d0c5400] mb P  I16..4: 11.6% 25.8%  1.4%  P16..4: 27.6%  6.4%  2.0%  0.0%  0.0%    skip:25.2%
-[libx264 @ 000002c91d0c5400] mb B  I16..4:  2.2%  3.9%  0.2%  B16..8: 30.2%  3.1%  0.4%  direct: 2.4%  skip:57.6%  L0:46.6% L1:48.8% BI: 4.6%
-[libx264 @ 000002c91d0c5400] 8x8 transform intra:65.9% inter:88.0%
-[libx264 @ 000002c91d0c5400] coded y,uvDC,uvAC intra: 36.4% 49.0% 9.2% inter: 9.4% 13.7% 0.2%
-[libx264 @ 000002c91d0c5400] i16 v,h,dc,p: 20% 30%  7% 43%
-[libx264 @ 000002c91d0c5400] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26% 22% 19%  5%  6%  5%  7%  5%  6%
-[libx264 @ 000002c91d0c5400] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 21% 12%  5% 10%  8%  9%  5%  4%
-[libx264 @ 000002c91d0c5400] i8c dc,h,v,p: 48% 25% 18%  9%
-[libx264 @ 000002c91d0c5400] Weighted P-Frames: Y:2.8% UV:1.2%
-[libx264 @ 000002c91d0c5400] ref P L0: 68.0% 15.2% 12.2%  4.4%  0.1%
-[libx264 @ 000002c91d0c5400] ref B L0: 90.3%  8.1%  1.6%
-[libx264 @ 000002c91d0c5400] ref B L1: 97.6%  2.4%
-[libx264 @ 000002c91d0c5400] kb/s:3439.22
-[aac @ 000002c91d097b00] Qavg: 674.973
-
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
-
-Sunday, August 25, 2024 8:13:27 AM
-Sunday, August 25, 2024 8:13:27 AM
-On branch main
-nothing to commit, working tree clean
-Sunday, August 25, 2024 8:13:27 AM
-Sunday, August 25, 2024 8:13:27 AM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.07s.
-Sunday, August 25, 2024 8:13:27 AM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.4.1 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
-✓ built in 168ms
-Done in 0.93s.
-Sunday, August 25, 2024 8:13:28 AM
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Sunday, August 25, 2024 8:13:29 AM
-On branch main
-Your branch is up to date with 'origin/main'.
-
-nothing to commit, working tree clean
-Sunday, August 25, 2024 8:13:29 AM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Already up to date.
-Sunday, August 25, 2024 8:13:40 AM
-Everything up-to-date
-Sunday, August 25, 2024 8:13:40 AM
-
-PS C:\Users\kushal\src\myhtml\fromnepal> ssh kusfedoravm
-kushal@kusfedoravm's password:
-Last login: Fri Aug 23 16:28:35 2024 from fe80::975c:f636:bfb:5026%eth0
-kushal@kusfedoravm:~$ sudo echo "Current date and time: $(date)"; free -h; df -h; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot;
+This message is shown once a day. To disable it please create the
+/home/kushal/.hushlogin file.
+kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; timegit status; date; time ./Meta/ladybird.sh run ladybird; date;
 [sudo] password for kushal:
-Current date and time: Sun Aug 25 08:32:46 AM EDT 2024
-               total        used        free      shared  buff/cache   available
-Mem:           7.7Gi       886Mi       5.6Gi        10Mi       1.5Gi       6.9Gi
-Swap:          7.7Gi          0B       7.7Gi
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda3        31G  4.4G   26G  15% /
-devtmpfs        4.0M     0  4.0M   0% /dev
-tmpfs           3.9G     0  3.9G   0% /dev/shm
-efivarfs        128M  6.8K  128M   1% /sys/firmware/efi/efivars
-tmpfs           1.6G  1.1M  1.6G   1% /run
-tmpfs           3.9G  8.0K  3.9G   1% /tmp
-/dev/sda3        31G  4.4G   26G  15% /home
-/dev/sda2       974M  336M  571M  38% /boot
-/dev/sda1       599M   20M  580M   4% /boot/efi
-tmpfs           794M   88K  794M   1% /run/user/42
-tmpfs           794M   72K  794M   1% /run/user/1000
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.376 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.604 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.321 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.456 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.328 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.426 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.442 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.426 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.436 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.326 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.395 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.353 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.505 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.367 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.457 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.361 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.390 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.482 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.370 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.383 ms
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1987 kB]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [349 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [17.8 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [2384 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [410 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1112 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [260 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [26.0 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [92.4 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [11.1 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [388 B]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [31.4 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [672 B]
+Get:19 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1769 kB]
+Get:20 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [290 kB]
+Get:21 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [13.2 kB]
+Get:22 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [2308 kB]
+Get:23 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [398 kB]
+Get:24 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [890 kB]
+Get:25 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [175 kB]
+Get:26 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [19.0 kB]
+Fetched 12.9 MB in 2s (7963 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+13 packages can be upgraded. Run 'apt list --upgradable' to see them.
 
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19463ms
-rtt min/avg/max/mdev = 0.321/0.410/0.604/0.067 ms
+real    0m8.652s
+user    0m0.001s
+sys     0m0.030s
+Listing... Done
+e2fsprogs/jammy-updates 1.46.5-2ubuntu1.2 amd64 [upgradable from: 1.46.5-2ubuntu1.1]
+exfatprogs/jammy-updates,jammy-security 1.1.3-1ubuntu0.1 amd64 [upgradable from: 1.1.3-1]
+libcom-err2/jammy-updates 1.46.5-2ubuntu1.2 amd64 [upgradable from: 1.46.5-2ubuntu1.1]
+libext2fs2/jammy-updates 1.46.5-2ubuntu1.2 amd64 [upgradable from: 1.46.5-2ubuntu1.1]
+liborc-0.4-0/jammy-updates,jammy-security 1:0.4.32-2ubuntu0.1 amd64 [upgradable from: 1:0.4.32-2]
+libpython3-stdlib/jammy-updates 3.10.6-1~22.04.1 amd64 [upgradable from: 3.10.6-1~22.04]
+libss2/jammy-updates 1.46.5-2ubuntu1.2 amd64 [upgradable from: 1.46.5-2ubuntu1.1]
+linux-libc-dev/jammy-updates,jammy-security 5.15.0-119.129 amd64 [upgradable from: 5.15.0-118.128]
+logsave/jammy-updates 1.46.5-2ubuntu1.2 amd64 [upgradable from: 1.46.5-2ubuntu1.1]
+python3-minimal/jammy-updates 3.10.6-1~22.04.1 amd64 [upgradable from: 3.10.6-1~22.04]
+python3/jammy-updates 3.10.6-1~22.04.1 amd64 [upgradable from: 3.10.6-1~22.04]
+swtpm-tools/jammy-updates 0.6.3-0ubuntu3.3 amd64 [upgradable from: 0.6.3-0ubuntu3.2]
+swtpm/jammy-updates 0.6.3-0ubuntu3.3 amd64 [upgradable from: 0.6.3-0ubuntu3.2]
 
-real    0m19.502s
-user    0m0.000s
-sys     0m0.005s
-PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.324 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.350 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.388 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.437 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.403 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.340 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.353 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.340 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.563 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.543 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.468 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.545 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.517 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.514 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.493 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.565 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.498 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.470 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.391 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.523 ms
+real    0m0.152s
+user    0m0.139s
+sys     0m0.012s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages were automatically installed and are no longer required:
+  aglfn asymptote-doc biber chktex cups-bsd cups-client dvidvi dvisvgm fonts-adf-accanthis fonts-adf-berenis fonts-adf-gillius fonts-adf-universalis fonts-arphic-bkai00mp
+  fonts-arphic-bsmi00lp fonts-arphic-gbsn00lp fonts-arphic-gkai00mp fonts-baekmuk fonts-cabin fonts-cantarell fonts-comfortaa fonts-dejavu-extra fonts-ebgaramond fonts-ebgaramond-extra
+  fonts-font-awesome fonts-gfs-artemisia fonts-gfs-baskerville fonts-gfs-bodoni-classic fonts-gfs-complutum fonts-gfs-didot fonts-gfs-didot-classic fonts-gfs-gazis fonts-gfs-neohellenic
+  fonts-gfs-olga fonts-gfs-porson fonts-gfs-solomos fonts-gfs-theokritos fonts-go fonts-hosny-amiri fonts-junicode fonts-lato fonts-linuxlibertine fonts-lmodern fonts-lobster
+  fonts-lobstertwo fonts-noto-color-emoji fonts-noto-core fonts-oflb-asana-math fonts-open-sans fonts-roboto-unhinted fonts-sil-charis fonts-sil-gentium fonts-sil-gentium-basic
+  fonts-sil-gentiumplus fonts-sil-gentiumplus-compact fonts-sil-padauk fonts-stix fonts-tlwg-garuda fonts-tlwg-garuda-otf fonts-tlwg-kinnari fonts-tlwg-kinnari-otf fonts-tlwg-laksaman
+  fonts-tlwg-laksaman-otf fonts-tlwg-loma fonts-tlwg-loma-otf fonts-tlwg-mono fonts-tlwg-mono-otf fonts-tlwg-norasi fonts-tlwg-norasi-otf fonts-tlwg-purisa fonts-tlwg-purisa-otf
+  fonts-tlwg-sawasdee fonts-tlwg-sawasdee-otf fonts-tlwg-typewriter fonts-tlwg-typewriter-otf fonts-tlwg-typist fonts-tlwg-typist-otf fonts-tlwg-typo fonts-tlwg-typo-otf
+  fonts-tlwg-umpush fonts-tlwg-umpush-otf fonts-tlwg-waree fonts-tlwg-waree-otf fonts-unfonts-core fonts-unfonts-extra freeglut3 gsfonts gsfonts-x11 imagemagick imagemagick-6-common
+  imagemagick-6.q16 javascript-common lacheck latex-cjk-chinese-arphic-bkai00mp latex-cjk-chinese-arphic-bsmi00lp latex-cjk-chinese-arphic-gbsn00lp latex-cjk-chinese-arphic-gkai00mp
+  latex-cjk-japanese-wadalab latexdiff lcdf-typetools libalgorithm-c3-perl libapache-pom-java libautovivification-perl libb-hooks-endofscope-perl libb-hooks-op-check-perl
+  libboost-filesystem1.74.0 libbtparse2 libbusiness-ismn-perl libbusiness-issn-perl libclass-accessor-perl libclass-c3-perl libclass-c3-xs-perl libclass-data-inheritable-perl
+  libclass-inspector-perl libclass-method-modifiers-perl libclass-singleton-perl libclass-xsaccessor-perl libcmark-gfm-extensions0.29.0.gfm.3 libcmark-gfm0.29.0.gfm.3
+  libcommon-sense-perl libcommons-logging-java libcommons-parent-java libdata-compare-perl libdata-optlist-perl libdata-uniqid-perl libdate-simple-perl libdatetime-calendar-julian-perl
+  libdatetime-format-builder-perl libdatetime-format-strptime-perl libdatetime-locale-perl libdatetime-perl libdatetime-timezone-perl libde265-0 libdevel-callchecker-perl
+  libdevel-caller-perl libdevel-globaldestruction-perl libdevel-lexalias-perl libdevel-stacktrace-perl libdist-checkconflicts-perl libdjvulibre-text libdjvulibre21
+  libdynaloader-functions-perl libemail-date-format-perl libemf1 libencode-eucjpms-perl libencode-hanextra-perl libencode-jis2k-perl libeval-closure-perl libexception-class-perl
+  libexporter-tiny-perl libfftw3-double3 libfile-find-rule-perl libfile-homedir-perl libfile-sharedir-perl libfile-slurper-perl libfile-which-perl libfontbox-java libglew2.2 libgsl27
+  libgslcblas0 libheif1 libilmbase25 libipc-run3-perl libipc-shareable-perl libjs-jquery libjson-perl libjson-xs-perl libjxr-tools libjxr0 libkpathsea6 liblingua-translit-perl
+  liblist-allutils-perl liblist-moreutils-perl liblist-moreutils-xs-perl liblist-someutils-perl liblist-someutils-xs-perl liblist-utilsby-perl liblog-dispatch-perl liblog-log4perl-perl
+  liblqr-1-0 libltdl7 libmagick++-6.q16-8 libmagickcore-6.q16-6 libmagickcore-6.q16-6-extra libmagickwand-6.q16-6 libmail-sendmail-perl libmime-charset-perl libmime-lite-perl
+  libmime-types-perl libmodule-implementation-perl libmodule-runtime-perl libmotif-common libmro-compat-perl libnamespace-autoclean-perl libnamespace-clean-perl libnumber-compare-perl
+  libopenexr25 libosp5 libostyle1c2 libpackage-stash-perl libpackage-stash-xs-perl libpadwalker-perl libparams-classify-perl libparams-util-perl libparams-validate-perl
+  libparams-validationcompiler-perl libparse-recdescent-perl libpdfbox-java libperlio-utf8-strict-perl libplot2c2 libpoppler-qt5-1 libpstoedit0c2a libptexenc1 libqt5core5a libqt5dbus5
+  libqt5gui5 libqt5network5 libqt5svg5 libqt5widgets5 libqt5xml5 libreadonly-perl libref-util-perl libref-util-xs-perl libregexp-common-perl librole-tiny-perl libruby3.0 libsombok3
+  libsort-key-perl libspecio-perl libstring-crc32-perl libsub-exporter-perl libsub-exporter-progressive-perl libsub-identify-perl libsub-install-perl libsub-quote-perl libsynctex2
+  libsys-hostname-long-perl libtcl8.6 libteckit0 libtexlua53 libtexluajit2 libtext-bibtex-perl libtext-csv-perl libtext-csv-xs-perl libtext-glob-perl libtext-roman-perl
+  libtext-unidecode-perl libtie-cycle-perl libtk8.6 libtypes-serialiser-perl libunicode-linebreak-perl libvariable-magic-perl libwebpdemux2 libwmflite-0.2-7 libwoff1 libxcb-xinerama0
+  libxm4 libxml-libxml-perl libxml-libxml-simple-perl libxml-libxslt-perl libxml-namespacesupport-perl libxml-sax-base-perl libxml-sax-expat-perl libxml-sax-perl libxml-writer-perl
+  libxstring-perl libyaml-tiny-perl libzip4 libzzip-0-13 lmodern openjade pandoc-data pfb2t1c2pfb preview-latex-style ps2eps pstoedit psutils qt5-gtk-platformtheme qttranslations5-l10n
+  rake ruby ruby-net-telnet ruby-rubygems ruby-webrick ruby-xmlrpc ruby3.0 rubygems-integration sgml-base t1utils tcl tcl8.6 teckit tex-common tex-gyre texinfo tk tk8.6 xfonts-encodings
+  xfonts-utils xpdf
+Use 'sudo apt autoremove' to remove them.
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libheif1 imagemagick libavdevice58 ffmpeg libopenexr25 libmagick++-6.q16-8
+  libpostproc55 libmagickcore-6.q16-6-extra libavcodec58 libmagickwand-6.q16-6
+  libavutil56 imagemagick-6.q16 libswscale5 libmagickcore-6.q16-6
+  libavutil-dev libgsl27 libswresample3 imagemagick-6-common libavformat58
+  libgslcblas0 libavcodec-dev libde265-0 libswresample-dev libavfilter7
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+The following packages will be upgraded:
+  e2fsprogs exfatprogs libcom-err2 libext2fs2 liborc-0.4-0 libpython3-stdlib libss2 linux-libc-dev logsave python3 python3-minimal swtpm swtpm-tools
+13 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+3 standard LTS security updates
+Need to get 2608 kB of archives.
+After this operation, 2048 B of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 logsave amd64 1.46.5-2ubuntu1.2 [10.1 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libext2fs2 amd64 1.46.5-2ubuntu1.2 [208 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 e2fsprogs amd64 1.46.5-2ubuntu1.2 [590 kB]
+Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-minimal amd64 3.10.6-1~22.04.1 [24.3 kB]
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3 amd64 3.10.6-1~22.04.1 [22.8 kB]
+Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3-stdlib amd64 3.10.6-1~22.04.1 [6812 B]
+Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcom-err2 amd64 1.46.5-2ubuntu1.2 [9304 B]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libss2 amd64 1.46.5-2ubuntu1.2 [12.3 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 exfatprogs amd64 1.1.3-1ubuntu0.1 [40.5 kB]
+Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 liborc-0.4-0 amd64 1:0.4.32-2ubuntu0.1 [228 kB]
+Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 linux-libc-dev amd64 5.15.0-119.129 [1318 kB]
+Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 swtpm-tools amd64 0.6.3-0ubuntu3.3 [89.0 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 swtpm amd64 0.6.3-0ubuntu3.3 [48.0 kB]
+Fetched 2608 kB in 0s (8390 kB/s)
+(Reading database ... 91813 files and directories currently installed.)
+Preparing to unpack .../logsave_1.46.5-2ubuntu1.2_amd64.deb ...
+Unpacking logsave (1.46.5-2ubuntu1.2) over (1.46.5-2ubuntu1.1) ...
+Preparing to unpack .../libext2fs2_1.46.5-2ubuntu1.2_amd64.deb ...
+Unpacking libext2fs2:amd64 (1.46.5-2ubuntu1.2) over (1.46.5-2ubuntu1.1) ...
+Setting up libext2fs2:amd64 (1.46.5-2ubuntu1.2) ...
+(Reading database ... 91813 files and directories currently installed.)
+Preparing to unpack .../e2fsprogs_1.46.5-2ubuntu1.2_amd64.deb ...
+Unpacking e2fsprogs (1.46.5-2ubuntu1.2) over (1.46.5-2ubuntu1.1) ...
+Preparing to unpack .../python3-minimal_3.10.6-1~22.04.1_amd64.deb ...
+Unpacking python3-minimal (3.10.6-1~22.04.1) over (3.10.6-1~22.04) ...
+Setting up python3-minimal (3.10.6-1~22.04.1) ...
+(Reading database ... 91813 files and directories currently installed.)
+Preparing to unpack .../python3_3.10.6-1~22.04.1_amd64.deb ...
+running python pre-rtupdate hooks for python3.10...
+Unpacking python3 (3.10.6-1~22.04.1) over (3.10.6-1~22.04) ...
+Preparing to unpack .../libpython3-stdlib_3.10.6-1~22.04.1_amd64.deb ...
+Unpacking libpython3-stdlib:amd64 (3.10.6-1~22.04.1) over (3.10.6-1~22.04) ...
+Preparing to unpack .../libcom-err2_1.46.5-2ubuntu1.2_amd64.deb ...
+Unpacking libcom-err2:amd64 (1.46.5-2ubuntu1.2) over (1.46.5-2ubuntu1.1) ...
+Setting up libcom-err2:amd64 (1.46.5-2ubuntu1.2) ...
+(Reading database ... 91813 files and directories currently installed.)
+Preparing to unpack .../0-libss2_1.46.5-2ubuntu1.2_amd64.deb ...
+Unpacking libss2:amd64 (1.46.5-2ubuntu1.2) over (1.46.5-2ubuntu1.1) ...
+Preparing to unpack .../1-exfatprogs_1.1.3-1ubuntu0.1_amd64.deb ...
+Unpacking exfatprogs (1.1.3-1ubuntu0.1) over (1.1.3-1) ...
+Preparing to unpack .../2-liborc-0.4-0_1%3a0.4.32-2ubuntu0.1_amd64.deb ...
+Unpacking liborc-0.4-0:amd64 (1:0.4.32-2ubuntu0.1) over (1:0.4.32-2) ...
+Preparing to unpack .../3-linux-libc-dev_5.15.0-119.129_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (5.15.0-119.129) over (5.15.0-118.128) ...
+Preparing to unpack .../4-swtpm-tools_0.6.3-0ubuntu3.3_amd64.deb ...
+Unpacking swtpm-tools (0.6.3-0ubuntu3.3) over (0.6.3-0ubuntu3.2) ...
+Preparing to unpack .../5-swtpm_0.6.3-0ubuntu3.3_amd64.deb ...
+Unpacking swtpm (0.6.3-0ubuntu3.3) over (0.6.3-0ubuntu3.2) ...
+Setting up exfatprogs (1.1.3-1ubuntu0.1) ...
+Setting up linux-libc-dev:amd64 (5.15.0-119.129) ...
+Setting up swtpm (0.6.3-0ubuntu3.3) ...
+Installing new version of config file /etc/apparmor.d/usr.bin.swtpm ...
+Setting up libss2:amd64 (1.46.5-2ubuntu1.2) ...
+Setting up liborc-0.4-0:amd64 (1:0.4.32-2ubuntu0.1) ...
+Setting up logsave (1.46.5-2ubuntu1.2) ...
+Setting up libpython3-stdlib:amd64 (3.10.6-1~22.04.1) ...
+Setting up e2fsprogs (1.46.5-2ubuntu1.2) ...
+e2scrub_all.service is a disabled or a static unit not running, not starting it.
+Setting up python3 (3.10.6-1~22.04.1) ...
+running python rtupdate hooks for python3.10...
+running python post-rtupdate hooks for python3.10...
+Setting up swtpm-tools (0.6.3-0ubuntu3.3) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
 
---- kalimati.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19463ms
-rtt min/avg/max/mdev = 0.324/0.451/0.565/0.081 ms
+real    0m3.957s
+user    0m0.001s
+sys     0m0.011s
+On branch master
+Your branch is up to date with 'origin/master'.
 
-real    0m19.520s
-user    0m0.003s
-sys     0m0.002s
-PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.515 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.505 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.645 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.599 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.394 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.380 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.437 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.413 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.466 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.591 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.337 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.409 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.385 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.449 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.422 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.415 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.501 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.374 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.332 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.394 ms
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
 
---- colorado.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19483ms
-rtt min/avg/max/mdev = 0.332/0.448/0.645/0.084 ms
+nothing added to commit but untracked files present (use "git add" to track)
 
-real    0m19.520s
-user    0m0.002s
-sys     0m0.004s
-Current date and time: Sun Aug 25 08:33:49 AM EDT 2024
-Fedora 40 - x86_64                                                                                                                                                                13 MB/s |  20 MB     00:01
-Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                         1.8 kB/s | 1.4 kB     00:00
-Fedora 40 - x86_64 - Updates                                                                                                                                                     4.9 MB/s | 9.6 MB     00:01
-Dependencies resolved.
-=================================================================================================================================================================================================================
- Package                                                            Architecture                             Version                                             Repository                                 Size
-=================================================================================================================================================================================================================
-Upgrading:
- cups-browsed                                                       x86_64                                   1:2.0.1-1.fc40                                      updates                                   143 k
- cups-filters                                                       x86_64                                   1:2.0.1-1.fc40                                      updates                                   206 k
- cups-filters-driverless                                            x86_64                                   1:2.0.1-1.fc40                                      updates                                    29 k
- gst-editing-services                                               x86_64                                   1.24.7-1.fc40                                       updates                                   486 k
- gstreamer1                                                         x86_64                                   1.24.7-1.fc40                                       updates                                   1.6 M
- gstreamer1-plugin-libav                                            x86_64                                   1.24.7-1.fc40                                       updates                                   206 k
- gstreamer1-plugin-openh264                                         x86_64                                   1.24.7-1.fc40                                       updates                                    37 k
- gstreamer1-plugins-bad-free                                        x86_64                                   1.24.7-1.fc40                                       updates                                   2.8 M
- gstreamer1-plugins-bad-free-libs                                   x86_64                                   1.24.7-1.fc40                                       updates                                   926 k
- gstreamer1-plugins-base                                            x86_64                                   1.24.7-1.fc40                                       updates                                   2.2 M
- gstreamer1-plugins-good                                            x86_64                                   1.24.7-1.fc40                                       updates                                   2.4 M
- gstreamer1-plugins-good-gtk                                        x86_64                                   1.24.7-1.fc40                                       updates                                    33 k
- gstreamer1-plugins-good-qt                                         x86_64                                   1.24.7-1.fc40                                       updates                                    71 k
- gstreamer1-plugins-good-qt6                                        x86_64                                   1.24.7-1.fc40                                       updates                                    80 k
- gstreamer1-plugins-ugly-free                                       x86_64                                   1.24.7-1.fc40                                       updates                                   246 k
- libcupsfilters                                                     x86_64                                   1:2.1~b1-1.fc40                                     updates                                   604 k
- libnfsidmap                                                        x86_64                                   1:2.7.1-0.fc40                                      updates                                    61 k
- libppd                                                             x86_64                                   1:2.1~b1-1.fc40                                     updates                                   265 k
- nfs-utils                                                          x86_64                                   1:2.7.1-0.fc40                                      updates                                   461 k
+real    0m0.079s
+user    0m0.028s
+sys     0m0.047s
+remote: Enumerating objects: 2928, done.
+remote: Counting objects: 100% (2599/2599), done.
+remote: Compressing objects: 100% (846/846), done.
+remote: Total 2928 (delta 1958), reused 2213 (delta 1737), pack-reused 329 (from 1)
+Receiving objects: 100% (2928/2928), 2.73 MiB | 16.93 MiB/s, done.
+Resolving deltas: 100% (2036/2036), completed with 445 local objects.
+From https://github.com/LadybirdBrowser/ladybird
+   ca1257c6f9..84ab8bf797  master     -> origin/master
 
-Transaction Summary
-=================================================================================================================================================================================================================
-Upgrade  19 Packages
+real    0m0.820s
+user    0m0.218s
+sys     0m0.080s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Updating ca1257c6f9..84ab8bf797
+Fast-forward
+ .github/actions/setup/action.yml                                                                                  |    7 +-
+ .github/workflows/lagom-template.yml                                                                              |    3 +-
+ .mailmap                                                                                                          |    5 +-
+ AK/AK+Swift.swift                                                                                                 |   25 ++
+ AK/CMakeLists.txt                                                                                                 |    5 +
+ AK/Iterator.h                                                                                                     |   88 ++--
+ AK/Swift.h                                                                                                        |   21 +
+ Base/res/icons/16x16/download.png                                                                                 |  Bin 0 -> 778 bytes
+ Base/res/ladybird/inspector.css                                                                                   |  148 +++++--
+ Base/res/ladybird/inspector.js                                                                                    |    5 +
+ Documentation/Browser/LibWebFromLoadingToPainting.md                                                              |    2 +-
+ Documentation/CodingStyle.md                                                                                      |    2 +-
+ Documentation/GettingStartedContributing.md                                                                       |   82 ++++
+ Documentation/Patterns.md                                                                                         |   51 +--
+ Documentation/RunningTests.md                                                                                     |    7 +
+ Documentation/SmartPointers.md                                                                                    |    7 +-
+ Ladybird/Android/src/main/cpp/WebContentService.cpp                                                               |    6 +-
+ Ladybird/Android/src/main/cpp/WebViewImplementationNative.cpp                                                     |    4 +-
+ Ladybird/AppKit/Application/Application.mm                                                                        |   81 +++-
+ Ladybird/AppKit/Application/ApplicationBridge.cpp                                                                 |   99 -----
+ Ladybird/AppKit/Application/ApplicationBridge.h                                                                   |   36 --
+ Ladybird/AppKit/CMakeLists.txt                                                                                    |    1 -
+ Ladybird/AppKit/UI/Event.h                                                                                        |    8 +-
+ Ladybird/AppKit/UI/Event.mm                                                                                       |   65 ++-
+ Ladybird/AppKit/UI/LadybirdWebView.mm                                                                             |   64 ++-
+ Ladybird/AppKit/UI/LadybirdWebViewBridge.cpp                                                                      |    7 +
+ Ladybird/AppKit/UI/LadybirdWebViewBridge.h                                                                        |    1 +
+ Ladybird/CMakeLists.txt                                                                                           |    6 +-
+ Ladybird/HelperProcess.cpp                                                                                        |   10 +-
+ Ladybird/HelperProcess.h                                                                                          |    8 +-
+ Ladybird/Qt/Application.h                                                                                         |    4 +-
+ Ladybird/Qt/LocationEdit.cpp                                                                                      |    2 +
+ Ladybird/Qt/RequestManagerQt.cpp                                                                                  |    4 +-
+ Ladybird/Qt/RequestManagerQt.h                                                                                    |    6 +-
+ Ladybird/Qt/TVGIconEngine.cpp                                                                                     |    4 +-
+ Ladybird/Qt/Tab.cpp                                                                                               |    2 +-
+ Ladybird/Qt/WebContentView.cpp                                                                                    |  153 +++++--
+ Ladybird/Qt/WebContentView.h                                                                                      |    7 +
+ Ladybird/Qt/main.cpp                                                                                              |    4 +-
+ Ladybird/WebContent/CMakeLists.txt                                                                                |    2 +-
+ Ladybird/WebContent/main.cpp                                                                                      |   11 +-
+ Ladybird/WebWorker/CMakeLists.txt                                                                                 |    2 +-
+ Ladybird/WebWorker/main.cpp                                                                                       |    2 +-
+ Ladybird/cmake/ResourceFiles.cmake                                                                                |    1 +
+ Meta/CMake/Swift/GenerateSwiftHeader.cmake                                                                        |    2 +
+ Meta/CMake/Swift/swift-settings.cmake                                                                             |   13 +
+ Meta/CMake/collections.cmake                                                                                      |   20 +
+ Meta/CMake/lagom_install_options.cmake                                                                            |    4 +
+ Meta/CMake/libweb_generators.cmake                                                                                |   59 +--
+ Meta/CMake/patches/git-patch.cmake                                                                                |   14 +
+ Meta/CMake/patches/swift-collections/0001-CMake-Remove-top-level-binary-module-locations.patch                    |  170 ++++++++
+ Meta/CMake/utils.cmake                                                                                            |    5 +
+ Meta/Lagom/CMakeLists.txt                                                                                         |    4 +-
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/BindingsGenerator/IDLGenerators.cpp                                        |   60 ++-
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/CMakeLists.txt                                                             |    2 +-
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/GenerateAriaRoles.cpp                                                      |    6 +-
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/GenerateCSSEnums.cpp                                                       |   24 +-
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/{GenerateCSSValueID.cpp => GenerateCSSKeyword.cpp}                         |   56 +--
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/GenerateCSSMathFunctions.cpp                                               |   12 +-
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/GenerateCSSMediaFeatureID.cpp                                              |   38 +-
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/GenerateCSSPropertyID.cpp                                                  |   24 +-
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/GenerateCSSPseudoClass.cpp                                                 |    6 +-
+ Meta/Lagom/Tools/CodeGenerators/LibWeb/GenerateCSSTransformFunctions.cpp                                          |    6 +-
+ Meta/WPT.sh                                                                                                       |   26 +-
+ Meta/gn/secondary/Meta/Lagom/Tools/CodeGenerators/LibWeb/BUILD.gn                                                 |    4 +-
+ Meta/gn/secondary/Tests/BUILD.gn                                                                                  |    1 +
+ Meta/gn/secondary/Userland/Libraries/LibGfx/BUILD.gn                                                              |    4 +-
+ Meta/gn/secondary/Userland/Libraries/LibWeb/BUILD.gn                                                              |   12 +-
+ Meta/gn/secondary/Userland/Libraries/LibWeb/CSS/BUILD.gn                                                          |    2 +-
+ Meta/gn/secondary/Userland/Libraries/LibWeb/CSS/StyleValues/BUILD.gn                                              |    9 +-
+ Meta/gn/secondary/Userland/Libraries/LibWeb/EntriesAPI/BUILD.gn                                                   |    5 +
+ Meta/gn/secondary/Userland/Libraries/LibWeb/SVG/BUILD.gn                                                          |    1 +
+ Meta/gn/secondary/Userland/Libraries/LibWeb/StorageAPI/BUILD.gn                                                   |    8 +
+ Meta/gn/secondary/Userland/Libraries/LibWeb/idl_files.gni                                                         |    4 +
+ README.md                                                                                                         |    4 +-
+ SECURITY.md                                                                                                       |   48 ++-
+ Tests/AK/CMakeLists.txt                                                                                           |    7 +
+ Tests/AK/TestAKBindings.swift                                                                                     |   49 +++
+ Tests/AK/TestArray.cpp                                                                                            |    6 +
+ Tests/AK/TestFixedArray.cpp                                                                                       |    8 +
+ Tests/AK/TestSpan.cpp                                                                                             |   13 +
+ Tests/AK/TestStringView.cpp                                                                                       |    5 +
+ Tests/AK/TestVector.cpp                                                                                           |   13 +
+ Tests/LibCore/TestLibCoreDateTime.cpp                                                                             |    3 +
+ Tests/LibCore/TestLibCoreFileWatcher.cpp                                                                          |   97 +++++
+ Tests/LibGfx/BenchmarkGfxPainter.cpp                                                                              |    8 +-
+ Tests/LibGfx/TestPainter.cpp                                                                                      |    6 +-
+ Tests/LibGfx/TestScalingFunctions.cpp                                                                             |    4 +-
+ Tests/LibJS/test-js.cpp                                                                                           |    2 +
+ Tests/LibThreading/CMakeLists.txt                                                                                 |    1 +
+ Tests/LibThreading/TestThreadPool.cpp                                                                             |   57 +++
+ Tests/LibUnicode/TestTimeZone.cpp                                                                                 |    2 +
+ Tests/LibWasm/test-wasm.cpp                                                                                       |   10 +-
+ Tests/LibWeb/CMakeLists.txt                                                                                       |   12 +
+ Tests/LibWeb/Layout/expected/acid1.txt                                                                            |   36 +-
+ Tests/LibWeb/Layout/expected/block-and-inline/button-with-after-pseudo.txt                                        |   20 +-
+ Tests/LibWeb/Layout/expected/block-and-inline/button-with-before-pseudo.txt                                       |   20 +-
+ Tests/LibWeb/Layout/expected/block-and-inline/float-left-and-right-with-justified-text-in-between.txt             |  156 +++----
+ Tests/LibWeb/Layout/expected/block-and-inline/float-left-and-right-with-text-in-between.txt                       |   36 +-
+ Tests/LibWeb/Layout/expected/block-and-inline/float-should-avoid-inline-block.txt                                 |    8 +-
+ Tests/LibWeb/Layout/expected/block-and-inline/inline-block-contained-by-abspos-element.txt                        |   12 +-
+ Tests/LibWeb/Layout/expected/block-and-inline/max-width-for-box-with-inline-children.txt                          |    4 +-
+ Tests/LibWeb/Layout/expected/block-and-inline/min-width-for-box-with-inline-children.txt                          |    2 +-
+ Tests/LibWeb/Layout/expected/box-sizing-border-box-for-definite-sizes-without-layout.txt                          |   12 +-
+ Tests/LibWeb/Layout/expected/crash-tests/html-with-only-a-template-tag.txt                                        |    7 +
+ Tests/LibWeb/Layout/expected/css-dir-selector.txt                                                                 |   12 +-
+ Tests/LibWeb/Layout/expected/css-font-size-calc.txt                                                               |    2 +-
+ Tests/LibWeb/Layout/expected/css-import-rule.txt                                                                  |    2 +-
+ Tests/LibWeb/Layout/expected/css-line-height-percentage-inheritance.txt                                           |    2 +-
+ Tests/LibWeb/Layout/expected/css-namespace-rule-matches.txt                                                       |    2 +-
+ Tests/LibWeb/Layout/expected/css-namespace-rule-no-match.txt                                                      |    2 +-
+ Tests/LibWeb/Layout/expected/css-namespace-tag-name-selector.txt                                                  |   10 +-
+ Tests/LibWeb/Layout/expected/flex-column-item-with-auto-height-depending-auto-width-with-max-width-constraint.txt |    8 +-
+ Tests/LibWeb/Layout/expected/flex/calc-flex-basis.txt                                                             |    8 +-
+ Tests/LibWeb/Layout/expected/flex/intrinsic-cross-size-contribution-with-main-size-constraint.txt                 |    9 +
+ Tests/LibWeb/Layout/expected/getComputedStyle-on-unconnected-element.txt                                          |    2 +-
+ Tests/LibWeb/Layout/expected/grid/grid-span-4.txt                                                                 |    4 +-
+ Tests/LibWeb/Layout/expected/height-of-absolute-position-box-with-padding.txt                                     |    2 +-
+ Tests/LibWeb/Layout/expected/inline-size.txt                                                                      |    6 +-
+ Tests/LibWeb/Layout/expected/input-as-button-align-center.txt                                                     |    8 +-
+ Tests/LibWeb/Layout/expected/input-as-button-shrink-to-fit.txt                                                    |   20 +-
+ Tests/LibWeb/Layout/expected/input-placeholder.txt                                                                |   20 +-
+ Tests/LibWeb/Layout/expected/input-text-node-invalidation-on-value-change.txt                                     |    2 +-
+ Tests/LibWeb/Layout/expected/pseudo-element-with-custom-properties-2.txt                                          |    6 +-
+ Tests/LibWeb/Layout/expected/svg-text-with-percentage-values.txt                                                  |   16 +-
+ Tests/LibWeb/Layout/expected/svg-text-with-viewbox.txt                                                            |   16 +-
+ Tests/LibWeb/Layout/expected/svg/inline-svg-with-zero-intrinsic-size-and-no-viewbox.txt                           |    6 -
+ Tests/LibWeb/Layout/expected/svg/natural-width-from-svg-attributes.txt                                            |   14 +
+ Tests/LibWeb/Layout/expected/table/vertical-align-baseline.txt                                                    |   44 +-
+ Tests/LibWeb/Layout/expected/textarea-content.txt                                                                 |    6 +-
+ Tests/LibWeb/Layout/input/crash-tests/html-with-only-a-template-tag.html                                          |    2 +
+ Tests/LibWeb/Layout/input/flex/intrinsic-cross-size-contribution-with-main-size-constraint.html                   |    9 +
+ Tests/LibWeb/Layout/input/svg/natural-width-from-svg-attributes.html                                              |   14 +
+ Tests/LibWeb/Ref/inline-visibility-hidden.html                                                                    |    2 +
+ Tests/LibWeb/Ref/reference/inline-visibility-hidden-ref.html                                                      |    1 +
+ Tests/LibWeb/Ref/reference/scrollable-contains-rotated-boxes-ref.html                                             |    2 -
+ Tests/LibWeb/Ref/reference/svg-display-attr.html                                                                  |    4 +
+ Tests/LibWeb/Ref/scrollable-contains-rotated-boxes.html                                                           |    2 -
+ Tests/LibWeb/Ref/svg-display-attr.html                                                                            |    7 +
+ Tests/LibWeb/Screenshot/canvas-fillstyle-rgb.html                                                                 |    2 -
+ Tests/LibWeb/Screenshot/canvas-unpremultiplied-image.html                                                         |   12 +
+ Tests/LibWeb/Screenshot/images/border-radius-ref.png                                                              |  Bin 373225 -> 318841 bytes
+ Tests/LibWeb/Screenshot/images/canvas-arcs-and-ellipses-ref.png                                                   |  Bin 6253 -> 2306 bytes
+ Tests/LibWeb/Screenshot/images/canvas-fillstyle-rgb.png                                                           |  Bin 3273 -> 376 bytes
+ Tests/LibWeb/Screenshot/images/canvas-implict-moves-and-lines-ref.png                                             |  Bin 8913 -> 4195 bytes
+ Tests/LibWeb/Screenshot/images/canvas-path-rect-ref.png                                                           |  Bin 6269 -> 5199 bytes
+ Tests/LibWeb/Screenshot/images/canvas-text-ref.png                                                                |  Bin 29894 -> 28763 bytes
+ Tests/LibWeb/Screenshot/images/canvas-unpremultiplied-image-ref.png                                               |  Bin 0 -> 2359 bytes
+ Tests/LibWeb/Screenshot/images/clip-path-polygon-ref.png                                                          |  Bin 3350 -> 3353 bytes
+ Tests/LibWeb/Screenshot/images/css-background-clip-text.png                                                       |  Bin 274655 -> 274671 bytes
+ Tests/LibWeb/Screenshot/images/css-color-functions-ref.png                                                        |  Bin 109293 -> 95231 bytes
+ Tests/LibWeb/Screenshot/images/css-transform-box-ref.png                                                          |  Bin 6502 -> 4062 bytes
+ Tests/LibWeb/Screenshot/images/inline-node-ref.png                                                                |  Bin 16978 -> 16985 bytes
+ Tests/LibWeb/Screenshot/images/object-fit-position.png                                                            |  Bin 690108 -> 690122 bytes
+ Tests/LibWeb/Screenshot/images/opacity-stacking-ref.png                                                           |  Bin 13906 -> 12994 bytes
+ Tests/LibWeb/Screenshot/images/outer-box-shadow-ref.png                                                           |  Bin 111133 -> 96747 bytes
+ Tests/LibWeb/Screenshot/images/svg-clip-path-and-mask-ref.png                                                     |  Bin 9525 -> 9467 bytes
+ Tests/LibWeb/Screenshot/images/svg-foreign-object-mask-ref.png                                                    |  Bin 4083 -> 4067 bytes
+ Tests/LibWeb/Screenshot/images/svg-maskContentUnits-ref.png                                                       |  Bin 6340 -> 6315 bytes
+ Tests/LibWeb/Screenshot/images/svg-text-effects-ref.png                                                           |  Bin 18402 -> 18317 bytes
+ Tests/LibWeb/Screenshot/images/svg-textPath-ref.png                                                               |  Bin 39205 -> 40623 bytes
+ Tests/LibWeb/Screenshot/reference/canvas-unpremultiplied-image-ref.html                                           |    9 +
+ Tests/LibWeb/TestCSSIDSpeed.cpp                                                                                   |   20 +-
+ Tests/LibWeb/TestHTMLTokenizerSwift.swift                                                                         |   60 +++
+ Tests/LibWeb/TestLibWebSwiftBindings.swift                                                                        |   47 +++
+ Tests/LibWeb/Text/expected/HTML/HTMLInputElement-cloning-steps.txt                                                |    2 +
+ Tests/LibWeb/Text/expected/HTML/HTMLInputElement-invalid-time-digits.txt                                          |    1 +
+ Tests/LibWeb/Text/expected/HTML/HTMLProgressElement-set-attributes.txt                                            |    1 +
+ Tests/LibWeb/Text/expected/HTML/HTMLTextAreaElement-cloning-steps.txt                                             |    1 +
+ Tests/LibWeb/Text/expected/HTML/Location-protocol-setter.txt                                                      |    1 +
+ Tests/LibWeb/Text/expected/HTML/Location-search-setter.txt                                                        |    1 +
+ Tests/LibWeb/Text/expected/HTML/canvas-putImageData-unpremultiplied.txt                                           |    2 +
+ Tests/LibWeb/Text/expected/HTML/data-transfer.txt                                                                 |   10 +
+ Tests/LibWeb/Text/expected/HTML/drag-and-drop.txt                                                                 |   49 +++
+ Tests/LibWeb/Text/expected/ShadowDOM/css-hover-shadow-dom.txt                                                     |    1 +
+ Tests/LibWeb/Text/expected/Streams/TransformStream-readable-cancel.txt                                            |    3 +
+ Tests/LibWeb/Text/expected/UIEvents/special-keys.txt                                                              |    1 +
+ Tests/LibWeb/Text/expected/URL/search-params-strip-trailing-spaces-from-opaque-url.txt                            |    6 +
+ Tests/LibWeb/Text/expected/URL/url-search-params-sort-utf16-code-units.txt                                        |    4 +
+ Tests/LibWeb/Text/expected/Wasm/WebAssembly-grow.txt                                                              |    2 +-
+ Tests/LibWeb/Text/expected/all-window-properties.txt                                                              |    9 +
+ Tests/LibWeb/Text/expected/canvas/fillstyle.txt                                                                   |    2 +-
+ Tests/LibWeb/Text/expected/css/attribute-selector-case-sensitivity.txt                                            |    4 +
+ Tests/LibWeb/Text/expected/css/small-aspect-ratio.txt                                                             |    1 +
+ Tests/LibWeb/Text/expected/input-image.txt                                                                        |    2 +-
+ Tests/LibWeb/Text/expected/usvstring-url-reflection.txt                                                           |   16 +
+ Tests/LibWeb/Text/expected/video-canceled-load.txt                                                                |    2 +-
+ Tests/LibWeb/Text/expected/video-failed-load.txt                                                                  |    2 +-
+ Tests/LibWeb/Text/input/HTML/HTMLInputElement-cloning-steps.html                                                  |   23 ++
+ Tests/LibWeb/Text/input/HTML/HTMLInputElement-invalid-time-digits.html                                            |   13 +
+ Tests/LibWeb/Text/input/HTML/HTMLProgressElement-set-attributes.html                                              |    2 +
+ Tests/LibWeb/Text/input/HTML/HTMLTextAreaElement-cloning-steps.html                                               |   20 +
+ Tests/LibWeb/Text/input/HTML/Location-protocol-setter.html                                                        |   11 +
+ Tests/LibWeb/Text/input/HTML/Location-search-setter.html                                                          |   16 +
+ Tests/LibWeb/Text/input/HTML/canvas-putImageData-unpremultiplied.html                                             |   29 ++
+ Tests/LibWeb/Text/input/HTML/data-transfer.html                                                                   |   54 +++
+ Tests/LibWeb/Text/input/HTML/drag-and-drop.html                                                                   |   80 ++++
+ Tests/LibWeb/Text/input/ShadowDOM/css-hover-shadow-dom.html                                                       |   23 ++
+ Tests/LibWeb/Text/input/Streams/TransformStream-readable-cancel.html                                              |   22 +
+ Tests/LibWeb/Text/input/UIEvents/special-keys.html                                                                |   17 +
+ Tests/LibWeb/Text/input/URL/search-params-strip-trailing-spaces-from-opaque-url.html                              |   16 +
+ Tests/LibWeb/Text/input/URL/url-search-params-sort-utf16-code-units.html                                          |   17 +
+ Tests/LibWeb/Text/input/canvas/fillstyle.html                                                                     |    4 +-
+ Tests/LibWeb/Text/input/css/attribute-selector-case-sensitivity.html                                              |   18 +
+ Tests/LibWeb/Text/input/css/small-aspect-ratio.html                                                               |   11 +
+ Tests/LibWeb/Text/input/input-image.html                                                                          |    3 +-
+ Tests/LibWeb/Text/input/usvstring-url-reflection.html                                                             |   30 ++
+ Tests/LibWeb/Text/input/video-canceled-load.html                                                                  |    2 +-
+ Tests/LibWeb/rebaseline-libweb-test                                                                               |    2 +-
+ Userland/Libraries/LibCore/CMakeLists.txt                                                                         |    5 +-
+ Userland/Libraries/LibCore/FileWatcher.h                                                                          |    1 +
+ Userland/Libraries/LibCore/FileWatcherLinux.cpp                                                                   |   13 +-
+ Userland/Libraries/LibCore/FileWatcherMacOS.mm                                                                    |   34 +-
+ Userland/Libraries/LibCore/Forward.h                                                                              |    1 +
+ Userland/Libraries/LibCore/MachPort.h                                                                             |    6 +-
+ Userland/Libraries/LibCore/TimeZoneWatcher.h                                                                      |   29 ++
+ Userland/Libraries/LibCore/TimeZoneWatcherLinux.cpp                                                               |   62 +++
+ Userland/Libraries/LibCore/TimeZoneWatcherMacOS.mm                                                                |   60 +++
+ Userland/Libraries/LibCore/TimeZoneWatcherUnimplemented.cpp                                                       |   16 +
+ Userland/Libraries/LibGfx/AntiAliasingPainter.cpp                                                                 |  568 +-------------------------
+ Userland/Libraries/LibGfx/AntiAliasingPainter.h                                                                   |   91 +----
+ Userland/Libraries/LibGfx/CMakeLists.txt                                                                          |   12 +-
+ Userland/Libraries/LibGfx/Color.cpp                                                                               |    9 +-
+ Userland/Libraries/LibGfx/Color.swift                                                                             |    8 +-
+ Userland/Libraries/LibGfx/DeprecatedPainter.cpp                                                                   | 1299 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Userland/Libraries/LibGfx/DeprecatedPainter.h                                                                     |  144 +++++++
+ Userland/Libraries/LibGfx/DeprecatedPath.cpp                                                                      |  451 ++++++++++++++++++++
+ Userland/Libraries/LibGfx/DeprecatedPath.h                                                                        |  274 +++++++++++++
+ Userland/Libraries/LibGfx/EdgeFlagPathRasterizer.cpp                                                              |   28 +-
+ Userland/Libraries/LibGfx/EdgeFlagPathRasterizer.h                                                                |   10 +-
+ Userland/Libraries/LibGfx/Font/Font.cpp                                                                           |   17 +
+ Userland/Libraries/LibGfx/Font/Font.h                                                                             |   12 +-
+ Userland/Libraries/LibGfx/Font/FontDatabase.cpp                                                                   |   11 +
+ Userland/Libraries/LibGfx/Font/FontDatabase.h                                                                     |    3 +
+ Userland/Libraries/LibGfx/Font/OpenType/Glyf.cpp                                                                  |  279 -------------
+ Userland/Libraries/LibGfx/Font/OpenType/Glyf.h                                                                    |   90 ----
+ Userland/Libraries/LibGfx/Font/OpenType/Tables.cpp                                                                |   79 ----
+ Userland/Libraries/LibGfx/Font/OpenType/Tables.h                                                                  |  174 --------
+ Userland/Libraries/LibGfx/Font/OpenType/Typeface.cpp                                                              |  211 +---------
+ Userland/Libraries/LibGfx/Font/OpenType/Typeface.h                                                                |   39 --
+ Userland/Libraries/LibGfx/Font/ScaledFont.cpp                                                                     |   17 +-
+ Userland/Libraries/LibGfx/Font/ScaledFont.h                                                                       |    4 -
+ Userland/Libraries/LibGfx/Font/Typeface.cpp                                                                       |   20 +-
+ Userland/Libraries/LibGfx/Font/Typeface.h                                                                         |    9 +-
+ Userland/Libraries/LibGfx/Font/TypefaceSkia.cpp                                                                   |   11 +-
+ Userland/Libraries/LibGfx/Forward.h                                                                               |    2 +
+ Userland/Libraries/LibGfx/GradientPainting.cpp                                                                    |   12 +-
+ Userland/Libraries/LibGfx/ImageFormats/PNGLoader.cpp                                                              |   17 +-
+ Userland/Libraries/LibGfx/ImageFormats/TinyVGLoader.cpp                                                           |   20 +-
+ Userland/Libraries/LibGfx/ImageFormats/TinyVGLoader.h                                                             |    6 +-
+ Userland/Libraries/LibGfx/PaintStyle.h                                                                            |    8 +
+ Userland/Libraries/LibGfx/Painter.cpp                                                                             | 1292 +---------------------------------------------------------
+ Userland/Libraries/LibGfx/Painter.h                                                                               |  130 +-----
+ Userland/Libraries/LibGfx/PainterSkia.cpp                                                                         |  297 ++++++++++++++
+ Userland/Libraries/LibGfx/PainterSkia.h                                                                           |   38 ++
+ Userland/Libraries/LibGfx/Path.cpp                                                                                |  523 +-----------------------
+ Userland/Libraries/LibGfx/Path.h                                                                                  |  307 +++-----------
+ Userland/Libraries/LibGfx/PathClipper.cpp                                                                         |   47 ---
+ Userland/Libraries/LibGfx/PathClipper.h                                                                           |   67 ---
+ Userland/Libraries/LibGfx/PathSkia.cpp                                                                            |  220 ++++++++++
+ Userland/Libraries/LibGfx/PathSkia.h                                                                              |   53 +++
+ Userland/Libraries/LibGfx/TextLayout.cpp                                                                          |   72 ++--
+ Userland/Libraries/LibGfx/TextLayout.h                                                                            |   55 +--
+ Userland/Libraries/LibGfx/VectorGraphic.cpp                                                                       |    6 +-
+ Userland/Libraries/LibGfx/VectorGraphic.h                                                                         |    4 +-
+ Userland/Libraries/LibJS/Console.cpp                                                                              |  198 +++++++++
+ Userland/Libraries/LibJS/Console.h                                                                                |    2 +
+ Userland/Libraries/LibJS/Lexer.cpp                                                                                |    2 +-
+ Userland/Libraries/LibJS/Print.cpp                                                                                |    6 +-
+ Userland/Libraries/LibJS/Runtime/ArrayBuffer.cpp                                                                  |  119 +++---
+ Userland/Libraries/LibJS/Runtime/ArrayBuffer.h                                                                    |   16 +-
+ Userland/Libraries/LibJS/Runtime/ArrayBufferPrototype.cpp                                                         |   48 +--
+ Userland/Libraries/LibJS/Runtime/ArrayBufferPrototype.h                                                           |    2 +-
+ Userland/Libraries/LibJS/Runtime/CommonPropertyNames.h                                                            |    1 +
+ Userland/Libraries/LibJS/Runtime/ConsoleObject.cpp                                                                |    8 +
+ Userland/Libraries/LibJS/Runtime/ConsoleObject.h                                                                  |    1 +
+ Userland/Libraries/LibJS/Runtime/Intl/AbstractOperations.cpp                                                      |   24 +-
+ Userland/Libraries/LibJS/Runtime/Intl/DateTimeFormat.h                                                            |    8 +-
+ Userland/Libraries/LibJS/Runtime/Intl/DateTimeFormatConstructor.cpp                                               |  125 +++---
+ Userland/Libraries/LibJS/Runtime/Intl/DateTimeFormatPrototype.cpp                                                 |   41 +-
+ Userland/Libraries/LibJS/Runtime/Intl/DisplayNamesConstructor.cpp                                                 |   55 ++-
+ Userland/Libraries/LibJS/Runtime/Intl/ListFormat.cpp                                                              |    2 +-
+ Userland/Libraries/LibJS/Runtime/Intl/LocaleConstructor.cpp                                                       |    2 +-
+ Userland/Libraries/LibJS/Runtime/Intl/NumberFormatConstructor.cpp                                                 |  234 +++++------
+ Userland/Libraries/LibJS/Runtime/Intl/NumberFormatConstructor.h                                                   |    1 -
+ Userland/Libraries/LibJS/Runtime/Intl/PluralRulesConstructor.cpp                                                  |   13 +-
+ Userland/Libraries/LibJS/Runtime/Intl/RelativeTimeFormat.cpp                                                      |    2 +-
+ Userland/Libraries/LibJS/Runtime/Intl/RelativeTimeFormatConstructor.cpp                                           |    2 +-
+ Userland/Libraries/LibJS/Runtime/Intl/SegmenterConstructor.cpp                                                    |    2 +-
+ Userland/Libraries/LibJS/Runtime/IteratorHelper.cpp                                                               |   18 +-
+ Userland/Libraries/LibJS/Runtime/IteratorHelper.h                                                                 |   14 +-
+ Userland/Libraries/LibJS/Runtime/IteratorPrototype.cpp                                                            |   24 +-
+ Userland/Libraries/LibJS/Runtime/StringPrototype.cpp                                                              |   27 +-
+ Userland/Libraries/LibJS/Runtime/TypedArray.h                                                                     |   10 +-
+ Userland/Libraries/LibJS/Runtime/VM.cpp                                                                           |    2 +-
+ Userland/Libraries/{LibProtocol => LibRequests}/CMakeLists.txt                                                    |    4 +-
+ Userland/Libraries/{LibProtocol => LibRequests}/Request.cpp                                                       |    8 +-
+ Userland/Libraries/{LibProtocol => LibRequests}/Request.h                                                         |    2 +-
+ Userland/Libraries/{LibProtocol => LibRequests}/RequestClient.cpp                                                 |    6 +-
+ Userland/Libraries/{LibProtocol => LibRequests}/RequestClient.h                                                   |    4 +-
+ Userland/Libraries/{LibProtocol => LibRequests}/WebSocket.cpp                                                     |    6 +-
+ Userland/Libraries/{LibProtocol => LibRequests}/WebSocket.h                                                       |    2 +-
+ Userland/Libraries/LibThreading/ThreadPool.h                                                                      |   42 +-
+ Userland/Libraries/LibUnicode/DateTimeFormat.h                                                                    |   17 -
+ Userland/Libraries/LibUnicode/TimeZone.cpp                                                                        |   15 +-
+ Userland/Libraries/LibUnicode/TimeZone.h                                                                          |    8 +-
+ Userland/Libraries/LibWasm/AbstractMachine/AbstractMachine.cpp                                                    |   21 +-
+ Userland/Libraries/LibWasm/AbstractMachine/AbstractMachine.h                                                      |   62 +--
+ Userland/Libraries/LibWasm/AbstractMachine/BytecodeInterpreter.cpp                                                |    2 +-
+ Userland/Libraries/LibWasm/AbstractMachine/BytecodeInterpreter.h                                                  |    8 +-
+ Userland/Libraries/LibWasm/AbstractMachine/Configuration.cpp                                                      |    2 +-
+ Userland/Libraries/LibWasm/Parser/Parser.cpp                                                                      |    8 +-
+ Userland/Libraries/LibWasm/Types.h                                                                                |    6 +-
+ Userland/Libraries/LibWasm/WASI/Wasi.cpp                                                                          |    2 +-
+ Userland/Libraries/LibWeb/Animations/AnimationEffect.cpp                                                          |    4 +-
+ Userland/Libraries/LibWeb/Animations/AnimationEffect.h                                                            |    2 +-
+ Userland/Libraries/LibWeb/Animations/KeyframeEffect.cpp                                                           |   10 +-
+ Userland/Libraries/LibWeb/Animations/KeyframeEffect.h                                                             |   10 +-
+ Userland/Libraries/LibWeb/CMakeLists.txt                                                                          |   71 +++-
+ Userland/Libraries/LibWeb/CSS/Angle.h                                                                             |    3 +-
+ Userland/Libraries/LibWeb/CSS/BackdropFilter.h                                                                    |    2 +-
+ Userland/Libraries/LibWeb/CSS/CSSAnimation.h                                                                      |    2 +-
+ Userland/Libraries/LibWeb/CSS/CSSStyleDeclaration.cpp                                                             |    2 +-
+ Userland/Libraries/LibWeb/CSS/CSSStyleDeclaration.h                                                               |    4 +-
+ Userland/Libraries/LibWeb/CSS/CSSStyleRule.cpp                                                                    |    5 +-
+ Userland/Libraries/LibWeb/CSS/CSSStyleSheet.cpp                                                                   |    4 +-
+ Userland/Libraries/LibWeb/CSS/CSSStyleValue.cpp                                                                   |  470 +++++++++++++++++++++
+ Userland/Libraries/LibWeb/CSS/CSSStyleValue.h                                                                     |  383 +++++++++++++++++
+ Userland/Libraries/LibWeb/CSS/CSSTransition.h                                                                     |    2 +-
+ Userland/Libraries/LibWeb/CSS/CalculatedOr.cpp                                                                    |   18 +-
+ Userland/Libraries/LibWeb/CSS/CalculatedOr.h                                                                      |   22 +-
+ Userland/Libraries/LibWeb/CSS/Flex.h                                                                              |    3 +-
+ Userland/Libraries/LibWeb/CSS/FontFace.cpp                                                                        |    2 +-
+ Userland/Libraries/LibWeb/CSS/Frequency.h                                                                         |    3 +-
+ Userland/Libraries/LibWeb/CSS/{Identifiers.json => Keywords.json}                                                 |    4 +
+ Userland/Libraries/LibWeb/CSS/Length.cpp                                                                          |   90 ++--
+ Userland/Libraries/LibWeb/CSS/Length.h                                                                            |    3 +-
+ Userland/Libraries/LibWeb/CSS/LengthBox.h                                                                         |    2 +-
+ Userland/Libraries/LibWeb/CSS/MediaQuery.cpp                                                                      |   10 +-
+ Userland/Libraries/LibWeb/CSS/MediaQuery.h                                                                        |   10 +-
+ Userland/Libraries/LibWeb/CSS/Parser/GradientParsing.cpp                                                          |    8 +-
+ Userland/Libraries/LibWeb/CSS/Parser/Helpers.cpp                                                                  |    2 +-
+ Userland/Libraries/LibWeb/CSS/Parser/MediaParsing.cpp                                                             |    6 +-
+ Userland/Libraries/LibWeb/CSS/Parser/Parser.cpp                                                                   | 1445 +++++++++++++++++++++++++++++++++++------------------------------
+ Userland/Libraries/LibWeb/CSS/Parser/Parser.h                                                                     |  223 +++++-----
+ Userland/Libraries/LibWeb/CSS/Parser/SelectorParsing.cpp                                                          |   23 +-
+ Userland/Libraries/LibWeb/CSS/Resolution.h                                                                        |    3 +-
+ Userland/Libraries/LibWeb/CSS/ResolvedCSSStyleDeclaration.cpp                                                     |   63 ++-
+ Userland/Libraries/LibWeb/CSS/ResolvedCSSStyleDeclaration.h                                                       |    2 +-
+ Userland/Libraries/LibWeb/CSS/Selector.h                                                                          |    4 +-
+ Userland/Libraries/LibWeb/CSS/SelectorEngine.cpp                                                                  |   45 +-
+ Userland/Libraries/LibWeb/CSS/StyleComputer.cpp                                                                   |  227 ++++++-----
+ Userland/Libraries/LibWeb/CSS/StyleComputer.h                                                                     |   10 +-
+ Userland/Libraries/LibWeb/CSS/StyleInvalidation.cpp                                                               |    4 +-
+ Userland/Libraries/LibWeb/CSS/StyleInvalidation.h                                                                 |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleProperties.cpp                                                                 |  168 ++++----
+ Userland/Libraries/LibWeb/CSS/StyleProperties.h                                                                   |   18 +-
+ Userland/Libraries/LibWeb/CSS/StyleProperty.cpp                                                                   |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleProperty.h                                                                     |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleSheetList.cpp                                                                  |   36 +-
+ Userland/Libraries/LibWeb/CSS/StyleSheetList.h                                                                    |   15 +-
+ Userland/Libraries/LibWeb/CSS/StyleValue.cpp                                                                      |  213 ----------
+ Userland/Libraries/LibWeb/CSS/StyleValue.h                                                                        |  218 ----------
+ Userland/Libraries/LibWeb/CSS/StyleValues/AbstractImageStyleValue.h                                               |    8 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/AngleStyleValue.cpp                                                     |   11 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/AngleStyleValue.h                                                       |   10 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/BackgroundRepeatStyleValue.h                                            |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/BackgroundSizeStyleValue.h                                              |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/BasicShapeStyleValue.cpp                                                |    1 +
+ Userland/Libraries/LibWeb/CSS/StyleValues/BasicShapeStyleValue.h                                                  |    4 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/BorderRadiusStyleValue.cpp                                              |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/BorderRadiusStyleValue.h                                                |    4 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/CSSColorValue.cpp                                                       |  124 ++++++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CSSColorValue.h                                                         |   49 +++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CSSHSL.cpp                                                              |   41 ++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CSSHSL.h                                                                |   54 +++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CSSHWB.cpp                                                              |   51 +++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CSSHWB.h                                                                |   54 +++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CSSKeywordValue.cpp                                                     |  335 +++++++++++++++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CSSKeywordValue.h                                                       |   65 +++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CSSNumericValue.h                                                       |   25 ++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CSSOKLCH.cpp                                                            |   45 ++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CSSOKLCH.h                                                              |   54 +++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CSSOKLab.cpp                                                            |   44 ++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CSSOKLab.h                                                              |   54 +++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CSSRGB.cpp                                                              |   77 ++++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CSSRGB.h                                                                |   54 +++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CSSUnitValue.h                                                          |   29 ++
+ Userland/Libraries/LibWeb/CSS/StyleValues/CalculatedStyleValue.cpp                                                |    9 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/CalculatedStyleValue.h                                                  |   12 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/ColorStyleValue.cpp                                                     |   40 --
+ Userland/Libraries/LibWeb/CSS/StyleValues/ColorStyleValue.h                                                       |   39 --
+ Userland/Libraries/LibWeb/CSS/StyleValues/ConicGradientStyleValue.cpp                                             |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/ConicGradientStyleValue.h                                               |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/ContentStyleValue.h                                                     |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/CounterDefinitionsStyleValue.h                                          |    4 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/CounterStyleValue.cpp                                                   |   16 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/CounterStyleValue.h                                                     |   10 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/CustomIdentStyleValue.h                                                 |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/DisplayStyleValue.h                                                     |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/EasingStyleValue.h                                                      |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/EdgeStyleValue.h                                                        |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/FlexStyleValue.h                                                        |   19 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/FrequencyStyleValue.h                                                   |   18 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/GridAutoFlowStyleValue.h                                                |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/GridTemplateAreaStyleValue.h                                            |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/GridTrackPlacementStyleValue.h                                          |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/GridTrackSizeListStyleValue.h                                           |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/IdentifierStyleValue.cpp                                                |  335 ---------------
+ Userland/Libraries/LibWeb/CSS/StyleValues/IdentifierStyleValue.h                                                  |   44 --
+ Userland/Libraries/LibWeb/CSS/StyleValues/ImageStyleValue.cpp                                                     |    4 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/ImageStyleValue.h                                                       |    4 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/InheritStyleValue.h                                                     |   33 --
+ Userland/Libraries/LibWeb/CSS/StyleValues/InitialStyleValue.h                                                     |   33 --
+ Userland/Libraries/LibWeb/CSS/StyleValues/IntegerStyleValue.h                                                     |   18 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/LengthStyleValue.cpp                                                    |   10 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/LengthStyleValue.h                                                      |   15 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/LinearGradientStyleValue.cpp                                            |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/LinearGradientStyleValue.h                                              |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/MathDepthStyleValue.cpp                                                 |    6 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/MathDepthStyleValue.h                                                   |   10 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/NumberStyleValue.h                                                      |   18 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/PercentageStyleValue.h                                                  |   19 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/PositionStyleValue.h                                                    |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/RadialGradientStyleValue.cpp                                            |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/RadialGradientStyleValue.h                                              |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/RatioStyleValue.h                                                       |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/RectStyleValue.h                                                        |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/ResolutionStyleValue.h                                                  |   18 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/RevertStyleValue.h                                                      |   33 --
+ Userland/Libraries/LibWeb/CSS/StyleValues/ScrollbarGutterStyleValue.h                                             |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/ShadowStyleValue.cpp                                                    |    5 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/ShadowStyleValue.h                                                      |   48 +--
+ Userland/Libraries/LibWeb/CSS/StyleValues/ShorthandStyleValue.cpp                                                 |    6 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/ShorthandStyleValue.h                                                   |   12 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/StringStyleValue.h                                                      |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/StyleValueList.h                                                        |    4 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/TimeStyleValue.h                                                        |   18 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/TransformationStyleValue.h                                              |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/TransitionStyleValue.h                                                  |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/URLStyleValue.h                                                         |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/UnresolvedStyleValue.cpp                                                |    2 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/UnresolvedStyleValue.h                                                  |    8 +-
+ Userland/Libraries/LibWeb/CSS/StyleValues/UnsetStyleValue.h                                                       |   36 --
+ Userland/Libraries/LibWeb/CSS/Time.h                                                                              |    3 +-
+ Userland/Libraries/LibWeb/Clipboard/ClipboardEvent.cpp                                                            |   41 ++
+ Userland/Libraries/LibWeb/Clipboard/ClipboardEvent.h                                                              |   41 ++
+ Userland/Libraries/LibWeb/Clipboard/ClipboardEvent.idl                                                            |   13 +
+ Userland/Libraries/LibWeb/DOM/Document.cpp                                                                        |  108 ++++-
+ Userland/Libraries/LibWeb/DOM/Document.h                                                                          |   21 +
+ Userland/Libraries/LibWeb/DOM/Element.cpp                                                                         |   12 +-
+ Userland/Libraries/LibWeb/DOM/ElementFactory.cpp                                                                  |    3 +
+ Userland/Libraries/LibWeb/DOM/Range.cpp                                                                           |    1 +
+ Userland/Libraries/LibWeb/DOM/ShadowRoot.cpp                                                                      |    2 +-
+ Userland/Libraries/LibWeb/DOMURL/URLSearchParams.cpp                                                              |   27 +-
+ Userland/Libraries/LibWeb/Dump.cpp                                                                                |    8 +-
+ Userland/Libraries/LibWeb/EntriesAPI/FileSystemEntry.cpp                                                          |   55 +++
+ Userland/Libraries/LibWeb/EntriesAPI/FileSystemEntry.h                                                            |   39 ++
+ Userland/Libraries/LibWeb/EntriesAPI/FileSystemEntry.idl                                                          |   10 +
+ Userland/Libraries/LibWeb/FileAPI/Blob.cpp                                                                        |   71 ++--
+ Userland/Libraries/LibWeb/FileAPI/Blob.h                                                                          |    2 +
+ Userland/Libraries/LibWeb/FileAPI/Blob.idl                                                                        |    2 +-
+ Userland/Libraries/LibWeb/FileAPI/FileList.cpp                                                                    |   12 -
+ Userland/Libraries/LibWeb/FileAPI/FileList.h                                                                      |    4 +-
+ Userland/Libraries/LibWeb/Forward.h                                                                               |   35 +-
+ Userland/Libraries/LibWeb/HTML/AttributeNames.h                                                                   |    1 +
+ Userland/Libraries/LibWeb/HTML/AudioTrack.cpp                                                                     |    2 +-
+ Userland/Libraries/LibWeb/HTML/BrowsingContext.cpp                                                                |   36 +-
+ Userland/Libraries/LibWeb/HTML/BrowsingContext.h                                                                  |    4 +-
+ Userland/Libraries/LibWeb/HTML/Canvas/CanvasFilters.idl                                                           |    5 +
+ Userland/Libraries/LibWeb/HTML/Canvas/CanvasPath.cpp                                                              |   62 ++-
+ Userland/Libraries/LibWeb/HTML/Canvas/CanvasShadowStyles.idl                                                      |    8 +
+ Userland/Libraries/LibWeb/HTML/Canvas/CanvasState.cpp                                                             |    7 +
+ Userland/Libraries/LibWeb/HTML/Canvas/CanvasState.h                                                               |    9 +-
+ Userland/Libraries/LibWeb/HTML/Canvas/CanvasTransform.h                                                           |   42 +-
+ Userland/Libraries/LibWeb/HTML/Canvas/CanvasUserInterface.idl                                                     |    5 +
+ Userland/Libraries/LibWeb/HTML/CanvasRenderingContext2D.cpp                                                       |  160 ++++----
+ Userland/Libraries/LibWeb/HTML/CanvasRenderingContext2D.h                                                         |   31 +-
+ Userland/Libraries/LibWeb/HTML/CanvasRenderingContext2D.idl                                                       |   20 +-
+ Userland/Libraries/LibWeb/HTML/CrossOrigin/Reporting.cpp                                                          |   76 +++-
+ Userland/Libraries/LibWeb/HTML/DataTransfer.cpp                                                                   |  287 ++++++++++++-
+ Userland/Libraries/LibWeb/HTML/DataTransfer.h                                                                     |   67 ++-
+ Userland/Libraries/LibWeb/HTML/DataTransfer.idl                                                                   |   15 +-
+ Userland/Libraries/LibWeb/HTML/DataTransferItem.cpp                                                               |  174 ++++++++
+ Userland/Libraries/LibWeb/HTML/DataTransferItem.h                                                                 |   46 +++
+ Userland/Libraries/LibWeb/HTML/DataTransferItem.idl                                                               |   16 +
+ Userland/Libraries/LibWeb/HTML/DataTransferItemList.cpp                                                           |  125 ++++++
+ Userland/Libraries/LibWeb/HTML/DataTransferItemList.h                                                             |   41 ++
+ Userland/Libraries/LibWeb/HTML/DataTransferItemList.idl                                                           |   13 +
+ Userland/Libraries/LibWeb/HTML/Dates.cpp                                                                          |    6 +
+ Userland/Libraries/LibWeb/HTML/DragDataStore.cpp                                                                  |   34 ++
+ Userland/Libraries/LibWeb/HTML/DragDataStore.h                                                                    |   82 ++++
+ Userland/Libraries/LibWeb/HTML/EventLoop/EventLoop.cpp                                                            |    8 +-
+ Userland/Libraries/LibWeb/HTML/EventSource.cpp                                                                    |   17 +-
+ Userland/Libraries/LibWeb/HTML/HTMLAnchorElement.idl                                                              |    2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLBodyElement.cpp                                                                |    6 +-
+ Userland/Libraries/LibWeb/HTML/HTMLButtonElement.h                                                                |    2 +
+ Userland/Libraries/LibWeb/HTML/HTMLCanvasElement.cpp                                                              |    4 +-
+ Userland/Libraries/LibWeb/HTML/HTMLDivElement.cpp                                                                 |   10 +-
+ Userland/Libraries/LibWeb/HTML/HTMLElement.h                                                                      |    2 +
+ Userland/Libraries/LibWeb/HTML/HTMLEmbedElement.idl                                                               |    2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLFontElement.cpp                                                                |   22 +-
+ Userland/Libraries/LibWeb/HTML/HTMLFormElement.cpp                                                                |    6 +-
+ Userland/Libraries/LibWeb/HTML/HTMLFrameElement.idl                                                               |    4 +-
+ Userland/Libraries/LibWeb/HTML/HTMLHeadingElement.cpp                                                             |   10 +-
+ Userland/Libraries/LibWeb/HTML/HTMLIFrameElement.cpp                                                              |    4 +-
+ Userland/Libraries/LibWeb/HTML/HTMLIFrameElement.idl                                                              |    4 +-
+ Userland/Libraries/LibWeb/HTML/HTMLImageElement.cpp                                                               |   20 +-
+ Userland/Libraries/LibWeb/HTML/HTMLImageElement.idl                                                               |    6 +-
+ Userland/Libraries/LibWeb/HTML/HTMLInputElement.cpp                                                               |   34 +-
+ Userland/Libraries/LibWeb/HTML/HTMLInputElement.h                                                                 |    4 +
+ Userland/Libraries/LibWeb/HTML/HTMLInputElement.idl                                                               |    2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLLinkElement.cpp                                                                |    9 +-
+ Userland/Libraries/LibWeb/HTML/HTMLLinkElement.idl                                                                |    4 +-
+ Userland/Libraries/LibWeb/HTML/HTMLMarqueeElement.cpp                                                             |    4 +-
+ Userland/Libraries/LibWeb/HTML/HTMLMediaElement.idl                                                               |    2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLMetaElement.cpp                                                                |    4 +-
+ Userland/Libraries/LibWeb/HTML/HTMLObjectElement.idl                                                              |    4 +-
+ Userland/Libraries/LibWeb/HTML/HTMLParagraphElement.cpp                                                           |   10 +-
+ Userland/Libraries/LibWeb/HTML/HTMLPreElement.cpp                                                                 |    4 +-
+ Userland/Libraries/LibWeb/HTML/HTMLProgressElement.cpp                                                            |    3 +-
+ Userland/Libraries/LibWeb/HTML/HTMLScriptElement.idl                                                              |    2 +-
+ Userland/Libraries/LibWeb/HTML/HTMLSourceElement.idl                                                              |    4 +-
+ Userland/Libraries/LibWeb/HTML/HTMLTableCaptionElement.cpp                                                        |    4 +-
+ Userland/Libraries/LibWeb/HTML/HTMLTableCellElement.cpp                                                           |   14 +-
+ Userland/Libraries/LibWeb/HTML/HTMLTableElement.cpp                                                               |   14 +-
+ Userland/Libraries/LibWeb/HTML/HTMLTableRowElement.cpp                                                            |    6 +-
+ Userland/Libraries/LibWeb/HTML/HTMLTextAreaElement.cpp                                                            |   11 +
+ Userland/Libraries/LibWeb/HTML/HTMLTextAreaElement.h                                                              |    2 +
+ Userland/Libraries/LibWeb/HTML/HTMLTrackElement.idl                                                               |    2 +-
+ Userland/Libraries/LibWeb/HTML/History.cpp                                                                        |   16 +-
+ Userland/Libraries/LibWeb/HTML/ImageData.cpp                                                                      |    2 +-
+ Userland/Libraries/LibWeb/HTML/Location.cpp                                                                       |   73 +++-
+ Userland/Libraries/LibWeb/HTML/Navigable.cpp                                                                      |  138 ++-----
+ Userland/Libraries/LibWeb/HTML/Navigable.h                                                                        |   16 +-
+ Userland/Libraries/LibWeb/HTML/NavigableContainer.cpp                                                             |   14 +-
+ Userland/Libraries/LibWeb/HTML/NavigableContainer.h                                                               |    2 +-
+ Userland/Libraries/LibWeb/HTML/Navigation.cpp                                                                     |    4 +-
+ Userland/Libraries/LibWeb/HTML/Navigator.cpp                                                                      |    9 +
+ Userland/Libraries/LibWeb/HTML/Navigator.h                                                                        |   12 +-
+ Userland/Libraries/LibWeb/HTML/Navigator.idl                                                                      |    6 +
+ Userland/Libraries/LibWeb/HTML/NavigatorBeacon.h                                                                  |    1 -
+ Userland/Libraries/LibWeb/HTML/POSTResource.h                                                                     |    9 +
+ Userland/Libraries/LibWeb/HTML/Parser/HTMLParser.cpp                                                              |   11 +-
+ Userland/Libraries/LibWeb/HTML/Parser/HTMLParser.h                                                                |    4 +-
+ Userland/Libraries/LibWeb/HTML/Parser/HTMLToken.swift                                                             |  120 ++++++
+ Userland/Libraries/LibWeb/HTML/Parser/HTMLTokenizer.swift                                                         |  133 ++++++
+ Userland/Libraries/LibWeb/HTML/Parser/HTMLTokenizerHelpers.cpp                                                    |   23 ++
+ Userland/Libraries/LibWeb/HTML/Parser/HTMLTokenizerHelpers.h                                                      |   19 +
+ Userland/Libraries/LibWeb/HTML/Path2D.h                                                                           |    2 +-
+ Userland/Libraries/LibWeb/HTML/Scripting/Environments.cpp                                                         |    9 +
+ Userland/Libraries/LibWeb/HTML/Scripting/Environments.h                                                           |    6 +
+ Userland/Libraries/LibWeb/HTML/ServiceWorkerContainer.cpp                                                         |   32 ++
+ Userland/Libraries/LibWeb/HTML/ServiceWorkerContainer.h                                                           |   26 ++
+ Userland/Libraries/LibWeb/HTML/ServiceWorkerContainer.idl                                                         |   29 ++
+ Userland/Libraries/LibWeb/HTML/ServiceWorkerRegistration.cpp                                                      |   31 ++
+ Userland/Libraries/LibWeb/HTML/ServiceWorkerRegistration.h                                                        |   26 ++
+ Userland/Libraries/LibWeb/HTML/ServiceWorkerRegistration.idl                                                      |   26 ++
+ Userland/Libraries/LibWeb/HTML/SessionHistoryTraversalQueue.cpp                                                   |   12 +-
+ Userland/Libraries/LibWeb/HTML/SessionHistoryTraversalQueue.h                                                     |    6 +-
+ Userland/Libraries/LibWeb/HTML/TextMetrics.idl                                                                    |    2 +-
+ Userland/Libraries/LibWeb/HTML/TraversableNavigable.cpp                                                           |   23 +-
+ Userland/Libraries/LibWeb/HTML/TraversableNavigable.h                                                             |    8 +-
+ Userland/Libraries/LibWeb/HTML/Window.cpp                                                                         |   64 +--
+ Userland/Libraries/LibWeb/HTML/Worker.idl                                                                         |    2 +-
+ Userland/Libraries/LibWeb/HTML/WorkerNavigator.h                                                                  |    7 +-
+ Userland/Libraries/LibWeb/HTML/WorkerNavigator.idl                                                                |    2 +
+ Userland/Libraries/LibWeb/Internals/Inspector.cpp                                                                 |    7 +-
+ Userland/Libraries/LibWeb/Internals/Inspector.h                                                                   |    4 +-
+ Userland/Libraries/LibWeb/Internals/Inspector.idl                                                                 |    2 +
+ Userland/Libraries/LibWeb/Internals/Internals.cpp                                                                 |   30 ++
+ Userland/Libraries/LibWeb/Internals/Internals.h                                                                   |    5 +
+ Userland/Libraries/LibWeb/Internals/Internals.idl                                                                 |    5 +
+ Userland/Libraries/LibWeb/Layout/Box.cpp                                                                          |    2 +-
+ Userland/Libraries/LibWeb/Layout/FlexFormattingContext.cpp                                                        |   21 +
+ Userland/Libraries/LibWeb/Layout/FlexFormattingContext.h                                                          |    2 +
+ Userland/Libraries/LibWeb/Layout/InlineFormattingContext.cpp                                                      |    2 +-
+ Userland/Libraries/LibWeb/Layout/InlineLevelIterator.cpp                                                          |    3 +-
+ Userland/Libraries/LibWeb/Layout/LayoutState.h                                                                    |    1 +
+ Userland/Libraries/LibWeb/Layout/Node.cpp                                                                         |   60 +--
+ Userland/Libraries/LibWeb/Layout/SVGFormattingContext.cpp                                                         |    1 +
+ Userland/Libraries/LibWeb/Layout/SVGFormattingContext.h                                                           |    6 +-
+ Userland/Libraries/LibWeb/Layout/SVGSVGBox.cpp                                                                    |   78 ++--
+ Userland/Libraries/LibWeb/Layout/TreeBuilder.cpp                                                                  |    2 +-
+ Userland/Libraries/LibWeb/Loader/ResourceLoader.h                                                                 |    6 +-
+ Userland/Libraries/LibWeb/MixedContent/AbstractOperations.cpp                                                     |    6 +-
+ Userland/Libraries/LibWeb/Page/DragAndDropEventHandler.cpp                                                        |  639 +++++++++++++++++++++++++++++
+ Userland/Libraries/LibWeb/Page/DragAndDropEventHandler.h                                                          |   67 +++
+ Userland/Libraries/LibWeb/Page/EventHandler.cpp                                                                   |  114 +++++-
+ Userland/Libraries/LibWeb/Page/EventHandler.h                                                                     |    9 +-
+ Userland/Libraries/LibWeb/Page/InputEvent.cpp                                                                     |   32 ++
+ Userland/Libraries/LibWeb/Page/InputEvent.h                                                                       |   33 +-
+ Userland/Libraries/LibWeb/Page/Page.cpp                                                                           |    5 +
+ Userland/Libraries/LibWeb/Page/Page.h                                                                             |    4 +
+ Userland/Libraries/LibWeb/Painting/BorderPainting.cpp                                                             |    4 +-
+ Userland/Libraries/LibWeb/Painting/BorderPainting.h                                                               |    2 +-
+ Userland/Libraries/LibWeb/Painting/BorderRadiiData.cpp                                                            |    4 +-
+ Userland/Libraries/LibWeb/Painting/BorderRadiiData.h                                                              |    4 +-
+ Userland/Libraries/LibWeb/Painting/ClipFrame.cpp                                                                  |    4 +-
+ Userland/Libraries/LibWeb/Painting/ClippableAndScrollable.cpp                                                     |    4 +-
+ Userland/Libraries/LibWeb/Painting/ClippableAndScrollable.h                                                       |    8 +-
+ Userland/Libraries/LibWeb/Painting/Command.h                                                                      |   17 +-
+ Userland/Libraries/LibWeb/Painting/DisplayList.cpp                                                                |   44 +-
+ Userland/Libraries/LibWeb/Painting/DisplayList.h                                                                  |   13 +-
+ Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.cpp                                                      |   80 ++--
+ Userland/Libraries/LibWeb/Painting/DisplayListPlayerSkia.h                                                        |    1 +
+ Userland/Libraries/LibWeb/Painting/DisplayListRecorder.cpp                                                        |   25 +-
+ Userland/Libraries/LibWeb/Painting/DisplayListRecorder.h                                                          |    6 +-
+ Userland/Libraries/LibWeb/Painting/InlinePaintable.cpp                                                            |    2 +-
+ Userland/Libraries/LibWeb/Painting/NestedBrowsingContextPaintable.cpp                                             |    4 +-
+ Userland/Libraries/LibWeb/Painting/Paintable.cpp                                                                  |   11 +-
+ Userland/Libraries/LibWeb/Painting/Paintable.h                                                                    |    2 +-
+ Userland/Libraries/LibWeb/Painting/PaintableBox.cpp                                                               |  118 ++----
+ Userland/Libraries/LibWeb/Painting/PaintableBox.h                                                                 |   11 +-
+ Userland/Libraries/LibWeb/Painting/SVGPathPaintable.cpp                                                           |    2 +-
+ Userland/Libraries/LibWeb/Painting/SVGPathPaintable.h                                                             |    1 +
+ Userland/Libraries/LibWeb/Painting/ScrollFrame.h                                                                  |    3 +-
+ Userland/Libraries/LibWeb/Painting/ShadowPainting.cpp                                                             |    1 -
+ Userland/Libraries/LibWeb/Painting/StackingContext.cpp                                                            |   13 +-
+ Userland/Libraries/LibWeb/Painting/ViewportPaintable.cpp                                                          |   17 +-
+ Userland/Libraries/LibWeb/PixelUnits.h                                                                            |   14 +
+ Userland/Libraries/LibWeb/SVG/SVGCircleElement.cpp                                                                |    1 +
+ Userland/Libraries/LibWeb/SVG/SVGDecodedImageData.cpp                                                             |    2 +-
+ Userland/Libraries/LibWeb/SVG/SVGDecodedImageData.h                                                               |    1 +
+ Userland/Libraries/LibWeb/SVG/SVGEllipseElement.cpp                                                               |    1 +
+ Userland/Libraries/LibWeb/SVG/SVGGElement.cpp                                                                     |    8 +
+ Userland/Libraries/LibWeb/SVG/SVGGElement.h                                                                       |    2 +
+ Userland/Libraries/LibWeb/SVG/SVGGElement.idl                                                                     |    6 +
+ Userland/Libraries/LibWeb/SVG/SVGGraphicsElement.cpp                                                              |    1 +
+ Userland/Libraries/LibWeb/SVG/SVGGraphicsElement.h                                                                |    2 +-
+ Userland/Libraries/LibWeb/SVG/SVGLineElement.cpp                                                                  |    1 +
+ Userland/Libraries/LibWeb/SVG/SVGMetadataElement.cpp                                                              |   33 ++
+ Userland/Libraries/LibWeb/SVG/SVGMetadataElement.h                                                                |   26 ++
+ Userland/Libraries/LibWeb/SVG/SVGMetadataElement.idl                                                              |    6 +
+ Userland/Libraries/LibWeb/SVG/SVGPathElement.cpp                                                                  |    1 +
+ Userland/Libraries/LibWeb/SVG/SVGPathElement.h                                                                    |    2 +-
+ Userland/Libraries/LibWeb/SVG/SVGPolygonElement.cpp                                                               |    1 +
+ Userland/Libraries/LibWeb/SVG/SVGPolylineElement.cpp                                                              |    1 +
+ Userland/Libraries/LibWeb/SVG/SVGRectElement.cpp                                                                  |    3 +
+ Userland/Libraries/LibWeb/SVG/SVGSVGElement.cpp                                                                   |   55 ++-
+ Userland/Libraries/LibWeb/SVG/SVGSVGElement.h                                                                     |    7 +-
+ Userland/Libraries/LibWeb/SVG/SVGSymbolElement.cpp                                                                |    2 +-
+ Userland/Libraries/LibWeb/SVG/SVGUseElement.h                                                                     |    2 +-
+ Userland/Libraries/LibWeb/SVG/TagNames.h                                                                          |    1 +
+ Userland/Libraries/LibWeb/StorageAPI/NavigatorStorage.cpp                                                         |   22 +
+ Userland/Libraries/LibWeb/StorageAPI/NavigatorStorage.h                                                           |   27 ++
+ Userland/Libraries/LibWeb/StorageAPI/NavigatorStorage.idl                                                         |    7 +
+ Userland/Libraries/LibWeb/StorageAPI/StorageManager.cpp                                                           |   32 ++
+ Userland/Libraries/LibWeb/StorageAPI/StorageManager.h                                                             |   27 ++
+ Userland/Libraries/LibWeb/StorageAPI/StorageManager.idl                                                           |   14 +
+ Userland/Libraries/LibWeb/Streams/AbstractOperations.cpp                                                          |   16 +-
+ Userland/Libraries/LibWeb/Streams/ReadableStreamDefaultReader.cpp                                                 |   37 +-
+ Userland/Libraries/LibWeb/Streams/ReadableStreamDefaultReader.h                                                   |   18 +-
+ Userland/Libraries/LibWeb/UIEvents/KeyCode.h                                                                      |   12 +
+ Userland/Libraries/LibWeb/WebAssembly/Table.cpp                                                                   |   22 +-
+ Userland/Libraries/LibWeb/WebAssembly/WebAssembly.cpp                                                             |   48 ++-
+ Userland/Libraries/LibWeb/WebAssembly/WebAssembly.h                                                               |    9 +-
+ Userland/Libraries/LibWeb/WebGL/WebGLRenderingContext.idl                                                         |    2 +
+ Userland/Libraries/LibWeb/WebGL/WebGLRenderingContextBase.idl                                                     |    7 +
+ Userland/Libraries/LibWeb/WebGL/WebGLRenderingContextOverloads.idl                                                |   31 ++
+ Userland/Libraries/LibWeb/WebIDL/AbstractOperations.cpp                                                           |    2 +-
+ Userland/Libraries/LibWeb/WebSockets/WebSocket.idl                                                                |    2 +-
+ Userland/Libraries/LibWeb/XHR/FormData.idl                                                                        |    2 +-
+ Userland/Libraries/LibWeb/idl_files.cmake                                                                         |    9 +
+ Userland/Libraries/LibWebView/Application.cpp                                                                     |   21 +
+ Userland/Libraries/LibWebView/Application.h                                                                       |   10 +-
+ Userland/Libraries/LibWebView/CMakeLists.txt                                                                      |    2 +-
+ Userland/Libraries/LibWebView/InspectorClient.cpp                                                                 |   69 +++-
+ Userland/Libraries/LibWebView/Options.h                                                                           |    6 +
+ Userland/Libraries/LibWebView/RequestServerAdapter.cpp                                                            |   22 +-
+ Userland/Libraries/LibWebView/RequestServerAdapter.h                                                              |   18 +-
+ Userland/Libraries/LibWebView/SearchEngine.cpp                                                                    |    1 +
+ Userland/Libraries/LibWebView/UserAgent.cpp                                                                       |   12 +-
+ Userland/Libraries/LibWebView/UserAgent.h                                                                         |    2 +-
+ Userland/Libraries/LibWebView/ViewImplementation.cpp                                                              |   27 +-
+ Userland/Libraries/LibWebView/ViewImplementation.h                                                                |    2 +
+ Userland/Libraries/LibWebView/WebContentClient.cpp                                                                |    8 +
+ Userland/Libraries/LibWebView/WebContentClient.h                                                                  |    1 +
+ Userland/Libraries/LibWebView/WebSocketClientAdapter.cpp                                                          |   26 +-
+ Userland/Libraries/LibWebView/WebSocketClientAdapter.h                                                            |    8 +-
+ Userland/Services/WebContent/ConnectionFromClient.cpp                                                             |   16 +-
+ Userland/Services/WebContent/ConnectionFromClient.h                                                               |    3 +
+ Userland/Services/WebContent/PageClient.cpp                                                                       |    7 +-
+ Userland/Services/WebContent/PageClient.h                                                                         |    1 +
+ Userland/Services/WebContent/WebContentClient.ipc                                                                 |    1 +
+ Userland/Services/WebContent/WebContentConsoleClient.cpp                                                          |   79 ++++
+ Userland/Services/WebContent/WebContentServer.ipc                                                                 |    3 +
+ Userland/Services/WebContent/WebDriverConnection.cpp                                                              |    2 +-
+ Userland/Utilities/headless-browser.cpp                                                                           |    8 +-
+ Userland/Utilities/ttfdisasm.cpp                                                                                  |  198 ---------
+ Userland/Utilities/wasm.cpp                                                                                       |   24 +-
+ vcpkg.json                                                                                                        |    6 +-
+ 692 files changed, 14659 insertions(+), 8900 deletions(-)
+ create mode 100644 AK/AK+Swift.swift
+ create mode 100644 AK/Swift.h
+ create mode 100644 Base/res/icons/16x16/download.png
+ create mode 100644 Documentation/GettingStartedContributing.md
+ delete mode 100644 Ladybird/AppKit/Application/ApplicationBridge.cpp
+ delete mode 100644 Ladybird/AppKit/Application/ApplicationBridge.h
+ create mode 100644 Meta/CMake/collections.cmake
+ create mode 100644 Meta/CMake/patches/git-patch.cmake
+ create mode 100644 Meta/CMake/patches/swift-collections/0001-CMake-Remove-top-level-binary-module-locations.patch
+ rename Meta/Lagom/Tools/CodeGenerators/LibWeb/{GenerateCSSValueID.cpp => GenerateCSSKeyword.cpp} (61%)
+ create mode 100644 Meta/gn/secondary/Userland/Libraries/LibWeb/EntriesAPI/BUILD.gn
+ create mode 100644 Meta/gn/secondary/Userland/Libraries/LibWeb/StorageAPI/BUILD.gn
+ create mode 100644 Tests/AK/TestAKBindings.swift
+ create mode 100644 Tests/LibThreading/TestThreadPool.cpp
+ create mode 100644 Tests/LibWeb/Layout/expected/crash-tests/html-with-only-a-template-tag.txt
+ create mode 100644 Tests/LibWeb/Layout/expected/flex/intrinsic-cross-size-contribution-with-main-size-constraint.txt
+ create mode 100644 Tests/LibWeb/Layout/expected/svg/natural-width-from-svg-attributes.txt
+ create mode 100644 Tests/LibWeb/Layout/input/crash-tests/html-with-only-a-template-tag.html
+ create mode 100644 Tests/LibWeb/Layout/input/flex/intrinsic-cross-size-contribution-with-main-size-constraint.html
+ create mode 100644 Tests/LibWeb/Layout/input/svg/natural-width-from-svg-attributes.html
+ create mode 100644 Tests/LibWeb/Ref/inline-visibility-hidden.html
+ create mode 100644 Tests/LibWeb/Ref/reference/inline-visibility-hidden-ref.html
+ create mode 100644 Tests/LibWeb/Ref/reference/svg-display-attr.html
+ create mode 100644 Tests/LibWeb/Ref/svg-display-attr.html
+ create mode 100644 Tests/LibWeb/Screenshot/canvas-unpremultiplied-image.html
+ create mode 100644 Tests/LibWeb/Screenshot/images/canvas-unpremultiplied-image-ref.png
+ create mode 100644 Tests/LibWeb/Screenshot/reference/canvas-unpremultiplied-image-ref.html
+ create mode 100644 Tests/LibWeb/TestHTMLTokenizerSwift.swift
+ create mode 100644 Tests/LibWeb/TestLibWebSwiftBindings.swift
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/HTMLInputElement-cloning-steps.txt
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/HTMLInputElement-invalid-time-digits.txt
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/HTMLTextAreaElement-cloning-steps.txt
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/Location-protocol-setter.txt
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/Location-search-setter.txt
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/canvas-putImageData-unpremultiplied.txt
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/data-transfer.txt
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/drag-and-drop.txt
+ create mode 100644 Tests/LibWeb/Text/expected/ShadowDOM/css-hover-shadow-dom.txt
+ create mode 100644 Tests/LibWeb/Text/expected/Streams/TransformStream-readable-cancel.txt
+ create mode 100644 Tests/LibWeb/Text/expected/UIEvents/special-keys.txt
+ create mode 100644 Tests/LibWeb/Text/expected/URL/search-params-strip-trailing-spaces-from-opaque-url.txt
+ create mode 100644 Tests/LibWeb/Text/expected/URL/url-search-params-sort-utf16-code-units.txt
+ create mode 100644 Tests/LibWeb/Text/expected/css/attribute-selector-case-sensitivity.txt
+ create mode 100644 Tests/LibWeb/Text/expected/css/small-aspect-ratio.txt
+ create mode 100644 Tests/LibWeb/Text/expected/usvstring-url-reflection.txt
+ create mode 100644 Tests/LibWeb/Text/input/HTML/HTMLInputElement-cloning-steps.html
+ create mode 100644 Tests/LibWeb/Text/input/HTML/HTMLInputElement-invalid-time-digits.html
+ create mode 100644 Tests/LibWeb/Text/input/HTML/HTMLTextAreaElement-cloning-steps.html
+ create mode 100644 Tests/LibWeb/Text/input/HTML/Location-protocol-setter.html
+ create mode 100644 Tests/LibWeb/Text/input/HTML/Location-search-setter.html
+ create mode 100644 Tests/LibWeb/Text/input/HTML/canvas-putImageData-unpremultiplied.html
+ create mode 100644 Tests/LibWeb/Text/input/HTML/data-transfer.html
+ create mode 100644 Tests/LibWeb/Text/input/HTML/drag-and-drop.html
+ create mode 100644 Tests/LibWeb/Text/input/ShadowDOM/css-hover-shadow-dom.html
+ create mode 100644 Tests/LibWeb/Text/input/Streams/TransformStream-readable-cancel.html
+ create mode 100644 Tests/LibWeb/Text/input/UIEvents/special-keys.html
+ create mode 100644 Tests/LibWeb/Text/input/URL/search-params-strip-trailing-spaces-from-opaque-url.html
+ create mode 100644 Tests/LibWeb/Text/input/URL/url-search-params-sort-utf16-code-units.html
+ create mode 100644 Tests/LibWeb/Text/input/css/attribute-selector-case-sensitivity.html
+ create mode 100644 Tests/LibWeb/Text/input/css/small-aspect-ratio.html
+ create mode 100644 Tests/LibWeb/Text/input/usvstring-url-reflection.html
+ create mode 100644 Userland/Libraries/LibCore/TimeZoneWatcher.h
+ create mode 100644 Userland/Libraries/LibCore/TimeZoneWatcherLinux.cpp
+ create mode 100644 Userland/Libraries/LibCore/TimeZoneWatcherMacOS.mm
+ create mode 100644 Userland/Libraries/LibCore/TimeZoneWatcherUnimplemented.cpp
+ create mode 100644 Userland/Libraries/LibGfx/DeprecatedPainter.cpp
+ create mode 100644 Userland/Libraries/LibGfx/DeprecatedPainter.h
+ create mode 100644 Userland/Libraries/LibGfx/DeprecatedPath.cpp
+ create mode 100644 Userland/Libraries/LibGfx/DeprecatedPath.h
+ create mode 100644 Userland/Libraries/LibGfx/PainterSkia.cpp
+ create mode 100644 Userland/Libraries/LibGfx/PainterSkia.h
+ delete mode 100644 Userland/Libraries/LibGfx/PathClipper.cpp
+ delete mode 100644 Userland/Libraries/LibGfx/PathClipper.h
+ create mode 100644 Userland/Libraries/LibGfx/PathSkia.cpp
+ create mode 100644 Userland/Libraries/LibGfx/PathSkia.h
+ rename Userland/Libraries/{LibProtocol => LibRequests}/CMakeLists.txt (69%)
+ rename Userland/Libraries/{LibProtocol => LibRequests}/Request.cpp (97%)
+ rename Userland/Libraries/{LibProtocol => LibRequests}/Request.h (99%)
+ rename Userland/Libraries/{LibProtocol => LibRequests}/RequestClient.cpp (98%)
+ rename Userland/Libraries/{LibProtocol => LibRequests}/RequestClient.h (97%)
+ rename Userland/Libraries/{LibProtocol => LibRequests}/WebSocket.cpp (95%)
+ rename Userland/Libraries/{LibProtocol => LibRequests}/WebSocket.h (98%)
+ create mode 100644 Userland/Libraries/LibWeb/CSS/CSSStyleValue.cpp
+ create mode 100644 Userland/Libraries/LibWeb/CSS/CSSStyleValue.h
+ rename Userland/Libraries/LibWeb/CSS/{Identifiers.json => Keywords.json} (99%)
+ delete mode 100644 Userland/Libraries/LibWeb/CSS/StyleValue.cpp
+ delete mode 100644 Userland/Libraries/LibWeb/CSS/StyleValue.h
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CSSColorValue.cpp
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CSSColorValue.h
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CSSHSL.cpp
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CSSHSL.h
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CSSHWB.cpp
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CSSHWB.h
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CSSKeywordValue.cpp
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CSSKeywordValue.h
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CSSNumericValue.h
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CSSOKLCH.cpp
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CSSOKLCH.h
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CSSOKLab.cpp
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CSSOKLab.h
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CSSRGB.cpp
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CSSRGB.h
+ create mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/CSSUnitValue.h
+ delete mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/ColorStyleValue.cpp
+ delete mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/ColorStyleValue.h
+ delete mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/IdentifierStyleValue.cpp
+ delete mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/IdentifierStyleValue.h
+ delete mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/InheritStyleValue.h
+ delete mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/InitialStyleValue.h
+ delete mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/RevertStyleValue.h
+ delete mode 100644 Userland/Libraries/LibWeb/CSS/StyleValues/UnsetStyleValue.h
+ create mode 100644 Userland/Libraries/LibWeb/Clipboard/ClipboardEvent.cpp
+ create mode 100644 Userland/Libraries/LibWeb/Clipboard/ClipboardEvent.h
+ create mode 100644 Userland/Libraries/LibWeb/Clipboard/ClipboardEvent.idl
+ create mode 100644 Userland/Libraries/LibWeb/EntriesAPI/FileSystemEntry.cpp
+ create mode 100644 Userland/Libraries/LibWeb/EntriesAPI/FileSystemEntry.h
+ create mode 100644 Userland/Libraries/LibWeb/EntriesAPI/FileSystemEntry.idl
+ create mode 100644 Userland/Libraries/LibWeb/HTML/Canvas/CanvasFilters.idl
+ create mode 100644 Userland/Libraries/LibWeb/HTML/Canvas/CanvasShadowStyles.idl
+ create mode 100644 Userland/Libraries/LibWeb/HTML/Canvas/CanvasUserInterface.idl
+ create mode 100644 Userland/Libraries/LibWeb/HTML/DataTransferItem.cpp
+ create mode 100644 Userland/Libraries/LibWeb/HTML/DataTransferItem.h
+ create mode 100644 Userland/Libraries/LibWeb/HTML/DataTransferItem.idl
+ create mode 100644 Userland/Libraries/LibWeb/HTML/DataTransferItemList.cpp
+ create mode 100644 Userland/Libraries/LibWeb/HTML/DataTransferItemList.h
+ create mode 100644 Userland/Libraries/LibWeb/HTML/DataTransferItemList.idl
+ create mode 100644 Userland/Libraries/LibWeb/HTML/DragDataStore.cpp
+ create mode 100644 Userland/Libraries/LibWeb/HTML/DragDataStore.h
+ create mode 100644 Userland/Libraries/LibWeb/HTML/Parser/HTMLToken.swift
+ create mode 100644 Userland/Libraries/LibWeb/HTML/Parser/HTMLTokenizer.swift
+ create mode 100644 Userland/Libraries/LibWeb/HTML/Parser/HTMLTokenizerHelpers.cpp
+ create mode 100644 Userland/Libraries/LibWeb/HTML/Parser/HTMLTokenizerHelpers.h
+ create mode 100644 Userland/Libraries/LibWeb/HTML/ServiceWorkerContainer.cpp
+ create mode 100644 Userland/Libraries/LibWeb/HTML/ServiceWorkerContainer.h
+ create mode 100644 Userland/Libraries/LibWeb/HTML/ServiceWorkerContainer.idl
+ create mode 100644 Userland/Libraries/LibWeb/HTML/ServiceWorkerRegistration.cpp
+ create mode 100644 Userland/Libraries/LibWeb/HTML/ServiceWorkerRegistration.h
+ create mode 100644 Userland/Libraries/LibWeb/HTML/ServiceWorkerRegistration.idl
+ create mode 100644 Userland/Libraries/LibWeb/Page/DragAndDropEventHandler.cpp
+ create mode 100644 Userland/Libraries/LibWeb/Page/DragAndDropEventHandler.h
+ create mode 100644 Userland/Libraries/LibWeb/SVG/SVGGElement.idl
+ create mode 100644 Userland/Libraries/LibWeb/SVG/SVGMetadataElement.cpp
+ create mode 100644 Userland/Libraries/LibWeb/SVG/SVGMetadataElement.h
+ create mode 100644 Userland/Libraries/LibWeb/SVG/SVGMetadataElement.idl
+ create mode 100644 Userland/Libraries/LibWeb/StorageAPI/NavigatorStorage.cpp
+ create mode 100644 Userland/Libraries/LibWeb/StorageAPI/NavigatorStorage.h
+ create mode 100644 Userland/Libraries/LibWeb/StorageAPI/NavigatorStorage.idl
+ create mode 100644 Userland/Libraries/LibWeb/StorageAPI/StorageManager.cpp
+ create mode 100644 Userland/Libraries/LibWeb/StorageAPI/StorageManager.h
+ create mode 100644 Userland/Libraries/LibWeb/StorageAPI/StorageManager.idl
+ create mode 100644 Userland/Libraries/LibWeb/WebGL/WebGLRenderingContextOverloads.idl
+ delete mode 100644 Userland/Utilities/ttfdisasm.cpp
 
-Total download size: 13 M
-DNF will only download packages, install gpg keys, and check the transaction.
-Downloading Packages:
-(1/19): cups-filters-driverless-2.0.1-1.fc40.x86_64.rpm                                                                                                                          253 kB/s |  29 kB     00:00
-(2/19): cups-browsed-2.0.1-1.fc40.x86_64.rpm                                                                                                                                     796 kB/s | 143 kB     00:00
-(3/19): cups-filters-2.0.1-1.fc40.x86_64.rpm                                                                                                                                     1.0 MB/s | 206 kB     00:00
-(4/19): gstreamer1-plugin-libav-1.24.7-1.fc40.x86_64.rpm                                                                                                                         5.0 MB/s | 206 kB     00:00
-(5/19): gst-editing-services-1.24.7-1.fc40.x86_64.rpm                                                                                                                            3.6 MB/s | 486 kB     00:00
-(6/19): gstreamer1-plugin-openh264-1.24.7-1.fc40.x86_64.rpm                                                                                                                      1.4 MB/s |  37 kB     00:00
-(7/19): gstreamer1-1.24.7-1.fc40.x86_64.rpm                                                                                                                                      7.5 MB/s | 1.6 MB     00:00
-(8/19): gstreamer1-plugins-bad-free-1.24.7-1.fc40.x86_64.rpm                                                                                                                      16 MB/s | 2.8 MB     00:00
-(9/19): gstreamer1-plugins-bad-free-libs-1.24.7-1.fc40.x86_64.rpm                                                                                                                5.5 MB/s | 926 kB     00:00
-(10/19): gstreamer1-plugins-good-gtk-1.24.7-1.fc40.x86_64.rpm                                                                                                                    1.1 MB/s |  33 kB     00:00
-(11/19): gstreamer1-plugins-good-qt-1.24.7-1.fc40.x86_64.rpm                                                                                                                     2.3 MB/s |  71 kB     00:00
-(12/19): gstreamer1-plugins-base-1.24.7-1.fc40.x86_64.rpm                                                                                                                         17 MB/s | 2.2 MB     00:00
-(13/19): gstreamer1-plugins-good-qt6-1.24.7-1.fc40.x86_64.rpm                                                                                                                    2.1 MB/s |  80 kB     00:00
-(14/19): libcupsfilters-2.1~b1-1.fc40.x86_64.rpm                                                                                                                                 7.5 MB/s | 604 kB     00:00
-(15/19): gstreamer1-plugins-good-1.24.7-1.fc40.x86_64.rpm                                                                                                                         11 MB/s | 2.4 MB     00:00
-(16/19): gstreamer1-plugins-ugly-free-1.24.7-1.fc40.x86_64.rpm                                                                                                                   2.0 MB/s | 246 kB     00:00
-(17/19): libnfsidmap-2.7.1-0.fc40.x86_64.rpm                                                                                                                                     1.4 MB/s |  61 kB     00:00
-(18/19): libppd-2.1~b1-1.fc40.x86_64.rpm                                                                                                                                         4.6 MB/s | 265 kB     00:00
-(19/19): nfs-utils-2.7.1-0.fc40.x86_64.rpm                                                                                                                                       6.8 MB/s | 461 kB     00:00
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Total                                                                                                                                                                             12 MB/s |  13 MB     00:01
-Running transaction check
-Transaction check succeeded.
-Running transaction test
-Transaction test succeeded.
-Complete!
-Transaction saved to /var/lib/dnf/system-upgrade/system-upgrade-transaction.json.
-Download complete! Use 'dnf offline-upgrade reboot' to start the upgrade.
-To remove cached metadata and transaction use 'dnf offline-upgrade clean'
-The downloaded packages were saved in cache until the next successful transaction.
-You can remove cached packages by executing 'dnf clean packages'.
+real    0m0.282s
+user    0m0.091s
+sys     0m0.074s
+On branch master
+Your branch is up to date with 'origin/master'.
 
-real    0m12.505s
-user    0m0.003s
-sys     0m0.022s
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
 
-Broadcast message from root@kusfedoravm on pts/1 (Sun 2024-08-25 08:34:01 EDT):
+nothing added to commit but untracked files present (use "git add" to track)
 
-The system will reboot now!
+real    0m0.063s
+user    0m0.036s
+sys     0m0.028s
+Sun Aug 25 08:54:23 EDT 2024
+~/src/ladybird/Toolchain/Tarballs ~/src/ladybird/Toolchain
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+[1/2] Re-running CMake...
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/clang++-17
+All requested packages are currently installed.
+Total install time: 271 ns
+-- Running vcpkg install - done
+-- Found the following ICU libraries:
+--   data (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicudata.a
+--   i18n (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicui18n.a
+--   uc (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicuuc.a
+-- Could NOT find XKB (missing: XKB_LIBRARY XKB_INCLUDE_DIR) (Required is at least version "0.5.0")
+-- Configuring done (32.4s)
+-- Generating done (0.5s)
+-- Build files have been written to: /home/kushal/src/ladybird/Build/ladybird
+[0/2] Re-checking globbed directories...
+[2559/2559] Linking CXX executable bin/Ladybird
+QSocketNotifier: Can only be used with threads started with QThread
+QStandardPaths: wrong permissions on runtime directory /run/user/1000/, 0755 instead of 0700
+qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
+715.321 WebContent(14210): HTMLScriptElement: Refusing to run classic script because it has the nomodule attribute.
+715.581 WebContent(14210): No property (from 4 properties) matched Function: env(safe-area-inset-top)
+715.581 WebContent(14210):     padding-top
+715.581 WebContent(14210):     padding-right
+715.581 WebContent(14210):     padding-bottom
+715.581 WebContent(14210):     padding-left
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feFlood' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feOffset' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feComposite' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feColorMatrix' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'feBlend' in namespace 'http://www.w3.org/2000/svg'
+716.281 WebContent(14210): Potential FIXME: Creating unknown generic element 'filter' in namespace 'http://www.w3.org/2000/svg'
+716.541 RequestServer(14191:14198): EnsureConnection: Pre-connect to https://duckduckgo.com/country.json
+716.641 RequestServer(14191:14202): ConnectionCache: Connection to https://improving.duckduckgo.com/t/page_home_impression?3029669&b=mozilla&d=d&l=en&p=linux&atb=v444-5&pre_va=_&pre_atbva=_&atbi=true&i=false&ak=false&ax=false failed: connect: Connection refused (errno=111)
+716.641 RequestServer(14191:14202): Request with a null socket finished for URL https://improving.duckduckgo.com/t/page_home_impression?3029669&b=mozilla&d=d&l=en&p=linux&atb=v444-5&pre_va=_&pre_atbva=_&atbi=true&i=false&ak=false&ax=false
+716.701 WebContent(14210): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/page_home_impression?3029669&b=mozilla&d=d&l=en&p=linux&atb=v444-5&pre_va=_&pre_atbva=_&atbi=true&i=false&ak=false&ax=false", Error: Load failed, Duration: 110ms
+720.841 RequestServer(14191:14205): Request with a null socket finished for URL https://improving.duckduckgo.com/t/page_home_searchbox_suggest?4090047&b=mozilla&d=d&l=en&p=linux&atb=v444-5&pre_va=_&pre_atbva=_&atbi=true&i=false&ak=false&ax=false
+720.871 WebContent(14210): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/page_home_searchbox_suggest?4090047&b=mozilla&d=d&l=en&p=linux&atb=v444-5&pre_va=_&pre_atbva=_&atbi=true&i=false&ak=false&ax=false", Error: Load failed, Duration: 110ms
+723.341 RequestServer(14191:14204): EnsureConnection: Pre-connect to https://links.duckduckgo.com/
+723.341 WebContent(14210): HTMLScriptElement: Refusing to run classic script because it has the nomodule attribute.
+724.661 WebContent(14210): HTMLScriptElement: Refusing to run classic script because it has the nomodule attribute.
+724.661 WebContent(14210): HTMLScriptElement: Refusing to run classic script because it has the nomodule attribute.
+725.761 WebContent(14210): Failed to parse font: Automatic format detection failed
+727.441 RequestServer(14191:14206): ConnectionCache: Connection to https://improving.duckduckgo.com/t/apss_f?6276687&preloaded=1&3adexp=c&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=b&localexp=b&locstr_exp=b&msvrtexp=b&siaexp=b&useclsexp=a failed: connect: Connection refused (errno=111)
+727.441 RequestServer(14191:14206): Request with a null socket finished for URL https://improving.duckduckgo.com/t/apss_f?6276687&preloaded=1&3adexp=c&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=b&localexp=b&locstr_exp=b&msvrtexp=b&siaexp=b&useclsexp=a
+728.211 WebContent(14210): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/apss_f?6276687&preloaded=1&3adexp=c&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=b&localexp=b&locstr_exp=b&msvrtexp=b&siaexp=b&useclsexp=a", Error: Load failed, Duration: 850ms
+728.241 RequestServer(14191:14202): ConnectionCache: Connection to https://improving.duckduckgo.com/t/ias_products?9298368&fromWebTab=1&initialState=inactive&timeSincePageLoad=327&timeSinceDeepStarted=36&timeSinceDeepFinished=0&q=avocado%20toast&ct=US&d=d&kl=wt-wt&rl=us-en&blay=e1a2RelatedQnA1w3n1w20r1&dsig=recipes:h,wikinlp:l&isig=about:m&3adexp=c&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=b&localexp=b&locstr_exp=b&msvrtexp=b&siaexp=b&useclsexp=a failed: connect: Connection refused (errno=111)
+728.241 RequestServer(14191:14203): Request with a null socket finished for URL https://improving.duckduckgo.com/t/ias_web?8156757&fromWebTab=1&initialState=active&timeSincePageLoad=325&timeSinceDeepStarted=34&timeSinceDeepFinished=0&q=avocado%20toast&ct=US&d=d&kl=wt-wt&rl=us-en&blay=e1a2RelatedQnA1w3n1w20r1&dsig=recipes:h,wikinlp:l&isig=about:m&3adexp=c&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=b&localexp=b&locstr_exp=b&msvrtexp=b&siaexp=b&useclsexp=a
+728.241 RequestServer(14191:14202): Request with a null socket finished for URL https://improving.duckduckgo.com/t/ias_products?9298368&fromWebTab=1&initialState=inactive&timeSincePageLoad=327&timeSinceDeepStarted=36&timeSinceDeepFinished=0&q=avocado%20toast&ct=US&d=d&kl=wt-wt&rl=us-en&blay=e1a2RelatedQnA1w3n1w20r1&dsig=recipes:h,wikinlp:l&isig=about:m&3adexp=c&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=b&localexp=b&locstr_exp=b&msvrtexp=b&siaexp=b&useclsexp=a
+728.311 WebContent(14210): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/ias_web?8156757&fromWebTab=1&initialState=active&timeSincePageLoad=325&timeSinceDeepStarted=34&timeSinceDeepFinished=0&q=avocado%20toast&ct=US&d=d&kl=wt-wt&rl=us-en&blay=e1a2RelatedQnA1w3n1w20r1&dsig=recipes:h,wikinlp:l&isig=about:m&3adexp=c&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=b&localexp=b&locstr_exp=b&msvrtexp=b&siaexp=b&useclsexp=a", Error: Load failed, Duration: 130ms
+728.311 WebContent(14210): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/ias_products?9298368&fromWebTab=1&initialState=inactive&timeSincePageLoad=327&timeSinceDeepStarted=36&timeSinceDeepFinished=0&q=avocado%20toast&ct=US&d=d&kl=wt-wt&rl=us-en&blay=e1a2RelatedQnA1w3n1w20r1&dsig=recipes:h,wikinlp:l&isig=about:m&3adexp=c&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=b&localexp=b&locstr_exp=b&msvrtexp=b&siaexp=b&useclsexp=a", Error: Load failed, Duration: 130ms
+728.341 RequestServer(14191:14197): ConnectionCache: Connection to https://improving.duckduckgo.com/t/iaoi_wikipedia_fathead?7510178&id=about&fot=i&lot=i&dev=sidebar:triggering&fsig=m&ss=0&sp=0&im=1&ism=1&px=0&ul=0&wt=Avocado%20toast&ibv=0&adc=2&area=sidebar&wide=0&index=0&vertical=web&placeholder=0&placeholdertimeout=0&loadingTime=0&q=avocado%20toast&ct=US&d=d&kl=wt-wt&rl=us-en&kp=-1&serp_return=0&bing_market=en-US&blay=e1a2RelatedQnA1w3n1w20r1&dsig=recipes:h,wikinlp:l&isig=about:m&3adexp=c&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=b&localexp=b&locstr_exp=b&msvrtexp=b&siaexp=b&useclsexp=a failed: connect: Connection refused (errno=111)
+728.341 RequestServer(14191:14197): Request with a null socket finished for URL https://improving.duckduckgo.com/t/iaoi_wikipedia_fathead?7510178&id=about&fot=i&lot=i&dev=sidebar:triggering&fsig=m&ss=0&sp=0&im=1&ism=1&px=0&ul=0&wt=Avocado%20toast&ibv=0&adc=2&area=sidebar&wide=0&index=0&vertical=web&placeholder=0&placeholdertimeout=0&loadingTime=0&q=avocado%20toast&ct=US&d=d&kl=wt-wt&rl=us-en&kp=-1&serp_return=0&bing_market=en-US&blay=e1a2RelatedQnA1w3n1w20r1&dsig=recipes:h,wikinlp:l&isig=about:m&3adexp=c&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=b&localexp=b&locstr_exp=b&msvrtexp=b&siaexp=b&useclsexp=a
+728.341 RequestServer(14191:14204): Request with a null socket finished for URL https://improving.duckduckgo.com/t/ias_wikinlp?1522719&fromWebTab=1&initialState=inactive&timeSincePageLoad=1164&timeSinceDeepStarted=873&timeSinceDeepFinished=0&fsig=low&precheck_counts=0&flow=a&q=avocado%20toast&ct=US&d=d&kl=wt-wt&rl=us-en&blay=e1a2RelatedQnA1w3n1w20r1&dsig=recipes:h,wikinlp:l&isig=about:m&3adexp=c&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=b&localexp=b&locstr_exp=b&msvrtexp=b&siaexp=b&useclsexp=a
+728.361 WebContent(14210): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/ias_wikinlp?1522719&fromWebTab=1&initialState=inactive&timeSincePageLoad=1164&timeSinceDeepStarted=873&timeSinceDeepFinished=0&fsig=low&precheck_counts=0&flow=a&q=avocado%20toast&ct=US&d=d&kl=wt-wt&rl=us-en&blay=e1a2RelatedQnA1w3n1w20r1&dsig=recipes:h,wikinlp:l&isig=about:m&3adexp=c&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=b&localexp=b&locstr_exp=b&msvrtexp=b&siaexp=b&useclsexp=a", Error: Load failed, Duration: 60ms
+728.361 WebContent(14210): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/iaoi_wikipedia_fathead?7510178&id=about&fot=i&lot=i&dev=sidebar:triggering&fsig=m&ss=0&sp=0&im=1&ism=1&px=0&ul=0&wt=Avocado%20toast&ibv=0&adc=2&area=sidebar&wide=0&index=0&vertical=web&placeholder=0&placeholdertimeout=0&loadingTime=0&q=avocado%20toast&ct=US&d=d&kl=wt-wt&rl=us-en&kp=-1&serp_return=0&bing_market=en-US&blay=e1a2RelatedQnA1w3n1w20r1&dsig=recipes:h,wikinlp:l&isig=about:m&3adexp=c&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=b&localexp=b&locstr_exp=b&msvrtexp=b&siaexp=b&useclsexp=a", Error: Load failed, Duration: 60ms
+752.541 RequestServer(14191:14207): Request with a null socket finished for URL https://improving.duckduckgo.com/t/ias_recipes?6695561&fromWebTab=1&initialState=inactive&timeSincePageLoad=25109&timeSinceDeepStarted=24818&timeSinceDeepFinished=23936&q=avocado%20toast&ct=US&d=d&kl=wt-wt&rl=us-en&blay=e1a2RelatedQnA1w3n1w20r1&dsig=recipes:h,wikinlp:l&isig=about:m&3adexp=c&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=b&localexp=b&locstr_exp=b&msvrtexp=b&siaexp=b&useclsexp=a
+752.551 WebContent(14210): ResourceLoader: Failed load of: "https://improving.duckduckgo.com/t/ias_recipes?6695561&fromWebTab=1&initialState=inactive&timeSincePageLoad=25109&timeSinceDeepStarted=24818&timeSinceDeepFinished=23936&q=avocado%20toast&ct=US&d=d&kl=wt-wt&rl=us-en&blay=e1a2RelatedQnA1w3n1w20r1&dsig=recipes:h,wikinlp:l&isig=about:m&3adexp=c&ama5exp=b&bccaexp=b&biaexp=b&btaaexp=b&duckchat_alpha=b&litexp=b&localexp=b&locstr_exp=b&msvrtexp=b&siaexp=b&useclsexp=a", Error: Load failed, Duration: 190ms
+950.730 WebContent(14210): WebContent client disconnected during DidRequestCookie. Exiting peacefully.
 
-Connection to kusfedoravm closed by remote host.
-Connection to kusfedoravm closed.
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
-
-Sunday, August 25, 2024 8:45:20 AM
-Sunday, August 25, 2024 8:45:20 AM
-On branch main
-nothing to commit, working tree clean
-Sunday, August 25, 2024 8:45:20 AM
-Sunday, August 25, 2024 8:45:20 AM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.07s.
-Sunday, August 25, 2024 8:45:20 AM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.4.1 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
-✓ built in 169ms
-Done in 1.32s.
-Sunday, August 25, 2024 8:45:22 AM
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Sunday, August 25, 2024 8:45:22 AM
-On branch main
-Your branch is up to date with 'origin/main'.
-
-nothing to commit, working tree clean
-Sunday, August 25, 2024 8:45:22 AM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Already up to date.
-Sunday, August 25, 2024 8:45:23 AM
-Everything up-to-date
-Sunday, August 25, 2024 8:45:24 AM
-
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+real    15m31.693s
+user    141m53.712s
+sys     7m44.749s
+Sun Aug 25 09:09:54 EDT 2024
+kushal@kus2023:~/src/ladybird$
