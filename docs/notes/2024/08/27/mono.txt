@@ -1,0 +1,1336 @@
+
+	Hacker News new | threads | past | comments | ask | show | jobs | submit 	
+	
+	Microsoft donates the Mono Project to the Wine team (mono-project.com)
+	535 points by itherseed 3 hours ago | flag | hide | past | favorite | 165 comments
+	
+
+
+
+
+	
+	
+zbowling 2 hours ago | next [–]
+
+I worked on Mono a lot back in the early 2000s (back in the SVN days before it moved to Git, even). This move makes a lot of sense. Things evolved a lot over the years. Mono's legacy goals, which are to be a portable CLR (.NET) runtime for platforms that Microsoft didn't care about, don't make much sense today.
+
+Mono made a lot of sense for running places where full .NET didn't, like in full AOT environments like on the iPhone where you can't JIT, or for random architectures that don't matter anymore but once did for Linux (Alpha, Itanium, PPC, MIPs, etc.). When Microsoft bought Xamarin (which itself was born out of the ashes of the Novell shutdown of the Mono effort) and started the DotNET Core efforts to make .NET more portable itself and less a system-provided framework and merge in a lot of the stuff Mono did a single more focused project made more sense.
+
+Mono was still left out there to support the edge cases where DotNET Core didn't make sense, which was mostly things like being a backend for Wine stuff in some cases, some GNOME Desktop stuff (via GTK#, which is pretty dead now), and older niche use cases (second life and Unity still embed mono as a runtime for their systems). The project was limping, though, and sharing a standard library but different runtimes after much merging. Mono's runtime was always a little more portable (C instead of C++) and more accessible to experiment with, but we need that less and less, but it's still perfect for Wine. So, having it live on in Wine makes sense. It's a natural fit.
+
+reply
+	
+	
+lolinder 2 hours ago | parent | next [–]
+
+Is there somewhere where someone new to the ecosystem can get a simple introduction to all of these different terms and which ones are still relevant today? I looked into .NET somewhat recently and came away with the apparently mistaken impression that Mono was how .NET did cross-platform. I guess I must have been reading old docs, but I'm pretty sure they were at least semi-official.
+
+Is there good documentation somewhere for getting set up to develop with modern .NET on Linux?
+
+reply
+	
+	
+Blot2882 2 hours ago | root | parent | next [–]
+
+Mono was, but newer versions of .NET run on Linux and Mac.
+
+You can install at the link below, and then making a project is just `dotnet new console` and run with `dotnet run`
+
+https://learn.microsoft.com/en-us/dotnet/core/install/linux
+
+reply
+	
+	
+Kye 1 hour ago | root | parent | next [–]
+
+For historical context: this was before the conclusion of the antitrust case that led Microsoft to start softening its stance toward open source. https://en.wikipedia.org/wiki/United_States_v._Microsoft_Cor....
+
+This was the same year Antitrust came out: https://en.wikipedia.org/wiki/Antitrust_(film)
+
+Any support for open source or cross-platform stuff was a bulwark against claims of monopoly abuse, but none of it worked well enough to be a true replacement. Mono worked for some purposes, but it was far from the first party support cross-platform .NET gets today. Nowadays it sounds like .NET Core + third-party GUI libraries is the way to go.
+
+reply
+	
+	
+Buttons840 26 minutes ago | root | parent | prev | next [–]
+
+Is .NET open-source? Will I find it in an open-source repository?
+
+reply
+	
+	
+NlightNFotis 15 minutes ago | root | parent | next [–]
+
+Yes.
+
+https://github.com/dotnet/runtime/
+
+reply
+	
+	
+sva_ 20 minutes ago | root | parent | prev | next [–]
+
+Seems so https://github.com/dotnet/dotnet
+
+reply
+	
+	
+pantalaimon 42 minutes ago | root | parent | prev | next [–]
+
+Is there a way to build a GUI app with .NET on Linux?
+
+Will it be cross-platform?
+
+reply
+	
+	
+aspeckt112 22 minutes ago | root | parent | next [–]
+
+Avalonia.
+
+The UI isn't native, is a Skia canvass with drawn controls. But it'll work on basically every OS and it's pretty good.
+
+Also, you're not writing JavaScript, so that's a win any day in my book.
+
+reply
+	
+	
+cultofmetatron 35 minutes ago | root | parent | prev | next [–]
+
+> Is there a way to build a GUI app with .NET on Linux?
+
+yes
+
+https://avaloniaui.net/
+
+reply
+	
+	
+fsckboy 31 minutes ago | root | parent | prev | next [–]
+
+(i hardly know what i'm talking about so somebody else may have a better idea, but i'm here now so)
+
+mingw is a GNU's header/library environment (tools too maybe?) to create windows compatible applications. So I'd look into searching mingw .net and/or mingw mono.
+
+also, ask your favorite AI, they're good at this type of question so long as it's not up to the minute news
+
+reply
+	
+	
+simion314 2 hours ago | root | parent | prev | next [–]
+
+Mono implemented the GUI stuff like Windows Forms, do the latest windows cross platform stuff support that? Can you run .Net GUI windows program on linux without Mono but using the latest .Net thing ? I know it was not possible in the past.
+
+reply
+	
+	
+toyg 2 hours ago | root | parent | next [–]
+
+The whole point of .NET-Core was to remove all the (largely desktop-oriented) platform-specific dependencies that tied it to Windows, so you could run server-oriented .net programs on Linux. So no, afaik you can't simply run GUI apps built with .Net on Linux desktops - that's the reason Mono wasn't simply killed, because it covers that niche (which wouldn't even exist, were it not for Mono/Xamarin's efforts back then. But I digress...). Nowadays there are a few other attempts at providing that UI layer.
+
+reply
+	
+	
+pionar 2 hours ago | root | parent | prev | next [–]
+
+You can use third party libs like Avalonia[1] or Uno[2]
+
+[1] https://avaloniaui.net/ [2] https://platform.uno/
+
+reply
+	
+	
+simion314 1 hour ago | root | parent | next [–]
+
+Sure, nobody wants to write Winforms new applications today
+
+My point is about running existing applications on Linux, there are still issues with running .Net GUI stuff under wine and Mono was not a perfect implementation.
+
+I read in other comments that the newer .Net cross platform stuff is not a replacement for Mono for running this old applications. (nobody will rewrite them to use the current GUI stuff from MS since are old apps)
+
+reply
+	
+	
+stuaxo 1 hour ago | root | parent | next [–]
+
+For this, having wine in charge makes sense - though, as with many things wine you could be waiting a while.
+
+reply
+	
+	
+moron4hire 1 hour ago | root | parent | prev | next [–]
+
+No, Microsoft's .NET only supports WinForms on Windows. They do have an official cross platform GUI toolkit in MAUI, but it strangely does not support Linux.
+
+reply
+	
+	
+stackskipton 7 minutes ago | root | parent | next [–]
+
+>but it strangely does not support Linux.
+
+Support reasons. Still isn't the year of Linux Desktop.
+
+	
+	
+runevault 48 minutes ago | root | parent | prev | next [–]
+
+Last I knew it is also considered pretty lackluster. Every time I read up on it it feels like, even beyond the lack of Linux support people just don't care for it.
+
+If I was building a cross platform native app with .NET I'd probably use Avalonia right now.
+
+reply
+	
+	
+sweeter 35 minutes ago | root | parent | prev | next [–]
+
+Windows: it's cross platform! Looks inside "Except for Linux"
+
+Huh
+
+reply
+	
+	
+eppp 2 hours ago | root | parent | prev | next [–]
+
+No, they pretty much gave up on winforms when .net core morphed into "the" .net that is cross platform. There are some nice crossplatform gui libs now though.
+
+reply
+	
+	
+LAC-Tech 49 minutes ago | root | parent | next [–]
+
+What are the ones to use in 2024? I used to code informs, it was a great improvement on its successors.
+
+reply
+	
+	
+qingcharles 1 hour ago | root | parent | prev | next [–]
+
+I think this is what you need now...
+
+https://dotnet.microsoft.com/en-us/apps/maui
+
+"Build native, cross-platform desktop and mobile apps all in one framework."
+
+I know my buddy uses it to write Android apps on his Mac that interface to an ASP.NET Core web site.
+
+reply
+	
+	
+deaddodo 2 hours ago | root | parent | prev | next [–]
+
+.net Core doesn't supply WinForms, but WPF is the far more common paradigm for Windows apps now. WPF is supported by projects like Avalonia on Linux. There are also a few other major alternative UI toolkits, more commonly used by cross-platform (vs Windows-exclusive) developers.
+
+reply
+	
+	
+neonsunset 2 hours ago | root | parent | prev | next [–]
+
+You are expected to use Avalonia or Uno for multi-platform targeting or Gir.Core (GTK4) or one of the many other binding libraries for Linux-specific GUI.
+
+Also very easy to throw something together on top of SDL2 with Silk.NET.
+
+Practically speaking it is in a much better place than many languages considered by parts of Linux community to be more """linux-oriented""".
+
+reply
+	
+	
+simion314 1 hour ago | root | parent | next [–]
+
+My personal use case is running old GUI apps, I am not planning on writing GUI apps with .Net , MS had the opportunity to open source .Net/Silverlight and make money from tools but they bet on Windows and today most apps are node and javascript, a much inferior platform but MS open things up too late.
+
+reply
+	
+	
+hsbauauvhabzb 36 minutes ago | root | parent | prev | next [–]
+
+You’re not alone.
+
+I would say I’m not ‘new’ and even developed .net 4.5 for a number of years. I’m just as stumped by the naming mess that Microsoft made across the board in that space.
+
+Edit: I say 4.5 because I mean the original thick .net which is not dotnet core, which I think is the way to differentiate between versions, but also all the sub libraries like the orm were iirc named the same but did different things.
+
+They should have rebadged everything with a new name that didn’t involve a word that is fairly painful to google (‘core’) can be used in development as well as the name of a framework.
+
+reply
+	
+	
+pionar 2 hours ago | root | parent | prev | next [–]
+
+dot.net is the official starting point. It'll point you to getting setup with .NET dev on Linux. You can either use VSCode or Intellij Rider.
+
+reply
+	
+	
+older 2 hours ago | root | parent | prev | next [–]
+
+This is the official one: https://learn.microsoft.com/en-us/shows/visual-studio-code/g...
+
+reply
+	
+	
+SideburnsOfDoom 1 hour ago | root | parent | prev | next [–]
+
+> I looked into .NET somewhat recently and came away with the apparently mistaken impression that Mono was how .NET did cross-platform. I guess I must have been reading old docs,
+
+History here https://en.wikipedia.org/wiki/.NET
+
+.NET Core 1.0 (2016) was the first cross platform prototype. It got good in a release in 2018 or 2019, I even forgot which now. And took over steadily after that.
+
+We don't even think about it any more. "which OS is the prod env on" isn't a factor that causes any support worries at all.
+
+Getting set up would start at https://dot.net/
+
+And the download page, which should show you content for your current OS https://dotnet.microsoft.com/en-us/download
+
+But also other targets are here https://dotnet.microsoft.com/en-us/download/dotnet/8.0
+
+You'll want the latest SDK 8.0.x
+
+reply
+	
+	
+kragen 1 hour ago | parent | prev | next [–]
+
+i want to love dotnet-core, especially since godot switched from mono in godot 3 to dotnet-core in godot 4, but so far i haven't been able to
+
+currently debian has a mono package but no dotnet-core package. i'm not sure why this is; usually when debian lacks a popular nominally open-source package like this, it's either because it fails to build from source, or because it has some kind of tricky licensing pitfall that most people haven't noticed, but diligent debian developers have
+
+does anyone know why this problem exists for dotnet-core?
+
+also, does dotnet-core have a reasonable aot story for things like esp32 and ch32v003?
+
+reply
+	
+	
+mdasen 28 minutes ago | root | parent | next [–]
+
+You can add add Microsoft's repo to install it on Debian: https://learn.microsoft.com/en-us/dotnet/core/install/linux-....
+
+Does Debian require packages to work on all of its architectures? If so, that could be the issue. .NET Core only supports x86, x64, and Arm64 (I think Arm32 has been discontinued and RISC-V is experimental at this point).
+
+It's possible that they object to .NET Core having certain license restrictions on the Windows port (https://github.com/dotnet/core/blob/main/license-information...). .NET Core is mostly MIT or Apache licensed, but the Windows SDK has some additional terms. Skimming the third party licenses, that doesn't seem like an issue (mostly MIT/BSD/Apache or similar).
+
+I think the licensing situation is an interesting question: if you have software that's 100% open source when compiled for your OS, but requires non-free stuff to run on Windows, is it ok to include in Debian? It looks like none of the non-free stuff (like WPF) gets distributed with the non-Windows SDK builds. Binaries created from your code only depend on MIT-licensed stuff on macOS and Linux, but might depend on something closed-source when targeting Windows - though it looks like almost all of that stuff is either WPF (so you wouldn't be able to develop on Linux/Mac anyway since those libraries wouldn't be in the SDK on those platforms) or were removed as a runtime dependency in .NET 7. It looks like `Microsoft.DiaSymReader.Native` might be the only thing left. Maybe that's what is holding it back?
+
+> also, does dotnet-core have a reasonable aot story for things like esp32 and ch32v003?
+
+"Reasonable" can be a lot of things to a lot of different people. People have been working on RISC-V support. Samsung seems interested in it. But I probably wouldn't recommend it at the moment - and Mono doesn't really have RISC-V support either.
+
+reply
+	
+	
+ozim 2 minutes ago | root | parent | next [–]
+
+I would say it is .Net Foundation job to prepare and submit the package not Debian maintainers.
+
+reply
+	
+	
+davidhyde 22 minutes ago | root | parent | prev | next [–]
+
+I believe that you would use dotnet nano for something like that. I used it (or some previous version of it) once many years ago and was very impressed with the productivity and ease of use it offered. Ultimately the lack of community surrounding it drove me to other technologies. Might have changed since then though, who knows!
+
+https://www.nanoframework.net/
+
+reply
+	
+	
+Goz3rr 57 minutes ago | root | parent | prev | next [–]
+
+Even with AOT compilation, as someone who loves C# and also does embedded development in C I would personally say a garbage collected language like C# has no place there.
+
+reply
+	
+	
+kragen 55 minutes ago | root | parent | next [–]
+
+not everything running on a 20-mips 32-bit microcontroller with 2 kibibytes of sram needs to be hard real time and failure-free, and of course the esp32 has hundreds of kibibytes
+
+and, correct me if i'm wrong here, but doesn't c# allow you to statically allocate structs just as much as c does? i'd think you'd be able to avoid garbage collection about as much as you want, but i've never written much beyond 'hello, world' in c#
+
+reply
+	
+	
+runevault 46 minutes ago | root | parent | next [–]
+
+c# has the concept of value types (which structs are), which are stack allocated. Generics have seen more and more instance of getting a Value type like Value Task for stack allocated async objects. But if you add a class as a member of the struct that is going straight to the heap with all the GC stuff that entails
+
+reply
+	
+	
+johnwheeler 13 minutes ago | parent | prev | next [–]
+
+Trip down memory lane touching several points in my career. Rip /.
+
+reply
+	
+	
+neonsunset 2 hours ago | parent | prev | next [–]
+
+In many ways, .NET today finally fulfills the original Mono goals, and does so in a very performant manner.
+
+reply
+	
+	
+rgovostes 1 hour ago | prev | next [–]
+
+I always assumed Microsoft did not condone Wine or other re-implementations of their APIs (like ReactOS), but that they were protected by DMCA reverse engineering provisions and anyway too insignificant to send the legal team after.
+
+Wikipedia says,
+
+> Until 2020, Microsoft had not made any public statements about Wine. ... On 16 February 2005, Ivan Leo Puoti discovered that Microsoft had started checking the Windows Registry for the Wine configuration key and would block the Windows Update for any component. As Puoti noted: "It's also the first time Microsoft acknowledges the existence of Wine."
+
+> In January 2020, Microsoft cited Wine as a positive consequence of being able to reimplement APIs, in its amicus curiae brief for Google LLC v. Oracle America, Inc.
+
+reply
+	
+	
+kelnos 1 hour ago | parent | next [–]
+
+I think Microsoft has finally realized that its animus toward projects like Wine and pre-acquisition Mono was ultimately unproductive, and a net negative for Microsoft itself.
+
+I still don't trust MS's motives in general, but I think they at least recognize that Wine/Proton helps make the Win32 and DirectX APIs a sort of de-facto cross-platform standard when it comes to things like desktop gaming, and that this is a good thing for them.
+
+On the server side, MS knows that Linux is by far the most popular server OS, and official support for running .NET backend apps on Linux from MS themselves is a win for them as well.
+
+reply
+	
+	
+bonesss 1 hour ago | root | parent | next [–]
+
+I think it's just such a clear business-razor because of the cloud: can I take my app and spin up a bajillion cheapo servers with no licensing costs using that stack?
+
+If the answer for .Net was 'no' then there are meaningful domains where people would just jump ship in a second. Research, academia, teaching, and certain government areas pop to mind. Keeping Linux support, because of that server dominance, is a core concern for them.
+
+reply
+	
+	
+kej 6 minutes ago | root | parent | next [–]
+
+Presumably being able to make money spinning up cheapo servers, via Azure, just reinforces that decision.
+
+reply
+	
+	
+deelowe 59 minutes ago | root | parent | prev | next [–]
+
+Microsoft as a company is extremely myopic. Budgets are scrutinized down to the penny every few months at very senior levels. This drives a culture of immediacy. Wine was a threat until Microsoft realized everyone in tech had moved to service based business models (aka "cloud"). Only afterwards, did they "realize" Linux as a threat to their long term viability no longer mattered.
+
+reply
+	
+	
+kragen 1 hour ago | root | parent | prev | next [–]
+
+anthropomorphizing complex social institutions such as corporations is ultimately unproductive and a net negative for clear thinking
+
+reply
+	
+	
+jimrandomh 1 hour ago | parent | prev | next [–]
+
+If Windows Update replaced components of Wine, that would (a) break people's Wine installs, and (b) give those users a way to legally get Microsoft's versions of those components for use outside of Windows.
+
+reply
+	
+	
+rescbr 43 minutes ago | root | parent | next [–]
+
+Microsoft’s EULA would still apply to (b).
+
+It’s the exact same situation as downloading a Windows ISO from Microsoft’s website and running it with an activator.
+
+reply
+	
+	
+qingcharles 1 hour ago | parent | prev | next [–]
+
+Microsoft in 2024 feels like a different beast. All the MS devs I know seem fully on board with totally cross-platform support. Half of them are coding on MacBooks and I would hazard a guess that a good proportion of .NET web sites being built are being deployed onto Linux boxen.
+
+reply
+	
+	
+stackskipton 10 minutes ago | root | parent | next [–]
+
+.Net SRE here, all our .Net REST APIs are deployed on Kubernetes. Devs are still mostly on Windows because Visual Studio.
+
+I've worked with Azure team, all greenfield they do for Azure goes on Linux as well. Windows Server is pretty much dead to Microsoft though it will be continue to be supported and released because $$$.
+
+reply
+	
+	
+sublimefire 51 minutes ago | root | parent | prev | next [–]
+
+Few work on Macbooks, it is more about using WSL on the dev machines or even using DevBox instances.
+
+reply
+	
+	
+gnu8 42 minutes ago | root | parent | prev | next [–]
+
+I imagine very few of the MS devs are using BeOS.
+
+reply
+	
+	
+troymc 2 hours ago | prev | next [–]
+
+Fun fact: Second Life, the virtual world, has an in-world scripting language called LSL, and it gets compiled to bytecode that gets run on a virtual machine. Initially, it got compiled to bytecode that ran on an in-house virtual machine, but in 2008, they switched over to compiling LSL to Mono bytecode to run on the Mono virtual machine. I wonder if that's still how it works. (I haven't been involved with SL for a long time.)
+
+reply
+	
+	
+qingcharles 1 hour ago | parent | next [–]
+
+Thank you, that explains the Mono in SL.
+
+reply
+	
+	
+pdmccormick 3 minutes ago | prev | next [–]
+
+I'm genuinely curious, for someone who develops web application backends and larger distributed systems & infrastructure, predominantly using Go and Python, exclusively targeting Linux, is there anything in the .NET ecosystem that anyone would recommend I take a look at? Many thanks.
+
+reply
+	
+	
+rickcarlino 3 hours ago | prev | next [–]
+
+I feel like I’m missing some context here. Is this a “free as in take this puppy” situation? How do the wine developers benefit from this?
+
+reply
+	
+	
+dtquad 2 hours ago | parent | next [–]
+
+Microsoft's own FOSS multiplatform implementation of the .NET runtime is now much more performant and feature complete than Mono.
+
+However Mono is easier to embed into other applications and easier to port to new platforms. That is for example why it's used for the .NET/Blazor WebAssembly stuff. Microsoft still maintains their own fork of Mono for this specific use case.
+
+Mono also implements some of the legacy Windows Desktop GUI frameworks like WinForms and WPF that Microsoft never bothered to port to their new .NET runtime. This is probably why the Wine developers might be interested in Mono.
+
+reply
+	
+	
+Phrodo_00 2 hours ago | root | parent | next [–]
+
+Mono also supports winforms. I don't think they're supported in dotnet (but there's libraries for Gtk, although you could also use Vala with a bit extra effort).
+
+reply
+	
+	
+IshKebab 45 minutes ago | root | parent | next [–]
+
+Yeah I think it also supports WPF. Can't remember where I read that.
+
+reply
+	
+	
+neonsunset 2 hours ago | root | parent | prev | next [–]
+
+A shoutout goes to a project that aims to simplify CoreCLR embedding UX to prevent the issues stemming from embedding legacy Mono: https://github.com/StudioCherno/Coral
+
+reply
+	
+	
+lloydatkinson 1 hour ago | root | parent | prev | next [–]
+
+Winforms and WPF are both very maintained and supported for .NET 8 on Windows, to clarify. Good cross platform desktop frameworks include Avalonia.
+
+reply
+	
+	
+qingcharles 1 hour ago | root | parent | next [–]
+
+I think MS wants you to use this?
+
+https://dotnet.microsoft.com/en-us/apps/maui
+
+I was pleased to see WinForms got some updates in .NET9. I really thought they'd left it. I still use it every day when I need to spin up a new tool to do some little task that needs a GUI.
+
+reply
+	
+	
+lloydatkinson 18 minutes ago | root | parent | next [–]
+
+The only people wanting anyone to use MAUI are the MAUI team and even then only half heartedly.
+
+Microsoft Build this year only discussed WinUI and WPF even.
+
+https://www.reddit.com/r/dotnet/comments/1cy2u6l/microsoft_h...
+
+reply
+	
+	
+kelnos 1 hour ago | root | parent | prev | next [–]
+
+Are those frameworks available in .NET 8 on non-Windows platforms, though? If not, I think that's what the GP was getting at.
+
+reply
+	
+	
+grokys 1 hour ago | root | parent | next [–]
+
+Not by Microsoft, but Avalonia has a commercial fork of WPF which runs on Linux and macOS:
+
+https://avaloniaui.net/xpf
+
+reply
+	
+	
+zerocrates 2 hours ago | parent | prev | next [–]
+
+Wine has (or used to have anyway, not sure if it still does) a version of Mono it used to run .NET stuff within Wine; I'd assume this has to do with that, that they were relatively alone in having a continuing interest in the Mono codebase vs. the dotnet core stuff.
+
+reply
+	
+	
+jcims 2 hours ago | parent | prev | next [–]
+
+How has ’free as in puppies’ not reached its rightful place on the podium?
+
+reply
+	
+	
+spiderfarmer 2 hours ago | root | parent | next [–]
+
+Because nobody wanted to maintain it.
+
+reply
+	
+	
+karmajunkie 2 hours ago | root | parent | next [–]
+
+i’d upvote this twice if i could…
+
+reply
+	
+	
+bawolff 2 hours ago | root | parent | prev | next [–]
+
+I love this. Definitely using this next time someone tries to guilt me into becoming maintainer of some abandonware foss project.
+
+reply
+	
+	
+matthewbauer 1 hour ago | root | parent | prev | next [–]
+
+I guess this is in the context of "free as in beer" and "free as in speech".
+
+reply
+	
+	
+codersfocus 1 hour ago | root | parent | prev | next [–]
+
+White elephant has usually been the go to animal for this kind of idiom
+
+reply
+	
+	
+ragebol 2 hours ago | root | parent | prev | next [–]
+
+I'm not a dog person: a puppy would be a burden (financially and time-wise) and provide me barely any fun.
+
+reply
+	
+	
+yathern 2 hours ago | root | parent | next [–]
+
+I think that's the intended implication - that it's "free to a good home" - meaning any new owner takes on a lot of responsibility.
+
+reply
+	
+	
+bmacho 2 hours ago | root | parent | prev | next [–]
+
+That's what ’free as in puppies’ mean.
+
+Free software is typically described as "free as in freedom" or "free as in free beer". (This is probably a limitation of English tho, my language has 2 different words for permissions and costlessness.) GP above proposes the "free as in puppy" variant, which means that it is a burden of maintenance. I can't recall any real examples for this.
+
+reply
+	
+	
+jcranmer 1 hour ago | root | parent | next [–]
+
+If you want to be pedantic, English does have distinct words for the two connotations of free--"liberal" and "gratuitous". Although it should also be immediately obvious why those words aren't preferred either: "liberal" also has several other connotations (to the point that a "Liberal Party" could be almost anywhere on the political spectrum), while "gratuitous" tends to lean more towards "unnecessary" than "free of charge" in common parlance.
+
+reply
+	
+	
+kelnos 1 hour ago | root | parent | prev | next [–]
+
+To be fair, "free as in beer" doesn't work for a lot of people who don't drink (or do drink, but don't like beer). I don't think we're going to come up with a one-size-fits-all slogan...
+
+reply
+	
+	
+willhslade 2 minutes ago | root | parent | next [–]
+
+Free food? Organic vegetable stew?
+
+	
+	
+minkles 2 hours ago | parent | prev | next [–]
+
+I think it's just hurting someone at Microsoft less if they give it a home that isn't /dev/null.
+
+Edit: quick hat tip to Mono.Cecil which I've used a couple of times to crack .Net components to bypass licensing code. It's not that we didn't pay for them but we couldn't be bothered to deal with license deployment and maintenance.
+
+reply
+	
+	
+pentagrama 1 hour ago | prev | next [–]
+
+A bit off-topic, but this makes me wonder about the relationship between Microsoft and Wine. Do they consider it a threat? An ally? Both?
+
+This is my first time seeing Microsoft acknowledge Wine's existence, and in this case, it was at least in a friendly manner? Or could there be bad faith behind this 'donation'?
+
+reply
+	
+	
+kelnos 1 hour ago | parent | next [–]
+
+Another poster quoted Wikipedia somewhere here; MS implicitly acknowledged Wine's existence back in 2005 when they added a check for some of Wine's registry keys which would disable Windows Update if it found them. And in 2020 MS filed an Amicus brief in that Google/Oracle lawsuit in support of free re-implementations of APIs, citing Wine as a positive example.
+
+While I am still wary of Microsoft after their previous anti-competitive behaviors, I think they've taken a more pragmatic view of late, and realize that projects like Wine are actually good for their platform as a whole. I expect if Wine/Proton did not exist, we'd see more (for example) Windows-only games ported to macOS or Linux. With Wine/Proton, those ports are mostly not necessary, and Microsoft gets to say that Win32/DirectX is something of a cross-platform gaming "standard".
+
+reply
+	
+	
+datavirtue 1 hour ago | parent | prev | next [–]
+
+What could WINE possibly do to them? Rob them of all kinds of enterprise and cloud business? WINE is a single LED on a nuclear powerplant control panel.
+
+reply
+	
+	
+justsomehnguy 1 hour ago | parent | prev | next [–]
+
+The best Wine environment is still a Windows install. You need a lot of things to do to run some of the mill Win32 app, so Wine is not a direct threat for MS in any foreseeable future.
+
+reply
+	
+	
+nedt 33 minutes ago | prev | next [–]
+
+Mono was very useful in university. Must have been 2005 when I got asked if I wanted to use Java or C# for the programming course. Being bored with Java I picked C#. We were a very small group of two students.
+
+But as I just had a Powerbook I used Mono to run it on OS X. At the end of the course someone from Microsoft came to the university to answer any of our question about upcoming features in .NET and C#. And as we were a small group I set directly in front of him with the shiny apple point at him.
+
+Very interesting language at that time. .NET not so much. Also still remember that we were tasked to implement 3 sort algorithms of our choice. One of mine was bogosort and with Mono on PPC it could sort up to 7 elements, before becoming really slow.
+
+reply
+	
+	
+philip1209 56 minutes ago | prev | next [–]
+
+Can anybody speak to the accounting implications of "donating" software to a foundation/501(c)3? Can there be any kind of tax write-off? (It looks like this might already have been owned by a foundation, but I'm still generally curious)
+
+reply
+	
+	
+IshKebab 41 minutes ago | parent | next [–]
+
+At best you would be limited to the value lost which is essentially zero, so no.
+
+reply
+	
+	
+cxr 2 hours ago | prev | next [–]
+
+I know it's a long-standing empirical truth that anyone involved with Mono is required to prefer doing just about anything besides thinking about or touching what's on the Mono project website, but this announcement really deserves to be put on page unto itself with a URL all its own, rather than shoehorned into an anonymous div on the Mono landing page and at the top of /news.
+
+See <https://simonwillison.net/2024/Jul/13/give-people-something-...>.
+
+reply
+	
+	
+romwell 1 hour ago | parent | next [–]
+
+It seems like the link we got (https://www.mono-project.com) might be the URL for the announcement - that's to say, this is the last update on that website, and will stay there indefinitely.
+
+reply
+	
+	
+__s 2 hours ago | prev | next [–]
+
+https://wiki.winehq.org/Mono#Microsoft_.NET for why Mono is relevant to Wine
+
+reply
+	
+	
+nerdjon 3 hours ago | prev | next [–]
+
+I have only used mono a couple times, but I am a bit confused by the wording here and it is likely because I don't know the full story of Mono.
+
+But:
+
+> Microsoft maintains a modern fork of Mono runtime in the dotnet/runtime repo and has been progressively moving workloads to that fork.
+
+Does that mean that this mono project and its associated repo and what is within the dotnet repo are not the same and could (if they have not already) diverge?
+
+reply
+	
+	
+JackSlateur 3 hours ago | parent | next [–]
+
+Mono was the .net implementation for Linux (and others ?) years ago while microsoft published the windows .net runtime
+
+Since then, microsoft supports https://github.com/dotnet/runtime, which is MIT licensed
+
+Mono has no reason to live anymore, hence the lack of commits and contributions
+
+It is a dead project, I wonder what winehq has in mind here
+
+edit: as pointed by the comments, mono supports .net runtime before the newer ".net core" (which is not compatible). Because wine wants to be able to run older windows code, they probably still use this.
+
+reply
+	
+	
+bri3d 2 hours ago | root | parent | next [–]
+
+> Mono has no reason to live anymore
+
+This isn't really true. Mono functions as a complete replacement for the ".NET Framework" - something that can be used to run any .NET app, including "legacy" apps targeting old ".NET Framework" versions, on any supported platform, even when the app was built to target Windows.
+
+dotnet/runtime is intended to run more modern applications that target ".NET Core" - basically, stuff that's cross-platform on purpose.
+
+There are tons of subtle differences relating to these goals but also some glaringly obvious ones, like mono having an implementation of Windows.Forms.
+
+> hence the lack of commits and contributions
+
+Microsoft have been actively forcing contributors out of mono/mono and into the dotnet/runtime repo for several years now, while Wine kept a weird halfway fork at https://gitlab.winehq.org/wine-mono/mono . Formally transferring `mono/mono` and the Mono name over to Wine will in theory allow `mono` to more effectively accept code which works to improve legacy .NET Framework support for compatibility reasons, while dotnet/runtime can continue to evolve as the way to run intentionally targeted .NET Core code.
+
+reply
+	
+	
+lyu07282 1 hour ago | root | parent | next [–]
+
+Won't most apps use way more .net stuff than core? Mono was a way to run dotnet apps on Linux, killing it meant killing cross platform support for modern dotnet desktop apps?
+
+reply
+	
+	
+jkulubya 1 hour ago | root | parent | next [–]
+
+Not really. Best to think of .net “core” as just .net.
+
+Anything that was in the old .net that isn’t in core today won’t ever be.
+
+Then there’s stuff that was missing in the earlier versions of core that existed in old dotnet. Some of it they later realised was useful for newer apps or apps migrated to core. These pieces were ported over by Microsoft or replaced by 3rd party implementations (e.g. avalonia for xplat ui).
+
+(.net core is actually officially just .net, they dropped the core from the name)
+
+reply
+	
+	
+romwell 1 hour ago | root | parent | prev | next [–]
+
+This is Hackernews.
+
+What are those Desktop apps you speak of?
+
+Clearly, everything is a command-line backend pipeline in container with a web UI.
+
+And everything that isn't can be easily deprecated. /s
+
+reply
+	
+	
+jabl 2 hours ago | root | parent | prev | next [–]
+
+I know little of dotnet beyond trying various semirandom things to make some .net apps work on linux. With that out of the way, my understanding is that
+
+- Originally there was .Net Framework, by microsoft, for windows only. Versions 1.0 -> 4.8 were released.
+
+- Then mono came along as a somewhat clean-room reimplementation of .Net framework, focusing on making it run on Linux. Though mono does not implement windows gui widgets, so for that there's stuff like Gtk#. And you cannot run windows GUI applications on mono for this reason, even though the core parts might be portable. Eventually Microsoft acquihired the Mono team.
+
+- Later on Microsoft made the core of .net open source and portable, creating .Net Core. Or .Net Runtime, linked above, which is apparently the same thing (not sure when they dropped the "Core" part of the name). Applications written for .Net Framework can't just be recompiled for .Net Core/Runtime, there is porting work that needs to be done. And similarly as for .Net framework, even though the core is portable and open source, the windows gui libraries are not. So again windows GUI applications written using .Net Runtime cannot run on Linux. Not sure if there exists anything like Gtk# for .Net Runtime, allowing creating native Linux GUI applications with .Net Runtime?
+
+- Finally, we have wine which is an implementation of the Windows API on Linux. And in a wine environment you can install e.g. .Net Framework including GUI libraries, so you can run .Net GUI applications that way.
+
+reply
+	
+	
+Uvix 1 hour ago | root | parent | next [–]
+
+They dropped the "Core" suffix with v5 in 2020, since at that point there was no longer naming confusion.
+
+While Microsoft doesn't have their own framework supporting Linux GUI apps on the modern .NET runtime (MAUI does Mac/iOS/Android but not Linux), there are third-party ones like Avalonia.
+
+reply
+	
+	
+rezonant 1 hour ago | root | parent | prev | next [–]
+
+> not sure when they dropped the "Core" part of the name
+
+It was called .NET Core until they officially retired the .NET Framework (ie v4) by releasing .NET 5.
+
+reply
+	
+	
+neonsunset 1 hour ago | root | parent | prev | next [–]
+
+See https://news.ycombinator.com/item?id=41372165
+
+It is harmful to write new code that targets .NET Framework and existing actively maintained applications all have migrated to .NET. The ones that did not either have poor maintenance or authors that lack time as they don't owe extra effort unless they want to do that (or sometimes it is a skill issue, unfortunately).
+
+reply
+	
+	
+filmor 3 hours ago | root | parent | prev | next [–]
+
+Mono has support for app domains (and is in general closer to .NET Framework), a more powerful C API and runs on more architectures.
+
+reply
+	
+	
+actionfromafar 2 hours ago | root | parent | next [–]
+
+This must be the reason. Wine seeks to be compatible with a bunch of legacy software, some of which will want to use the equivalent of .NET 1, 2, 3, and 4.x Framework and not just "dotnet core". (Or whatever the new thing is called in Microsoftese this week.)
+
+Edit: maybe this means WPF can be the best way to write Linux applications. After all, Win32 is the stable Linux API... nudge nudge, wink wink. :-D
+
+reply
+	
+	
+nerdjon 2 hours ago | root | parent | prev | next [–]
+
+So if I am understand correctly, what I mentioned is correct?
+
+On the website (where my quote comes from) it links to https://github.com/dotnet/runtime/tree/main/src/mono which is a mono within what you linked too.
+
+So this is a case of 2 different mono's?
+
+Sorry just trying to make sure I am understanding what is happening here properly given the exact same name in 2 places...
+
+reply
+	
+	
+Rochus 1 hour ago | root | parent | prev | next [–]
+
+> Mono has no reason to live anymore
+
+More targets, much leaner (< 10 MB clr + mscorlib), less than factor two performance difference to current CoreCLR, written in C, easier to compile than CoreCLR, etc.
+
+reply
+	
+	
+nicce 3 hours ago | root | parent | prev | next [–]
+
+Winehq is probably the only org who might have needs to add something in there. So why not have a control of it, even if the contributions are rare.
+
+Edit: To add, isn’t the above about ASP .NET Core? Mono is mostly about the time before Core, and it is not the same.
+
+reply
+	
+	
+Lockal 1 hour ago | prev | next [–]
+
+Yes, some things never change:
+
+https://en.wikipedia.org/wiki/Embrace,_extend,_and_extinguis...
+
+reply
+	
+	
+Havoc 32 minutes ago | prev | next [–]
+
+How is .Net/Mono connected to Wine?
+
+Or is this more of a steward role rather than technical connection
+
+reply
+	
+	
+donatj 3 hours ago | prev | next [–]
+
+Is the correct interpretation, reading between the lines that the original Mono project is being retired, and basically put on life support?
+
+reply
+	
+	
+Wytwwww 2 hours ago | parent | next [–]
+
+I think this has already been the case for years? Mono didn't really have much of a point after MS opensource .NET and ported it to other platforms.
+
+reply
+	
+	
+rererereferred 2 hours ago | root | parent | next [–]
+
+And Wine will probably not do much more than maintenance so applications targeting .net 1-4 work on Wine.
+
+reply
+	
+	
+masfuerte 2 hours ago | prev | next [–]
+
+> We want to recognize that the Mono Project was the first .NET implementation on Android, iOS, Linux, and other operating systems.
+
+Is this true? The pre-releases and version 1 of .Net came with the source for a reference implementation of the CLR that ran on Linux or BSD. I can't remember what license it had and I thought Mono was a separate project, but maybe Mono was based on it. Not that it matters now.
+
+reply
+	
+	
+saurik 2 hours ago | parent | next [–]
+
+You are thinking of Rotor. FWIW, I also feel as if Portable.NET--which was rebranded at some point to DotGNU when I think it was even donated to the FSF--had predated Mono in functioning?
+
+The Mono website has an archive of an old mailing list post which at the time talks about even-older origin of the project. It is (of course) heavily biased for Mono, and hilariously gives me an awkward shout out ;P.
+
+https://www.mono-project.com/archived/mailpostearlystory/
+
+reply
+	
+	
+masfuerte 2 hours ago | root | parent | next [–]
+
+Thank you!
+
+So it ran on Windows, FreeBSD and Mac OS X making it the first non-Windows implementation of .Net, but it didn't run on Linux. It also had a fairly useless licence, so Mono was separate.
+
+https://en.wikipedia.org/wiki/Shared_Source_Common_Language_...
+
+Edited to add: and thanks for the link. Only three developers and there's already drama! :-)
+
+reply
+	
+	
+tredre3 2 hours ago | parent | prev | next [–]
+
+.Net Core 1.0 released in 2016 supports Linux yes.
+
+Lagacy .Net never supported OSes other than Windows. Mono, released in 2004, was the first attempt to bring it to other OSes.
+
+reply
+	
+	
+repelsteeltje 2 hours ago | prev | next [–]
+
+I'm not a gamer so forgive me if I see connections that aren't there. Does this in any way impact game emulation? Isn't wine part of proton or stream attempts to run windows games on Linux? I suppose .net and clr play some time in win32, how is that usually emulated?
+
+reply
+	
+	
+tapoxi 2 hours ago | parent | next [–]
+
+Via wine-mono
+
+Games themselves typically aren't .NET but ancillary components, like launchers or map editors, are.
+
+reply
+	
+	
+Y_Y 2 hours ago | parent | prev | next [–]
+
+Wine Is Not an Emulator
+
+but it is indeed the basis for Proton
+
+reply
+	
+	
+justsomehnguy 37 minutes ago | parent | prev | next [–]
+
+You are probably mix up .NET and C# somewhat.
+
+reply
+	
+	
+stefanos82 2 hours ago | prev | next [–]
+
+My assumption is that it must have something to do with https://en.wikipedia.org/wiki/Wine_(software)#Microsoft_appl...
+
+This way will allow them to improve Mono accordingly? Who knows? /me-thinks...
+
+reply
+	
+	
+DrNosferatu 1 hour ago | prev | next [–]
+
+They could also donate comparability with modern MsOffice.
+
+reply
+	
+	
+voytec 1 hour ago | prev | next [–]
+
+Is this a "dropped on community" project like Borg/Kubernetes fiasco with most PRs ending up in the following, and just corpo-sponsored changes and patches getting through?
+
+> The Kubernetes project currently lacks enough active contributors to adequately respond to all issues.
+
+reply
+	
+	
+peppertree 2 hours ago | prev | next [–]
+
+Never miss a good tax write-off.
+
+reply
+	
+	
+bawolff 2 hours ago | parent | next [–]
+
+I dont think this makes sense. What value would even be written off here?
+
+reply
+	
+	
+KeplerBoy 2 hours ago | root | parent | next [–]
+
+A value you come up with hoping the IRS will not one day disagree.
+
+reply
+	
+	
+bawolff 1 hour ago | root | parent | next [–]
+
+This gives me strong https://youtu.be/aCP27_vquxQ?si=WztFEXETGLcsAT51 vibes.
+
+I dont think this is how it works in the real world.
+
+Even if it did, giving it away would be equally a write off as just shutting it down.
+
+reply
+	
+	
+tedunangst 43 minutes ago | root | parent | next [–]
+
+I thought that would be a link to the Seinfeld episode. https://www.youtube.com/watch?v=XEL65gywwHQ
+
+reply
+	
+	
+pjmlp 26 minutes ago | prev | next [–]
+
+Yet another piece of Xamarin/Mono that falls down.
+
+No wonder Miguel de Icaza is now focused on Swift, Godot and Apple's ecosystem, all the promises done at Xamarin acquisition time are gone now.
+
+Mono Develop killed, after being renamed into VS4Mac, gone through a rewrite, only to be killed shortly after the rewrite reached 1.0.
+
+Xamarin.Forms rewriten into MAUI, with incompatible APIs.
+
+MSIL Linker had a better chance as a critical piece of Blazor WebAssembly and Native AOT.
+
+The whole dotnet reload drama.
+
+Now Mono donation, and then .NET team is surprised .NET uptake on UNIX shops isn't as they expect.
+
+In alternative universe when the Xamarin acquisition didn't happen, where would we be now?
+
+reply
+	
+	
+aspeckt112 11 minutes ago | parent | next [–]
+
+Based on how Xamarin performed prior to the MS acquisition, I'd guess dead.
+
+The license cost was high, and the MS acquisition came right around the time React Native and Flutter started to enter v1. I think they'd of been blown out of the water pretty quickly. At least Microsoft allowed Xamarin to get into enterprise .NET shops pretty quickly. There's a lot of B2B form based apps written in Xamarin. I worked on a pretty big one that made (and continues to make) a lot of money.
+
+I've long assumed the point of the acquisition was because Xamarin did basically all the hard work of allowing .NET to be cross platform.
+
+reply
+	
+	
+neonsunset 2 hours ago | prev | next [–]
+
+For everyone who is confused by what is going on, here's the explanation:
+
+Today, there are 2.5 Mono's:
+
+Mono that lives in https://github.com/mono/mono. This is the original Mono codebase that was written back then and was the .NET Framework for Linux, with corresponding compat. and such, pioneered by Miguel De Icaza, who now seems to be happier in Swift land. At the present day, it was receiving very little maintenance and I don't believe was actively used. Please correct me if I'm wrong.
+
+Mono that lives in https://github.com/dotnet/runtime/tree/main/src/mono. This is the Mono that got merged into .NET, becoming the building block for multiple components and one of the official runtime flavours. It is actively maintained and is at relative feature parity with CoreCLR, predominantly serving mobile targets (iOS, Android) and WASM as well as exotic or legacy targets like ARMv6, LA64, s390x(?), ppc64. It is also useful for initial stages of new platform bring-up process. Note that you are not expected to use it for targets that support CoreCLR due to a massive rift in performance between the two. When you are using it, you do so as a part of standard .NET toolchain - it is picked automatically for appropriate targets, or can be opted into with some configuration.
+
+Mono that lives in https://gitlab.winehq.org/wine-mono/mono which is a Mono fork actively maintained by Wine for its own usage. Going forward, any possible ambiguities regarding ownership and stewardship are considered resolved and the ownership of mono/mono and everything related to it is transferred to WineHQ.
+
+Honorable mention also goes to private Mono fork used by Unity which they are (painfully) trying to migrate from.
+
+reply
+	
+	
+Rochus 1 hour ago | parent | next [–]
+
+> due to a massive rift in performance between the two
+
+Not that massive; factor 1.8 as we found out recently.
+
+reply
+	
+	
+munchler 2 hours ago | prev | next [–]
+
+.NET now runs on Linux and other platforms, so what is the purpose of maintaining Mono separately at this point?
+
+reply
+	
+	
+kcb 2 hours ago | parent | next [–]
+
+Mono can run old .NET framework applications directly.
+
+reply
+	
+	
+munchler 2 hours ago | root | parent | next [–]
+
+OK, but that doesn't require any further changes to Mono. It should essentially be a read-only project going forward.
+
+reply
+	
+	
+wtetzner 1 hour ago | root | parent | next [–]
+
+It won't get new features, but will likely require maintenance to keep it running as new versions of operating systems are released.
+
+reply
+	
+	
+mdasen 12 minutes ago | root | parent | next [–]
+
+This is the thing about software: even if you aren't looking to improve it, the world around it will subtly shift so it'll need to be updated or it'll stop working.
+
+For example, Windows XP can't access the modern internet because it doesn't support TLS 1.2 or 1.3 and most of the web is now secure. The software still exists, but the world around it has shifted so it doesn't really work. If 95% of people end up owning electric cars, gas stations are going to become scarce. Maybe there will be workarounds, but the world will have shifted around the product. Let's say that all gas pumps were changed to wider-nozzle pumps. Sure, you could make an adapter, but that's the point: changes in the world around you end up necessitating changes, workarounds, etc.
+
+It might be mostly read-only, but there's always little possible things that come up requiring work to be done on it.
+
+reply
+	
+	
+randomdata 1 hour ago | root | parent | prev | next [–]
+
+Is there anything to suggest that there will be further changes? I mean, other than bug fixes.
+
+reply
+	
+	
+munchler 1 hour ago | root | parent | next [–]
+
+I’m surprised that such an old product would even get bug fixes. It’s not like Microsoft is fixing bugs in .NET Framework anymore.
+
+reply
+	
+	
+kcb 1 hour ago | root | parent | next [–]
+
+.NET Framework isn't EOL and is probably going to be supported forever pretty much. There are still regular updates to .NET Framework distributed through Windows Update.
+
+reply
+	
+	
+stackskipton 5 minutes ago | root | parent | next [–]
+
+"Supported"... Kind of. Showstopper stuff is fixed. Other stuff is not. My last company had two open bugs with .Net Framework on more recent versions of Windows Server that were year and half old.
+
+.Net Framework will be supported as long as Windows Servers OSes it runs on support it. If Windows Server team ever casts it out, it will die.
+
+	
+	
+whalesalad 2 hours ago | prev | next [–]
+
+What is the mono logo? a gorilla with a hat? or a pile of poop? serious question.
+
+reply
+	
+	
+eddythompson80 1 hour ago | parent | next [–]
+
+It's a Monkey's head. Mono is Monkey in Spanish. The original author, Miguel de Icaza, is Mexican-American.
+
+reply
+	
+	
+randomdata 2 hours ago | parent | prev | next [–]
+
+A portrayal of someone's attempt at giving a "thumbs up" with a broken thumb, obviously.
+
+reply
+	
+	
+RobRivera 2 hours ago [flagged] [dead] | prev | next [–]
+
+Thats hella awesome
+
+	
+	
+commercialnix 3 hours ago [flagged] [dead] | prev | next [15 more]
+
+	
+	
+larsrc 3 hours ago | prev [–]
+
+"Donates"? A code base is a maintenance burden.
+
+reply
+	
+	
+RandomThoughts3 3 hours ago | parent | next [–]
+
+That’s the old code base which has been in maintenance mode for 5 years and which Microsoft doesn’t want to maintain anymore. New development still happen in a fork which remains under the stewardship of Microsoft.
+
+Second paragraph of the article by the way, just saying.
+
+reply
+	
+	
+farhaven 3 hours ago | root | parent | next [–]
+
+So Microsoft gave the Wine project the software equivalent of a stained mattress?
+
+reply
+	
+	
+RandomThoughts3 2 hours ago | root | parent | next [–]
+
+The Wine project apparently decided they wanted to keep alive an old version of a piece of software Microsoft has no interest in and Microsoft gave them the official repo instead of throwing it out.
+
+Mostly interesting in that it is a token of goodwill from Microsoft to Wine something which is in line with the current Microsoft view of the OS market but would have been very surprising not that long ago.
+
+reply
+	
+	
+PretzelPirate 2 hours ago | root | parent | prev | next [–]
+
+It's not like Microsoft can force Wine to take the codebase. In order for this to be donated, the Wine project needed to accept it.
+
+reply
+	
+	
+kergonath 2 hours ago | root | parent | prev | next [–]
+
+Pretty much, by the look of it. But we still don’t know everything or what exactly the Wine project has on its metaphorical mind.
+
+reply
+	
+	
+pstrateman 3 hours ago | parent | prev [–]
+
+Yeah if this doesn't come with a substantial endowment it's not a donation.
+
+reply
+	
+	
+rnd0 2 hours ago | root | parent [–]
+
+So ...throwing it over the fence into the neighbor's yard, then?
+
+reply
+	
+	
+ielillo 2 hours ago | root | parent [–]
+
+More like going to the local library with a bunch of old books. It might be worth keeping them, but someone has to sort them out.
+
+reply
+
+
+
+Consider applying for YC's first-ever Fall batch! Applications are open till Aug 27.
+
+Guidelines | FAQ | Lists | API | Security | Legal | Apply to YC | Contact
+
+Search:
