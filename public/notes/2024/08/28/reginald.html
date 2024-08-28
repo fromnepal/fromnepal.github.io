@@ -93,7 +93,7 @@
     <script>
         function calculateReadingTime(text) {
             const wordsPerMinute = 200; // Average reading speed
-            const textLength = text.split(/\s+/).length; // Split by spaces to get word count
+            const textLength = text.trim().split(/\s+/).length; // Split by spaces to get word count
             const readingTimeMinutes = Math.ceil(textLength / wordsPerMinute);
             return readingTimeMinutes;
         }
