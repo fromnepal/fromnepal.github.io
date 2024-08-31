@@ -1,232 +1,929 @@
 PowerShell 7.4.5
-PS C:\Users\kushal> ssh kusfedoravm
-kushal@kusfedoravm's password:
-Last login: Wed Aug 28 05:23:35 2024 from fe80::975c:f636:bfb:5026%eth0
-kushal@kusfedoravm:~$ sudo echo "Current date and time: $(date)"; free -h; df -h; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot;
-[sudo] password for kushal:
-Sorry, try again.
-[sudo] password for kushal:
-Current date and time: Sat Aug 31 05:59:56 AM EDT 2024
-               total        used        free      shared  buff/cache   available
-Mem:           7.7Gi       899Mi       5.5Gi        10Mi       1.7Gi       6.9Gi
-Swap:          7.7Gi          0B       7.7Gi
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda3        31G  4.4G   26G  15% /
-devtmpfs        4.0M     0  4.0M   0% /dev
-tmpfs           3.9G     0  3.9G   0% /dev/shm
-efivarfs        128M  6.8K  128M   1% /sys/firmware/efi/efivars
-tmpfs           1.6G  1.1M  1.6G   1% /run
-tmpfs           3.9G  8.0K  3.9G   1% /tmp
-/dev/sda3        31G  4.4G   26G  15% /home
-/dev/sda2       974M  336M  571M  38% /boot
-/dev/sda1       599M   20M  580M   4% /boot/efi
-tmpfs           794M   88K  794M   1% /run/user/42
-tmpfs           794M   72K  794M   1% /run/user/1000
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.394 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=1.03 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.637 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.503 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.598 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=1.14 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=1.07 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.365 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.313 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.610 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.573 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.511 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=1.28 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.674 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=1.24 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=1.94 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.710 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=1.02 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.449 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=1.54 ms
+PS C:\Users\kushal> date; c:\src\omnibus.ps1; date;
 
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19290ms
-rtt min/avg/max/mdev = 0.313/0.829/1.935/0.423 ms
-
-real    0m19.330s
-user    0m0.001s
-sys     0m0.005s
-PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.485 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.387 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.358 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.412 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.463 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.861 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.400 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.610 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.307 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.432 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.365 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.721 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.667 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.657 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.432 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.487 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.687 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.322 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.585 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.368 ms
-
---- kalimati.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19488ms
-rtt min/avg/max/mdev = 0.307/0.500/0.861/0.150 ms
-
-real    0m22.526s
-user    0m0.003s
-sys     0m0.002s
-PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.394 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.567 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.424 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.359 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.342 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.502 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.472 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.389 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.318 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.491 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.368 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.382 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.901 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.986 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.525 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.356 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.356 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.467 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.320 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.436 ms
-
---- colorado.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19420ms
-rtt min/avg/max/mdev = 0.318/0.467/0.986/0.173 ms
-
-real    0m19.456s
-user    0m0.000s
-sys     0m0.005s
-Current date and time: Sat Aug 31 06:01:08 AM EDT 2024
-Fedora 40 - x86_64                                                                                                                                                                                                                                      762 kB/s |  20 MB     00:26
-Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                                                                                                4.7 kB/s | 1.4 kB     00:00
-Fedora 40 - x86_64 - Updates                                                                                                                                                                                                                            9.5 MB/s | 9.8 MB     00:01
-Last metadata expiration check: 0:00:01 ago on Sat 31 Aug 2024 06:01:40 AM EDT.
-Dependencies resolved.
-========================================================================================================================================================================================================================================================================================
- Package                                                                       Architecture                                                 Version                                                                 Repository                                                     Size
-========================================================================================================================================================================================================================================================================================
-Upgrading:
- bubblewrap                                                                    x86_64                                                       0.10.0-1.fc40                                                           updates                                                        63 k
- containers-common                                                             noarch                                                       5:0.60.1-1.fc40                                                         updates                                                        94 k
- containers-common-extra                                                       noarch                                                       5:0.60.1-1.fc40                                                         updates                                                       7.9 k
- gnome-bluetooth                                                               x86_64                                                       1:46.1-1.fc40                                                           updates                                                        44 k
- gnome-bluetooth-libs                                                          x86_64                                                       1:46.1-1.fc40                                                           updates                                                       287 k
- intel-vpl-gpu-rt                                                              x86_64                                                       24.2.5-1.fc40                                                           updates                                                       2.3 M
- less                                                                          x86_64                                                       643-6.fc40                                                              updates                                                       175 k
- libX11                                                                        x86_64                                                       1.8.10-2.fc40                                                           updates                                                       650 k
- libX11-common                                                                 noarch                                                       1.8.10-2.fc40                                                           updates                                                       176 k
- libX11-xcb                                                                    x86_64                                                       1.8.10-2.fc40                                                           updates                                                        12 k
- libdrm                                                                        x86_64                                                       2.4.123-1.fc40                                                          updates                                                       159 k
- libvpl                                                                        x86_64                                                       1:2.12.0-1.fc40                                                         updates                                                       156 k
- microcode_ctl                                                                 x86_64                                                       2:2.1-61.2.fc40                                                         updates                                                       6.8 M
- python3-boto3                                                                 noarch                                                       1.35.7-1.fc40                                                           updates                                                       387 k
- python3-botocore                                                              noarch                                                       1.35.7-1.fc40                                                           updates                                                       7.2 M
- xen-libs                                                                      x86_64                                                       4.18.2-5.fc40                                                           updates                                                       645 k
- xen-licenses                                                                  x86_64                                                       4.18.2-5.fc40                                                           updates                                                        52 k
-
-Transaction Summary
-========================================================================================================================================================================================================================================================================================
-Upgrade  17 Packages
-
-Total download size: 19 M
-DNF will only download packages, install gpg keys, and check the transaction.
-Downloading Packages:
-(1/17): containers-common-extra-0.60.1-1.fc40.noarch.rpm                                                                                                                                                                                                 62 kB/s | 7.9 kB     00:00
-(2/17): bubblewrap-0.10.0-1.fc40.x86_64.rpm                                                                                                                                                                                                             430 kB/s |  63 kB     00:00
-(3/17): containers-common-0.60.1-1.fc40.noarch.rpm                                                                                                                                                                                                      610 kB/s |  94 kB     00:00
-(4/17): gnome-bluetooth-46.1-1.fc40.x86_64.rpm                                                                                                                                                                                                          771 kB/s |  44 kB     00:00
-(5/17): gnome-bluetooth-libs-46.1-1.fc40.x86_64.rpm                                                                                                                                                                                                     3.6 MB/s | 287 kB     00:00
-(6/17): less-643-6.fc40.x86_64.rpm                                                                                                                                                                                                                      1.4 MB/s | 175 kB     00:00
-(7/17): intel-vpl-gpu-rt-24.2.5-1.fc40.x86_64.rpm                                                                                                                                                                                                        14 MB/s | 2.3 MB     00:00
-(8/17): libX11-1.8.10-2.fc40.x86_64.rpm                                                                                                                                                                                                                 5.9 MB/s | 650 kB     00:00
-(9/17): libX11-xcb-1.8.10-2.fc40.x86_64.rpm                                                                                                                                                                                                             436 kB/s |  12 kB     00:00
-(10/17): libdrm-2.4.123-1.fc40.x86_64.rpm                                                                                                                                                                                                               4.8 MB/s | 159 kB     00:00
-(11/17): libvpl-2.12.0-1.fc40.x86_64.rpm                                                                                                                                                                                                                4.8 MB/s | 156 kB     00:00
-(12/17): libX11-common-1.8.10-2.fc40.noarch.rpm                                                                                                                                                                                                         1.1 MB/s | 176 kB     00:00
-(13/17): python3-boto3-1.35.7-1.fc40.noarch.rpm                                                                                                                                                                                                         1.7 MB/s | 387 kB     00:00
-(14/17): xen-libs-4.18.2-5.fc40.x86_64.rpm                                                                                                                                                                                                              7.7 MB/s | 645 kB     00:00
-(15/17): xen-licenses-4.18.2-5.fc40.x86_64.rpm                                                                                                                                                                                                          1.4 MB/s |  52 kB     00:00
-(16/17): microcode_ctl-2.1-61.2.fc40.x86_64.rpm                                                                                                                                                                                                         9.3 MB/s | 6.8 MB     00:00
-(17/17): python3-botocore-1.35.7-1.fc40.noarch.rpm                                                                                                                                                                                                      2.1 MB/s | 7.2 MB     00:03
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Total                                                                                                                                                                                                                                                   4.8 MB/s |  19 MB     00:04
-Running transaction check
-Transaction check succeeded.
-Running transaction test
-Transaction test succeeded.
-Complete!
-Transaction saved to /var/lib/dnf/system-upgrade/system-upgrade-transaction.json.
-Download complete! Use 'dnf offline-upgrade reboot' to start the upgrade.
-To remove cached metadata and transaction use 'dnf offline-upgrade clean'
-The downloaded packages were saved in cache until the next successful transaction.
-You can remove cached packages by executing 'dnf clean packages'.
-
-real    0m38.958s
-user    0m0.014s
-sys     0m0.016s
-
-Broadcast message from root@kusfedoravm on pts/1 (Sat 2024-08-31 06:01:47 EDT):
-
-The system will reboot now!
-
-Connection to kusfedoravm closed by remote host.
-Connection to kusfedoravm closed.
-PS C:\Users\kushal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
-
-Saturday, August 31, 2024 6:02:21 AM
-Saturday, August 31, 2024 6:02:22 AM
-On branch main
-nothing to commit, working tree clean
-Saturday, August 31, 2024 6:02:22 AM
-Saturday, August 31, 2024 6:02:22 AM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.09s.
-Saturday, August 31, 2024 6:02:22 AM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.4.1 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
-✓ built in 304ms
-Done in 1.84s.
-Saturday, August 31, 2024 6:02:24 AM
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Saturday, August 31, 2024 6:02:26 AM
-[main a1054da] build application
- 2 files changed, 90 insertions(+)
-Saturday, August 31, 2024 6:02:26 AM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Current branch main is up to date.
-Saturday, August 31, 2024 6:02:28 AM
-Enumerating objects: 9, done.
-Counting objects: 100% (9/9), done.
+Saturday, August 31, 2024 5:59:42 AM
+Saturday, August 31, 2024 5:59:42 AM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
 Delta compression using up to 16 threads
-Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 652 bytes | 652.00 KiB/s, done.
-Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   5992b14..a1054da  main -> main
-Saturday, August 31, 2024 6:02:29 AM
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.63 KiB | 2.63 MiB/s, done.
+Total 15 (delta 12), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (12/12), completed with 12 local objects.
+To github.com:kusl/ping5800x2023.git
+   138047d2b46..e547953f779  main -> main
+3.88047741
+Saturday, August 31, 2024 6:03:34 AM
+HTTP/1.1 200 OK
+Date: Sat, 31 Aug 2024 10:03:35 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: 8891816422f01ea5cd12fe35bd4222e8
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
 
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.4146671
+Saturday, August 31, 2024 6:03:35 AM
+Saturday, August 31, 2024 6:03:35 AM
+Saturday, August 31, 2024 6:03:40 AM
+On branch master
+
+It took 60.79 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, August 31, 2024 6:04:42 AM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, August 31, 2024 6:04:46 AM
+Everything up-to-date
+Saturday, August 31, 2024 6:04:46 AM
+Saturday, August 31, 2024 6:04:46 AM
+Saturday, August 31, 2024 6:04:46 AM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.15 KiB | 2.15 MiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   e547953f779..0d01a407a06  main -> main
+3.87741366166667
+Saturday, August 31, 2024 6:08:39 AM
+HTTP/1.1 200 OK
+Date: Sat, 31 Aug 2024 10:08:39 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: e281fd58f98d50fd269df84c086b1aca
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.4009347
+Saturday, August 31, 2024 6:08:39 AM
+Saturday, August 31, 2024 6:08:39 AM
+Saturday, August 31, 2024 6:08:43 AM
+On branch master
+
+It took 3.23 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, August 31, 2024 6:08:47 AM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, August 31, 2024 6:08:51 AM
+Everything up-to-date
+Saturday, August 31, 2024 6:08:51 AM
+Saturday, August 31, 2024 6:08:51 AM
+Saturday, August 31, 2024 6:08:51 AM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.14 KiB | 2.14 MiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   0d01a407a06..01e794de95a  main -> main
+3.88299460833333
+Saturday, August 31, 2024 6:12:44 AM
+HTTP/1.1 200 OK
+Date: Sat, 31 Aug 2024 10:12:45 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: ad59e49ed331ae07e795bbf13de8f352
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.4093803
+Saturday, August 31, 2024 6:12:45 AM
+Saturday, August 31, 2024 6:12:45 AM
+Saturday, August 31, 2024 6:12:48 AM
+On branch master
+
+It took 3.33 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, August 31, 2024 6:12:53 AM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, August 31, 2024 6:12:57 AM
+Everything up-to-date
+Saturday, August 31, 2024 6:12:57 AM
+Saturday, August 31, 2024 6:12:57 AM
+Saturday, August 31, 2024 6:12:57 AM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.18 KiB | 2.18 MiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   01e794de95a..0291fe19d12  main -> main
+3.87906184166667
+Saturday, August 31, 2024 6:16:50 AM
+HTTP/1.1 200 OK
+Date: Sat, 31 Aug 2024 10:16:50 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: 3c97970bc191229eb2779840287d0503
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.3980177
+Saturday, August 31, 2024 6:16:50 AM
+Saturday, August 31, 2024 6:16:50 AM
+Saturday, August 31, 2024 6:16:54 AM
+On branch master
+
+It took 3.21 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, August 31, 2024 6:16:58 AM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, August 31, 2024 6:17:03 AM
+Everything up-to-date
+Saturday, August 31, 2024 6:17:03 AM
+Saturday, August 31, 2024 6:17:03 AM
+Saturday, August 31, 2024 6:17:03 AM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.19 KiB | 2.19 MiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   0291fe19d12..655112103b4  main -> main
+3.87971479833333
+Saturday, August 31, 2024 6:20:56 AM
+HTTP/1.1 200 OK
+Date: Sat, 31 Aug 2024 10:20:56 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: c96d5b9dab187a61f3ff6377e4d40b67
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.3642065
+Saturday, August 31, 2024 6:20:56 AM
+Saturday, August 31, 2024 6:20:56 AM
+Saturday, August 31, 2024 6:21:00 AM
+On branch master
+
+It took 3.13 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, August 31, 2024 6:21:04 AM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, August 31, 2024 6:21:08 AM
+Everything up-to-date
+Saturday, August 31, 2024 6:21:08 AM
+Saturday, August 31, 2024 6:21:08 AM
+Saturday, August 31, 2024 6:21:08 AM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.05 KiB | 2.05 MiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   655112103b4..8483bff1a29  main -> main
+3.88103369333333
+Saturday, August 31, 2024 6:25:01 AM
+HTTP/1.1 200 OK
+Date: Sat, 31 Aug 2024 10:25:01 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: 430c19a3e11134617e1593faadfc1bd4
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.4115847
+Saturday, August 31, 2024 6:25:01 AM
+Saturday, August 31, 2024 6:25:01 AM
+Saturday, August 31, 2024 6:25:05 AM
+On branch master
+
+It took 3.11 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, August 31, 2024 6:25:09 AM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, August 31, 2024 6:25:14 AM
+Everything up-to-date
+Saturday, August 31, 2024 6:25:14 AM
+Saturday, August 31, 2024 6:25:14 AM
+Saturday, August 31, 2024 6:25:14 AM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.11 KiB | 2.11 MiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   8483bff1a29..b49a036f53f  main -> main
+3.87678931666667
+Saturday, August 31, 2024 6:29:06 AM
+HTTP/1.1 200 OK
+Date: Sat, 31 Aug 2024 10:29:07 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: e5dd4844894844b8f6f18bc57e9bd88c
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.4110757
+Saturday, August 31, 2024 6:29:07 AM
+Saturday, August 31, 2024 6:29:07 AM
+Saturday, August 31, 2024 6:29:10 AM
+On branch master
+
+It took 3.24 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, August 31, 2024 6:29:15 AM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, August 31, 2024 6:29:19 AM
+Everything up-to-date
+Saturday, August 31, 2024 6:29:19 AM
+Saturday, August 31, 2024 6:29:19 AM
+Saturday, August 31, 2024 6:29:19 AM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.21 KiB | 2.21 MiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   b49a036f53f..dc7fc81a4e7  main -> main
+3.87833180666667
+Saturday, August 31, 2024 6:33:12 AM
+HTTP/1.1 200 OK
+Date: Sat, 31 Aug 2024 10:33:12 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: 6432174dd3ecb0992c0fc960e8df3abd
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.4412071
+Saturday, August 31, 2024 6:33:12 AM
+Saturday, August 31, 2024 6:33:12 AM
+Saturday, August 31, 2024 6:33:16 AM
+On branch master
+
+It took 3.09 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, August 31, 2024 6:33:20 AM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, August 31, 2024 6:33:24 AM
+Everything up-to-date
+Saturday, August 31, 2024 6:33:24 AM
+Saturday, August 31, 2024 6:33:24 AM
+Saturday, August 31, 2024 6:33:24 AM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.18 KiB | 2.18 MiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   dc7fc81a4e7..740f5a1aed1  main -> main
+3.87907750666667
+Saturday, August 31, 2024 6:37:17 AM
+HTTP/1.1 200 OK
+Date: Sat, 31 Aug 2024 10:37:17 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: c32adf6a940e479c2fbc074964a58a18
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.3771286
+Saturday, August 31, 2024 6:37:17 AM
+Saturday, August 31, 2024 6:37:17 AM
+Saturday, August 31, 2024 6:37:21 AM
+On branch master
+
+It took 3.07 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, August 31, 2024 6:37:25 AM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, August 31, 2024 6:37:29 AM
+Everything up-to-date
+Saturday, August 31, 2024 6:37:29 AM
+Saturday, August 31, 2024 6:37:29 AM
+Saturday, August 31, 2024 6:37:29 AM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.13 KiB | 2.13 MiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   740f5a1aed1..a55cf4d54b3  main -> main
+3.88003193666667
+Saturday, August 31, 2024 6:41:22 AM
+HTTP/1.1 200 OK
+Date: Sat, 31 Aug 2024 10:41:23 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: 20b728b9800c27afb4fa86a0903d967e
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.3814536
+Saturday, August 31, 2024 6:41:23 AM
+Saturday, August 31, 2024 6:41:23 AM
+Saturday, August 31, 2024 6:41:26 AM
+On branch master
+
+It took 3.01 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, August 31, 2024 6:41:30 AM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, August 31, 2024 6:41:34 AM
+Everything up-to-date
+Saturday, August 31, 2024 6:41:35 AM
+Saturday, August 31, 2024 6:41:35 AM
+Saturday, August 31, 2024 6:41:35 AM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.10 KiB | 2.10 MiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   a55cf4d54b3..c255771c6f1  main -> main
+3.87883517666667
+Saturday, August 31, 2024 6:45:27 AM
+HTTP/1.1 200 OK
+Date: Sat, 31 Aug 2024 10:45:28 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: 3242071ef426e4f09589b3b3d94f3e53
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.3741673
+Saturday, August 31, 2024 6:45:28 AM
+Saturday, August 31, 2024 6:45:28 AM
+Saturday, August 31, 2024 6:45:31 AM
+On branch master
+
+It took 3.06 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, August 31, 2024 6:45:36 AM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, August 31, 2024 6:45:40 AM
+Everything up-to-date
+Saturday, August 31, 2024 6:45:40 AM
+Saturday, August 31, 2024 6:45:40 AM
+Saturday, August 31, 2024 6:45:40 AM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.09 KiB | 2.09 MiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   c255771c6f1..b2935832eaa  main -> main
+3.87834023833333
+Saturday, August 31, 2024 6:49:33 AM
+HTTP/1.1 200 OK
+Date: Sat, 31 Aug 2024 10:49:33 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: f10d8142076da66a1caa53bc72aed183
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.3751636
+Saturday, August 31, 2024 6:49:33 AM
+Saturday, August 31, 2024 6:49:33 AM
+Saturday, August 31, 2024 6:49:36 AM
+On branch master
+
+It took 2.99 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, August 31, 2024 6:49:41 AM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, August 31, 2024 6:49:45 AM
+Everything up-to-date
+Saturday, August 31, 2024 6:49:45 AM
+Saturday, August 31, 2024 6:49:45 AM
+Saturday, August 31, 2024 6:49:45 AM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.15 KiB | 2.15 MiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   b2935832eaa..0e97d068918  main -> main
+3.88117989833333
+Saturday, August 31, 2024 6:53:38 AM
+HTTP/1.1 200 OK
+Date: Sat, 31 Aug 2024 10:53:38 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: 27074c41035b442b0c30f012800b8525
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.3665404
+Saturday, August 31, 2024 6:53:38 AM
+Saturday, August 31, 2024 6:53:38 AM
+Saturday, August 31, 2024 6:53:42 AM
+On branch master
+
+It took 3.03 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, August 31, 2024 6:53:46 AM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, August 31, 2024 6:53:50 AM
+Everything up-to-date
+Saturday, August 31, 2024 6:53:50 AM
+Saturday, August 31, 2024 6:53:50 AM
+Saturday, August 31, 2024 6:53:50 AM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.21 KiB | 2.21 MiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   0e97d068918..781b3c1cc9a  main -> main
+3.87896581333333
+Saturday, August 31, 2024 6:57:43 AM
+HTTP/1.1 200 OK
+Date: Sat, 31 Aug 2024 10:57:43 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: 3f3315406e453e3ffed8f30a183df41a
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.3669274
+Saturday, August 31, 2024 6:57:43 AM
+Saturday, August 31, 2024 6:57:43 AM
+Saturday, August 31, 2024 6:57:47 AM
+On branch master
+
+It took 3.05 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, August 31, 2024 6:57:51 AM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, August 31, 2024 6:57:55 AM
+Everything up-to-date
+Saturday, August 31, 2024 6:57:55 AM
+Saturday, August 31, 2024 6:57:55 AM
+Saturday, August 31, 2024 6:57:55 AM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.12 KiB | 2.12 MiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   781b3c1cc9a..1d7be4a96bc  main -> main
+3.87757940666667
+Saturday, August 31, 2024 7:01:48 AM
+HTTP/1.1 200 OK
+Date: Sat, 31 Aug 2024 11:01:48 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: da4bef93fcd8f4af317c9b037f0ec2ce
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.3876465
+Saturday, August 31, 2024 7:01:48 AM
+Saturday, August 31, 2024 7:01:48 AM
+Saturday, August 31, 2024 7:01:52 AM
+On branch master
+
+It took 3.00 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, August 31, 2024 7:01:56 AM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, August 31, 2024 7:02:00 AM
+Everything up-to-date
+Saturday, August 31, 2024 7:02:00 AM
+Saturday, August 31, 2024 7:02:00 AM
+Saturday, August 31, 2024 7:02:00 AM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
