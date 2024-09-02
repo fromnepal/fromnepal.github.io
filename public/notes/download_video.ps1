@@ -11,8 +11,27 @@ $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1
 date;
 $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1
 date;
+
+# Function to clean file names
+function Clean-FileName {
+    param (
+        [string]$fileName
+    )
+    return $fileName -replace '[^A-Za-z0-9]', ''
+}
+
 if ($subtitleFile) {
     $subtitlePath = $subtitleFile.FullName
+    $cleanSubtitlePath = Clean-FileName -fileName $subtitlePath
+    Rename-Item -Path $subtitlePath -NewName $cleanSubtitlePath
+    $subtitlePath = $cleanSubtitlePath
+}
+
+$cleanVideoPath = Clean-FileName -fileName $videoFile.FullName
+Rename-Item -Path $videoFile.FullName -NewName $cleanVideoPath
+$videoFile = Get-Item -Path $cleanVideoPath
+
+if ($subtitleFile) {
     ffmpeg -loglevel debug -i "$($videoFile.FullName)" -vf "subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4"
 } else {
     ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4"
