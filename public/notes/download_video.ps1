@@ -22,12 +22,14 @@ function Clean-FileName {
 
 if ($subtitleFile) {
     $subtitlePath = $subtitleFile.FullName
-    $cleanSubtitlePath = Join-Path -Path $tempDir -ChildPath (Clean-FileName -fileName $subtitleFile.Name)
+    $cleanSubtitleName = Clean-FileName -fileName $subtitleFile.Name
+    $cleanSubtitlePath = Join-Path -Path $tempDir -ChildPath $cleanSubtitleName
     Rename-Item -Path $subtitlePath -NewName $cleanSubtitlePath
     $subtitlePath = $cleanSubtitlePath
 }
 
-$cleanVideoPath = Join-Path -Path $tempDir -ChildPath (Clean-FileName -fileName $videoFile.Name)
+$cleanVideoName = Clean-FileName -fileName $videoFile.Name
+$cleanVideoPath = Join-Path -Path $tempDir -ChildPath $cleanVideoName
 Rename-Item -Path $videoFile.FullName -NewName $cleanVideoPath
 $videoFile = Get-Item -Path $cleanVideoPath
 
