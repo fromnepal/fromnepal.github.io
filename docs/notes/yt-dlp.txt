@@ -306,3 +306,427 @@ if ($subtitleFile) {
 
 Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"
 Remove-Item -Path $tempDir -Recurse -Force
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+needs more debugging? 
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_video.ps1  -url "https://youtu.be/VURjP8ql4BE"
+
+Monday, September 2, 2024 3:15:22 PM
+
+PSPath              : Microsoft.PowerShell.Core\FileSystem::C:\Temp\yt-dlp
+PSParentPath        : Microsoft.PowerShell.Core\FileSystem::C:\Temp
+PSChildName         : yt-dlp
+PSDrive             : C
+PSProvider          : Microsoft.PowerShell.Core\FileSystem
+PSIsContainer       : True
+Name                : yt-dlp
+Parent              : C:\Temp
+Root                : C:\
+Exists              : True
+FullName            : C:\Temp\yt-dlp
+Extension           :
+CreationTime        : 9/2/2024 3:15:22 PM
+CreationTimeUtc     : 9/2/2024 7:15:22 PM
+LastAccessTime      : 9/2/2024 3:15:22 PM
+LastAccessTimeUtc   : 9/2/2024 7:15:22 PM
+LastWriteTime       : 9/2/2024 3:15:22 PM
+LastWriteTimeUtc    : 9/2/2024 7:15:22 PM
+LinkTarget          :
+UnixFileMode        : -1
+Attributes          : Directory
+Mode                : d----
+ModeWithoutHardLink : d----
+BaseName            : yt-dlp
+ResolvedTarget      : C:\Temp\yt-dlp
+Target              :
+LinkType            :
+
+Monday, September 2, 2024 3:15:22 PM
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(id)s.%(ext)s', 'https://youtu.be/VURjP8ql4BE']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://youtu.be/VURjP8ql4BE
+[youtube] VURjP8ql4BE: Downloading webpage
+[youtube] VURjP8ql4BE: Downloading ios player API JSON
+[youtube] VURjP8ql4BE: Downloading web creator player API JSON
+[debug] [youtube] Extracting signature function js_57c75fa4_111
+[debug] Loading youtube-sigfuncs.js_57c75fa4_111 from cache
+[debug] Loading youtube-nsig.57c75fa4 from cache
+[debug] [youtube] Decrypted nsig Kt1YwiibI6IeUHF => jGPW6btETSc5eA
+[youtube] VURjP8ql4BE: Downloading m3u8 information
+[info] VURjP8ql4BE: Downloading subtitles: en
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/3bcc?service=YouTube&categories=%5B%22filler%22%2C+%22sponsor%22%2C+%22preview%22%2C+%22music_offtopic%22%2C+%22selfpromo%22%2C+%22interaction%22%2C+%22chapter%22%2C+%22intro%22%2C+%22outro%22%2C+%22poi_highlight%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+[SponsorBlock] No matching segments were found in the SponsorBlock database
+[info] VURjP8ql4BE: Downloading 1 format(s): 614+140
+[info] Writing video subtitles to: C:\Temp\yt-dlp\VURjP8ql4BE.en.vtt
+[debug] Invoking http downloader on "https://www.youtube.com/api/timedtext?v=VURjP8ql4BE&ei=zQ7WZvKuKom0kucPkfX6kAg&caps=asr&opi=112496729&exp=xbt&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1725329725&sparams=ip%2Cipbits%2Cexpire%2Cv%2Cei%2Ccaps%2Copi%2Cexp%2Cxoaf&signature=6A168DEC966266DEC508EEF877F5F59231D7878A.81F774AD7D6548E345FF78DC103BFD70EBF4DE90&key=yt8&lang=en&fmt=vtt"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\VURjP8ql4BE.en.vtt
+[download] 100% of    1.55KiB in 00:00:00 at 35.79KiB/s
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1725326125/ei/zQ7WZsynJPq1kucP_Jb_oAE/ip/70.104.195.206/id/5544633fcaa5e011/itag/614/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D21323308%3Bdur%3D164.831%3Bgir%3Dyes%3Bitag%3D248%3Blmt%3D1630513256195731/rqh/1/hls_chunk_host/rr1---sn-8xgp1vo-gpje.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/mh/PC/mm/31,29/mn/sn-8xgp1vo-gpje,sn-8xgp1vo-p5qe/ms/au,rdu/mv/m/mvi/1/pcm2cms/yes/pl/20/initcwndbps/1098750/vprv/1/playlist_type/DVR/dover/13/txp/5432434/mt/1725304148/fvip/6/short_key/1/keepalive/yes/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,vprv,playlist_type/sig/AJfQdSswRQIgDTsNkyEDK6HHVGo1vsq9UO0Y7lVPZx9TE1uEcDdgTCwCIQDUVv1ct67ySAGUcWMpWX1Rikd_pKk5OqTsSrHBtFeJFQ%3D%3D/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,initcwndbps/lsig/ABPmVW0wRQIgea32nYAzb1kPD8gAkDXz_VcF_hTvUwTIAEenbqJCxPsCIQCYmTGeAo8cziv3uMJi4EYHIQEsoRfY1wqdECWdoNzweg%3D%3D/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 32
+[download] Destination: C:\Temp\yt-dlp\VURjP8ql4BE.f614.mp4
+[download] 100% of   20.36MiB in 00:00:02 at 9.64MiB/s
+[debug] Invoking http downloader on "https://rr1---sn-8xgp1vo-gpje.googlevideo.com/videoplayback?expire=1725326125&ei=zQ7WZsynJPq1kucP_Jb_oAE&ip=70.104.195.206&id=o-AMbAuIdAXhxHrQoNX8tSVdUGLpyI4UEc3otzc0sx_Tmp&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=PC&mm=31%2C29&mn=sn-8xgp1vo-gpje%2Csn-8xgp1vo-p5qe&ms=au%2Crdu&mv=m&mvi=1&pcm2cms=yes&pl=20&initcwndbps=1098750&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=2669949&dur=164.931&lmt=1630511535271639&mt=1725304148&fvip=6&keepalive=yes&c=IOS&txp=5432434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRgIhALPLuTayTy_9XCckY7GV95JobbPcc5ACmkhpnG0ZXrbmAiEAhItjBGbhZ_ef5ohl3fJvDLJAusGsghVkLRcvMvdWUC8%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Cinitcwndbps&lsig=ABPmVW0wRAIgcYuMl5hZ1Rif4DOPBAT0RiWVx9Dz1RDeNIZLP2YPiPMCIHTECNqG8p-1YhrPorM00ACAsurkEICyB7fNRH1ciZ_w"
+[download] Destination: C:\Temp\yt-dlp\VURjP8ql4BE.f140.m4a
+[download] 100% of    2.55MiB in 00:00:00 at 19.09MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\VURjP8ql4BE.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\VURjP8ql4BE.f614.mp4 -i file:C:\Temp\yt-dlp\VURjP8ql4BE.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\VURjP8ql4BE.temp.mp4
+Deleting original file C:\Temp\yt-dlp\VURjP8ql4BE.f614.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\VURjP8ql4BE.f140.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\VURjP8ql4BE.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\VURjP8ql4BE.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=트와이스 (TWICE) TZUYU \"A Little Happiness 小幸运\" with Lyrics" -metadata "date=20210301" -metadata "description=Music & Video edited by Brian Cheong
+Source: vlive.tv/post/1-21563581
+_________________________________________________
+On 28th Feb, Tzuyu sang  \"A Little Happiness\" during her VLIVE live 😍
+Instrumental music is added 🎵 Hope you guys like it 💕
+
+210228 子瑜在VLIVE清唱了 《小幸运》 🍀
+加了背景音乐的版本 🎶 希望大家会喜欢 ❤️
+_________________________________________________
+#TWICE​ #TZUYU​ #小幸运 #ALittleHappiness #Cover #VLIVE" -metadata "synopsis=Music & Video edited by Brian Cheong
+Source: vlive.tv/post/1-21563581
+_________________________________________________
+On 28th Feb, Tzuyu sang  \"A Little Happiness\" during her VLIVE live 😍
+Instrumental music is added 🎵 Hope you guys like it 💕
+
+210228 子瑜在VLIVE清唱了 《小幸运》 🍀
+加了背景音乐的版本 🎶 希望大家会喜欢 ❤️
+_________________________________________________
+#TWICE​ #TZUYU​ #小幸运 #ALittleHappiness #Cover #VLIVE" -metadata "purl=https://www.youtube.com/watch?v=VURjP8ql4BE" -metadata "comment=https://www.youtube.com/watch?v=VURjP8ql4BE" -metadata "artist=Brian Cheong" -movflags +faststart file:C:\Temp\yt-dlp\VURjP8ql4BE.temp.mp4
+Monday, September 2, 2024 3:15:29 PM
+Monday, September 2, 2024 3:15:29 PM
+Monday, September 2, 2024 3:15:29 PM
+
+LastWriteTime : 9/2/2024 3:15:27 PM
+Length        : 1584
+Name          : VURjP8ql4BE.en.vtt
+
+
+LastWriteTime : 9/1/2021 11:52:15 AM
+Length        : 24097623
+Name          : VURjP8ql4BE.mp4
+
+
+LastWriteTime : 9/2/2024 3:15:27 PM
+Length        : 1584
+Name          : VURjP8ql4BE.en.vtt
+
+
+LastWriteTime : 9/1/2021 11:52:15 AM
+Length        : 24097623
+Name          : VURjP8ql4BE.mp4
+
+
+LastWriteTime : 9/1/2021 11:52:15 AM
+Length        : 24097623
+Name          : VURjP8ql4BE.mp4
+
+
+LastWriteTime : 9/2/2024 3:15:27 PM
+Length        : 1584
+Name          : VURjP8ql4BE.en.vtt
+
+Cleaned subtitle path: C:\Temp\yt-dlp\VURjP8ql4BEenvtt
+Cleaned video name: VURjP8ql4BEmp4
+Cleaned video path: C:\Temp\yt-dlp\VURjP8ql4BEmp4
+Running ffmpeg with subtitles
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Splitting the commandline.
+Reading option '-loglevel' ... matched as option 'loglevel' (set logging level) with argument 'debug'.
+Reading option '-i' ... matched as input url with argument 'C:\Temp\yt-dlp\VURjP8ql4BEmp4'.
+Reading option '-vf' ... matched as option 'vf' (alias for -filter:v (apply filters to video streams)) with argument 'subtitles=\'.
+Reading option 'C:\Temp\yt-dlp\VURjP8ql4BEenvtt\:force_style='FontName=Arial,FontSize=24'' ... matched as output url.
+Reading option '-c:v' ... matched as option 'c' (select encoder/decoder ('copy' to copy stream without reencoding)) with argument 'libx264'.
+Reading option '-c:a' ... matched as option 'c' (select encoder/decoder ('copy' to copy stream without reencoding)) with argument 'aac'.
+Reading option '-strict' ...Routing option strict to both codec and muxer layer
+ matched as AVOption 'strict' with argument 'experimental'.
+Reading option '-movflags' ... matched as AVOption 'movflags' with argument '+faststart'.
+Reading option 'C:\Temp\yt-dlp\VURjP8ql4BEmp4_reencoded.mp4' ... matched as output url.
+Finished splitting the commandline.
+Parsing a group of options: global .
+Applying option loglevel (set logging level) with argument debug.
+Successfully parsed a group of options.
+Parsing a group of options: input url C:\Temp\yt-dlp\VURjP8ql4BEmp4.
+Successfully parsed a group of options.
+Opening an input file: C:\Temp\yt-dlp\VURjP8ql4BEmp4.
+[AVFormatContext @ 0000023d1c021540] Opening 'C:\Temp\yt-dlp\VURjP8ql4BEmp4' for reading
+[file @ 0000023d1c022380] Setting default whitelist 'file,crypto,data'
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000023d1c021540] Format mov,mp4,m4a,3gp,3g2,mj2 probed with size=2048 and score=100
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000023d1c021540] ISO: File Type Major Brand: isom
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000023d1c021540] Unknown dref type 0x206c7275 size 12
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000023d1c021540] Processing st: 0, edit list 0 - media time: 0, duration: 2637312
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000023d1c021540] Unknown dref type 0x206c7275 size 12
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000023d1c021540] Processing st: 1, edit list 0 - media time: 0, duration: 7273501
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000023d1c021540] rfps: 29.833333 0.016672
+    Last message repeated 1 times
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000023d1c021540] rfps: 29.916667 0.002592
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000023d1c021540] rfps: 29.916667 0.018902
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000023d1c021540] rfps: 30.000000 0.000887
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000023d1c021540] rfps: 60.000000 0.003547
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000023d1c021540] rfps: 120.000000 0.014188
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000023d1c021540] rfps: 29.970030 0.000075
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000023d1c021540] rfps: 59.940060 0.000300
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000023d1c021540] Before avformat_find_stream_info() pos: 171299 bytes read:196608 seeks:0 nb_streams:2
+Transform tree:
+    mdct_inv_float_avx2 - type: mdct_float, len: 64, factors[2]: [2, any], flags: [aligned, out_of_place, inv_only]
+        fft32_asm_float_fma3 - type: fft_float, len: 32, factor: 2, flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+Transform tree:
+    mdct_inv_float_avx2 - type: mdct_float, len: 64, factors[2]: [2, any], flags: [aligned, out_of_place, inv_only]
+        fft32_asm_float_fma3 - type: fft_float, len: 32, factor: 2, flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+Transform tree:
+    mdct_inv_float_avx2 - type: mdct_float, len: 120, factors[2]: [2, any], flags: [aligned, out_of_place, inv_only]
+        fft_pfa_15xM_asm_float_avx2 - type: fft_float, len: 60, factors[2]: [15, 2], flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+            fft4_fwd_asm_float_sse2 - type: fft_float, len: 4, factor: 2, flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+Transform tree:
+    mdct_inv_float_avx2 - type: mdct_float, len: 128, factors[2]: [2, any], flags: [aligned, out_of_place, inv_only]
+        fft_sr_asm_float_fma3 - type: fft_float, len: 64, factor: 2, flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+Transform tree:
+    mdct_inv_float_avx2 - type: mdct_float, len: 480, factors[2]: [2, any], flags: [aligned, out_of_place, inv_only]
+        fft_pfa_15xM_asm_float_avx2 - type: fft_float, len: 240, factors[2]: [15, 2], flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+            fft16_asm_float_fma3 - type: fft_float, len: 16, factor: 2, flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+Transform tree:
+    mdct_inv_float_avx2 - type: mdct_float, len: 512, factors[2]: [2, any], flags: [aligned, out_of_place, inv_only]
+        fft_sr_asm_float_fma3 - type: fft_float, len: 256, factor: 2, flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+Transform tree:
+    mdct_inv_float_avx2 - type: mdct_float, len: 960, factors[2]: [2, any], flags: [aligned, out_of_place, inv_only]
+        fft_pfa_15xM_asm_float_avx2 - type: fft_float, len: 480, factors[2]: [15, 2], flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+            fft32_asm_float_fma3 - type: fft_float, len: 32, factor: 2, flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+Transform tree:
+    mdct_inv_float_avx2 - type: mdct_float, len: 1024, factors[2]: [2, any], flags: [aligned, out_of_place, inv_only]
+        fft_sr_asm_float_fma3 - type: fft_float, len: 512, factor: 2, flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+Transform tree:
+    mdct_fwd_float_c - type: mdct_float, len: 1024, factors[2]: [2, any], flags: [unaligned, out_of_place, fwd_only]
+        fft_sr_ns_float_fma3 - type: fft_float, len: 512, factor: 2, flags: [aligned, inplace, out_of_place, preshuf]
+[vp9 @ 0000023d1c035280] Format yuv420p chosen by get_format().
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000023d1c021540] All info found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000023d1c021540] After avformat_find_stream_info() pos: 204803 bytes read:229376 seeks:0 frames:2
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\VURjP8ql4BEmp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : 트와이스 (TWICE) TZUYU "A Little Happiness 小幸运" with Lyrics
+    artist          : Brian Cheong
+    date            : 20210301
+    encoder         : Lavf61.1.100
+    comment         : https://www.youtube.com/watch?v=VURjP8ql4BE
+    description     : Music & Video edited by Brian Cheong
+                    : Source: vlive.tv/post/1-21563581
+                    : _________________________________________________
+                    : On 28th Feb, Tzuyu sang  "A Little Happiness" during her VLIVE live 😍
+                    : Instrumental music is added 🎵 Hope you guys like it 💕
+                    :
+                    : 210228 子瑜在VLIVE清唱了 《小幸运》 🍀
+                    : 加了背景音乐的版本 🎶 希望大家会喜欢 ❤️
+                    : _________________________________________________
+                    : #TWICE​ #TZUYU​ #小幸运 #ALittleHappiness #Cover #VLIVE
+    synopsis        : Music & Video edited by Brian Cheong
+                    : Source: vlive.tv/post/1-21563581
+                    : _________________________________________________
+                    : On 28th Feb, Tzuyu sang  "A Little Happiness" during her VLIVE live 😍
+                    : Instrumental music is added 🎵 Hope you guys like it 💕
+                    :
+                    : 210228 子瑜在VLIVE清唱了 《小幸运》 🍀
+                    : 加了背景音乐的版本 🎶 希望大家会喜欢 ❤️
+                    : _________________________________________________
+                    : #TWICE​ #TZUYU​ #小幸运 #ALittleHappiness #Cover #VLIVE
+  Duration: 00:02:44.93, start: 0.000000, bitrate: 1168 kb/s
+  Stream #0:0[0x1](und), 1, 1/16000: Video: vp9 (Profile 0), 1 reference frame (vp09 / 0x39307076), yuv420p(tv, bt709), 1920x1080, 0/1, 1033 kb/s, 29.97 fps, 29.97 tbr, 16k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 09/02/2024.
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und), 1, 1/44100: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 127 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+Successfully opened the file.
+Parsing a group of options: output url C:\Temp\yt-dlp\VURjP8ql4BEenvtt\:force_style='FontName=Arial,FontSize=24'.
+Applying option vf (alias for -filter:v (apply filters to video streams)) with argument subtitles=\.
+Successfully parsed a group of options.
+Opening an output file: C:\Temp\yt-dlp\VURjP8ql4BEenvtt\:force_style='FontName=Arial,FontSize=24'.
+[AVFormatContext @ 0000023d1c4acb40] Unable to choose an output format for 'C:\Temp\yt-dlp\VURjP8ql4BEenvtt\:force_style='FontName=Arial,FontSize=24''; use a standard extension for the filename or specify the format manually.
+[out#0 @ 0000023d1c52a480] Error initializing the muxer for C:\Temp\yt-dlp\VURjP8ql4BEenvtt\:force_style='FontName=Arial,FontSize=24': Invalid argument
+Error opening output file C:\Temp\yt-dlp\VURjP8ql4BEenvtt\:force_style='FontName=Arial,FontSize=24'.
+Error opening output files: Invalid argument
+[AVIOContext @ 0000023d1c0225c0] Statistics: 229376 bytes read, 0 seeks
+Monday, September 2, 2024 3:15:29 PM
+Move-Item: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_video.ps1:52
+Line |
+  52 |  Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Dest …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Cannot find path 'C:\Temp\yt-dlp\VURjP8ql4BEmp4_reencoded.mp4' because it does not exist.
+Monday, September 2, 2024 3:15:29 PM
+Monday, September 2, 2024 3:15:29 PM
+
+context 
+
+param (
+    [string]$url
+)
+
+$tempDir = "C:\Temp\yt-dlp"
+date;
+New-Item -ItemType Directory -Path $tempDir -Force
+dir $tempDir
+date;
+yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(id)s.%(ext)s" $url
+date;
+$videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1
+date;
+$subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1
+date;
+dir $tempDir;
+ls $tempDir;
+$videoFile;
+$subtitleFile;
+# Function to clean file names
+function Clean-FileName {
+    param (
+        [string]$fileName
+    )
+    return $fileName -replace '[^A-Za-z0-9]', ''
+}
+
+if ($subtitleFile) {
+    $subtitlePath = $subtitleFile.FullName
+    $cleanSubtitleName = Clean-FileName -fileName $subtitleFile.Name
+    $cleanSubtitlePath = Join-Path -Path $tempDir -ChildPath $cleanSubtitleName
+    Rename-Item -Path $subtitlePath -NewName $cleanSubtitlePath
+    $subtitlePath = $cleanSubtitlePath
+    echo "Cleaned subtitle path: $subtitlePath"
+}
+
+$cleanVideoName = Clean-FileName -fileName $videoFile.Name
+echo "Cleaned video name: $cleanVideoName"
+$cleanVideoPath = Join-Path -Path $tempDir -ChildPath $cleanVideoName
+Rename-Item -Path $videoFile.FullName -NewName $cleanVideoPath
+$videoFile = Get-Item -Path $cleanVideoPath
+echo "Cleaned video path: $($videoFile.FullName)"
+
+if ($subtitleFile) {
+    echo "Running ffmpeg with subtitles"
+    ffmpeg -loglevel debug -i "$($videoFile.FullName)" -vf "subtitles=\"$subtitlePath\":force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4"
+} else {
+    echo "Running ffmpeg without subtitles"
+    ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4"
+}
+date;
+Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"
+date;
+Remove-Item -Path $tempDir -Recurse -Force
+date;
+
