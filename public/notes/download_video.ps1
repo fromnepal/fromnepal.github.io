@@ -48,7 +48,9 @@ if ($subtitleFile) {
     Invoke-Expression $ffmpegCommand
 } else {
     echo "Running ffmpeg without subtitles"
-    ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4"
+    $ffmpegCommand = "ffmpeg -i `"$($videoFile.FullName)`" -c:v libx264 -c:a aac -strict experimental -movflags +faststart `"$tempDir\$($videoFile.BaseName)_reencoded.mp4`""
+    echo $ffmpegCommand
+    Invoke-Expression $ffmpegCommand
 }
 date;
 Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"
