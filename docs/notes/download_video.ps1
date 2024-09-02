@@ -43,7 +43,9 @@ echo "Cleaned video path: $($videoFile.FullName)"
 
 if ($subtitleFile) {
     echo "Running ffmpeg with subtitles"
-    ffmpeg -loglevel debug -i "$($videoFile.FullName)" -vf "subtitles=\"$subtitlePath\":force_style='FontName=Arial,FontSize=24'" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4"
+    $ffmpegCommand = "ffmpeg -loglevel debug -i `"$($videoFile.FullName)`" -vf `""subtitles='$subtitlePath':force_style='FontName=Arial,FontSize=24'`" -c:v libx264 -c:a aac -strict experimental -movflags +faststart `"$tempDir\$($videoFile.BaseName)_reencoded.mp4`""
+    echo $ffmpegCommand
+    Invoke-Expression $ffmpegCommand
 } else {
     echo "Running ffmpeg without subtitles"
     ffmpeg -i "$($videoFile.FullName)" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "$tempDir\$($videoFile.BaseName)_reencoded.mp4"
