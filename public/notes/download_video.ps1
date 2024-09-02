@@ -5,13 +5,18 @@ param (
 $tempDir = "C:\Temp\yt-dlp"
 date;
 New-Item -ItemType Directory -Path $tempDir -Force
+dir $tempDir
+date;
 yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(id)s.%(ext)s" $url
 date;
 $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1
 date;
 $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1
 date;
-
+dir $tempDir;
+ls $tempDir;
+$videoFile;
+$subtitleFile;
 # Function to clean file names
 function Clean-FileName {
     param (
