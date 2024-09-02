@@ -34,6 +34,7 @@ if ($subtitleFile) {
 }
 
 $cleanVideoName = Clean-FileName -fileName $videoFile.Name
+echo $cleanVideoName
 $cleanVideoPath = Join-Path -Path $tempDir -ChildPath $cleanVideoName
 Rename-Item -Path $videoFile.FullName -NewName $cleanVideoPath
 $videoFile = Get-Item -Path $cleanVideoPath
