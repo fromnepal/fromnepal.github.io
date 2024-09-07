@@ -730,3 +730,4 @@ date;
 Remove-Item -Path $tempDir -Recurse -Force
 date;
 
+date; ffmpeg -loglevel verbose -i "C:\Users\kushal\Videos\20240822174505_001589F.MP4" -vf "nnedi=weights='C:\Users\kushal\Videos\nnedi3_weights.bin':nsize=32:nns=4:qual=2:etype=0:pscrn=2,scale=3840:2160:flags=lanczos" -c:v libx264 -preset veryslow -crf 11 "C:\Users\kushal\Videos\daytime_dashcam_crf11_nnedi3.mp4"; date;
