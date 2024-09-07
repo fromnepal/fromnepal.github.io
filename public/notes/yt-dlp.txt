@@ -776,3 +776,157 @@ Error opening output files: Invalid argument
 [AVIOContext @ 000001a13df22c80] Statistics: 599633 bytes read, 2 seeks
 Friday, September 6, 2024 8:01:23 PM
 
+date; ffmpeg -loglevel verbose -i "C:\Users\kushal\Videos\20240822174505_001589F.MP4" -vf "nnedi=weights='C\\:\\\\Users\\\\kushal\\\\Videos\\\\nnedi3_weights.bin':nsize=32:nns=4:qual=2:etype=0:pscrn=2,scale=3840:2160:flags=lanczos" -c:v libx264 -preset veryslow -crf 11 "C:\Users\kushal\Videos\daytime_dashcam_crf11_nnedi3.mp4"; date;
+
+PS C:\Users\kushal\src\myhtml\fromnepal> date; ffmpeg -loglevel verbose -i "C:\Users\kushal\Videos\20240822174505_001589F.MP4" -vf "nnedi=weights='C\\:\\\\Users\\\\kushal\\\\Videos\\\\nnedi3_weights.bin':nsize=32:nns=4:qual=2:etype=0:pscrn=2,scale=3840:2160:flags=lanczos" -c:v libx264 -preset veryslow -crf 11 "C:\Users\kushal\Videos\daytime_dashcam_crf11_nnedi3.mp4"; date;
+
+Friday, September 6, 2024 8:02:38 PM
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+[h264 @ 0000015d58f85cc0] Reinit context to 2560x1600, pix_fmt: yuvj420p
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Users\kushal\Videos\20240822174505_001589F.MP4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: isomavc1mp42
+    creation_time   : 2024-08-22T17:55:04.000000Z
+  Duration: 00:10:00.00, start: 0.000000, bitrate: 29838 kb/s
+  Stream #0:0[0x1](eng): Video: h264 (High), 1 reference frame (avc1 / 0x31637661), yuvj420p(pc, bt709, progressive, left), 2560x1600, 29491 kb/s, 30 fps, 30 tbr, 92400 tbn (default)
+      Metadata:
+        creation_time   : 2024-08-22T17:55:04.000000Z
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : h264
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 32000 Hz, mono, fltp, 96 kb/s (default)
+      Metadata:
+        creation_time   : 2024-08-22T17:55:04.000000Z
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+[out#0/mp4 @ 0000015d5a04f2c0] No explicit maps, mapping streams automatically...
+[vost#0:0/libx264 @ 0000015d5956ed40] Created video stream from input stream 0:0
+[Parsed_nnedi_0 @ 0000015d58f769c0] [Eval @ 00000015103fd370] Undefined constant or missing '(' in '\\Users\\kushal\\Videos\\nnedi3_weights.bin'
+[Parsed_nnedi_0 @ 0000015d58f769c0] Unable to parse option value "\\Users\\kushal\\Videos\\nnedi3_weights.bin"
+Error applying option 'deint' to filter 'nnedi': Invalid argument
+[vost#0:0/libx264 @ 0000015d5956ed40] Error initializing a simple filtergraph
+Error opening output file C:\Users\kushal\Videos\daytime_dashcam_crf11_nnedi3.mp4.
+Error opening output files: Invalid argument
+[AVIOContext @ 0000015d58f72b00] Statistics: 599633 bytes read, 2 seeks
+Friday, September 6, 2024 8:02:38 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal>
+
+
+
+
+
+It looks like the issue persists with the path to the `nnedi3_weights.bin` file. Since you're using PowerShell on Windows 11, let's try a different approach to ensure the path is correctly interpreted.
+
+### Corrected Command
+In PowerShell, you can use double quotes for the entire filter string and escape the backslashes with a single backslash:
+
+```powershell
+date; 
+ffmpeg -loglevel verbose -i "C:\Users\kushal\Videos\20240822174505_001589F.MP4" -vf "nnedi=weights='C:\\Users\\kushal\\Videos\\nnedi3_weights.bin':nsize=32:nns=4:qual=2:etype=0:pscrn=2,scale=3840:2160:flags=lanczos" -c:v libx264 -preset veryslow -crf 11 "C:\Users\kushal\Videos\daytime_dashcam_crf11_nnedi3.mp4"; 
+date;
+```
+
+### Explanation
+- `nnedi=weights='C:\\Users\\kushal\\Videos\\nnedi3_weights.bin'`: The path to the weights file is now correctly escaped for PowerShell.
+
+This should resolve the issue with the path parsing. Give this command a try and let me know if it works!
+
+
+
+
+
+date; ffmpeg -loglevel verbose -i "C:\Users\kushal\Videos\20240822174505_001589F.MP4" -vf "nnedi=weights='C:\\Users\\kushal\\Videos\\nnedi3_weights.bin':nsize=32:nns=4:qual=2:etype=0:pscrn=2,scale=3840:2160:flags=lanczos" -c:v libx264 -preset veryslow -crf 11 "C:\Users\kushal\Videos\daytime_dashcam_crf11_nnedi3.mp4"; date;
+
+
+
+
+
+
+
+
+
+PS C:\Users\kushal\src\myhtml\fromnepal> date; cd "C:\Users\kushal\Videos"; date; ffmpeg -loglevel verbose -i "20240822174505_001589F.MP4" -vf "nnedi=weights='nnedi3_weights.bin':nsize=32:nns=4:qual=2:etype=0:pscrn=2,scale=3840:2160:flags=lanczos" -c:v libx264 -preset veryslow -crf 11 "C:\Users\kushal\Videos\daytime_dashcam_crf11_nnedi3.mp4"; date;
+
+Friday, September 6, 2024 8:05:28 PM
+Friday, September 6, 2024 8:05:28 PM
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+[h264 @ 000001fff51e4cc0] Reinit context to 2560x1600, pix_fmt: yuvj420p
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '20240822174505_001589F.MP4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: isomavc1mp42
+    creation_time   : 2024-08-22T17:55:04.000000Z
+  Duration: 00:10:00.00, start: 0.000000, bitrate: 29838 kb/s
+  Stream #0:0[0x1](eng): Video: h264 (High), 1 reference frame (avc1 / 0x31637661), yuvj420p(pc, bt709, progressive, left), 2560x1600, 29491 kb/s, 30 fps, 30 tbr, 92400 tbn (default)
+      Metadata:
+        creation_time   : 2024-08-22T17:55:04.000000Z
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : h264
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 32000 Hz, mono, fltp, 96 kb/s (default)
+      Metadata:
+        creation_time   : 2024-08-22T17:55:04.000000Z
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+[out#0/mp4 @ 000001fff528ee40] No explicit maps, mapping streams automatically...
+[vost#0:0/libx264 @ 000001fff581e900] Created video stream from input stream 0:0
+[Parsed_nnedi_0 @ 000001fff63d1cc0] Value 32.000000 for parameter 'nsize' out of range [0 - 6]
+Error applying option 'nsize' to filter 'nnedi': Result too large
+[vost#0:0/libx264 @ 000001fff581e900] Error initializing a simple filtergraph
+Error opening output file C:\Users\kushal\Videos\daytime_dashcam_crf11_nnedi3.mp4.
+Error opening output files: Result too large
+[AVIOContext @ 000001fff51d1bc0] Statistics: 599633 bytes read, 2 seeks
+Friday, September 6, 2024 8:05:28 PM
+
+It looks like the issue now is with the `nsize` parameter. The value `32` is out of the acceptable range for this parameter. The valid range for `nsize` is from `0` to `6`.
+
+Here are the valid values for `nsize`:
+- `0`: 8x6
+- `1`: 16x6
+- `2`: 32x6
+- `3`: 48x6
+- `4`: 8x4
+- `5`: 16x4
+- `6`: 32x4
+
+You can choose one of these values based on your needs. For example, if you want to use a larger neural network size, you can use `6` (32x4).
+
+### Corrected Command
+Let's use `nsize=6`:
+
+```powershell
+date; 
+ffmpeg -loglevel verbose -i "20240822174505_001589F.MP4" -vf "nnedi=weights='nnedi3_weights.bin':nsize=6:nns=4:qual=2:etype=0:pscrn=2,scale=3840:2160:flags=lanczos" -c:v libx264 -preset veryslow -crf 11 "C:\Users\kushal\Videos\daytime_dashcam_crf11_nnedi3.mp4"; 
+date;
+```
+
+This should resolve the issue with the `nsize` parameter. Give this command a try and let me know if it works!
+
+
+
+date; ffmpeg -loglevel verbose -i "20240822174505_001589F.MP4" -vf "nnedi=weights='nnedi3_weights.bin':nsize=6:nns=4:qual=2:etype=0:pscrn=2,scale=3840:2160:flags=lanczos" -c:v libx264 -preset veryslow -crf 11 "C:\Users\kushal\Videos\daytime_dashcam_crf11_nnedi3.mp4"; date;
+
