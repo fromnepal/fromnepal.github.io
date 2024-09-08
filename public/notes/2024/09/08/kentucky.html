@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five People Shot on I-75 in Kentucky, Officials Say</title>
+    <meta name="description" content="Nine vehicles were damaged by gunfire on I-75, the authorities said. The victims were in stable condition and a search for a suspect was underway.">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .quote {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        article figure {
+            margin: 0;
+            padding: 0;
+            display: block;
+            width: 100%;
+        }
+
+        article figure img {
+            aspect-ratio: 3 / 2;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        article figure figcaption {
+            font-size: 0.6em;
+            line-height: 0.9;
+            margin-top: 0.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="reading-time" id="reading-time"></div>
+    <article id="article">
+
+        <h1>Five People Injured in Kentucky Highway Shooting, Officials Say</h1>
+        <h2>Nine vehicles were damaged by gunfire on I-75, the authorities said. The victims were in stable condition and a search for a suspect was underway.</h2>
+        
+        <p>By Hank Sanders and Orlando Mayorquín</p>
+        <p>Published Sept. 7, 2024 Updated Sept. 8, 2024, 5:16 a.m. ET</p>
+        <p>The authorities in Kentucky were looking on Sunday morning for a suspect in connection with a shooting on an interstate highway that left at least five people seriously injured.</p>
+        <p>Officers were called to Interstate 75 at Exit 49, about eight miles north of London, Ky., about 5:30 p.m. on Saturday over reports that someone had been shot, Laurel County Sheriff John Root said in a statement early Sunday.</p>
+        <p>They found nine vehicles with gunshot damage in the northbound and southbound lanes, and five victims with serious injuries, Sheriff Root said.</p>
+        <p>All five victims were in stable condition on Saturday, said a spokesman for the Laurel County Sheriff’s Office, Deputy Gilbert Acciardo.</p>
+        <p>The London Police Department said on Saturday night that a person of interest had been identified and asked the public for any information about his whereabouts. The city of London is about 90 miles south of Lexington.</p>
+        <p>Deputy Acciardo said helicopters and infrared scanners were being used to search the woods.</p>
+        <p>Randall Weddle, the mayor of London, said in a Facebook video that the authorities were searching for a “suspect or suspects” in “rugged terrain” in the northern part of Laurel County.</p>
+        <p>The authorities closed I-75 for several hours on Saturday night “because of the danger to passing cars in the area of the shootings,” Sheriff Root said.</p>
+        <p>Angel Jarrett was working at the 49er Truck Stop, near the exit where the shooting took place, when someone told her that shots had been fired nearby.</p>
+        <p>Eventually, multiple police cars surrounded the truck stop and placed it on lockdown.</p>
+        <p>“We’re not allowed to go in or out,” Ms. Jarrett said. “It’s a little panicky, but we’re OK..”</p>
+        <p>The Bureau of Alcohol, Tobacco, Firearms and Explosives said on social media that it was sending agents from its Louisville office to help the Kentucky State Police and the local authorities “with a critical incident” near Interstate 75 in Laurel County.</p>
+        <p>Yan Zhuang contributed reporting.</p>
+        <p>Hank Sanders is a Times reporter and a member of the 2024-25 Times Fellowship class, a program for journalists early in their careers. More about Hank Sanders</p>
+        <p>Orlando Mayorquín is a breaking news reporter, based in New York, and a member of the 2023-24 Times Fellowship class, a program for journalists early in their careers. More about Orlando Mayorquín</p>
+        
+
+    </article>
+
+    <script>
+        function calculateReadingTime(text) {
+            const wordsPerMinute = 200; // Average reading speed
+            const textLength = text.trim().split(/\s+/).length; // Split by spaces to get word count
+            const readingTimeMinutes = Math.ceil(textLength / wordsPerMinute);
+            return readingTimeMinutes;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const article = document.getElementById("article");
+            const readingTimeElement = document.getElementById("reading-time");
+            const readingTime = calculateReadingTime(article.innerText);
+            readingTimeElement.innerText = `Estimated reading time: ${readingTime} minute${readingTime > 1 ? 's' : ''}`;
+        });
+    </script>
+</body>
+</html>
