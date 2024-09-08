@@ -61,7 +61,13 @@ const grid = [
     "REYASCEYVQSOAPGPULZSQ".split('')
 ];
 
-const word = "ASSISTANT";
+// Get the word to find from command line arguments
+const word = process.argv[2];
+if (!word) {
+    console.error("Please provide a word to find as a command line argument.");
+    process.exit(1);
+}
+
 const result = findWordInGrid(grid, word);
 
 if (result) {
