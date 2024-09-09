@@ -1,116 +1,3 @@
-rfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
-  libavutil      59.  8.100 / 59.  8.100
-  libavcodec     61.  3.100 / 61.  3.100
-  libavformat    61.  1.100 / 61.  1.100
-  libavdevice    61.  1.100 / 61.  1.100
-  libavfilter    10.  1.100 / 10.  1.100
-  libswscale      8.  1.100 /  8.  1.100
-  libswresample   5.  1.100 /  5.  1.100
-  libpostproc    58.  1.100 / 58.  1.100
-[h264 @ 000001fff51e4cc0] Reinit context to 2560x1600, pix_fmt: yuvj420p
-Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '20240822174505_001589F.MP4':
-  Metadata:
-    major_brand     : mp42
-    minor_version   : 0
-    compatible_brands: isomavc1mp42
-    creation_time   : 2024-08-22T17:55:04.000000Z
-  Duration: 00:10:00.00, start: 0.000000, bitrate: 29838 kb/s
-  Stream #0:0[0x1](eng): Video: h264 (High), 1 reference frame (avc1 / 0x31637661), yuvj420p(pc, bt709, progressive, left), 2560x1600, 29491 kb/s, 30 fps, 30 tbr, 92400 tbn (default)
-      Metadata:
-        creation_time   : 2024-08-22T17:55:04.000000Z
-        handler_name    : VideoHandler
-        vendor_id       : [0][0][0][0]
-        encoder         : h264
-  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 32000 Hz, mono, fltp, 96 kb/s (default)
-      Metadata:
-        creation_time   : 2024-08-22T17:55:04.000000Z
-        handler_name    : SoundHandler
-        vendor_id       : [0][0][0][0]
-[out#0/mp4 @ 000001fff528ee40] No explicit maps, mapping streams automatically...
-[vost#0:0/libx264 @ 000001fff581e900] Created video stream from input stream 0:0
-[Parsed_nnedi_0 @ 000001fff63d1cc0] Value 32.000000 for parameter 'nsize' out of range [0 - 6]
-Error applying option 'nsize' to filter 'nnedi': Result too large
-[vost#0:0/libx264 @ 000001fff581e900] Error initializing a simple filtergraph
-Error opening output file C:\Users\kushal\Videos\daytime_dashcam_crf11_nnedi3.mp4.
-Error opening output files: Result too large
-[AVIOContext @ 000001fff51d1bc0] Statistics: 599633 bytes read, 2 seeks
-Friday, September 6, 2024 8:05:28 PM
-
-PS C:\Users\kushal\Videos> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
-
-Friday, September 6, 2024 8:06:33 PM
-Friday, September 6, 2024 8:06:33 PM
-On branch main
-nothing to commit, working tree clean
-Friday, September 6, 2024 8:06:33 PM
-Friday, September 6, 2024 8:06:33 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.07s.
-Friday, September 6, 2024 8:06:33 PM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.4.1 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
-✓ built in 284ms
-Done in 1.04s.
-Friday, September 6, 2024 8:06:34 PM
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Friday, September 6, 2024 8:06:35 PM
-[main 565e295] build application
- 2 files changed, 308 insertions(+)
-Friday, September 6, 2024 8:06:35 PM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Current branch main is up to date.
-Friday, September 6, 2024 8:06:36 PM
-Enumerating objects: 11, done.
-Counting objects: 100% (11/11), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (6/6), done.
-Writing objects: 100% (6/6), 1.53 KiB | 1.53 MiB/s, done.
-Total 6 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   b4bb14b..565e295  main -> main
-Friday, September 6, 2024 8:06:37 PM
-
-PS C:\Users\kushal\src\myhtml\fromnepal> date; ffmpeg -loglevel verbose -i "20240822174505_001589F.MP4" -vf "nnedi=weights='nnedi3_weights.bin':nsize=6:nns=4:qual=2:etype=0:pscrn=2,scale=3840:2160:flags=lanczos" -c:v libx264 -preset veryslow -crf 11 "C:\Users\kushal\Videos\daytime_dashcam_crf11_nnedi3.mp4"; date;
-
-Friday, September 6, 2024 8:06:46 PM
-ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
-  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
-  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
-  libavutil      59.  8.100 / 59.  8.100
-  libavcodec     61.  3.100 / 61.  3.100
-  libavformat    61.  1.100 / 61.  1.100
-  libavdevice    61.  1.100 / 61.  1.100
-  libavfilter    10.  1.100 / 10.  1.100
-  libswscale      8.  1.100 /  8.  1.100
-  libswresample   5.  1.100 /  5.  1.100
-  libpostproc    58.  1.100 / 58.  1.100
-[in#0 @ 000002185ae8a300] Error opening input: No such file or directory
-Error opening input file 20240822174505_001589F.MP4.
-Error opening input files: No such file or directory
-Friday, September 6, 2024 8:06:46 PM
-
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
-
-Friday, September 6, 2024 8:07:10 PM
-Friday, September 6, 2024 8:07:10 PM
-On branch main
-nothing to commit, working tree clean
-Friday, September 6, 2024 8:07:10 PM
-Friday, September 6, 2024 8:07:10 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
 Done in 0.07s.
 Friday, September 6, 2024 8:07:11 PM
 yarn run v1.22.21
@@ -8456,4 +8343,127 @@ sys     0m0.020s
 kushal@kusfedoravm:~$ exit
 logout
 Connection to kusfedoravm closed.
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Sunday, September 8, 2024 8:19:09 PM
+Sunday, September 8, 2024 8:19:09 PM
+On branch main
+nothing to commit, working tree clean
+Sunday, September 8, 2024 8:19:09 PM
+Sunday, September 8, 2024 8:19:09 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Sunday, September 8, 2024 8:19:09 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.1 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 348ms
+Done in 1.23s.
+Sunday, September 8, 2024 8:19:11 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Sunday, September 8, 2024 8:19:12 PM
+[main 89edad7] build application
+ 2 files changed, 364 insertions(+), 324 deletions(-)
+Sunday, September 8, 2024 8:19:12 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Sunday, September 8, 2024 8:19:13 PM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.67 KiB | 570.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   a641c87..89edad7  main -> main
+Sunday, September 8, 2024 8:19:14 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Sunday, September 8, 2024 8:24:03 PM
+Sunday, September 8, 2024 8:24:03 PM
+[main 7ef2e6b2] add all files
+ 1 file changed, 93 insertions(+), 1 deletion(-)
+Sunday, September 8, 2024 8:24:03 PM
+Sunday, September 8, 2024 8:24:03 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Sunday, September 8, 2024 8:24:03 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.1 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 336ms
+Done in 1.59s.
+Sunday, September 8, 2024 8:24:05 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Sunday, September 8, 2024 8:24:06 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Sunday, September 8, 2024 8:24:06 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Sunday, September 8, 2024 8:24:07 PM
+Everything up-to-date
+Sunday, September 8, 2024 8:24:07 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Sunday, September 8, 2024 8:24:19 PM
+Sunday, September 8, 2024 8:24:19 PM
+[main 72626e09] add all files
+ 1 file changed, 27 insertions(+)
+Sunday, September 8, 2024 8:24:19 PM
+Sunday, September 8, 2024 8:24:19 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Sunday, September 8, 2024 8:24:19 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.1 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 250ms
+Done in 1.07s.
+Sunday, September 8, 2024 8:24:20 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Sunday, September 8, 2024 8:24:21 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Sunday, September 8, 2024 8:24:21 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Sunday, September 8, 2024 8:24:22 PM
+Everything up-to-date
+Sunday, September 8, 2024 8:24:23 PM
+
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
