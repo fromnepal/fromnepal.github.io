@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholder</title>
+    <meta name="description" content="placeholder">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .quote {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        article figure {
+            margin: 0;
+            padding: 0;
+            display: block;
+            width: 100%;
+        }
+
+        article figure img {
+            aspect-ratio: 3 / 2;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        article figure figcaption {
+            font-size: 0.6em;
+            line-height: 0.9;
+            margin-top: 0.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="reading-time" id="reading-time"></div>
+    <article id="article">
+
+        <p>Trump Is Provoking a Congressional Fight He Can’t Win</p>
+        <p>Donald Trump took time out from his pre-debate “policy time” on Tuesday to stick his out-of-joint nose into Congress’s fight over funding the government:</p>
+        <p>“If Republicans in the House, and Senate, don’t get absolute assurances on Election Security, THEY SHOULD, IN NO WAY, SHAPE, OR FORM, GO FORWARD WITH A CONTINUING RESOLUTION ON THE BUDGET,” he raved on Truth Social. “THE DEMOCRATS ARE TRYING TO ‘STUFF’ VOTER REGISTRATIONS WITH ILLEGAL ALIENS. DON’T LET IT HAPPEN — CLOSE IT DOWN!!!”</p>
+        <p>Such feistiness! Love to see it. Especially since the former president must know, or at least suspect, that he is spitting into the wind — shrieking at his minions to go hard on a poison-pill measure that has less chance of becoming law this season than JD Vance has of winding up the new V.P. of the Cat Fanciers’ Association. (The poison pill is a measure to require proof of citizenship to vote, even though the law already forbids noncitizens from voting, and Republicans have never shown any evidence that this is a problem.)</p>
+        <p>Then again, it’s not totally unreasonable for Trump to expect Republican lawmakers to blindly do his bidding. I mean, earlier this year, they tanked a serious bipartisan bill on what is ostensibly one of the party’s top priorities — border security — because Trump told them that doing so was in his electoral interests. Why not then force a government shutdown in pursuit of a measure that would cast further doubt on the integrity of our election system?</p>
+        <p>I’ll tell you why not. Because a government shutdown in the final stretch of a tick-tight, high-stakes election cycle would be political madness — especially if it looked as though the shutdown occurred not because of substantive disagreements over spending but because Trump was bullying his congressional team into indulging his delusions about election fraud. Again.</p>
+        <p>MAGA die-hards might be jazzed. The rest of the electorate, not so much.</p>
+        <p>Republican lawmakers may be loath to upset their nominee, but they value nothing above their own political fortunes. Most of them aren’t stupid enough to sign up for this kind of self-immolation.</p>
+    </article>
+
+    <script>
+        function calculateReadingTime(text) {
+            const wordsPerMinute = 200; // Average reading speed
+            const textLength = text.trim().split(/\s+/).length; // Split by spaces to get word count
+            const readingTimeMinutes = Math.ceil(textLength / wordsPerMinute);
+            return readingTimeMinutes;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const article = document.getElementById("article");
+            const readingTimeElement = document.getElementById("reading-time");
+            const readingTime = calculateReadingTime(article.innerText);
+            readingTimeElement.innerText = `Estimated reading time: ${readingTime} minute${readingTime > 1 ? 's' : ''}`;
+        });
+    </script>
+</body>
+</html>
