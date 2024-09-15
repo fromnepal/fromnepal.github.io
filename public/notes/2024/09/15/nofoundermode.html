@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholder</title>
+    <meta name="description" content="placeholder">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .quote {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        article figure {
+            margin: 0;
+            padding: 0;
+            display: block;
+            width: 100%;
+        }
+
+        article figure img {
+            aspect-ratio: 3 / 2;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        article figure figcaption {
+            font-size: 0.6em;
+            line-height: 0.9;
+            margin-top: 0.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="reading-time" id="reading-time"></div>
+    <article id="article">
+        <h1>Work in Your Own Mode</h1>
+        <p>Forget MVPs, SEO, and changing the world. Focus on what matters to you. Market research and user onboarding are often overrated. Productivity is not about being a robot.</p>
+        <p>Ignore the so-called SaaS gurus and analytics if they don't add value. Avoid getting caught up in social media trends and unnecessary analyses.</p>
+        <p>Build what you want, how you want. Don't let others dictate your path. Embrace your unique approach and say "no" to distractions.</p>
+        <p>Big companies have their own challenges. As a startup, you have the freedom to choose your path. Don't follow every trend blindly.</p>
+        <p>Innovation isn't always necessary. Sometimes, copying and improving existing ideas works just fine. Focus on affordability and practicality.</p>
+        <p>Don't go "all in" if it means sacrificing your well-being. Have backups and a safety net. Balance your work with personal life.</p>
+        <p>Build products that are good enough at a lower cost. Compete on price if it makes sense for your business. Enjoy the journey and learn to say "no" more often.</p>
+        <p>Good luck, and remember to stay true to your vision.</p>
+    </article>
+
+    <script>
+        function calculateReadingTime(text) {
+            const wordsPerMinute = 200; // Average reading speed
+            const textLength = text.trim().split(/\s+/).length; // Split by spaces to get word count
+            const readingTimeMinutes = Math.ceil(textLength / wordsPerMinute);
+            return readingTimeMinutes;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const article = document.getElementById("article");
+            const readingTimeElement = document.getElementById("reading-time");
+            const readingTime = calculateReadingTime(article.innerText);
+            readingTimeElement.innerText = `Estimated reading time: ${readingTime} minute${readingTime > 1 ? 's' : ''}`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+summarize and remove swear words. make it useful. put the whole thing in an <article> tag in an html something like below and put the whole thing inside three backticks like ```sample``` so I can copy paste it easily. 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placeholder</title>
+    <meta name="description" content="placeholder">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .quote {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        article figure {
+            margin: 0;
+            padding: 0;
+            display: block;
+            width: 100%;
+        }
+
+        article figure img {
+            aspect-ratio: 3 / 2;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        article figure figcaption {
+            font-size: 0.6em;
+            line-height: 0.9;
+            margin-top: 0.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="reading-time" id="reading-time"></div>
+    <article id="article">
+
+
+
+    </article>
+
+    <script>
+        function calculateReadingTime(text) {
+            const wordsPerMinute = 200; // Average reading speed
+            const textLength = text.trim().split(/\s+/).length; // Split by spaces to get word count
+            const readingTimeMinutes = Math.ceil(textLength / wordsPerMinute);
+            return readingTimeMinutes;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const article = document.getElementById("article");
+            const readingTimeElement = document.getElementById("reading-time");
+            const readingTime = calculateReadingTime(article.innerText);
+            readingTimeElement.innerText = `Estimated reading time: ${readingTime} minute${readingTime > 1 ? 's' : ''}`;
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+here is the input text. please remember the three backticks like ```sample``` 
+
+Fuck MVP - if I wanted to create a glorified prototype, I’d just build LEGO.
+
+Fuck SEO - if you need a formula to be found, maybe you’re not that interesting.
+
+Fuck changing the world - I can't fucking figure out why my new vacuum cleaner needs to connect to my wifi.
+
+Fuck market research - My cat is more often right than fucking McKinsey.
+
+Fuck user onboarding - if they can't figure it out you are fucked anyways.
+
+Fuck productivity - if I wanted to be efficient, I’d be a robot.
+
+Fuck saas gurus - seriously, these guys read one book and suddenly they’re Yoda.
+
+Fuck analytics - I don't need numbers to know that no one gives a shit.
+
+Fuck shit posts on LinkedIn/Twitter/Reddit - where the blind lead the blind off a cliff.
+
+Fuck cohort analysis - if every cohort’s leaving, does it matter who left first?"
+
+Fuck "contact us for pricing" - your pricing’s probably like my ex: complicated and unpredictable. Fuck that.
+
+Fuck listening to podcasts for ideas - you're just procrastinating at this point.
+
+Fuck get users before you build anything - why? So you can disappoint them sooner?
+
+Just fucking build whatever the fuck you want to build and however the fuck you want to build it. Don’t let some Silicon Valley dude-bros tell you how to run your shit. Your way is your way. Me? I work in "fuck off mode." It’s not for everyone, but I swear to fuck, life gets better the moment you start saying "fuck off" to more things instead of piling more shit onto your plate.
+
+Everyone and their mother has something to say to a SaaS founder. "Oh, you don’t have a TikTok strategy?" Fuck off. "Have you integrated Segment, Posthog, and Mixpanel?" Fuck off. "Have you done market research to figure out your pricing?" Fuck the fuck off. Meanwhile, Reddit’s full of these clowns debating freemium vs. free trial like it’s life or death. Just pick one and stop shitting your pants over it. Seriously, stop adding shit to your plate. Learn to say "fuck off"—a lot. You’re a startup. You’re a founder. Fucking act like it. Grow some fucking balls and stop getting jerked around by the latest hot take from some LinkedIn thought-leader who counts the likes on his posts on LinkedIn to keep his fucking pride intact.
+
+Here’s the deal: you’re not some mega-corp that has to do all the "big gun" things. Big companies are bloated because they have to be but you’ve got a choice. You got a fucking choice. Are you listening to me. Nah. You are so fucking distracted that this post is too fucking long for you and you want your fucking AI to give you a summary. Fuck you and fuck your AI gizmo.
+
+Yet what do I see founders doing? Voluntarily giving up that choice. They add to their plate every bullshit trend. Fuck that. Go lean, and toss the fucking startup playbook in the trash.
+
+And while we’re at it, fuck this whole notion that you have to build something innovative and magical. Silicon Valley keeps telling us to build innovative products. Fuck that shit. One guy innovated—one fucking guy. Henry Ford. He built the damn assembly line. Today, we’ve got a hundred car companies out there. Some innovating, some just straight-up copying, and guess what? They’re all doing just fine. Toyota copied Ford, Samsung copied Apple, and now they’re printing fucking money. You don’t have to be the next Nikola Tesla or Richard Feynman to make a buck. Straight up copy shit which is not copyrighted or is patented. And Most of the stuff is not.
+
+And speaking of bullshit mantras, fuck the whole "raise your prices until God whispers in your ear that you’ve hit the local maxima" nonsense. Just stop and think for a second. You’re a fucking startup. Your software’s full of bugs. The server password is known by exactly two people: your co-founder, who’s halfway out the door, and your engineer, who forgot it three months ago. And you want to price yourself alongside the big boys? Fuck that. Even I’d rather just pay the big guys. Make your shit affordable.
+
+Remember Walmart. They have a fucking tagline - Always low prices. If low price is good enough for fucking Walmart you don't have to be embarrassed about your low price.
+
+Folks we have a reason why we let patents expire. Big pharma companies spend billions of dollars on research and they build a medicine. They get patent and they get to make money. And then we let patent expire. So that boring companies can copy it and make it available to the fucking people. That boring business itself is worth billions of dollars. If you go by Silicon valley mantra then everyone has to be fucking big pharma. Fuck that shit. That's too hard. Too risky. Requires too much money. You will be begging VCs.
+
+Instead build something for which patent has expired. The products I'm building are not innovative at all. The innovative work has already been done by the category leaders and all category leaders - zendesk, intercom, calendly, asana, loom are big company. They have rightly benefited from their innovation.
+
+Now many years later I think the metaphorical patent has expired. I'm going to challenge them on price. Will I succeed? May be or may be not. Who fucking cares. It's my money. I've bootstrapped it from the consulting work I've been doing for the last 14 years. If my products win then that's good. If I loose all the money then I'm loosing because of my fucking stupidity. Atleast I gave it a fucking shot.
+
+Oh, and while we’re on the subject of fucking things up, let’s fuck this "all in" bullshit. "All in" means you dump your girlfriend, ditch your friends, eat instant noodles for three meals a day, and guzzle shitty coffee until you’re broke, single, and burned out, only to watch your company crash and burn at the end. And what do you get for it? A shitpost on Twitter about how you went "all in" and got fucked. Is that some kind of badge of honor. Fuck that shit.
+
+You don’t need to go "all in." You need fucking cushion—backups on backups. You know who had backups? Amundsen. His team gained weight after coming back from the South Pole. My cushion is my consulting gig. Even if all my products tank, I’ll be fine. I’m not going "all in"—that’s too risky. And if Silicon Valley doesn’t like it? Fuck ‘em. They say that if you are not all in then how will you succeed. Fuck that. It's a trap. Once you are "all in" then you have no choice. It's like Alexander's strategy. He will fight bigger fights. Now his soldiers are fucked. They have no choice but to fight with all their might. Fuck that shit. I don't want to be in that position. I want to enjoy my weekends. I'm not "all in". No fucking way.
+
+I built NeetoCal, NeetoRecord, and more—powered by 100% "fuck off mode" energy. You should too. You effort to please all SaaS overlords is killing you.
+
+Our innovation is not in what we are building. We are building fucking clones. Our innovation is on building just good enough product at a very low cost. Am I trying to be Apple. No fucking way. What I'm trying to do is provide 60% of the category leader(intercom, zendesk, calendly, loom, asana) feature at 1/10th the price. Isn't that fucking capitalism is all about. Let there be fucking competition. If everyone is innovating and building new shit how the fuck prices will go down. I'm in for a fucking competition. Let's fucking compete.I think I'm good at building CRUD apps at low cost and to ensure that I've fucking database backups. :-)
+
+Low cost is important. That's what we are fighting off. Does it mean Neeto will never be as feature rich as category. yes you got it right.
+
+Oh so you are building a clone and you are not even cloning that properly. First of all fuck you. I see the sarcasm. Secondly yes we are cloning and there also we are not cloning all the way. Let me fucking elaborate for you.
+
+Let's take the example of Intercom. They are more than 10 years old now. They have more than 1k employees and they have raise more then $200M. Now 10 years later what do you think their engineers shipped last week. I'll tell you what.
+
+Nothing that you or I need. After ten years they have built whatever they needed for plebeians. Now they are building for fucking fortune 500 companies. I don't blame them. They got money. Go after them.
+
+I'm not building for fortune 500 companies. So why would I copy the enterprise features. I'm building the feature that small businesses will need. That's why I said I will copy but only upto 60-70% and then I'll move on to the next product. I don't want my engineers to keep working on same shit year after year making things more complicated and adding more bugs. As I said we want to build a good enough product at a rock bottom price.
+
+I know I know all business books say that don't compete on price. Don't make commodity. Well I'm breaking both the norms. I'm building a commodity. I'm building a fucking clone. It's a commodity. This is another fucking annoying things I see on Product Hunt all the time. All founders think that they are building something innovative. Fuck that shit. Whom are you deceiving. You don't even have fucking guts to say that I'm building fucking docusign clone. Say just it.
+
+I'm saying that I'm building fucking commodity products. Commodity products by default are sold at low price. A side note do you know how much money dollar stores make in USA. Let me give you a hint - fucking a lot.
+
+Have a fucking good time building whatever the fuck you are building. I'm saying this in a loving fucking way. The important thing is to enjoy the journey because even if you have built a unicorn the journey never ends. So might as well fucking enjoy it. Hopefully in the process of building you learn to say "fuck off" more. You need it. Your sanity needs it.
+
+Good luck. And fuck you. See I'm a nice fucking guy :-)
+
+Edit 1: Mackos commented 25th hour with Edward Norton and it's so fucking awesome.
+
+Edit 2: Another founder mode post is on the front page of hacker news. https://capture.dropbox.com/M3MqgvwGySXQoBtE Fuck this fucking shit about founder mode. WTF.
+
+Edit 3: Hacker News has some more comments if you are interested in more comments https://news.ycombinator.com/item?id=41545495
+
+from https://old.reddit.com/r/SaaS/comments/1fgv248/fuck_founder_mode_work_in_fuck_off_mode/
