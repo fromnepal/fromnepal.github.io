@@ -3,20 +3,25 @@ param (
 )
 
 $tempDir = "C:\Temp\yt-dlp"
-date;
+$date = Get-Date
+Write-Output $date
 New-Item -ItemType Directory -Path $tempDir -Force
-dir $tempDir
-date;
-yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(id)s.%(ext)s" $url
-date;
+Get-ChildItem $tempDir
+$date = Get-Date
+Write-Output $date
+yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title).50s.%(ext)s" $url
+$date = Get-Date
+Write-Output $date
 $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1
-date;
+$date = Get-Date
+Write-Output $date
 $subtitleFile = Get-ChildItem -Path $tempDir -Filter *.vtt | Select-Object -First 1
-date;
-dir $tempDir;
-ls $tempDir;
-$videoFile;
-$subtitleFile;
+$date = Get-Date
+Write-Output $date
+Get-ChildItem $tempDir
+$videoFile
+$subtitleFile
+
 # Function to clean file names
 function Clean-FileName {
     param (
@@ -31,29 +36,33 @@ if ($subtitleFile) {
     $cleanSubtitlePath = Join-Path -Path $tempDir -ChildPath $cleanSubtitleName
     Rename-Item -Path $subtitlePath -NewName $cleanSubtitlePath
     $subtitlePath = $cleanSubtitlePath
-    echo "Cleaned subtitle path: $subtitlePath"
+    Write-Output "Cleaned subtitle path: $subtitlePath"
 }
 
 $cleanVideoName = Clean-FileName -fileName $videoFile.Name
-echo "Cleaned video name: $cleanVideoName"
+Write-Output "Cleaned video name: $cleanVideoName"
 $cleanVideoPath = Join-Path -Path $tempDir -ChildPath $cleanVideoName
 Rename-Item -Path $videoFile.FullName -NewName $cleanVideoPath
 $videoFile = Get-Item -Path $cleanVideoPath
-echo "Cleaned video path: $($videoFile.FullName)"
+Write-Output "Cleaned video path: $($videoFile.FullName)"
 
 if ($subtitleFile) {
-    echo "Running ffmpeg with subtitles"
-    $ffmpegCommand = "ffmpeg -loglevel debug -i `"$($videoFile.FullName)`" -vf `subtitles='C\\:Temp\\yt-dlp\\$($subtitleFile.Name)':force_style='FontName=Arial,FontSize=24'` -c:v libx264 -c:a aac -strict experimental -movflags +faststart `"$tempDir\$($videoFile.BaseName)_reencoded.mp4`""
-    echo $ffmpegCommand
+    echo $subtitleFile;
+    Write-Output "Running ffmpeg with subtitles"
+    $ffmpegCommand = "ffmpeg -loglevel debug -i `"$($videoFile.FullName)`" -vf `subtitles='$($subtitlePath)':force_style='FontName=Arial,FontSize=24'` -c:v libx264 -c:a aac -strict experimental -movflags +faststart `"$tempDir\$($videoFile.BaseName)_reencoded.mp4`""
+    Write-Output $ffmpegCommand
     Invoke-Expression $ffmpegCommand
 } else {
-    echo "Running ffmpeg without subtitles"
+    Write-Output "Running ffmpeg without subtitles"
     $ffmpegCommand = "ffmpeg -i `"$($videoFile.FullName)`" -c:v libx264 -c:a aac -strict experimental -movflags +faststart `"$tempDir\$($videoFile.BaseName)_reencoded.mp4`""
-    echo $ffmpegCommand
+    Write-Output $ffmpegCommand
     Invoke-Expression $ffmpegCommand
 }
-date;
+$date = Get-Date
+Write-Output $date
 Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"
-date;
+$date = Get-Date
+Write-Output $date
 Remove-Item -Path $tempDir -Recurse -Force
-date;
+$date = Get-Date
+Write-Output $date
