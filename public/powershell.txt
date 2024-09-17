@@ -1,127 +1,3 @@
-Sunday, September 15, 2024 2:08:09 PM
-[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '-i', 'https://v.redd.it/iuuvejzixyod1']
-[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
-[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
-[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
-[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
-[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
-[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
-[debug] Proxy map: {}
-[debug] Request Handlers: urllib, requests, websockets, curl_cffi
-[debug] Loaded 1830 extractors
-[generic] Extracting URL: https://v.redd.it/iuuvejzixyod1
-[generic] iuuvejzixyod1: Downloading webpage
-[redirect] Following redirect to https://www.reddit.com/r/Damnthatsinteresting/comments/1fhbk9d/shedding_uv_light_on_a_pigeon/?rdt=45443
-[Reddit] Extracting URL: https://www.reddit.com/r/Damnthatsinteresting/comments/1fhbk9d/shedding_uv_light_on_a_pigeon/?rdt=45443
-[Reddit] 1fhbk9d: Downloading JSON metadata
-[Reddit] 1fhbk9d: Downloading m3u8 information
-[Reddit] 1fhbk9d: Downloading MPD manifest
-[Reddit] iuuvejzixyod1: Checking subtitles URL
-[info] iuuvejzixyod1: Downloading subtitles: en
-[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
-[SponsorBlock] SponsorBlock is not supported for Reddit
-[info] iuuvejzixyod1: Downloading 1 format(s): hls-892+dash-6
-[info] Writing video subtitles to: Shedding_UV_light_on_a_Pigeon-[iuuvejzixyod1].en.vtt
-[debug] Invoking http downloader on "https://v.redd.it/iuuvejzixyod1/wh_ben_en.vtt"
-[debug] File locking is not supported. Proceeding without locking
-[download] Destination: Shedding_UV_light_on_a_Pigeon-[iuuvejzixyod1].en.vtt
-[download] 100% of     44.00B in 00:00:00 at 200.36B/s
-[debug] Invoking hlsnative downloader on "https://v.redd.it/iuuvejzixyod1/HLS_480.m3u8"
-[hlsnative] Downloading m3u8 manifest
-[hlsnative] Total fragments: 3
-[download] Destination: Shedding_UV_light_on_a_Pigeon-[iuuvejzixyod1].fhls-892.mp4
-[download] 100% of 1005.54KiB in 00:00:01 at 781.51KiB/s
-[debug] Invoking http downloader on "https://v.redd.it/iuuvejzixyod1/DASH_AUDIO_128.mp4"
-[download] Destination: Shedding_UV_light_on_a_Pigeon-[iuuvejzixyod1].fdash-6.m4a
-[download] 100% of  185.08KiB in 00:00:00 at 1.06MiB/s
-[Merger] Merging formats into "Shedding_UV_light_on_a_Pigeon-[iuuvejzixyod1].mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Shedding_UV_light_on_a_Pigeon-[iuuvejzixyod1].fhls-892.mp4" -i "file:Shedding_UV_light_on_a_Pigeon-[iuuvejzixyod1].fdash-6.m4a" -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart "file:Shedding_UV_light_on_a_Pigeon-[iuuvejzixyod1].temp.mp4"
-Deleting original file Shedding_UV_light_on_a_Pigeon-[iuuvejzixyod1].fdash-6.m4a (pass -k to keep)
-Deleting original file Shedding_UV_light_on_a_Pigeon-[iuuvejzixyod1].fhls-892.mp4 (pass -k to keep)
-[ModifyChapters] SponsorBlock information is unavailable
-[Metadata] Adding metadata to "Shedding_UV_light_on_a_Pigeon-[iuuvejzixyod1].mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i "file:Shedding_UV_light_on_a_Pigeon-[iuuvejzixyod1].mp4" -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Shedding UV light on a Pigeon " -metadata "date=20240915" -metadata "purl=https://www.reddit.com/r/Damnthatsinteresting/comments/1fhbk9d/shedding_uv_light_on_a_pigeon/?rdt=45443" -metadata "comment=https://www.reddit.com/r/Damnthatsinteresting/comments/1fhbk9d/shedding_uv_light_on_a_pigeon/?rdt=45443" -metadata "artist=WhattheDuck9" -movflags +faststart "file:Shedding_UV_light_on_a_Pigeon-[iuuvejzixyod1].temp.mp4"
-Sunday, September 15, 2024 2:08:16 PM
-
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
-
-Sunday, September 15, 2024 2:08:24 PM
-Sunday, September 15, 2024 2:08:24 PM
-On branch main
-nothing to commit, working tree clean
-Sunday, September 15, 2024 2:08:25 PM
-Sunday, September 15, 2024 2:08:25 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.06s.
-Sunday, September 15, 2024 2:08:25 PM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.4.1 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
-✓ built in 316ms
-Done in 1.07s.
-Sunday, September 15, 2024 2:08:26 PM
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Sunday, September 15, 2024 2:08:27 PM
-[main fd52e3e] build application
- 2 files changed, 378 insertions(+)
-Sunday, September 15, 2024 2:08:28 PM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
-Current branch main is up to date.
-Sunday, September 15, 2024 2:08:28 PM
-Enumerating objects: 9, done.
-Counting objects: 100% (9/9), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (5/5), done.
-Writing objects: 100% (5/5), 1.45 KiB | 494.00 KiB/s, done.
-Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   3d29a44..fd52e3e  main -> main
-Sunday, September 15, 2024 2:08:29 PM
-
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
-
-Sunday, September 15, 2024 2:36:32 PM
-Sunday, September 15, 2024 2:36:32 PM
-On branch main
-nothing to commit, working tree clean
-Sunday, September 15, 2024 2:36:32 PM
-Sunday, September 15, 2024 2:36:32 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.07s.
-Sunday, September 15, 2024 2:36:32 PM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.4.1 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
-✓ built in 420ms
-Done in 1.33s.
-Sunday, September 15, 2024 2:36:34 PM
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Sunday, September 15, 2024 2:36:36 PM
-[main 0bac35f] build application
- 6 files changed, 94 insertions(+), 4 deletions(-)
- create mode 100644 docs/notes/skyythoughts.png
- create mode 100644 public/notes/skyythoughts.png
-Sunday, September 15, 2024 2:36:36 PM
-From github.com:fromnepal/fromnepal.github.io
- * branch            main       -> FETCH_HEAD
 Current branch main is up to date.
 Sunday, September 15, 2024 2:36:37 PM
 Enumerating objects: 20, done.
@@ -8650,5 +8526,131 @@ Already up to date.
 Tuesday, September 17, 2024 5:25:27 PM
 Everything up-to-date
 Tuesday, September 17, 2024 5:25:28 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Tuesday, September 17, 2024 5:25:36 PM
+Tuesday, September 17, 2024 5:25:36 PM
+On branch main
+nothing to commit, working tree clean
+Tuesday, September 17, 2024 5:25:36 PM
+Tuesday, September 17, 2024 5:25:36 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Tuesday, September 17, 2024 5:25:37 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.6 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 292ms
+Done in 1.07s.
+Tuesday, September 17, 2024 5:25:38 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Tuesday, September 17, 2024 5:25:39 PM
+[main b332d10] build application
+ 2 files changed, 512 insertions(+), 524 deletions(-)
+Tuesday, September 17, 2024 5:25:40 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Tuesday, September 17, 2024 5:25:40 PM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 2.54 KiB | 649.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   3e61dcc..b332d10  main -> main
+Tuesday, September 17, 2024 5:25:41 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Tuesday, September 17, 2024 7:26:47 PM
+Tuesday, September 17, 2024 7:26:47 PM
+[main 3e40d379] add all files
+ 2 files changed, 24 insertions(+)
+ create mode 100644 src/recruiting/prt
+Tuesday, September 17, 2024 7:26:48 PM
+Tuesday, September 17, 2024 7:26:48 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.10s.
+Tuesday, September 17, 2024 7:26:48 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.6 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 630ms
+Done in 2.80s.
+Tuesday, September 17, 2024 7:26:51 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Tuesday, September 17, 2024 7:26:54 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Tuesday, September 17, 2024 7:26:54 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Tuesday, September 17, 2024 7:26:58 PM
+Everything up-to-date
+Tuesday, September 17, 2024 7:26:59 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal>
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Tuesday, September 17, 2024 7:32:00 PM
+Tuesday, September 17, 2024 7:32:00 PM
+[main 5c543582] add all files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 src/resume/pratikchhya-2024.pdf
+Tuesday, September 17, 2024 7:32:00 PM
+Tuesday, September 17, 2024 7:32:00 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Tuesday, September 17, 2024 7:32:00 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.6 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 400ms
+Done in 1.28s.
+Tuesday, September 17, 2024 7:32:02 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Tuesday, September 17, 2024 7:32:03 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Tuesday, September 17, 2024 7:32:03 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+Tuesday, September 17, 2024 7:32:04 PM
+Everything up-to-date
+Tuesday, September 17, 2024 7:32:05 PM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
