@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Trump Is Undermining the Economy in Some Struggling Cities</title>
+    <meta name="description" content="Immigration to small cities creates jobs for everyone.">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .quote {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        article figure {
+            margin: 0;
+            padding: 0;
+            display: block;
+            width: 100%;
+        }
+
+        article figure img {
+            aspect-ratio: 3 / 2;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        article figure figcaption {
+            font-size: 0.6em;
+            line-height: 0.9;
+            margin-top: 0.5em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="reading-time" id="reading-time"></div>
+    <article id="article">
+        <p>Opinion</p>
+        <p>Paul Krugman</p>
+        <h1>How Trump Is Undermining the Economy in Some Struggling Cities</h1>
+        <p>Sept. 16, 2024</p>
+        <p>By Paul Krugman</p>
+        <p>Opinion Columnist</p>
+        <p>In another time and place, the Trump-Vance campaign’s decision to go all in on the unfounded claim that Haitians in Springfield, Ohio, are stealing and eating pets might be kind of funny. But given where we are as a nation, it’s no joke. The city has been forced to close schools and public buildings in the face of recent bomb threats.</p>
+        <p>Given this reality, it seems almost in bad taste to talk about the economic consequences of this kind of rhetoric. But those consequences are real, and overwhelmingly negative — especially for municipalities like Springfield that have managed to reverse population decline and bolster job growth by embracing immigration. Here, we can see how hate could destroy the chances of economic renewal in parts of the heartland.</p>
+        <p>I’ve written before about the problem of regions left behind by the 21st-century economy, a problem that is common to many wealthy nations. Decline in parts of the former East Germany has fed right-wing extremism in ways that resemble the rise of Trumpism in some depressed parts of our country.</p>
+        <p>There are, however, some small cities that have managed to buck the trend; and in quite a few cases immigrants have been central to their revival. Springfield, with its community of (legal!) Haitian migrants is one example. Other examples include my hometown, Utica, N.Y., buoyed by refugees from Bosnia and Myanmar; Springdale, Ark., which has attracted people from various places including the Marshall Islands; and many others.</p>
+        <p>These local immigration hot spots tend to involve particular ethnicities for the same reason many Norwegian immigrants once settled in Minnesota and many Eastern European Jews headed for New York’s Lower East Side: A few pioneers send word to people they know, and eventually communities emerge with the critical mass to help sustain some of their cultural traditions.</p>
+        <p>Why do immigrants move to some small cities? Partly in response to housing costs that were, at least until recently, relatively low (as they tend to be in declining cities). In some instances, they also move to take advantage of jobs that some native-born Americans, for whatever reasons, are reluctant to do. In Springdale, the home of Tyson Foods, these are often jobs in poultry plants. In Springfield, which, The Times reported, has seen “a boom in manufacturing and warehouse jobs,” employers suggest that some young native-born adults shun “entry-level, rote work.”</p>
+        <p>But are immigrant workers taking jobs away from native-born Americans? Donald Trump and JD Vance have been making that claim repeatedly. And it’s true that at the national level the native-born labor force has actually declined since 2019. But big picture, the explanation isn’t that immigrants are taking away jobs; it’s that baby boomers are reaching retirement age. Native-born Americans in their prime working years are more likely to be employed than before the pandemic, or for that matter at any point during the Trump administration.</p>
+        <p>That’s the situation at the macro level. At the level of some of the communities that have attracted large numbers of immigrant workers, the picture is even clearer. By fostering overall growth in a city’s economy, immigrants often increase employment among the native-born. Why? Because they spend much of their earnings where they live and work, helping create local jobs; one 2015 study found that “each immigrant creates 1.2 local jobs for local workers, most of them going to native workers.”</p>
+        <p>Can a rapid influx of immigrants present problems? Certainly. It can drive up housing costs, at least temporarily, although housing prices are a problem across America, and the rise in Springfield, which still has cheap housing by national standards, since the pandemic has been similar to that in the nation as a whole. And a sudden rise in the immigrant population can put pressure on local services, including schools and hospitals.</p>
+        <p>But school and hospital systems can be expanded, especially when immigration is enhancing local government revenue. And it’s surely better to have Springfield’s infrastructure challenges than those of areas with falling population where hospital and school closings are creating health care and educational deserts.</p>
+        <p>You can understand the concern in Springfield that followed the death of an 11-year-old boy whose school bus was hit by an immigrant driving without a license. But that doesn’t justify demonizing an entire immigrant community.</p>
+        <p>Overall, the move of immigrants to some small cities has been very beneficial, one of the best hopes these cities have for economic resurgence. But that hope will disappear if immigrants are scared off by a climate of hate.</p>
+        <p>I’ve already mentioned Germany, where some business leaders fear that the rise of right-wing extremism will lead to “economic catastrophe” in the nation’s east, which needs immigration to sustain its economy. Could the same thing happen in America? Yes.</p>
+        <p>No account of this terrible episode in our politics is complete if it fails to mention that false assertions that we’re facing a migrant crime wave and bizarre claims about immigrants eating pets could all too easily end up deepening the economic woes in parts of America’s heartland.</p>
+        
+
+    </article>
+
+    <script>
+        function calculateReadingTime(text) {
+            const wordsPerMinute = 200; // Average reading speed
+            const textLength = text.trim().split(/\s+/).length; // Split by spaces to get word count
+            const readingTimeMinutes = Math.ceil(textLength / wordsPerMinute);
+            return readingTimeMinutes;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const article = document.getElementById("article");
+            const readingTimeElement = document.getElementById("reading-time");
+            const readingTime = calculateReadingTime(article.innerText);
+            readingTimeElement.innerText = `Estimated reading time: ${readingTime} minute${readingTime > 1 ? 's' : ''}`;
+        });
+    </script>
+</body>
+</html>
