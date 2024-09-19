@@ -236,3 +236,165 @@ Thursday, September 19, 2024 5:08:43 PM
 [download] 100% of   11.88MiB in 00:00:01 at 11.50MiB/s
 [Merger] Merging formats into "Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.mp4"
 [debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.f625.mp4 -i file:Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.temp.mp4
+Deleting original file Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.f625.mp4 (pass -k to keep)
+WARNING: Unable to delete file Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.f625.mp4
+Deleting original file Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.f140.m4a (pass -k to keep)
+[debug] ffprobe command line: ffprobe -hide_banner -show_format -show_streams -print_format json file:Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.mp4
+[debug] Concat spec = 65.785000-428.970000, 439.800000-715.703000
+[ModifyChapters] Removing chapters from Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.mp4
+[debug] Writing concat spec to Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.temp.mp4.concat
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -hide_banner -nostdin -f concat -safe 0 -i file:Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.temp.mp4.concat -map 0 -dn -ignore_unknown -c copy -c:s mov_text -movflags +faststart file:Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.temp.mp4
+Deleting original file Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.uncut.mp4 (pass -k to keep)
+[Metadata] Adding metadata to "Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.mp4 -i file:Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.meta -map 0 -dn -ignore_unknown -c copy -map_metadata 1 -write_id3v1 1 -metadata "title=Apple Just Sold Me an iPhone - iPhone 16 Launch Event" -metadata "date=20240910" -metadata "description=Get 20% off DeleteMe US consumer plans when you go to http://joindeleteme.com/LTT20  and use promo code LTT20 at checkout.
+
+DeleteMe International Plans: https://international.joindeleteme.com/
+
+Checkout Paperlike at: https://paperlike.com/linustech/2409
+
+Apple's latest event was bittersweet. Sure we got some pretty big upgrades for the iPhone 16, but is the Pro REALLY worth the extra cash? And where are the Air Pods Pro 3, or the Apple Watch Ultra 3?
+
+Discuss on the forum: https://linustechtips.com/topic/1582243-apple-just-sold-me-an-iphone-iphone-16-launch-event/
+
+► GET OUR MERCH: https://lttstore.com
+► GET EXCLUSIVE CONTENT ON FLOATPLANE: https://lmg.gg/lttfloatplane
+► GET A VPN: http://www.piavpn.com/linus
+► SPONSORS, AFFILIATES, AND PARTNERS: https://lmg.gg/partners
+
+Purchases made through some store links may provide some compensation to Linus Media Group.
+
+CHAPTERS
+---------------------------------------------------
+0:00 Intro
+1:07 Air Pods
+3:29 iPhone 16
+6:00 iPhone 16 Pro
+8:15 Apple Watch
+11:00 Conclusion
+12:43 Outro" -metadata "synopsis=Get 20% off DeleteMe US consumer plans when you go to http://joindeleteme.com/LTT20  and use promo code LTT20 at checkout.
+
+DeleteMe International Plans: https://international.joindeleteme.com/
+
+Checkout Paperlike at: https://paperlike.com/linustech/2409
+
+Apple's latest event was bittersweet. Sure we got some pretty big upgrades for the iPhone 16, but is the Pro REALLY worth the extra cash? And where are the Air Pods Pro 3, or the Apple Watch Ultra 3?
+
+Discuss on the forum: https://linustechtips.com/topic/1582243-apple-just-sold-me-an-iphone-iphone-16-launch-event/
+
+► GET OUR MERCH: https://lttstore.com
+► GET EXCLUSIVE CONTENT ON FLOATPLANE: https://lmg.gg/lttfloatplane
+► GET A VPN: http://www.piavpn.com/linus
+► SPONSORS, AFFILIATES, AND PARTNERS: https://lmg.gg/partners
+
+Purchases made through some store links may provide some compensation to Linus Media Group.
+
+CHAPTERS
+---------------------------------------------------
+0:00 Intro
+1:07 Air Pods
+3:29 iPhone 16
+6:00 iPhone 16 Pro
+8:15 Apple Watch
+11:00 Conclusion
+12:43 Outro" -metadata "purl=https://www.youtube.com/watch?v=DZRUk6SV4vU" -metadata "comment=https://www.youtube.com/watch?v=DZRUk6SV4vU" -metadata "artist=Linus Tech Tips" -metadata:s:1 "language=eng" -movflags +faststart file:Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.temp.mp4
+Thursday, September 19, 2024 5:19:27 PM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all -o "%(title).50s.%(ext)s" -i "https://www.youtube.com/watch?v=DZRUk6SV4vU"; date;
+
+Thursday, September 19, 2024 5:19:27 PM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Thursday, September 19, 2024 5:19:27 PM
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '-o', '%(title).50s.%(ext)s', '-i', 'https://www.youtube.com/watch?v=DZRUk6SV4vU']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://www.youtube.com/watch?v=DZRUk6SV4vU
+[youtube] DZRUk6SV4vU: Downloading webpage
+[youtube] DZRUk6SV4vU: Downloading ios player API JSON
+[youtube] DZRUk6SV4vU: Downloading web creator player API JSON
+[debug] Loading youtube-nsig.a9d81eca from cache
+[debug] [youtube] Decrypted nsig xMMQYqVpwcm2yv6sN => tQllatR6GVlpnA
+[youtube] DZRUk6SV4vU: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/c3b6?service=YouTube&categories=%5B%22selfpromo%22%2C+%22chapter%22%2C+%22interaction%22%2C+%22sponsor%22%2C+%22outro%22%2C+%22music_offtopic%22%2C+%22poi_highlight%22%2C+%22filler%22%2C+%22preview%22%2C+%22intro%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+[SponsorBlock] Found 8 segments in the SponsorBlock database
+[info] DZRUk6SV4vU: Downloading 1 format(s): 625+140
+[info] There are no subtitles for the requested languages
+[download] Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.mp4 has already been downloaded
+[debug] ffprobe command line: ffprobe -hide_banner -show_format -show_streams -print_format json file:Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.mp4
+[ModifyChapters] Skipping ModifyChapters since the video appears to be already cut
+[Metadata] Adding metadata to "Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.mp4 -i file:Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.meta -map 0 -dn -ignore_unknown -c copy -map_metadata 1 -write_id3v1 1 -metadata "title=Apple Just Sold Me an iPhone - iPhone 16 Launch Event" -metadata "date=20240910" -metadata "description=Get 20% off DeleteMe US consumer plans when you go to http://joindeleteme.com/LTT20  and use promo code LTT20 at checkout.
+
+DeleteMe International Plans: https://international.joindeleteme.com/
+
+Checkout Paperlike at: https://paperlike.com/linustech/2409
+
+Apple's latest event was bittersweet. Sure we got some pretty big upgrades for the iPhone 16, but is the Pro REALLY worth the extra cash? And where are the Air Pods Pro 3, or the Apple Watch Ultra 3?
+
+Discuss on the forum: https://linustechtips.com/topic/1582243-apple-just-sold-me-an-iphone-iphone-16-launch-event/
+
+► GET OUR MERCH: https://lttstore.com
+► GET EXCLUSIVE CONTENT ON FLOATPLANE: https://lmg.gg/lttfloatplane
+► GET A VPN: http://www.piavpn.com/linus
+► SPONSORS, AFFILIATES, AND PARTNERS: https://lmg.gg/partners
+
+Purchases made through some store links may provide some compensation to Linus Media Group.
+
+CHAPTERS
+---------------------------------------------------
+0:00 Intro
+1:07 Air Pods
+3:29 iPhone 16
+6:00 iPhone 16 Pro
+8:15 Apple Watch
+11:00 Conclusion
+12:43 Outro" -metadata "synopsis=Get 20% off DeleteMe US consumer plans when you go to http://joindeleteme.com/LTT20  and use promo code LTT20 at checkout.
+
+DeleteMe International Plans: https://international.joindeleteme.com/
+
+Checkout Paperlike at: https://paperlike.com/linustech/2409
+
+Apple's latest event was bittersweet. Sure we got some pretty big upgrades for the iPhone 16, but is the Pro REALLY worth the extra cash? And where are the Air Pods Pro 3, or the Apple Watch Ultra 3?
+
+Discuss on the forum: https://linustechtips.com/topic/1582243-apple-just-sold-me-an-iphone-iphone-16-launch-event/
+
+► GET OUR MERCH: https://lttstore.com
+► GET EXCLUSIVE CONTENT ON FLOATPLANE: https://lmg.gg/lttfloatplane
+► GET A VPN: http://www.piavpn.com/linus
+► SPONSORS, AFFILIATES, AND PARTNERS: https://lmg.gg/partners
+
+Purchases made through some store links may provide some compensation to Linus Media Group.
+
+CHAPTERS
+---------------------------------------------------
+0:00 Intro
+1:07 Air Pods
+3:29 iPhone 16
+6:00 iPhone 16 Pro
+8:15 Apple Watch
+11:00 Conclusion
+12:43 Outro" -metadata "purl=https://www.youtube.com/watch?v=DZRUk6SV4vU" -metadata "comment=https://www.youtube.com/watch?v=DZRUk6SV4vU" -metadata "artist=Linus Tech Tips" -metadata:s:1 "language=eng" -movflags +faststart file:Apple_Just_Sold_Me_an_iPhone_-_iPhone_16_Launch_Ev.temp.mp4
+Thursday, September 19, 2024 5:21:58 PM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded>
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded>
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded>
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded>
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded>
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded>
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded>
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded>
