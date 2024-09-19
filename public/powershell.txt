@@ -1,47 +1,3 @@
-[AVFilterGraph @ 00000173f3563740] Setting 'force_style' to value 'FontName=Arial'
-[AVFilterGraph @ 00000173f3563740] No option name near '24'
-[AVFilterGraph @ 00000173f3563740] Error parsing a filter description around:
-[AVFilterGraph @ 00000173f3563740] Error parsing filterchain 'subtitles=C:\Temp\yt-dlp\losingweightiseasyactuallyenvtt:force_style=FontName=Arial,FontSize=24' around:
-[vost#0:0/libx264 @ 00000173f3580ac0] Error initializing a simple filtergraph
-Error opening output file C:\Temp\yt-dlp\losingweightiseasyactuallymp4_reencoded.mp4.
-Error opening output files: Invalid argument
-[AVIOContext @ 00000173f2f8c100] Statistics: 906007 bytes read, 0 seeks
-Monday, September 16, 2024 7:56:28 PM
-Move-Item: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_video.ps1:63
-Line |
-  63 |  Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Dest …
-     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     | Cannot find path 'C:\Temp\yt-dlp\losingweightiseasyactuallymp4_reencoded.mp4' because it does not exist.
-Monday, September 16, 2024 7:56:28 PM
-Monday, September 16, 2024 7:56:28 PM
-
-PS C:\Users\kushal\src\myhtml\fromnepal\public\notes>
-PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all -o "%(title).50s.%(ext)s" -i "https://youtu.be/aiGlxpSCMD8"; date;
-
-Monday, September 16, 2024 7:57:24 PM
-
-Drive        :
-Provider     : Microsoft.PowerShell.Core\FileSystem
-ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
-Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
-
-Monday, September 16, 2024 7:57:24 PM
-[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '-o', '%(title).50s.%(ext)s', '-i', 'https://youtu.be/aiGlxpSCMD8']
-[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
-[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
-[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
-[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
-[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
-[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
-[debug] Proxy map: {}
-[debug] Request Handlers: urllib, requests, websockets, curl_cffi
-[debug] Loaded 1830 extractors
-[youtube] Extracting URL: https://youtu.be/aiGlxpSCMD8
-[youtube] aiGlxpSCMD8: Downloading webpage
-[youtube] aiGlxpSCMD8: Downloading ios player API JSON
-[youtube] aiGlxpSCMD8: Downloading web creator player API JSON
-[debug] Loading youtube-nsig.3c3d6e4f from cache
-[debug] [youtube] Decrypted nsig hCQXA91nHcmVrguLI => 7R5FLXMtBuw4OQ
 [youtube] aiGlxpSCMD8: Downloading m3u8 information
 [info] aiGlxpSCMD8: Downloading subtitles: en
 [debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
@@ -8642,3 +8598,48 @@ Thursday, September 19, 2024 5:07:17 PM
 Thursday, September 19, 2024 5:07:17 PM
 
 PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, September 19, 2024 5:07:29 PM
+Thursday, September 19, 2024 5:07:29 PM
+On branch main
+nothing to commit, working tree clean
+Thursday, September 19, 2024 5:07:29 PM
+Thursday, September 19, 2024 5:07:29 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Thursday, September 19, 2024 5:07:29 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.6 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 515ms
+Done in 1.46s.
+Thursday, September 19, 2024 5:07:31 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, September 19, 2024 5:07:33 PM
+[main 80bf9e6] build application
+ 2 files changed, 9064 insertions(+), 9080 deletions(-)
+Thursday, September 19, 2024 5:07:33 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, September 19, 2024 5:07:34 PM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 12.46 KiB | 708.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   e153e86..80bf9e6  main -> main
+Thursday, September 19, 2024 5:07:35 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git commit --message "build application" --message "from the terminal"; date; git pull --rebase origin main; date; git push origin main; date;
