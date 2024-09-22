@@ -1,0 +1,818 @@
+analyze the following for warnings and errors 
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "C:\Users\kushal\src\angular\mycanary\"; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; Remove-Item -Path "node_modules" -Recurse -Force; date; yarn; date; yarn run ng update; date; yarn run ng build; date; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; yarn run ng test; date; yarn run ng update @angular/core @angular/cli @angular/material; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; echo y | npx update-browserslist-db@latest; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; git remote show origin; date;
+
+Sunday, September 22, 2024 3:48:25 PM
+remote: Enumerating objects: 553, done.
+remote: Counting objects: 100% (553/553), done.
+remote: Compressing objects: 100% (93/93), done.
+remote: Total 553 (delta 406), reused 513 (delta 366), pack-reused 0 (from 0)
+Receiving objects: 100% (553/553), 330.81 KiB | 7.52 MiB/s, done.
+Resolving deltas: 100% (406/406), completed with 1 local object.
+From github.com:mycanary/mycanary
+   c538f50..5eaa987  master     -> origin/master
+Sunday, September 22, 2024 3:48:26 PM
+On branch master
+Your branch is behind 'origin/master' by 116 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+Sunday, September 22, 2024 3:48:26 PM
+Sunday, September 22, 2024 3:48:26 PM
+On branch master
+Your branch is behind 'origin/master' by 116 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+Sunday, September 22, 2024 3:48:26 PM
+From github.com:mycanary/mycanary
+ * branch            master     -> FETCH_HEAD
+Updating c538f50..5eaa987
+Fast-forward
+ .nx/cache/nx_files.nxt |  Bin 4100 -> 4100 bytes
+ package.json           |   42 +-
+ yarn.lock              | 2447 +++++++++++++++++++++++-------------------------
+ 3 files changed, 1208 insertions(+), 1281 deletions(-)
+Sunday, September 22, 2024 3:48:26 PM
+Everything up-to-date
+Sunday, September 22, 2024 3:48:27 PM
+Sunday, September 22, 2024 3:48:42 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+warning " > @angular-eslint/eslint-plugin@18.3.1" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning "@angular-eslint/eslint-plugin > @angular-eslint/utils@18.3.1" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning " > @angular-eslint/eslint-plugin-template@18.3.1" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning " > @angular-eslint/schematics@18.3.1" has unmet peer dependency "@angular-devkit/core@>= 18.0.0 < 19.0.0".
+warning " > @angular-eslint/schematics@18.3.1" has unmet peer dependency "@angular-devkit/schematics@>= 18.0.0 < 19.0.0".
+[4/4] Building fresh packages...
+Done in 36.37s.
+Sunday, September 22, 2024 3:49:18 PM
+yarn run v1.22.21
+$ ng update
+Using package manager: yarn
+Collecting installed dependencies...
+Found 41 dependencies.
+    We analyzed your package.json and everything seems to be in order. Good work!
+Done in 10.51s.
+Sunday, September 22, 2024 3:49:29 PM
+yarn run v1.22.21
+$ ng build
+✔ Browser application bundle generation complete.
+✔ Copying assets complete.
+✔ Index html generation complete.
+
+Initial chunk files | Names         |  Raw size
+vendor.js           | vendor        |   5.12 MB |
+polyfills.js        | polyfills     | 152.72 kB |
+main.js             | main          |  20.71 kB |
+runtime.js          | runtime       |   6.50 kB |
+styles.css          | styles        |   2.76 kB |
+
+                    | Initial total |   5.31 MB
+
+Build at: 2024-09-22T19:50:07.760Z - Hash: d89ee6aa0657c67a - Time: 21439ms
+Done in 38.27s.
+Sunday, September 22, 2024 3:50:07 PM
+Sunday, September 22, 2024 3:50:07 PM
+Sunday, September 22, 2024 3:50:08 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Sunday, September 22, 2024 3:50:08 PM
+Sunday, September 22, 2024 3:50:08 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Sunday, September 22, 2024 3:50:08 PM
+From github.com:mycanary/mycanary
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Sunday, September 22, 2024 3:50:09 PM
+Everything up-to-date
+Sunday, September 22, 2024 3:50:10 PM
+yarn run v1.22.21
+$ ng test
+✔ Browser application bundle generation complete.
+22 09 2024 15:50:26.581:INFO [karma-server]: Karma v6.3.2 server started at http://localhost:9876/
+22 09 2024 15:50:26.583:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
+22 09 2024 15:50:26.611:INFO [launcher]: Starting browser Firefox
+22 09 2024 15:50:27.935:INFO [Firefox 129.0 (Windows 10)]: Connected on socket Gi9gfIbwllvSFTTDAAAB with id 15112245
+LOG: 'test message'
+Firefox 129.0 (Windows 10): Executed 1 of 6 SUCCESS (0 secs / 0.008 secs)
+LOG: 'second message'
+Firefox 129.0 (Windows 10): Executed 1 of 6 SUCCESS (0 secs / 0.008 secs)
+LOG: 'test message'
+Firefox 129.0 (Windows 10): Executed 2 of 6 SUCCESS (0 secs / 0.013 secs)
+Firefox 129.0 (Windows 10): Executed 6 of 6 SUCCESS (0.044 secs / 0.062 secs)
+TOTAL: 6 SUCCESS
+TOTAL: 6 SUCCESS
+Done in 19.63s.
+Sunday, September 22, 2024 3:50:30 PM
+yarn run v1.22.21
+$ ng update @angular/core @angular/cli @angular/material
+Using package manager: yarn
+Collecting installed dependencies...
+Found 41 dependencies.
+Fetching dependency metadata from registry...
+Package '@angular/core' is already up to date.
+Package '@angular/cli' is already up to date.
+Package '@angular/material' is already up to date.
+Done in 2.89s.
+Sunday, September 22, 2024 3:50:33 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Sunday, September 22, 2024 3:50:33 PM
+From github.com:mycanary/mycanary
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Sunday, September 22, 2024 3:50:33 PM
+Everything up-to-date
+Sunday, September 22, 2024 3:50:34 PM
+Latest version:     1.0.30001662
+Installed version:  none
+Removing old caniuse-lite from lock file
+Installing new caniuse-lite version
+$ yarn add -W caniuse-lite
+warning " > @angular-eslint/eslint-plugin@18.3.1" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning "@angular-eslint/eslint-plugin > @angular-eslint/utils@18.3.1" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning " > @angular-eslint/eslint-plugin-template@18.3.1" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning " > @angular-eslint/schematics@18.3.1" has unmet peer dependency "@angular-devkit/core@>= 18.0.0 < 19.0.0".
+warning " > @angular-eslint/schematics@18.3.1" has unmet peer dependency "@angular-devkit/schematics@>= 18.0.0 < 19.0.0".
+Cleaning package.json dependencies from caniuse-lite
+$ yarn remove -W caniuse-lite
+warning Pattern ["string-width@^4.2.3"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width-cjs@npm:string-width@^4.2.0"]. This could result in non-deterministic behavior, skipping.
+warning " > @angular-eslint/eslint-plugin@18.3.1" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning "@angular-eslint/eslint-plugin > @angular-eslint/utils@18.3.1" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning " > @angular-eslint/eslint-plugin-template@18.3.1" has unmet peer dependency "@typescript-eslint/utils@^7.11.0 || ^8.0.0".
+warning " > @angular-eslint/schematics@18.3.1" has unmet peer dependency "@angular-devkit/core@>= 18.0.0 < 19.0.0".
+warning " > @angular-eslint/schematics@18.3.1" has unmet peer dependency "@angular-devkit/schematics@>= 18.0.0 < 19.0.0".
+caniuse-lite has been successfully updated
+
+No target browser changes
+Sunday, September 22, 2024 3:50:57 PM
+Sunday, September 22, 2024 3:50:58 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   yarn.lock
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Sunday, September 22, 2024 3:50:58 PM
+Sunday, September 22, 2024 3:50:58 PM
+[master 206214a] add all files
+ 1 file changed, 4 insertions(+), 28 deletions(-)
+Sunday, September 22, 2024 3:50:58 PM
+From github.com:mycanary/mycanary
+ * branch            master     -> FETCH_HEAD
+Current branch master is up to date.
+Sunday, September 22, 2024 3:50:59 PM
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 407 bytes | 407.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:mycanary/mycanary.git
+   5eaa987..206214a  master -> master
+Sunday, September 22, 2024 3:51:00 PM
+* remote origin
+  Fetch URL: git@github.com:mycanary/mycanary.git
+  Push  URL: git@github.com:mycanary/mycanary.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Sunday, September 22, 2024 3:51:00 PM
+
+PS C:\Users\kushal\src\angular\mycanary>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sure, let's analyze the provided script for warnings and errors:
+
+### Warnings
+1. **Unmet Peer Dependencies**:
+   - `@angular-eslint/eslint-plugin@18.3.1` has unmet peer dependency `@typescript-eslint/utils@^7.11.0 || ^8.0.0`.
+   - `@angular-eslint/eslint-plugin-template@18.3.1` has unmet peer dependency `@typescript-eslint/utils@^7.11.0 || ^8.0.0`.
+   - `@angular-eslint/schematics@18.3.1` has unmet peer dependencies:
+     - `@angular-devkit/core@>= 18.0.0 < 19.0.0`
+     - `@angular-devkit/schematics@>= 18.0.0 < 19.0.0`
+
+2. **Non-deterministic Behavior Warning**:
+   - Pattern `["string-width@^4.2.3"]` is trying to unpack in the same destination as pattern `["string-width-cjs@npm:string-width@^4.2.0"]`. This could result in non-deterministic behavior.
+
+### Errors
+There are no explicit errors in the provided script. However, there are a few points to consider:
+
+1. **Branch Behind Warning**:
+   - Your branch is behind `origin/master` by 116 commits. Ensure you pull the latest changes before making further commits.
+
+2. **Changes Not Staged for Commit**:
+   - After updating `caniuse-lite`, the `yarn.lock` file was modified but not staged for commit. Make sure to add and commit this file to keep your dependencies consistent.
+
+### Recommendations
+- **Resolve Peer Dependencies**: Install the missing peer dependencies to avoid potential issues.
+- **Address Non-deterministic Behavior**: Investigate the warning about `string-width` to ensure it doesn't cause any unexpected behavior.
+- **Keep Branch Updated**: Regularly pull the latest changes from `origin/master` to keep your branch up-to-date.
+- **Commit All Changes**: Ensure all modified files, like `yarn.lock`, are staged and committed to maintain consistency.
+
+If you need further assistance with any specific part, feel free to ask!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+What causes these unmet peer dependency things? What is the fix? Here is my package dot json 
+
+{
+  "name": "mycanary",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^18.2.5",
+    "@angular/cdk": "^18.2.5",
+    "@angular/common": "^18.2.5",
+    "@angular/compiler": "^18.2.5",
+    "@angular/core": "^18.2.5",
+    "@angular/forms": "^18.2.5",
+    "@angular/localize": "^18.2.5",
+    "@angular/material": "^18.2.5",
+    "@angular/platform-browser": "^18.2.5",
+    "@angular/platform-browser-dynamic": "^18.2.5",
+    "@angular/router": "^18.2.5",
+    "@angular/service-worker": "^18.2.5",
+    "karma-firefox-launcher": "^1.3.0",
+    "karma-spec-reporter": "^0.0.32",
+    "rxjs": "~6.6.7",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.14.10"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^18.2.5",
+    "@angular-eslint/builder": "18.3.1",
+    "@angular-eslint/eslint-plugin": "18.3.1",
+    "@angular-eslint/eslint-plugin-template": "18.3.1",
+    "@angular-eslint/schematics": "18.3.1",
+    "@angular-eslint/template-parser": "18.3.1",
+    "@angular/cli": "^18.2.5",
+    "@angular/compiler-cli": "^18.2.5",
+    "@types/jasmine": "~3.5.0",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "eslint": "^8.57.0",
+    "jasmine-core": "~3.6.0",
+    "jasmine-spec-reporter": "~5.0.0",
+    "karma": "~6.3.2",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage-istanbul-reporter": "~3.0.2",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "protractor": "~7.0.0",
+    "ts-node": "~8.3.0",
+    "typescript": "~5.4.5"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Unmet peer dependencies occur when a package requires a specific version of another package, but that version is not installed. This can lead to potential issues or unexpected behavior in your project.
+
+### Causes
+1. **Version Mismatch**: The required version of a dependency is not compatible with the installed version.
+2. **Missing Dependencies**: The required dependency is not installed at all.
+3. **Peer Dependency Conflicts**: Multiple packages require different versions of the same dependency.
+
+### Fixes
+1. **Install Missing Peer Dependencies**: Manually install the required versions of the missing peer dependencies.
+2. **Update Dependencies**: Ensure all your dependencies are compatible with each other by updating them to the latest versions.
+
+### Steps to Fix Unmet Peer Dependencies
+1. **Identify Missing Dependencies**: Check the warnings to identify which dependencies are missing.
+2. **Install Missing Dependencies**: Use `yarn` or `npm` to install the missing dependencies.
+
+For your specific case, you can run the following commands to fix the unmet peer dependencies:
+
+```sh
+# Install the required versions of @typescript-eslint/utils
+yarn add @typescript-eslint/utils@^7.11.0
+
+# Install the required versions of @angular-devkit/core and @angular-devkit/schematics
+yarn add @angular-devkit/core@^18.0.0 @angular-devkit/schematics@^18.0.0
+```
+
+### Example Commands
+```sh
+yarn add @typescript-eslint/utils@^7.11.0
+yarn add @angular-devkit/core@^18.0.0 @angular-devkit/schematics@^18.0.0
+```
+
+After running these commands, the warnings about unmet peer dependencies should be resolved. If you encounter any further issues, feel free to ask!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+here is the new run after the change. did it work? 
+
+PS C:\Users\kushal\src\angular\mycanary> cd "C:\Users\kushal\src\angular\mycanary\"; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; Remove-Item -Path "node_modules" -Recurse -Force; date; yarn; date; yarn run ng update; date; yarn run ng build; date; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; yarn run ng test; date; yarn run ng update @angular/core @angular/cli @angular/material; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; echo y | npx update-browserslist-db@latest; date; git fetch; date; git status; date; date; git add .; git commit --message "add all files" --message "update from terminal"; date; git pull --rebase origin master; date; git push origin master; date; git remote show origin; date;
+
+Sunday, September 22, 2024 3:54:43 PM
+Sunday, September 22, 2024 3:54:44 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   package.json
+        modified:   yarn.lock
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Sunday, September 22, 2024 3:54:44 PM
+Sunday, September 22, 2024 3:54:44 PM
+[master 4dacc27] add all files
+ 2 files changed, 56 insertions(+), 3 deletions(-)
+Sunday, September 22, 2024 3:54:44 PM
+From github.com:mycanary/mycanary
+ * branch            master     -> FETCH_HEAD
+Current branch master is up to date.
+Sunday, September 22, 2024 3:54:44 PM
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.49 KiB | 380.00 KiB/s, done.
+Total 4 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To github.com:mycanary/mycanary.git
+   206214a..4dacc27  master -> master
+Sunday, September 22, 2024 3:54:45 PM
+Sunday, September 22, 2024 3:54:57 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+warning Pattern ["string-width@^4.2.3"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width-cjs@npm:string-width@^4.2.0"]. This could result in non-deterministic behavior, skipping.
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+Done in 21.43s.
+Sunday, September 22, 2024 3:55:18 PM
+yarn run v1.22.21
+$ ng update
+Using package manager: yarn
+Collecting installed dependencies...
+Found 44 dependencies.
+    We analyzed your package.json and everything seems to be in order. Good work!
+Done in 10.91s.
+Sunday, September 22, 2024 3:55:29 PM
+yarn run v1.22.21
+$ ng build
+✔ Browser application bundle generation complete.
+✔ Copying assets complete.
+✔ Index html generation complete.
+
+Initial chunk files | Names         |  Raw size
+vendor.js           | vendor        |   5.12 MB |
+polyfills.js        | polyfills     | 152.72 kB |
+main.js             | main          |  20.71 kB |
+runtime.js          | runtime       |   6.50 kB |
+styles.css          | styles        |   2.76 kB |
+
+                    | Initial total |   5.31 MB
+
+Build at: 2024-09-22T19:56:00.027Z - Hash: 4883646c6a4c0cdb - Time: 12980ms
+Done in 30.21s.
+Sunday, September 22, 2024 3:56:00 PM
+Sunday, September 22, 2024 3:56:00 PM
+Sunday, September 22, 2024 3:56:00 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Sunday, September 22, 2024 3:56:00 PM
+Sunday, September 22, 2024 3:56:00 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Sunday, September 22, 2024 3:56:00 PM
+From github.com:mycanary/mycanary
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Sunday, September 22, 2024 3:56:01 PM
+Everything up-to-date
+Sunday, September 22, 2024 3:56:02 PM
+yarn run v1.22.21
+$ ng test
+✔ Browser application bundle generation complete.
+22 09 2024 15:56:12.804:INFO [karma-server]: Karma v6.3.2 server started at http://localhost:9876/
+22 09 2024 15:56:12.806:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
+22 09 2024 15:56:12.830:INFO [launcher]: Starting browser Firefox
+22 09 2024 15:56:14.240:INFO [Firefox 129.0 (Windows 10)]: Connected on socket WBLhw5I7IOgzaZlwAAAB with id 82938009
+LOG: 'test message'
+Firefox 129.0 (Windows 10): Executed 3 of 6 SUCCESS (0 secs / 0.038 secs)
+LOG: 'second message'
+Firefox 129.0 (Windows 10): Executed 3 of 6 SUCCESS (0 secs / 0.038 secs)
+LOG: 'test message'
+Firefox 129.0 (Windows 10): Executed 4 of 6 SUCCESS (0 secs / 0.041 secs)
+Firefox 129.0 (Windows 10): Executed 6 of 6 SUCCESS (0.048 secs / 0.045 secs)
+TOTAL: 6 SUCCESS
+TOTAL: 6 SUCCESS
+Done in 12.81s.
+Sunday, September 22, 2024 3:56:15 PM
+yarn run v1.22.21
+$ ng update @angular/core @angular/cli @angular/material
+Using package manager: yarn
+Collecting installed dependencies...
+Found 44 dependencies.
+Fetching dependency metadata from registry...
+Package '@angular/core' is already up to date.
+Package '@angular/cli' is already up to date.
+Package '@angular/material' is already up to date.
+Done in 2.27s.
+Sunday, September 22, 2024 3:56:17 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Sunday, September 22, 2024 3:56:17 PM
+From github.com:mycanary/mycanary
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Sunday, September 22, 2024 3:56:18 PM
+Everything up-to-date
+Sunday, September 22, 2024 3:56:18 PM
+Latest version:     1.0.30001662
+Installed version:  none
+Removing old caniuse-lite from lock file
+Installing new caniuse-lite version
+$ yarn add -W caniuse-lite
+warning Pattern ["string-width@^4.2.3"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width-cjs@npm:string-width@^4.2.0"]. This could result in non-deterministic behavior, skipping.
+Cleaning package.json dependencies from caniuse-lite
+$ yarn remove -W caniuse-lite
+warning Pattern ["string-width@^4.2.3"] is trying to unpack in the same destination "C:\\Users\\kushal\\AppData\\Local\\Yarn\\Cache\\v6\\npm-string-width-cjs-4.2.3-269c7117d27b05ad2e536830a8ec895ef9c6d010-integrity\\node_modules\\string-width-cjs" as pattern ["string-width-cjs@npm:string-width@^4.2.0"]. This could result in non-deterministic behavior, skipping.
+caniuse-lite has been successfully updated
+
+No target browser changes
+Sunday, September 22, 2024 3:56:36 PM
+Sunday, September 22, 2024 3:56:36 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Sunday, September 22, 2024 3:56:37 PM
+Sunday, September 22, 2024 3:56:37 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Sunday, September 22, 2024 3:56:37 PM
+From github.com:mycanary/mycanary
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Sunday, September 22, 2024 3:56:37 PM
+Everything up-to-date
+Sunday, September 22, 2024 3:56:38 PM
+* remote origin
+  Fetch URL: git@github.com:mycanary/mycanary.git
+  Push  URL: git@github.com:mycanary/mycanary.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Sunday, September 22, 2024 3:56:38 PM
+
+PS C:\Users\kushal\src\angular\mycanary>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+It looks like the changes you made have resolved the unmet peer dependency warnings! Here are the key points from the new run:
+
+### Successes
+1. **No Unmet Peer Dependency Warnings**: The previous warnings about unmet peer dependencies for `@typescript-eslint/utils`, `@angular-devkit/core`, and `@angular-devkit/schematics` are no longer present.
+2. **Build and Tests**: The build and tests ran successfully without any issues.
+3. **Updates**: The `ng update` commands for `@angular/core`, `@angular/cli`, and `@angular/material` confirmed that these packages are up to date.
+
+### Remaining Warnings
+- **Non-deterministic Behavior Warning**: The warning about `string-width` still persists. This is related to the pattern conflict in the Yarn cache. While this warning doesn't necessarily indicate a critical issue, it might be worth investigating further to ensure it doesn't cause any unexpected behavior.
+
+### Recommendations
+- **Investigate `string-width` Warning**: Look into the conflicting patterns for `string-width` to resolve the non-deterministic behavior warning. This might involve checking the versions of `string-width` and `string-width-cjs` in your dependencies and ensuring they are compatible.
+
+Overall, it seems like you've successfully addressed the major issues. If you need any further assistance, feel free to ask!
+
+
+
+
