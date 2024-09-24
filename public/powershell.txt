@@ -1,58 +1,3 @@
-[mp4 @ 000001cb963de440] Starting second pass: moving the moov atom to the beginning of the file
-[out#0/mp4 @ 000001cb9688eec0] video:6886KiB audio:1385KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 1.169991%
-frame= 2656 fps=261 q=-1.0 Lsize=    8367KiB time=00:01:28.46 bitrate= 774.8kbits/s speed=8.69x
-[libx264 @ 000001cb9688e7c0] frame I:11    Avg QP:11.92  size: 33177
-[libx264 @ 000001cb9688e7c0] frame P:729   Avg QP:14.70  size:  4968
-[libx264 @ 000001cb9688e7c0] frame B:1916  Avg QP:17.50  size:  1599
-[libx264 @ 000001cb9688e7c0] consecutive B-frames:  2.2%  3.3%  4.7% 89.8%
-[libx264 @ 000001cb9688e7c0] mb I  I16..4: 52.4% 41.2%  6.4%
-[libx264 @ 000001cb9688e7c0] mb P  I16..4:  2.8%  5.5%  0.2%  P16..4:  5.4%  1.3%  0.4%  0.0%  0.0%    skip:84.4%
-[libx264 @ 000001cb9688e7c0] mb B  I16..4:  0.3%  0.3%  0.0%  B16..8:  5.8%  0.5%  0.0%  direct: 1.0%  skip:92.1%  L0:47.9% L1:48.9% BI: 3.2%
-[libx264 @ 000001cb9688e7c0] 8x8 transform intra:59.4% inter:93.3%
-[libx264 @ 000001cb9688e7c0] coded y,uvDC,uvAC intra: 13.2% 40.5% 11.2% inter: 0.8% 2.7% 0.0%
-[libx264 @ 000001cb9688e7c0] i16 v,h,dc,p: 54% 35%  4%  7%
-[libx264 @ 000001cb9688e7c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 30% 16% 41%  1%  2%  2%  3%  2%  2%
-[libx264 @ 000001cb9688e7c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 30% 24% 15%  3%  6%  6%  7%  4%  4%
-[libx264 @ 000001cb9688e7c0] i8c dc,h,v,p: 49% 28% 17%  7%
-[libx264 @ 000001cb9688e7c0] Weighted P-Frames: Y:0.1% UV:0.0%
-[libx264 @ 000001cb9688e7c0] ref P L0: 70.4%  8.3% 16.1%  5.3%
-[libx264 @ 000001cb9688e7c0] ref B L0: 85.2% 13.0%  1.8%
-[libx264 @ 000001cb9688e7c0] ref B L1: 96.2%  3.8%
-[libx264 @ 000001cb9688e7c0] kb/s:637.08
-[aac @ 000001cb963e1940] Qavg: 1393.629
-Saturday, September 21, 2024 2:49:23 PM
-Saturday, September 21, 2024 2:49:23 PM
-Saturday, September 21, 2024 2:49:23 PM
-
-PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_video.ps1  -url "https://www.instagram.com/reel/C_gM1zEI99G"
-
-Saturday, September 21, 2024 2:50:21 PM
-
-PSPath              : Microsoft.PowerShell.Core\FileSystem::C:\Temp\yt-dlp
-PSParentPath        : Microsoft.PowerShell.Core\FileSystem::C:\Temp
-PSChildName         : yt-dlp
-PSDrive             : C
-PSProvider          : Microsoft.PowerShell.Core\FileSystem
-PSIsContainer       : True
-Name                : yt-dlp
-Parent              : C:\Temp
-Root                : C:\
-Exists              : True
-FullName            : C:\Temp\yt-dlp
-Extension           :
-CreationTime        : 9/21/2024 2:50:21 PM
-CreationTimeUtc     : 9/21/2024 6:50:21 PM
-LastAccessTime      : 9/21/2024 2:50:21 PM
-LastAccessTimeUtc   : 9/21/2024 6:50:21 PM
-LastWriteTime       : 9/21/2024 2:50:21 PM
-LastWriteTimeUtc    : 9/21/2024 6:50:21 PM
-LinkTarget          :
-UnixFileMode        : -1
-Attributes          : Directory
-Mode                : d----
-ModeWithoutHardLink : d----
-BaseName            : yt-dlp
-ResolvedTarget      : C:\Temp\yt-dlp
 Target              :
 LinkType            :
 
@@ -8543,4 +8488,58 @@ sys     0m0.021s
 kushal@kusfedoravm:~$ exit
 logout
 Connection to kusfedoravm closed.
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
+
+Monday, September 23, 2024 8:44:01 PM
+Monday, September 23, 2024 8:44:01 PM
+On branch main
+nothing to commit, working tree clean
+Monday, September 23, 2024 8:44:01 PM
+Monday, September 23, 2024 8:44:01 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Monday, September 23, 2024 8:44:01 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.6 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 633ms
+Done in 1.67s.
+Monday, September 23, 2024 8:44:03 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Monday, September 23, 2024 8:44:06 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/powershell.txt
+        modified:   public/powershell.txt
+
+Monday, September 23, 2024 8:44:06 PM
+[main 7f2a99b] build application
+ 2 files changed, 386 insertions(+), 354 deletions(-)
+Monday, September 23, 2024 8:44:06 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Monday, September 23, 2024 8:44:07 PM
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.49 KiB | 380.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   e6b889f..7f2a99b  main -> main
+Monday, September 23, 2024 8:44:08 PM
+
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
