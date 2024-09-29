@@ -1923,3 +1923,1046 @@ Saturday, September 28, 2024 9:42:35 PM
 Saturday, September 28, 2024 9:42:47 PM
 
 PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
+
+Saturday, September 28, 2024 9:42:56 PM
+Saturday, September 28, 2024 9:42:57 PM
+On branch main
+nothing to commit, working tree clean
+Saturday, September 28, 2024 9:42:57 PM
+Saturday, September 28, 2024 9:42:57 PM
+Saturday, September 28, 2024 9:43:00 PM
+Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
+Saturday, September 28, 2024 9:43:00 PM
+Saturday, September 28, 2024 9:43:00 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Saturday, September 28, 2024 9:43:00 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 733ms
+Done in 1.67s.
+Saturday, September 28, 2024 9:43:02 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Saturday, September 28, 2024 9:43:05 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/notes/earth.jpeg
+        modified:   docs/powershell.txt
+        modified:   public/notes/earth.jpeg
+        modified:   public/powershell.txt
+
+Saturday, September 28, 2024 9:43:05 PM
+[main 74d263a] build application
+ 4 files changed, 870 insertions(+)
+Saturday, September 28, 2024 9:43:06 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Saturday, September 28, 2024 9:43:06 PM
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 9.45 MiB | 4.16 MiB/s, done.
+Total 7 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   ba4f354..74d263a  main -> main
+Saturday, September 28, 2024 9:43:10 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_video.ps1  -url "https://youtu.be/pg4Z1M_GjhQ"
+
+Sunday, September 29, 2024 7:01:00 AM
+
+PSPath              : Microsoft.PowerShell.Core\FileSystem::C:\Temp\yt-dlp
+PSParentPath        : Microsoft.PowerShell.Core\FileSystem::C:\Temp
+PSChildName         : yt-dlp
+PSDrive             : C
+PSProvider          : Microsoft.PowerShell.Core\FileSystem
+PSIsContainer       : True
+Name                : yt-dlp
+Parent              : C:\Temp
+Root                : C:\
+Exists              : True
+FullName            : C:\Temp\yt-dlp
+Extension           :
+CreationTime        : 9/29/2024 7:01:00 AM
+CreationTimeUtc     : 9/29/2024 11:01:00 AM
+LastAccessTime      : 9/29/2024 7:01:00 AM
+LastAccessTimeUtc   : 9/29/2024 11:01:00 AM
+LastWriteTime       : 9/29/2024 7:01:00 AM
+LastWriteTimeUtc    : 9/29/2024 11:01:00 AM
+LinkTarget          :
+UnixFileMode        : -1
+Attributes          : Directory
+Mode                : d----
+ModeWithoutHardLink : d----
+BaseName            : yt-dlp
+ResolvedTarget      : C:\Temp\yt-dlp
+Target              :
+LinkType            :
+
+Sunday, September 29, 2024 7:01:00 AM
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title).50s.%(ext)s', 'https://youtu.be/pg4Z1M_GjhQ']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://youtu.be/pg4Z1M_GjhQ
+[youtube] pg4Z1M_GjhQ: Downloading webpage
+[youtube] pg4Z1M_GjhQ: Downloading ios player API JSON
+[youtube] pg4Z1M_GjhQ: Downloading web creator player API JSON
+[debug] Loading youtube-nsig.b0557ce3 from cache
+[debug] [youtube] Decrypted nsig EtTYylYNJfpEvw6p_ => NEcS2DmGZLBhwg
+[youtube] pg4Z1M_GjhQ: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/6d0b?service=YouTube&categories=%5B%22interaction%22%2C+%22selfpromo%22%2C+%22chapter%22%2C+%22filler%22%2C+%22music_offtopic%22%2C+%22poi_highlight%22%2C+%22preview%22%2C+%22intro%22%2C+%22sponsor%22%2C+%22outro%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+WARNING: Some SponsorBlock segments are from a video of different duration, maybe from an old version of this video
+[SponsorBlock] No matching segments were found in the SponsorBlock database
+[info] Testing format 616
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 132
+[download] Destination: C:\Users\kushal\src\myhtml\fromnepal\public\notes\tmpfijd5y52.tmp
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of    712.00B in 00:00:00 at 2.85KiB/s
+[info] pg4Z1M_GjhQ: Downloading 1 format(s): 616+140
+[info] There are no subtitles for the requested languages
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1727629264/ei/cDP5Zqy9Bqm1kucPrLatIA/ip/70.104.195.206/id/a60e19d4cfc68e14/itag/616/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D280956470%3Bdur%3D794.226%3Bgir%3Dyes%3Bitag%3D356%3Blmt%3D1727586106997740/rqh/1/hls_chunk_host/rr7---sn-8xgp1vo-gpje.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/hcs/ir,sd/mh/vE/mm/31,29/mn/sn-8xgp1vo-gpje,sn-8xgp1vo-p5qs/ms/au,rdu/mv/m/mvi/7/pcm2cms/yes/pl/20/rmhost/rr6---sn-8xgp1vo-gpje.googlevideo.com,/smhost/,rr8---sn-8xgp1vo-p5qee.googlevideo.com/gcr/us/initcwndbps/1068750/vprv/1/playlist_type/DVR/dover/13/txp/3308224/mt/1727607423/fvip/2/short_key/1/keepalive/yes/fexp/51299152/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,gcr,vprv,playlist_type/sig/AJfQdSswRgIhAP8TmINtUM-q0RNwtPr9Zq2b86DKUQrGdOlJSbxfGFC7AiEA5rGza-ieG0wntAP3ZvTdmY7ARIs16Q1uXCNceyfUtJo%3D/lsparams/hls_chunk_host,hcs,mh,mm,mn,ms,mv,mvi,pcm2cms,pl,rmhost,smhost,initcwndbps/lsig/ABPmVW0wRgIhAN0ZOr4D4mWyqNkvePR9KqQLaE9X8-PnNRaVmV3m7RrqAiEAvqNfxuw_gifUaCi3auncrdcMOKn6-kT4BP4CPkBdooY%3D/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 132
+[download] Destination: C:\Temp\yt-dlp\Harris_and_Trump_Rallies_Cold_Open_-_SNL.f616.mp4
+[download] 100% of  268.06MiB in 00:00:38 at 6.97MiB/s
+[debug] Invoking http downloader on "https://rr7---sn-8xgp1vo-gpje.googlevideo.com/videoplayback?expire=1727629264&ei=cDP5Zqy9Bqm1kucPrLatIA&ip=70.104.195.206&id=o-AFBP9lZ3zJHpXVVG1R6wKhogL0SAFdS1CRh_MKe1qcgE&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&hcs=ir%2Csd&mh=vE&mm=31%2C29&mn=sn-8xgp1vo-gpje%2Csn-8xgp1vo-p5qs&ms=au%2Crdu&mv=m&mvi=7&pcm2cms=yes&pl=20&rmhost=rr6---sn-8xgp1vo-gpje.googlevideo.com%2C&smhost=%2Crr8---sn-8xgp1vo-p5qee.googlevideo.com&gcr=us&initcwndbps=1068750&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=12855047&dur=794.261&lmt=1727585245312721&mt=1727607423&fvip=2&keepalive=yes&fexp=51299152&c=IOS&txp=3308224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cgcr%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgaka2wsCPtPtBRRjrZXm9ijlqTVdARQgU41z_PicQpqYCIQCj-zqfaf3Qhz392JwbMgPsBa1bQ-51jtzT2nNazhqWQg%3D%3D&lsparams=hcs%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Crmhost%2Csmhost%2Cinitcwndbps&lsig=ABPmVW0wRAIgAxBAJDo7ofTt2A5iOLHEUrlJrFMzO5RDTzQUUxxrvBsCIE6B6Vz-UdAzNZinyRguY4vMKXDvQ12ICsqx3IGTjSIx"
+[download] Destination: C:\Temp\yt-dlp\Harris_and_Trump_Rallies_Cold_Open_-_SNL.f140.m4a
+[download] 100% of   12.26MiB in 00:00:00 at 13.51MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\Harris_and_Trump_Rallies_Cold_Open_-_SNL.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Harris_and_Trump_Rallies_Cold_Open_-_SNL.f616.mp4 -i file:C:\Temp\yt-dlp\Harris_and_Trump_Rallies_Cold_Open_-_SNL.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\Harris_and_Trump_Rallies_Cold_Open_-_SNL.temp.mp4
+Deleting original file C:\Temp\yt-dlp\Harris_and_Trump_Rallies_Cold_Open_-_SNL.f616.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\Harris_and_Trump_Rallies_Cold_Open_-_SNL.f140.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Harris_and_Trump_Rallies_Cold_Open_-_SNL.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Harris_and_Trump_Rallies_Cold_Open_-_SNL.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Harris and Trump Rallies Cold Open - SNL" -metadata "date=20240929" -metadata "description=News anchor David Muir (Andrew Dismukes) checks in with Kamala Harris (Maya Rudolph), Tim Walz (Jim Gaffigan), Doug Emhoff (Andy Samberg), Donald Trump (James Austin Johnson), JD Vance (Bowen Yang) and Joe Biden (Dana Carvey) at Harris' and Trump's campaign rallies.
+
+Saturday Night Live. Stream now on Peacock: https://pck.tv/3n1IyzK
+
+Subscribe to SNL: https://goo.gl/tUsXwM
+Stream Current Full Episodes: http://www.nbc.com/saturday-night-live
+
+WATCH PAST SNL SEASONS
+Google Play - http://bit.ly/SNLGooglePlay
+iTunes - http://bit.ly/SNLiTunes
+
+SNL ON SOCIAL
+SNL Instagram: http://instagram.com/nbcsnl
+SNL Facebook: https://www.facebook.com/snl
+SNL Twitter: https://twitter.com/nbcsnl
+SNL TikTok: https://www.tiktok.com/@nbcsnl
+
+GET MORE NBC
+Like NBC: http://Facebook.com/NBC
+Follow NBC: http://Twitter.com/NBC
+NBC Tumblr: http://NBCtv.tumblr.com/
+YouTube: http://www.youtube.com/nbc
+NBC Instagram: http://instagram.com/nbc
+
+#SNL #JeanSmart #JellyRoll #SNL50" -metadata "synopsis=News anchor David Muir (Andrew Dismukes) checks in with Kamala Harris (Maya Rudolph), Tim Walz (Jim Gaffigan), Doug Emhoff (Andy Samberg), Donald Trump (James Austin Johnson), JD Vance (Bowen Yang) and Joe Biden (Dana Carvey) at Harris' and Trump's campaign rallies.
+
+Saturday Night Live. Stream now on Peacock: https://pck.tv/3n1IyzK
+
+Subscribe to SNL: https://goo.gl/tUsXwM
+Stream Current Full Episodes: http://www.nbc.com/saturday-night-live
+
+WATCH PAST SNL SEASONS
+Google Play - http://bit.ly/SNLGooglePlay
+iTunes - http://bit.ly/SNLiTunes
+
+SNL ON SOCIAL
+SNL Instagram: http://instagram.com/nbcsnl
+SNL Facebook: https://www.facebook.com/snl
+SNL Twitter: https://twitter.com/nbcsnl
+SNL TikTok: https://www.tiktok.com/@nbcsnl
+
+GET MORE NBC
+Like NBC: http://Facebook.com/NBC
+Follow NBC: http://Twitter.com/NBC
+NBC Tumblr: http://NBCtv.tumblr.com/
+YouTube: http://www.youtube.com/nbc
+NBC Instagram: http://instagram.com/nbc
+
+#SNL #JeanSmart #JellyRoll #SNL50" -metadata "purl=https://www.youtube.com/watch?v=pg4Z1M_GjhQ" -metadata "comment=https://www.youtube.com/watch?v=pg4Z1M_GjhQ" -metadata "artist=Saturday Night Live" -movflags +faststart file:C:\Temp\yt-dlp\Harris_and_Trump_Rallies_Cold_Open_-_SNL.temp.mp4
+Sunday, September 29, 2024 7:01:45 AM
+Sunday, September 29, 2024 7:01:45 AM
+Sunday, September 29, 2024 7:01:45 AM
+
+LastWriteTime : 9/29/2024 12:47:25 AM
+Length        : 294308261
+Name          : Harris_and_Trump_Rallies_Cold_Open_-_SNL.mp4
+
+
+LastWriteTime : 9/29/2024 12:47:25 AM
+Length        : 294308261
+Name          : Harris_and_Trump_Rallies_Cold_Open_-_SNL.mp4
+
+Cleaned video name: HarrisandTrumpRalliesColdOpenSNLmp4
+Cleaned video path: C:\Temp\yt-dlp\HarrisandTrumpRalliesColdOpenSNLmp4
+Running ffmpeg without subtitles
+ffmpeg -i "C:\Temp\yt-dlp\HarrisandTrumpRalliesColdOpenSNLmp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\HarrisandTrumpRalliesColdOpenSNLmp4_reencoded.mp4"
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\HarrisandTrumpRalliesColdOpenSNLmp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Harris and Trump Rallies Cold Open - SNL
+    artist          : Saturday Night Live
+    date            : 20240929
+    encoder         : Lavf61.1.100
+    comment         : https://www.youtube.com/watch?v=pg4Z1M_GjhQ
+    description     : News anchor David Muir (Andrew Dismukes) checks in with Kamala Harris (Maya Rudolph), Tim Walz (Jim Gaffigan), Doug Emhoff (Andy Samberg), Donald Trump (James Austin Johnson), JD Vance (Bowen Yang) and Joe Biden (Dana Carvey) at Harris' and Trump's campai
+                    :
+                    : Saturday Night Live. Stream now on Peacock: https://pck.tv/3n1IyzK
+                    :
+                    : Subscribe to SNL: https://goo.gl/tUsXwM
+                    : Stream Current Full Episodes: http://www.nbc.com/saturday-night-live
+                    :
+                    : WATCH PAST SNL SEASONS
+                    : Google Play - http://bit.ly/SNLGooglePlay
+                    : iTunes - http://bit.ly/SNLiTunes
+                    :
+                    : SNL ON SOCIAL
+                    : SNL Instagram: http://instagram.com/nbcsnl
+                    : SNL Facebook: https://www.facebook.com/snl
+                    : SNL Twitter: https://twitter.com/nbcsnl
+                    : SNL TikTok: https://www.tiktok.com/@nbcsnl
+                    :
+                    : GET MORE NBC
+                    : Like NBC: http://Facebook.com/NBC
+                    : Follow NBC: http://Twitter.com/NBC
+                    : NBC Tumblr: http://NBCtv.tumblr.com/
+                    : YouTube: http://www.youtube.com/nbc
+                    : NBC Instagram: http://instagram.com/nbc
+                    :
+                    : #SNL #JeanSmart #JellyRoll #SNL50
+    synopsis        : News anchor David Muir (Andrew Dismukes) checks in with Kamala Harris (Maya Rudolph), Tim Walz (Jim Gaffigan), Doug Emhoff (Andy Samberg), Donald Trump (James Austin Johnson), JD Vance (Bowen Yang) and Joe Biden (Dana Carvey) at Harris' and Trump's campai
+                    :
+                    : Saturday Night Live. Stream now on Peacock: https://pck.tv/3n1IyzK
+                    :
+                    : Subscribe to SNL: https://goo.gl/tUsXwM
+                    : Stream Current Full Episodes: http://www.nbc.com/saturday-night-live
+                    :
+                    : WATCH PAST SNL SEASONS
+                    : Google Play - http://bit.ly/SNLGooglePlay
+                    : iTunes - http://bit.ly/SNLiTunes
+                    :
+                    : SNL ON SOCIAL
+                    : SNL Instagram: http://instagram.com/nbcsnl
+                    : SNL Facebook: https://www.facebook.com/snl
+                    : SNL Twitter: https://twitter.com/nbcsnl
+                    : SNL TikTok: https://www.tiktok.com/@nbcsnl
+                    :
+                    : GET MORE NBC
+                    : Like NBC: http://Facebook.com/NBC
+                    : Follow NBC: http://Twitter.com/NBC
+                    : NBC Tumblr: http://NBCtv.tumblr.com/
+                    : YouTube: http://www.youtube.com/nbc
+                    : NBC Instagram: http://instagram.com/nbc
+                    :
+                    : #SNL #JeanSmart #JellyRoll #SNL50
+  Duration: 00:13:14.26, start: 0.000000, bitrate: 2964 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1920x1080, 2828 kb/s, 29.97 fps, 29.97 tbr, 16k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 09/29/2024.
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 127 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000022f2e470240] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000022f2e470240] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0000022f2e470240] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\HarrisandTrumpRalliesColdOpenSNLmp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Harris and Trump Rallies Cold Open - SNL
+    artist          : Saturday Night Live
+    date            : 20240929
+    synopsis        : News anchor David Muir (Andrew Dismukes) checks in with Kamala Harris (Maya Rudolph), Tim Walz (Jim Gaffigan), Doug Emhoff (Andy Samberg), Donald Trump (James Austin Johnson), JD Vance (Bowen Yang) and Joe Biden (Dana Carvey) at Harris' and Trump's campai
+                    :
+                    : Saturday Night Live. Stream now on Peacock: https://pck.tv/3n1IyzK
+                    :
+                    : Subscribe to SNL: https://goo.gl/tUsXwM
+                    : Stream Current Full Episodes: http://www.nbc.com/saturday-night-live
+                    :
+                    : WATCH PAST SNL SEASONS
+                    : Google Play - http://bit.ly/SNLGooglePlay
+                    : iTunes - http://bit.ly/SNLiTunes
+                    :
+                    : SNL ON SOCIAL
+                    : SNL Instagram: http://instagram.com/nbcsnl
+                    : SNL Facebook: https://www.facebook.com/snl
+                    : SNL Twitter: https://twitter.com/nbcsnl
+                    : SNL TikTok: https://www.tiktok.com/@nbcsnl
+                    :
+                    : GET MORE NBC
+                    : Like NBC: http://Facebook.com/NBC
+                    : Follow NBC: http://Twitter.com/NBC
+                    : NBC Tumblr: http://NBCtv.tumblr.com/
+                    : YouTube: http://www.youtube.com/nbc
+                    : NBC Instagram: http://instagram.com/nbc
+                    :
+                    : #SNL #JeanSmart #JellyRoll #SNL50
+    comment         : https://www.youtube.com/watch?v=pg4Z1M_GjhQ
+    description     : News anchor David Muir (Andrew Dismukes) checks in with Kamala Harris (Maya Rudolph), Tim Walz (Jim Gaffigan), Doug Emhoff (Andy Samberg), Donald Trump (James Austin Johnson), JD Vance (Bowen Yang) and Joe Biden (Dana Carvey) at Harris' and Trump's campai
+                    :
+                    : Saturday Night Live. Stream now on Peacock: https://pck.tv/3n1IyzK
+                    :
+                    : Subscribe to SNL: https://goo.gl/tUsXwM
+                    : Stream Current Full Episodes: http://www.nbc.com/saturday-night-live
+                    :
+                    : WATCH PAST SNL SEASONS
+                    : Google Play - http://bit.ly/SNLGooglePlay
+                    : iTunes - http://bit.ly/SNLiTunes
+                    :
+                    : SNL ON SOCIAL
+                    : SNL Instagram: http://instagram.com/nbcsnl
+                    : SNL Facebook: https://www.facebook.com/snl
+                    : SNL Twitter: https://twitter.com/nbcsnl
+                    : SNL TikTok: https://www.tiktok.com/@nbcsnl
+                    :
+                    : GET MORE NBC
+                    : Like NBC: http://Facebook.com/NBC
+                    : Follow NBC: http://Twitter.com/NBC
+                    : NBC Tumblr: http://NBCtv.tumblr.com/
+                    : YouTube: http://www.youtube.com/nbc
+                    : NBC Instagram: http://instagram.com/nbc
+                    :
+                    : #SNL #JeanSmart #JellyRoll #SNL50
+    encoder         : Lavf61.1.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080, q=2-31, 29.97 fps, 30k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 09/29/2024.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 0000022f2e429580] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000022f2e429e00] video:203839KiB audio:12490KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.390565%
+frame=23803 fps=152 q=-1.0 Lsize=  217174KiB time=00:13:14.16 bitrate=2240.2kbits/s speed=5.08x
+[libx264 @ 0000022f2e470240] frame I:105   Avg QP:16.67  size: 83771
+[libx264 @ 0000022f2e470240] frame P:6046  Avg QP:19.24  size: 19516
+[libx264 @ 0000022f2e470240] frame B:17652 Avg QP:21.98  size:  4642
+[libx264 @ 0000022f2e470240] consecutive B-frames:  0.9%  0.4%  1.1% 97.7%
+[libx264 @ 0000022f2e470240] mb I  I16..4: 23.3% 63.1% 13.6%
+[libx264 @ 0000022f2e470240] mb P  I16..4:  4.7% 12.2%  0.4%  P16..4: 32.3%  6.9%  3.2%  0.0%  0.0%    skip:40.4%
+[libx264 @ 0000022f2e470240] mb B  I16..4:  0.3%  0.4%  0.0%  B16..8: 29.8%  1.3%  0.1%  direct: 1.3%  skip:66.8%  L0:47.0% L1:51.1% BI: 1.8%
+[libx264 @ 0000022f2e470240] 8x8 transform intra:69.0% inter:85.6%
+[libx264 @ 0000022f2e470240] coded y,uvDC,uvAC intra: 19.8% 34.6% 8.2% inter: 3.8% 6.9% 0.2%
+[libx264 @ 0000022f2e470240] i16 v,h,dc,p: 44% 28% 11% 17%
+[libx264 @ 0000022f2e470240] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 21% 13% 52%  2%  2%  3%  2%  3%  2%
+[libx264 @ 0000022f2e470240] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 34% 17% 19%  4%  7%  7%  5%  5%  3%
+[libx264 @ 0000022f2e470240] i8c dc,h,v,p: 58% 18% 21%  2%
+[libx264 @ 0000022f2e470240] Weighted P-Frames: Y:0.2% UV:0.2%
+[libx264 @ 0000022f2e470240] ref P L0: 62.3%  8.3% 20.4%  9.0%  0.0%
+[libx264 @ 0000022f2e470240] ref B L0: 87.6%  9.9%  2.6%
+[libx264 @ 0000022f2e470240] ref B L1: 95.8%  4.2%
+[libx264 @ 0000022f2e470240] kb/s:2102.48
+[aac @ 0000022f2e33a4c0] Qavg: 666.620
+Sunday, September 29, 2024 7:04:21 AM
+Sunday, September 29, 2024 7:04:42 AM
+Sunday, September 29, 2024 7:04:42 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_video.ps1  -url "https://youtu.be/ArnsSzcD3GI"
+
+Sunday, September 29, 2024 7:06:12 AM
+
+PSPath              : Microsoft.PowerShell.Core\FileSystem::C:\Temp\yt-dlp
+PSParentPath        : Microsoft.PowerShell.Core\FileSystem::C:\Temp
+PSChildName         : yt-dlp
+PSDrive             : C
+PSProvider          : Microsoft.PowerShell.Core\FileSystem
+PSIsContainer       : True
+Name                : yt-dlp
+Parent              : C:\Temp
+Root                : C:\
+Exists              : True
+FullName            : C:\Temp\yt-dlp
+Extension           :
+CreationTime        : 9/29/2024 7:06:12 AM
+CreationTimeUtc     : 9/29/2024 11:06:12 AM
+LastAccessTime      : 9/29/2024 7:06:12 AM
+LastAccessTimeUtc   : 9/29/2024 11:06:12 AM
+LastWriteTime       : 9/29/2024 7:06:12 AM
+LastWriteTimeUtc    : 9/29/2024 11:06:12 AM
+LinkTarget          :
+UnixFileMode        : -1
+Attributes          : Directory
+Mode                : d----
+ModeWithoutHardLink : d----
+BaseName            : yt-dlp
+ResolvedTarget      : C:\Temp\yt-dlp
+Target              :
+LinkType            :
+
+Sunday, September 29, 2024 7:06:12 AM
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title).50s.%(ext)s', 'https://youtu.be/ArnsSzcD3GI']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://youtu.be/ArnsSzcD3GI
+[youtube] ArnsSzcD3GI: Downloading webpage
+[youtube] ArnsSzcD3GI: Downloading ios player API JSON
+[youtube] ArnsSzcD3GI: Downloading web creator player API JSON
+[debug] Loading youtube-nsig.b0557ce3 from cache
+[debug] [youtube] Decrypted nsig cnsZVJS8wEPV29TBA => Kn-VFiBligysLQ
+[youtube] ArnsSzcD3GI: Downloading m3u8 information
+[info] ArnsSzcD3GI: Downloading subtitles: en
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/e81b?service=YouTube&categories=%5B%22filler%22%2C+%22selfpromo%22%2C+%22preview%22%2C+%22interaction%22%2C+%22music_offtopic%22%2C+%22chapter%22%2C+%22poi_highlight%22%2C+%22outro%22%2C+%22intro%22%2C+%22sponsor%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+[SponsorBlock] Found 1 segments in the SponsorBlock database
+[info] Testing format 625
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 146
+[download] Destination: C:\Users\kushal\src\myhtml\fromnepal\public\notes\tmpvqh2a7gk.tmp
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of    712.00B in 00:00:00 at 3.77KiB/s
+[info] ArnsSzcD3GI: Downloading 1 format(s): 625+140
+[info] Writing video subtitles to: C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.en.vtt
+[debug] Invoking http downloader on "https://www.youtube.com/api/timedtext?v=ArnsSzcD3GI&ei=qDT5ZraYNfK1kucP7rC-mQw&caps=asr&opi=112496729&exp=xbt&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1727633176&sparams=ip%2Cipbits%2Cexpire%2Cv%2Cei%2Ccaps%2Copi%2Cexp%2Cxoaf&signature=E59034BACFEC4B9AA8CD56F7CF32682C92C36867.B522FF96B65D70013EC9044942E9FD3D8C7104E9&key=yt8&lang=en&fmt=vtt"
+[download] Destination: C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.en.vtt
+[download] 100% of   25.09KiB in 00:00:00 at 457.75KiB/s
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1727629576/ei/qDT5ZumRL4G1kucPl5OnGA/ip/70.104.195.206/id/02b9ec4b3703dc62/itag/625/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D1046595088%3Bdur%3D757.067%3Bgir%3Dyes%3Bitag%3D313%3Blmt%3D1727468597462746/rqh/1/hls_chunk_host/rr8---sn-8xgp1vo-gpje.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/mh/5w/mm/31,29/mn/sn-8xgp1vo-gpje,sn-8xgp1vo-p5qe7/ms/au,rdu/mv/m/mvi/8/pl/20/initcwndbps/1063750/vprv/1/playlist_type/DVR/dover/13/txp/4432434/mt/1727607661/fvip/6/short_key/1/keepalive/yes/fexp/51299152/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,vprv,playlist_type/sig/AJfQdSswRgIhAP7pzyXR_aTez6V-XZCfDcCJeHL4EsiiWqbbttMg2zzzAiEAnrkpKWcP3mH2L7oUlay5hiSBDUw-g5HgkqEQhm-V4qY%3D/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl,initcwndbps/lsig/ABPmVW0wRAIgC_XMiUBRRbwnL0BMfD9oU-ykRmFBmMZhvBwEoK2ow8ECICeZbl0eh9pfw-1Pedy6zsffG6FrWTcnk1fGjLMMz66m/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 146
+[download] Destination: C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.f625.mp4
+[download] 100% of  998.22MiB in 00:01:14 at 13.32MiB/s
+[debug] Invoking http downloader on "https://rr8---sn-8xgp1vo-gpje.googlevideo.com/videoplayback?expire=1727629576&ei=qDT5ZumRL4G1kucPl5OnGA&ip=70.104.195.206&id=o-AOW0Y0C3A_jUyXe8wYNPgV7l2cRS6Ts_6WyVbQCPf2Gh&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=5w&mm=31%2C29&mn=sn-8xgp1vo-gpje%2Csn-8xgp1vo-p5qe7&ms=au%2Crdu&mv=m&mvi=8&pl=20&initcwndbps=1063750&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=12254127&dur=757.133&lmt=1727461389509793&mt=1727607661&fvip=6&keepalive=yes&fexp=51299152&c=IOS&txp=4432434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRAIgQkbzjlD8NFyqwTvGwZHZPAMZBOC9kV6Ao4UISCBVmKUCICM9Rea_bzieITDzsfomwjQpX4y-U3teViNrHEMwPeNC&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ABPmVW0wRQIgaEgvjd9gu-tkQv-S6js_vmGMFeXSAu7g1yrqteEv1gECIQD-SHNm_gpQmUnpwqS2oZ7oRTD3COvmcWC4Yc6vqwxp5A%3D%3D"
+[download] Destination: C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.f140.m4a
+[download] 100% of   11.69MiB in 00:00:01 at 10.35MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.f625.mp4 -i file:C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.temp.mp4
+Deleting original file C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.f625.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.f140.m4a (pass -k to keep)
+[debug] ffprobe command line: ffprobe -hide_banner -show_format -show_streams -print_format json file:C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.mp4
+[debug] Concat spec = 0.0-321.135000, 404.469000-inf
+[ModifyChapters] Removing chapters from C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.mp4
+[debug] Writing concat spec to C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.temp.mp4.concat
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -hide_banner -nostdin -f concat -safe 0 -i file:C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.temp.mp4.concat -map 0 -dn -ignore_unknown -c copy -c:s mov_text -movflags +faststart file:C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.temp.mp4
+[ModifyChapters] Removing chapters from C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.en.vtt
+[debug] Writing concat spec to C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.en.temp.vtt.concat
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -hide_banner -nostdin -f concat -safe 0 -i file:C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.en.temp.vtt.concat -map 0 -dn -ignore_unknown -c copy -movflags +faststart file:C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.en.temp.vtt
+Deleting original file C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.en.uncut.vtt (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.uncut.mp4 (pass -k to keep)
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.mp4 -i file:C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.meta -map 0 -dn -ignore_unknown -c copy -map_metadata 1 -write_id3v1 1 -metadata "title=How to Fix America's Roads" -metadata "date=20240928" -metadata "description=Go to https://ground.news/streetcraft to become a smarter news consumer. Subscribe through my link for 40% off unlimited access this month.
+
+The tide is shifting when it comes to fixing America's roads and you can help make progress in your community.
+
+Wanna help support Streetcraft? Join a group of others who want to advocate for better places over on Patreon:
+https://www.patreon.com/Streetcraft
+
+Or pick up a shirt here (if you like cities & transportation you'll love them)
+https://shop.streetcraft.co
+
+Check out Streetcraft on:
+https://instagram.com/streetcraft
+https://tiktok.com/@Streetcraft
+https://x.com/streetcraft__
+@StreetcraftShorts
+
+Sample Letter:
+https://streetcraft.co/sample-letter
+
+Find a Strong Towns Group:
+https://www.strongtowns.org/local
+
+Hoboken, NJ:
+https://www.hobokennj.gov/news/city-of-hoboken-reaches-new-vision-zero-milestone-seven-consecutive-years-without-a-traffic-death
+
+Ohio Peanut Roundabout:
+https://www.burgessniple.com/our-work/ohios-first-peanut-roundabout-sr-61-sr-656-wilson-road-roundabout/
+
+Crash Data:
+https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/811366
+
+Intro 0:00
+Prioritizing Cars 0:50
+Two Major Issues 1:38
+Real Fixes 2:50
+Ground News 5:21
+Understanding the System 6:44
+Find Projects 7:18
+Contact 8:42
+Vote 9:19
+Join Forces 11:24" -metadata "synopsis=Go to https://ground.news/streetcraft to become a smarter news consumer. Subscribe through my link for 40% off unlimited access this month.
+
+The tide is shifting when it comes to fixing America's roads and you can help make progress in your community.
+
+Wanna help support Streetcraft? Join a group of others who want to advocate for better places over on Patreon:
+https://www.patreon.com/Streetcraft
+
+Or pick up a shirt here (if you like cities & transportation you'll love them)
+https://shop.streetcraft.co
+
+Check out Streetcraft on:
+https://instagram.com/streetcraft
+https://tiktok.com/@Streetcraft
+https://x.com/streetcraft__
+@StreetcraftShorts
+
+Sample Letter:
+https://streetcraft.co/sample-letter
+
+Find a Strong Towns Group:
+https://www.strongtowns.org/local
+
+Hoboken, NJ:
+https://www.hobokennj.gov/news/city-of-hoboken-reaches-new-vision-zero-milestone-seven-consecutive-years-without-a-traffic-death
+
+Ohio Peanut Roundabout:
+https://www.burgessniple.com/our-work/ohios-first-peanut-roundabout-sr-61-sr-656-wilson-road-roundabout/
+
+Crash Data:
+https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/811366
+
+Intro 0:00
+Prioritizing Cars 0:50
+Two Major Issues 1:38
+Real Fixes 2:50
+Ground News 5:21
+Understanding the System 6:44
+Find Projects 7:18
+Contact 8:42
+Vote 9:19
+Join Forces 11:24" -metadata "purl=https://www.youtube.com/watch?v=ArnsSzcD3GI" -metadata "comment=https://www.youtube.com/watch?v=ArnsSzcD3GI" -metadata "artist=Streetcraft" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\How_to_Fix_America_s_Roads.temp.mp4
+
+Sunday, September 29, 2024 7:07:43 AM
+Sunday, September 29, 2024 7:07:43 AM
+Sunday, September 29, 2024 7:07:43 AM
+
+LastWriteTime : 9/29/2024 7:06:17 AM
+Length        : 21754
+Name          : How_to_Fix_America_s_Roads.en.vtt
+
+
+LastWriteTime : 9/27/2024 2:23:09 PM
+Length        : 984198391
+Name          : How_to_Fix_America_s_Roads.mp4
+
+
+LastWriteTime : 9/27/2024 2:23:09 PM
+Length        : 984198391
+Name          : How_to_Fix_America_s_Roads.mp4
+
+
+LastWriteTime : 9/29/2024 7:06:17 AM
+Length        : 21754
+Name          : How_to_Fix_America_s_Roads.en.vtt
+
+Cleaned subtitle path: C:\Temp\yt-dlp\HowtoFixAmericasRoadsenvtt
+Cleaned video name: HowtoFixAmericasRoadsmp4
+Cleaned video path: C:\Temp\yt-dlp\HowtoFixAmericasRoadsmp4
+
+LastWriteTime : 9/29/2024 7:06:17 AM
+Length        : 21754
+Name          : How_to_Fix_America_s_Roads.en.vtt
+
+Running ffmpeg with subtitles
+ffmpeg -loglevel debug -i "C:\Temp\yt-dlp\HowtoFixAmericasRoadsmp4" -vf subtitles='C:\Temp\yt-dlp\HowtoFixAmericasRoadsenvtt':force_style='FontName=Arial,FontSize=24' -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\HowtoFixAmericasRoadsmp4_reencoded.mp4"
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Splitting the commandline.
+Reading option '-loglevel' ... matched as option 'loglevel' (set logging level) with argument 'debug'.
+Reading option '-i' ... matched as input url with argument 'C:\Temp\yt-dlp\HowtoFixAmericasRoadsmp4'.
+Reading option '-vf' ... matched as option 'vf' (alias for -filter:v (apply filters to video streams)) with argument 'subtitles=C:\Temp\yt-dlp\HowtoFixAmericasRoadsenvtt:force_style=FontName=Arial,FontSize=24'.
+Reading option '-c:v' ... matched as option 'c' (select encoder/decoder ('copy' to copy stream without reencoding)) with argument 'libx264'.
+Reading option '-c:a' ... matched as option 'c' (select encoder/decoder ('copy' to copy stream without reencoding)) with argument 'aac'.
+Reading option '-strict' ...Routing option strict to both codec and muxer layer
+ matched as AVOption 'strict' with argument 'experimental'.
+Reading option '-movflags' ... matched as AVOption 'movflags' with argument '+faststart'.
+Reading option 'C:\Temp\yt-dlp\HowtoFixAmericasRoadsmp4_reencoded.mp4' ... matched as output url.
+Finished splitting the commandline.
+Parsing a group of options: global .
+Applying option loglevel (set logging level) with argument debug.
+Successfully parsed a group of options.
+Parsing a group of options: input url C:\Temp\yt-dlp\HowtoFixAmericasRoadsmp4.
+Successfully parsed a group of options.
+Opening an input file: C:\Temp\yt-dlp\HowtoFixAmericasRoadsmp4.
+[AVFormatContext @ 0000017306f61580] Opening 'C:\Temp\yt-dlp\HowtoFixAmericasRoadsmp4' for reading
+[file @ 0000017306f62480] Setting default whitelist 'file,crypto,data'
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] Format mov,mp4,m4a,3gp,3g2,mj2 probed with size=2048 and score=100
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] ISO: File Type Major Brand: isom
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] Unknown dref type 0x206c7275 size 12
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] Processing st: 0, edit list 0 - media time: 0, duration: 10779744
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] Unknown dref type 0x206c7275 size 12
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] Processing st: 1, edit list 0 - media time: 0, duration: 29714580
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] Unknown dref type 0x206c7275 size 12
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] Processing st: 2, edit list 0 - media time: 0, duration: 673665
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] rfps: 29.916667 0.006223
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] rfps: 29.916667 0.013427
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] rfps: 30.000000 0.000067
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] rfps: 60.000000 0.000269
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] rfps: 120.000000 0.001078
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] rfps: 240.000000 0.004310
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] rfps: 29.970030 0.000859
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] rfps: 59.940060 0.003437
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] Before avformat_find_stream_info() pos: 683899 bytes read:697500 seeks:0 nb_streams:3
+Transform tree:
+    mdct_inv_float_avx2 - type: mdct_float, len: 64, factors[2]: [2, any], flags: [aligned, out_of_place, inv_only]
+        fft32_asm_float_fma3 - type: fft_float, len: 32, factor: 2, flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+Transform tree:
+    mdct_inv_float_avx2 - type: mdct_float, len: 64, factors[2]: [2, any], flags: [aligned, out_of_place, inv_only]
+        fft32_asm_float_fma3 - type: fft_float, len: 32, factor: 2, flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+Transform tree:
+    mdct_inv_float_avx2 - type: mdct_float, len: 120, factors[2]: [2, any], flags: [aligned, out_of_place, inv_only]
+        fft_pfa_15xM_asm_float_avx2 - type: fft_float, len: 60, factors[2]: [15, 2], flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+            fft4_fwd_asm_float_sse2 - type: fft_float, len: 4, factor: 2, flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+Transform tree:
+    mdct_inv_float_avx2 - type: mdct_float, len: 128, factors[2]: [2, any], flags: [aligned, out_of_place, inv_only]
+        fft_sr_asm_float_fma3 - type: fft_float, len: 64, factor: 2, flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+Transform tree:
+    mdct_inv_float_avx2 - type: mdct_float, len: 480, factors[2]: [2, any], flags: [aligned, out_of_place, inv_only]
+        fft_pfa_15xM_asm_float_avx2 - type: fft_float, len: 240, factors[2]: [15, 2], flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+            fft16_asm_float_fma3 - type: fft_float, len: 16, factor: 2, flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+Transform tree:
+    mdct_inv_float_avx2 - type: mdct_float, len: 512, factors[2]: [2, any], flags: [aligned, out_of_place, inv_only]
+        fft_sr_asm_float_fma3 - type: fft_float, len: 256, factor: 2, flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+Transform tree:
+    mdct_inv_float_avx2 - type: mdct_float, len: 960, factors[2]: [2, any], flags: [aligned, out_of_place, inv_only]
+        fft_pfa_15xM_asm_float_avx2 - type: fft_float, len: 480, factors[2]: [15, 2], flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+            fft32_asm_float_fma3 - type: fft_float, len: 32, factor: 2, flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+Transform tree:
+    mdct_inv_float_avx2 - type: mdct_float, len: 1024, factors[2]: [2, any], flags: [aligned, out_of_place, inv_only]
+        fft_sr_asm_float_fma3 - type: fft_float, len: 512, factor: 2, flags: [aligned, inplace, out_of_place, preshuf, asm_call]
+Transform tree:
+    mdct_fwd_float_c - type: mdct_float, len: 1024, factors[2]: [2, any], flags: [unaligned, out_of_place, fwd_only]
+        fft_sr_ns_float_fma3 - type: fft_float, len: 512, factor: 2, flags: [aligned, inplace, out_of_place, preshuf]
+[vp9 @ 0000017306f74c80] Format yuv420p chosen by get_format().
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] All info found
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0000017306f61580] After avformat_find_stream_info() pos: 838979 bytes read:871376 seeks:0 frames:2
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\HowtoFixAmericasRoadsmp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : How to Fix America's Roads
+    artist          : Streetcraft
+    date            : 20240928
+    encoder         : Lavf61.1.100
+    comment         : https://www.youtube.com/watch?v=ArnsSzcD3GI
+    description     : Go to https://ground.news/streetcraft to become a smarter news consumer. Subscribe through my link for 40% off unlimited access this month.
+                    :
+                    : The tide is shifting when it comes to fixing America's roads and you can help make progress in your community.
+                    :
+                    : Wanna help support Streetcraft? Join a group of others who want to advocate for better places over on Patreon:
+                    : https://www.patreon.com/Streetcraft
+                    :
+                    : Or pick up a shirt here (if you like cities & transportation you'll love them)
+                    : https://shop.streetcraft.co
+                    :
+                    : Check out Streetcraft on:
+                    : https://instagram.com/streetcraft
+                    : https://tiktok.com/@Streetcraft
+                    : https://x.com/streetcraft__
+                    : @StreetcraftShorts
+                    :
+                    : Sample Letter:
+                    : https://streetcraft.co/sample-letter
+                    :
+                    : Find a Strong Towns Group:
+                    : https://www.strongtowns.org/local
+                    :
+                    : Hoboken, NJ:
+                    : https://www.hobokennj.gov/news/city-of-hoboken-reaches-new-vision-zero-milestone-seven-consecutive-years-without-a-traffic-death
+                    :
+                    : Ohio Peanut Roundabout:
+                    : https://www.burgessniple.com/our-work/ohios-first-peanut-roundabout-sr-61-sr-656-wilson-road-roundabout/
+                    :
+                    : Crash Data:
+                    : https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/811366
+                    :
+                    : Intro 0:00
+                    : Prioritizing Cars 0:50
+                    : Two Major Issues 1:38
+                    : Real Fixes 2:50
+                    : Ground News 5:21
+                    : Understanding the System 6:44
+                    : Find Projects 7:18
+                    : Contact 8:42
+                    : Vote 9:19
+                    : Join Forces 11:24
+    synopsis        : Go to https://ground.news/streetcraft to become a smarter news consumer. Subscribe through my link for 40% off unlimited access this month.
+                    :
+                    : The tide is shifting when it comes to fixing America's roads and you can help make progress in your community.
+                    :
+                    : Wanna help support Streetcraft? Join a group of others who want to advocate for better places over on Patreon:
+                    : https://www.patreon.com/Streetcraft
+                    :
+                    : Or pick up a shirt here (if you like cities & transportation you'll love them)
+                    : https://shop.streetcraft.co
+                    :
+                    : Check out Streetcraft on:
+                    : https://instagram.com/streetcraft
+                    : https://tiktok.com/@Streetcraft
+                    : https://x.com/streetcraft__
+                    : @StreetcraftShorts
+                    :
+                    : Sample Letter:
+                    : https://streetcraft.co/sample-letter
+                    :
+                    : Find a Strong Towns Group:
+                    : https://www.strongtowns.org/local
+                    :
+                    : Hoboken, NJ:
+                    : https://www.hobokennj.gov/news/city-of-hoboken-reaches-new-vision-zero-milestone-seven-consecutive-years-without-a-traffic-death
+                    :
+                    : Ohio Peanut Roundabout:
+                    : https://www.burgessniple.com/our-work/ohios-first-peanut-roundabout-sr-61-sr-656-wilson-road-roundabout/
+                    :
+                    : Crash Data:
+                    : https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/811366
+                    :
+                    : Intro 0:00
+                    : Prioritizing Cars 0:50
+                    : Two Major Issues 1:38
+                    : Real Fixes 2:50
+                    : Ground News 5:21
+                    : Understanding the System 6:44
+                    : Find Projects 7:18
+                    : Contact 8:42
+                    : Vote 9:19
+                    : Join Forces 11:24
+  Duration: 00:11:13.80, start: 0.000000, bitrate: 11685 kb/s
+  Chapters:
+    Chapter #0:0: start 0.000000, end 50.000000
+      Metadata:
+        title           : Intro
+    Chapter #0:1: start 50.000000, end 98.000000
+      Metadata:
+        title           : Prioritizing Cars
+    Chapter #0:2: start 98.000000, end 170.000000
+      Metadata:
+        title           : Two Major Issues
+    Chapter #0:3: start 170.000000, end 321.135000
+      Metadata:
+        title           : Real Fixes
+    Chapter #0:4: start 321.135000, end 354.666000
+      Metadata:
+        title           : Understanding the System
+    Chapter #0:5: start 354.666000, end 438.666000
+      Metadata:
+        title           : Find Projects
+    Chapter #0:6: start 438.666000, end 475.666000
+      Metadata:
+        title           : Contact
+    Chapter #0:7: start 475.666000, end 600.665000
+      Metadata:
+        title           : Vote
+    Chapter #0:8: start 600.665000, end 673.665000
+      Metadata:
+        title           : Join Forces
+  Stream #0:0[0x1](und), 1, 1/16000: Video: vp9 (Profile 0), 1 reference frame (vp09 / 0x39307076), yuv420p(tv, bt709), 3840x2160, 0/1, 11550 kb/s, 30.02 fps, 30 tbr, 16k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 09/29/2024.
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng), 1, 1/44100: Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+  Stream #0:2[0x3](eng), 0, 1/1000: Data: bin_data (text / 0x74786574), 0/1, 0 kb/s
+      Metadata:
+        handler_name    : SubtitleHandler
+Successfully opened the file.
+Parsing a group of options: output url C:\Temp\yt-dlp\HowtoFixAmericasRoadsmp4_reencoded.mp4.
+Applying option vf (alias for -filter:v (apply filters to video streams)) with argument subtitles=C:\Temp\yt-dlp\HowtoFixAmericasRoadsenvtt:force_style=FontName=Arial,FontSize=24.
+Applying option c:v (select encoder/decoder ('copy' to copy stream without reencoding)) with argument libx264.
+Applying option c:a (select encoder/decoder ('copy' to copy stream without reencoding)) with argument aac.
+Successfully parsed a group of options.
+Opening an output file: C:\Temp\yt-dlp\HowtoFixAmericasRoadsmp4_reencoded.mp4.
+[out#0/mp4 @ 0000017307670d80] No explicit maps, mapping streams automatically...
+[vost#0:0/libx264 @ 0000017306f7e3c0] Created video stream from input stream 0:0
+[AVFilterGraph @ 0000017306f7e6c0] Setting 'filename' to value 'C'
+[AVFilterGraph @ 0000017306f7e6c0] Setting 'original_size' to value 'Tempyt-dlpHowtoFixAmericasRoadsenvtt'
+[AVFilterGraph @ 0000017306f7e6c0] Setting 'force_style' to value 'FontName=Arial'
+[AVFilterGraph @ 0000017306f7e6c0] No option name near '24'
+[AVFilterGraph @ 0000017306f7e6c0] Error parsing a filter description around:
+[AVFilterGraph @ 0000017306f7e6c0] Error parsing filterchain 'subtitles=C:\Temp\yt-dlp\HowtoFixAmericasRoadsenvtt:force_style=FontName=Arial,FontSize=24' around:
+[vost#0:0/libx264 @ 0000017306f7e3c0] Error initializing a simple filtergraph
+Error opening output file C:\Temp\yt-dlp\HowtoFixAmericasRoadsmp4_reencoded.mp4.
+Error opening output files: Invalid argument
+[AVIOContext @ 0000017306f6c180] Statistics: 871376 bytes read, 0 seeks
+Sunday, September 29, 2024 7:07:43 AM
+Move-Item: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_video.ps1:63
+Line |
+  63 |  Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Dest …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Cannot find path 'C:\Temp\yt-dlp\HowtoFixAmericasRoadsmp4_reencoded.mp4' because it does not exist.
+Sunday, September 29, 2024 7:07:43 AM
+Sunday, September 29, 2024 7:07:43 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all -o "%(title).50s.%(ext)s" -i "https://youtu.be/ArnsSzcD3GI"; date;
+
+Sunday, September 29, 2024 7:08:09 AM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Sunday, September 29, 2024 7:08:09 AM
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '-o', '%(title).50s.%(ext)s', '-i', 'https://youtu.be/ArnsSzcD3GI']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://youtu.be/ArnsSzcD3GI
+[youtube] ArnsSzcD3GI: Downloading webpage
+[youtube] ArnsSzcD3GI: Downloading ios player API JSON
+[youtube] ArnsSzcD3GI: Downloading web creator player API JSON
+[debug] Loading youtube-nsig.b0557ce3 from cache
+[debug] [youtube] Decrypted nsig -d7-0Qy-l7uaQvMnc => 9-XoEm11tBVHqA
+[debug] Loading youtube-nsig.b0557ce3 from cache
+[debug] [youtube] Decrypted nsig iB4jWUDHWbfPb9dt5 => 6hzPNECgsrn83Q
+[youtube] ArnsSzcD3GI: Downloading m3u8 information
+[info] ArnsSzcD3GI: Downloading subtitles: en
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/e81b?service=YouTube&categories=%5B%22music_offtopic%22%2C+%22preview%22%2C+%22sponsor%22%2C+%22filler%22%2C+%22chapter%22%2C+%22selfpromo%22%2C+%22outro%22%2C+%22intro%22%2C+%22interaction%22%2C+%22poi_highlight%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+[SponsorBlock] Found 1 segments in the SponsorBlock database
+[info] Testing format 625
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 146
+[download] Destination: \\TP-Share\G\shared\jellyfin\shows\downloaded\tmpvfphaz65.tmp
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of    712.00B in 00:00:02 at 322.20B/s
+[info] ArnsSzcD3GI: Downloading 1 format(s): 625+140
+[info] Writing video subtitles to: How_to_Fix_America_s_Roads.en.vtt
+[debug] Invoking http downloader on "https://www.youtube.com/api/timedtext?v=ArnsSzcD3GI&ei=HzX5Zvr3O7K0kucPuc7v2Aw&caps=asr&opi=112496729&exp=xbt&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1727633295&sparams=ip%2Cipbits%2Cexpire%2Cv%2Cei%2Ccaps%2Copi%2Cexp%2Cxoaf&signature=29AD8B2B3F286C9856C51DC466DA93A1D3344241.F05102D8621303ED7CF50A705A8206021C6809E7&key=yt8&lang=en&fmt=vtt"
+[download] Destination: How_to_Fix_America_s_Roads.en.vtt
+[download] 100% of   25.09KiB in 00:00:01 at 19.96KiB/s
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1727629695/ei/HzX5ZoWCM5qHkucPy4WfmAo/ip/70.104.195.206/id/02b9ec4b3703dc62/itag/625/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D1046595088%3Bdur%3D757.067%3Bgir%3Dyes%3Bitag%3D313%3Blmt%3D1727468597462746/rqh/1/hls_chunk_host/rr8---sn-8xgp1vo-gpje.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/mh/5w/mm/31,29/mn/sn-8xgp1vo-gpje,sn-8xgp1vo-p5qe7/ms/au,rdu/mv/m/mvi/8/pl/20/initcwndbps/1063750/vprv/1/playlist_type/DVR/dover/13/txp/4432434/mt/1727607661/fvip/6/short_key/1/keepalive/yes/fexp/51299152/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,vprv,playlist_type/sig/AJfQdSswRAIgY8A_a3K9XMPi86gdIcTh5fmZcMc80mkl20389SiswkICID2WN2cOg4cwL4gT83d9rth1SVv9vrSkk05fnaXeHu9F/lsparams/hls_chunk_host,mh,mm,mn,ms,mv,mvi,pl,initcwndbps/lsig/ABPmVW0wRQIhAM10p4nkE-AWJ-frbBEEBQaUCDm-lr6SFoIDPjirbv4AAiBfzumN1SLUHv2sMErGlyeVQBspAgNKXf8Rbrlh4B_xbA%3D%3D/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 146
+[download] Destination: How_to_Fix_America_s_Roads.f625.mp4
+[download] 100% of  998.22MiB in 00:12:06 at 1.37MiB/s
+[debug] Invoking http downloader on "https://rr8---sn-8xgp1vo-gpje.googlevideo.com/videoplayback?expire=1727629695&ei=HzX5ZoWCM5qHkucPy4WfmAo&ip=70.104.195.206&id=o-AMJ5HVKe2zQVDcZ10eHQszGcvHsJ0nOF_MFYJ_u-N-v5&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&mh=5w&mm=31%2C29&mn=sn-8xgp1vo-gpje%2Csn-8xgp1vo-p5qe7&ms=au%2Crdu&mv=m&mvi=8&pl=20&initcwndbps=1063750&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=12254127&dur=757.133&lmt=1727461389509793&mt=1727607661&fvip=6&keepalive=yes&fexp=51299152&c=IOS&txp=4432434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIhANrEkwQZCHf2kSHZKkTpXWlx-hpySsTd47-s3k9rh1LFAiBiYmrMZag417zYHDBWY9FVJxwi_wzhqTFVcS7toA8ihg%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=ABPmVW0wRQIgd7NOwFeDpIN1E37eL7Da_cIN0f-pW4X57NxKQ7VPYAQCIQCsYFyPojUjP7xtYNy_zh67PDrCikN-tSub5MTooNs4fQ%3D%3D"
+[download] Destination: How_to_Fix_America_s_Roads.f140.m4a
+[download] 100% of   11.69MiB in 00:00:03 at 3.80MiB/s
+[Merger] Merging formats into "How_to_Fix_America_s_Roads.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:How_to_Fix_America_s_Roads.f625.mp4 -i file:How_to_Fix_America_s_Roads.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:How_to_Fix_America_s_Roads.temp.mp4
+Deleting original file How_to_Fix_America_s_Roads.f625.mp4 (pass -k to keep)
+Deleting original file How_to_Fix_America_s_Roads.f140.m4a (pass -k to keep)
+[debug] ffprobe command line: ffprobe -hide_banner -show_format -show_streams -print_format json file:How_to_Fix_America_s_Roads.mp4
+[debug] Concat spec = 0.0-321.135000, 404.469000-inf
+[ModifyChapters] Removing chapters from How_to_Fix_America_s_Roads.mp4
+[debug] Writing concat spec to How_to_Fix_America_s_Roads.temp.mp4.concat
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -hide_banner -nostdin -f concat -safe 0 -i file:How_to_Fix_America_s_Roads.temp.mp4.concat -map 0 -dn -ignore_unknown -c copy -c:s mov_text -movflags +faststart file:How_to_Fix_America_s_Roads.temp.mp4
+
+ERROR: Interrupted by user
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded>
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded>
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "\\TP-Share\G\shared\jellyfin\shows\downloaded"; date; pwd; date; yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all -o "%(title).50s.%(ext)s" -i "https://youtu.be/ArnsSzcD3GI"; date;
+
+Sunday, September 29, 2024 7:31:51 AM
+
+Drive        :
+Provider     : Microsoft.PowerShell.Core\FileSystem
+ProviderPath : \\TP-Share\G\shared\jellyfin\shows\downloaded
+Path         : Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded
+
+Sunday, September 29, 2024 7:31:51 AM
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '-o', '%(title).50s.%(ext)s', '-i', 'https://youtu.be/ArnsSzcD3GI']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[youtube] Extracting URL: https://youtu.be/ArnsSzcD3GI
+[youtube] ArnsSzcD3GI: Downloading webpage
+[youtube] ArnsSzcD3GI: Downloading ios player API JSON
+[youtube] ArnsSzcD3GI: Downloading web creator player API JSON
+[debug] Loading youtube-nsig.b0557ce3 from cache
+[debug] [youtube] Decrypted nsig -51DriYeJM6awr9su => 3qhfP6YAijZTOQ
+[debug] Loading youtube-nsig.b0557ce3 from cache
+[debug] [youtube] Decrypted nsig oIlVoruprUPiBJjS5 => Dcj_ttcxSfGkjA
+[youtube] ArnsSzcD3GI: Downloading m3u8 information
+[info] ArnsSzcD3GI: Downloading subtitles: en
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/e81b?service=YouTube&categories=%5B%22filler%22%2C+%22sponsor%22%2C+%22interaction%22%2C+%22selfpromo%22%2C+%22preview%22%2C+%22chapter%22%2C+%22intro%22%2C+%22music_offtopic%22%2C+%22outro%22%2C+%22poi_highlight%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+[SponsorBlock] Found 1 segments in the SponsorBlock database
+[info] Testing format 625
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 146
+[download] Destination: \\TP-Share\G\shared\jellyfin\shows\downloaded\tmptwwbg0oa.tmp
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of    712.00B in 00:00:04 at 173.09B/s
+[info] ArnsSzcD3GI: Downloading 1 format(s): 625+140
+Deleting existing file How_to_Fix_America_s_Roads.en.vtt
+[info] Writing video subtitles to: How_to_Fix_America_s_Roads.en.vtt
+[debug] Invoking http downloader on "https://www.youtube.com/api/timedtext?v=ArnsSzcD3GI&ei=rjr5Zs-lMrmCkucPvpC2kQo&caps=asr&opi=112496729&exp=xbt&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1727634718&sparams=ip%2Cipbits%2Cexpire%2Cv%2Cei%2Ccaps%2Copi%2Cexp%2Cxoaf&signature=8F4905BEAB0176D9CADCFBA8DAB28EF3099F05FC.60B513298FF6E9637E752EA5666694D3BC13985D&key=yt8&lang=en&fmt=vtt"
+[download] Destination: How_to_Fix_America_s_Roads.en.vtt
+[download] 100% of   25.09KiB in 00:00:01 at 14.76KiB/s
+[download] How_to_Fix_America_s_Roads.mp4 has already been downloaded
+[debug] ffprobe command line: ffprobe -hide_banner -show_format -show_streams -print_format json file:How_to_Fix_America_s_Roads.mp4
+[debug] Concat spec = 0.0-321.135000, 404.469000-inf
+[ModifyChapters] Removing chapters from How_to_Fix_America_s_Roads.mp4
+[debug] Writing concat spec to How_to_Fix_America_s_Roads.temp.mp4.concat
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -hide_banner -nostdin -f concat -safe 0 -i file:How_to_Fix_America_s_Roads.temp.mp4.concat -map 0 -dn -ignore_unknown -c copy -c:s mov_text -movflags +faststart file:How_to_Fix_America_s_Roads.temp.mp4
+[ModifyChapters] Removing chapters from How_to_Fix_America_s_Roads.en.vtt
+[debug] Writing concat spec to How_to_Fix_America_s_Roads.en.temp.vtt.concat
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -hide_banner -nostdin -f concat -safe 0 -i file:How_to_Fix_America_s_Roads.en.temp.vtt.concat -map 0 -dn -ignore_unknown -c copy -movflags +faststart file:How_to_Fix_America_s_Roads.en.temp.vtt
+Deleting original file How_to_Fix_America_s_Roads.uncut.mp4 (pass -k to keep)
+Deleting original file How_to_Fix_America_s_Roads.en.uncut.vtt (pass -k to keep)
+[Metadata] Adding metadata to "How_to_Fix_America_s_Roads.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:How_to_Fix_America_s_Roads.mp4 -i file:How_to_Fix_America_s_Roads.meta -map 0 -dn -ignore_unknown -c copy -map_metadata 1 -write_id3v1 1 -metadata "title=How to Fix America's Roads" -metadata "date=20240928" -metadata "description=Go to https://ground.news/streetcraft to become a smarter news consumer. Subscribe through my link for 40% off unlimited access this month.
+
+The tide is shifting when it comes to fixing America's roads and you can help make progress in your community.
+
+Wanna help support Streetcraft? Join a group of others who want to advocate for better places over on Patreon:
+https://www.patreon.com/Streetcraft
+
+Or pick up a shirt here (if you like cities & transportation you'll love them)
+https://shop.streetcraft.co
+
+Check out Streetcraft on:
+https://instagram.com/streetcraft
+https://tiktok.com/@Streetcraft
+https://x.com/streetcraft__
+@StreetcraftShorts
+
+Sample Letter:
+https://streetcraft.co/sample-letter
+
+Find a Strong Towns Group:
+https://www.strongtowns.org/local
+
+Hoboken, NJ:
+https://www.hobokennj.gov/news/city-of-hoboken-reaches-new-vision-zero-milestone-seven-consecutive-years-without-a-traffic-death
+
+Ohio Peanut Roundabout:
+https://www.burgessniple.com/our-work/ohios-first-peanut-roundabout-sr-61-sr-656-wilson-road-roundabout/
+
+Crash Data:
+https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/811366
+
+Intro 0:00
+Prioritizing Cars 0:50
+Two Major Issues 1:38
+Real Fixes 2:50
+Ground News 5:21
+Understanding the System 6:44
+Find Projects 7:18
+Contact 8:42
+Vote 9:19
+Join Forces 11:24" -metadata "synopsis=Go to https://ground.news/streetcraft to become a smarter news consumer. Subscribe through my link for 40% off unlimited access this month.
+
+The tide is shifting when it comes to fixing America's roads and you can help make progress in your community.
+
+Wanna help support Streetcraft? Join a group of others who want to advocate for better places over on Patreon:
+https://www.patreon.com/Streetcraft
+
+Or pick up a shirt here (if you like cities & transportation you'll love them)
+https://shop.streetcraft.co
+
+Check out Streetcraft on:
+https://instagram.com/streetcraft
+https://tiktok.com/@Streetcraft
+https://x.com/streetcraft__
+@StreetcraftShorts
+
+Sample Letter:
+https://streetcraft.co/sample-letter
+
+Find a Strong Towns Group:
+https://www.strongtowns.org/local
+
+Hoboken, NJ:
+https://www.hobokennj.gov/news/city-of-hoboken-reaches-new-vision-zero-milestone-seven-consecutive-years-without-a-traffic-death
+
+Ohio Peanut Roundabout:
+https://www.burgessniple.com/our-work/ohios-first-peanut-roundabout-sr-61-sr-656-wilson-road-roundabout/
+
+Crash Data:
+https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/811366
+
+Intro 0:00
+Prioritizing Cars 0:50
+Two Major Issues 1:38
+Real Fixes 2:50
+Ground News 5:21
+Understanding the System 6:44
+Find Projects 7:18
+Contact 8:42
+Vote 9:19
+Join Forces 11:24" -metadata "purl=https://www.youtube.com/watch?v=ArnsSzcD3GI" -metadata "comment=https://www.youtube.com/watch?v=ArnsSzcD3GI" -metadata "artist=Streetcraft" -metadata:s:1 "language=eng" -movflags +faststart file:How_to_Fix_America_s_Roads.temp.mp4
+Sunday, September 29, 2024 7:40:43 AM
+
+PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\jellyfin\shows\downloaded> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
