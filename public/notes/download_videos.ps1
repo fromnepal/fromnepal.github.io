@@ -13,13 +13,14 @@ function Clean-FileName {
 }
 
 foreach ($url in $urls) {
+    $timestamp = Get-Date -Format "yyyyMMddHHmmss"
     $date = Get-Date
     Write-Output $date
     New-Item -ItemType Directory -Path $tempDir -Force
     Get-ChildItem $tempDir
     $date = Get-Date
     Write-Output $date
-    yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\%(title).50s.%(ext)s" $url
+    yt-dlp.exe --verbose --write-sub --sub-lang en --restrict-filenames --add-metadata -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4" --sponsorblock-mark all --sponsorblock-remove all --merge-output-format mp4 -o "$tempDir\$timestamp.%(ext)s" $url
     $date = Get-Date
     Write-Output $date
     $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select-Object -First 1
