@@ -876,3 +876,615 @@ Saturday, September 28, 2024 6:11:10 PM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git
  add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
+
+Saturday, September 28, 2024 6:48:38 PM
+Saturday, September 28, 2024 6:48:38 PM
+On branch main
+nothing to commit, working tree clean
+Saturday, September 28, 2024 6:48:38 PM
+Saturday, September 28, 2024 6:48:38 PM
+Saturday, September 28, 2024 6:48:41 PM
+Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
+Saturday, September 28, 2024 6:48:41 PM
+Saturday, September 28, 2024 6:48:41 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Saturday, September 28, 2024 6:48:42 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 618ms
+Done in 1.53s.
+Saturday, September 28, 2024 6:48:43 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Saturday, September 28, 2024 6:48:47 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   docs/notes/2024/09/28/vice.html
+        new file:   docs/notes/2024/09/28/vice.txt
+        modified:   docs/notes/earth.jpeg
+        modified:   docs/powershell.txt
+        new file:   public/notes/2024/09/28/vice.html
+        new file:   public/notes/2024/09/28/vice.txt
+        modified:   public/notes/earth.jpeg
+        modified:   public/powershell.txt
+
+Saturday, September 28, 2024 6:48:47 PM
+[main 24a3476] build application
+ 8 files changed, 462 insertions(+)
+ create mode 100644 docs/notes/2024/09/28/vice.html
+ create mode 100644 docs/notes/2024/09/28/vice.txt
+ create mode 100644 public/notes/2024/09/28/vice.html
+ create mode 100644 public/notes/2024/09/28/vice.txt
+Saturday, September 28, 2024 6:48:47 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Saturday, September 28, 2024 6:48:48 PM
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 12.47 MiB | 8.07 MiB/s, done.
+Total 12 (delta 7), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (7/7), completed with 7 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   8fed5b9..24a3476  main -> main
+Saturday, September 28, 2024 6:48:51 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> ssh kusfedoravm
+kushal@kusfedoravm's password:
+Last login: Thu Sep 26 16:33:32 2024 from fe80::975c:f636:bfb:5026%eth0
+kushal@kusfedoravm:~$ sudo echo "Current date and time: $(date)"; free -h; df -h; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot;
+[sudo] password for kushal:
+Current date and time: Sat Sep 28 06:53:15 PM EDT 2024
+               total        used        free      shared  buff/cache   available
+Mem:           7.7Gi       882Mi       5.2Gi        10Mi       2.0Gi       6.9Gi
+Swap:          7.7Gi          0B       7.7Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda3        31G  4.6G   26G  16% /
+devtmpfs        4.0M     0  4.0M   0% /dev
+tmpfs           3.9G     0  3.9G   0% /dev/shm
+efivarfs        128M  6.8K  128M   1% /sys/firmware/efi/efivars
+tmpfs           1.6G  1.1M  1.6G   1% /run
+tmpfs           3.9G  8.0K  3.9G   1% /tmp
+/dev/sda3        31G  4.6G   26G  16% /home
+/dev/sda2       974M  336M  571M  38% /boot
+/dev/sda1       599M   20M  580M   4% /boot/efi
+tmpfs           794M   88K  794M   1% /run/user/42
+tmpfs           794M   72K  794M   1% /run/user/1000
+PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.511 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.558 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.493 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.553 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.383 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.407 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.570 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.426 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.412 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.471 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.435 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.447 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.690 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.508 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.497 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.472 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.588 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.526 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.556 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.486 ms
+
+--- pcna.duckdns.org ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19457ms
+rtt min/avg/max/mdev = 0.383/0.499/0.690/0.071 ms
+
+real    0m26.671s
+user    0m0.000s
+sys     0m0.006s
+PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=2.12 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.763 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.752 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.369 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.441 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.367 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.796 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.690 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.328 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.469 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.450 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.478 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.472 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.798 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.757 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.607 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.456 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.428 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.465 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.449 ms
+
+--- kalimati.duckdns.org ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19413ms
+rtt min/avg/max/mdev = 0.328/0.622/2.120/0.376 ms
+
+real    0m35.200s
+user    0m0.002s
+sys     0m0.003s
+PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.575 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.461 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.527 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.509 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.633 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.539 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.592 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.496 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.479 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.438 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.493 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.468 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.559 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.677 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.502 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.391 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.538 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.614 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.498 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.541 ms
+
+--- colorado.duckdns.org ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19440ms
+rtt min/avg/max/mdev = 0.391/0.526/0.677/0.067 ms
+
+real    0m30.784s
+user    0m0.003s
+sys     0m0.003s
+Current date and time: Sat Sep 28 06:54:51 PM EDT 2024
+Fedora 40 - x86_64                                                                                                                                                                                                                                      9.5 MB/s |  20 MB     00:02
+Fedora 40 openh264 (From Cisco) - x86_64                                                                                                                                                                                                                6.6 kB/s | 1.4 kB     00:00
+Fedora 40 - x86_64 - Updates                                                                                                                                                                                                                            3.7 MB/s |  10 MB     00:02
+Dependencies resolved.
+========================================================================================================================================================================================================================================================================================
+ Package                                                                         Architecture                                            Version                                                                         Repository                                                Size
+========================================================================================================================================================================================================================================================================================
+Upgrading:
+ ca-certificates                                                                 noarch                                                  2024.2.69_v8.0.401-1.0.fc40                                                     updates                                                  871 k
+ cups                                                                            x86_64                                                  1:2.4.10-7.fc40                                                                 updates                                                  1.5 M
+ cups-browsed                                                                    x86_64                                                  1:2.0.1-3.fc40                                                                  updates                                                  143 k
+ cups-client                                                                     x86_64                                                  1:2.4.10-7.fc40                                                                 updates                                                   75 k
+ cups-filesystem                                                                 noarch                                                  1:2.4.10-7.fc40                                                                 updates                                                   13 k
+ cups-ipptool                                                                    x86_64                                                  1:2.4.10-7.fc40                                                                 updates                                                  3.9 M
+ cups-libs                                                                       x86_64                                                  1:2.4.10-7.fc40                                                                 updates                                                  261 k
+ fwupd                                                                           x86_64                                                  1.9.25-1.fc40                                                                   updates                                                  2.2 M
+ fwupd-plugin-flashrom                                                           x86_64                                                  1.9.25-1.fc40                                                                   updates                                                   24 k
+ fwupd-plugin-modem-manager                                                      x86_64                                                  1.9.25-1.fc40                                                                   updates                                                   59 k
+ fwupd-plugin-uefi-capsule-data                                                  x86_64                                                  1.9.25-1.fc40                                                                   updates                                                  2.0 M
+ git                                                                             x86_64                                                  2.46.2-1.fc40                                                                   updates                                                   52 k
+ git-core                                                                        x86_64                                                  2.46.2-1.fc40                                                                   updates                                                  4.8 M
+ git-core-doc                                                                    noarch                                                  2.46.2-1.fc40                                                                   updates                                                  3.0 M
+ libcupsfilters                                                                  x86_64                                                  1:2.1~b1-3.fc40                                                                 updates                                                  605 k
+ libfprint                                                                       x86_64                                                  1.94.8-1.fc40                                                                   updates                                                  337 k
+ libppd                                                                          x86_64                                                  1:2.1~b1-2.fc40                                                                 updates                                                  266 k
+ librsvg2                                                                        x86_64                                                  2.57.1-7.fc40                                                                   updates                                                  1.5 M
+ perl-Git                                                                        noarch                                                  2.46.2-1.fc40                                                                   updates                                                   39 k
+ podman                                                                          x86_64                                                  5:5.2.3-1.fc40                                                                  updates                                                   15 M
+ python3-boto3                                                                   noarch                                                  1.35.25-1.fc40                                                                  updates                                                  391 k
+ python3-botocore                                                                noarch                                                  1.35.25-1.fc40                                                                  updates                                                  7.3 M
+ rsvg-pixbuf-loader                                                              x86_64                                                  2.57.1-7.fc40                                                                   updates                                                   16 k
+ upower                                                                          x86_64                                                  1.90.6-1.fc40                                                                   updates                                                  139 k
+ upower-libs                                                                     x86_64                                                  1.90.6-1.fc40                                                                   updates                                                   57 k
+ virtualbox-guest-additions                                                      x86_64                                                  7.1.0-3.fc40                                                                    updates                                                  718 k
+
+Transaction Summary
+========================================================================================================================================================================================================================================================================================
+Upgrade  26 Packages
+
+Total download size: 45 M
+DNF will only download packages, install gpg keys, and check the transaction.
+Downloading Packages:
+(1/26): cups-browsed-2.0.1-3.fc40.x86_64.rpm                                                                                                                                                                                                            261 kB/s | 143 kB     00:00
+(2/26): cups-client-2.4.10-7.fc40.x86_64.rpm                                                                                                                                                                                                            670 kB/s |  75 kB     00:00
+(3/26): ca-certificates-2024.2.69_v8.0.401-1.0.fc40.noarch.rpm                                                                                                                                                                                          1.2 MB/s | 871 kB     00:00
+(4/26): cups-2.4.10-7.fc40.x86_64.rpm                                                                                                                                                                                                                   2.0 MB/s | 1.5 MB     00:00
+(5/26): cups-filesystem-2.4.10-7.fc40.noarch.rpm                                                                                                                                                                                                        129 kB/s |  13 kB     00:00
+(6/26): cups-libs-2.4.10-7.fc40.x86_64.rpm                                                                                                                                                                                                              2.8 MB/s | 261 kB     00:00
+(7/26): fwupd-plugin-flashrom-1.9.25-1.fc40.x86_64.rpm                                                                                                                                                                                                  269 kB/s |  24 kB     00:00
+(8/26): cups-ipptool-2.4.10-7.fc40.x86_64.rpm                                                                                                                                                                                                            13 MB/s | 3.9 MB     00:00
+(9/26): fwupd-plugin-modem-manager-1.9.25-1.fc40.x86_64.rpm                                                                                                                                                                                             658 kB/s |  59 kB     00:00
+(10/26): git-2.46.2-1.fc40.x86_64.rpm                                                                                                                                                                                                                   595 kB/s |  52 kB     00:00
+(11/26): fwupd-1.9.25-1.fc40.x86_64.rpm                                                                                                                                                                                                                 4.8 MB/s | 2.2 MB     00:00
+(12/26): fwupd-plugin-uefi-capsule-data-1.9.25-1.fc40.x86_64.rpm                                                                                                                                                                                        7.6 MB/s | 2.0 MB     00:00
+(13/26): git-core-2.46.2-1.fc40.x86_64.rpm                                                                                                                                                                                                               14 MB/s | 4.8 MB     00:00
+(14/26): git-core-doc-2.46.2-1.fc40.noarch.rpm                                                                                                                                                                                                           11 MB/s | 3.0 MB     00:00
+(15/26): libfprint-1.94.8-1.fc40.x86_64.rpm                                                                                                                                                                                                             3.4 MB/s | 337 kB     00:00
+(16/26): libppd-2.1~b1-2.fc40.x86_64.rpm                                                                                                                                                                                                                2.3 MB/s | 266 kB     00:00
+(17/26): libcupsfilters-2.1~b1-3.fc40.x86_64.rpm                                                                                                                                                                                                        1.7 MB/s | 605 kB     00:00
+(18/26): perl-Git-2.46.2-1.fc40.noarch.rpm                                                                                                                                                                                                              475 kB/s |  39 kB     00:00
+(19/26): librsvg2-2.57.1-7.fc40.x86_64.rpm                                                                                                                                                                                                              7.8 MB/s | 1.5 MB     00:00
+(20/26): python3-boto3-1.35.25-1.fc40.noarch.rpm                                                                                                                                                                                                        1.4 MB/s | 391 kB     00:00
+(21/26): rsvg-pixbuf-loader-2.57.1-7.fc40.x86_64.rpm                                                                                                                                                                                                    154 kB/s |  16 kB     00:00
+(22/26): upower-1.90.6-1.fc40.x86_64.rpm                                                                                                                                                                                                                1.4 MB/s | 139 kB     00:00
+(23/26): python3-botocore-1.35.25-1.fc40.noarch.rpm                                                                                                                                                                                                      14 MB/s | 7.3 MB     00:00
+(24/26): upower-libs-1.90.6-1.fc40.x86_64.rpm                                                                                                                                                                                                           562 kB/s |  57 kB     00:00
+(25/26): virtualbox-guest-additions-7.1.0-3.fc40.x86_64.rpm                                                                                                                                                                                             4.4 MB/s | 718 kB     00:00
+(26/26): podman-5.2.3-1.fc40.x86_64.rpm                                                                                                                                                                                                                  16 MB/s |  15 MB     00:00
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                                                                                                                    16 MB/s |  45 MB     00:02
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Complete!
+Transaction saved to /var/lib/dnf/system-upgrade/system-upgrade-transaction.json.
+Download complete! Use 'dnf offline-upgrade reboot' to start the upgrade.
+To remove cached metadata and transaction use 'dnf offline-upgrade clean'
+The downloaded packages were saved in cache until the next successful transaction.
+You can remove cached packages by executing 'dnf clean packages'.
+
+real    0m16.540s
+user    0m0.011s
+sys     0m0.023s
+
+Broadcast message from root@kusfedoravm on pts/1 (Sat 2024-09-28 18:55:08 EDT):
+
+The system will reboot now!
+
+Connection to kusfedoravm closed by remote host.
+Connection to kusfedoravm closed.
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_video.ps1  -url "https://nyti.ms/4dsiOR4"
+
+Saturday, September 28, 2024 9:08:02 PM
+
+PSPath              : Microsoft.PowerShell.Core\FileSystem::C:\Temp\yt-dlp
+PSParentPath        : Microsoft.PowerShell.Core\FileSystem::C:\Temp
+PSChildName         : yt-dlp
+PSDrive             : C
+PSProvider          : Microsoft.PowerShell.Core\FileSystem
+PSIsContainer       : True
+Name                : yt-dlp
+Parent              : C:\Temp
+Root                : C:\
+Exists              : True
+FullName            : C:\Temp\yt-dlp
+Extension           :
+CreationTime        : 9/28/2024 9:08:02 PM
+CreationTimeUtc     : 9/29/2024 1:08:02 AM
+LastAccessTime      : 9/28/2024 9:08:02 PM
+LastAccessTimeUtc   : 9/29/2024 1:08:02 AM
+LastWriteTime       : 9/28/2024 9:08:02 PM
+LastWriteTimeUtc    : 9/29/2024 1:08:02 AM
+LinkTarget          :
+UnixFileMode        : -1
+Attributes          : Directory
+Mode                : d----
+ModeWithoutHardLink : d----
+BaseName            : yt-dlp
+ResolvedTarget      : C:\Temp\yt-dlp
+Target              :
+LinkType            :
+
+Saturday, September 28, 2024 9:08:02 PM
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title).50s.%(ext)s', 'https://nyti.ms/4dsiOR4']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[generic] Extracting URL: https://nyti.ms/4dsiOR4
+[generic] 4dsiOR4: Downloading webpage
+[redirect] Following redirect to https://www.nytimes.com/video/world/middleeast/100000009728407/beirut-nasrallah-death-voices.html?smid=pl-share
+[NYTimes] Extracting URL: https://www.nytimes.com/video/world/middleeast/100000009728407/beirut-nasrallah-death-voices.html?smid=pl-share
+[NYTimes] 100000009728407: Downloading JSON from GraphQL API
+[NYTimes] 100000009728407: Downloading m3u8 information
+[NYTimes] 100000009728407: Downloading m3u8 information
+[NYTimes] 100000009728407: Downloading m3u8 information
+[NYTimes] 100000009728407: Downloading m3u8 information
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for NYTimes
+[info] 100000009728407: Downloading 1 format(s): hlsfmp4_mobile-3724
+[info] There are no subtitles for the requested languages
+[debug] Invoking hlsnative downloader on "https://vp.nyt.com/video/hlsfmp4/2024/09/28/125989_1_28vid-Lebanon-Nasrallah-PKG_wg_mobile/index-f1-v1-a1.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 13
+[download] Destination: C:\Temp\yt-dlp\Shock_and_Uncertainty_in_Beirut_After_Nasrallah_s_.mp4
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of   46.16MiB in 00:00:14 at 3.29MiB/s
+[debug] ffprobe command line: ffprobe -hide_banner -show_format -show_streams -print_format json file:C:\Temp\yt-dlp\Shock_and_Uncertainty_in_Beirut_After_Nasrallah_s_.mp4
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Shock_and_Uncertainty_in_Beirut_After_Nasrallah_s_.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Shock_and_Uncertainty_in_Beirut_After_Nasrallah_s_.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Shock and Uncertainty in Beirut After Nasrallah’s Death" -metadata "date=20240928" -metadata "description=Israel’s killing of Hezbollah’s leader, Hassan Nasrallah, was a stunning escalation of the country’s campaign against the Iran-backed group." -metadata "synopsis=Israel’s killing of Hezbollah’s leader, Hassan Nasrallah, was a stunning escalation of the country’s campaign against the Iran-backed group." -metadata "purl=https://www.nytimes.com/video/world/middleeast/100000009728407/beirut-nasrallah-death-voices.html?smid=pl-share" -metadata "comment=https://www.nytimes.com/video/world/middleeast/100000009728407/beirut-nasrallah-death-voices.html?smid=pl-share" -metadata "artist=Matthew Cassel and Chevaz Clarke" -movflags +faststart file:C:\Temp\yt-dlp\Shock_and_Uncertainty_in_Beirut_After_Nasrallah_s_.temp.mp4
+Saturday, September 28, 2024 9:08:20 PM
+Saturday, September 28, 2024 9:08:20 PM
+Saturday, September 28, 2024 9:08:20 PM
+
+LastWriteTime : 9/28/2024 9:08:20 PM
+Length        : 48406295
+Name          : Shock_and_Uncertainty_in_Beirut_After_Nasrallah_s_.mp4
+
+
+LastWriteTime : 9/28/2024 9:08:20 PM
+Length        : 48406295
+Name          : Shock_and_Uncertainty_in_Beirut_After_Nasrallah_s_.mp4
+
+Cleaned video name: ShockandUncertaintyinBeirutAfterNasrallahsmp4
+Cleaned video path: C:\Temp\yt-dlp\ShockandUncertaintyinBeirutAfterNasrallahsmp4
+Running ffmpeg without subtitles
+ffmpeg -i "C:\Temp\yt-dlp\ShockandUncertaintyinBeirutAfterNasrallahsmp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\ShockandUncertaintyinBeirutAfterNasrallahsmp4_reencoded.mp4"
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\ShockandUncertaintyinBeirutAfterNasrallahsmp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Shock and Uncertainty in Beirut After Nasrallah’s Death
+    artist          : Matthew Cassel and Chevaz Clarke
+    date            : 20240928
+    encoder         : Lavf61.1.100
+    comment         : https://www.nytimes.com/video/world/middleeast/100000009728407/beirut-nasrallah-death-voices.html?smid=pl-share
+    description     : Israel’s killing of Hezbollah’s leader, Hassan Nasrallah, was a stunning escalation of the country’s campaign against the Iran-backed group.
+    synopsis        : Israel’s killing of Hezbollah’s leader, Hassan Nasrallah, was a stunning escalation of the country’s campaign against the Iran-backed group.
+  Duration: 00:01:43.80, start: 0.000000, bitrate: 3730 kb/s
+  Stream #0:0[0x1](eng): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1080x1080 [SAR 1:1 DAR 1:1], 3598 kb/s, 29.97 fps, 29.97 tbr, 90k tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 125 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000001f832a62800] using SAR=1/1
+[libx264 @ 000001f832a62800] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001f832a62800] profile High, level 3.2, 4:2:0, 8-bit
+[libx264 @ 000001f832a62800] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\ShockandUncertaintyinBeirutAfterNasrallahsmp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Shock and Uncertainty in Beirut After Nasrallah’s Death
+    artist          : Matthew Cassel and Chevaz Clarke
+    date            : 20240928
+    synopsis        : Israel’s killing of Hezbollah’s leader, Hassan Nasrallah, was a stunning escalation of the country’s campaign against the Iran-backed group.
+    comment         : https://www.nytimes.com/video/world/middleeast/100000009728407/beirut-nasrallah-death-voices.html?smid=pl-share
+    description     : Israel’s killing of Hezbollah’s leader, Hassan Nasrallah, was a stunning escalation of the country’s campaign against the Iran-backed group.
+    encoder         : Lavf61.1.100
+  Stream #0:0(eng): Video: h264 (avc1 / 0x31637661), yuv420p(progressive), 1080x1080 [SAR 1:1 DAR 1:1], q=2-31, 29.97 fps, 30k tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 000001f8332c47c0] Starting second pass: moving the moov atom to the beginning of the filespeed=6.81x
+[out#0/mp4 @ 000001f832a20f00] video:24141KiB audio:1598KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.439329%
+frame= 3111 fps=207 q=-1.0 Lsize=   25852KiB time=00:01:43.73 bitrate=2041.5kbits/s dup=2 drop=0 speed= 6.9x
+[libx264 @ 000001f832a62800] frame I:22    Avg QP:18.61  size: 79073
+[libx264 @ 000001f832a62800] frame P:992   Avg QP:22.07  size: 16549
+[libx264 @ 000001f832a62800] frame B:2097  Avg QP:24.70  size:  3130
+[libx264 @ 000001f832a62800] consecutive B-frames:  2.5% 21.7%  3.6% 72.3%
+[libx264 @ 000001f832a62800] mb I  I16..4: 13.8% 59.3% 26.9%
+[libx264 @ 000001f832a62800] mb P  I16..4:  4.4%  9.9%  1.2%  P16..4: 39.2% 10.7%  5.5%  0.0%  0.0%    skip:29.2%
+[libx264 @ 000001f832a62800] mb B  I16..4:  0.5%  0.9%  0.1%  B16..8: 31.4%  1.8%  0.2%  direct: 1.0%  skip:64.1%  L0:44.4% L1:52.7% BI: 2.9%
+[libx264 @ 000001f832a62800] 8x8 transform intra:62.6% inter:78.4%
+[libx264 @ 000001f832a62800] coded y,uvDC,uvAC intra: 39.4% 49.9% 8.5% inter: 7.7% 11.0% 0.1%
+[libx264 @ 000001f832a62800] i16 v,h,dc,p: 33% 32% 15% 20%
+[libx264 @ 000001f832a62800] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 25% 24% 28%  3%  4%  4%  5%  4%  4%
+[libx264 @ 000001f832a62800] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 29% 26% 12%  4%  7%  6%  7%  5%  5%
+[libx264 @ 000001f832a62800] i8c dc,h,v,p: 56% 22% 18%  3%
+[libx264 @ 000001f832a62800] Weighted P-Frames: Y:3.0% UV:1.0%
+[libx264 @ 000001f832a62800] ref P L0: 67.9% 13.7% 13.7%  4.7%  0.1%
+[libx264 @ 000001f832a62800] ref B L0: 89.6%  8.5%  1.9%
+[libx264 @ 000001f832a62800] ref B L1: 97.8%  2.2%
+[libx264 @ 000001f832a62800] kb/s:1905.09
+[aac @ 000001f832a8c380] Qavg: 2822.732
+Saturday, September 28, 2024 9:08:35 PM
+Saturday, September 28, 2024 9:08:39 PM
+Saturday, September 28, 2024 9:08:39 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_video.ps1  -url "https://nyti.ms/4gFxgbp"
+
+Saturday, September 28, 2024 9:09:03 PM
+
+PSPath              : Microsoft.PowerShell.Core\FileSystem::C:\Temp\yt-dlp
+PSParentPath        : Microsoft.PowerShell.Core\FileSystem::C:\Temp
+PSChildName         : yt-dlp
+PSDrive             : C
+PSProvider          : Microsoft.PowerShell.Core\FileSystem
+PSIsContainer       : True
+Name                : yt-dlp
+Parent              : C:\Temp
+Root                : C:\
+Exists              : True
+FullName            : C:\Temp\yt-dlp
+Extension           :
+CreationTime        : 9/28/2024 9:09:03 PM
+CreationTimeUtc     : 9/29/2024 1:09:03 AM
+LastAccessTime      : 9/28/2024 9:09:03 PM
+LastAccessTimeUtc   : 9/29/2024 1:09:03 AM
+LastWriteTime       : 9/28/2024 9:09:03 PM
+LastWriteTimeUtc    : 9/29/2024 1:09:03 AM
+LinkTarget          :
+UnixFileMode        : -1
+Attributes          : Directory
+Mode                : d----
+ModeWithoutHardLink : d----
+BaseName            : yt-dlp
+ResolvedTarget      : C:\Temp\yt-dlp
+Target              :
+LinkType            :
+
+Saturday, September 28, 2024 9:09:03 PM
+[debug] Command-line config: ['--verbose', '--write-sub', '--sub-lang', 'en', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\%(title).50s.%(ext)s', 'https://nyti.ms/4gFxgbp']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.08.06 from yt-dlp/yt-dlp [4d9231208] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.0.2-full_build-www.gyan.dev (setts), ffprobe 7.0.2-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.07.04, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.2, websockets-12.0
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1830 extractors
+[generic] Extracting URL: https://nyti.ms/4gFxgbp
+[generic] 4gFxgbp: Downloading webpage
+[redirect] Following redirect to https://www.nytimes.com/video/world/middleeast/100000009728018/who-was-hassan-nasrallah-leader-of-hezbollah.html?smid=pl-share
+[NYTimes] Extracting URL: https://www.nytimes.com/video/world/middleeast/100000009728018/who-was-hassan-nasrallah-leader-of-hezbollah.html?smid=pl-share
+[NYTimes] 100000009728018: Downloading JSON from GraphQL API
+[NYTimes] 100000009728018: Downloading m3u8 information
+[NYTimes] 100000009728018: Downloading m3u8 information
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for NYTimes
+[info] 100000009728018: Downloading 1 format(s): hlsfmp4-3515
+[info] There are no subtitles for the requested languages
+[debug] Invoking hlsnative downloader on "https://vp.nyt.com/video/hlsfmp4/2024/09/28/125908_1_28vid-nasrallah_wg/index-f1-v1-a1.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 21
+[download] Destination: C:\Temp\yt-dlp\Who_Was_Hassan_Nasrallah_Leader_of_Hezbollah.mp4
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of   75.26MiB in 00:00:23 at 3.20MiB/s
+[debug] ffprobe command line: ffprobe -hide_banner -show_format -show_streams -print_format json file:C:\Temp\yt-dlp\Who_Was_Hassan_Nasrallah_Leader_of_Hezbollah.mp4
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\Who_Was_Hassan_Nasrallah_Leader_of_Hezbollah.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\Who_Was_Hassan_Nasrallah_Leader_of_Hezbollah.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Who Was Hassan Nasrallah, Leader of Hezbollah?" -metadata "date=20240928" -metadata "description=The leader of the militant group Hezbollah, Hassan Nasrallah, was killed by an Israeli airstrike in Lebanon on Friday. Neil MacFarquhar, a reporter for The New York Times who met and interviewed Nasrallah in 2002, explains who he was and the significance of his death." -metadata "synopsis=The leader of the militant group Hezbollah, Hassan Nasrallah, was killed by an Israeli airstrike in Lebanon on Friday. Neil MacFarquhar, a reporter for The New York Times who met and interviewed Nasrallah in 2002, explains who he was and the significance of his death." -metadata "purl=https://www.nytimes.com/video/world/middleeast/100000009728018/who-was-hassan-nasrallah-leader-of-hezbollah.html?smid=pl-share" -metadata "comment=https://www.nytimes.com/video/world/middleeast/100000009728018/who-was-hassan-nasrallah-leader-of-hezbollah.html?smid=pl-share" -metadata "artist=Neil MacFarquhar, Alexandra Ostasiewicz, Claire Hogan and Gabriel Blanco" -movflags +faststart file:C:\Temp\yt-dlp\Who_Was_Hassan_Nasrallah_Leader_of_Hezbollah.temp.mp4
+Saturday, September 28, 2024 9:09:29 PM
+Saturday, September 28, 2024 9:09:29 PM
+Saturday, September 28, 2024 9:09:29 PM
+
+LastWriteTime : 9/28/2024 9:09:29 PM
+Length        : 78930104
+Name          : Who_Was_Hassan_Nasrallah_Leader_of_Hezbollah.mp4
+
+
+LastWriteTime : 9/28/2024 9:09:29 PM
+Length        : 78930104
+Name          : Who_Was_Hassan_Nasrallah_Leader_of_Hezbollah.mp4
+
+Cleaned video name: WhoWasHassanNasrallahLeaderofHezbollahmp4
+Cleaned video path: C:\Temp\yt-dlp\WhoWasHassanNasrallahLeaderofHezbollahmp4
+Running ffmpeg without subtitles
+ffmpeg -i "C:\Temp\yt-dlp\WhoWasHassanNasrallahLeaderofHezbollahmp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\WhoWasHassanNasrallahLeaderofHezbollahmp4_reencoded.mp4"
+ffmpeg version 7.0.2-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 13.2.0 (Rev5, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-librav1e --enable-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libopenjpeg --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59.  8.100 / 59.  8.100
+  libavcodec     61.  3.100 / 61.  3.100
+  libavformat    61.  1.100 / 61.  1.100
+  libavdevice    61.  1.100 / 61.  1.100
+  libavfilter    10.  1.100 / 10.  1.100
+  libswscale      8.  1.100 /  8.  1.100
+  libswresample   5.  1.100 /  5.  1.100
+  libpostproc    58.  1.100 / 58.  1.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\WhoWasHassanNasrallahLeaderofHezbollahmp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Who Was Hassan Nasrallah, Leader of Hezbollah?
+    artist          : Neil MacFarquhar, Alexandra Ostasiewicz, Claire Hogan and Gabriel Blanco
+    date            : 20240928
+    encoder         : Lavf61.1.100
+    comment         : https://www.nytimes.com/video/world/middleeast/100000009728018/who-was-hassan-nasrallah-leader-of-hezbollah.html?smid=pl-share
+    description     : The leader of the militant group Hezbollah, Hassan Nasrallah, was killed by an Israeli airstrike in Lebanon on Friday. Neil MacFarquhar, a reporter for The New York Times who met and interviewed Nasrallah in 2002, explains who he was and the significance
+    synopsis        : The leader of the militant group Hezbollah, Hassan Nasrallah, was killed by an Israeli airstrike in Lebanon on Friday. Neil MacFarquhar, a reporter for The New York Times who met and interviewed Nasrallah in 2002, explains who he was and the significance
+  Duration: 00:02:59.25, start: 0.000000, bitrate: 3522 kb/s
+  Stream #0:0[0x1](eng): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 608x1080 [SAR 1:1 DAR 76:135], 3389 kb/s, 29.97 fps, 29.97 tbr, 90k tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 125 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000001e9e81aac40] using SAR=1/1
+[libx264 @ 000001e9e81aac40] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001e9e81aac40] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 000001e9e81aac40] 264 - core 164 r3191 4613ac3 - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\WhoWasHassanNasrallahLeaderofHezbollahmp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Who Was Hassan Nasrallah, Leader of Hezbollah?
+    artist          : Neil MacFarquhar, Alexandra Ostasiewicz, Claire Hogan and Gabriel Blanco
+    date            : 20240928
+    synopsis        : The leader of the militant group Hezbollah, Hassan Nasrallah, was killed by an Israeli airstrike in Lebanon on Friday. Neil MacFarquhar, a reporter for The New York Times who met and interviewed Nasrallah in 2002, explains who he was and the significance
+    comment         : https://www.nytimes.com/video/world/middleeast/100000009728018/who-was-hassan-nasrallah-leader-of-hezbollah.html?smid=pl-share
+    description     : The leader of the militant group Hezbollah, Hassan Nasrallah, was killed by an Israeli airstrike in Lebanon on Friday. Neil MacFarquhar, a reporter for The New York Times who met and interviewed Nasrallah in 2002, explains who he was and the significance
+    encoder         : Lavf61.1.100
+  Stream #0:0(eng): Video: h264 (avc1 / 0x31637661), yuv420p(progressive), 608x1080 [SAR 1:1 DAR 76:135], q=2-31, 29.97 fps, 30k tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.3.100 aac
+[mp4 @ 000001e9e7bd8500] Starting second pass: moving the moov atom to the beginning of the filespeed=16.8x
+[out#0/mp4 @ 000001e9e7b8bac0] video:16242KiB audio:2826KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 1.009924%
+frame= 5372 fps=508 q=-1.0 Lsize=   19261KiB time=00:02:59.17 bitrate= 880.6kbits/s dup=2 drop=0 speed=16.9x
+[libx264 @ 000001e9e81aac40] frame I:43    Avg QP:17.19  size: 64653
+[libx264 @ 000001e9e81aac40] frame P:1702  Avg QP:20.80  size:  6154
+[libx264 @ 000001e9e81aac40] frame B:3627  Avg QP:23.05  size:   931
+[libx264 @ 000001e9e81aac40] consecutive B-frames:  6.7%  9.2%  2.2% 82.0%
+[libx264 @ 000001e9e81aac40] mb I  I16..4: 22.0% 57.8% 20.3%
+[libx264 @ 000001e9e81aac40] mb P  I16..4:  1.6%  3.0%  0.2%  P16..4: 29.6%  7.1%  5.4%  0.0%  0.0%    skip:53.1%
+[libx264 @ 000001e9e81aac40] mb B  I16..4:  0.2%  0.2%  0.0%  B16..8: 25.6%  0.4%  0.0%  direct: 0.8%  skip:72.7%  L0:46.2% L1:52.6% BI: 1.2%
+[libx264 @ 000001e9e81aac40] 8x8 transform intra:60.1% inter:80.9%
+[libx264 @ 000001e9e81aac40] coded y,uvDC,uvAC intra: 40.1% 56.0% 19.4% inter: 5.1% 8.3% 0.5%
+[libx264 @ 000001e9e81aac40] i16 v,h,dc,p: 50% 22% 12% 16%
+[libx264 @ 000001e9e81aac40] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 22% 16% 37%  3%  4%  5%  4%  4%  4%
+[libx264 @ 000001e9e81aac40] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 19% 12%  6%  8%  8%  7%  7%  7%
+[libx264 @ 000001e9e81aac40] i8c dc,h,v,p: 57% 21% 17%  5%
+[libx264 @ 000001e9e81aac40] Weighted P-Frames: Y:1.1% UV:0.7%
+[libx264 @ 000001e9e81aac40] ref P L0: 57.7% 11.7% 18.5% 12.0%  0.0%
+[libx264 @ 000001e9e81aac40] ref B L0: 85.6%  9.8%  4.6%
+[libx264 @ 000001e9e81aac40] ref B L1: 95.4%  4.6%
+[libx264 @ 000001e9e81aac40] kb/s:742.27
+[aac @ 000001e9e8361740] Qavg: 733.537
+Saturday, September 28, 2024 9:09:40 PM
+Saturday, September 28, 2024 9:09:41 PM
+Saturday, September 28, 2024 9:09:41 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
