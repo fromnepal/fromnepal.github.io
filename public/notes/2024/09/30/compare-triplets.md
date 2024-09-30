@@ -1,33 +1,3 @@
-
-
-HackerRank Home
-|
-Prepare
-Certify
-Compete
-Apply
-Search
-
-
-|
-Switch to..
-
-civic
-PrepareAlgorithmsWarmupCompare the Triplets
-Compare the Triplets
-9 more points to get your first star!
-Rank: 3120968|Points: 21/30
-Problem Solving
-Problem
-Submissions
-Leaderboard
-Discussions
-Editorial
-HackerRank Logo
-|
-PrepareAlgorithmsWarmupCompare the Triplets
-Exit Full Screen View
-Problem	Submissions	Leaderboard	Discussions	Editorial
 Alice and Bob each created one problem for HackerRank. A reviewer rates the two challenges, awarding points on a scale from 1 to 100 for three categories: problem clarity, originality, and difficulty.
 
 The rating for Alice's challenge is the triplet a = (a[0], a[1], a[2]), and the rating for Bob's challenge is the triplet b = (b[0], b[1], b[2]).
@@ -101,44 +71,6 @@ Explanation 1
 Comparing the  elements,  so Bob receives a point.
 Comparing the  and  elements,  and  so Alice receives two points.
 The return array is .
-
-Language
-C#
-More
-12345678910111213141516171819202122232425262728424344454647484950515253545529303132403533343637383941
-        return result;
-    }
-
-}
-
-class Solution
-{
-    public static void Main(string[] args)
-    {
-        TextWriter textWriter = new StreamWriter(@System.Environment.GetEnvironmentVariable("OUTPUT_PATH"), true);
-
-
-
-Line: 41 Col: 23
-
-Test against custom input
-Congratulations!
-
-You have passed the sample test cases. Click the submit button to run your code against all the test cases.
-
-
-Sample Test case 0
-
-Sample Test case 1
-Input (stdin)
-5 6 7
-3 6 10
-Your Output (stdout)
-1 1
-Expected Output
-1 1
-BlogScoringEnvironmentFAQAbout UsSupportCareersTerms Of ServicePrivacy Policy
-int capacity, The number of elements that the new list can initially store., Initializes a new instance of the System.Collections.Generic.List`1 class that is empty and has the specified initial capacity., hint
 
 ```csharp
 using System.CodeDom.Compiler;
