@@ -12,11 +12,15 @@ function Clean-FileName {
     return $fileName -replace '[^A-Za-z0-9]', ''
 }
 
+# Check if the tempDir exists, if not, create it
+if (-Not (Test-Path -Path $tempDir)) {
+    New-Item -ItemType Directory -Path $tempDir
+}
+
 foreach ($url in $urls) {
     $timestamp = Get-Date -Format "yyyyMMddHHmmss"
     $date = Get-Date
     Write-Output $date
-    New-Item -ItemType Directory -Path $tempDir -Force
     Get-ChildItem $tempDir
     $date = Get-Date
     Write-Output $date
@@ -33,38 +37,42 @@ foreach ($url in $urls) {
     $videoFile
     $subtitleFile
 
-    if ($subtitleFile) {
-        $subtitlePath = $subtitleFile.FullName
-        $cleanSubtitleName = Clean-FileName -fileName $subtitleFile.Name
-        $cleanSubtitlePath = Join-Path -Path $tempDir -ChildPath $cleanSubtitleName
-        Rename-Item -Path $subtitlePath -NewName $cleanSubtitlePath
-        $subtitlePath = $cleanSubtitlePath
-        Write-Output "Cleaned subtitle path: $subtitlePath"
-    }
+    if ($videoFile) {
+        if ($subtitleFile) {
+            $subtitlePath = $subtitleFile.FullName
+            $cleanSubtitleName = Clean-FileName -fileName $subtitleFile.Name
+            $cleanSubtitlePath = Join-Path -Path $tempDir -ChildPath $cleanSubtitleName
+            Rename-Item -Path $subtitlePath -NewName $cleanSubtitlePath
+            $subtitlePath = $cleanSubtitlePath
+            Write-Output "Cleaned subtitle path: $subtitlePath"
+        }
 
-    $cleanVideoName = Clean-FileName -fileName $videoFile.Name
-    Write-Output "Cleaned video name: $cleanVideoName"
-    $cleanVideoPath = Join-Path -Path $tempDir -ChildPath $cleanVideoName
-    Rename-Item -Path $videoFile.FullName -NewName $cleanVideoPath
-    $videoFile = Get-Item -Path $cleanVideoPath
-    Write-Output "Cleaned video path: $($videoFile.FullName)"
+        $cleanVideoName = Clean-FileName -fileName $videoFile.Name
+        Write-Output "Cleaned video name: $cleanVideoName"
+        $cleanVideoPath = Join-Path -Path $tempDir -ChildPath $cleanVideoName
+        Rename-Item -Path $videoFile.FullName -NewName $cleanVideoPath
+        $videoFile = Get-Item -Path $cleanVideoPath
+        Write-Output "Cleaned video path: $($videoFile.FullName)"
 
-    if ($subtitleFile) {
-        Write-Output "Running ffmpeg with subtitles"
-        $ffmpegCommand = "ffmpeg -loglevel debug -i `"$($videoFile.FullName)`" -vf `subtitles='$($subtitlePath)':force_style='FontName=Arial,FontSize=24'` -c:v libx264 -c:a aac -strict experimental -movflags +faststart `"$tempDir\$($videoFile.BaseName)_reencoded.mp4`""
-        Write-Output $ffmpegCommand
-        Invoke-Expression $ffmpegCommand
+        if ($subtitleFile) {
+            Write-Output "Running ffmpeg with subtitles"
+            $ffmpegCommand = "ffmpeg -loglevel debug -i `"$($videoFile.FullName)`" -vf `subtitles='$($subtitlePath)':force_style='FontName=Arial,FontSize=24'` -c:v libx264 -c:a aac -strict experimental -movflags +faststart `"$tempDir\$($videoFile.BaseName)_reencoded.mp4`""
+            Write-Output $ffmpegCommand
+            Invoke-Expression $ffmpegCommand
+        } else {
+            Write-Output "Running ffmpeg without subtitles"
+            $ffmpegCommand = "ffmpeg -i `"$($videoFile.FullName)`" -c:v libx264 -c:a aac -strict experimental -movflags +faststart `"$tempDir\$($videoFile.BaseName)_reencoded.mp4`""
+            Write-Output $ffmpegCommand
+            Invoke-Expression $ffmpegCommand
+        }
+        $date = Get-Date
+        Write-Output $date
+        Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"
+        $date = Get-Date
+        Write-Output $date
     } else {
-        Write-Output "Running ffmpeg without subtitles"
-        $ffmpegCommand = "ffmpeg -i `"$($videoFile.FullName)`" -c:v libx264 -c:a aac -strict experimental -movflags +faststart `"$tempDir\$($videoFile.BaseName)_reencoded.mp4`""
-        Write-Output $ffmpegCommand
-        Invoke-Expression $ffmpegCommand
+        Write-Output "Failed to download video from $url"
     }
-    $date = Get-Date
-    Write-Output $date
-    Move-Item -Path "$tempDir\$($videoFile.BaseName)_reencoded.mp4" -Destination "\\TP-Share\G\shared\jellyfin\shows\downloaded"
-    $date = Get-Date
-    Write-Output $date
     Remove-Item -Path $tempDir -Recurse -Force
     $date = Get-Date
     Write-Output $date
