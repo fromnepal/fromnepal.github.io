@@ -14,6 +14,8 @@ function Clean-FileName {
 
 # Check if the tempDir exists, if not, create it
 if (-Not (Test-Path -Path $tempDir)) {
+    Write-Output $date
+    Write-Output "Create new folder for yt-dlp"
     New-Item -ItemType Directory -Path $tempDir
 }
 
