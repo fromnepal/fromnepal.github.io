@@ -1,386 +1,3 @@
-Get-ChildItem: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_videos.ps1:24
-Line |
-  24 |      Get-ChildItem $tempDir
-     |      ~~~~~~~~~~~~~~~~~~~~~~
-     | Cannot find path 'C:\Temp\yt-dlp' because it does not exist.
-
-DisplayHint : DateTime
-Date        : 10/5/2024 12:00:00 AM
-Day         : 5
-DayOfWeek   : Saturday
-DayOfYear   : 279
-Hour        : 10
-Kind        : Local
-Millisecond : 850
-Microsecond : 39
-Nanosecond  : 100
-Minute      : 2
-Month       : 10
-Second      : 56
-Ticks       : 638637193768500391
-TimeOfDay   : 10:02:56.8500391
-Year        : 2024
-DateTime    : Saturday, October 5, 2024 10:02:56 AM
-
-[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241005100256.%(ext)s','https://www.instagram.com/reel/C-lh864SQov']
-[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
-[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
-[debug] yt-dlp version stable@2024.09.27 from yt-dlp/yt-dlp [c6387abc1] (win_exe)
-[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
-[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
-[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.3, websockets-13.1
-[debug] Proxy map: {}
-[debug] Request Handlers: urllib, requests, websockets, curl_cffi
-[debug] Loaded 1838 extractors
-[Instagram] Extracting URL: https://www.instagram.com/reel/C-lh864SQov
-[Instagram] C-lh864SQov: Setting up session
-[Instagram] C-lh864SQov: Downloading JSON metadata
-WARNING: [Instagram] C-lh864SQov: General metadata extraction failed (some metadata might be missing).
-[Instagram] C-lh864SQov: Downloading webpage
-WARNING: [Instagram] unable to extract shared data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
-WARNING: [Instagram] Main webpage is locked behind the login page. Retrying with embed webpage (some metadata might be missing).
-[Instagram] C-lh864SQov: Downloading embed webpage
-WARNING: [Instagram] unable to extract additional data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
-ERROR: [Instagram] C-lh864SQov: Requested content is not available, rate-limit reached or login required. Use --cookies, --cookies-from-browser, --username and --password, --netrc-cmd, or --netrc (instagram) to provide account credentials
-  File "yt_dlp\extractor\common.py", line 741, in extract
-  File "yt_dlp\extractor\instagram.py", line 460, in _real_extract
-  File "yt_dlp\extractor\common.py", line 1257, in raise_login_required
-
-
-DisplayHint : DateTime
-Date        : 10/5/2024 12:00:00 AM
-Day         : 5
-DayOfWeek   : Saturday
-DayOfYear   : 279
-Hour        : 10
-Kind        : Local
-Millisecond : 150
-Microsecond : 921
-Nanosecond  : 100
-Minute      : 2
-Month       : 10
-Second      : 59
-Ticks       : 638637193791509211
-TimeOfDay   : 10:02:59.1509211
-Year        : 2024
-DateTime    : Saturday, October 5, 2024 10:02:59 AM
-
-Get-ChildItem: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_videos.ps1:30
-Line |
-  30 |      $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select- …
-     |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     | Cannot find path 'C:\Temp\yt-dlp' because it does not exist.
-
-DisplayHint : DateTime
-Date        : 10/5/2024 12:00:00 AM
-Day         : 5
-DayOfWeek   : Saturday
-DayOfYear   : 279
-Hour        : 10
-Kind        : Local
-Millisecond : 154
-Microsecond : 182
-Nanosecond  : 400
-Minute      : 2
-Month       : 10
-Second      : 59
-Ticks       : 638637193791541824
-TimeOfDay   : 10:02:59.1541824
-Year        : 2024
-DateTime    : Saturday, October 5, 2024 10:02:59 AM
-
-
-DisplayHint : DateTime
-Date        : 10/5/2024 12:00:00 AM
-Day         : 5
-DayOfWeek   : Saturday
-DayOfYear   : 279
-Hour        : 10
-Kind        : Local
-Millisecond : 157
-Microsecond : 124
-Nanosecond  : 400
-Minute      : 2
-Month       : 10
-Second      : 59
-Ticks       : 638637193791571244
-TimeOfDay   : 10:02:59.1571244
-Year        : 2024
-DateTime    : Saturday, October 5, 2024 10:02:59 AM
-
-Get-ChildItem: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_videos.ps1:35
-Line |
-  35 |      Get-ChildItem $tempDir
-     |      ~~~~~~~~~~~~~~~~~~~~~~
-     | Cannot find path 'C:\Temp\yt-dlp' because it does not exist.
-Failed to download video from https://www.instagram.com/reel/C-lh864SQov
-Remove-Item: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_videos.ps1:57
-Line |
-  57 |      Remove-Item -Path $tempDir -Recurse -Force
-     |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     | Cannot find path 'C:\Temp\yt-dlp' because it does not exist.
-
-DisplayHint : DateTime
-Date        : 10/5/2024 12:00:00 AM
-Day         : 5
-DayOfWeek   : Saturday
-DayOfYear   : 279
-Hour        : 10
-Kind        : Local
-Millisecond : 162
-Microsecond : 243
-Nanosecond  : 800
-Minute      : 2
-Month       : 10
-Second      : 59
-Ticks       : 638637193791622438
-TimeOfDay   : 10:02:59.1622438
-Year        : 2024
-DateTime    : Saturday, October 5, 2024 10:02:59 AM
-
-
-DisplayHint : DateTime
-Date        : 10/5/2024 12:00:00 AM
-Day         : 5
-DayOfWeek   : Saturday
-DayOfYear   : 279
-Hour        : 10
-Kind        : Local
-Millisecond : 164
-Microsecond : 807
-Nanosecond  : 500
-Minute      : 2
-Month       : 10
-Second      : 59
-Ticks       : 638637193791648075
-TimeOfDay   : 10:02:59.1648075
-Year        : 2024
-DateTime    : Saturday, October 5, 2024 10:02:59 AM
-
-Get-ChildItem: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_videos.ps1:24
-Line |
-  24 |      Get-ChildItem $tempDir
-     |      ~~~~~~~~~~~~~~~~~~~~~~
-     | Cannot find path 'C:\Temp\yt-dlp' because it does not exist.
-
-DisplayHint : DateTime
-Date        : 10/5/2024 12:00:00 AM
-Day         : 5
-DayOfWeek   : Saturday
-DayOfYear   : 279
-Hour        : 10
-Kind        : Local
-Millisecond : 167
-Microsecond : 609
-Nanosecond  : 0
-Minute      : 2
-Month       : 10
-Second      : 59
-Ticks       : 638637193791676090
-TimeOfDay   : 10:02:59.1676090
-Year        : 2024
-DateTime    : Saturday, October 5, 2024 10:02:59 AM
-
-[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241005100259.%(ext)s','https://www.instagram.com/reel/DAYxaZpSn8v']
-[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
-[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
-[debug] yt-dlp version stable@2024.09.27 from yt-dlp/yt-dlp [c6387abc1] (win_exe)
-[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
-[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
-[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.3, websockets-13.1
-[debug] Proxy map: {}
-[debug] Request Handlers: urllib, requests, websockets, curl_cffi
-[debug] Loaded 1838 extractors
-[Instagram] Extracting URL: https://www.instagram.com/reel/DAYxaZpSn8v
-[Instagram] DAYxaZpSn8v: Setting up session
-[Instagram] DAYxaZpSn8v: Downloading JSON metadata
-WARNING: [Instagram] DAYxaZpSn8v: General metadata extraction failed (some metadata might be missing).
-[Instagram] DAYxaZpSn8v: Downloading webpage
-WARNING: [Instagram] unable to extract shared data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
-WARNING: [Instagram] Main webpage is locked behind the login page. Retrying with embed webpage (some metadata might be missing).
-[Instagram] DAYxaZpSn8v: Downloading embed webpage
-WARNING: [Instagram] unable to extract additional data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
-ERROR: [Instagram] DAYxaZpSn8v: Requested content is not available, rate-limit reached or login required. Use --cookies, --cookies-from-browser, --username and --password, --netrc-cmd, or --netrc (instagram) to provide account credentials
-  File "yt_dlp\extractor\common.py", line 741, in extract
-  File "yt_dlp\extractor\instagram.py", line 460, in _real_extract
-  File "yt_dlp\extractor\common.py", line 1257, in raise_login_required
-
-
-DisplayHint : DateTime
-Date        : 10/5/2024 12:00:00 AM
-Day         : 5
-DayOfWeek   : Saturday
-DayOfYear   : 279
-Hour        : 10
-Kind        : Local
-Millisecond : 620
-Microsecond : 582
-Nanosecond  : 300
-Minute      : 3
-Month       : 10
-Second      : 1
-Ticks       : 638637193816205823
-TimeOfDay   : 10:03:01.6205823
-Year        : 2024
-DateTime    : Saturday, October 5, 2024 10:03:01 AM
-
-Get-ChildItem: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_videos.ps1:30
-Line |
-  30 |      $videoFile = Get-ChildItem -Path $tempDir -Filter *.mp4 | Select- …
-     |                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     | Cannot find path 'C:\Temp\yt-dlp' because it does not exist.
-
-DisplayHint : DateTime
-Date        : 10/5/2024 12:00:00 AM
-Day         : 5
-DayOfWeek   : Saturday
-DayOfYear   : 279
-Hour        : 10
-Kind        : Local
-Millisecond : 627
-Microsecond : 207
-Nanosecond  : 200
-Minute      : 3
-Month       : 10
-Second      : 1
-Ticks       : 638637193816272072
-TimeOfDay   : 10:03:01.6272072
-Year        : 2024
-DateTime    : Saturday, October 5, 2024 10:03:01 AM
-
-
-DisplayHint : DateTime
-Date        : 10/5/2024 12:00:00 AM
-Day         : 5
-DayOfWeek   : Saturday
-DayOfYear   : 279
-Hour        : 10
-Kind        : Local
-Millisecond : 628
-Microsecond : 617
-Nanosecond  : 700
-Minute      : 3
-Month       : 10
-Second      : 1
-Ticks       : 638637193816286177
-TimeOfDay   : 10:03:01.6286177
-Year        : 2024
-DateTime    : Saturday, October 5, 2024 10:03:01 AM
-
-Get-ChildItem: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_videos.ps1:35
-Line |
-  35 |      Get-ChildItem $tempDir
-     |      ~~~~~~~~~~~~~~~~~~~~~~
-     | Cannot find path 'C:\Temp\yt-dlp' because it does not exist.
-Failed to download video from https://www.instagram.com/reel/DAYxaZpSn8v
-Remove-Item: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_videos.ps1:57
-Line |
-  57 |      Remove-Item -Path $tempDir -Recurse -Force
-     |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-     | Cannot find path 'C:\Temp\yt-dlp' because it does not exist.
-
-DisplayHint : DateTime
-Date        : 10/5/2024 12:00:00 AM
-Day         : 5
-DayOfWeek   : Saturday
-DayOfYear   : 279
-Hour        : 10
-Kind        : Local
-Millisecond : 631
-Microsecond : 972
-Nanosecond  : 500
-Minute      : 3
-Month       : 10
-Second      : 1
-Ticks       : 638637193816319725
-TimeOfDay   : 10:03:01.6319725
-Year        : 2024
-DateTime    : Saturday, October 5, 2024 10:03:01 AM
-
-
-DisplayHint : DateTime
-Date        : 10/5/2024 12:00:00 AM
-Day         : 5
-DayOfWeek   : Saturday
-DayOfYear   : 279
-Hour        : 10
-Kind        : Local
-Millisecond : 633
-Microsecond : 541
-Nanosecond  : 700
-Minute      : 3
-Month       : 10
-Second      : 1
-Ticks       : 638637193816335417
-TimeOfDay   : 10:03:01.6335417
-Year        : 2024
-DateTime    : Saturday, October 5, 2024 10:03:01 AM
-
-Get-ChildItem: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_videos.ps1:24
-Line |
-  24 |      Get-ChildItem $tempDir
-     |      ~~~~~~~~~~~~~~~~~~~~~~
-     | Cannot find path 'C:\Temp\yt-dlp' because it does not exist.
-
-DisplayHint : DateTime
-Date        : 10/5/2024 12:00:00 AM
-Day         : 5
-DayOfWeek   : Saturday
-DayOfYear   : 279
-Hour        : 10
-Kind        : Local
-Millisecond : 635
-Microsecond : 936
-Nanosecond  : 200
-Minute      : 3
-Month       : 10
-Second      : 1
-Ticks       : 638637193816359362
-TimeOfDay   : 10:03:01.6359362
-Year        : 2024
-DateTime    : Saturday, October 5, 2024 10:03:01 AM
-
-[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241005100301.%(ext)s','https://www.instagram.com/reel/C_XTAy4vusX']
-[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
-[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
-[debug] yt-dlp version stable@2024.09.27 from yt-dlp/yt-dlp [c6387abc1] (win_exe)
-[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
-[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
-[debug] Optional libraries: Cryptodome-3.20.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.3, websockets-13.1
-[debug] Proxy map: {}
-[debug] Request Handlers: urllib, requests, websockets, curl_cffi
-[debug] Loaded 1838 extractors
-[Instagram] Extracting URL: https://www.instagram.com/reel/C_XTAy4vusX
-[Instagram] C_XTAy4vusX: Setting up session
-[Instagram] C_XTAy4vusX: Downloading JSON metadata
-WARNING: [Instagram] C_XTAy4vusX: General metadata extraction failed (some metadata might be missing).
-[Instagram] C_XTAy4vusX: Downloading webpage
-WARNING: [Instagram] unable to extract shared data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
-WARNING: [Instagram] Main webpage is locked behind the login page. Retrying with embed webpage (some metadata might be missing).
-[Instagram] C_XTAy4vusX: Downloading embed webpage
-WARNING: [Instagram] unable to extract additional data; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
-ERROR: [Instagram] C_XTAy4vusX: Requested content is not available, rate-limit reached or login required. Use --cookies, --cookies-from-browser, --username and --password, --netrc-cmd, or --netrc (instagram) to provide account credentials
-  File "yt_dlp\extractor\common.py", line 741, in extract
-  File "yt_dlp\extractor\instagram.py", line 460, in _real_extract
-  File "yt_dlp\extractor\common.py", line 1257, in raise_login_required
-
-
-DisplayHint : DateTime
-Date        : 10/5/2024 12:00:00 AM
-Day         : 5
-DayOfWeek   : Saturday
-DayOfYear   : 279
-Hour        : 10
-Kind        : Local
-Millisecond : 284
-Microsecond : 925
-Nanosecond  : 500
-Minute      : 3
-Month       : 10
-Second      : 4
-Ticks       : 638637193842849255
-TimeOfDay   : 10:03:04.2849255
-Year        : 2024
 DateTime    : Saturday, October 5, 2024 10:03:04 AM
 
 Get-ChildItem: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_videos.ps1:30
@@ -8941,5 +8558,104 @@ remote: Resolving deltas: 100% (13/13), completed with 6 local objects.
 To github.com:fromnepal/fromnepal.github.io.git
    453a0bf..8db784e  main -> main
 Saturday, October 5, 2024 4:40:17 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> date; cd "C:\Users\kushal\src\myhtml\matchthree\matchthree\"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master; date; git push origin master; date; cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
+
+Saturday, October 5, 2024 9:01:20 PM
+Saturday, October 5, 2024 9:01:20 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.10s.
+Saturday, October 5, 2024 9:01:20 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 4 modules transformed.
+docs/index.html                0.43 kB │ gzip: 0.29 kB
+docs/assets/index-DPmeKyRZ.js  8.51 kB │ gzip: 3.08 kB
+✓ built in 168ms
+Done in 2.36s.
+Saturday, October 5, 2024 9:01:23 PM
+warning: in the working copy of 'docs/assets/index-DPmeKyRZ.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Saturday, October 5, 2024 9:01:23 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Saturday, October 5, 2024 9:01:23 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Saturday, October 5, 2024 9:01:23 PM
+From github.com:matchthree/matchthree.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Saturday, October 5, 2024 9:01:24 PM
+Everything up-to-date
+Saturday, October 5, 2024 9:01:24 PM
+Saturday, October 5, 2024 9:01:24 PM
+Saturday, October 5, 2024 9:01:24 PM
+On branch main
+nothing to commit, working tree clean
+Saturday, October 5, 2024 9:01:25 PM
+Saturday, October 5, 2024 9:01:25 PM
+Saturday, October 5, 2024 9:01:30 PM
+Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
+Saturday, October 5, 2024 9:01:30 PM
+Saturday, October 5, 2024 9:01:30 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.10s.
+Saturday, October 5, 2024 9:01:30 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 1.16s
+Done in 3.33s.
+Saturday, October 5, 2024 9:01:34 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Saturday, October 5, 2024 9:01:39 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/notes/earth.jpeg
+        new file:   docs/notes/network-local-send-2024-10-05.png
+        modified:   docs/powershell.txt
+        modified:   public/notes/earth.jpeg
+        new file:   public/notes/network-local-send-2024-10-05.png
+        modified:   public/powershell.txt
+
+Saturday, October 5, 2024 9:01:39 PM
+[main 57e81c9] build application
+ 6 files changed, 356 insertions(+), 360 deletions(-)
+ create mode 100644 docs/notes/network-local-send-2024-10-05.png
+ create mode 100644 public/notes/network-local-send-2024-10-05.png
+Saturday, October 5, 2024 9:01:39 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch            main       -> FETCH_HEAD
+Current branch main is up to date.
+Saturday, October 5, 2024 9:01:40 PM
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 9.33 MiB | 1.97 MiB/s, done.
+Total 8 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   8db784e..57e81c9  main -> main
+Saturday, October 5, 2024 9:01:49 PM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> date; cd "C:\Users\kushal\src\myhtml\matchthree\matchthree\"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master; date; git push origin master; date; cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
