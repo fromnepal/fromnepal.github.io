@@ -2315,3 +2315,168 @@ If you need further assistance or have any other questions, feel free to ask!
 so about half success and half error? 
 
 Exactly! Your results show that about half of the requests were successful (status code 200) and the other half encountered internal server errors (status code 500). If you need help troubleshooting the errors or optimizing the script, feel free to ask!
+
+
+
+
+
+
+
+
+
+
+
+
+
+ok so let me run this locally from visual studio to see if I can reproduce this https://localhost:7175/swagger/index.html
+can you please review the change? 
+While ($True) {
+    Get-Date;
+    $session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
+    $session.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0"
+    try {
+        $result = Invoke-WebRequest -UseBasicParsing -Uri "https://localhost:7175/Analytics/GetAnalyticsData?key=hello" `
+        -WebSession $session `
+        -Headers @{
+            "authority"="localhost:7175"
+            "method"="GET"
+            "path"="/Analytics/GetAnalyticsData?key=hello"
+            "scheme"="https"
+            "accept"="*/*"
+            "accept-encoding"="gzip, deflate, br, zstd"
+            "accept-language"="en-US,en;q=0.9"
+            "priority"="u=1, i"
+            "referer"="https://localhost:7175/swagger/index.html"
+            "sec-ch-ua"="`"Microsoft Edge`";v=`"129`", `"Not=A?Brand`";v=`"8`", `"Chromium`";v=`"129`""
+            "sec-ch-ua-mobile"="?0"
+            "sec-ch-ua-platform"="`"Windows`""
+            "sec-fetch-dest"="empty"
+            "sec-fetch-mode"="cors"
+            "sec-fetch-site"="same-origin"
+        }
+        $statusCode = $result.StatusCode
+        Write-Output $result.Content
+    } catch {
+        $statusCode = $_.Exception.Response.StatusCode.Value__
+        Write-Output "Error: $($_.Exception.Message)"
+    }
+    $result;
+    $statusCode | Out-File -FilePath "C:\\Users\\kushal\\src\\myhtml\\fromnepal\\public\\notes\\status_code.txt" -Append
+    Get-Date;
+    Start-Sleep -s 30;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Your updated PowerShell script looks good for running locally. Here are a few points to consider:
+
+1. **URL Update**: You've correctly updated the URL to point to your local server (`https://localhost:7175/Analytics/GetAnalyticsData?key=hello`).
+
+2. **Headers**: The headers are appropriately set for a local request. Ensure that your local server is configured to accept these headers.
+
+3. **Error Handling**: The error handling part is intact and will capture any exceptions that occur during the request.
+
+4. **Output File Path**: The path for saving the status codes is still pointing to the same location. Make sure this path is accessible and writable from your local environment.
+
+5. **Loop and Sleep**: The loop and sleep intervals are unchanged, which is fine for continuous monitoring.
+
+Here's the revised script for clarity:
+
+```powershell
+While ($True) {
+    Get-Date;
+    $session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
+    $session.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0"
+    try {
+        $result = Invoke-WebRequest -UseBasicParsing -Uri "https://localhost:7175/Analytics/GetAnalyticsData?key=hello" `
+        -WebSession $session `
+        -Headers @{
+            "authority"="localhost:7175"
+            "method"="GET"
+            "path"="/Analytics/GetAnalyticsData?key=hello"
+            "scheme"="https"
+            "accept"="*/*"
+            "accept-encoding"="gzip, deflate, br, zstd"
+            "accept-language"="en-US,en;q=0.9"
+            "priority"="u=1, i"
+            "referer"="https://localhost:7175/swagger/index.html"
+            "sec-ch-ua"="`"Microsoft Edge`";v=`"129`", `"Not=A?Brand`";v=`"8`", `"Chromium`";v=`"129`""
+            "sec-ch-ua-mobile"="?0"
+            "sec-ch-ua-platform"="`"Windows`""
+            "sec-fetch-dest"="empty"
+            "sec-fetch-mode"="cors"
+            "sec-fetch-site"="same-origin"
+        }
+        $statusCode = $result.StatusCode
+        Write-Output $result.Content
+    } catch {
+        $statusCode = $_.Exception.Response.StatusCode.Value__
+        Write-Output "Error: $($_.Exception.Message)"
+    }
+    $result;
+    $statusCode | Out-File -FilePath "C:\\Users\\kushal\\src\\myhtml\\fromnepal\\public\\notes\\status_code.txt" -Append
+    Get-Date;
+    Start-Sleep -s 30;
+}
+```
+
+Give it a try and let me know if you encounter any issues or need further assistance!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Npgsql.NpgsqlException
+  HResult=0x80004005
+  Message=Severity not received in server error message
+  Source=Npgsql
+  StackTrace:
+   at Npgsql.BackendMessages.ErrorOrNoticeMessage.Load(NpgsqlReadBuffer buf, Boolean includeDetail, ILogger exceptionLogger)
+   at Npgsql.PostgresException.Load(NpgsqlReadBuffer buf, Boolean includeDetail, ILogger exceptionLogger)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessageLong>d__233.MoveNext()
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessageLong>d__233.MoveNext()
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.<NextResult>d__52.MoveNext()
+   at Npgsql.NpgsqlDataReader.<NextResult>d__52.MoveNext()
+   at Npgsql.NpgsqlCommand.<ExecuteReader>d__120.MoveNext()
+   at Npgsql.NpgsqlCommand.<ExecuteReader>d__120.MoveNext()
+   at Npgsql.NpgsqlCommand.<ExecuteDbDataReaderAsync>d__113.MoveNext()
+   at Dapper.SqlMapper.<QueryRowAsync>d__34`1.MoveNext()
+   at NiceData.AnalyticsRepository.<GetAnalyticsDataByKey>d__4.MoveNext() in C:\Users\kushal\src\dotnet8\nice\NiceData\AnalyticsRepository.cs:line 78
+
+  This exception was originally thrown at this call stack:
+    [External Code]
+    NiceData.AnalyticsRepository.GetAnalyticsDataByKey(string, string, string) in AnalyticsRepository.cs
