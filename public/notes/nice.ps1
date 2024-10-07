@@ -2,7 +2,7 @@ While ($True) {
     Get-Date;
     $session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
     $session.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0"
-    Invoke-WebRequest -UseBasicParsing -Uri "https://nice.runasp.net/Analytics/GetAnalyticsData?key=hello" `
+    $result = Invoke-WebRequest -UseBasicParsing -Uri "https://nice.runasp.net/Analytics/GetAnalyticsData?key=hello" `
     -WebSession $session `
     -Headers @{
     "authority"="nice.runasp.net"
@@ -21,6 +21,7 @@ While ($True) {
     "sec-fetch-mode"="cors"
     "sec-fetch-site"="same-origin"
     }
+    $result.StatusCode;
     Get-Date;
-    Start-Sleep -n 30;
+    Start-Sleep -s 30;
 }
