@@ -23,8 +23,10 @@ While ($True) {
             "sec-fetch-site"="same-origin"
         }
         $statusCode = $result.StatusCode
+        Write-Output $result.Content
     } catch {
         $statusCode = $_.Exception.Response.StatusCode.Value__
+        Write-Output "Error: $($_.Exception.Message)"
     }
     $result;
     $statusCode | Out-File -FilePath "status_code.txt" -Append
