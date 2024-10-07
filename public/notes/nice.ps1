@@ -29,7 +29,7 @@ While ($True) {
         Write-Output "Error: $($_.Exception.Message)"
     }
     $result;
-    $statusCode | Out-File -FilePath "status_code.txt" -Append
+    $statusCode | Out-File -FilePath "C:\\Users\\kushal\\src\\myhtml\\fromnepal\\public\\notes\\status_code.txt" -Append
     Get-Date;
     Start-Sleep -s 30;
 }
