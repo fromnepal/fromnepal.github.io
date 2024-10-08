@@ -1,5 +1,6 @@
 While ($True) {
     Get-Date;
+    cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"
     $session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
     $session.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Edg/129.0.0.0"
     try {
@@ -32,4 +33,17 @@ While ($True) {
     $statusCode | Out-File -FilePath "C:\\Users\\kushal\\src\\myhtml\\fromnepal\\public\\notes\\status_code.txt" -Append
     Get-Date;
     Start-Sleep -s 30;
+    date; 
+    cd "C:\Users\kushal\src\myhtml\fromnepal"; 
+    date; 
+    yarn; 
+    date; 
+    yarn run build; 
+    date; 
+    git add .; 
+    date; 
+    git status; 
+    date; 
+    git commit --message "build application" --message "from the terminal" --verbose; 
+    date;
 }
