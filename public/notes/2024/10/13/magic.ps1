@@ -17,7 +17,7 @@ foreach ($file in $heicFiles) {
     $outputFile = Join-Path -Path $destDir -ChildPath ($file.BaseName + ".png")
     
     # Convert HEIC to PNG using ImageMagick
-    magick convert "$($file.FullName)" "$outputFile"
+    magick "$($file.FullName)" "$outputFile"
     
     # Copy metadata from HEIC to PNG
     magick mogrify -profile "$($file.FullName)" "$outputFile"
