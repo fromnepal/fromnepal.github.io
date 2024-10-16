@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-rh="true">The Point</title>
+    <meta data-rh="true" name="description" content="Conversations and insights about the moment."/>
+    <meta data-rh="true" property="og:url" content="https://www.nytimes.com/live/2024/10/15/opinion/thepoint"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="fb:app_id" content="9869919170" />
+    <meta name="twitter:site" content="@nytimes" />
+    <meta name="slack-app-id" content="A0121HXPPTQ" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .quote {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        article figure {
+            margin: 0;
+            padding: 0;
+            display: block;
+            width: 100%;
+        }
+
+        article figure img {
+            aspect-ratio: 3 / 2;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        article figure figcaption {
+            font-size: 0.6em;
+            line-height: 0.9;
+            margin-top: 0.5em;
+        }
+
+        /* Progress bar styles */
+        #progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #f3f3f3;
+        }
+        #progress-bar {
+            height: 100%;
+            width: 0;
+            background: #4caf50;
+        }
+        .muted {
+            color: #6c757d;
+            opacity: 0.6;
+            background-color: #f8f9fa; /* Light background */
+            border: 1px solid #dee2e6; /* Light border */
+            padding: 5px; /* Add some padding */
+            border-radius: 3px; /* Rounded corners */
+        }
+    </style>
+</head>
+<body>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+    <div class="reading-time" id="reading-time"></div>
+    <article id="article">
+        <!-- <figure>
+            <picture>
+                <img alt="Description of the image" src="default.jpg">
+            </picture>
+            <figcaption>This is the caption for the image.</figcaption>
+        </figure> -->
+        <h1>Is Biden Really Ready to Stand Up for Gaza’s Children?</h1>
+        <p class="muted">Oct. 15, 2024</p>
+        <p>With Israel clamping down on food shipments to Gaza, the Biden administration is finally warning Israel to ease up or risk a suspension of some military aid.</p>
+        <p>In a letter released on Tuesday, the administration gave Israel 30 days to allow more humanitarian assistance to enter Gaza or else face consequences. That’s a welcome indication that President Biden is belatedly enforcing U.S. law, which bars military assistance to countries that block American humanitarian aid.</p>
+        <p>As a State Department official, Matthew Miller, put it, “It’s just a plain reading of U.S. law.” The problem is that until now, Biden didn’t seem able to read the law plainly.</p>
+        <p>In April the U.S. Agency for International Development and the State Department’s refugee bureau decided that Israel was blocking aid. Yet Biden somehow concluded that Israel was not in violation of the law, and weapons largely continued to flow to Israel, magnifying the devastation in Gaza.</p>
+        <p>More recently, Israel has dialed back the flow of food into Gaza even more sharply. The State Department says that the level of aid entering Gaza in September was lower than at any other point since the Oct. 7 terrorist attacks by Hamas against Israel. There has been debate about whether Israel is pursuing one retired general’s proposed starvation strategy, particularly in northern Gaza.</p>
+        <p>I admire much of Biden’s foreign policy, but I have been very critical of his failure to use weapon shipments as leverage to force Prime Minister Benjamin Netanyahu of Israel to listen to Washington’s calls for restraint and a cease-fire. Without leverage, Biden has been reduced to pleading with Netanyahu and having his pleas humiliatingly rebuffed. Biden’s weakness has made America complicit in the resulting humanitarian tragedy.</p>
+        <p>So it’s a welcome indication that Biden may finally be willing to use leverage, instead of hugs, to influence Netanyahu. But the 30-day period, which means nothing is likely to happen until after the U.S. election, makes one wonder if this isn’t more performative than substantive, meant to help Vice President Kamala Harris win Arab American votes in Michigan.</p>
+        <p>I hope Biden is finally serious; more than 3,100 children in Gaza under the age of 5 have been killed, according to Save the Children, and UNICEF has called Gaza the world’s most dangerous place to be a child. But after a year in which he has allowed Netanyahu to walk all over him, skepticism seems reasonable.</p>
+    </article>
+
+    <script>
+        function calculateReadingTime(text) {
+            const wordsPerMinute = 200; // Average reading speed
+            const textLength = text.trim().split(/\s+/).length; // Split by spaces to get word count
+            const readingTimeMinutes = Math.ceil(textLength / wordsPerMinute);
+            return readingTimeMinutes;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const article = document.getElementById("article");
+            const readingTimeElement = document.getElementById("reading-time");
+            const readingTime = calculateReadingTime(article.innerText);
+            readingTimeElement.innerText = `Estimated reading time: ${readingTime} minute${readingTime > 1 ? 's' : ''}`;
+
+            const progressBar = document.getElementById("progress-bar");
+
+            window.addEventListener("scroll", () => {
+                const articleHeight = article.scrollHeight - window.innerHeight;
+                const scrollPosition = window.scrollY;
+                const scrollPercentage = (scrollPosition / articleHeight) * 100;
+                progressBar.style.width = `${scrollPercentage}%`;
+            });
+        });
+    </script>
+</body>
+</html>
