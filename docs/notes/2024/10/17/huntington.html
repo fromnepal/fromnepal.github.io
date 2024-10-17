@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-rh="true">Huntington - AITA for calling my parents selfish for having me, knowing they’d pass down a hereditary illness, and going LC after they hid it, putting my child at risk too?</title>
+    <meta data-rh="true" name="description" content="Quirky_Background838"/>
+    <meta data-rh="true" property="og:url" content="https://old.reddit.com/r/AITAH/comments/1g5o3dh/aita_for_calling_my_parents_selfish_for_having_me/"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .quote {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        article figure {
+            margin: 0;
+            padding: 0;
+            display: block;
+            width: 100%;
+        }
+
+        article figure img {
+            aspect-ratio: 3 / 2;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        article figure figcaption {
+            font-size: 0.6em;
+            line-height: 0.9;
+            margin-top: 0.5em;
+        }
+
+        /* Progress bar styles */
+        #progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #f3f3f3;
+        }
+        #progress-bar {
+            height: 100%;
+            width: 0;
+            background: #4caf50;
+        }
+        .muted {
+            color: #6c757d;
+            opacity: 0.6;
+            background-color: #f8f9fa; /* Light background */
+            border: 1px solid #dee2e6; /* Light border */
+            padding: 5px; /* Add some padding */
+            border-radius: 3px; /* Rounded corners */
+        }
+    </style>
+</head>
+<body>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+    <div class="reading-time" id="reading-time"></div>
+    <article id="article">
+        <!-- <figure>
+            <picture>
+                <img alt="Description of the image" src="default.jpg">
+            </picture>
+            <figcaption>This is the caption for the image.</figcaption>
+        </figure> -->
+        <h1>AITA for calling my parents selfish for having me, knowing they’d pass down a hereditary illness, and going LC after they hid it, putting my child at risk too? (self.AITAH)</h1>
+        <p>submitted 9 hours ago * by Quirky_Background838</p>
+        <p>Edit: most of you figured it out anyway. It is Huntingtons.</p>
+        <p>I (28F) recently found out I have a serious hereditary illness that’s going to screw up my life, and I am so mad I can barely type this out. It’s a degenerative illness, no cure, nothing. My body’s just gonna slowly get worse. And the kicker? My parents have known this could happen my whole life and never said a damn word.</p>
+        <p>This illness runs in my family. My dad’s mom had it. His sister—my aunt—died from it a few years ago. I was living overseas when she passed, and my parents told me it was cancer. Cancer. They lied right to my face. It wasn’t until I got diagnosed that they finally came clean and admitted she had the same illness I do. When I confronted them, my dad wouldn’t even give me a straight answer. I asked if he had it too, and he dodged every single question, acting like I was overreacting.</p>
+        <p>My mom, on the other hand, tried to justify it by saying they didn’t want me “living in fear.” Are you kidding me? I could have been prepared! Instead, they chose to let me walk into this blind. And here’s where it gets worse—I have a 2-year-old son. My child might have this, and they never told me I was at risk. I could’ve had him tested, made informed decisions, anything. But no, they took that from me, and now I live in constant fear for him too.</p>
+        <p>Then my mom had the nerve to ask me if I would have rather not been born than deal with this. Can you believe that? She turned it around on me, like I’m the monster for even thinking it. And you know what? Yes, I said it. Yes, I would rather not have been born than deal with this disease. They made a selfish choice, and now I’m paying for it. They knew the risks and did it anyway, for themselves. They wanted kids, and now I’m stuck with this. I called them selfish, and I meant every word.</p>
+        <p>Now, they’re begging me not to tell my younger siblings. They don’t know about this yet, haven’t been tested, and my parents want to keep it that way. They’re hoping they’ll get lucky, but I’m not going to lie to them. I refuse to let them be blindsided like I was. They deserve to know the truth.</p>
+        <p>I’ve gone low contact with my parents. I can’t stand to even think about them right now. My mom keeps trying to guilt-trip me, saying they were “just trying to protect me.” Protect me from what? The truth? No, they weren’t protecting me. They were protecting themselves, from the guilt of knowing they passed this on, and now they want me to protect them too. But I won’t. I love my son and my siblings too much to lie to them.</p>
+        <p>AITA for going LC and refusing to keep their secret, even though they claim they were just trying to “protect” me?</p>
+    </article>
+
+    <script>
+        function calculateReadingTime(text) {
+            const wordsPerMinute = 200; // Average reading speed
+            const textLength = text.trim().split(/\s+/).length; // Split by spaces to get word count
+            const readingTimeMinutes = Math.ceil(textLength / wordsPerMinute);
+            return readingTimeMinutes;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const article = document.getElementById("article");
+            const readingTimeElement = document.getElementById("reading-time");
+            const readingTime = calculateReadingTime(article.innerText);
+            readingTimeElement.innerText = `Estimated reading time: ${readingTime} minute${readingTime > 1 ? 's' : ''}`;
+
+            const progressBar = document.getElementById("progress-bar");
+
+            window.addEventListener("scroll", () => {
+                const articleHeight = article.scrollHeight - window.innerHeight;
+                const scrollPosition = window.scrollY;
+                const scrollPercentage = (scrollPosition / articleHeight) * 100;
+                progressBar.style.width = `${scrollPercentage}%`;
+            });
+        });
+    </script>
+</body>
+</html>
