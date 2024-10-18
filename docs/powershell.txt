@@ -1,242 +1,3 @@
-Day         : 15
-DayOfWeek   : Tuesday
-DayOfYear   : 289
-Hour        : 21
-Kind        : Local
-Millisecond : 827
-Microsecond : 848
-Nanosecond  : 100
-Minute      : 1
-Month       : 10
-Second      : 8
-Ticks       : 638646228688278481
-TimeOfDay   : 21:01:08.8278481
-Year        : 2024
-DateTime    : Tuesday, October 15, 2024 9:01:08 PM
-
-[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241015210108.%(ext)s', 'https://www.facebook.com/reel/805359018113659']
-[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
-[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
-[debug] yt-dlp version stable@2024.10.07 from yt-dlp/yt-dlp [1a176d874] (win_exe)
-[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
-[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
-[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.3, websockets-13.1
-[debug] Proxy map: {}
-[debug] Request Handlers: urllib, requests, websockets, curl_cffi
-[debug] Loaded 1838 extractors
-[facebook:reel] Extracting URL: https://www.facebook.com/reel/805359018113659
-[facebook] Extracting URL: https://m.facebook.com/watch/?v=805359018113659&_rdr
-[facebook] 805359018113659: Downloading webpage
-[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
-[SponsorBlock] SponsorBlock is not supported for Facebook
-[info] 805359018113659: Downloading 1 format(s): 1037627441000905v+832777979037586a
-[debug] Invoking http downloader on "https://video-iad3-1.xx.fbcdn.net/v/t39.25447-2/10000000_882462006748257_7865471921757278997_n.mp4?_nc_cat=110&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImRhc2hfcjJhdjEtcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjo4MDUzNTkwMTgxMTM2NTl9&_nc_e2o=805359018113659&_nc_ohc=riAx2yZoa1AQ7kNvgGbyHIJ&_nc_zt=28&_nc_ht=video-iad3-1.xx&_nc_gid=A4B0HsLSfAB4VvDTsThguJ7&oh=00_AYBcgyLBVGtMs3mUzKPExkp_XOQrO7tdhRG72rfOYDKwow&oe=6714E041"
-[debug] File locking is not supported. Proceeding without locking
-[download] Destination: C:\Temp\yt-dlp\20241015210108.f1037627441000905v.mp4
-[download] 100% of  102.44MiB in 00:00:04 at 23.79MiB/s
-[debug] Invoking http downloader on "https://video-iad3-1.xx.fbcdn.net/v/t39.25447-2/460513649_1062741105302170_1930678891054342311_n.mp4?_nc_cat=102&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImRhc2hfYXVkaW9fYWFjcF82NF9mbm9ybTE0X2ZyYWdfMl9hdWRpbyIsInZpZGVvX2lkIjo4MDUzNTkwMTgxMTM2NTl9&_nc_e2o=805359018113659&_nc_ohc=tqPbaEaiuVUQ7kNvgFJsyEU&_nc_zt=28&_nc_ht=video-iad3-1.xx&_nc_gid=A4B0HsLSfAB4VvDTsThguJ7&oh=00_AYDxY8gwfvMM6lGvakWy9CmG4npmSGDNQN776ciguMsRwA&oe=6714ECAE"
-[download] Destination: C:\Temp\yt-dlp\20241015210108.f832777979037586a.m4a
-[download] 100% of    3.59MiB in 00:00:00 at 15.18MiB/s
-[Merger] Merging formats into "C:\Temp\yt-dlp\20241015210108.mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241015210108.f1037627441000905v.mp4 -i file:C:\Temp\yt-dlp\20241015210108.f832777979037586a.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241015210108.temp.mp4
-Deleting original file C:\Temp\yt-dlp\20241015210108.f1037627441000905v.mp4 (pass -k to keep)
-Deleting original file C:\Temp\yt-dlp\20241015210108.f832777979037586a.m4a (pass -k to keep)
-[ModifyChapters] SponsorBlock information is unavailable
-[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241015210108.mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241015210108.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=मैं हमेशा एनर्जेटिक कैसे रहेती हू, ओनेस्टली 12 बाते" -metadata "date=20240324" -metadata "description=मैं हमेशा एनर्जेटिक कैसे रहेती हू, ओनेस्टली 12 बाते" -metadata "synopsis=मैं हमेशा एनर्जेटिक कैसे रहेती हू, ओनेस्टली 12 बाते" -metadata "purl=https://m.facebook.com/watch/?v=805359018113659&_rdr" -metadata "comment=https://m.facebook.com/watch/?v=805359018113659&_rdr" -metadata "artist=40 Plus Mom" -movflags +faststart file:C:\Temp\yt-dlp\20241015210108.temp.mp4
-
-DisplayHint : DateTime
-Date        : 10/15/2024 12:00:00 AM
-Day         : 15
-DayOfWeek   : Tuesday
-DayOfYear   : 289
-Hour        : 21
-Kind        : Local
-Millisecond : 187
-Microsecond : 882
-Nanosecond  : 0
-Minute      : 1
-Month       : 10
-Second      : 17
-Ticks       : 638646228771878820
-TimeOfDay   : 21:01:17.1878820
-Year        : 2024
-DateTime    : Tuesday, October 15, 2024 9:01:17 PM
-
-
-DisplayHint : DateTime
-Date        : 10/15/2024 12:00:00 AM
-Day         : 15
-DayOfWeek   : Tuesday
-DayOfYear   : 289
-Hour        : 21
-Kind        : Local
-Millisecond : 194
-Microsecond : 604
-Nanosecond  : 800
-Minute      : 1
-Month       : 10
-Second      : 17
-Ticks       : 638646228771946048
-TimeOfDay   : 21:01:17.1946048
-Year        : 2024
-DateTime    : Tuesday, October 15, 2024 9:01:17 PM
-
-
-DisplayHint : DateTime
-Date        : 10/15/2024 12:00:00 AM
-Day         : 15
-DayOfWeek   : Tuesday
-DayOfYear   : 289
-Hour        : 21
-Kind        : Local
-Millisecond : 196
-Microsecond : 920
-Nanosecond  : 700
-Minute      : 1
-Month       : 10
-Second      : 17
-Ticks       : 638646228771969207
-TimeOfDay   : 21:01:17.1969207
-Year        : 2024
-DateTime    : Tuesday, October 15, 2024 9:01:17 PM
-
-
-    Directory: C:\Temp\yt-dlp
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a---           9/18/2024 10:32 AM      111297521 20241015210108.mp4
--a---           9/18/2024 10:32 AM      111297521 20241015210108.mp4
-Cleaned video name: 20241015210108mp4
-Cleaned video path: C:\Temp\yt-dlp\20241015210108mp4
-Running ffmpeg
-ffmpeg -i "C:\Temp\yt-dlp\20241015210108mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241015210108mp4_reencoded.mp4"
-ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
-  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
-  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
-  libavutil      59. 39.100 / 59. 39.100
-  libavcodec     61. 19.100 / 61. 19.100
-  libavformat    61.  7.100 / 61.  7.100
-  libavdevice    61.  3.100 / 61.  3.100
-  libavfilter    10.  4.100 / 10.  4.100
-  libswscale      8.  3.100 /  8.  3.100
-  libswresample   5.  3.100 /  5.  3.100
-  libpostproc    58.  3.100 / 58.  3.100
-Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241015210108mp4':
-  Metadata:
-    major_brand     : isom
-    minor_version   : 512
-    compatible_brands: isomav01iso2mp41
-    title           : मैं हमेशा एनर्जेटिक कैसे रहेती हू, ओनेस्टली 12 बाते
-    artist          : 40 Plus Mom
-    date            : 20240324
-    encoder         : Lavf61.7.100
-    comment         : https://m.facebook.com/watch/?v=805359018113659&_rdr
-    description     : मैं हमेशा एनर्जेटिक कैसे रहेती हू, ओनेस्टली 12 बाते
-    synopsis        : मैं हमेशा एनर्जेटिक कैसे रहेती हू, ओनेस्टली 12 बाते
-  Duration: 00:07:40.48, start: 0.000000, bitrate: 1933 kb/s
-  Stream #0:0[0x1](und): Video: av1 (libdav1d) (Main) (av01 / 0x31307661), yuv420p(tv), 1080x1350, 1865 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
-      Metadata:
-        handler_name    : VideoHandler
-        vendor_id       : [0][0][0][0]
-        encoder         : AOM Coding
-  Stream #0:1[0x2](eng): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 64 kb/s (default)
-      Metadata:
-        handler_name    : SoundHandler
-        vendor_id       : [0][0][0][0]
-Stream mapping:
-  Stream #0:0 -> #0:0 (av1 (libdav1d) -> h264 (libx264))
-  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
-Press [q] to stop, [?] for help
-[libx264 @ 0000021a32b29340] using SAR=1/1
-[libx264 @ 0000021a32b29340] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
-[libx264 @ 0000021a32b29340] profile High, level 4.0, 4:2:0, 8-bit
-[libx264 @ 0000021a32b29340] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
-Output #0, mp4, to 'C:\Temp\yt-dlp\20241015210108mp4_reencoded.mp4':
-  Metadata:
-    major_brand     : isom
-    minor_version   : 512
-    compatible_brands: isomav01iso2mp41
-    title           : मैं हमेशा एनर्जेटिक कैसे रहेती हू, ओनेस्टली 12 बाते
-    artist          : 40 Plus Mom
-    date            : 20240324
-    synopsis        : मैं हमेशा एनर्जेटिक कैसे रहेती हू, ओनेस्टली 12 बाते
-    comment         : https://m.facebook.com/watch/?v=805359018113659&_rdr
-    description     : मैं हमेशा एनर्जेटिक कैसे रहेती हू, ओनेस्टली 12 बाते
-    encoder         : Lavf61.7.100
-  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1080x1350 [SAR 1:1 DAR 4:5], q=2-31, 30 fps, 15360 tbn (default)
-      Metadata:
-        handler_name    : VideoHandler
-        vendor_id       : [0][0][0][0]
-        encoder         : Lavc61.19.100 libx264
-      Side data:
-        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
-  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
-      Metadata:
-        handler_name    : SoundHandler
-        vendor_id       : [0][0][0][0]
-        encoder         : Lavc61.19.100 aac
-[mp4 @ 0000021a326b0680] Starting second pass: moving the moov atom to the beginning of the file
-[out#0/mp4 @ 0000021a326b0540] video:156780KiB audio:7140KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.302804%
-frame=13814 fps=166 q=-1.0 Lsize=  164417KiB time=00:07:40.40 bitrate=2925.5kbits/s speed=5.53x
-[libx264 @ 0000021a32b29340] frame I:105   Avg QP:18.85  size:122164
-[libx264 @ 0000021a32b29340] frame P:4164  Avg QP:22.33  size: 24763
-[libx264 @ 0000021a32b29340] frame B:9545  Avg QP:26.03  size:  4673
-[libx264 @ 0000021a32b29340] consecutive B-frames:  2.1% 16.7%  2.2% 79.1%
-[libx264 @ 0000021a32b29340] mb I  I16..4:  8.8% 72.2% 19.1%
-[libx264 @ 0000021a32b29340] mb P  I16..4:  3.1% 11.5%  0.9%  P16..4: 33.9% 11.4%  6.2%  0.0%  0.0%    skip:33.1%
-[libx264 @ 0000021a32b29340] mb B  I16..4:  0.4%  1.3%  0.1%  B16..8: 25.9%  1.9%  0.4%  direct: 1.2%  skip:68.8%  L0:39.0% L1:52.1% BI: 8.9%
-[libx264 @ 0000021a32b29340] 8x8 transform intra:73.6% inter:78.3%
-[libx264 @ 0000021a32b29340] coded y,uvDC,uvAC intra: 49.1% 43.2% 7.6% inter: 9.4% 7.9% 0.1%
-[libx264 @ 0000021a32b29340] i16 v,h,dc,p: 30% 27%  9% 34%
-[libx264 @ 0000021a32b29340] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 25% 18% 19%  5%  7%  7%  7%  6%  6%
-[libx264 @ 0000021a32b29340] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 25% 18% 11%  6% 11% 10%  8%  7%  5%
-[libx264 @ 0000021a32b29340] i8c dc,h,v,p: 55% 19% 20%  6%
-[libx264 @ 0000021a32b29340] Weighted P-Frames: Y:12.9% UV:1.1%
-[libx264 @ 0000021a32b29340] ref P L0: 63.4% 18.9% 13.4%  3.9%  0.4%
-[libx264 @ 0000021a32b29340] ref B L0: 92.7%  6.0%  1.2%
-[libx264 @ 0000021a32b29340] ref B L1: 98.0%  2.0%
-[libx264 @ 0000021a32b29340] kb/s:2789.21
-[aac @ 0000021a3268d040] Qavg: 560.147
-
-DisplayHint : DateTime
-Date        : 10/15/2024 12:00:00 AM
-Day         : 15
-DayOfWeek   : Tuesday
-DayOfYear   : 289
-Hour        : 21
-Kind        : Local
-Millisecond : 511
-Microsecond : 52
-Nanosecond  : 800
-Minute      : 2
-Month       : 10
-Second      : 40
-Ticks       : 638646229605110528
-TimeOfDay   : 21:02:40.5110528
-Year        : 2024
-DateTime    : Tuesday, October 15, 2024 9:02:40 PM
-
-
-DisplayHint : DateTime
-Date        : 10/15/2024 12:00:00 AM
-Day         : 15
-DayOfWeek   : Tuesday
-DayOfYear   : 289
-Hour        : 21
-Kind        : Local
-Millisecond : 739
-Microsecond : 413
-Nanosecond  : 300
-Minute      : 2
-Month       : 10
-Second      : 54
-Ticks       : 638646229747394133
-TimeOfDay   : 21:02:54.7394133
-Year        : 2024
-DateTime    : Tuesday, October 15, 2024 9:02:54 PM
-
 
 DisplayHint : DateTime
 Date        : 10/15/2024 12:00:00 AM
@@ -8555,3 +8316,222 @@ To github.com:fromnepal/fromnepal.github.io.git
 Thursday, October 17, 2024 9:14:29 PM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> date; cd "C:\Users\kushal\src\myhtml\matchthree\matchthree\"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master; date; git push origin master; date; cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
+
+Friday, October 18, 2024 5:36:27 AM
+Friday, October 18, 2024 5:36:27 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Friday, October 18, 2024 5:36:27 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 4 modules transformed.
+docs/index.html                0.42 kB │ gzip: 0.28 kB
+docs/assets/index-CGOwuZnp.js  8.87 kB │ gzip: 3.19 kB
+✓ built in 123ms
+Done in 1.05s.
+Friday, October 18, 2024 5:36:28 AM
+warning: in the working copy of 'docs/assets/index-CGOwuZnp.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, October 18, 2024 5:36:28 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Friday, October 18, 2024 5:36:29 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Friday, October 18, 2024 5:36:29 AM
+From github.com:matchthree/matchthree.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Friday, October 18, 2024 5:36:29 AM
+Everything up-to-date
+Friday, October 18, 2024 5:36:30 AM
+Friday, October 18, 2024 5:36:30 AM
+Friday, October 18, 2024 5:36:30 AM
+On branch main
+nothing to commit, working tree clean
+Friday, October 18, 2024 5:36:30 AM
+Friday, October 18, 2024 5:36:30 AM
+Friday, October 18, 2024 5:36:32 AM
+Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
+Friday, October 18, 2024 5:36:32 AM
+Friday, October 18, 2024 5:36:32 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Friday, October 18, 2024 5:36:33 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 1.11s
+Done in 1.97s.
+Friday, October 18, 2024 5:36:35 AM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, October 18, 2024 5:36:40 AM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/notes/earth.jpeg
+        new file:   docs/notes/rust-lang.wav
+        modified:   docs/powershell.txt
+        modified:   public/notes/earth.jpeg
+        new file:   public/notes/rust-lang.wav
+        modified:   public/powershell.txt
+
+Friday, October 18, 2024 5:36:40 AM
+[main c64bda4] build application
+ 6 files changed, 196 insertions(+), 204 deletions(-)
+ create mode 100644 docs/notes/rust-lang.wav
+ create mode 100644 public/notes/rust-lang.wav
+Friday, October 18, 2024 5:36:41 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch              main       -> FETCH_HEAD
+Current branch main is up to date.
+Friday, October 18, 2024 5:36:42 AM
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 32.16 MiB | 7.17 MiB/s, done.
+Total 8 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   1ce3d7a..c64bda4  main -> main
+Friday, October 18, 2024 5:36:49 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; dir *.wav
+
+    Directory: C:\Users\kushal\src\myhtml\fromnepal\public\notes
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          10/18/2024  5:35 PM       27108524 aboutface.wav
+-a---          10/18/2024  5:35 PM       56895404 GrokkingConcurrency.wav
+-a---          10/17/2024  9:13 PM       34091564 phase-stress.wav
+-a---          10/18/2024  5:36 AM       28567724 rust-lang.wav
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> ffmpeg -i "C:\Users\kushal\src\myhtml\fromnepal\public\notes\aboutface.wav" -vn -ar 44100 -ac 2 -b:a 192k "C:\Users\kushal\src\myhtml\fromnepal\public\notes\aboutface.mp3"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[aist#0:0/pcm_s16le @ 0000027ef8914000] Guessed Channel Layout: mono
+Input #0, wav, from 'C:\Users\kushal\src\myhtml\fromnepal\public\notes\aboutface.wav':
+  Duration: 00:09:24.76, bitrate: 384 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 24000 Hz, mono, s16, 384 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+Output #0, mp3, to 'C:\Users\kushal\src\myhtml\fromnepal\public\notes\aboutface.mp3':
+  Metadata:
+    TSSE            : Lavf61.7.100
+  Stream #0:0: Audio: mp3, 44100 Hz, stereo, s16p, 192 kb/s
+      Metadata:
+        encoder         : Lavc61.19.100 libmp3lame
+[out#0/mp3 @ 0000027ef89141c0] video:0KiB audio:13237KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.004943%
+size=   13238KiB time=00:09:24.76 bitrate= 192.0kbits/s speed= 184x
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> ffmpeg -i "C:\Users\kushal\src\myhtml\fromnepal\public\notes\GrokkingConcurrency.wav" -vn -ar 44100 -ac 2 -b:a 192k "C:\Users\kushal\src\myhtml\fromnepal\public\notes\GrokkingConcurrency.mp3"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[aist#0:0/pcm_s16le @ 000001cc06523f80] Guessed Channel Layout: mono
+Input #0, wav, from 'C:\Users\kushal\src\myhtml\fromnepal\public\notes\GrokkingConcurrency.wav':
+  Duration: 00:19:45.32, bitrate: 384 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 24000 Hz, mono, s16, 384 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+Output #0, mp3, to 'C:\Users\kushal\src\myhtml\fromnepal\public\notes\GrokkingConcurrency.mp3':
+  Metadata:
+    TSSE            : Lavf61.7.100
+  Stream #0:0: Audio: mp3, 44100 Hz, stereo, s16p, 192 kb/s
+      Metadata:
+        encoder         : Lavc61.19.100 libmp3lame
+[out#0/mp3 @ 000001cc065b3a40] video:0KiB audio:27782KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.002355%
+size=   27782KiB time=00:19:45.32 bitrate= 192.0kbits/s speed= 183x
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> ffmpeg -i "C:\Users\kushal\src\myhtml\fromnepal\public\notes\phase-stress.wav" -vn -ar 44100 -ac 2 -b:a 192k "C:\Users\kushal\src\myhtml\fromnepal\public\notes\phase-stress.mp3"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[aist#0:0/pcm_s16le @ 000001eeff253f80] Guessed Channel Layout: mono
+Input #0, wav, from 'C:\Users\kushal\src\myhtml\fromnepal\public\notes\phase-stress.wav':
+  Duration: 00:11:50.24, bitrate: 384 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 24000 Hz, mono, s16, 384 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+Output #0, mp3, to 'C:\Users\kushal\src\myhtml\fromnepal\public\notes\phase-stress.mp3':
+  Metadata:
+    TSSE            : Lavf61.7.100
+  Stream #0:0: Audio: mp3, 44100 Hz, stereo, s16p, 192 kb/s
+      Metadata:
+        encoder         : Lavc61.19.100 libmp3lame
+[out#0/mp3 @ 000001eeff254140] video:0KiB audio:16647KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.003930%
+size=   16648KiB time=00:11:50.24 bitrate= 192.0kbits/s speed= 182x
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> ffmpeg -i "C:\Users\kushal\src\myhtml\fromnepal\public\notes\rust-lang.wav" -vn -ar 44100 -ac 2 -b:a 192k "C:\Users\kushal\src\myhtml\fromnepal\public\notes\rust-lang.mp3"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+[aist#0:0/pcm_s16le @ 00000212af394000] Guessed Channel Layout: mono
+Input #0, wav, from 'C:\Users\kushal\src\myhtml\fromnepal\public\notes\rust-lang.wav':
+  Duration: 00:09:55.16, bitrate: 384 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 24000 Hz, mono, s16, 384 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+Output #0, mp3, to 'C:\Users\kushal\src\myhtml\fromnepal\public\notes\rust-lang.mp3':
+  Metadata:
+    TSSE            : Lavf61.7.100
+  Stream #0:0: Audio: mp3, 44100 Hz, stereo, s16p, 192 kb/s
+      Metadata:
+        encoder         : Lavc61.19.100 libmp3lame
+[out#0/mp3 @ 00000212af3941c0] video:0KiB audio:13950KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.004690%
+size=   13951KiB time=00:09:55.16 bitrate= 192.0kbits/s speed= 181x
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> date; cd "C:\Users\kushal\src\myhtml\matchthree\matchthree\"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master; date; git push origin master; date; cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn;date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main;
+ date;
