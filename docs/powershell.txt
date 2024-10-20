@@ -1,923 +1,3 @@
-Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/pro
-
- * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
-   just raised the bar for easy, resilient and secure K8s cluster deployment.
-
-   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
-
-This message is shown once a day. To disable it please create the
-/home/kushal/.hushlogin file.
-kushal@kus2023:~$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; timegit status; date; time ./Meta/ladybird.sh run ladybird; date;
-[sudo] password for kushal:
-Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
-Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
-Get:3 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
-Get:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
-Get:5 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1891 kB]
-Get:6 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
-Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [2108 kB]
-Get:8 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [305 kB]
-Get:9 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [13.3 kB]
-Get:10 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [2513 kB]
-Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [363 kB]
-Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [17.9 kB]
-Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [2572 kB]
-Get:14 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [435 kB]
-Get:15 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 c-n-f Metadata [584 B]
-Get:16 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [911 kB]
-Get:17 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [180 kB]
-Get:18 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [19.5 kB]
-Get:19 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [37.2 kB]
-Get:20 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [228 B]
-Get:21 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [445 kB]
-Get:22 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 c-n-f Metadata [616 B]
-Get:23 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1132 kB]
-Get:24 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [265 kB]
-Get:25 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [26.4 kB]
-Get:26 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [43.3 kB]
-Get:27 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [444 B]
-Get:28 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [67.7 kB]
-Get:29 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [388 B]
-Get:30 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [28.8 kB]
-Get:31 http://archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.5 kB]
-Get:32 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [672 B]
-Fetched 13.8 MB in 2s (6551 kB/s)
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-53 packages can be upgraded. Run 'apt list --upgradable' to see them.
-
-real    0m8.622s
-user    0m0.000s
-sys     0m0.036s
-Listing... Done
-apparmor/jammy-updates,jammy-security 3.0.4-2ubuntu2.4 amd64 [upgradable from: 3.0.4-2ubuntu2.3]
-apt-utils/jammy-updates 2.4.13 amd64 [upgradable from: 2.4.12]
-apt/jammy-updates 2.4.13 amd64 [upgradable from: 2.4.12]
-base-files/jammy-updates 12ubuntu4.7 amd64 [upgradable from: 12ubuntu4.6]
-ca-certificates/jammy-updates,jammy-security 20240203~22.04.1 all [upgradable from: 20230311ubuntu0.22.04.1]
-cups-bsd/jammy-updates,jammy-security 2.4.1op1-1ubuntu4.11 amd64 [upgradable from: 2.4.1op1-1ubuntu4.10]
-cups-client/jammy-updates,jammy-security 2.4.1op1-1ubuntu4.11 amd64 [upgradable from: 2.4.1op1-1ubuntu4.10]
-cups-common/jammy-updates,jammy-security 2.4.1op1-1ubuntu4.11 all [upgradable from: 2.4.1op1-1ubuntu4.10]
-curl/jammy-updates,jammy-security 7.81.0-1ubuntu1.18 amd64 [upgradable from: 7.81.0-1ubuntu1.17]
-debootstrap/jammy-updates 1.0.126+nmu1ubuntu0.8 all [upgradable from: 1.0.126+nmu1ubuntu0.7]
-libapparmor1/jammy-updates,jammy-security 3.0.4-2ubuntu2.4 amd64 [upgradable from: 3.0.4-2ubuntu2.3]
-libapt-pkg6.0/jammy-updates 2.4.13 amd64 [upgradable from: 2.4.12]
-libarchive13/jammy-updates,jammy-security 3.6.0-1ubuntu1.2 amd64 [upgradable from: 3.6.0-1ubuntu1.1]
-libcups2/jammy-updates,jammy-security 2.4.1op1-1ubuntu4.11 amd64 [upgradable from: 2.4.1op1-1ubuntu4.10]
-libcurl3-gnutls/jammy-updates,jammy-security 7.81.0-1ubuntu1.18 amd64 [upgradable from: 7.81.0-1ubuntu1.17]
-libcurl4/jammy-updates,jammy-security 7.81.0-1ubuntu1.18 amd64 [upgradable from: 7.81.0-1ubuntu1.17]
-libexpat1/jammy-updates,jammy-security 2.4.7-1ubuntu0.4 amd64 [upgradable from: 2.4.7-1ubuntu0.3]
-libopenjp2-7/jammy-updates,jammy-security 2.4.0-6ubuntu0.1 amd64 [upgradable from: 2.4.0-6]
-libpcap0.8/jammy-updates 1.10.1-4ubuntu1.22.04.1 amd64 [upgradable from: 1.10.1-4build1]
-libpython3.10-minimal/jammy-updates,jammy-security 3.10.12-1~22.04.6 amd64 [upgradable from: 3.10.12-1~22.04.5]
-libpython3.10-stdlib/jammy-updates,jammy-security 3.10.12-1~22.04.6 amd64 [upgradable from: 3.10.12-1~22.04.5]
-libpython3.10/jammy-updates,jammy-security 3.10.12-1~22.04.6 amd64 [upgradable from: 3.10.12-1~22.04.5]
-libssl-dev/jammy-updates,jammy-security 3.0.2-0ubuntu1.18 amd64 [upgradable from: 3.0.2-0ubuntu1.17]
-libssl3/jammy-updates,jammy-security 3.0.2-0ubuntu1.18 amd64 [upgradable from: 3.0.2-0ubuntu1.17]
-libtiff5/jammy-updates,jammy-security 4.3.0-6ubuntu0.10 amd64 [upgradable from: 4.3.0-6ubuntu0.9]
-linux-libc-dev/jammy-updates,jammy-security 5.15.0-124.134 amd64 [upgradable from: 5.15.0-119.129]
-motd-news-config/jammy-updates 12ubuntu4.7 all [upgradable from: 12ubuntu4.6]
-nano/jammy-updates,jammy-security 6.2-1ubuntu0.1 amd64 [upgradable from: 6.2-1]
-openssl/jammy-updates,jammy-security 3.0.2-0ubuntu1.18 amd64 [upgradable from: 3.0.2-0ubuntu1.17]
-ovmf/jammy-updates,jammy-security 2022.02-3ubuntu0.22.04.3 all [upgradable from: 2022.02-3ubuntu0.22.04.2]
-python-apt-common/jammy-updates 2.4.0ubuntu4 all [upgradable from: 2.4.0ubuntu3]
-python3-apt/jammy-updates 2.4.0ubuntu4 amd64 [upgradable from: 2.4.0ubuntu3]
-python3-distupgrade/jammy-updates 1:22.04.20 all [upgradable from: 1:22.04.19]
-python3-pkg-resources/jammy-updates,jammy-security 59.6.0-1.2ubuntu0.22.04.2 all [upgradable from: 59.6.0-1.2ubuntu0.22.04.1]
-python3-update-manager/jammy-updates 1:22.04.21 all [upgradable from: 1:22.04.20]
-python3.10-minimal/jammy-updates,jammy-security 3.10.12-1~22.04.6 amd64 [upgradable from: 3.10.12-1~22.04.5]
-python3.10/jammy-updates,jammy-security 3.10.12-1~22.04.6 amd64 [upgradable from: 3.10.12-1~22.04.5]
-ruby-webrick/jammy-updates,jammy-security 1.7.0-3ubuntu0.1 all [upgradable from: 1.7.0-3]
-snapd/jammy-updates 2.65.3+22.04 amd64 [upgradable from: 2.63+22.04ubuntu0.1]
-ubuntu-advantage-tools/jammy-updates 34~22.04 all [upgradable from: 32.3.1~22.04]
-ubuntu-minimal/jammy-updates 1.481.4 amd64 [upgradable from: 1.481.3]
-ubuntu-pro-client-l10n/jammy-updates 34~22.04 amd64 [upgradable from: 32.3.1~22.04]
-ubuntu-pro-client/jammy-updates 34~22.04 amd64 [upgradable from: 32.3.1~22.04]
-ubuntu-release-upgrader-core/jammy-updates 1:22.04.20 all [upgradable from: 1:22.04.19]
-ubuntu-standard/jammy-updates 1.481.4 amd64 [upgradable from: 1.481.3]
-ubuntu-wsl/jammy-updates 1.481.4 amd64 [upgradable from: 1.481.3]
-update-manager-core/jammy-updates 1:22.04.21 all [upgradable from: 1:22.04.20]
-vim-common/jammy-updates,jammy-security 2:8.2.3995-1ubuntu2.19 all [upgradable from: 2:8.2.3995-1ubuntu2.17]
-vim-runtime/jammy-updates,jammy-security 2:8.2.3995-1ubuntu2.19 all [upgradable from: 2:8.2.3995-1ubuntu2.17]
-vim-tiny/jammy-updates,jammy-security 2:8.2.3995-1ubuntu2.19 amd64 [upgradable from: 2:8.2.3995-1ubuntu2.17]
-vim/jammy-updates,jammy-security 2:8.2.3995-1ubuntu2.19 amd64 [upgradable from: 2:8.2.3995-1ubuntu2.17]
-wsl-setup/jammy-updates 0.5.4~22.04 amd64 [upgradable from: 0.2]
-xxd/jammy-updates,jammy-security 2:8.2.3995-1ubuntu2.19 amd64 [upgradable from: 2:8.2.3995-1ubuntu2.17]
-
-real    0m0.208s
-user    0m0.189s
-sys     0m0.010s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-The following packages were automatically installed and are no longer required:
-  aglfn asymptote-doc biber chktex cups-bsd cups-client dvidvi dvisvgm fonts-adf-accanthis fonts-adf-berenis fonts-adf-gillius fonts-adf-universalis fonts-arphic-bkai00mp
-  fonts-arphic-bsmi00lp fonts-arphic-gbsn00lp fonts-arphic-gkai00mp fonts-baekmuk fonts-cabin fonts-cantarell fonts-comfortaa fonts-dejavu-extra fonts-ebgaramond fonts-ebgaramond-extra
-  fonts-font-awesome fonts-gfs-artemisia fonts-gfs-baskerville fonts-gfs-bodoni-classic fonts-gfs-complutum fonts-gfs-didot fonts-gfs-didot-classic fonts-gfs-gazis fonts-gfs-neohellenic
-  fonts-gfs-olga fonts-gfs-porson fonts-gfs-solomos fonts-gfs-theokritos fonts-go fonts-hosny-amiri fonts-junicode fonts-lato fonts-linuxlibertine fonts-lmodern fonts-lobster
-  fonts-lobstertwo fonts-noto-color-emoji fonts-noto-core fonts-oflb-asana-math fonts-open-sans fonts-roboto-unhinted fonts-sil-charis fonts-sil-gentium fonts-sil-gentium-basic
-  fonts-sil-gentiumplus fonts-sil-gentiumplus-compact fonts-sil-padauk fonts-stix fonts-tlwg-garuda fonts-tlwg-garuda-otf fonts-tlwg-kinnari fonts-tlwg-kinnari-otf fonts-tlwg-laksaman
-  fonts-tlwg-laksaman-otf fonts-tlwg-loma fonts-tlwg-loma-otf fonts-tlwg-mono fonts-tlwg-mono-otf fonts-tlwg-norasi fonts-tlwg-norasi-otf fonts-tlwg-purisa fonts-tlwg-purisa-otf
-  fonts-tlwg-sawasdee fonts-tlwg-sawasdee-otf fonts-tlwg-typewriter fonts-tlwg-typewriter-otf fonts-tlwg-typist fonts-tlwg-typist-otf fonts-tlwg-typo fonts-tlwg-typo-otf
-  fonts-tlwg-umpush fonts-tlwg-umpush-otf fonts-tlwg-waree fonts-tlwg-waree-otf fonts-unfonts-core fonts-unfonts-extra freeglut3 gsfonts gsfonts-x11 htop imagemagick imagemagick-6-common
-  imagemagick-6.q16 javascript-common lacheck latex-cjk-chinese-arphic-bkai00mp latex-cjk-chinese-arphic-bsmi00lp latex-cjk-chinese-arphic-gbsn00lp latex-cjk-chinese-arphic-gkai00mp
-  latex-cjk-japanese-wadalab latexdiff lcdf-typetools libalgorithm-c3-perl libapache-pom-java libautovivification-perl libb-hooks-endofscope-perl libb-hooks-op-check-perl
-  libboost-filesystem1.74.0 libbtparse2 libbusiness-ismn-perl libbusiness-issn-perl libclass-accessor-perl libclass-c3-perl libclass-c3-xs-perl libclass-data-inheritable-perl
-  libclass-inspector-perl libclass-method-modifiers-perl libclass-singleton-perl libclass-xsaccessor-perl libcmark-gfm-extensions0.29.0.gfm.3 libcmark-gfm0.29.0.gfm.3
-  libcommon-sense-perl libcommons-logging-java libcommons-parent-java libdata-compare-perl libdata-optlist-perl libdata-uniqid-perl libdate-simple-perl libdatetime-calendar-julian-perl
-  libdatetime-format-builder-perl libdatetime-format-strptime-perl libdatetime-locale-perl libdatetime-perl libdatetime-timezone-perl libde265-0 libdevel-callchecker-perl
-  libdevel-caller-perl libdevel-globaldestruction-perl libdevel-lexalias-perl libdevel-stacktrace-perl libdist-checkconflicts-perl libdjvulibre-text libdjvulibre21
-  libdynaloader-functions-perl libemail-date-format-perl libemf1 libencode-eucjpms-perl libencode-hanextra-perl libencode-jis2k-perl libeval-closure-perl libexception-class-perl
-  libexporter-tiny-perl libfftw3-double3 libfile-find-rule-perl libfile-homedir-perl libfile-sharedir-perl libfile-slurper-perl libfile-which-perl libfontbox-java libglew2.2 libgsl27
-  libgslcblas0 libheif1 libilmbase25 libipc-run3-perl libipc-shareable-perl libjs-jquery libjson-perl libjson-xs-perl libjxr-tools libjxr0 libkpathsea6 liblingua-translit-perl
-  liblist-allutils-perl liblist-moreutils-perl liblist-moreutils-xs-perl liblist-someutils-perl liblist-someutils-xs-perl liblist-utilsby-perl liblog-dispatch-perl liblog-log4perl-perl
-  liblqr-1-0 libltdl7 libmagick++-6.q16-8 libmagickcore-6.q16-6 libmagickcore-6.q16-6-extra libmagickwand-6.q16-6 libmail-sendmail-perl libmime-charset-perl libmime-lite-perl
-  libmime-types-perl libmodule-implementation-perl libmodule-runtime-perl libmotif-common libmro-compat-perl libnamespace-autoclean-perl libnamespace-clean-perl libnl-genl-3-200
-  libnumber-compare-perl libopenexr25 libosp5 libostyle1c2 libpackage-stash-perl libpackage-stash-xs-perl libpadwalker-perl libparams-classify-perl libparams-util-perl
-  libparams-validate-perl libparams-validationcompiler-perl libparse-recdescent-perl libpdfbox-java libperlio-utf8-strict-perl libplot2c2 libpoppler-qt5-1 libpstoedit0c2a libptexenc1
-  libqt5core5a libqt5dbus5 libqt5gui5 libqt5network5 libqt5svg5 libqt5widgets5 libqt5xml5 libreadonly-perl libref-util-perl libref-util-xs-perl libregexp-common-perl librole-tiny-perl
-  libruby3.0 libsombok3 libsort-key-perl libspecio-perl libstring-crc32-perl libsub-exporter-perl libsub-exporter-progressive-perl libsub-identify-perl libsub-install-perl
-  libsub-quote-perl libsynctex2 libsys-hostname-long-perl libtcl8.6 libteckit0 libtexlua53 libtexluajit2 libtext-bibtex-perl libtext-csv-perl libtext-csv-xs-perl libtext-glob-perl
-  libtext-roman-perl libtext-unidecode-perl libtie-cycle-perl libtk8.6 libtypes-serialiser-perl libunicode-linebreak-perl libvariable-magic-perl libwebpdemux2 libwmflite-0.2-7 libwoff1
-  libxcb-xinerama0 libxm4 libxml-libxml-perl libxml-libxml-simple-perl libxml-libxslt-perl libxml-namespacesupport-perl libxml-sax-base-perl libxml-sax-expat-perl libxml-sax-perl
-  libxml-writer-perl libxstring-perl libyaml-tiny-perl libzip4 libzzip-0-13 lmodern openjade pandoc-data pfb2t1c2pfb preview-latex-style ps2eps pstoedit psutils qt5-gtk-platformtheme
-  qttranslations5-l10n rake ruby ruby-net-telnet ruby-rubygems ruby-webrick ruby-xmlrpc ruby3.0 rubygems-integration sgml-base t1utils tcl tcl8.6 teckit tex-common tex-gyre texinfo tk
-  tk8.6 xfonts-encodings xfonts-utils xpdf
-Use 'sudo apt autoremove' to remove them.
-Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
-  libheif1 imagemagick libavdevice58 ffmpeg libopenexr25 libmagick++-6.q16-8
-  libpostproc55 libmagickcore-6.q16-6-extra libavcodec58 libmagickwand-6.q16-6
-  libavutil56 imagemagick-6.q16 libswscale5 libmagickcore-6.q16-6
-  libavutil-dev libgsl27 libswresample3 imagemagick-6-common libavformat58
-  libgslcblas0 libavcodec-dev libde265-0 libswresample-dev libavfilter7
-Learn more about Ubuntu Pro at https://ubuntu.com/pro
-#
-# Patches available for packages affected by CUPS Remote Code Execution issue
-# tracked by CVE-2024-47076, CVE-2024-47175, CVE-2024-47176, and CVE-2024-47177
-# For more see: https://ubuntu.com/blog/cups-remote-code-execution
-#
-The following NEW packages will be installed:
-  bc cloud-guest-utils cloud-init eatmydata landscape-client landscape-common libeatmydata1 python-babel-localedata python3-attr python3-automat python3-babel python3-bcrypt
-  python3-click python3-colorama python3-configobj python3-constantly python3-debconf python3-hamcrest python3-hyperlink python3-incremental python3-jinja2 python3-json-pointer
-  python3-jsonpatch python3-jsonschema python3-markupsafe python3-openssl python3-pyasn1 python3-pyasn1-modules python3-pycurl python3-pyrsistent python3-serial python3-service-identity
-  python3-setuptools python3-twisted python3-tz python3-zope.interface
-The following packages will be upgraded:
-  apparmor apt apt-utils base-files ca-certificates cups-bsd cups-client cups-common curl debootstrap libapparmor1 libapt-pkg6.0 libarchive13 libcups2 libcurl3-gnutls libcurl4 libexpat1
-  libopenjp2-7 libpcap0.8 libpython3.10 libpython3.10-minimal libpython3.10-stdlib libssl-dev libssl3 libtiff5 linux-libc-dev motd-news-config nano openssl ovmf python-apt-common
-  python3-apt python3-distupgrade python3-pkg-resources python3-update-manager python3.10 python3.10-minimal ruby-webrick snapd ubuntu-advantage-tools ubuntu-minimal ubuntu-pro-client
-  ubuntu-pro-client-l10n ubuntu-release-upgrader-core ubuntu-standard ubuntu-wsl update-manager-core vim vim-common vim-runtime vim-tiny wsl-setup xxd
-53 upgraded, 36 newly installed, 0 to remove and 0 not upgraded.
-32 standard LTS security updates
-Need to get 73.8 MB of archives.
-After this operation, 54.8 MB of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 motd-news-config all 12ubuntu4.7 [3822 B]
-Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 base-files amd64 12ubuntu4.7 [61.9 kB]
-Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libapt-pkg6.0 amd64 2.4.13 [912 kB]
-Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 apt amd64 2.4.13 [1363 kB]
-Get:5 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 apt-utils amd64 2.4.13 [211 kB]
-Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libexpat1 amd64 2.4.7-1ubuntu0.4 [91.2 kB]
-Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10 amd64 3.10.12-1~22.04.6 [1949 kB]
-Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libssl-dev amd64 3.0.2-0ubuntu1.18 [2375 kB]
-Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libssl3 amd64 3.0.2-0ubuntu1.18 [1905 kB]
-Get:10 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10 amd64 3.10.12-1~22.04.6 [509 kB]
-Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-stdlib amd64 3.10.12-1~22.04.6 [1850 kB]
-Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3.10-minimal amd64 3.10.12-1~22.04.6 [2258 kB]
-Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpython3.10-minimal amd64 3.10.12-1~22.04.6 [814 kB]
-Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssl amd64 3.0.2-0ubuntu1.18 [1184 kB]
-Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ca-certificates all 20240203~22.04.1 [162 kB]
-Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libapparmor1 amd64 3.0.4-2ubuntu2.4 [39.7 kB]
-Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python-apt-common all 2.4.0ubuntu4 [14.6 kB]
-Get:18 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-apt amd64 2.4.0ubuntu4 [164 kB]
-Get:19 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-pkg-resources all 59.6.0-1.2ubuntu0.22.04.2 [133 kB]
-Get:20 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ubuntu-pro-client-l10n amd64 34~22.04 [19.1 kB]
-Get:21 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ubuntu-pro-client amd64 34~22.04 [221 kB]
-Get:22 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ubuntu-advantage-tools all 34~22.04 [10.9 kB]
-Get:23 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 xxd amd64 2:8.2.3995-1ubuntu2.19 [52.9 kB]
-Get:24 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 vim amd64 2:8.2.3995-1ubuntu2.19 [1733 kB]
-Get:25 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 vim-tiny amd64 2:8.2.3995-1ubuntu2.19 [708 kB]
-Get:26 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 vim-runtime all 2:8.2.3995-1ubuntu2.19 [6826 kB]
-Get:27 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 vim-common all 2:8.2.3995-1ubuntu2.19 [81.5 kB]
-Get:28 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ubuntu-minimal amd64 1.481.4 [2928 B]
-Get:29 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 apparmor amd64 3.0.4-2ubuntu2.4 [598 kB]
-Get:30 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libpcap0.8 amd64 1.10.1-4ubuntu1.22.04.1 [145 kB]
-Get:31 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 nano amd64 6.2-1ubuntu0.1 [280 kB]
-Get:32 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ubuntu-release-upgrader-core all 1:22.04.20 [26.2 kB]
-Get:33 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-distupgrade all 1:22.04.20 [106 kB]
-Get:34 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-update-manager all 1:22.04.21 [39.1 kB]
-Get:35 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 update-manager-core all 1:22.04.21 [11.5 kB]
-Get:36 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ubuntu-standard amd64 1.481.4 [2948 B]
-Get:37 http://archive.ubuntu.com/ubuntu jammy/main amd64 bc amd64 1.07.1-3build1 [87.6 kB]
-Get:38 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 cups-common all 2.4.1op1-1ubuntu4.11 [253 kB]
-Get:39 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 cups-bsd amd64 2.4.1op1-1ubuntu4.11 [37.0 kB]
-Get:40 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 cups-client amd64 2.4.1op1-1ubuntu4.11 [127 kB]
-Get:41 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcups2 amd64 2.4.1op1-1ubuntu4.11 [263 kB]
-Get:42 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 curl amd64 7.81.0-1ubuntu1.18 [194 kB]
-Get:43 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl4 amd64 7.81.0-1ubuntu1.18 [289 kB]
-Get:44 http://archive.ubuntu.com/ubuntu jammy/main amd64 libeatmydata1 amd64 130-2build1 [7498 B]
-Get:45 http://archive.ubuntu.com/ubuntu jammy/main amd64 eatmydata all 130-2build1 [5584 B]
-Get:46 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-bcrypt amd64 3.2.0-1build1 [32.7 kB]
-Get:47 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-hamcrest all 2.0.2-2 [26.8 kB]
-Get:48 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-openssl all 21.0.0-1 [45.2 kB]
-Get:49 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-attr all 21.2.0-1 [44.0 kB]
-Get:50 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-pyasn1 all 0.4.8-1 [50.9 kB]
-Get:51 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-pyasn1-modules all 0.2.1-1 [33.0 kB]
-Get:52 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-service-identity all 18.1.0-6 [10.7 kB]
-Get:53 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-automat all 20.2.0-1 [27.6 kB]
-Get:54 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-constantly all 15.1.0-2 [8396 B]
-Get:55 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-hyperlink all 21.0.0-3 [68.8 kB]
-Get:56 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-incremental all 21.3.0-1 [14.4 kB]
-Get:57 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-zope.interface amd64 5.4.0-1build1 [142 kB]
-Get:58 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-twisted all 22.1.0-2ubuntu2.5 [2006 kB]
-Get:59 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-configobj all 5.0.6-5ubuntu0.1 [34.9 kB]
-Get:60 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 landscape-common amd64 23.02-0ubuntu1~22.04.3 [88.7 kB]
-Get:61 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl3-gnutls amd64 7.81.0-1ubuntu1.18 [284 kB]
-Get:62 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-pycurl amd64 7.44.1-4build1 [52.9 kB]
-Get:63 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 landscape-client amd64 23.02-0ubuntu1~22.04.3 [113 kB]
-Get:64 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libarchive13 amd64 3.6.0-1ubuntu1.2 [369 kB]
-Get:65 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtiff5 amd64 4.3.0-6ubuntu0.10 [185 kB]
-Get:66 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 linux-libc-dev amd64 5.15.0-124.134 [1322 kB]
-Get:67 http://archive.ubuntu.com/ubuntu jammy/main amd64 python-babel-localedata all 2.8.0+dfsg.1-7 [4982 kB]
-Get:68 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-tz all 2022.1-1ubuntu0.22.04.1 [30.7 kB]
-Get:69 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-babel all 2.8.0+dfsg.1-7 [85.1 kB]
-Get:70 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-colorama all 0.4.4-1 [24.5 kB]
-Get:71 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-click all 8.0.3-1 [78.3 kB]
-Get:72 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-debconf all 1.5.79ubuntu1 [3914 B]
-Get:73 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-markupsafe amd64 2.0.1-2build1 [12.7 kB]
-Get:74 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-jinja2 all 3.0.3-1ubuntu0.2 [108 kB]
-Get:75 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-json-pointer all 2.0-0ubuntu1 [8320 B]
-Get:76 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-jsonpatch all 1.32-2 [12.7 kB]
-Get:77 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-setuptools all 59.6.0-1.2ubuntu0.22.04.2 [340 kB]
-Get:78 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-pyrsistent amd64 0.18.1-1build1 [55.5 kB]
-Get:79 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-jsonschema all 3.2.0-0ubuntu2 [43.1 kB]
-Get:80 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-serial all 3.5-1 [78.7 kB]
-Get:81 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ruby-webrick all 1.7.0-3ubuntu0.1 [52.1 kB]
-Get:82 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 snapd amd64 2.65.3+22.04 [26.4 MB]
-Get:83 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 wsl-setup amd64 0.5.4~22.04 [4034 B]
-Get:84 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ubuntu-wsl amd64 1.481.4 [2876 B]
-Get:85 http://archive.ubuntu.com/ubuntu jammy/main amd64 cloud-guest-utils all 0.32-22-g45fe84a5-0ubuntu1 [18.5 kB]
-Get:86 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 cloud-init all 24.3.1-0ubuntu0~22.04.1 [564 kB]
-Get:87 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 debootstrap all 1.0.126+nmu1ubuntu0.8 [40.6 kB]
-Get:88 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libopenjp2-7 amd64 2.4.0-6ubuntu0.1 [158 kB]
-Get:89 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ovmf all 2022.02-3ubuntu0.22.04.3 [7561 kB]
-Fetched 73.8 MB in 6s (11.4 MB/s)
-Extracting templates from packages: 100%
-Preconfiguring packages ...
-(Reading database ... 91813 files and directories currently installed.)
-Preparing to unpack .../motd-news-config_12ubuntu4.7_all.deb ...
-Unpacking motd-news-config (12ubuntu4.7) over (12ubuntu4.6) ...
-Preparing to unpack .../base-files_12ubuntu4.7_amd64.deb ...
-Unpacking base-files (12ubuntu4.7) over (12ubuntu4.6) ...
-Setting up base-files (12ubuntu4.7) ...
-Installing new version of config file /etc/issue ...
-Installing new version of config file /etc/issue.net ...
-Installing new version of config file /etc/lsb-release ...
-motd-news.service is a disabled or a static unit not running, not starting it.
-(Reading database ... 91813 files and directories currently installed.)
-Preparing to unpack .../libapt-pkg6.0_2.4.13_amd64.deb ...
-Unpacking libapt-pkg6.0:amd64 (2.4.13) over (2.4.12) ...
-Setting up libapt-pkg6.0:amd64 (2.4.13) ...
-(Reading database ... 91813 files and directories currently installed.)
-Preparing to unpack .../archives/apt_2.4.13_amd64.deb ...
-Unpacking apt (2.4.13) over (2.4.12) ...
-Setting up apt (2.4.13) ...
-(Reading database ... 91813 files and directories currently installed.)
-Preparing to unpack .../apt-utils_2.4.13_amd64.deb ...
-Unpacking apt-utils (2.4.13) over (2.4.12) ...
-Preparing to unpack .../libexpat1_2.4.7-1ubuntu0.4_amd64.deb ...
-Unpacking libexpat1:amd64 (2.4.7-1ubuntu0.4) over (2.4.7-1ubuntu0.3) ...
-Preparing to unpack .../libpython3.10_3.10.12-1~22.04.6_amd64.deb ...
-Unpacking libpython3.10:amd64 (3.10.12-1~22.04.6) over (3.10.12-1~22.04.5) ...
-Preparing to unpack .../libssl-dev_3.0.2-0ubuntu1.18_amd64.deb ...
-Unpacking libssl-dev:amd64 (3.0.2-0ubuntu1.18) over (3.0.2-0ubuntu1.17) ...
-Preparing to unpack .../libssl3_3.0.2-0ubuntu1.18_amd64.deb ...
-Unpacking libssl3:amd64 (3.0.2-0ubuntu1.18) over (3.0.2-0ubuntu1.17) ...
-Setting up libssl3:amd64 (3.0.2-0ubuntu1.18) ...
-(Reading database ... 91813 files and directories currently installed.)
-Preparing to unpack .../00-python3.10_3.10.12-1~22.04.6_amd64.deb ...
-Unpacking python3.10 (3.10.12-1~22.04.6) over (3.10.12-1~22.04.5) ...
-Preparing to unpack .../01-libpython3.10-stdlib_3.10.12-1~22.04.6_amd64.deb ...
-Unpacking libpython3.10-stdlib:amd64 (3.10.12-1~22.04.6) over (3.10.12-1~22.04.5) ...
-Preparing to unpack .../02-python3.10-minimal_3.10.12-1~22.04.6_amd64.deb ...
-Unpacking python3.10-minimal (3.10.12-1~22.04.6) over (3.10.12-1~22.04.5) ...
-Preparing to unpack .../03-libpython3.10-minimal_3.10.12-1~22.04.6_amd64.deb ...
-Unpacking libpython3.10-minimal:amd64 (3.10.12-1~22.04.6) over (3.10.12-1~22.04.5) ...
-Preparing to unpack .../04-openssl_3.0.2-0ubuntu1.18_amd64.deb ...
-Unpacking openssl (3.0.2-0ubuntu1.18) over (3.0.2-0ubuntu1.17) ...
-Preparing to unpack .../05-ca-certificates_20240203~22.04.1_all.deb ...
-Unpacking ca-certificates (20240203~22.04.1) over (20230311ubuntu0.22.04.1) ...
-Preparing to unpack .../06-libapparmor1_3.0.4-2ubuntu2.4_amd64.deb ...
-Unpacking libapparmor1:amd64 (3.0.4-2ubuntu2.4) over (3.0.4-2ubuntu2.3) ...
-Preparing to unpack .../07-python-apt-common_2.4.0ubuntu4_all.deb ...
-Unpacking python-apt-common (2.4.0ubuntu4) over (2.4.0ubuntu3) ...
-Preparing to unpack .../08-python3-apt_2.4.0ubuntu4_amd64.deb ...
-Unpacking python3-apt (2.4.0ubuntu4) over (2.4.0ubuntu3) ...
-Preparing to unpack .../09-python3-pkg-resources_59.6.0-1.2ubuntu0.22.04.2_all.deb ...
-Unpacking python3-pkg-resources (59.6.0-1.2ubuntu0.22.04.2) over (59.6.0-1.2ubuntu0.22.04.1) ...
-Preparing to unpack .../10-ubuntu-pro-client-l10n_34~22.04_amd64.deb ...
-Unpacking ubuntu-pro-client-l10n (34~22.04) over (32.3.1~22.04) ...
-Preparing to unpack .../11-ubuntu-pro-client_34~22.04_amd64.deb ...
-Unpacking ubuntu-pro-client (34~22.04) over (32.3.1~22.04) ...
-Preparing to unpack .../12-ubuntu-advantage-tools_34~22.04_all.deb ...
-Unpacking ubuntu-advantage-tools (34~22.04) over (32.3.1~22.04) ...
-Preparing to unpack .../13-xxd_2%3a8.2.3995-1ubuntu2.19_amd64.deb ...
-Unpacking xxd (2:8.2.3995-1ubuntu2.19) over (2:8.2.3995-1ubuntu2.17) ...
-Preparing to unpack .../14-vim_2%3a8.2.3995-1ubuntu2.19_amd64.deb ...
-Unpacking vim (2:8.2.3995-1ubuntu2.19) over (2:8.2.3995-1ubuntu2.17) ...
-Preparing to unpack .../15-vim-tiny_2%3a8.2.3995-1ubuntu2.19_amd64.deb ...
-Unpacking vim-tiny (2:8.2.3995-1ubuntu2.19) over (2:8.2.3995-1ubuntu2.17) ...
-Preparing to unpack .../16-vim-runtime_2%3a8.2.3995-1ubuntu2.19_all.deb ...
-Unpacking vim-runtime (2:8.2.3995-1ubuntu2.19) over (2:8.2.3995-1ubuntu2.17) ...
-Preparing to unpack .../17-vim-common_2%3a8.2.3995-1ubuntu2.19_all.deb ...
-Unpacking vim-common (2:8.2.3995-1ubuntu2.19) over (2:8.2.3995-1ubuntu2.17) ...
-Preparing to unpack .../18-ubuntu-minimal_1.481.4_amd64.deb ...
-Unpacking ubuntu-minimal (1.481.4) over (1.481.3) ...
-Preparing to unpack .../19-apparmor_3.0.4-2ubuntu2.4_amd64.deb ...
-Unpacking apparmor (3.0.4-2ubuntu2.4) over (3.0.4-2ubuntu2.3) ...
-Preparing to unpack .../20-libpcap0.8_1.10.1-4ubuntu1.22.04.1_amd64.deb ...
-Unpacking libpcap0.8:amd64 (1.10.1-4ubuntu1.22.04.1) over (1.10.1-4build1) ...
-Preparing to unpack .../21-nano_6.2-1ubuntu0.1_amd64.deb ...
-Unpacking nano (6.2-1ubuntu0.1) over (6.2-1) ...
-Preparing to unpack .../22-ubuntu-release-upgrader-core_1%3a22.04.20_all.deb ...
-Unpacking ubuntu-release-upgrader-core (1:22.04.20) over (1:22.04.19) ...
-Preparing to unpack .../23-python3-distupgrade_1%3a22.04.20_all.deb ...
-Unpacking python3-distupgrade (1:22.04.20) over (1:22.04.19) ...
-Preparing to unpack .../24-python3-update-manager_1%3a22.04.21_all.deb ...
-Unpacking python3-update-manager (1:22.04.21) over (1:22.04.20) ...
-Preparing to unpack .../25-update-manager-core_1%3a22.04.21_all.deb ...
-Unpacking update-manager-core (1:22.04.21) over (1:22.04.20) ...
-Preparing to unpack .../26-ubuntu-standard_1.481.4_amd64.deb ...
-Unpacking ubuntu-standard (1.481.4) over (1.481.3) ...
-Selecting previously unselected package bc.
-Preparing to unpack .../27-bc_1.07.1-3build1_amd64.deb ...
-Unpacking bc (1.07.1-3build1) ...
-Preparing to unpack .../28-cups-common_2.4.1op1-1ubuntu4.11_all.deb ...
-Unpacking cups-common (2.4.1op1-1ubuntu4.11) over (2.4.1op1-1ubuntu4.10) ...
-Preparing to unpack .../29-cups-bsd_2.4.1op1-1ubuntu4.11_amd64.deb ...
-Unpacking cups-bsd (2.4.1op1-1ubuntu4.11) over (2.4.1op1-1ubuntu4.10) ...
-Preparing to unpack .../30-cups-client_2.4.1op1-1ubuntu4.11_amd64.deb ...
-Unpacking cups-client (2.4.1op1-1ubuntu4.11) over (2.4.1op1-1ubuntu4.10) ...
-Preparing to unpack .../31-libcups2_2.4.1op1-1ubuntu4.11_amd64.deb ...
-Unpacking libcups2:amd64 (2.4.1op1-1ubuntu4.11) over (2.4.1op1-1ubuntu4.10) ...
-Preparing to unpack .../32-curl_7.81.0-1ubuntu1.18_amd64.deb ...
-Unpacking curl (7.81.0-1ubuntu1.18) over (7.81.0-1ubuntu1.17) ...
-Preparing to unpack .../33-libcurl4_7.81.0-1ubuntu1.18_amd64.deb ...
-Unpacking libcurl4:amd64 (7.81.0-1ubuntu1.18) over (7.81.0-1ubuntu1.17) ...
-Selecting previously unselected package libeatmydata1:amd64.
-Preparing to unpack .../34-libeatmydata1_130-2build1_amd64.deb ...
-Unpacking libeatmydata1:amd64 (130-2build1) ...
-Selecting previously unselected package eatmydata.
-Preparing to unpack .../35-eatmydata_130-2build1_all.deb ...
-Unpacking eatmydata (130-2build1) ...
-Selecting previously unselected package python3-bcrypt.
-Preparing to unpack .../36-python3-bcrypt_3.2.0-1build1_amd64.deb ...
-Unpacking python3-bcrypt (3.2.0-1build1) ...
-Selecting previously unselected package python3-hamcrest.
-Preparing to unpack .../37-python3-hamcrest_2.0.2-2_all.deb ...
-Unpacking python3-hamcrest (2.0.2-2) ...
-Selecting previously unselected package python3-openssl.
-Preparing to unpack .../38-python3-openssl_21.0.0-1_all.deb ...
-Unpacking python3-openssl (21.0.0-1) ...
-Selecting previously unselected package python3-attr.
-Preparing to unpack .../39-python3-attr_21.2.0-1_all.deb ...
-Unpacking python3-attr (21.2.0-1) ...
-Selecting previously unselected package python3-pyasn1.
-Preparing to unpack .../40-python3-pyasn1_0.4.8-1_all.deb ...
-Unpacking python3-pyasn1 (0.4.8-1) ...
-Selecting previously unselected package python3-pyasn1-modules.
-Preparing to unpack .../41-python3-pyasn1-modules_0.2.1-1_all.deb ...
-Unpacking python3-pyasn1-modules (0.2.1-1) ...
-Selecting previously unselected package python3-service-identity.
-Preparing to unpack .../42-python3-service-identity_18.1.0-6_all.deb ...
-Unpacking python3-service-identity (18.1.0-6) ...
-Selecting previously unselected package python3-automat.
-Preparing to unpack .../43-python3-automat_20.2.0-1_all.deb ...
-Unpacking python3-automat (20.2.0-1) ...
-Selecting previously unselected package python3-constantly.
-Preparing to unpack .../44-python3-constantly_15.1.0-2_all.deb ...
-Unpacking python3-constantly (15.1.0-2) ...
-Selecting previously unselected package python3-hyperlink.
-Preparing to unpack .../45-python3-hyperlink_21.0.0-3_all.deb ...
-Unpacking python3-hyperlink (21.0.0-3) ...
-Selecting previously unselected package python3-incremental.
-Preparing to unpack .../46-python3-incremental_21.3.0-1_all.deb ...
-Unpacking python3-incremental (21.3.0-1) ...
-Selecting previously unselected package python3-zope.interface.
-Preparing to unpack .../47-python3-zope.interface_5.4.0-1build1_amd64.deb ...
-Unpacking python3-zope.interface (5.4.0-1build1) ...
-Selecting previously unselected package python3-twisted.
-Preparing to unpack .../48-python3-twisted_22.1.0-2ubuntu2.5_all.deb ...
-Unpacking python3-twisted (22.1.0-2ubuntu2.5) ...
-Selecting previously unselected package python3-configobj.
-Preparing to unpack .../49-python3-configobj_5.0.6-5ubuntu0.1_all.deb ...
-Unpacking python3-configobj (5.0.6-5ubuntu0.1) ...
-Selecting previously unselected package landscape-common.
-Preparing to unpack .../50-landscape-common_23.02-0ubuntu1~22.04.3_amd64.deb ...
-Unpacking landscape-common (23.02-0ubuntu1~22.04.3) ...
-Preparing to unpack .../51-libcurl3-gnutls_7.81.0-1ubuntu1.18_amd64.deb ...
-Unpacking libcurl3-gnutls:amd64 (7.81.0-1ubuntu1.18) over (7.81.0-1ubuntu1.17) ...
-Selecting previously unselected package python3-pycurl.
-Preparing to unpack .../52-python3-pycurl_7.44.1-4build1_amd64.deb ...
-Unpacking python3-pycurl (7.44.1-4build1) ...
-Selecting previously unselected package landscape-client.
-Preparing to unpack .../53-landscape-client_23.02-0ubuntu1~22.04.3_amd64.deb ...
-Unpacking landscape-client (23.02-0ubuntu1~22.04.3) ...
-Preparing to unpack .../54-libarchive13_3.6.0-1ubuntu1.2_amd64.deb ...
-Unpacking libarchive13:amd64 (3.6.0-1ubuntu1.2) over (3.6.0-1ubuntu1.1) ...
-Preparing to unpack .../55-libtiff5_4.3.0-6ubuntu0.10_amd64.deb ...
-Unpacking libtiff5:amd64 (4.3.0-6ubuntu0.10) over (4.3.0-6ubuntu0.9) ...
-Preparing to unpack .../56-linux-libc-dev_5.15.0-124.134_amd64.deb ...
-Unpacking linux-libc-dev:amd64 (5.15.0-124.134) over (5.15.0-119.129) ...
-Selecting previously unselected package python-babel-localedata.
-Preparing to unpack .../57-python-babel-localedata_2.8.0+dfsg.1-7_all.deb ...
-Unpacking python-babel-localedata (2.8.0+dfsg.1-7) ...
-Selecting previously unselected package python3-tz.
-Preparing to unpack .../58-python3-tz_2022.1-1ubuntu0.22.04.1_all.deb ...
-Unpacking python3-tz (2022.1-1ubuntu0.22.04.1) ...
-Selecting previously unselected package python3-babel.
-Preparing to unpack .../59-python3-babel_2.8.0+dfsg.1-7_all.deb ...
-Unpacking python3-babel (2.8.0+dfsg.1-7) ...
-Selecting previously unselected package python3-colorama.
-Preparing to unpack .../60-python3-colorama_0.4.4-1_all.deb ...
-Unpacking python3-colorama (0.4.4-1) ...
-Selecting previously unselected package python3-click.
-Preparing to unpack .../61-python3-click_8.0.3-1_all.deb ...
-Unpacking python3-click (8.0.3-1) ...
-Selecting previously unselected package python3-debconf.
-Preparing to unpack .../62-python3-debconf_1.5.79ubuntu1_all.deb ...
-Unpacking python3-debconf (1.5.79ubuntu1) ...
-Selecting previously unselected package python3-markupsafe.
-Preparing to unpack .../63-python3-markupsafe_2.0.1-2build1_amd64.deb ...
-Unpacking python3-markupsafe (2.0.1-2build1) ...
-Selecting previously unselected package python3-jinja2.
-Preparing to unpack .../64-python3-jinja2_3.0.3-1ubuntu0.2_all.deb ...
-Unpacking python3-jinja2 (3.0.3-1ubuntu0.2) ...
-Selecting previously unselected package python3-json-pointer.
-Preparing to unpack .../65-python3-json-pointer_2.0-0ubuntu1_all.deb ...
-Unpacking python3-json-pointer (2.0-0ubuntu1) ...
-Selecting previously unselected package python3-jsonpatch.
-Preparing to unpack .../66-python3-jsonpatch_1.32-2_all.deb ...
-Unpacking python3-jsonpatch (1.32-2) ...
-Selecting previously unselected package python3-setuptools.
-Preparing to unpack .../67-python3-setuptools_59.6.0-1.2ubuntu0.22.04.2_all.deb ...
-Unpacking python3-setuptools (59.6.0-1.2ubuntu0.22.04.2) ...
-Selecting previously unselected package python3-pyrsistent:amd64.
-Preparing to unpack .../68-python3-pyrsistent_0.18.1-1build1_amd64.deb ...
-Unpacking python3-pyrsistent:amd64 (0.18.1-1build1) ...
-Selecting previously unselected package python3-jsonschema.
-Preparing to unpack .../69-python3-jsonschema_3.2.0-0ubuntu2_all.deb ...
-Unpacking python3-jsonschema (3.2.0-0ubuntu2) ...
-Selecting previously unselected package python3-serial.
-Preparing to unpack .../70-python3-serial_3.5-1_all.deb ...
-Unpacking python3-serial (3.5-1) ...
-Preparing to unpack .../71-ruby-webrick_1.7.0-3ubuntu0.1_all.deb ...
-Unpacking ruby-webrick (1.7.0-3ubuntu0.1) over (1.7.0-3) ...
-Preparing to unpack .../72-snapd_2.65.3+22.04_amd64.deb ...
-Unpacking snapd (2.65.3+22.04) over (2.63+22.04ubuntu0.1) ...
-Preparing to unpack .../73-wsl-setup_0.5.4~22.04_amd64.deb ...
-Unpacking wsl-setup (0.5.4~22.04) over (0.2) ...
-Preparing to unpack .../74-ubuntu-wsl_1.481.4_amd64.deb ...
-Unpacking ubuntu-wsl (1.481.4) over (1.481.3) ...
-Selecting previously unselected package cloud-guest-utils.
-Preparing to unpack .../75-cloud-guest-utils_0.32-22-g45fe84a5-0ubuntu1_all.deb ...
-Unpacking cloud-guest-utils (0.32-22-g45fe84a5-0ubuntu1) ...
-Selecting previously unselected package cloud-init.
-Preparing to unpack .../76-cloud-init_24.3.1-0ubuntu0~22.04.1_all.deb ...
-Unpacking cloud-init (24.3.1-0ubuntu0~22.04.1) ...
-Preparing to unpack .../77-debootstrap_1.0.126+nmu1ubuntu0.8_all.deb ...
-Unpacking debootstrap (1.0.126+nmu1ubuntu0.8) over (1.0.126+nmu1ubuntu0.7) ...
-Preparing to unpack .../78-libopenjp2-7_2.4.0-6ubuntu0.1_amd64.deb ...
-Unpacking libopenjp2-7:amd64 (2.4.0-6ubuntu0.1) over (2.4.0-6) ...
-Preparing to unpack .../79-ovmf_2022.02-3ubuntu0.22.04.3_all.deb ...
-Unpacking ovmf (2022.02-3ubuntu0.22.04.3) over (2022.02-3ubuntu0.22.04.2) ...
-Setting up python3-pkg-resources (59.6.0-1.2ubuntu0.22.04.2) ...
-Setting up libexpat1:amd64 (2.4.7-1ubuntu0.4) ...
-Setting up motd-news-config (12ubuntu4.7) ...
-Setting up wsl-setup (0.5.4~22.04) ...
-Setting up python3-attr (21.2.0-1) ...
-Setting up debootstrap (1.0.126+nmu1ubuntu0.8) ...
-Setting up libapparmor1:amd64 (3.0.4-2ubuntu2.4) ...
-Setting up apt-utils (2.4.13) ...
-Setting up python3-setuptools (59.6.0-1.2ubuntu0.22.04.2) ...
-Setting up python3-colorama (0.4.4-1) ...
-Setting up libarchive13:amd64 (3.6.0-1ubuntu1.2) ...
-Setting up python3-zope.interface (5.4.0-1build1) ...
-Setting up python3-openssl (21.0.0-1) ...
-Setting up cups-common (2.4.1op1-1ubuntu4.11) ...
-Setting up python3-bcrypt (3.2.0-1build1) ...
-Setting up python3-automat (20.2.0-1) ...
-Setting up python3-debconf (1.5.79ubuntu1) ...
-Setting up linux-libc-dev:amd64 (5.15.0-124.134) ...
-Setting up bc (1.07.1-3build1) ...
-Setting up libcurl3-gnutls:amd64 (7.81.0-1ubuntu1.18) ...
-Setting up python3-hamcrest (2.0.2-2) ...
-Setting up ubuntu-standard (1.481.4) ...
-Setting up python3-click (8.0.3-1) ...
-Setting up python3-markupsafe (2.0.1-2build1) ...
-Setting up xxd (2:8.2.3995-1ubuntu2.19) ...
-Setting up python3-tz (2022.1-1ubuntu0.22.04.1) ...
-Setting up python-babel-localedata (2.8.0+dfsg.1-7) ...
-Setting up ovmf (2022.02-3ubuntu0.22.04.3) ...
-Setting up python3-serial (3.5-1) ...
-Setting up apparmor (3.0.4-2ubuntu2.4) ...
-Setting up python3-pycurl (7.44.1-4build1) ...
-Setting up python3-configobj (5.0.6-5ubuntu0.1) ...
-Setting up vim-common (2:8.2.3995-1ubuntu2.19) ...
-Setting up libpcap0.8:amd64 (1.10.1-4ubuntu1.22.04.1) ...
-Setting up python3-incremental (21.3.0-1) ...
-Setting up python3-hyperlink (21.0.0-3) ...
-Setting up libssl-dev:amd64 (3.0.2-0ubuntu1.18) ...
-Setting up libpython3.10-minimal:amd64 (3.10.12-1~22.04.6) ...
-Setting up ruby-webrick (1.7.0-3ubuntu0.1) ...
-Setting up libcups2:amd64 (2.4.1op1-1ubuntu4.11) ...
-Setting up nano (6.2-1ubuntu0.1) ...
-Setting up python3-pyrsistent:amd64 (0.18.1-1build1) ...
-Setting up python-apt-common (2.4.0ubuntu4) ...
-Setting up python3-json-pointer (2.0-0ubuntu1) ...
-Setting up libeatmydata1:amd64 (130-2build1) ...
-Setting up python3-pyasn1 (0.4.8-1) ...
-Setting up libcurl4:amd64 (7.81.0-1ubuntu1.18) ...
-Setting up libopenjp2-7:amd64 (2.4.0-6ubuntu0.1) ...
-Setting up python3-constantly (15.1.0-2) ...
-Setting up libtiff5:amd64 (4.3.0-6ubuntu0.10) ...
-Setting up curl (7.81.0-1ubuntu1.18) ...
-Setting up vim-runtime (2:8.2.3995-1ubuntu2.19) ...
-Setting up openssl (3.0.2-0ubuntu1.18) ...
-Setting up cloud-guest-utils (0.32-22-g45fe84a5-0ubuntu1) ...
-Setting up eatmydata (130-2build1) ...
-Setting up python3-babel (2.8.0+dfsg.1-7) ...
-update-alternatives: using /usr/bin/pybabel-python3 to provide /usr/bin/pybabel (pybabel) in auto mode
-Setting up python3-apt (2.4.0ubuntu4) ...
-Setting up python3-jsonpatch (1.32-2) ...
-update-alternatives: using /usr/bin/json-patch-jsondiff to provide /usr/bin/jsondiff (jsondiff) in auto mode
-Setting up vim-tiny (2:8.2.3995-1ubuntu2.19) ...
-Setting up python3.10-minimal (3.10.12-1~22.04.6) ...
-Setting up cups-client (2.4.1op1-1ubuntu4.11) ...
-Setting up libpython3.10-stdlib:amd64 (3.10.12-1~22.04.6) ...
-Setting up ca-certificates (20240203~22.04.1) ...
-Updating certificates in /etc/ssl/certs...
-rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
-14 added, 5 removed; done.
-Setting up python3-jinja2 (3.0.3-1ubuntu0.2) ...
-Setting up python3-jsonschema (3.2.0-0ubuntu2) ...
-Setting up python3-pyasn1-modules (0.2.1-1) ...
-Setting up python3-service-identity (18.1.0-6) ...
-Setting up ubuntu-pro-client (34~22.04) ...
-Installing new version of config file /etc/apparmor.d/ubuntu_pro_apt_news ...
-Installing new version of config file /etc/apt/apt.conf.d/20apt-esm-hook.conf ...
-Setting up ubuntu-pro-client-l10n (34~22.04) ...
-Setting up snapd (2.65.3+22.04) ...
-Installing new version of config file /etc/apparmor.d/usr.lib.snapd.snap-confine.real ...
-snapd.failure.service is a disabled or a static unit not running, not starting it.
-snapd.snap-repair.service is a disabled or a static unit not running, not starting it.
-Setting up libpython3.10:amd64 (3.10.12-1~22.04.6) ...
-Setting up cloud-init (24.3.1-0ubuntu0~22.04.1) ...
-No diversion 'diversion of /etc/init/ureadahead.conf to /etc/init/ureadahead.conf.disabled by cloud-init', none removed.
-Created symlink /etc/systemd/system/cloud-init.target.wants/cloud-config.service → /lib/systemd/system/cloud-config.service.
-Created symlink /etc/systemd/system/cloud-init.target.wants/cloud-final.service → /lib/systemd/system/cloud-final.service.
-Created symlink /etc/systemd/system/cloud-config.target.wants/cloud-init-hotplugd.socket → /lib/systemd/system/cloud-init-hotplugd.socket.
-Created symlink /etc/systemd/system/cloud-init.target.wants/cloud-init-local.service → /lib/systemd/system/cloud-init-local.service.
-Created symlink /etc/systemd/system/cloud-init.target.wants/cloud-init.service → /lib/systemd/system/cloud-init.service.
-Setting up vim (2:8.2.3995-1ubuntu2.19) ...
-Setting up python3.10 (3.10.12-1~22.04.6) ...
-Setting up cups-bsd (2.4.1op1-1ubuntu4.11) ...
-Setting up ubuntu-wsl (1.481.4) ...
-Setting up python3-twisted (22.1.0-2ubuntu2.5) ...
-Setting up ubuntu-advantage-tools (34~22.04) ...
-Setting up ubuntu-minimal (1.481.4) ...
-Setting up landscape-common (23.02-0ubuntu1~22.04.3) ...
-Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.153.1-microsoft-standard-WSL2 x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/pro
-
- System information as of Sun Oct 20 14:20:31 EDT 2024
-
-  System load:  0.5                 Processes:             50
-  Usage of /:   1.7% of 1006.85GB   Users logged in:       1
-  Memory usage: 8%                  IPv4 address for eth0: 172.27.56.143
-  Swap usage:   0%
-
- * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
-   just raised the bar for easy, resilient and secure K8s cluster deployment.
-
-   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
-New release '24.04.1 LTS' available.
-Run 'do-release-upgrade' to upgrade to it.
-
-Setting up landscape-client (23.02-0ubuntu1~22.04.3) ...
-Created symlink /etc/systemd/system/multi-user.target.wants/landscape-client.service → /lib/systemd/system/landscape-client.service.
-Setting up python3-update-manager (1:22.04.21) ...
-Setting up python3-distupgrade (1:22.04.20) ...
-Setting up ubuntu-release-upgrader-core (1:22.04.20) ...
-Setting up update-manager-core (1:22.04.21) ...
-Processing triggers for install-info (6.8-4build1) ...
-Processing triggers for hicolor-icon-theme (0.17-2) ...
-Processing triggers for libc-bin (2.35-0ubuntu3.8) ...
-Processing triggers for rsyslog (8.2112.0-2ubuntu2.2) ...
-Processing triggers for man-db (2.10.2-1) ...
-Processing triggers for plymouth-theme-ubuntu-text (0.9.5+git20211018-1ubuntu3) ...
-Processing triggers for dbus (1.12.20-2ubuntu4.1) ...
-Processing triggers for ca-certificates (20240203~22.04.1) ...
-Updating certificates in /etc/ssl/certs...
-0 added, 0 removed; done.
-Running hooks in /etc/ca-certificates/update.d...
-done.
-
-real    0m41.001s
-user    0m0.011s
-sys     0m0.024s
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        llvm.sh
-
-nothing added to commit but untracked files present (use "git add" to track)
-
-real    0m0.231s
-user    0m0.032s
-sys     0m0.117s
-remote: Enumerating objects: 12478, done.
-remote: Counting objects: 100% (7642/7642), done.
-remote: Compressing objects: 100% (1008/1008), done.
-remote: Total 12478 (delta 6894), reused 6939 (delta 6628), pack-reused 4836 (from 1)
-Receiving objects: 100% (12478/12478), 7.72 MiB | 15.98 MiB/s, done.
-Resolving deltas: 100% (8569/8569), completed with 1485 local objects.
-From https://github.com/LadybirdBrowser/ladybird
-   84ab8bf797..6b73a2d8a4  master     -> origin/master
-
-real    0m1.657s
-user    0m0.733s
-sys     0m0.123s
-From https://github.com/LadybirdBrowser/ladybird
- * branch                  master     -> FETCH_HEAD
-Updating 84ab8bf797..6b73a2d8a4
-Fast-forward
- .devcontainer/devcontainer.json                                                                                        |   66 +-
- .devcontainer/features/ladybird/devcontainer-feature.json                                                              |    1 +
- .devcontainer/features/ladybird/install.sh                                                                             |    2 +-
- .devcontainer/features/vcpkg-cache/devcontainer-feature.json                                                           |   27 +
- .devcontainer/features/vcpkg-cache/install.sh                                                                          |   39 +
- .devcontainer/optimized/devcontainer.json                                                                              |    2 +-
- .github/actions/cache-restore/action.yml                                                                               |   30 +-
- .github/actions/cache-save/action.yml                                                                                  |   26 +-
- .github/actions/setup/action.yml                                                                                       |   33 +-
- .github/workflows/ci.yml                                                                                               |   24 +-
- .github/workflows/dev-container.yml                                                                                    |    1 +
- .github/workflows/ladybird-js-artifacts.yml                                                                            |   22 +-
- .github/workflows/lagom-template.yml                                                                                   |   61 +-
- .github/workflows/libjs-test262.yml                                                                                    |    6 +-
- .github/workflows/lint-code.yml                                                                                        |   25 +-
- .github/workflows/lint-commits.yml                                                                                     |    2 +-
- .github/workflows/nightly-android.yml                                                                                  |   10 +-
- .gitignore                                                                                                             |    1 +
- .mailmap                                                                                                               |    4 +-
- .pre-commit-config.yaml                                                                                                |    4 +-
- AK/AK+Swift.swift                                                                                                      |   29 +-
- AK/Assertions.cpp                                                                                                      |    2 +-
- AK/Assertions.h                                                                                                        |    2 +-
- AK/Atomic.h                                                                                                            |    2 +-
- AK/AtomicRefCounted.h                                                                                                  |    2 +-
- AK/Badge.h                                                                                                             |    2 +-
- AK/Base64.cpp                                                                                                          |   78 +-
- AK/Base64.h                                                                                                            |   23 +-
- AK/BinarySearch.h                                                                                                      |    2 +-
- AK/Bitmap.h                                                                                                            |    2 +-
- AK/BitmapView.h                                                                                                        |    2 +-
- AK/ByteBuffer.h                                                                                                        |    2 +-
- AK/ByteString.cpp                                                                                                      |    2 +-
- AK/ByteString.h                                                                                                        |    2 +-
- AK/CMakeLists.txt                                                                                                      |   12 +-
- AK/Checked.h                                                                                                           |    2 +-
- AK/CircularQueue.h                                                                                                     |    2 +-
- AK/CopyOnWrite.h                                                                                                       |   41 +
- AK/Debug.h.in                                                                                                          |   20 +-
- AK/Demangle.h                                                                                                          |    2 +-
- AK/DeprecatedFlyString.cpp                                                                                             |    2 +-
- AK/DeprecatedFlyString.h                                                                                               |    2 +-
- AK/DistinctNumeric.h                                                                                                   |    2 +-
- AK/DoublyLinkedList.h                                                                                                  |    2 +-
- AK/Error.cpp                                                                                                           |   36 +
- AK/Error.h                                                                                                             |    9 +-
- AK/FixedArray.h                                                                                                        |    2 +-
- AK/FloatingPoint.h                                                                                                     |  187 ----
- AK/FlyString.cpp                                                                                                       |   48 +
- AK/FlyString.h                                                                                                         |    3 +
- AK/Format.cpp                                                                                                          |   11 +
- AK/Forward.h                                                                                                           |    2 +-
- AK/Function.h                                                                                                          |    2 +-
- AK/GenericLexer.cpp                                                                                                    |   43 +-
- AK/GenericLexer.h                                                                                                      |   25 +-
- AK/HashFunctions.h                                                                                                     |    2 +-
- AK/HashMap.h                                                                                                           |    2 +-
- AK/HashTable.h                                                                                                         |    2 +-
- AK/Hex.cpp                                                                                                             |    2 +-
- AK/Hex.h                                                                                                               |    2 +-
- AK/IDAllocator.h                                                                                                       |    2 +-
- AK/IPv4Address.h                                                                                                       |    2 +-
- AK/IntrusiveList.h                                                                                                     |    2 +-
- AK/IterationDecision.h                                                                                                 |    2 +-
- AK/JsonArray.h                                                                                                         |    2 +-
- AK/JsonObject.cpp                                                                                                      |    2 +-
- AK/JsonObject.h                                                                                                        |    2 +-
- AK/JsonParser.cpp                                                                                                      |   19 +-
- AK/JsonParser.h                                                                                                        |    2 +-
- AK/JsonValue.cpp                                                                                                       |    2 +-
- AK/JsonValue.h                                                                                                         |    2 +-
- AK/LexicalPath.cpp                                                                                                     |    2 +-
- AK/LexicalPath.h                                                                                                       |    2 +-
- AK/LsanSuppressions.h                                                                                                  |   22 +
- AK/Memory.h                                                                                                            |    2 +-
- AK/NeverDestroyed.h                                                                                                    |    2 +-
- AK/Noncopyable.h                                                                                                       |    2 +-
- AK/NonnullOwnPtr.h                                                                                                     |    2 +-
- AK/NonnullRefPtr.h                                                                                                     |    2 +-
- AK/NumericLimits.h                                                                                                     |    2 +-
- AK/Optional.h                                                                                                          |    2 +-
- AK/OwnPtr.h                                                                                                            |    2 +-
- AK/Platform.h                                                                                                          |    6 +-
- AK/Queue.h                                                                                                             |    2 +-
- AK/QuickSort.h                                                                                                         |    2 +-
- AK/Random.h                                                                                                            |    2 +-
- AK/RefCounted.h                                                                                                        |    2 +-
- AK/RefPtr.h                                                                                                            |    2 +-
- AK/Result.h                                                                                                            |    2 +-
- AK/ScopeGuard.h                                                                                                        |    2 +-
- AK/ScopedValueRollback.h                                                                                               |    2 +-
- AK/SinglyLinkedList.h                                                                                                  |    2 +-
- AK/StdLibExtraDetails.h                                                                                                |    2 +-
- AK/StdLibExtras.h                                                                                                      |    2 +-
- AK/Stream.cpp                                                                                                          |    2 +-
- AK/String.cpp                                                                                                          |   55 +-
- AK/String.h                                                                                                            |   10 +-
- AK/StringBuilder.cpp                                                                                                   |    2 +-
- AK/StringBuilder.h                                                                                                     |    2 +-
- AK/StringImpl.cpp                                                                                                      |    2 +-
- AK/StringImpl.h                                                                                                        |    2 +-
- AK/StringUtils.h                                                                                                       |    2 +-
- AK/StringView.cpp                                                                                                      |    2 +-
- AK/StringView.h                                                                                                        |    2 +-
- AK/TemporaryChange.h                                                                                                   |    8 +-
- AK/Time.cpp                                                                                                            |   57 +-
- AK/Time.h                                                                                                              |    8 +-
- AK/Traits.h                                                                                                            |    2 +-
- AK/Try.h                                                                                                               |    2 +-
- AK/TypeCasts.h                                                                                                         |    2 +-
- AK/Types.h                                                                                                             |    2 +-
- AK/Utf16View.cpp                                                                                                       |   18 -
- AK/Utf32View.cpp                                                                                                       |    8 +
- AK/Utf32View.h                                                                                                         |    9 +-
- AK/Utf8View.cpp                                                                                                        |  109 ---
- AK/Utf8View.h                                                                                                          |   99 +-
- AK/Vector.h                                                                                                            |    2 +-
- AK/WeakPtr.h                                                                                                           |    2 +-
- AK/Weakable.h                                                                                                          |    2 +-
- AK/kmalloc.cpp                                                                                                         |    2 +-
- AK/kmalloc.h                                                                                                           |    2 +-
- Base/res/emoji/U+10CD00.png                                                                                            |  Bin 8344 -> 0 bytes
- Base/res/emoji/U+10CD01.png                                                                                            |  Bin 14611 -> 0 bytes
- Base/res/emoji/U+10CD02.png                                                                                            |  Bin 5675 -> 0 bytes
- Base/res/emoji/U+10CD03.png                                                                                            |  Bin 8480 -> 0 bytes
- Base/res/emoji/U+10CD04.png                                                                                            |  Bin 7874 -> 0 bytes
- Base/res/emoji/U+10CD05.png                                                                                            |  Bin 8130 -> 0 bytes
- Base/res/emoji/U+10CD06.png                                                                                            |  Bin 2224 -> 0 bytes
- Base/res/emoji/U+10CD07.png                                                                                            |  Bin 9475 -> 0 bytes
- Base/res/emoji/U+10CD08.png                                                                                            |  Bin 5937 -> 0 bytes
- Base/res/emoji/U+10CD09.png                                                                                            |  Bin 10311 -> 0 bytes
- Base/res/emoji/U+10CD0A.png                                                                                            |  Bin 12990 -> 0 bytes
- Base/res/emoji/U+10CD0B.png                                                                                            |  Bin 15571 -> 0 bytes
- Base/res/emoji/U+10CD0C.png                                                                                            |  Bin 9167 -> 0 bytes
- Base/res/emoji/U+10CD0D.png                                                                                            |  Bin 8321 -> 0 bytes
- Base/res/emoji/U+10CD0E.png                                                                                            |  Bin 9120 -> 0 bytes
- Base/res/emoji/U+10CD0F.png                                                                                            |  Bin 9512 -> 0 bytes
- Base/res/emoji/U+10CD10.png                                                                                            |  Bin 18139 -> 0 bytes
- Base/res/emoji/U+10CD11.png                                                                                            |  Bin 7910 -> 0 bytes
- Base/res/emoji/U+10CD12.png                                                                                            |  Bin 10498 -> 0 bytes
- Base/res/emoji/U+10CD13.png                                                                                            |  Bin 193 -> 0 bytes
- Base/res/emoji/U+10CD14.png                                                                                            |  Bin 7939 -> 0 bytes
- Base/res/emoji/U+10CD15.png                                                                                            |  Bin 12114 -> 0 bytes
- Base/res/emoji/U+10CD16.png                                                                                            |  Bin 9083 -> 0 bytes
- Base/res/emoji/U+10CD17.png                                                                                            |  Bin 9207 -> 0 bytes
- Base/res/emoji/U+10CD18.png                                                                                            |  Bin 8258 -> 0 bytes
- Base/res/emoji/U+10CD19.png                                                                                            |  Bin 11772 -> 0 bytes
- Base/res/emoji/U+10CD1A.png                                                                                            |  Bin 9546 -> 0 bytes
- Base/res/emoji/U+10CD1B.png                                                                                            |  Bin 14412 -> 0 bytes
- Base/res/emoji/U+10CD1C.png                                                                                            |  Bin 7434 -> 0 bytes
- Base/res/emoji/U+10CD1D.png                                                                                            |  Bin 4864 -> 0 bytes
- Base/res/emoji/U+10CD1E.png                                                                                            |  Bin 8442 -> 0 bytes
- Base/res/emoji/U+10CD1F.png                                                                                            |  Bin 7486 -> 0 bytes
- Base/res/emoji/U+10CD20.png                                                                                            |  Bin 11345 -> 0 bytes
- Base/res/emoji/U+10CD21.png                                                                                            |  Bin 11482 -> 0 bytes
- Base/res/emoji/U+10CD22.png                                                                                            |  Bin 6488 -> 0 bytes
- Base/res/emoji/U+10CD23.png                                                                                            |  Bin 10548 -> 0 bytes
- Base/res/emoji/U+10CD24.png                                                                                            |  Bin 8675 -> 0 bytes
- Base/res/emoji/U+10CD25.png                                                                                            |  Bin 18545 -> 0 bytes
- Base/res/emoji/U+10CD26.png                                                                                            |  Bin 7602 -> 0 bytes
- Base/res/emoji/U+10CD60.png                                                                                            |  Bin 10903 -> 0 bytes
- Base/res/emoji/U+10CD61.png                                                                                            |  Bin 9710 -> 0 bytes
- Base/res/emoji/U+10CD62.png                                                                                            |  Bin 5367 -> 0 bytes
- Base/res/emoji/U+10CD63.png                                                                                            |  Bin 6470 -> 0 bytes
- Base/res/emoji/U+10CD64.png                                                                                            |  Bin 10275 -> 0 bytes
- Base/res/emoji/U+10CD65.png                                                                                            |  Bin 7595 -> 0 bytes
- Base/res/emoji/U+10CD66.png                                                                                            |  Bin 6525 -> 0 bytes
- Base/res/emoji/U+10CD67.png                                                                                            |  Bin 17747 -> 0 bytes
- Base/res/emoji/U+10CD68.png                                                                                            |  Bin 10024 -> 0 bytes
- Base/res/emoji/U+10CD69.png                                                                                            |  Bin 15819 -> 0 bytes
- Base/res/emoji/U+10CD6A.png                                                                                            |  Bin 29701 -> 0 bytes
- Base/res/emoji/U+10CD6B.png                                                                                            |  Bin 24557 -> 0 bytes
- Base/res/emoji/U+10CD90.png                                                                                            |  Bin 10066 -> 0 bytes
- Base/res/emoji/U+10CD91.png                                                                                            |  Bin 8881 -> 0 bytes
- Base/res/emoji/U+10CD92.png                                                                                            |  Bin 13792 -> 0 bytes
- Base/res/emoji/U+10CD93.png                                                                                            |  Bin 12233 -> 0 bytes
- Base/res/emoji/U+10CDB0.png                                                                                            |  Bin 9091 -> 0 bytes
- Base/res/emoji/U+10CDB1.png                                                                                            |  Bin 8076 -> 0 bytes
- Base/res/emoji/U+10CDD0.png                                                                                            |  Bin 7210 -> 0 bytes
- Base/res/emoji/U+10CDE0.png                                                                                            |  Bin 1402 -> 0 bytes
- Base/res/emoji/U+10CDE1.png                                                                                            |  Bin 1320 -> 0 bytes
- Base/res/emoji/U+10CDE2.png                                                                                            |  Bin 1392 -> 0 bytes
- Base/res/emoji/U+10CDE3.png                                                                                            |  Bin 1353 -> 0 bytes
- Base/res/emoji/U+10CDE4.png                                                                                            |  Bin 1412 -> 0 bytes
- Base/res/emoji/U+10CDE5.png                                                                                            |  Bin 1336 -> 0 bytes
- Base/res/emoji/U+1F004.png                                                                                             |  Bin 107 -> 0 bytes
- Base/res/emoji/U+1F0CF.png                                                                                             |  Bin 171 -> 0 bytes
- Base/res/emoji/U+1F170.png                                                                                             |  Bin 121 -> 0 bytes
- Base/res/emoji/U+1F171.png                                                                                             |  Bin 118 -> 0 bytes
- Base/res/emoji/U+1F17E.png                                                                                             |  Bin 118 -> 0 bytes
- Base/res/emoji/U+1F17F.png                                                                                             |  Bin 120 -> 0 bytes
- Base/res/emoji/U+1F18E.png                                                                                             |  Bin 123 -> 0 bytes
- Base/res/emoji/U+1F191.png                                                                                             |  Bin 117 -> 0 bytes
- Base/res/emoji/U+1F192.png                                                                                             |  Bin 139 -> 0 bytes
- Base/res/emoji/U+1F193.png                                                                                             |  Bin 140 -> 0 bytes
- Base/res/emoji/U+1F194.png                                                                                             |  Bin 118 -> 0 bytes
- Base/res/emoji/U+1F195.png                                                                                             |  Bin 138 -> 0 bytes
- Base/res/emoji/U+1F196.png                                                                                             |  Bin 125 -> 0 bytes
- Base/res/emoji/U+1F197.png                                                                                             |  Bin 127 -> 0 bytes
- Base/res/emoji/U+1F198.png                                                                                             |  Bin 126 -> 0 bytes
- Base/res/emoji/U+1F199.png                                                                                             |  Bin 126 -> 0 bytes
- Base/res/emoji/U+1F19A.png                                                                                             |  Bin 128 -> 0 bytes
- Base/res/emoji/U+1F1E6_U+1F1E8.png                                                                                     |  Bin 151 -> 0 bytes
- Base/res/emoji/U+1F1E6_U+1F1E9.png                                                                                     |  Bin 128 -> 0 bytes
- Base/res/emoji/U+1F1E6_U+1F1EA.png                                                                                     |  Bin 100 -> 0 bytes
- Base/res/emoji/U+1F1E6_U+1F1EB.png                                                                                     |  Bin 134 -> 0 bytes
- Base/res/emoji/U+1F1E6_U+1F1EC.png                                                                                     |  Bin 146 -> 0 bytes
- Base/res/emoji/U+1F1E6_U+1F1EE.png                                                                                     |  Bin 143 -> 0 bytes
- Base/res/emoji/U+1F1E6_U+1F1F1.png                                                                                     |  Bin 116 -> 0 bytes
- Base/res/emoji/U+1F1E6_U+1F1F2.png                                                                                     |  Bin 122 -> 0 bytes
- Base/res/emoji/U+1F1E6_U+1F1F4.png                                                                                     |  Bin 125 -> 0 bytes
- Base/res/emoji/U+1F1E6_U+1F1F6.png                                                                                     |  Bin 125 -> 0 bytes
- Base/res/emoji/U+1F1E6_U+1F1F7.png                                                                                     |  Bin 110 -> 0 bytes
- Base/res/emoji/U+1F1E6_U+1F1F8.png                                                                                     |  Bin 139 -> 0 bytes
- Base/res/emoji/U+1F1E6_U+1F1F9.png                                                                                     |  Bin 91 -> 0 bytes
- Base/res/emoji/U+1F1E6_U+1F1FA.png                                                                                     |  Bin 129 -> 0 bytes
- Base/res/emoji/U+1F1E6_U+1F1FC.png                                                                                     |  Bin 111 -> 0 bytes
- Base/res/emoji/U+1F1E6_U+1F1FD.png                                                                                     |  Bin 132 -> 0 bytes
- Base/res/emoji/U+1F1E6_U+1F1FF.png                                                                                     |  Bin 112 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1E6.png                                                                                     |  Bin 135 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1E7.png                                                                                     |  Bin 116 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1E9.png                                                                                     |  Bin 123 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1EA.png                                                                                     |  Bin 120 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1EB.png                                                                                     |  Bin 117 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1EC.png                                                                                     |  Bin 94 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1ED.png                                                                                     |  Bin 95 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1EE.png                                                                                     |  Bin 127 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1EF.png                                                                                     |  Bin 98 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1F1.png                                                                                     |  Bin 143 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1F2.png                                                                                     |  Bin 149 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1F3.png                                                                                     |  Bin 143 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1F4.png                                                                                     |  Bin 95 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1F6.png                                                                                     |  Bin 141 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1F7.png                                                                                     |  Bin 134 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1F8.png                                                                                     |  Bin 123 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1F9.png                                                                                     |  Bin 135 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1FB.png                                                                                     |  Bin 131 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1FC.png                                                                                     |  Bin 107 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1FE.png                                                                                     |  Bin 106 -> 0 bytes
- Base/res/emoji/U+1F1E7_U+1F1FF.png                                                                                     |  Bin 139 -> 0 bytes
- Base/res/emoji/U+1F1E8_U+1F1E6.png                                                                                     |  Bin 124 -> 0 bytes
- Base/res/emoji/U+1F1E8_U+1F1E8.png                                                                                     |  Bin 138 -> 0 bytes
- Base/res/emoji/U+1F1E8_U+1F1E9.png                                                                                     |  Bin 147 -> 0 bytes
- Base/res/emoji/U+1F1E8_U+1F1EB.png                                                                                     |  Bin 141 -> 0 bytes
- Base/res/emoji/U+1F1E8_U+1F1EC.png                                                                                     |  Bin 114 -> 0 bytes
- Base/res/emoji/U+1F1E8_U+1F1ED.png                                                                                     |  Bin 103 -> 0 bytes
- Base/res/emoji/U+1F1E8_U+1F1EE.png                                                                                     |  Bin 94 -> 0 bytes
- Base/res/emoji/U+1F1E8_U+1F1F0.png                                                                                     |  Bin 139 -> 0 bytes
- Base/res/emoji/U+1F1E8_U+1F1F1.png                                                                                     |  Bin 115 -> 0 bytes
- Base/res/emoji/U+1F1E8_U+1F1F2.png                                                                                     |  Bin 114 -> 0 bytes
- Base/res/emoji/U+1F1E8_U+1F1F3.png                                                                                     |  Bin 110 -> 0 bytes
- Base/res/emoji/U+1F1E8_U+1F1F4.png                                                                                     |  Bin 97 -> 0 bytes
- Base/res/emoji/U+1F1E8_U+1F1F5.png                                                                                     |  Bin 94 -> 0 bytes
- Base/res/emoji/U+1F1E8_U+1F1F6.png                                                                                     |  Bin 116 -> 0 bytes
- Base/res/emoji/U+1F1E8_U+1F1F7.png                                                                                     |  Bin 98 -> 0 bytes
- Base/res/emoji/U+1F1E8_U+1F1FA.png                                                                                     |  Bin 110 -> 0 bytes
- Base/res/emoji/U+1F1E8_U+1F1FB.png                                                                                     |  Bin 131 -> 0 bytes
  Base/res/emoji/U+1F1E8_U+1F1FC.png                                                                                     |  Bin 106 -> 0 bytes
  Base/res/emoji/U+1F1E8_U+1F1FD.png                                                                                     |  Bin 146 -> 0 bytes
  Base/res/emoji/U+1F1E8_U+1F1FE.png                                                                                     |  Bin 134 -> 0 bytes
@@ -8831,3 +7911,1126 @@ openssl requires Linux kernel headers from the system package manager.
 -- Configuring x64-linux-dbg
 -- Configuring x64-linux-rel
 -- Building x64-linux-dbg
+-- Installing x64-linux-dbg
+-- Building x64-linux-rel
+-- Installing x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/openssl_x64-linux/lib/pkgconfig/libcrypto.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/openssl_x64-linux/lib/pkgconfig/libssl.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/openssl_x64-linux/lib/pkgconfig/openssl.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/openssl_x64-linux/debug/lib/pkgconfig/libcrypto.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/openssl_x64-linux/debug/lib/pkgconfig/libssl.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/openssl_x64-linux/debug/lib/pkgconfig/openssl.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/openssl_x64-linux/share/openssl/usage
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/openssl_x64-linux/share/openssl/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 1.3 s.
+Elapsed time to handle openssl:x64-linux: 55 s
+openssl:x64-linux package ABI: feed1e02d689c4e941b9110fe5967b2553472b0d99363eec567b0930e47210ec
+Installing 51/95 nghttp2:x64-linux@1.62.1...
+Building nghttp2:x64-linux@1.62.1...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/nghttp2/c7fd11835e7bcb267322ba09d92db75819881dd7: info: installing overlay port from here
+-- Downloading https://github.com/nghttp2/nghttp2/archive/v1.62.1.tar.gz -> nghttp2-nghttp2-v1.62.1.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/nghttp2-nghttp2-v1.62.1.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/nghttp2/src/v1.62.1-acb10c4f39.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/nghttp2_x64-linux/lib/pkgconfig/libnghttp2.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/nghttp2_x64-linux/debug/lib/pkgconfig/libnghttp2.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/nghttp2_x64-linux/share/nghttp2/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 46.5 ms.
+Elapsed time to handle nghttp2:x64-linux: 8.9 s
+nghttp2:x64-linux package ABI: 3fbae3218389be8b83562733198d1ba6a2d287cf6eeff38e98889cad99233bb0
+Installing 52/95 zlib:x64-linux@1.3.1...
+Building zlib:x64-linux@1.3.1...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/zlib/3f05e04b9aededb96786a911a16193cdb711f0c9: info: installing overlay port from here
+-- Using cached madler-zlib-v1.3.1.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/zlib/src/v1.3.1-2e5db616bf.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/madler-zlib-v1.3.1.tar.gz
+-- Applying patch 0001-Prevent-invalid-inclusions-when-HAVE_-is-set-to-0.patch
+-- Applying patch 0002-build-static-or-shared-not-both.patch
+-- Applying patch 0003-android-and-mingw-fixes.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/zlib/src/v1.3.1-2e5db616bf.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/zlib_x64-linux/share/zlib/vcpkg-cmake-wrapper.cmake
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/zlib_x64-linux/lib/pkgconfig/zlib.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/zlib_x64-linux/debug/lib/pkgconfig/zlib.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/zlib_x64-linux/share/zlib/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 20.8 ms.
+Elapsed time to handle zlib:x64-linux: 3.1 s
+zlib:x64-linux package ABI: dfed5c49ba304a0145c04c0df150977910fab8acfb6371b75f2e3c72dcfd0f3f
+Installing 53/95 brotli:x64-linux@1.1.0#1...
+Building brotli:x64-linux@1.1.0#1...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/brotli/4e5b5ae1ad26c80535c893cc0307121f0398549e: info: installing overlay port from here
+-- Using cached google-brotli-v1.1.0.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/brotli/src/v1.1.0-958bece74c.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/google-brotli-v1.1.0.tar.gz
+-- Applying patch install.patch
+-- Applying patch fix-arm-uwp.patch
+-- Applying patch pkgconfig.patch
+-- Applying patch emscripten.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/brotli/src/v1.1.0-958bece74c.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/brotli_x64-linux/lib/pkgconfig/libbrotlicommon.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/brotli_x64-linux/lib/pkgconfig/libbrotlidec.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/brotli_x64-linux/lib/pkgconfig/libbrotlienc.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/brotli_x64-linux/debug/lib/pkgconfig/libbrotlicommon.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/brotli_x64-linux/debug/lib/pkgconfig/libbrotlidec.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/brotli_x64-linux/debug/lib/pkgconfig/libbrotlienc.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/brotli_x64-linux/share/brotli/usage
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/brotli_x64-linux/share/brotli/copyright
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/brotli_x64-linux/tools/brotli/brotli' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Performing post-build validation
+Stored binaries in 1 destinations in 159 ms.
+Elapsed time to handle brotli:x64-linux: 7.1 s
+brotli:x64-linux package ABI: 7872f63dc755c1f55f32d69407d269bc7e2814a4ddabcab0ddf467589a3b702d
+Installing 54/95 curl[brotli,core,http2,non-http,openssl,ssl]:x64-linux@8.10.1...
+Building curl[brotli,core,http2,non-http,openssl,ssl]:x64-linux@8.10.1...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/curl/9fa54a801b36fad7852cd4174d00fd3e5675abdb: info: installing overlay port from here
+-- Downloading https://github.com/curl/curl/archive/curl-8_10_1.tar.gz -> curl-curl-curl-8_10_1.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/curl-curl-curl-8_10_1.tar.gz
+-- Applying patch 0005_remove_imp_suffix.patch
+-- Applying patch 0020-fix-pc-file.patch
+-- Applying patch 0022-deduplicate-libs.patch
+-- Applying patch export-components.patch
+-- Applying patch dependencies.patch
+-- Applying patch cmake-config.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/curl/src/url-8_10_1-8b052efba7.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/curl_x64-linux/lib/pkgconfig/libcurl.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/curl_x64-linux/debug/lib/pkgconfig/libcurl.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/curl_x64-linux/share/curl/vcpkg-cmake-wrapper.cmake
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/curl_x64-linux/share/curl/usage
+-- Performing post-build validation
+Stored binaries in 1 destinations in 319 ms.
+Elapsed time to handle curl:x64-linux: 25 s
+curl:x64-linux package ABI: aa34e7e69591785c3e53f27486788264690f3cfa9511bc8d91f7e07abbf9553c
+Installing 55/95 vcpkg-tool-meson:x64-linux@1.5.2...
+Building vcpkg-tool-meson:x64-linux@1.5.2...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vcpkg-tool-meson/43ebfc9a69d8e47fdfbe68b6f79a02d2b5f50e6e: info: installing overlay port from here
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-tool-meson_x64-linux/share/vcpkg-tool-meson/copyright
+-- Downloading https://github.com/mesonbuild/meson/archive/1.5.2.tar.gz -> meson-1.5.2.tar.gz...
+-- Applying patch /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-tool-meson_x64-linux/share/vcpkg-tool-meson/meson-intl.patch
+-- Applying patch /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-tool-meson_x64-linux/share/vcpkg-tool-meson/adjust-python-dep.patch
+-- Applying patch /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-tool-meson_x64-linux/share/vcpkg-tool-meson/adjust-args.patch
+-- Applying patch /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-tool-meson_x64-linux/share/vcpkg-tool-meson/remove-freebsd-pcfile-specialization.patch
+-- Found Python version '3.10.12 at /usr/bin/python3'
+-- Using meson: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/tools/meson-1.5.2-dd4692/meson.py
+-- Performing post-build validation
+Stored binaries in 1 destinations in 2.35 ms.
+Elapsed time to handle vcpkg-tool-meson:x64-linux: 1.2 s
+vcpkg-tool-meson:x64-linux package ABI: 9b45072a5d1ee628cfe15c5497c8c4543d371d261cc849759f412604941ae3e9
+Installing 56/95 pthreads:x64-linux@3.0.0#14...
+Building pthreads:x64-linux@3.0.0#14...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/pthreads/2e0a6df2800d3677b941dc6504f083965b7886d9: info: installing overlay port from here
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Stored binaries in 1 destinations in 1.65 ms.
+Elapsed time to handle pthreads:x64-linux: 13 ms
+pthreads:x64-linux package ABI: a28e2e10147b743f9fe9b11f288a79f968edd37e06a43e8c9280e95d0408036e
+Installing 57/95 pthread:x64-linux@3.0.0#2...
+Building pthread:x64-linux@3.0.0#2...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/pthread/e32a8cb12153277234e7c7e04322bdf90580659a: info: installing overlay port from here
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Stored binaries in 1 destinations in 1.58 ms.
+Elapsed time to handle pthread:x64-linux: 12.1 ms
+pthread:x64-linux package ABI: efba86dc62f60ff3326ea686aa108dde1235f896e4f2ce80fc60919a0f4593d4
+Installing 58/95 libuuid:x64-linux@1.0.3#14...
+Building libuuid:x64-linux@1.0.3#14...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libuuid/09be6774f518692bc418aa03623cc9dbc19e6516: info: installing overlay port from here
+-- Using cached libuuid-1.0.3.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libuuid/src/libuuid-1-f5e8f5589c.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/libuuid-1.0.3.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libuuid/src/libuuid-1-f5e8f5589c.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libuuid_x64-linux/lib/pkgconfig/uuid.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libuuid_x64-linux/debug/lib/pkgconfig/uuid.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libuuid_x64-linux/lib/pkgconfig/uuid.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libuuid_x64-linux/debug/lib/pkgconfig/uuid.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libuuid_x64-linux/share/libuuid/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 4.23 ms.
+Elapsed time to handle libuuid:x64-linux: 2.2 s
+libuuid:x64-linux package ABI: 395671503dc6fd1961e44569078170ee91e1d9f2694af99d213e69717e5aa355
+Installing 59/95 libiconv:x64-linux@1.17#4...
+Building libiconv:x64-linux@1.17#4...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libiconv/6549f7452c383df31d471692b339f985d0000a88: info: installing overlay port from here
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Stored binaries in 1 destinations in 1.57 ms.
+Elapsed time to handle libiconv:x64-linux: 12.8 ms
+libiconv:x64-linux package ABI: 4d1a2a0275f8b1cd93dd7bb31b745e53d9ab0525e20099c40daf54617f7af67c
+Installing 60/95 gperf:x64-linux@3.1#6...
+Building gperf:x64-linux@3.1#6...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/gperf/590e19515bff5b0abc6d9f73ba20a19a71555a32: info: installing overlay port from here
+-- Using cached gperf-3.1.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/gperf/src/gperf-3-7fd634e44a.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/gperf-3.1.tar.gz
+-- Applying patch remove_register_keyword_cpp17.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/gperf/src/gperf-3-7fd634e44a.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/gperf_x64-linux/share/gperf/copyright
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/gperf_x64-linux/tools/gperf/gperf' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Performing post-build validation
+Stored binaries in 1 destinations in 6.85 ms.
+Elapsed time to handle gperf:x64-linux: 4.2 s
+gperf:x64-linux package ABI: fb85d9afec35d36c0b729dbf2c08a95299a5f8c198a80b5d44916041a0801cbb
+Installing 61/95 gettext-libintl:x64-linux@0.22.5#2...
+Building gettext-libintl:x64-linux@0.22.5#2...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/gettext-libintl/f41e983c85004eb6ee8d290ecb2465832fce8c00: info: installing overlay port from here
+-- Configuring x64-linux
+-- libintl header: /usr/include/libintl.h
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Stored binaries in 1 destinations in 1.59 ms.
+Elapsed time to handle gettext-libintl:x64-linux: 4.7 s
+gettext-libintl:x64-linux package ABI: bc36ccb967e0ae3d2cd101bbb52e05209e26be7738b527cf36b60da64da99f04
+Installing 62/95 gettext:x64-linux@0.22.5#1...
+Building gettext:x64-linux@0.22.5#1...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/gettext/1c1122632dae7ab9078655ee52e41c415ee4cfb4: info: installing overlay port from here
+-- Using cached gettext-0.22.5.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/gettext/src/gettext-0-60e763a2c8.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/gettext-0.22.5.tar.gz
+-- Applying patch assume-modern-darwin.patch
+-- Applying patch uwp.patch
+-- Applying patch rel_path.patch
+-- Applying patch subdirs.patch
+-- Applying patch parallel-gettext-tools.patch
+-- Applying patch config-step-order.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/gettext/src/gettext-0-60e763a2c8.clean
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/gettext_x64-linux/tools/gettext/bin/autopoint
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/gettext_x64-linux/share/gettext/gettext/archive.dir.tar.gz
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/gettext_x64-linux/share/gettext/aclocal/build-to-host.m4
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/gettext_x64-linux/share/gettext/aclocal/gettext.m4
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/gettext_x64-linux/share/gettext/aclocal/iconv.m4
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/gettext_x64-linux/share/gettext/aclocal/intlmacosx.m4
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/gettext_x64-linux/share/gettext/aclocal/nls.m4
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/gettext_x64-linux/share/gettext/aclocal/po.m4
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/gettext_x64-linux/share/gettext/aclocal/progtest.m4
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/gettext_x64-linux/share/gettext/aclocal/host-cpu-c-abi.m4
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/gettext_x64-linux/share/gettext/aclocal/lib-ld.m4
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/gettext_x64-linux/share/gettext/aclocal/lib-link.m4
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/gettext_x64-linux/share/gettext/aclocal/lib-prefix.m4
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Stored binaries in 1 destinations in 135 ms.
+Elapsed time to handle gettext:x64-linux: 1.8 s
+gettext:x64-linux package ABI: 22623140d41504330a68ef5f3679ddd8ea49aae27e3f3116c5ce001920e7c9ac
+Installing 63/95 getopt:x64-linux@0#3...
+Building getopt:x64-linux@0#3...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/getopt/ba541c1ce4012fae6dfdf34021b03d7253235b24: info: installing overlay port from here
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Stored binaries in 1 destinations in 1.54 ms.
+Elapsed time to handle getopt:x64-linux: 13.3 ms
+getopt:x64-linux package ABI: 5f5c7e89f0675769032e06f166f0055ec14568f6a9d28ad220718f70fb5bc5bc
+Installing 64/95 libpng[apng,core]:x64-linux@1.6.43#1...
+Building libpng[apng,core]:x64-linux@1.6.43#1...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libpng/1b0781214ef5a3497d0e7db2c0ed7f7fae74248b: info: installing overlay port from here
+-- Using cached libpng-1.6.43-apng.patch.gz.
+-- Using cached glennrp-libpng-v1.6.43.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libpng/src/v1.6.43-549077381e.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/glennrp-libpng-v1.6.43.tar.gz
+-- Applying patch /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libpng/src/libpng-1.6.43-apng.patch
+-- Applying patch cmake.patch
+-- Applying patch fix-export-targets.patch
+-- Applying patch libm.patch
+-- Applying patch pkgconfig.patch
+-- Applying patch fix-msa-support-for-mips.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libpng/src/v1.6.43-549077381e.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libpng_x64-linux/share/png/vcpkg-cmake-wrapper.cmake
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libpng_x64-linux/lib/pkgconfig/libpng16.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libpng_x64-linux/debug/lib/pkgconfig/libpng16.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libpng_x64-linux/debug/lib/pkgconfig/libpng.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libpng_x64-linux/lib/pkgconfig/libpng.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libpng_x64-linux/share/libpng/usage
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libpng_x64-linux/share/libpng/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 58.2 ms.
+Elapsed time to handle libpng:x64-linux: 5 s
+libpng:x64-linux package ABI: d1e7d6cb18d1bd6ccbd4e470432bc0a5c2de0dd55d398e2fe61be75bc8f59da7
+Installing 65/95 bzip2[core,tool]:x64-linux@1.0.8#6...
+Building bzip2[core,tool]:x64-linux@1.0.8#6...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/bzip2/2d029da682847c5ebdc54e4dbea001331a02207e: info: installing overlay port from here
+-- Using cached bzip2-1.0.8.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/bzip2/src/bzip2-1-336d4794a3.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/bzip2-1.0.8.tar.gz
+-- Applying patch fix-import-export-macros.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/bzip2/src/bzip2-1-336d4794a3.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/bzip2_x64-linux/lib/pkgconfig/bzip2.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/bzip2_x64-linux/debug/lib/pkgconfig/bzip2.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/bzip2_x64-linux/share/bzip2/copyright
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/bzip2_x64-linux/tools/bzip2/bzip2' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/bzip2_x64-linux/tools/bzip2/bzip2recover' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Performing post-build validation
+Stored binaries in 1 destinations in 21.2 ms.
+Elapsed time to handle bzip2:x64-linux: 2.6 s
+bzip2:x64-linux package ABI: 54eff921816e33dd819882569c242ee2a2572a32d49f85999e1e427c17c901c7
+Installing 66/95 freetype[brotli,bzip2,core,png,zlib]:x64-linux@2.13.3...
+Building freetype[brotli,bzip2,core,png,zlib]:x64-linux@2.13.3...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/freetype/8a2c633dcc14eaabdb31cf4637242f4e3c2f3fa2: info: installing overlay port from here
+-- Downloading https://gitlab.freedesktop.org//freetype/freetype/-/archive/VER-2-13-3/freetype-VER-2-13-3.tar.gz -> freetype-freetype-VER-2-13-3.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/freetype-freetype-VER-2-13-3.tar.gz
+-- Applying patch 0003-Fix-UWP.patch
+-- Applying patch brotli-static.patch
+-- Applying patch bzip2.patch
+-- Applying patch fix-exports.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/freetype/src/VER-2-13-3-8b423a038b.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/freetype_x64-linux/lib/pkgconfig/freetype2.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/freetype_x64-linux/debug/lib/pkgconfig/freetype2.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/freetype_x64-linux/share/freetype/usage
+-- Performing post-build validation
+Stored binaries in 1 destinations in 203 ms.
+Elapsed time to handle freetype:x64-linux: 7.8 s
+freetype:x64-linux package ABI: e58b8f4f3af4939331e281477839fad30a8f32585363537cb5486348de87064c
+Installing 67/95 expat:x64-linux@2.6.3...
+Building expat:x64-linux@2.6.3...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/expat/9649f61e2f302f608dfb98d6f366e0a08e413487: info: installing overlay port from here
+-- Downloading https://github.com/libexpat/libexpat/archive/R_2_6_3.tar.gz -> libexpat-libexpat-R_2_6_3.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/libexpat-libexpat-R_2_6_3.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/expat/src/R_2_6_3-d07a3503b4.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/expat_x64-linux/lib/pkgconfig/expat.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/expat_x64-linux/debug/lib/pkgconfig/expat.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/expat_x64-linux/share/expat/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 41.5 ms.
+Elapsed time to handle expat:x64-linux: 8.3 s
+expat:x64-linux package ABI: a748258d4020e3be39a5e326ce2ea5f6dcc50b09e05dd9e32e05b8f60deaa07c
+Installing 68/95 dirent:x64-linux@1.24...
+Building dirent:x64-linux@1.24...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/dirent/bcace8750d2b6080c63877eed432f8b862501012: info: installing overlay port from here
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Stored binaries in 1 destinations in 1.84 ms.
+Elapsed time to handle dirent:x64-linux: 13.7 ms
+dirent:x64-linux package ABI: a0468cb8d5648bd0f922222e1a37b2e3edb9750ecc0f10f75f12de8fb0434132
+Installing 69/95 fontconfig:x64-linux@2.14.2#1...
+Building fontconfig:x64-linux@2.14.2#1...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/fontconfig/de73339d579963e68fed652ed2e206b307a0c03f: info: installing overlay port from here
+-- Found Python version '3.10.12 at /usr/bin/python3'
+-- Using meson: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/tools/meson-1.5.2-dd4692/meson.py
+-- Using cached fontconfig-fontconfig-2.14.2.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/fontconfig/src/2.14.2-7f52ee670b.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/fontconfig-fontconfig-2.14.2.tar.gz
+-- Applying patch no-etc-symlinks.patch
+-- Applying patch libgetopt.patch
+-- Applying patch fix-preprocessor-clang-cl.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/fontconfig/src/2.14.2-7f52ee670b.clean
+-- Configuring x64-linux-dbg
+-- Getting CMake variables for x64-linux
+-- Configuring x64-linux-dbg done
+-- Configuring x64-linux-rel
+-- Configuring x64-linux-rel done
+-- Package x64-linux-dbg
+-- Package x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/fontconfig_x64-linux/lib/pkgconfig/fontconfig.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/fontconfig_x64-linux/debug/lib/pkgconfig/fontconfig.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/fontconfig_x64-linux/share/fontconfig/usage
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/fontconfig_x64-linux/share/fontconfig/copyright
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/fontconfig_x64-linux/tools/fontconfig/fc-cache' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/fontconfig_x64-linux/tools/fontconfig/fc-cat' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/fontconfig_x64-linux/tools/fontconfig/fc-conflist' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/fontconfig_x64-linux/tools/fontconfig/fc-list' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/fontconfig_x64-linux/tools/fontconfig/fc-match' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/fontconfig_x64-linux/tools/fontconfig/fc-pattern' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/fontconfig_x64-linux/tools/fontconfig/fc-query' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/fontconfig_x64-linux/tools/fontconfig/fc-scan' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/fontconfig_x64-linux/tools/fontconfig/fc-validate' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Performing post-build validation
+Stored binaries in 1 destinations in 700 ms.
+Elapsed time to handle fontconfig:x64-linux: 19 s
+fontconfig:x64-linux package ABI: b1109dce42df049c51ed736c5c0e1fd0bfb433c1846532997bf712e7f4ffde52
+Installing 70/95 harfbuzz[core,freetype]:x64-linux@10.0.1...
+Building harfbuzz[core,freetype]:x64-linux@10.0.1...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/harfbuzz/816a8378a801aa2b0d2cdf2e601b9ee3cfe31dab: info: installing overlay port from here
+-- Found Python version '3.10.12 at /usr/bin/python3'
+-- Using meson: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/tools/meson-1.5.2-dd4692/meson.py
+-- Downloading https://github.com/harfbuzz/harfbuzz/archive/10.0.1.tar.gz -> harfbuzz-harfbuzz-10.0.1.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/harfbuzz-harfbuzz-10.0.1.tar.gz
+-- Applying patch fix-win32-build.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/harfbuzz/src/10.0.1-0d60e4f2d4.clean
+-- Configuring x64-linux-dbg
+-- Getting CMake variables for x64-linux
+-- Configuring x64-linux-dbg done
+-- Configuring x64-linux-rel
+-- Configuring x64-linux-rel done
+-- Package x64-linux-dbg
+-- Package x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/harfbuzz_x64-linux/lib/pkgconfig/harfbuzz-subset.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/harfbuzz_x64-linux/lib/pkgconfig/harfbuzz.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/harfbuzz_x64-linux/debug/lib/pkgconfig/harfbuzz-subset.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/harfbuzz_x64-linux/debug/lib/pkgconfig/harfbuzz.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/harfbuzz_x64-linux/share/harfbuzz/copyright
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/harfbuzz_x64-linux/share/harfbuzz/usage
+-- Performing post-build validation
+Stored binaries in 1 destinations in 1.9 s.
+Elapsed time to handle harfbuzz:x64-linux: 1.5 min
+harfbuzz:x64-linux package ABI: ed01bc12d7c815479a07905476d57a9e3d1ed8a495d5a2880e9507eab1097b51
+Installing 71/95 icu[core,tools]:x64-linux@74.2#2...
+Building icu[core,tools]:x64-linux@74.2#2...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/icu/a36199768fe1f9676b61d5d28ed9ac36c9f041c0: info: installing overlay port from here
+CMake Warning at buildtrees/versioning_/versions/icu/a36199768fe1f9676b61d5d28ed9ac36c9f041c0/portfile.cmake:2 (message):
+  icu currently requires the following programs from the system package
+  manager:
+
+      autoconf automake autoconf-archive
+
+  On Debian and Ubuntu derivatives:
+
+      sudo apt-get install autoconf automake autoconf-archive
+
+  On recent Red Hat and Fedora derivatives:
+
+      sudo dnf install autoconf automake autoconf-archive
+
+  On Arch Linux and derivatives:
+
+      sudo pacman -S autoconf automake autoconf-archive
+
+  On Alpine:
+
+      apk add autoconf automake autoconf-archive
+
+  On macOS:
+
+      brew install autoconf automake autoconf-archive
+
+Call Stack (most recent call first):
+  scripts/ports.cmake:192 (include)
+
+
+-- Using cached icu4c-74_2-src.tgz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/icu/src/c-74_2-src-83138cd994.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/icu4c-74_2-src.tgz
+-- Applying patch disable-escapestr-tool.patch
+-- Applying patch remove-MD-from-configure.patch
+-- Applying patch fix_parallel_build_on_windows.patch
+-- Applying patch fix-extra.patch
+-- Applying patch mingw-dll-install.patch
+-- Applying patch disable-static-prefix.patch
+-- Applying patch fix-win-build.patch
+-- Applying patch vcpkg-cross-data.patch
+-- Applying patch darwin-rpath.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/icu/src/c-74_2-src-83138cd994.clean
+-- Getting CMake variables for x64-linux-dbg
+-- Getting CMake variables for x64-linux-rel
+-- Generating configure for x64-linux
+-- Finished generating configure for x64-linux
+-- Configuring x64-linux-dbg
+-- Configuring x64-linux-rel
+-- Building x64-linux-dbg
+-- Installing x64-linux-dbg
+-- Building x64-linux-rel
+-- Installing x64-linux-rel
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/tools/icu/config/icucross.inc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/tools/icu/config/icucross.mk
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/lib/pkgconfig/icu-i18n.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/lib/pkgconfig/icu-io.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/lib/pkgconfig/icu-uc.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/debug/lib/pkgconfig/icu-i18n.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/debug/lib/pkgconfig/icu-io.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/debug/lib/pkgconfig/icu-uc.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/share/icu/vcpkg-cmake-wrapper.cmake
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/share/icu/copyright
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/tools/icu/bin/derb' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/tools/icu/bin/genbrk' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/tools/icu/bin/genccode' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/tools/icu/bin/gencfu' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/tools/icu/bin/gencmn' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/tools/icu/bin/gencnval' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/tools/icu/bin/gendict' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/tools/icu/bin/gennorm2' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/tools/icu/bin/genrb' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/tools/icu/bin/gensprep' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/tools/icu/bin/icuexportdata' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/tools/icu/bin/icuinfo' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/tools/icu/bin/icupkg' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/tools/icu/bin/makeconv' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/tools/icu/bin/pkgdata' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/icu_x64-linux/tools/icu/bin/uconv' (From '' -> To '$ORIGIN:$ORIGIN/../../../lib')
+-- Performing post-build validation
+Stored binaries in 1 destinations in 4.8 s.
+Elapsed time to handle icu:x64-linux: 1.6 min
+icu:x64-linux package ABI: 45a010ff0153205076e57a7c87c728f9fe36db9251ab7c5e28261051fbb55e60
+Installing 72/95 dav1d:x64-linux@1.4.3...
+Building dav1d:x64-linux@1.4.3...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/dav1d/0756d92a7a3a3a98295f8d22dd2f1e0ec6e76e4f: info: installing overlay port from here
+-- Found Python version '3.10.12 at /usr/bin/python3'
+-- Using meson: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/tools/meson-1.5.2-dd4692/meson.py
+-- Downloading https://code.videolan.org/videolan/dav1d/-/archive/1.4.3/dav1d-1.4.3.tar.gz -> videolan-dav1d-1.4.3.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/videolan-dav1d-1.4.3.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/dav1d/src/1.4.3-a55a402951.clean
+-- Configuring x64-linux-dbg
+-- Getting CMake variables for x64-linux
+-- Configuring x64-linux-dbg done
+-- Configuring x64-linux-rel
+-- Configuring x64-linux-rel done
+-- Package x64-linux-dbg
+-- Package x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/dav1d_x64-linux/lib/pkgconfig/dav1d.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/dav1d_x64-linux/debug/lib/pkgconfig/dav1d.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/dav1d_x64-linux/share/dav1d/usage
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/dav1d_x64-linux/share/dav1d/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 236 ms.
+Elapsed time to handle dav1d:x64-linux: 38 s
+dav1d:x64-linux package ABI: 7713b6fb150fbf132ee90f92197877f884584d621694f056682524d17ecf674d
+Installing 73/95 libjpeg-turbo:x64-linux@3.0.2...
+Building libjpeg-turbo:x64-linux@3.0.2...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libjpeg-turbo/6d061c71a48ca2abff5cf471f77ef14d7222aa52: info: installing overlay port from here
+-- Using cached libjpeg-turbo-libjpeg-turbo-3.0.2.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libjpeg-turbo/src/3.0.2-c04fb0ca25.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/libjpeg-turbo-libjpeg-turbo-3.0.2.tar.gz
+-- Applying patch add-options-for-exes-docs-headers.patch
+-- Applying patch workaround_cmake_system_processor.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libjpeg-turbo/src/3.0.2-c04fb0ca25.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjpeg-turbo_x64-linux/lib/pkgconfig/libjpeg.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjpeg-turbo_x64-linux/lib/pkgconfig/libturbojpeg.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjpeg-turbo_x64-linux/debug/lib/pkgconfig/libjpeg.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjpeg-turbo_x64-linux/debug/lib/pkgconfig/libturbojpeg.pc
+CMake Warning at scripts/cmake/vcpkg_replace_string.cmake:17 (message):
+  vcpkg_replace_string made no changes.
+Call Stack (most recent call first):
+  buildtrees/versioning_/versions/libjpeg-turbo/6d061c71a48ca2abff5cf471f77ef14d7222aa52/portfile.cmake:78 (vcpkg_replace_string)
+  scripts/ports.cmake:192 (include)
+
+
+CMake Warning at scripts/cmake/vcpkg_replace_string.cmake:17 (message):
+  vcpkg_replace_string made no changes.
+Call Stack (most recent call first):
+  buildtrees/versioning_/versions/libjpeg-turbo/6d061c71a48ca2abff5cf471f77ef14d7222aa52/portfile.cmake:80 (vcpkg_replace_string)
+  scripts/ports.cmake:192 (include)
+
+
+CMake Warning at scripts/cmake/vcpkg_replace_string.cmake:17 (message):
+  vcpkg_replace_string made no changes.
+Call Stack (most recent call first):
+  buildtrees/versioning_/versions/libjpeg-turbo/6d061c71a48ca2abff5cf471f77ef14d7222aa52/portfile.cmake:84 (vcpkg_replace_string)
+  scripts/ports.cmake:192 (include)
+
+
+CMake Warning at scripts/cmake/vcpkg_replace_string.cmake:17 (message):
+  vcpkg_replace_string made no changes.
+Call Stack (most recent call first):
+  buildtrees/versioning_/versions/libjpeg-turbo/6d061c71a48ca2abff5cf471f77ef14d7222aa52/portfile.cmake:86 (vcpkg_replace_string)
+  scripts/ports.cmake:192 (include)
+
+
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjpeg-turbo_x64-linux/share/libjpeg-turbo/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 307 ms.
+Elapsed time to handle libjpeg-turbo:x64-linux: 10 s
+libjpeg-turbo:x64-linux package ABI: baeffbf9b3fd8066c9aa8b517cb845200e6d80c716590390a3e6503e250e7601
+Installing 74/95 libyuv:x64-linux@1896#1...
+Building libyuv:x64-linux@1896#1...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libyuv/cb6412fd44057b52849ebf8807a0c339cb525104: info: installing overlay port from here
+-- Fetching https://chromium.googlesource.com/libyuv/libyuv a37e6bc81b52d39cdcfd0f1428f5d6c2b2bc9861...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/libyuv-a37e6bc81b52d39cdcfd0f1428f5d6c2b2bc9861.tar.gz
+-- Applying patch cmake.diff
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libyuv/src/c2b2bc9861-bfd2f3783f.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Getting CMake variables for x64-linux
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libyuv_x64-linux/share/libyuv/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 75.3 ms.
+Elapsed time to handle libyuv:x64-linux: 8.7 s
+libyuv:x64-linux package ABI: f3527348c50c67f4c5b695ce1342577c45cf382e2165755d068b008bd858d0b4
+Installing 75/95 libavif[core,dav1d]:x64-linux@1.0.4#1...
+Building libavif[core,dav1d]:x64-linux@1.0.4#1...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libavif/5464a231b3a83e3d8a076b339d93c5247d04b36b: info: installing overlay port from here
+-- Using cached AOMediaCodec-libavif-v1.0.4.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libavif/src/v1.0.4-d3bdd0bed1.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/AOMediaCodec-libavif-v1.0.4.tar.gz
+-- Applying patch disable-source-utf8.patch
+-- Applying patch find-dependency.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libavif/src/v1.0.4-d3bdd0bed1.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libavif_x64-linux/lib/pkgconfig/libavif.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libavif_x64-linux/debug/lib/pkgconfig/libavif.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libavif_x64-linux/share/libavif/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 35.6 ms.
+Elapsed time to handle libavif:x64-linux: 7.8 s
+libavif:x64-linux package ABI: a905b24d58e1d79a4ed70be38c984957b9dad727356c1cce4e53d2156ba099a1
+Installing 76/95 lcms:x64-linux@2.14...
+Building lcms:x64-linux@2.14...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/lcms/d5fb3c46f4b60d45e67444591a83d80c08100871: info: installing overlay port from here
+-- Using cached mm2-Little-CMS-lcms2.14.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/lcms/src/lcms2.14-d3eca6a91b.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/mm2-Little-CMS-lcms2.14.tar.gz
+-- Applying patch remove_library_directive.patch
+-- Applying patch remove-register.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/lcms/src/lcms2.14-d3eca6a91b.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/lcms_x64-linux/lib/pkgconfig/lcms2.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/lcms_x64-linux/debug/lib/pkgconfig/lcms2.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/lcms_x64-linux/share/lcms/copyright
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/lcms_x64-linux/share/lcms/usage
+-- Performing post-build validation
+Stored binaries in 1 destinations in 73.5 ms.
+Elapsed time to handle lcms:x64-linux: 4.6 s
+lcms:x64-linux package ABI: ba5552db579a8a64bd0d661f5bbd30f1b8398f14918518198e56860a1f4f647e
+Installing 77/95 highway:x64-linux@1.2.0...
+Building highway:x64-linux@1.2.0...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/highway/6084fa0969d208dd78997f44e8b4b406aa174345: info: installing overlay port from here
+-- Downloading https://github.com/google/highway/archive/1.2.0.tar.gz -> google-highway-1.2.0.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/google-highway-1.2.0.tar.gz
+-- Applying patch fix_dll_export.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/highway/src/1.2.0-9e5d3e7297.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/highway_x64-linux/lib/pkgconfig/libhwy.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/highway_x64-linux/debug/lib/pkgconfig/libhwy.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/highway_x64-linux/share/highway/copyright
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/highway_x64-linux/share/highway/usage
+-- Performing post-build validation
+Stored binaries in 1 destinations in 76.8 ms.
+Elapsed time to handle highway:x64-linux: 13 s
+highway:x64-linux package ABI: 43e09f788b1374b3cdc3483d15091e2f238d435b73f91bb1a86f9acab40d81cd
+Installing 78/95 libjxl:x64-linux@0.11.0...
+Building libjxl:x64-linux@0.11.0...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libjxl/4b34b45d6f795bc96a17c6288365baa25bac6cfb: info: installing overlay port from here
+-- Downloading https://github.com/libjxl/libjxl/archive/v0.11.0.tar.gz -> libjxl-libjxl-v0.11.0.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/libjxl-libjxl-v0.11.0.tar.gz
+-- Applying patch fix-dependencies.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libjxl/src/v0.11.0-242a572c17.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjxl_x64-linux/lib/pkgconfig/libjxl.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjxl_x64-linux/lib/pkgconfig/libjxl_cms.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjxl_x64-linux/lib/pkgconfig/libjxl_threads.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjxl_x64-linux/debug/lib/pkgconfig/libjxl.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjxl_x64-linux/debug/lib/pkgconfig/libjxl_cms.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjxl_x64-linux/debug/lib/pkgconfig/libjxl_threads.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libjxl_x64-linux/share/libjxl/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 2 s.
+Elapsed time to handle libjxl:x64-linux: 1.1 min
+libjxl:x64-linux package ABI: 07dc39af38bfc7d6e02d904ad7f6b39ea4ef531647c9a8f3ded27d03b5561042
+Installing 79/95 liblzma:x64-linux@5.6.2...
+Building liblzma:x64-linux@5.6.2...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/liblzma/5d13d80adafad99c23899a3f7b60b32c2dae1e43: info: installing overlay port from here
+-- Downloading https://github.com/tukaani-project/xz/archive/v5.6.2.tar.gz -> tukaani-project-xz-v5.6.2.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/tukaani-project-xz-v5.6.2.tar.gz
+-- Applying patch win_output_name.patch
+-- Applying patch build-tools.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/liblzma/src/v5.6.2-7484848813.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/liblzma_x64-linux/lib/pkgconfig/liblzma.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/liblzma_x64-linux/debug/lib/pkgconfig/liblzma.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/liblzma_x64-linux/share/liblzma/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 61.4 ms.
+Elapsed time to handle liblzma:x64-linux: 6.1 s
+liblzma:x64-linux package ABI: ae09c53d4cb069c1ce0b8266568e4966878c42d3695a2a0c211ce44401990b80
+Installing 80/95 tiff[core,jpeg,lzma,zip]:x64-linux@4.6.0#5...
+Building tiff[core,jpeg,lzma,zip]:x64-linux@4.6.0#5...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/tiff/6a3bae487fe89087457e2a391ee9720d68393616: info: installing overlay port from here
+-- Using cached libtiff-libtiff-v4.6.0.tar.gz.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/libtiff-libtiff-v4.6.0.tar.gz
+-- Applying patch FindCMath.patch
+-- Applying patch prefer-config.diff
+-- Applying patch requires-lerc.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/tiff/src/v4.6.0-54d9b8be55.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/tiff_x64-linux/lib/pkgconfig/libtiff-4.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/tiff_x64-linux/debug/lib/pkgconfig/libtiff-4.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/tiff_x64-linux/share/tiff/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 99.1 ms.
+Elapsed time to handle tiff:x64-linux: 17 s
+tiff:x64-linux package ABI: 9a8724feee3e236725523448a0d71439bc0569bfebe9e25079b87c75294705dd
+Installing 81/95 giflib:x64-linux@5.2.2...
+Building giflib:x64-linux@5.2.2...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/giflib/3763c06b1c8fce08fe96398c747b343707832d62: info: installing overlay port from here
+-- Using cached giflib-5.2.2.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/giflib/src/giflib-5-9e90bb84d0.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/giflib-5.2.2.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/giflib/src/giflib-5-9e90bb84d0.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/giflib_x64-linux/share/gif/vcpkg-cmake-wrapper.cmake
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/giflib_x64-linux/share/giflib/usage
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/giflib_x64-linux/share/giflib/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 7.74 ms.
+Elapsed time to handle giflib:x64-linux: 2.3 s
+giflib:x64-linux package ABI: 43f4e4cd55a25229891200e970c45de3dd002bce6275da592dbb0f57861f6ba9
+Installing 82/95 libwebp[anim,core,img2webp,libwebpmux,mux,nearlossless,simd]:x64-linux@1.4.0#1...
+Building libwebp[anim,core,img2webp,libwebpmux,mux,nearlossless,simd]:x64-linux@1.4.0#1...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/libwebp/9d0c00119dd6ec04488b4e0c926aa3ae73b95847: info: installing overlay port from here
+-- Using cached webmproject-libwebp-v1.4.0.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libwebp/src/v1.4.0-3f90aab08d.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/webmproject-libwebp-v1.4.0.tar.gz
+-- Applying patch 0002-cmake-config.patch
+-- Applying patch 0003-simd.patch
+-- Applying patch 0008-sdl.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/libwebp/src/v1.4.0-3f90aab08d.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libwebp_x64-linux/lib/pkgconfig/libsharpyuv.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libwebp_x64-linux/lib/pkgconfig/libwebp.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libwebp_x64-linux/lib/pkgconfig/libwebpdecoder.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libwebp_x64-linux/lib/pkgconfig/libwebpdemux.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libwebp_x64-linux/lib/pkgconfig/libwebpmux.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libwebp_x64-linux/debug/lib/pkgconfig/libsharpyuv.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libwebp_x64-linux/debug/lib/pkgconfig/libwebp.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libwebp_x64-linux/debug/lib/pkgconfig/libwebpdecoder.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libwebp_x64-linux/debug/lib/pkgconfig/libwebpdemux.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libwebp_x64-linux/debug/lib/pkgconfig/libwebpmux.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libwebp_x64-linux/share/libwebp/usage
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libwebp_x64-linux/tools/libwebp/img2webp' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/libwebp_x64-linux/tools/libwebp/webpmux' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Performing post-build validation
+Stored binaries in 1 destinations in 256 ms.
+Elapsed time to handle libwebp:x64-linux: 18 s
+libwebp:x64-linux package ABI: 68719761822c6272eed26a506eb1f47fcba1e7e431287a2659e8e8451c7ea627
+Installing 83/95 simdutf:x64-linux@5.5.0...
+Building simdutf:x64-linux@5.5.0...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/simdutf/d46df0fe18299316eccfdef76fea84b91c235609: info: installing overlay port from here
+-- Downloading https://github.com/simdutf/simdutf/archive/v5.5.0.tar.gz -> simdutf-simdutf-v5.5.0.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/simdutf-simdutf-v5.5.0.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/simdutf/src/v5.5.0-9a7f284f88.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/simdutf_x64-linux/lib/pkgconfig/simdutf.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/simdutf_x64-linux/debug/lib/pkgconfig/simdutf.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/simdutf_x64-linux/share/simdutf/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 77.1 ms.
+Elapsed time to handle simdutf:x64-linux: 11 s
+simdutf:x64-linux package ABI: afbe63fa0aaf3645bd2de0bef58b83bfe36dee9eb71007dd9c56832f91b5e335
+Installing 84/95 vulkan-memory-allocator:x64-linux@3.1.0...
+Building vulkan-memory-allocator:x64-linux@3.1.0...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vulkan-memory-allocator/267d8f5eb222e5ea111f11f57ebc8458c6df65e7: info: installing overlay port from here
+-- Using cached GPUOpen-LibrariesAndSDKs-VulkanMemoryAllocator-v3.1.0.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/vulkan-memory-allocator/src/v3.1.0-2108f5f92f.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/GPUOpen-LibrariesAndSDKs-VulkanMemoryAllocator-v3.1.0.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/vulkan-memory-allocator/src/v3.1.0-2108f5f92f.clean
+-- Configuring x64-linux
+-- Building x64-linux-rel
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vulkan-memory-allocator_x64-linux/share/vulkan-memory-allocator/copyright
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vulkan-memory-allocator_x64-linux/share/vulkan-memory-allocator/usage
+-- Performing post-build validation
+Stored binaries in 1 destinations in 15.7 ms.
+Elapsed time to handle vulkan-memory-allocator:x64-linux: 4.5 s
+vulkan-memory-allocator:x64-linux package ABI: 2e8739c8a5e7449312d5b4b552479cd4e24cc4f39f713dc373d2b48e3013930d
+Installing 85/95 vulkan-headers:x64-linux@1.3.290.0#1...
+Building vulkan-headers:x64-linux@1.3.290.0#1...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vulkan-headers/3335b4bdf60e3c09fafd8541329aba7c275c5a1a: info: installing overlay port from here
+-- Downloading https://github.com/KhronosGroup/Vulkan-Headers/archive/vulkan-sdk-1.3.290.0.tar.gz -> KhronosGroup-Vulkan-Headers-vulkan-sdk-1.3.290.0.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/KhronosGroup-Vulkan-Headers-vulkan-sdk-1.3.290.0.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/vulkan-headers/src/-1.3.290.0-f1a52b9b50.clean
+-- Configuring x64-linux
+-- Building x64-linux-rel
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vulkan-headers_x64-linux/share/vulkan-headers/copyright
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vulkan-headers_x64-linux/share/vulkan-headers/usage
+-- Performing post-build validation
+Stored binaries in 1 destinations in 270 ms.
+Elapsed time to handle vulkan-headers:x64-linux: 8 s
+vulkan-headers:x64-linux package ABI: 3b9bbb72bbe4ff8cef8eedb91ba0b794d32019717bbb282230848ef2f0a9fc5d
+Installing 86/95 egl-registry:x64-linux@2024-01-25...
+Building egl-registry:x64-linux@2024-01-25...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/egl-registry/d883db43133dd223c4ffdbef4193943f6784d43a: info: installing overlay port from here
+-- Using cached KhronosGroup-EGL-Registry-7db3005d4c2cb439f129a0adc931f3274f9019e6.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/egl-registry/src/274f9019e6-49d6bdb34a.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/KhronosGroup-EGL-Registry-7db3005d4c2cb439f129a0adc931f3274f9019e6.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/egl-registry/src/274f9019e6-49d6bdb34a.clean
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/egl-registry_x64-linux/share/egl-registry/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 5.44 ms.
+Elapsed time to handle egl-registry:x64-linux: 98.6 ms
+egl-registry:x64-linux package ABI: adbc5ed417d2e12eb841b76996eec26aacd4ca6e3b0ed5817b0d17dc2bebb7bd
+Installing 87/95 opengl-registry:x64-linux@2024-02-10#1...
+Building opengl-registry:x64-linux@2024-02-10#1...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/opengl-registry/22f7aa58ee78c9f0db904b6251e9265f2be26f9d: info: installing overlay port from here
+-- Using cached KhronosGroup-OpenGL-Registry-3530768138c5ba3dfbb2c43c830493f632f7ea33.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/opengl-registry/src/f632f7ea33-4952f9ace9.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/KhronosGroup-OpenGL-Registry-3530768138c5ba3dfbb2c43c830493f632f7ea33.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/opengl-registry/src/f632f7ea33-4952f9ace9.clean
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/opengl-registry_x64-linux/share/opengl-registry/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 60.2 ms.
+Elapsed time to handle opengl-registry:x64-linux: 1.3 s
+opengl-registry:x64-linux package ABI: d05a5dd772d3fb4d91a7d2e2b754f04acb5e712eca95cd189a87ace877371999
+Installing 88/95 vcpkg-tool-gn:x64-linux@2024-02-22...
+Building vcpkg-tool-gn:x64-linux@2024-02-22...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vcpkg-tool-gn/2d1a5157488930321ba70a7990971c317dc02548: info: installing overlay port from here
+CMake Warning (dev) at buildtrees/versioning_/versions/vcpkg-tool-gn/2d1a5157488930321ba70a7990971c317dc02548/portfile.cmake:9 (EXEC_PROGRAM):
+  Policy CMP0153 is not set: The exec_program command should not be called.
+  Run "cmake --help-policy CMP0153" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+
+  Use execute_process() instead.
+Call Stack (most recent call first):
+  scripts/ports.cmake:192 (include)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Using cached gn-linux-amd64.zip.
+-- Using gn: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-tool-gn_x64-linux/tools/gn/gn
+CMake Warning at scripts/cmake/z_vcpkg_fixup_rpath.cmake:124 (message):
+  Couldn't adjust RPATH of
+  '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-tool-gn_x64-linux/tools/gn/gn':
+  patchelf: open: Permission denied
+
+Call Stack (most recent call first):
+  scripts/ports.cmake:202 (z_vcpkg_fixup_rpath_in_dir)
+
+
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Stored binaries in 1 destinations in 254 ms.
+Elapsed time to handle vcpkg-tool-gn:x64-linux: 328 ms
+vcpkg-tool-gn:x64-linux package ABI: 08e785a8cd64cf467170898c60c10e219e94471af6a067a1c4764e3e9f8f1d5c
+Installing 89/95 pkgconf:x64-linux@2.3.0...
+Building pkgconf:x64-linux@2.3.0...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/pkgconf/ae3886d8a627ec99dd18890389b6d5d331e29799: info: installing overlay port from here
+-- Found Python version '3.10.12 at /usr/bin/python3'
+-- Using meson: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/tools/meson-1.5.2-dd4692/meson.py
+-- Downloading https://github.com/pkgconf/pkgconf/archive/pkgconf-2.3.0.tar.gz -> pkgconf-pkgconf-pkgconf-2.3.0.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/pkgconf-pkgconf-pkgconf-2.3.0.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/pkgconf/src/conf-2.3.0-07e4a066bf.clean
+-- Configuring x64-linux-dbg
+-- Getting CMake variables for x64-linux
+-- Configuring x64-linux-dbg done
+-- Configuring x64-linux-rel
+-- Configuring x64-linux-rel done
+-- Package x64-linux-dbg
+-- Package x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/pkgconf_x64-linux/lib/pkgconfig/libpkgconf.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/pkgconf_x64-linux/debug/lib/pkgconfig/libpkgconf.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/pkgconf_x64-linux/share/pkgconf/copyright
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/pkgconf_x64-linux/tools/pkgconf/pkgconf' (From '' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Performing post-build validation
+Stored binaries in 1 destinations in 18.7 ms.
+Elapsed time to handle pkgconf:x64-linux: 13 s
+pkgconf:x64-linux package ABI: ea79052e3ed8e03a208e8e2c523df855585b937441d1876e95eb8f840ccaf1e2
+Installing 90/95 vcpkg-pkgconfig-get-modules:x64-linux@2024-04-03...
+Building vcpkg-pkgconfig-get-modules:x64-linux@2024-04-03...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vcpkg-pkgconfig-get-modules/6845369c8cb7d3c318e8e3ae92fd2b7570a756ca: info: installing overlay port fromhere
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-pkgconfig-get-modules_x64-linux/share/vcpkg-pkgconfig-get-modules/copyright
+-- Performing post-build validation
+Stored binaries in 1 destinations in 1.68 ms.
+Elapsed time to handle vcpkg-pkgconfig-get-modules:x64-linux: 14.2 ms
+vcpkg-pkgconfig-get-modules:x64-linux package ABI: 80cd37df63fd18ccec832895538d69f5f0607b4fa4d541bbb865e9b5fd210512
+Installing 91/95 vcpkg-gn:x64-linux@2024-02-22...
+Building vcpkg-gn:x64-linux@2024-02-22...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/vcpkg-gn/c62f882f543760e74e571a2527a9c6050bcf4e91: info: installing overlay port from here
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-gn_x64-linux/share/vcpkg-gn/vcpkg-port-config.cmake
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-gn_x64-linux/share/vcpkg-gn/vcpkg_gn_configure.cmake
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/vcpkg-gn_x64-linux/share/vcpkg-gn/vcpkg_gn_install.cmake
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Stored binaries in 1 destinations in 1.77 ms.
+Elapsed time to handle vcpkg-gn:x64-linux: 14 ms
+vcpkg-gn:x64-linux package ABI: 3c735703662bf4fe457a67c4bc7bc0af50de945942fc3d47b46d85c06a64243b
+Installing 92/95 skia[core,fontconfig,freetype,gl,harfbuzz,icu,vulkan]:x64-linux@129...
+Building skia[core,fontconfig,freetype,gl,harfbuzz,icu,vulkan]:x64-linux@129...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/skia/76a242d24e0e810ad8c78e3deaef69d4b634e8fc: info: installing overlay port from here
+-- Downloading https://github.com/google/skia/archive/501e9efaa2fc929ec67c44da6dbaf9335264b559.tar.gz -> google-skia-501e9efaa2fc929ec67c44da6dbaf9335264b559.tar.gz...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/google-skia-501e9efaa2fc929ec67c44da6dbaf9335264b559.tar.gz
+-- Applying patch disable-msvc-env-setup.patch
+-- Applying patch skia-include-string.patch
+-- Applying patch bentleyottmann-build.patch
+-- Applying patch graphite.patch
+-- Applying patch vulkan-headers.patch
+-- Applying patch pdfsubsetfont-uwp.diff
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/skia/src/335264b559-a895e3b511.clean
+-- Creating third_party/externals/dng_sdk
+-- Using cached /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/skia-c8d0c9b1d16bfda56f15165d39e0ffa360a11123.tar.gz
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/skia-c8d0c9b1d16bfda56f15165d39e0ffa360a11123.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/skia/src/a360a11123-ad86a105da.clean
+-- Creating third_party/externals/piex
+-- Using cached /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/skia-bb217acdca1cc0c16b704669dd6f91a1b509c406.tar.gz
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/skia-bb217acdca1cc0c16b704669dd6f91a1b509c406.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/skia/src/a1b509c406-c78cbbe048.clean
+-- Creating third_party/externals/wuffs
+-- Using cached /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/skia-e3f919ccfe3ef542cfc983a82146070258fb57f8.tar.gz
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/skia-e3f919ccfe3ef542cfc983a82146070258fb57f8.tar.gz
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/skia/src/0258fb57f8-a43a032398.clean
+-- Getting CMake variables for x64-linux
+-- Generating build (x64-linux-dbg)...
+-- Generating build (x64-linux-rel)...
+-- Building (x64-linux-dbg)...
+-- Installing (x64-linux-dbg)...
+-- Building (x64-linux-rel)...
+-- Installing (x64-linux-rel)...
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/skia_x64-linux/share/skia/skiaConfig.cmake
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/skia_x64-linux/share/skia/example/CMakeLists.txt
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/skia_x64-linux/share/skia/example/convert-to-nia.cpp
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/skia_x64-linux/share/skia/usage
+-- Performing post-build validation
+Stored binaries in 1 destinations in 12 s.
+Elapsed time to handle skia:x64-linux: 4.2 min
+skia:x64-linux package ABI: 8fad49adc1a63017228389f809fd44340194673669ddef8f181912f67f364c8a
+Installing 93/95 sqlite3[core,json1]:x64-linux@3.46.1...
+Building sqlite3[core,json1]:x64-linux@3.46.1...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/sqlite3/9cc1e5365321142755736cbc5a61cfa194f5b297: info: installing overlay port from here
+-- Downloading https://sqlite.org/2024/sqlite-autoconf-3460100.tar.gz -> sqlite-autoconf-3460100.zip...
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/sqlite-autoconf-3460100.zip
+-- Applying patch fix-arm-uwp.patch
+-- Applying patch add-config-include.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/sqlite3/src/nf-3460100-8bb8650154.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/sqlite3_x64-linux/lib/pkgconfig/sqlite3.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/sqlite3_x64-linux/debug/lib/pkgconfig/sqlite3.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/sqlite3_x64-linux/share/sqlite3/usage
+-- Performing post-build validation
+Stored binaries in 1 destinations in 250 ms.
+Elapsed time to handle sqlite3:x64-linux: 22 s
+sqlite3:x64-linux package ABI: a58fc43b6a64d768eb92e3ca1565c93306bf3d751c78b979dea3f97e69e8a72e
+Installing 94/95 vulkan:x64-linux@2023-12-17...
+Building vulkan:x64-linux@2023-12-17...
+/home/kushal/src/ladybird/Meta/CMake/vcpkg/overlay-ports/vulkan: info: installing overlay port from here
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Stored binaries in 1 destinations in 1.95 ms.
+Elapsed time to handle vulkan:x64-linux: 17.7 ms
+vulkan:x64-linux package ABI: adfbe4bea4ef8bb0b6857b8e92745ac09a1d7a251e35f27a14675f6088216d6c
+Installing 95/95 woff2:x64-linux@1.0.2#4...
+Building woff2:x64-linux@1.0.2#4...
+/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/versioning_/versions/woff2/fbd2207ad0ad1e7e52b421b86f96deff9ed7ec65: info: installing overlay port from here
+-- Using cached google-woff2-v1.0.2.tar.gz.
+-- Cleaning sources at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/woff2/src/v1.0.2-da3e6659fb.clean. Use --editable to skip cleaning for the packages you specify.
+-- Extracting source /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/downloads/google-woff2-v1.0.2.tar.gz
+-- Applying patch 0001-unofficial-brotli.patch
+-- Using source at /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/buildtrees/woff2/src/v1.0.2-da3e6659fb.clean
+-- Configuring x64-linux
+-- Building x64-linux-dbg
+-- Building x64-linux-rel
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/woff2_x64-linux/lib/pkgconfig/libwoff2common.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/woff2_x64-linux/lib/pkgconfig/libwoff2dec.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/woff2_x64-linux/lib/pkgconfig/libwoff2enc.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/woff2_x64-linux/debug/lib/pkgconfig/libwoff2common.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/woff2_x64-linux/debug/lib/pkgconfig/libwoff2dec.pc
+-- Fixing pkgconfig file: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/woff2_x64-linux/debug/lib/pkgconfig/libwoff2enc.pc
+-- Installing: /home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/woff2_x64-linux/share/woff2/copyright
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/woff2_x64-linux/tools/woff2/woff2_compress' (From 'lib' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/woff2_x64-linux/tools/woff2/woff2_decompress' (From 'lib' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Adjusted RPATH of '/home/kushal/src/ladybird/Toolchain/Tarballs/vcpkg/packages/woff2_x64-linux/tools/woff2/woff2_info' (From 'lib' -> To '$ORIGIN:$ORIGIN/../../lib')
+-- Performing post-build validation
+Stored binaries in 1 destinations in 117 ms.
+Elapsed time to handle woff2:x64-linux: 6.4 s
+woff2:x64-linux package ABI: 8c29b89318ae1936b62f513f8c47cd1801112a52449ecf4ebabc4d91dcc471e3
+Total install time: 14 min
+-- Running vcpkg install - done
+-- Found the following ICU libraries:
+--   data (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicudata.a
+--   i18n (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicui18n.a
+--   uc (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicuuc.a
+-- Found PkgConfig: /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/tools/pkgconf/pkgconf (found version "2.3.0")
+-- Checking for module 'libavformat'
+--   Package 'libavformat' not found
+CMake Error at Toolchain/Local/cmake/share/cmake-3.26/Modules/FindPkgConfig.cmake:607 (message):
+  A required package was not found
+Call Stack (most recent call first):
+  Toolchain/Local/cmake/share/cmake-3.26/Modules/FindPkgConfig.cmake:829 (_pkg_check_modules_internal)
+  Meta/CMake/ffmpeg.cmake:5 (pkg_check_modules)
+  Userland/Libraries/LibMedia/CMakeLists.txt:2 (include)
+
+
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja
+/home/kushal/src/ladybird/Toolchain/Local/cmake/bin/cmake --regenerate-during-build -S/home/kushal/src/ladybird -B/home/kushal/src/ladybird/Build/ladybird
+ninja: error: rebuilding 'build.ninja': subcommand failed
+
+real    14m31.352s
+user    99m22.545s
+sys     7m46.556s
+Sun Oct 20 14:35:08 EDT 2024
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull originmaster; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
+[sudo] password for kushal:
+Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+Hit:1 https://apt.llvm.org/jammy llvm-toolchain-jammy-17 InRelease
+Fetched 257 kB in 1s (285 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+
+real    0m9.309s
+user    0m0.012s
+sys     0m0.290s
+Listing... Done
+
+real    0m0.195s
+user    0m0.163s
+sys     0m0.032s
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages were automatically installed and are no longer required:
+  aglfn asymptote-doc biber chktex cups-bsd cups-client dvidvi dvisvgm fonts-adf-accanthis fonts-adf-berenis fonts-adf-gillius fonts-adf-universalis fonts-arphic-bkai00mp
+  fonts-arphic-bsmi00lp fonts-arphic-gbsn00lp fonts-arphic-gkai00mp fonts-baekmuk fonts-cabin fonts-cantarell fonts-comfortaa fonts-dejavu-extra fonts-ebgaramond fonts-ebgaramond-extra
+  fonts-font-awesome fonts-gfs-artemisia fonts-gfs-baskerville fonts-gfs-bodoni-classic fonts-gfs-complutum fonts-gfs-didot fonts-gfs-didot-classic fonts-gfs-gazis fonts-gfs-neohellenic
+  fonts-gfs-olga fonts-gfs-porson fonts-gfs-solomos fonts-gfs-theokritos fonts-go fonts-hosny-amiri fonts-junicode fonts-lato fonts-linuxlibertine fonts-lmodern fonts-lobster
+  fonts-lobstertwo fonts-noto-color-emoji fonts-noto-core fonts-oflb-asana-math fonts-open-sans fonts-roboto-unhinted fonts-sil-charis fonts-sil-gentium fonts-sil-gentium-basic
+  fonts-sil-gentiumplus fonts-sil-gentiumplus-compact fonts-sil-padauk fonts-stix fonts-tlwg-garuda fonts-tlwg-garuda-otf fonts-tlwg-kinnari fonts-tlwg-kinnari-otf fonts-tlwg-laksaman
+  fonts-tlwg-laksaman-otf fonts-tlwg-loma fonts-tlwg-loma-otf fonts-tlwg-mono fonts-tlwg-mono-otf fonts-tlwg-norasi fonts-tlwg-norasi-otf fonts-tlwg-purisa fonts-tlwg-purisa-otf
+  fonts-tlwg-sawasdee fonts-tlwg-sawasdee-otf fonts-tlwg-typewriter fonts-tlwg-typewriter-otf fonts-tlwg-typist fonts-tlwg-typist-otf fonts-tlwg-typo fonts-tlwg-typo-otf
+  fonts-tlwg-umpush fonts-tlwg-umpush-otf fonts-tlwg-waree fonts-tlwg-waree-otf fonts-unfonts-core fonts-unfonts-extra freeglut3 gsfonts gsfonts-x11 htop imagemagick imagemagick-6-common
+  imagemagick-6.q16 javascript-common lacheck latex-cjk-chinese-arphic-bkai00mp latex-cjk-chinese-arphic-bsmi00lp latex-cjk-chinese-arphic-gbsn00lp latex-cjk-chinese-arphic-gkai00mp
+  latex-cjk-japanese-wadalab latexdiff lcdf-typetools libalgorithm-c3-perl libapache-pom-java libautovivification-perl libb-hooks-endofscope-perl libb-hooks-op-check-perl
+  libboost-filesystem1.74.0 libbtparse2 libbusiness-ismn-perl libbusiness-issn-perl libclass-accessor-perl libclass-c3-perl libclass-c3-xs-perl libclass-data-inheritable-perl
+  libclass-inspector-perl libclass-method-modifiers-perl libclass-singleton-perl libclass-xsaccessor-perl libcmark-gfm-extensions0.29.0.gfm.3 libcmark-gfm0.29.0.gfm.3
+  libcommon-sense-perl libcommons-logging-java libcommons-parent-java libdata-compare-perl libdata-optlist-perl libdata-uniqid-perl libdate-simple-perl libdatetime-calendar-julian-perl
+  libdatetime-format-builder-perl libdatetime-format-strptime-perl libdatetime-locale-perl libdatetime-perl libdatetime-timezone-perl libde265-0 libdevel-callchecker-perl
+  libdevel-caller-perl libdevel-globaldestruction-perl libdevel-lexalias-perl libdevel-stacktrace-perl libdist-checkconflicts-perl libdjvulibre-text libdjvulibre21
+  libdynaloader-functions-perl libemail-date-format-perl libemf1 libencode-eucjpms-perl libencode-hanextra-perl libencode-jis2k-perl libeval-closure-perl libexception-class-perl
+  libexporter-tiny-perl libfftw3-double3 libfile-find-rule-perl libfile-homedir-perl libfile-sharedir-perl libfile-slurper-perl libfile-which-perl libfontbox-java libglew2.2 libgsl27
+  libgslcblas0 libheif1 libilmbase25 libipc-run3-perl libipc-shareable-perl libjs-jquery libjson-perl libjson-xs-perl libjxr-tools libjxr0 libkpathsea6 liblingua-translit-perl
+  liblist-allutils-perl liblist-moreutils-perl liblist-moreutils-xs-perl liblist-someutils-perl liblist-someutils-xs-perl liblist-utilsby-perl liblog-dispatch-perl liblog-log4perl-perl
+  liblqr-1-0 libltdl7 libmagick++-6.q16-8 libmagickcore-6.q16-6 libmagickcore-6.q16-6-extra libmagickwand-6.q16-6 libmail-sendmail-perl libmime-charset-perl libmime-lite-perl
+  libmime-types-perl libmodule-implementation-perl libmodule-runtime-perl libmotif-common libmro-compat-perl libnamespace-autoclean-perl libnamespace-clean-perl libnl-genl-3-200
+  libnumber-compare-perl libopenexr25 libosp5 libostyle1c2 libpackage-stash-perl libpackage-stash-xs-perl libpadwalker-perl libparams-classify-perl libparams-util-perl
+  libparams-validate-perl libparams-validationcompiler-perl libparse-recdescent-perl libpdfbox-java libperlio-utf8-strict-perl libplot2c2 libpoppler-qt5-1 libpstoedit0c2a libptexenc1
+  libqt5core5a libqt5dbus5 libqt5gui5 libqt5network5 libqt5svg5 libqt5widgets5 libqt5xml5 libreadonly-perl libref-util-perl libref-util-xs-perl libregexp-common-perl librole-tiny-perl
+  libruby3.0 libsombok3 libsort-key-perl libspecio-perl libstring-crc32-perl libsub-exporter-perl libsub-exporter-progressive-perl libsub-identify-perl libsub-install-perl
+  libsub-quote-perl libsynctex2 libsys-hostname-long-perl libtcl8.6 libteckit0 libtexlua53 libtexluajit2 libtext-bibtex-perl libtext-csv-perl libtext-csv-xs-perl libtext-glob-perl
+  libtext-roman-perl libtext-unidecode-perl libtie-cycle-perl libtk8.6 libtypes-serialiser-perl libunicode-linebreak-perl libvariable-magic-perl libwebpdemux2 libwmflite-0.2-7 libwoff1
+  libxcb-xinerama0 libxm4 libxml-libxml-perl libxml-libxml-simple-perl libxml-libxslt-perl libxml-namespacesupport-perl libxml-sax-base-perl libxml-sax-expat-perl libxml-sax-perl
+  libxml-writer-perl libxstring-perl libyaml-tiny-perl libzip4 libzzip-0-13 lmodern openjade pandoc-data pfb2t1c2pfb preview-latex-style ps2eps pstoedit psutils qt5-gtk-platformtheme
+  qttranslations5-l10n rake ruby ruby-net-telnet ruby-rubygems ruby-webrick ruby-xmlrpc ruby3.0 rubygems-integration sgml-base t1utils tcl tcl8.6 teckit tex-common tex-gyre texinfo tk
+  tk8.6 xfonts-encodings xfonts-utils xpdf
+Use 'sudo apt autoremove' to remove them.
+Get more security updates through Ubuntu Pro with 'esm-apps' enabled:
+  libheif1 imagemagick libavdevice58 ffmpeg libopenexr25 libmagick++-6.q16-8
+  libpostproc55 libmagickcore-6.q16-6-extra libavcodec58 libmagickwand-6.q16-6
+  libavutil56 imagemagick-6.q16 libswscale5 libmagickcore-6.q16-6
+  libavutil-dev libgsl27 libswresample3 imagemagick-6-common libavformat58
+  libgslcblas0 libavcodec-dev libde265-0 libswresample-dev libavfilter7
+Learn more about Ubuntu Pro at https://ubuntu.com/pro
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+real    0m0.364s
+user    0m0.002s
+sys     0m0.014s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.223s
+user    0m0.010s
+sys     0m0.519s
+remote: Enumerating objects: 38, done.
+remote: Counting objects: 100% (38/38), done.
+remote: Compressing objects: 100% (31/31), done.
+remote: Total 38 (delta 10), reused 23 (delta 7), pack-reused 0 (from 0)
+Unpacking objects: 100% (38/38), 86.58 KiB | 1.63 MiB/s, done.
+From https://github.com/LadybirdBrowser/ladybird
+   6b73a2d8a4..97ca6036fa  master     -> origin/master
+
+real    0m0.768s
+user    0m0.046s
+sys     0m0.097s
+From https://github.com/LadybirdBrowser/ladybird
+ * branch                  master     -> FETCH_HEAD
+Updating 6b73a2d8a4..97ca6036fa
+Fast-forward
+ Tests/LibWeb/Layout/expected/css-appearance-none.txt | 77 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Tests/LibWeb/Layout/input/css-appearance-none.html   |  7 +++++++
+ Tests/LibWeb/Text/expected/HTML/set-innerText.txt    |  3 +++
+ Tests/LibWeb/Text/input/HTML/set-innerText.html      | 12 ++++++++++++
+ Userland/Libraries/LibWeb/HTML/HTMLElement.cpp       | 46 +++++++++++++++++++++++++++++++++++++++++++++-
+ Userland/Libraries/LibWeb/HTML/HTMLElement.h         |  1 +
+ Userland/Libraries/LibWeb/HTML/HTMLInputElement.cpp  | 17 ++++++++++++++---
+ Userland/Libraries/LibWeb/XHR/XMLHttpRequest.cpp     |  2 +-
+ 8 files changed, 160 insertions(+), 5 deletions(-)
+ create mode 100644 Tests/LibWeb/Layout/expected/css-appearance-none.txt
+ create mode 100644 Tests/LibWeb/Layout/input/css-appearance-none.html
+ create mode 100644 Tests/LibWeb/Text/expected/HTML/set-innerText.txt
+ create mode 100644 Tests/LibWeb/Text/input/HTML/set-innerText.html
+
+real    0m0.435s
+user    0m0.021s
+sys     0m0.051s
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        llvm.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+real    0m0.023s
+user    0m0.000s
+sys     0m0.019s
+Sun Oct 20 18:40:48 EDT 2024
+ninja: Entering directory `/home/kushal/src/ladybird/Build/ladybird'
+[0/2] Re-checking globbed directories...
+[1/2] Re-running CMake...
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-linux...
+Compiler found: /usr/bin/clang++-17
+All requested packages are currently installed.
+Total install time: 221 ns
+-- Running vcpkg install - done
+-- Found the following ICU libraries:
+--   data (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicudata.a
+--   i18n (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicui18n.a
+--   uc (required): /home/kushal/src/ladybird/Build/ladybird/vcpkg_installed/x64-linux/lib/libicuuc.a
+-- Checking for module 'libavformat'
+--   Package 'libavformat' not found
+CMake Error at Toolchain/Local/cmake/share/cmake-3.26/Modules/FindPkgConfig.cmake:607 (message):
+  A required package was not found
+Call Stack (most recent call first):
+  Toolchain/Local/cmake/share/cmake-3.26/Modules/FindPkgConfig.cmake:829 (_pkg_check_modules_internal)
+  Meta/CMake/ffmpeg.cmake:5 (pkg_check_modules)
+  Userland/Libraries/LibMedia/CMakeLists.txt:2 (include)
+
+
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja
+/home/kushal/src/ladybird/Toolchain/Local/cmake/bin/cmake --regenerate-during-build -S/home/kushal/src/ladybird -B/home/kushal/src/ladybird/Build/ladybird
+ninja: error: rebuilding 'build.ninja': subcommand failed
+
+real    0m14.976s
+user    0m0.579s
+sys     0m2.275s
+Sun Oct 20 18:41:03 EDT 2024
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull originmaster; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
