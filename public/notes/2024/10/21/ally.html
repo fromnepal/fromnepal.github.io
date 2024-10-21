@@ -36,14 +36,14 @@
             font-style: italic;
             margin-bottom: 10px;
         }
-    
+
         article figure {
             margin: 0;
             padding: 0;
             display: block;
             width: 100%;
         }
-    
+
         article figure img {
             aspect-ratio: 3 / 2;
             max-width: 100%;
@@ -51,13 +51,13 @@
             display: block;
             margin: 0 auto;
         }
-    
+
         article figure figcaption {
             font-size: 0.6em;
             line-height: 0.9;
             margin-top: 0.5em;
         }
-    
+
         /* Progress bar styles */
         #progress-container {
             position: fixed;
@@ -80,18 +80,21 @@
             padding: 5px; /* Add some padding */
             border-radius: 3px; /* Rounded corners */
         }
-    
+
         /* Chat bubble styles */
         .conversation {
-            background-color: #e0f7fa; /* Light blue background */
-            border: 1px solid #b2ebf2; /* Light blue border */
             padding: 10px; /* Add some padding */
             border-radius: 15px; /* Rounded corners */
             margin-bottom: 10px; /* Space between bubbles */
             position: relative; /* For the arrow */
             max-width: 60%; /* Limit width */
         }
-        .conversation::before {
+        .conversation.bret {
+            background-color: #e0f7fa; /* Light blue background */
+            border: 1px solid #b2ebf2; /* Light blue border */
+            align-self: flex-start; /* Align to the left */
+        }
+        .conversation.bret::before {
             content: '';
             position: absolute;
             top: 10px; /* Position the arrow */
@@ -100,8 +103,21 @@
             border-style: solid;
             border-color: transparent #e0f7fa transparent transparent; /* Arrow color */
         }
+        .conversation.gail {
+            background-color: #ffebee; /* Light pink background */
+            border: 1px solid #ffcdd2; /* Light pink border */
+            align-self: flex-end; /* Align to the right */
+        }
+        .conversation.gail::before {
+            content: '';
+            position: absolute;
+            top: 10px; /* Position the arrow */
+            right: -10px; /* Position the arrow */
+            border-width: 10px; /* Size of the arrow */
+            border-style: solid;
+            border-color: transparent transparent transparent #ffebee; /* Arrow color */
+        }
     </style>
-    
 </head>
 <body>
     <div id="progress-container">
@@ -128,56 +144,56 @@
         <p class="muted">By Gail Collins and Bret Stephens</p>
         <p class="muted">Ms. Collins and Mr. Stephens are Opinion columnists. They converse every week.</p>
         <p class="muted">Bret Stephens: Please don’t tell me you’re going to ask how I’m going to vote.</p>
-        <p class="conversation">Gail Collins: Well, Bret, why would you imagine such a thing? Just because I keep getting stopped by people on the street, demanding to know whether you’re going to support Kamala Harris. I am not making this up.</p>
-        <p class="conversation">Come on. Give us a hint.</p>
-        <p class="conversation">Bret: You really want to know?</p>
-        <p class="conversation">Gail: Um, yeah.</p>
-        <p class="conversation">Bret: Kicking and screaming, I’ll cast my ballot for Harris.</p>
-        <p class="conversation">I really would rather have just sat out Election Day. But Jan. 6 and election denialism are unforgivable. And as my friend Richard North Patterson likes to say, “Donald Trump is literally bleeping crazy.” And what crazy brings in its wake is JD Vance, whom I find worse than Trump, because he’s just as cynical but twice as bright. And what it also brings in its wake is Tucker Carlson and the Hitler defenders he likes to platform.</p>
-        <p class="conversation">Gail: OK, gonna take a little time to run up to the roof and toot a horn. Be right back.</p>
-        <p class="conversation">Bret: Well …</p>
-        <p class="conversation">Gail: Hear that, don’t-like-anyone people? Really, if Bret can bring himself to vote for Kamala, you can.</p>
-        <p class="conversation">Bret: It’s a 99.999 percent vote against Trump and a 0.001 percent vote for Harris.</p>
-        <p class="conversation">Gail: And to bolster the argument, how about a short list of the things that bother you most about your new choice for president of the United States?</p>
-        <p class="conversation">Bret: If the G.O.P. had nominated Nikki Haley, Ron DeSantis or Doug Burgum, I’d be voting Republican. Probably even Tim Scott: That’s how reluctant I was to vote for her.</p>
-        <p class="conversation">I fear that Harris is every bit as vacuous behind the scenes as she seems to be on the public stage. I fear she will be tested early by a foreign adversary and stumble badly, whether it’s in stopping Iran from building a nuclear weapon or China from blockading Taiwan or Russia from seizing a portion of a Baltic country. I fear she will capitulate too easily to her party’s left flank, especially when it comes to identity politics, economic policy or polarizing cultural issues. I fear she’ll have no domestic policy ideas that don’t involve mindlessly expanding the role of government. I fear she’ll surround herself with mediocre advisers, like her embarrassingly bad veep pick. I fear she won’t muster the political will to curb mass migration. And I fear that a failed Harris presidency will do more to turbocharge the far-right in this country than to diminish it.</p>
-        <p class="conversation">Gail: That does cover a lot …</p>
-        <p class="conversation">Bret: But I won’t fear that she’ll refuse to recognize the result of the next election should she lose it. And I won’t fear that Tim Walz is a cunning stooge who will always do the boss’s bidding no matter how unconstitutional it might be. And I won’t fear learning that an Arnold Palmer is now a reference to something other than lemonade and iced tea and a big golf swing.</p>
-        <p class="conversation">So I’d rather take my chances with a president whose competence I doubt and whose policies I dislike than one whose character I detest.</p>
-        <p class="conversation">Gail: I am hoping people will be spreading your word throughout the sane conservative neighborhoods of the country.</p>
-        <p class="conversation">Bret: “Sane conservative neighborhoods” are sparsely populated these days.</p>
-        <p class="conversation">Gail: As for all your other worries, they’re broad enough that I guess I’ll say … wait and see. This is a smart, experienced woman who’s come up through the ladder of government and politics, always making stuff work.</p>
-        <p class="conversation">Bret: Obviously, I hope you’re right. I’ll be relieved if she’s someone who knows what she doesn’t know, and is smart enough to surround herself with seasoned subordinates with bipartisan appeal.</p>
-        <p class="conversation">Gail: Of course, I want a president who’ll expand programs like child care, tackle crises like housing costs and listen to the folks who are living at the bottom. So maybe we’ll both agree on what she’s likely to try to do, but I’ll be the only one who’s happy if she does it.</p>
-        <p class="conversation">Bret: If it turns out that Harris does win the election thanks to the votes of center-right people in places like Wisconsin or Pennsylvania, she might want to thank them by governing toward the center, too.</p>
-        <p class="conversation">Gail: Any other big races you’re looking at? I kinda love Senate gossip.</p>
-        <p class="conversation">Bret: Wait, one more point, if you don’t mind, before getting to the other races. The other reason I’m voting for Harris is because I think this election may be the last chance for Reaganite conservatives like me — the ones who are for lower taxes, free trade, deregulation, free speech (including for those who don’t agree with me), a strong military and the defense of embattled allies like Ukraine — to drive a stake into the heart of Trumpism. If he wins, we’re going to be saddled with an isolationist and nativist conservative movement for generations to come.</p>
-        <p class="conversation">As for the Senate, I know it’s unlikely that Ted Cruz will lose his seat in Texas, but it’s fun to watch Colin Allred make him sweat. That being said, my vote for Harris also means I’d like to see the Senate switch to Republican control. Divided government is one that can’t do too much harm.</p>
-        <p class="conversation">Gail: I can see that theory works for you, but for those of us who would like to see things change — OK, sometimes in a direction you hate — Harris is a fine option and I’d like to see her with a Congress that can actually do stuff.</p>
-        <p class="conversation">Bret: Right. I’m not exactly a liberal.</p>
-        <p class="conversation">Gail: And, gee, Bret, even when it comes to Congress, you’re hoping to see the dreadful Ted Cruz lose. But tell me, if the balance of power in the Senate depended entirely on the Texas seat, who would you tell your fans in Texas to vote for?</p>
-        <p class="conversation">Bret: Assuming a Harris victory? If Cruz winning is the only way Republicans can control one house of Congress, I’d want him to win. Assuming a Trump victory? I’d want Cruz to lose by 20 points.</p>
-        <p class="conversation">But hey, we’re getting into fantasy football territory here. What did you think of Harris’s interview on Fox?</p>
-        <p class="conversation">Gail: I think she did just fine. The whole conservative establishment vision of her as an out-of-depth pol staggering once she had to confront right-wing news celebs turns out to be totally … nothing. It’s not as if she said anything earth-shattering. She was just a normal, sensible, very experienced politician with a normal, sensible agenda.</p>
-        <p class="conversation">Bret: A liberal friend — someone we both admire and respect — told me he thought her performance was “positively awful.” I pretty much agree. She can’t seem to go beyond a lame and limited set of talking points. But I give her credit for at least doing a tough interview, which is more than can be said of Trump.</p>
-        <p class="conversation">Gail: I know there was an era when we were yearning for somebody, um, more charismatic. Still remember those first Barack Obama campaign speeches during which normal Democratic women were swooning on the auditorium floor.</p>
-        <p class="conversation">Not getting that this time, but maybe that’s what the nation is hoping for. Somebody normal who isn’t nuts.</p>
-        <p class="conversation">Bret: Certainly a point in her favor, not that truly normal people really exist in American politics anymore. But, like Robert Plant and a big jet plane, I will take my chances with her.</p>
-        <p class="conversation">So, any late-breaking advice for her on how she clinches this thing?</p>
-        <p class="conversation">Gail: This is a really depressing question because the answer is pretty clearly to focus all her attention on the half-dozen or so swing states, like Pennsylvania and Wisconsin and Arizona. And completely ignore the rest of us, who live in places strongly Democratic or Republican.</p>
-        <p class="conversation">Bret: So much depends on about 100,000 or so voters spread out over roughly 22 counties. But I still think the best way she closes the sale is to announce a lineup of cabinet picks that reassures nervous voters that she’ll move to the center.</p>
-        <p class="conversation">Gail: Have I mentioned how much I hate the Electoral College? Tim Walz called for getting rid of it the other day, but the Harris people made him retract that. Because heaven forbid you offend the folks in Pennsylvania and …</p>
-        <p class="conversation">Bret: Well, yeah! I said from the minute Harris picked Walz that Democrats would come to regret him.</p>
-        <p class="conversation">Gail: OK, I’m done filibustering. Your turn. Give Harris some advice that doesn’t require a constitutional amendment.</p>
-        <p class="conversation">Bret: Sounding like a broken record here, but it wouldn’t hurt to announce a former general, like Stanley McChrystal, as her preferred pick as homeland security secretary. It tells a key voting bloc that she won’t be part of an administration that will be swamped again by illegal immigration.</p>
-        <p class="conversation">Gail: A while back you wanted her to announce half her cabinet in advance. I give you points for reducing your demands at the same time you … yippee! … promise to vote for her.</p>
-        <p class="conversation">Bret: I also think she needs to avoid gimmicks, like her recently announced plan to extend economic help directly and preferentially to Black men, including fully forgivable loans. It’s blatantly unconstitutional, a naked political pander, and economically damaging because forgivable loans reduce incentives to work and succeed. It’s also dumb politics: It alienates voters who are tired of identity politics as the dominant mode of liberal thinking and governance.</p>
-        <p class="conversation">I’m really not going to like her presidency, am I?</p>
-        <p class="conversation">Gail: Looking on the plus side here. Harris promises to fight for higher taxes on big corporations and rich individuals who, according to one study, would pay about $167,000 a year more — if their incomes were above $14 million.</p>
-        <p class="conversation">She’d use that money for everything from fighting climate change to encouraging the building of affordable housing. Sounds good to me.</p>
-        <p class="conversation">And hey, Bret — we’ll have so much to argue about. Can’t wait. Fingers crossed.</p>
-        <p class="conversation">Bret: You’re really not making this one easy for me, are you?</p>
-        <p class="conversation">Oh, before we go, be sure to read Alex Traub’s hilarious, humane and exceptionally delicate obit in The Times for Megan Marshack. Readers who know the difference between Happy and happy will recall the name.</p>
+        <p class="conversation" data-speaker="Gail">Gail: Well, Bret, why would you imagine such a thing? Just because I keep getting stopped by people on the street, demanding to know whether you’re going to support Kamala Harris. I am not making this up.</p>
+        <p class="conversation" data-speaker="Gail">Gail: Come on. Give us a hint.</p>
+        <p class="conversation" data-speaker="Bret">Bret: You really want to know?</p>
+        <p class="conversation" data-speaker="Gail">Gail: Um, yeah.</p>
+        <p class="conversation" data-speaker="Bret">Bret: Kicking and screaming, I’ll cast my ballot for Harris.</p>
+        <p class="conversation" data-speaker="Bret">Bret: I really would rather have just sat out Election Day. But Jan. 6 and election denialism are unforgivable. And as my friend Richard North Patterson likes to say, “Donald Trump is literally bleeping crazy.” And what crazy brings in its wake is JD Vance, whom I find worse than Trump, because he’s just as cynical but twice as bright. And what it also brings in its wake is Tucker Carlson and the Hitler defenders he likes to platform.</p>
+        <p class="conversation" data-speaker="Gail">Gail: OK, gonna take a little time to run up to the roof and toot a horn. Be right back.</p>
+        <p class="conversation" data-speaker="Bret">Bret: Well …</p>
+        <p class="conversation" data-speaker="Gail">Gail: Hear that, don’t-like-anyone people? Really, if Bret can bring himself to vote for Kamala, you can.</p>
+        <p class="conversation" data-speaker="Bret">Bret: It’s a 99.999 percent vote against Trump and a 0.001 percent vote for Harris.</p>
+        <p class="conversation" data-speaker="Gail">Gail: And to bolster the argument, how about a short list of the things that bother you most about your new choice for president of the United States?</p>
+        <p class="conversation" data-speaker="Bret">Bret: If the G.O.P. had nominated Nikki Haley, Ron DeSantis or Doug Burgum, I’d be voting Republican. Probably even Tim Scott: That’s how reluctant I was to vote for her.</p>
+        <p class="conversation" data-speaker="Bret">Bret: I fear that Harris is every bit as vacuous behind the scenes as she seems to be on the public stage. I fear she will be tested early by a foreign adversary and stumble badly, whether it’s in stopping Iran from building a nuclear weapon or China from blockading Taiwan or Russia from seizing a portion of a Baltic country. I fear she will capitulate too easily to her party’s left flank, especially when it comes to identity politics, economic policy or polarizing cultural issues. I fear she’ll have no domestic policy ideas that don’t involve mindlessly expanding the role of government. I fear she’ll surround herself with mediocre advisers, like her embarrassingly bad veep pick. I fear she won’t muster the political will to curb mass migration. And I fear that a failed Harris presidency will do more to turbocharge the far-right in this country than to diminish it.</p>
+        <p class="conversation" data-speaker="Gail">Gail: That does cover a lot …</p>
+        <p class="conversation" data-speaker="Bret">Bret: But I won’t fear that she’ll refuse to recognize the result of the next election should she lose it. And I won’t fear that Tim Walz is a cunning stooge who will always do the boss’s bidding no matter how unconstitutional it might be. And I won’t fear learning that an Arnold Palmer is now a reference to something other than lemonade and iced tea and a big golf swing.</p>
+        <p class="conversation" data-speaker="Bret">Bret: So I’d rather take my chances with a president whose competence I doubt and whose policies I dislike than one whose character I detest.</p>
+        <p class="conversation" data-speaker="Gail">Gail: I am hoping people will be spreading your word throughout the sane conservative neighborhoods of the country.</p>
+        <p class="conversation" data-speaker="Bret">Bret: “Sane conservative neighborhoods” are sparsely populated these days.</p>
+        <p class="conversation" data-speaker="Gail">Gail: As for all your other worries, they’re broad enough that I guess I’ll say … wait and see. This is a smart, experienced woman who’s come up through the ladder of government and politics, always making stuff work.</p>
+        <p class="conversation" data-speaker="Bret">Bret: Obviously, I hope you’re right. I’ll be relieved if she’s someone who knows what she doesn’t know, and is smart enough to surround herself with seasoned subordinates with bipartisan appeal.</p>
+        <p class="conversation" data-speaker="Gail">Gail: Of course, I want a president who’ll expand programs like child care, tackle crises like housing costs and listen to the folks who are living at the bottom. So maybe we’ll both agree on what she’s likely to try to do, but I’ll be the only one who’s happy if she does it.</p>
+        <p class="conversation" data-speaker="Bret">Bret: If it turns out that Harris does win the election thanks to the votes of center-right people in places like Wisconsin or Pennsylvania, she might want to thank them by governing toward the center, too.</p>
+        <p class="conversation" data-speaker="Gail">Gail: Any other big races you’re looking at? I kinda love Senate gossip.</p>
+        <p class="conversation" data-speaker="Bret">Bret: Wait, one more point, if you don’t mind, before getting to the other races. The other reason I’m voting for Harris is because I think this election may be the last chance for Reaganite conservatives like me — the ones who are for lower taxes, free trade, deregulation, free speech (including for those who don’t agree with me), a strong military and the defense of embattled allies like Ukraine — to drive a stake into the heart of Trumpism. If he wins, we’re going to be saddled with an isolationist and nativist conservative movement for generations to come.</p>
+        <p class="conversation" data-speaker="Bret">Bret: As for the Senate, I know it’s unlikely that Ted Cruz will lose his seat in Texas, but it’s fun to watch Colin Allred make him sweat. That being said, my vote for Harris also means I’d like to see the Senate switch to Republican control. Divided government is one that can’t do too much harm.</p>
+        <p class="conversation" data-speaker="Gail">Gail: I can see that theory works for you, but for those of us who would like to see things change — OK, sometimes in a direction you hate — Harris is a fine option and I’d like to see her with a Congress that can actually do stuff.</p>
+        <p class="conversation" data-speaker="Bret">Bret: Right. I’m not exactly a liberal.</p>
+        <p class="conversation" data-speaker="Gail">Gail: And, gee, Bret, even when it comes to Congress, you’re hoping to see the dreadful Ted Cruz lose. But tell me, if the balance of power in the Senate depended entirely on the Texas seat, who would you tell your fans in Texas to vote for?</p>
+        <p class="conversation" data-speaker="Bret">Bret: Assuming a Harris victory? If Cruz winning is the only way Republicans can control one house of Congress, I’d want him to win. Assuming a Trump victory? I’d want Cruz to lose by 20 points.</p>
+        <p class="conversation" data-speaker="Bret">Bret: But hey, we’re getting into fantasy football territory here. What did you think of Harris’s interview on Fox?</p>
+        <p class="conversation" data-speaker="Gail">Gail: I think she did just fine. The whole conservative establishment vision of her as an out-of-depth pol staggering once she had to confront right-wing news celebs turns out to be totally … nothing. It’s not as if she said anything earth-shattering. She was just a normal, sensible, very experienced politician with a normal, sensible agenda.</p>
+        <p class="conversation" data-speaker="Bret">Bret: A liberal friend — someone we both admire and respect — told me he thought her performance was “positively awful.” I pretty much agree. She can’t seem to go beyond a lame and limited set of talking points. But I give her credit for at least doing a tough interview, which is more than can be said of Trump.</p>
+        <p class="conversation" data-speaker="Gail">Gail: I know there was an era when we were yearning for somebody, um, more charismatic. Still remember those first Barack Obama campaign speeches during which normal Democratic women were swooning on the auditorium floor.</p>
+        <p class="conversation" data-speaker="Gail">Gail: Not getting that this time, but maybe that’s what the nation is hoping for. Somebody normal who isn’t nuts.</p>
+        <p class="conversation" data-speaker="Bret">Bret: Certainly a point in her favor, not that truly normal people really exist in American politics anymore. But, like Robert Plant and a big jet plane, I will take my chances with her.</p>
+        <p class="conversation" data-speaker="Bret">Bret: So, any late-breaking advice for her on how she clinches this thing?</p>
+        <p class="conversation" data-speaker="Gail">Gail: This is a really depressing question because the answer is pretty clearly to focus all her attention on the half-dozen or so swing states, like Pennsylvania and Wisconsin and Arizona. And completely ignore the rest of us, who live in places strongly Democratic or Republican.</p>
+        <p class="conversation" data-speaker="Bret">Bret: So much depends on about 100,000 or so voters spread out over roughly 22 counties. But I still think the best way she closes the sale is to announce a lineup of cabinet picks that reassures nervous voters that she’ll move to the center.</p>
+        <p class="conversation" data-speaker="Gail">Gail: Have I mentioned how much I hate the Electoral College? Tim Walz called for getting rid of it the other day, but the Harris people made him retract that. Because heaven forbid you offend the folks in Pennsylvania and …</p>
+        <p class="conversation" data-speaker="Bret">Bret: Well, yeah! I said from the minute Harris picked Walz that Democrats would come to regret him.</p>
+        <p class="conversation" data-speaker="Gail">Gail: OK, I’m done filibustering. Your turn. Give Harris some advice that doesn’t require a constitutional amendment.</p>
+        <p class="conversation" data-speaker="Bret">Bret: Sounding like a broken record here, but it wouldn’t hurt to announce a former general, like Stanley McChrystal, as her preferred pick as homeland security secretary. It tells a key voting bloc that she won’t be part of an administration that will be swamped again by illegal immigration.</p>
+        <p class="conversation" data-speaker="Gail">Gail: A while back you wanted her to announce half her cabinet in advance. I give you points for reducing your demands at the same time you … yippee! … promise to vote for her.</p>
+        <p class="conversation" data-speaker="Bret">Bret: I also think she needs to avoid gimmicks, like her recently announced plan to extend economic help directly and preferentially to Black men, including fully forgivable loans. It’s blatantly unconstitutional, a naked political pander, and economically damaging because forgivable loans reduce incentives to work and succeed. It’s also dumb politics: It alienates voters who are tired of identity politics as the dominant mode of liberal thinking and governance.</p>
+        <p class="conversation" data-speaker="Bret">Bret: I’m really not going to like her presidency, am I?</p>
+        <p class="conversation" data-speaker="Gail">Gail: Looking on the plus side here. Harris promises to fight for higher taxes on big corporations and rich individuals who, according to one study, would pay about $167,000 a year more — if their incomes were above $14 million.</p>
+        <p class="conversation" data-speaker="Gail">Gail: She’d use that money for everything from fighting climate change to encouraging the building of affordable housing. Sounds good to me.</p>
+        <p class="conversation" data-speaker="Gail">Gail: And hey, Bret — we’ll have so much to argue about. Can’t wait. Fingers crossed.</p>
+        <p class="conversation" data-speaker="Bret">Bret: You’re really not making this one easy for me, are you?</p>
+        <p class="conversation" data-speaker="Bret">Bret: Oh, before we go, be sure to read Alex Traub’s hilarious, humane and exceptionally delicate obit in The Times for Megan Marshack. Readers who know the difference between Happy and happy will recall the name.</p>
         <p class="muted">Gail Collins is a Times Opinion columnist focusing on domestic politics. @GailCollins • Facebook</p>
         <p class="muted">Bret Stephens is an Opinion columnist for The Times, writing about foreign policy, domestic politics and cultural issues. Facebook </p>
     </article>
@@ -203,6 +219,15 @@
                 const scrollPosition = window.scrollY;
                 const scrollPercentage = (scrollPosition / articleHeight) * 100;
                 progressBar.style.width = `${scrollPercentage}%`;
+            });
+            
+            // Add speaker-specific classes to conversation paragraphs
+            const conversationElements = document.querySelectorAll('.conversation');
+            conversationElements.forEach(element => {
+                const speaker = element.getAttribute('data-speaker');
+                if (speaker) {
+                    element.classList.add(speaker.toLowerCase());
+                }
             });
         });
     </script>
