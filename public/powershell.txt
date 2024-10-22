@@ -1,2142 +1,56 @@
 PowerShell 7.4.5
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\backup\flex14\nasa> ffmpeg -framerate 30 -i earth_%Y%m%d_%H%M%S.jpeg -c:v libx264 -pix_fmt yuv420p output.mp4
-ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
-  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
-  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
-  libavutil      59. 39.100 / 59. 39.100
-  libavcodec     61. 19.100 / 61. 19.100
-  libavformat    61.  7.100 / 61.  7.100
-  libavdevice    61.  3.100 / 61.  3.100
-  libavfilter    10.  4.100 / 10.  4.100
-  libswscale      8.  3.100 /  8.  3.100
-  libswresample   5.  3.100 /  5.  3.100
-  libpostproc    58.  3.100 / 58.  3.100
-[in#0 @ 0000017de1ded740] Error opening input: No such file or directory
-Error opening input file earth_%Y%m%d_%H%M%S.jpeg.
-Error opening input files: No such file or directory
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\backup\flex14\nasa> ffmpeg -framerate 30 -i *.jpeg -c:v libx264 -pix_fmt yuv420p "C:\Users\kushal\Videos\earth.mp4"
-ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
-  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
-  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
-  libavutil      59. 39.100 / 59. 39.100
-  libavcodec     61. 19.100 / 61. 19.100
-  libavformat    61.  7.100 / 61.  7.100
-  libavdevice    61.  3.100 / 61.  3.100
-  libavfilter    10.  4.100 / 10.  4.100
-  libswscale      8.  3.100 /  8.  3.100
-  libswresample   5.  3.100 /  5.  3.100
-  libpostproc    58.  3.100 / 58.  3.100
-[image2 @ 000001cccab18b40] Could find no file with path '*.jpeg' and index in the range 0-4
-[in#0 @ 000001cccab18740] Error opening input: No such file or directory
-Error opening input file *.jpeg.
-Error opening input files: No such file or directory
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\backup\flex14\nasa> dir
+PS C:\Users\kushal> date; cd "C:\Users\kushal\src\myhtml\matchthree\matchthree\"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master; date; git push origin master; date; cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
 
-    Directory: \\TP-Share\G\shared\backup\flex14\nasaMode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a---           9/28/2024  6:05 PM       13647839 earth_20240928_180533.jpeg
--a---           9/28/2024  6:08 PM       13647839 earth_20240928_180837.jpeg
--a---           9/28/2024  6:18 PM       13297922 earth_20240928_181843.jpeg
--a---           9/28/2024  6:28 PM       13174577 earth_20240928_182846.jpeg
--a---           9/28/2024  6:38 PM       13059570 earth_20240928_183849.jpeg
--a---           9/28/2024  6:48 PM       12952221 earth_20240928_184852.jpeg
--a---           9/28/2024  6:59 PM       12853437 earth_20240928_185856.jpeg
--a---           9/28/2024  7:09 PM       12853437 earth_20240928_190900.jpeg
--a---           9/28/2024  7:19 PM       12605828 earth_20240928_191906.jpeg
--a---           9/28/2024  7:29 PM       12473312 earth_20240928_192910.jpeg
--a---           9/28/2024  7:39 PM       12351789 earth_20240928_193913.jpeg
--a---           9/28/2024  7:49 PM       12194026 earth_20240928_194914.jpeg
--a---           9/28/2024  7:59 PM       12023784 earth_20240928_195917.jpeg
--a---           9/28/2024  8:09 PM       12023784 earth_20240928_200919.jpeg
--a---           9/28/2024  8:19 PM       11623530 earth_20240928_201920.jpeg
--a---           9/28/2024  8:31 PM       11410230 earth_20240928_203017.jpeg
--a---           9/28/2024  8:41 PM       11244036 earth_20240928_204125.jpeg
--a---           9/28/2024  8:51 PM       11088210 earth_20240928_205131.jpeg
--a---           9/28/2024  9:01 PM       10931732 earth_20240928_210134.jpeg
--a---           9/28/2024  9:12 PM       10931732 earth_20240928_211150.jpeg
--a---           9/28/2024  9:22 PM       10692162 earth_20240928_212226.jpeg
--a---           9/28/2024  9:32 PM       10592058 earth_20240928_213231.jpeg
--a---           9/28/2024  9:42 PM       10515446 earth_20240928_214234.jpeg
--a---           9/28/2024  9:52 PM       10427794 earth_20240928_215238.jpeg
--a---           9/28/2024 10:02 PM       10356820 earth_20240928_220243.jpeg
--a---           9/28/2024 10:12 PM       10356820 earth_20240928_221244.jpeg
--a---           9/28/2024 10:22 PM       10271456 earth_20240928_222246.jpeg
--a---           9/28/2024 10:32 PM       10250197 earth_20240928_223247.jpeg
--a---           9/28/2024 10:42 PM       10244915 earth_20240928_224248.jpeg
--a---           9/28/2024 10:52 PM       10262901 earth_20240928_225250.jpeg
--a---           9/28/2024 11:02 PM       10303138 earth_20240928_230251.jpeg
--a---           9/28/2024 11:12 PM       10303138 earth_20240928_231253.jpeg
--a---           9/28/2024 11:23 PM       10378204 earth_20240928_232254.jpeg
--a---           9/28/2024 11:33 PM       10399300 earth_20240928_233255.jpeg
--a---           9/28/2024 11:43 PM       10371843 earth_20240928_234257.jpeg
--a---           9/28/2024 11:53 PM       10381465 earth_20240928_235258.jpeg
--a---           9/29/2024 12:03 AM       10303580 earth_20240929_000300.jpeg
--a---           9/29/2024 12:13 AM       10303580 earth_20240929_001301.jpeg
--a---           9/29/2024 12:23 AM        9883549 earth_20240929_002302.jpeg
--a---           9/29/2024 12:33 AM        9663076 earth_20240929_003304.jpeg
--a---           9/29/2024 12:43 AM       10499013 earth_20240929_004305.jpeg
--a---           9/29/2024 12:53 AM       10585272 earth_20240929_005307.jpeg
--a---           9/29/2024  1:03 AM       10601222 earth_20240929_010308.jpeg
--a---           9/29/2024  1:13 AM       10601222 earth_20240929_011310.jpeg
--a---           9/29/2024  1:23 AM       10628852 earth_20240929_012311.jpeg
--a---           9/29/2024  1:33 AM        9955093 earth_20240929_013313.jpeg
--a---           9/29/2024  1:43 AM        9589653 earth_20240929_014315.jpeg
--a---           9/29/2024  1:53 AM        9956547 earth_20240929_015316.jpeg
--a---           9/29/2024  2:03 AM       10367723 earth_20240929_020318.jpeg
--a---           9/29/2024  2:13 AM       10367723 earth_20240929_021319.jpeg
--a---           9/29/2024  2:23 AM       10541788 earth_20240929_022321.jpeg
--a---           9/29/2024  2:33 AM       10587251 earth_20240929_023323.jpeg
--a---           9/29/2024  2:43 AM       10605139 earth_20240929_024325.jpeg
--a---           9/29/2024  2:53 AM       10610018 earth_20240929_025326.jpeg
--a---           9/29/2024  3:03 AM       10575356 earth_20240929_030328.jpeg
--a---           9/29/2024  3:13 AM       10575356 earth_20240929_031330.jpeg
--a---           9/29/2024  3:23 AM       10474473 earth_20240929_032331.jpeg
--a---           9/29/2024  3:33 AM       10410385 earth_20240929_033333.jpeg
--a---           9/29/2024  3:43 AM       10348516 earth_20240929_034335.jpeg
--a---           9/29/2024  3:53 AM       10274371 earth_20240929_035342.jpeg
--a---           9/29/2024  4:03 AM       10243676 earth_20240929_040344.jpeg
--a---           9/29/2024  4:13 AM       10243676 earth_20240929_041346.jpeg
--a---           9/29/2024  4:23 AM       10265058 earth_20240929_042347.jpeg
--a---           9/29/2024  4:33 AM       10331005 earth_20240929_043349.jpeg
--a---           9/29/2024  4:43 AM       10408227 earth_20240929_044351.jpeg
--a---           9/29/2024  4:53 AM       10488144 earth_20240929_045352.jpeg
--a---           9/29/2024  5:03 AM       10578606 earth_20240929_050354.jpeg
--a---           9/29/2024  5:13 AM       10578606 earth_20240929_051356.jpeg
--a---           9/29/2024  5:23 AM       10809998 earth_20240929_052358.jpeg
--a---           9/29/2024  5:34 AM       10954655 earth_20240929_053359.jpeg
--a---           9/29/2024  5:44 AM       11103823 earth_20240929_054401.jpeg
--a---           9/29/2024  5:54 AM       11232637 earth_20240929_055403.jpeg
--a---           9/29/2024  6:04 AM       11377196 earth_20240929_060405.jpeg
--a---           9/29/2024  6:14 AM       11377196 earth_20240929_061406.jpeg
--a---           9/29/2024  6:24 AM       11707958 earth_20240929_062408.jpeg
--a---           9/29/2024  6:34 AM       11886112 earth_20240929_063410.jpeg
--a---           9/29/2024  6:44 AM       12078181 earth_20240929_064412.jpeg
--a---           9/29/2024  6:54 AM       12253152 earth_20240929_065415.jpeg
--a---           9/29/2024  7:04 AM       12393587 earth_20240929_070418.jpeg
--a---           9/29/2024  7:14 AM       12393587 earth_20240929_071424.jpeg
--a---           9/29/2024  7:25 AM       12689012 earth_20240929_072445.jpeg
--a---           9/29/2024  7:36 AM       12804217 earth_20240929_073559.jpeg
--a---           9/29/2024  7:47 AM       13012420 earth_20240929_074659.jpeg
--a---           9/29/2024  7:57 AM       13051735 earth_20240929_075700.jpeg
--a---           9/29/2024  8:07 AM       13051735 earth_20240929_080721.jpeg
--a---           9/29/2024  8:17 AM       13181034 earth_20240929_081723.jpeg
--a---           9/29/2024  8:27 AM       12218355 earth_20240929_082725.jpeg
--a---           9/29/2024  8:37 AM       13418835 earth_20240929_083727.jpeg
--a---           9/29/2024  8:47 AM       13582727 earth_20240929_084731.jpeg
--a---           9/29/2024  8:57 AM       13762936 earth_20240929_085733.jpeg
--a---           9/29/2024  9:07 AM       13762936 earth_20240929_090734.jpeg
--a---           9/29/2024  9:17 AM       14115872 earth_20240929_091736.jpeg
--a---           9/29/2024  9:27 AM       14289295 earth_20240929_092738.jpeg
--a---           9/29/2024  9:37 AM       14479290 earth_20240929_093740.jpeg
--a---           9/29/2024  9:47 AM       14674467 earth_20240929_094742.jpeg
--a---           9/29/2024  9:57 AM       14884365 earth_20240929_095747.jpeg
--a---           9/29/2024 10:07 AM       14884365 earth_20240929_100749.jpeg
--a---           9/29/2024 10:17 AM       15407121 earth_20240929_101751.jpeg
--a---           9/29/2024 10:27 AM       15681624 earth_20240929_102753.jpeg
--a---           9/29/2024 10:37 AM       15949843 earth_20240929_103754.jpeg
--a---           9/29/2024 10:47 AM       16184258 earth_20240929_104756.jpeg
--a---           9/29/2024 10:58 AM       16341566 earth_20240929_105759.jpeg
--a---           9/29/2024 11:08 AM       16341566 earth_20240929_110802.jpeg
--a---           9/29/2024 11:18 AM       16527818 earth_20240929_111803.jpeg
--a---           9/29/2024 11:28 AM       16623538 earth_20240929_112805.jpeg
--a---           9/29/2024 11:38 AM       16711991 earth_20240929_113807.jpeg
--a---           9/29/2024 11:48 AM       16796599 earth_20240929_114810.jpeg
--a---           9/29/2024 11:58 AM       16878646 earth_20240929_115812.jpeg
--a---           9/29/2024 12:08 PM       16878646 earth_20240929_120814.jpeg
--a---           9/29/2024 12:18 PM       17016136 earth_20240929_121816.jpeg
--a---           9/29/2024 12:28 PM       17075896 earth_20240929_122818.jpeg
--a---           9/29/2024 12:38 PM       17141342 earth_20240929_123821.jpeg
--a---           9/29/2024 12:48 PM       17178366 earth_20240929_124823.jpeg
--a---           9/29/2024 12:58 PM       17222011 earth_20240929_125825.jpeg
--a---           9/29/2024  1:09 PM       17222011 earth_20240929_130827.jpeg
--a---           9/29/2024  1:19 PM       17350547 earth_20240929_131907.jpeg
--a---           9/29/2024  1:29 PM       17350691 earth_20240929_132909.jpeg
--a---           9/29/2024  1:39 PM       17327451 earth_20240929_133911.jpeg
--a---           9/29/2024  1:49 PM       17342131 earth_20240929_134914.jpeg
--a---           9/29/2024  1:59 PM       17358066 earth_20240929_135916.jpeg
--a---           9/29/2024  2:09 PM       17358066 earth_20240929_140919.jpeg
--a---           9/29/2024  2:19 PM       17371222 earth_20240929_141921.jpeg
--a---           9/29/2024  2:29 PM       17385933 earth_20240929_142923.jpeg
--a---           9/29/2024  2:39 PM       17395687 earth_20240929_143925.jpeg
--a---           9/29/2024  2:49 PM       17409135 earth_20240929_144927.jpeg
--a---           9/29/2024  2:59 PM       17424076 earth_20240929_145929.jpeg
--a---           9/29/2024  3:09 PM       17424076 earth_20240929_150932.jpeg
--a---           9/29/2024  3:19 PM       17352094 earth_20240929_151934.jpeg
--a---           9/29/2024  3:29 PM       17186220 earth_20240929_152936.jpeg
--a---           9/29/2024  3:39 PM       17009634 earth_20240929_153938.jpeg
--a---           9/29/2024  3:49 PM       16843145 earth_20240929_154941.jpeg
--a---           9/29/2024  3:59 PM       16651534 earth_20240929_155945.jpeg
--a---           9/29/2024  4:09 PM       16651534 earth_20240929_160957.jpeg
--a---           9/29/2024  4:20 PM       16203626 earth_20240929_161959.jpeg
--a---           9/29/2024  4:30 PM       15968094 earth_20240929_163003.jpeg
--a---           9/29/2024  4:40 PM       15724650 earth_20240929_164005.jpeg
--a---           9/29/2024  4:50 PM       15489298 earth_20240929_165008.jpeg
--a---           9/29/2024  5:00 PM       15266460 earth_20240929_170010.jpeg
--a---           9/29/2024  5:10 PM       15266460 earth_20240929_171012.jpeg
--a---           9/29/2024  5:20 PM       14829477 earth_20240929_172014.jpeg
--a---           9/29/2024  5:30 PM       14625676 earth_20240929_173017.jpeg
--a---           9/29/2024  5:40 PM       14432764 earth_20240929_174020.jpeg
--a---           9/29/2024  5:50 PM       14242262 earth_20240929_175022.jpeg
--a---           9/29/2024  6:00 PM       14033492 earth_20240929_180024.jpeg
--a---           9/29/2024  6:10 PM       14033492 earth_20240929_181026.jpeg
--a---           9/29/2024  6:20 PM       13633909 earth_20240929_182028.jpeg
--a---           9/29/2024  6:30 PM       13461430 earth_20240929_183030.jpeg
--a---           9/29/2024  6:40 PM       13320665 earth_20240929_184031.jpeg
--a---           9/29/2024  6:50 PM       13208591 earth_20240929_185033.jpeg
--a---           9/29/2024  7:00 PM       13104786 earth_20240929_190035.jpeg
--a---           9/29/2024  7:10 PM       13104786 earth_20240929_191037.jpeg
--a---           9/29/2024  7:20 PM       12822949 earth_20240929_192038.jpeg
--a---           9/29/2024  7:30 PM       12643948 earth_20240929_193039.jpeg
--a---           9/29/2024  7:40 PM       12457164 earth_20240929_194040.jpeg
--a---           9/29/2024  7:50 PM       12278752 earth_20240929_195041.jpeg
--a---           9/29/2024  8:00 PM       12109976 earth_20240929_200043.jpeg
--a---           9/29/2024  8:10 PM       12109976 earth_20240929_201044.jpeg
--a---           9/29/2024  8:21 PM       11729416 earth_20240929_202053.jpeg
--a---           9/29/2024  8:31 PM       11541122 earth_20240929_203058.jpeg
--a---           9/29/2024  8:41 PM       11355197 earth_20240929_204059.jpeg
--a---           9/29/2024  8:51 PM       11196216 earth_20240929_205100.jpeg
--a---           9/29/2024  9:01 PM       11024552 earth_20240929_210101.jpeg
--a---           9/29/2024  9:11 PM       11024552 earth_20240929_211102.jpeg
--a---           9/29/2024  9:21 PM       10791968 earth_20240929_212104.jpeg
--a---           9/29/2024  9:31 PM       10706031 earth_20240929_213105.jpeg
--a---           9/29/2024  9:41 PM       10623833 earth_20240929_214106.jpeg
--a---           9/29/2024  9:51 PM       10551085 earth_20240929_215107.jpeg
--a---           9/29/2024 10:01 PM       10495103 earth_20240929_220107.jpeg
--a---           9/29/2024 10:11 PM       10495103 earth_20240929_221108.jpeg
--a---           9/29/2024 10:21 PM       10374063 earth_20240929_222109.jpeg
--a---           9/29/2024 10:31 PM       10369629 earth_20240929_223109.jpeg
--a---           9/29/2024 10:41 PM       10361487 earth_20240929_224110.jpeg
--a---           9/29/2024 10:51 PM       10373488 earth_20240929_225111.jpeg
--a---           9/29/2024 11:01 PM       10389610 earth_20240929_230111.jpeg
--a---           9/29/2024 11:11 PM       10389610 earth_20240929_231113.jpeg
--a---           9/29/2024 11:21 PM       10418897 earth_20240929_232115.jpeg
--a---           9/29/2024 11:31 PM       10415397 earth_20240929_233117.jpeg
--a---           9/29/2024 11:41 PM       10430403 earth_20240929_234118.jpeg
--a---           9/29/2024 11:51 PM       10400751 earth_20240929_235120.jpeg
--a---           9/30/2024 12:01 AM       10334389 earth_20240930_000122.jpeg
--a---           9/30/2024 12:11 AM       10334389 earth_20240930_001123.jpeg
--a---           9/30/2024 12:21 AM        9915236 earth_20240930_002125.jpeg
--a---           9/30/2024 12:31 AM        9674843 earth_20240930_003127.jpeg
--a---           9/30/2024 12:41 AM       10560429 earth_20240930_004129.jpeg
--a---           9/30/2024 12:51 AM       10572086 earth_20240930_005130.jpeg
--a---           9/30/2024  1:01 AM       10601874 earth_20240930_010132.jpeg
--a---           9/30/2024  1:11 AM       10601874 earth_20240930_011133.jpeg
--a---           9/30/2024  1:21 AM       10617862 earth_20240930_012134.jpeg
--a---           9/30/2024  1:31 AM        9647208 earth_20240930_013135.jpeg
--a---           9/30/2024  1:41 AM        9682232 earth_20240930_014136.jpeg
--a---           9/30/2024  1:51 AM       10059228 earth_20240930_015137.jpeg
--a---           9/30/2024  2:01 AM       10390608 earth_20240930_020138.jpeg
--a---           9/30/2024  2:11 AM       10390608 earth_20240930_021139.jpeg
--a---           9/30/2024  2:21 AM       10537975 earth_20240930_022140.jpeg
--a---           9/30/2024  2:31 AM       10575714 earth_20240930_023141.jpeg
--a---           9/30/2024  2:41 AM       10590162 earth_20240930_024143.jpeg
--a---           9/30/2024  2:51 AM       10593691 earth_20240930_025145.jpeg
--a---           9/30/2024  3:01 AM       10566486 earth_20240930_030147.jpeg
--a---           9/30/2024  3:11 AM       10566486 earth_20240930_031149.jpeg
--a---           9/30/2024  3:21 AM       10469386 earth_20240930_032150.jpeg
--a---           9/30/2024  3:31 AM       10390666 earth_20240930_033152.jpeg
--a---           9/30/2024  3:41 AM       10317944 earth_20240930_034154.jpeg
--a---           9/30/2024  3:52 AM       10250969 earth_20240930_035155.jpeg
--a---           9/30/2024  4:02 AM       10202976 earth_20240930_040157.jpeg
--a---           9/30/2024  4:12 AM       10202976 earth_20240930_041159.jpeg
--a---           9/30/2024  4:22 AM       10229221 earth_20240930_042200.jpeg
--a---           9/30/2024  4:32 AM       10272250 earth_20240930_043202.jpeg
--a---           9/30/2024  4:42 AM       10365434 earth_20240930_044204.jpeg
--a---           9/30/2024  4:52 AM       10463899 earth_20240930_045205.jpeg
--a---           9/30/2024  5:02 AM       10549916 earth_20240930_050207.jpeg
--a---           9/30/2024  5:12 AM       10549916 earth_20240930_051209.jpeg
--a---           9/30/2024  5:22 AM       10794257 earth_20240930_052212.jpeg
--a---           9/30/2024  5:32 AM       10916841 earth_20240930_053213.jpeg
--a---           9/30/2024  5:42 AM       11064676 earth_20240930_054215.jpeg
--a---           9/30/2024  5:52 AM       11215412 earth_20240930_055217.jpeg
--a---           9/30/2024  6:02 AM       11381432 earth_20240930_060218.jpeg
--a---           9/30/2024  6:12 AM       11381432 earth_20240930_061220.jpeg
--a---           9/30/2024  6:22 AM       11750793 earth_20240930_062220.jpeg
--a---           9/30/2024  6:32 AM       11946364 earth_20240930_063221.jpeg
--a---           9/30/2024  6:42 AM       11946364 earth_20240930_064222.jpeg
--a---           9/30/2024  6:52 AM       12329044 earth_20240930_065222.jpeg
--a---           9/30/2024  7:02 AM       12437403 earth_20240930_070223.jpeg
--a---           9/30/2024  7:12 AM       12437403 earth_20240930_071228.jpeg
--a---           9/30/2024  7:22 AM       12825522 earth_20240930_072229.jpeg
--a---           9/30/2024  7:32 AM       13001604 earth_20240930_073230.jpeg
--a---           9/30/2024  7:42 AM       13145060 earth_20240930_074231.jpeg
--a---           9/30/2024  7:52 AM       13270555 earth_20240930_075232.jpeg
--a---           9/30/2024  8:02 AM       13375426 earth_20240930_080233.jpeg
--a---           9/30/2024  8:12 AM       13375426 earth_20240930_081234.jpeg
--a---           9/30/2024  8:22 AM       13630732 earth_20240930_082235.jpeg
--a---           9/30/2024  8:32 AM       13776496 earth_20240930_083236.jpeg
--a---           9/30/2024  8:42 AM       13931482 earth_20240930_084237.jpeg
--a---           9/30/2024  8:52 AM       14103194 earth_20240930_085238.jpeg
--a---           9/30/2024  9:02 AM       14258212 earth_20240930_090239.jpeg
--a---           9/30/2024  9:12 AM       14258212 earth_20240930_091240.jpeg
--a---           9/30/2024  9:22 AM       14551134 earth_20240930_092241.jpeg
--a---           9/30/2024  9:32 AM       14689908 earth_20240930_093242.jpeg
--a---           9/30/2024  9:42 AM       14837537 earth_20240930_094243.jpeg
--a---           9/30/2024  9:52 AM       14837537 earth_20240930_095244.jpeg
--a---           9/30/2024 10:02 AM       15193438 earth_20240930_100245.jpeg
--a---           9/30/2024 10:12 AM       15193438 earth_20240930_101247.jpeg
--a---           9/30/2024 10:22 AM       15659838 earth_20240930_102248.jpeg
--a---           9/30/2024 10:32 AM       15920860 earth_20240930_103249.jpeg
--a---           9/30/2024 10:42 AM       16179408 earth_20240930_104250.jpeg
--a---           9/30/2024 10:52 AM       16393201 earth_20240930_105251.jpeg
--a---           9/30/2024 11:02 AM       16532451 earth_20240930_110252.jpeg
--a---           9/30/2024 11:12 AM       16532451 earth_20240930_111253.jpeg
--a---           9/30/2024 11:22 AM       16730050 earth_20240930_112255.jpeg
--a---           9/30/2024 11:33 AM       16846203 earth_20240930_113257.jpeg
--a---           9/30/2024 11:43 AM       16944086 earth_20240930_114300.jpeg
--a---           9/30/2024 11:53 AM       17031094 earth_20240930_115302.jpeg
--a---           9/30/2024 12:03 PM       17119021 earth_20240930_120304.jpeg
--a---           9/30/2024 12:13 PM       17119021 earth_20240930_121306.jpeg
--a---           9/30/2024 12:23 PM       17278440 earth_20240930_122308.jpeg
--a---           9/30/2024 12:33 PM       17353749 earth_20240930_123310.jpeg
--a---           9/30/2024 12:43 PM       17421199 earth_20240930_124312.jpeg
--a---           9/30/2024 12:53 PM       17456195 earth_20240930_125315.jpeg
--a---           9/30/2024  1:03 PM       17500599 earth_20240930_130317.jpeg
--a---           9/30/2024  1:13 PM       17500599 earth_20240930_131318.jpeg
--a---           9/30/2024  1:23 PM       17614224 earth_20240930_132318.jpeg
--a---           9/30/2024  1:33 PM       17598642 earth_20240930_133320.jpeg
--a---           9/30/2024  1:43 PM       17576035 earth_20240930_134321.jpeg
--a---           9/30/2024  1:53 PM       17606306 earth_20240930_135322.jpeg
--a---           9/30/2024  2:03 PM       17633215 earth_20240930_140323.jpeg
--a---           9/30/2024  2:13 PM       17633215 earth_20240930_141325.jpeg
--a---           9/30/2024  2:23 PM       17678340 earth_20240930_142326.jpeg
--a---           9/30/2024  2:33 PM       17692423 earth_20240930_143327.jpeg
--a---           9/30/2024  2:43 PM       17697716 earth_20240930_144329.jpeg
--a---           9/30/2024  2:53 PM       17702211 earth_20240930_145330.jpeg
--a---           9/30/2024  3:03 PM       17712168 earth_20240930_150331.jpeg
--a---           9/30/2024  3:13 PM       17712168 earth_20240930_151332.jpeg
--a---           9/30/2024  3:23 PM       17674207 earth_20240930_152333.jpeg
--a---           9/30/2024  3:33 PM       17506222 earth_20240930_153335.jpeg
--a---           9/30/2024  3:43 PM       17399199 earth_20240930_154338.jpeg
--a---           9/30/2024  3:53 PM       17219702 earth_20240930_155342.jpeg
--a---           9/30/2024  4:03 PM       17007495 earth_20240930_160346.jpeg
--a---           9/30/2024  4:13 PM       17007495 earth_20240930_161348.jpeg
--a---           9/30/2024  4:23 PM       16539923 earth_20240930_162350.jpeg
--a---           9/30/2024  4:33 PM       16295002 earth_20240930_163353.jpeg
--a---           9/30/2024  4:44 PM       16035149 earth_20240930_164357.jpeg
--a---           9/30/2024  4:54 PM       15765495 earth_20240930_165401.jpeg
--a---           9/30/2024  5:04 PM       15490175 earth_20240930_170404.jpeg
--a---           9/30/2024  5:14 PM       15490175 earth_20240930_171406.jpeg
--a---           9/30/2024  5:24 PM       14963760 earth_20240930_172409.jpeg
--a---           9/30/2024  5:34 PM       14735279 earth_20240930_173412.jpeg
--a---           9/30/2024  5:44 PM       14521320 earth_20240930_174414.jpeg
--a---           9/30/2024  5:54 PM       14276061 earth_20240930_175416.jpeg
--a---           9/30/2024  6:04 PM       14013912 earth_20240930_180418.jpeg
--a---           9/30/2024  6:14 PM       14013912 earth_20240930_181420.jpeg
--a---           9/30/2024  6:24 PM       13457722 earth_20240930_182422.jpeg
--a---           9/30/2024  6:34 PM       13246008 earth_20240930_183424.jpeg
--a---           9/30/2024  6:44 PM       13060999 earth_20240930_184427.jpeg
--a---           9/30/2024  6:54 PM       12884277 earth_20240930_185429.jpeg
--a---           9/30/2024  7:04 PM       12717699 earth_20240930_190433.jpeg
--a---           9/30/2024  7:14 PM       12717699 earth_20240930_191434.jpeg
--a---           9/30/2024  7:24 PM       12348065 earth_20240930_192435.jpeg
--a---           9/30/2024  7:34 PM       12160942 earth_20240930_193437.jpeg
--a---           9/30/2024  7:44 PM       11970180 earth_20240930_194439.jpeg
--a---           9/30/2024  7:54 PM       11805699 earth_20240930_195442.jpeg
--a---           9/30/2024  8:04 PM       11643145 earth_20240930_200444.jpeg
--a---           9/30/2024  8:14 PM       11643145 earth_20240930_201446.jpeg
--a---           9/30/2024  8:24 PM       11327196 earth_20240930_202449.jpeg
--a---           9/30/2024  8:34 PM       11189063 earth_20240930_203451.jpeg
--a---           9/30/2024  8:44 PM       11030341 earth_20240930_204453.jpeg
--a---           9/30/2024  8:54 PM       10899238 earth_20240930_205455.jpeg
--a---           9/30/2024  9:05 PM       10737437 earth_20240930_210457.jpeg
--a---           9/30/2024  9:15 PM       10737437 earth_20240930_211458.jpeg
--a---           9/30/2024  9:25 PM       10523499 earth_20240930_212500.jpeg
--a---           9/30/2024  9:35 PM       10346986 earth_20240930_213502.jpeg
--a---           9/30/2024  9:45 PM       10346986 earth_20240930_214504.jpeg
--a---           9/30/2024  9:55 PM       10295181 earth_20240930_215505.jpeg
--a---           9/30/2024 10:05 PM       10255880 earth_20240930_220507.jpeg
--a---           9/30/2024 10:15 PM       10255880 earth_20240930_221509.jpeg
--a---           9/30/2024 10:25 PM       10177764 earth_20240930_222510.jpeg
--a---           9/30/2024 10:35 PM       10182460 earth_20240930_223512.jpeg
--a---           9/30/2024 10:45 PM       10192970 earth_20240930_224514.jpeg
--a---           9/30/2024 10:55 PM       10206130 earth_20240930_225515.jpeg
--a---           9/30/2024 11:05 PM       10206130 earth_20240930_230517.jpeg
--a---           9/30/2024 11:15 PM       10268425 earth_20240930_231519.jpeg
--a---           9/30/2024 11:25 PM       10289659 earth_20240930_232521.jpeg
--a---           9/30/2024 11:35 PM       10280979 earth_20240930_233523.jpeg
--a---           9/30/2024 11:45 PM       10280979 earth_20240930_234524.jpeg
--a---           9/30/2024 11:55 PM       10178521 earth_20240930_235526.jpeg
--a---           10/1/2024 12:05 AM       10178521 earth_20241001_000528.jpeg
--a---           10/1/2024 12:15 AM       10178521 earth_20241001_001530.jpeg
--a---           10/1/2024 12:25 AM        9436764 earth_20241001_002531.jpeg
--a---           10/1/2024 12:35 AM       10308157 earth_20241001_003533.jpeg
--a---           10/1/2024 12:45 AM       10308157 earth_20241001_004535.jpeg
--a---           10/1/2024 12:55 AM       10403332 earth_20241001_005536.jpeg
--a---           10/1/2024  1:05 AM       10403332 earth_20241001_010538.jpeg
--a---           10/1/2024  1:15 AM       10411182 earth_20241001_011540.jpeg
--a---           10/1/2024  1:25 AM        9546207 earth_20241001_012541.jpeg
--a---           10/1/2024  1:35 AM        9557779 earth_20241001_013543.jpeg
--a---           10/1/2024  1:45 AM        9957274 earth_20241001_014545.jpeg
--a---           10/1/2024  1:55 AM       10213939 earth_20241001_015547.jpeg
--a---           10/1/2024  2:05 AM       10213939 earth_20241001_020549.jpeg
--a---           10/1/2024  2:15 AM       10317623 earth_20241001_021551.jpeg
--a---           10/1/2024  2:25 AM       10358921 earth_20241001_022553.jpeg
--a---           10/1/2024  2:35 AM       10353474 earth_20241001_023554.jpeg
--a---           10/1/2024  2:46 AM       10353474 earth_20241001_024556.jpeg
--a---           10/1/2024  2:56 AM       10323714 earth_20241001_025558.jpeg
--a---           10/1/2024  3:06 AM       10323714 earth_20241001_030559.jpeg
--a---           10/1/2024  3:16 AM       10323714 earth_20241001_031601.jpeg
--a---           10/1/2024  3:26 AM       10323714 earth_20241001_032603.jpeg
--a---           10/1/2024  3:36 AM       10323714 earth_20241001_033604.jpeg
--a---           10/1/2024  3:46 AM       10323714 earth_20241001_034604.jpeg
--a---           10/1/2024  3:56 AM       10323714 earth_20241001_035605.jpeg
--a---           10/1/2024  4:06 AM       10323714 earth_20241001_040606.jpeg
--a---           10/1/2024  4:16 AM       10323714 earth_20241001_041607.jpeg
--a---           10/1/2024  4:26 AM       10323714 earth_20241001_042608.jpeg
--a---           10/1/2024  4:36 AM       10323714 earth_20241001_043609.jpeg
--a---           10/1/2024  4:46 AM       10323714 earth_20241001_044611.jpeg
--a---           10/1/2024  4:56 AM       10323714 earth_20241001_045612.jpeg
--a---           10/1/2024  5:06 AM       10323714 earth_20241001_050613.jpeg
--a---           10/1/2024  5:16 AM       10323714 earth_20241001_051614.jpeg
--a---           10/1/2024  5:26 AM       10323714 earth_20241001_052615.jpeg
--a---           10/1/2024  5:36 AM       10323714 earth_20241001_053617.jpeg
--a---           10/1/2024  5:46 AM       10323714 earth_20241001_054618.jpeg
--a---           10/1/2024  5:56 AM       10323714 earth_20241001_055619.jpeg
--a---           10/1/2024  6:06 AM       10323714 earth_20241001_060620.jpeg
--a---           10/1/2024  6:16 AM       10323714 earth_20241001_061621.jpeg
--a---           10/1/2024  6:26 AM       10323714 earth_20241001_062622.jpeg
--a---           10/1/2024  6:36 AM       10323714 earth_20241001_063623.jpeg
--a---           10/1/2024  6:46 AM       10323714 earth_20241001_064624.jpeg
--a---           10/1/2024  6:56 AM       10323714 earth_20241001_065625.jpeg
--a---           10/1/2024  7:06 AM       10323714 earth_20241001_070626.jpeg
--a---           10/1/2024  7:16 AM       10323714 earth_20241001_071631.jpeg
--a---           10/1/2024  7:26 AM       13036402 earth_20241001_072632.jpeg
--a---           10/1/2024  7:36 AM       13268455 earth_20241001_073633.jpeg
--a---           10/1/2024  7:46 AM       13476711 earth_20241001_074635.jpeg
--a---           10/1/2024  7:56 AM       13649173 earth_20241001_075636.jpeg
--a---           10/1/2024  8:06 AM       13649173 earth_20241001_080637.jpeg
--a---           10/1/2024  8:16 AM       13949802 earth_20241001_081639.jpeg
--a---           10/1/2024  8:26 AM       14102065 earth_20241001_082641.jpeg
--a---           10/1/2024  8:36 AM       14217955 earth_20241001_083644.jpeg
--a---           10/1/2024  8:46 AM       14318705 earth_20241001_084646.jpeg
--a---           10/1/2024  8:56 AM       14446180 earth_20241001_085649.jpeg
--a---           10/1/2024  9:06 AM       14446180 earth_20241001_090651.jpeg
--a---           10/1/2024  9:16 AM       14695295 earth_20241001_091653.jpeg
--a---           10/1/2024  9:26 AM       14811240 earth_20241001_092655.jpeg
--a---           10/1/2024  9:36 AM       14919067 earth_20241001_093658.jpeg
--a---           10/1/2024  9:47 AM       15034818 earth_20241001_094700.jpeg
--a---           10/1/2024  9:57 AM       15186368 earth_20241001_095702.jpeg
--a---           10/1/2024 10:07 AM       15186368 earth_20241001_100704.jpeg
--a---           10/1/2024 10:17 AM       15700158 earth_20241001_101707.jpeg
--a---           10/1/2024 10:27 AM       16050835 earth_20241001_102709.jpeg
--a---           10/1/2024 10:37 AM       16399853 earth_20241001_103711.jpeg
--a---           10/1/2024 10:47 AM       16676979 earth_20241001_104713.jpeg
--a---           10/1/2024 10:57 AM       16856774 earth_20241001_105715.jpeg
--a---           10/1/2024 11:07 AM       16978893 earth_20241001_110718.jpeg
--a---           10/1/2024 11:17 AM       17114814 earth_20241001_111721.jpeg
--a---           10/1/2024 11:27 AM       17248978 earth_20241001_112724.jpeg
--a---           10/1/2024 11:37 AM       17361708 earth_20241001_113726.jpeg
--a---           10/1/2024 11:47 AM       17457493 earth_20241001_114730.jpeg
--a---           10/1/2024 11:57 AM       17553962 earth_20241001_115732.jpeg
--a---           10/1/2024 12:07 PM       17648265 earth_20241001_120734.jpeg
--a---           10/1/2024 12:17 PM       17724498 earth_20241001_121737.jpeg
--a---           10/1/2024 12:27 PM       17724498 earth_20241001_122740.jpeg
--a---           10/1/2024 12:37 PM       17859000 earth_20241001_123742.jpeg
--a---           10/1/2024 12:47 PM       17909084 earth_20241001_124745.jpeg
--a---           10/1/2024 12:57 PM       17976818 earth_20241001_125747.jpeg
--a---           10/1/2024  1:07 PM       17976818 earth_20241001_130752.jpeg
--a---           10/1/2024  1:17 PM       18130362 earth_20241001_131754.jpeg
--a---           10/1/2024  1:27 PM       18136569 earth_20241001_132757.jpeg
--a---           10/1/2024  1:38 PM       18120975 earth_20241001_133759.jpeg
--a---           10/1/2024  1:48 PM       18157717 earth_20241001_134803.jpeg
--a---           10/1/2024  1:58 PM       18203758 earth_20241001_135806.jpeg
--a---           10/1/2024  2:08 PM       18236221 earth_20241001_140812.jpeg
--a---           10/1/2024  2:18 PM       18262698 earth_20241001_141814.jpeg
--a---           10/1/2024  2:28 PM       18280023 earth_20241001_142818.jpeg
--a---           10/1/2024  2:38 PM       18280034 earth_20241001_143825.jpeg
--a---           10/1/2024  2:48 PM       18270405 earth_20241001_144828.jpeg
--a---           10/1/2024  2:58 PM       18260430 earth_20241001_145833.jpeg
--a---           10/1/2024  3:08 PM       18236391 earth_20241001_150835.jpeg
--a---           10/1/2024  3:18 PM       18153600 earth_20241001_151838.jpeg
--a---           10/1/2024  3:28 PM       18015848 earth_20241001_152841.jpeg
--a---           10/1/2024  3:38 PM       17838606 earth_20241001_153844.jpeg
--a---           10/1/2024  3:48 PM       17644365 earth_20241001_154848.jpeg
--a---           10/1/2024  3:58 PM       17415009 earth_20241001_155850.jpeg
--a---           10/1/2024  4:08 PM       17153738 earth_20241001_160853.jpeg
--a---           10/1/2024  4:18 PM       17153738 earth_20241001_161856.jpeg
--a---           10/1/2024  4:29 PM       16657635 earth_20241001_162859.jpeg
--a---           10/1/2024  4:39 PM       16418329 earth_20241001_163902.jpeg
--a---           10/1/2024  4:49 PM       16158986 earth_20241001_164904.jpeg
--a---           10/1/2024  4:59 PM       15878895 earth_20241001_165906.jpeg
--a---           10/1/2024  5:09 PM       15596654 earth_20241001_170909.jpeg
--a---           10/1/2024  5:19 PM       15309483 earth_20241001_171911.jpeg
--a---           10/1/2024  5:29 PM       15034169 earth_20241001_172914.jpeg
--a---           10/1/2024  5:39 PM       14760336 earth_20241001_173916.jpeg
--a---           10/1/2024  5:49 PM       14494221 earth_20241001_174919.jpeg
--a---           10/1/2024  5:59 PM       14221907 earth_20241001_175919.jpeg
--a---           10/1/2024  6:09 PM       13941646 earth_20241001_180921.jpeg
--a---           10/1/2024  6:19 PM       13663372 earth_20241001_181923.jpeg
--a---           10/1/2024  6:29 PM       13415789 earth_20241001_182926.jpeg
--a---           10/1/2024  6:39 PM       13189322 earth_20241001_183930.jpeg
--a---           10/1/2024  6:49 PM       12979548 earth_20241001_184932.jpeg
--a---           10/1/2024  6:59 PM       12792300 earth_20241001_185934.jpeg
--a---           10/1/2024  7:09 PM       12631134 earth_20241001_190937.jpeg
--a---           10/1/2024  7:19 PM       12490193 earth_20241001_191939.jpeg
--a---           10/1/2024  7:29 PM       12343638 earth_20241001_192941.jpeg
--a---           10/1/2024  7:39 PM       12193529 earth_20241001_193943.jpeg
--a---           10/1/2024  7:49 PM       12029151 earth_20241001_194945.jpeg
--a---           10/1/2024  7:59 PM       11850173 earth_20241001_195948.jpeg
--a---           10/1/2024  8:09 PM       11642078 earth_20241001_200950.jpeg
--a---           10/1/2024  8:19 PM       11463647 earth_20241001_201952.jpeg
--a---           10/1/2024  8:29 PM       11328153 earth_20241001_202954.jpeg
--a---           10/1/2024  8:39 PM       11200839 earth_20241001_203955.jpeg
--a---           10/1/2024  8:50 PM       11067036 earth_20241001_204957.jpeg
--a---           10/1/2024  9:00 PM       10944637 earth_20241001_205959.jpeg
--a---           10/1/2024  9:10 PM       10803214 earth_20241001_211001.jpeg
--a---           10/1/2024  9:20 PM       10705185 earth_20241001_212003.jpeg
--a---           10/1/2024  9:30 PM       10611642 earth_20241001_213005.jpeg
--a---           10/1/2024  9:40 PM       10557513 earth_20241001_214006.jpeg
--a---           10/1/2024  9:50 PM       10504489 earth_20241001_215008.jpeg
--a---           10/1/2024 10:00 PM       10466192 earth_20241001_220010.jpeg
--a---           10/1/2024 10:10 PM       10431695 earth_20241001_221012.jpeg
--a---           10/1/2024 10:20 PM       10425495 earth_20241001_222014.jpeg
--a---           10/1/2024 10:30 PM       10412887 earth_20241001_223016.jpeg
--a---           10/1/2024 10:40 PM       10427141 earth_20241001_224018.jpeg
--a---           10/1/2024 10:50 PM       10471050 earth_20241001_225020.jpeg
--a---           10/1/2024 11:00 PM       10500678 earth_20241001_230021.jpeg
--a---           10/1/2024 11:10 PM       10530742 earth_20241001_231024.jpeg
--a---           10/1/2024 11:20 PM       10559685 earth_20241001_232026.jpeg
--a---           10/1/2024 11:30 PM       10571069 earth_20241001_233027.jpeg
--a---           10/1/2024 11:40 PM       10547892 earth_20241001_234029.jpeg
--a---           10/1/2024 11:50 PM       10520149 earth_20241001_235031.jpeg
--a---           10/2/2024 12:00 AM       10429125 earth_20241002_000033.jpeg
--a---           10/2/2024 12:10 AM       10282255 earth_20241002_001035.jpeg
--a---           10/2/2024 12:20 AM        9977011 earth_20241002_002037.jpeg
--a---           10/2/2024 12:30 AM        9587527 earth_20241002_003038.jpeg
--a---           10/2/2024 12:40 AM       10410125 earth_20241002_004040.jpeg
--a---           10/2/2024 12:50 AM       10653702 earth_20241002_005042.jpeg
--a---           10/2/2024  1:00 AM       10673664 earth_20241002_010043.jpeg
--a---           10/2/2024  1:10 AM       10673697 earth_20241002_011045.jpeg
--a---           10/2/2024  1:20 AM       10702092 earth_20241002_012047.jpeg
--a---           10/2/2024  1:30 AM        9872063 earth_20241002_013049.jpeg
--a---           10/2/2024  1:40 AM        9734398 earth_20241002_014050.jpeg
--a---           10/2/2024  1:50 AM       10134495 earth_20241002_015052.jpeg
--a---           10/2/2024  2:00 AM       10428772 earth_20241002_020054.jpeg
--a---           10/2/2024  2:10 AM       10550011 earth_20241002_021056.jpeg
--a---           10/2/2024  2:20 AM       10579842 earth_20241002_022056.jpeg
--a---           10/2/2024  2:30 AM       10588571 earth_20241002_023057.jpeg
--a---           10/2/2024  2:41 AM       10599917 earth_20241002_024058.jpeg
--a---           10/2/2024  2:51 AM       10577080 earth_20241002_025059.jpeg
--a---           10/2/2024  3:01 AM       10545183 earth_20241002_030059.jpeg
--a---           10/2/2024  3:11 AM       10499673 earth_20241002_031100.jpeg
--a---           10/2/2024  3:21 AM       10437824 earth_20241002_032102.jpeg
--a---           10/2/2024  3:31 AM       10385483 earth_20241002_033103.jpeg
--a---           10/2/2024  3:41 AM       10315608 earth_20241002_034104.jpeg
--a---           10/2/2024  3:51 AM       10315608 earth_20241002_035104.jpeg
--a---           10/2/2024  4:01 AM       10188440 earth_20241002_040105.jpeg
--a---           10/2/2024  4:11 AM       10197458 earth_20241002_041106.jpeg
--a---           10/2/2024  4:21 AM       10220727 earth_20241002_042107.jpeg
--a---           10/2/2024  4:31 AM       10270074 earth_20241002_043107.jpeg
--a---           10/2/2024  4:41 AM       10362313 earth_20241002_044108.jpeg
--a---           10/2/2024  4:51 AM       10493089 earth_20241002_045109.jpeg
--a---           10/2/2024  5:01 AM       10602611 earth_20241002_050110.jpeg
--a---           10/2/2024  5:11 AM       10729992 earth_20241002_051110.jpeg
--a---           10/2/2024  5:21 AM       10835577 earth_20241002_052111.jpeg
--a---           10/2/2024  5:31 AM       10920955 earth_20241002_053112.jpeg
--a---           10/2/2024  5:41 AM       11004450 earth_20241002_054112.jpeg
--a---           10/2/2024  5:51 AM       11136085 earth_20241002_055113.jpeg
--a---           10/2/2024  6:01 AM       11242979 earth_20241002_060114.jpeg
--a---           10/2/2024  6:11 AM       11423114 earth_20241002_061117.jpeg
--a---           10/2/2024  6:21 AM       11624926 earth_20241002_062119.jpeg
--a---           10/2/2024  6:31 AM       11843255 earth_20241002_063121.jpeg
--a---           10/2/2024  6:41 AM       12074955 earth_20241002_064123.jpeg
--a---           10/2/2024  6:51 AM       12308313 earth_20241002_065125.jpeg
--a---           10/2/2024  7:01 AM       12522235 earth_20241002_070127.jpeg
--a---           10/2/2024  7:11 AM       12717364 earth_20241002_071132.jpeg
--a---           10/2/2024  7:21 AM       12910413 earth_20241002_072134.jpeg
--a---           10/2/2024  7:31 AM       13085363 earth_20241002_073136.jpeg
--a---           10/2/2024  7:41 AM       13268837 earth_20241002_074138.jpeg
--a---           10/2/2024  7:51 AM       13464681 earth_20241002_075140.jpeg
--a---           10/2/2024  8:01 AM       13615909 earth_20241002_080142.jpeg
--a---           10/2/2024  8:11 AM       13615909 earth_20241002_081144.jpeg
--a---           10/2/2024  8:21 AM       13927163 earth_20241002_082146.jpeg
--a---           10/2/2024  8:31 AM       14089637 earth_20241002_083148.jpeg
--a---           10/2/2024  8:41 AM       14258701 earth_20241002_084151.jpeg
--a---           10/2/2024  8:51 AM       14442710 earth_20241002_085153.jpeg
--a---           10/2/2024  9:01 AM       14442710 earth_20241002_090155.jpeg
--a---           10/2/2024  9:12 AM       14442710 earth_20241002_091159.jpeg
--a---           10/2/2024  9:22 AM       15101782 earth_20241002_092202.jpeg
--a---           10/2/2024  9:32 AM       15285132 earth_20241002_093205.jpeg
--a---           10/2/2024  9:42 AM       15443818 earth_20241002_094207.jpeg
--a---           10/2/2024  9:52 AM       15600609 earth_20241002_095210.jpeg
--a---           10/2/2024 10:02 AM       15820492 earth_20241002_100212.jpeg
--a---           10/2/2024 10:12 AM       15820492 earth_20241002_101216.jpeg
--a---           10/2/2024 10:22 AM       16444558 earth_20241002_102218.jpeg
--a---           10/2/2024 10:32 AM       16796615 earth_20241002_103220.jpeg
--a---           10/2/2024 10:42 AM       17159218 earth_20241002_104225.jpeg
--a---           10/2/2024 10:52 AM       17464789 earth_20241002_105228.jpeg
--a---           10/2/2024 11:02 AM       17671631 earth_20241002_110230.jpeg
--a---           10/2/2024 11:12 AM       17671631 earth_20241002_111233.jpeg
--a---           10/2/2024 11:22 AM       17974478 earth_20241002_112235.jpeg
--a---           10/2/2024 11:32 AM       18134246 earth_20241002_113238.jpeg
--a---           10/2/2024 11:42 AM       18255181 earth_20241002_114239.jpeg
--a---           10/2/2024 11:52 AM       18361281 earth_20241002_115240.jpeg
--a---           10/2/2024 12:02 PM       18455263 earth_20241002_120241.jpeg
--a---           10/2/2024 12:12 PM       18455263 earth_20241002_121242.jpeg
--a---           10/2/2024 12:22 PM       18618716 earth_20241002_122243.jpeg
--a---           10/2/2024 12:32 PM       18723040 earth_20241002_123244.jpeg
--a---           10/2/2024 12:42 PM       18839131 earth_20241002_124246.jpeg
--a---           10/2/2024 12:52 PM       18887216 earth_20241002_125247.jpeg
--a---           10/2/2024  1:02 PM       18883313 earth_20241002_130248.jpeg
--a---           10/2/2024  1:12 PM       18832885 earth_20241002_131249.jpeg
--a---           10/2/2024  1:22 PM       18744572 earth_20241002_132250.jpeg
--a---           10/2/2024  1:32 PM       18624201 earth_20241002_133251.jpeg
--a---           10/2/2024  1:42 PM       18543070 earth_20241002_134252.jpeg
--a---           10/2/2024  1:52 PM       18511318 earth_20241002_135253.jpeg
--a---           10/2/2024  2:02 PM       18497498 earth_20241002_140254.jpeg
--a---           10/2/2024  2:12 PM       18497498 earth_20241002_141255.jpeg
--a---           10/2/2024  2:22 PM       18494743 earth_20241002_142256.jpeg
--a---           10/2/2024  2:32 PM       18480393 earth_20241002_143257.jpeg
--a---           10/2/2024  2:42 PM       18454298 earth_20241002_144258.jpeg
--a---           10/2/2024  2:53 PM       18412774 earth_20241002_145300.jpeg
--a---           10/2/2024  3:03 PM       18379222 earth_20241002_150302.jpeg
--a---           10/2/2024  3:13 PM       18337625 earth_20241002_151304.jpeg
--a---           10/2/2024  3:23 PM       18249019 earth_20241002_152306.jpeg
--a---           10/2/2024  3:33 PM       18123022 earth_20241002_153309.jpeg
--a---           10/2/2024  3:43 PM       17981859 earth_20241002_154312.jpeg
--a---           10/2/2024  3:53 PM       17830680 earth_20241002_155314.jpeg
--a---           10/2/2024  4:03 PM       17621998 earth_20241002_160317.jpeg
--a---           10/2/2024  4:13 PM       17358431 earth_20241002_161319.jpeg
--a---           10/2/2024  4:23 PM       17048941 earth_20241002_162321.jpeg
--a---           10/2/2024  4:33 PM       16733363 earth_20241002_163325.jpeg
--a---           10/2/2024  4:43 PM       16447251 earth_20241002_164328.jpeg
--a---           10/2/2024  4:53 PM       16238357 earth_20241002_165330.jpeg
--a---           10/2/2024  5:03 PM       16001986 earth_20241002_170333.jpeg
--a---           10/2/2024  5:13 PM       15752580 earth_20241002_171334.jpeg
--a---           10/2/2024  5:23 PM       15510398 earth_20241002_172336.jpeg
--a---           10/2/2024  5:33 PM       15238173 earth_20241002_173338.jpeg
--a---           10/2/2024  5:43 PM       14975123 earth_20241002_174341.jpeg
--a---           10/2/2024  5:53 PM       14704116 earth_20241002_175344.jpeg
--a---           10/2/2024  6:03 PM       14399390 earth_20241002_180346.jpeg
--a---           10/2/2024  6:13 PM       14100352 earth_20241002_181348.jpeg
--a---           10/2/2024  6:23 PM       13839475 earth_20241002_182350.jpeg
--a---           10/2/2024  6:33 PM       13607966 earth_20241002_183352.jpeg
--a---           10/2/2024  6:43 PM       13375562 earth_20241002_184354.jpeg
--a---           10/2/2024  6:53 PM       13141993 earth_20241002_185356.jpeg
--a---           10/2/2024  7:04 PM       12893736 earth_20241002_190358.jpeg
--a---           10/2/2024  7:14 PM       12667462 earth_20241002_191400.jpeg
--a---           10/2/2024  7:24 PM       12447252 earth_20241002_192402.jpeg
--a---           10/2/2024  7:34 PM       12234304 earth_20241002_193404.jpeg
--a---           10/2/2024  7:44 PM       12020899 earth_20241002_194406.jpeg
--a---           10/2/2024  7:54 PM       11810550 earth_20241002_195408.jpeg
--a---           10/2/2024  8:04 PM       11603389 earth_20241002_200410.jpeg
--a---           10/2/2024  8:14 PM       11386204 earth_20241002_201412.jpeg
--a---           10/2/2024  8:24 PM       11189077 earth_20241002_202415.jpeg
--a---           10/2/2024  8:34 PM       10986718 earth_20241002_203417.jpeg
--a---           10/2/2024  8:44 PM       10858202 earth_20241002_204419.jpeg
--a---           10/2/2024  8:54 PM       10750414 earth_20241002_205421.jpeg
--a---           10/2/2024  9:04 PM       10658254 earth_20241002_210423.jpeg
--a---           10/2/2024  9:14 PM       10533620 earth_20241002_211426.jpeg
--a---           10/2/2024  9:24 PM       10431299 earth_20241002_212427.jpeg
--a---           10/2/2024  9:34 PM       10354237 earth_20241002_213429.jpeg
--a---           10/2/2024  9:44 PM       10293465 earth_20241002_214431.jpeg
--a---           10/2/2024  9:54 PM       10221832 earth_20241002_215433.jpeg
--a---           10/2/2024 10:04 PM       10187740 earth_20241002_220435.jpeg
--a---           10/2/2024 10:14 PM       10167211 earth_20241002_221436.jpeg
--a---           10/2/2024 10:24 PM       10159899 earth_20241002_222438.jpeg
--a---           10/2/2024 10:34 PM       10184234 earth_20241002_223440.jpeg
--a---           10/2/2024 10:44 PM       10224477 earth_20241002_224441.jpeg
--a---           10/2/2024 10:54 PM       10234193 earth_20241002_225442.jpeg
--a---           10/2/2024 11:04 PM       10305795 earth_20241002_230444.jpeg
--a---           10/2/2024 11:14 PM       10354435 earth_20241002_231446.jpeg
--a---           10/2/2024 11:24 PM       10365440 earth_20241002_232448.jpeg
--a---           10/2/2024 11:34 PM       10432366 earth_20241002_233450.jpeg
--a---           10/2/2024 11:44 PM       10395576 earth_20241002_234452.jpeg
--a---           10/2/2024 11:54 PM       10392873 earth_20241002_235453.jpeg
--a---           10/3/2024 12:04 AM       10323793 earth_20241003_000455.jpeg
--a---           10/3/2024 12:15 AM       10141289 earth_20241003_001457.jpeg
--a---           10/3/2024 12:25 AM        9832817 earth_20241003_002500.jpeg
--a---           10/3/2024 12:35 AM        9379125 earth_20241003_003502.jpeg
--a---           10/3/2024 12:45 AM       10605363 earth_20241003_004503.jpeg
--a---           10/3/2024 12:55 AM       10628170 earth_20241003_005505.jpeg
--a---           10/3/2024  1:05 AM       10628170 earth_20241003_010507.jpeg
--a---           10/3/2024  1:15 AM       10632789 earth_20241003_011508.jpeg
--a---           10/3/2024  1:25 AM        9806204 earth_20241003_012509.jpeg
--a---           10/3/2024  1:35 AM        9719750 earth_20241003_013511.jpeg
--a---           10/3/2024  1:45 AM       10060306 earth_20241003_014513.jpeg
--a---           10/3/2024  1:55 AM       10060306 earth_20241003_015514.jpeg
--a---           10/3/2024  2:05 AM       10364696 earth_20241003_020516.jpeg
--a---           10/3/2024  2:15 AM       10447691 earth_20241003_021517.jpeg
--a---           10/3/2024  2:25 AM       10511512 earth_20241003_022519.jpeg
--a---           10/3/2024  2:35 AM       10526477 earth_20241003_023521.jpeg
--a---           10/3/2024  2:45 AM       10511348 earth_20241003_024523.jpeg
--a---           10/3/2024  2:55 AM       10458287 earth_20241003_025525.jpeg
--a---           10/3/2024  3:05 AM       10458287 earth_20241003_030527.jpeg
--a---           10/3/2024  3:15 AM       10394996 earth_20241003_031528.jpeg
--a---           10/3/2024  3:25 AM       10327178 earth_20241003_032531.jpeg
--a---           10/3/2024  3:35 AM       10195439 earth_20241003_033534.jpeg
--a---           10/3/2024  3:45 AM       10169305 earth_20241003_034535.jpeg
--a---           10/3/2024  3:55 AM       10132875 earth_20241003_035537.jpeg
--a---           10/3/2024  4:05 AM       10132875 earth_20241003_040538.jpeg
--a---           10/3/2024  4:15 AM       10169126 earth_20241003_041539.jpeg
--a---           10/3/2024  4:25 AM       10234895 earth_20241003_042539.jpeg
--a---           10/3/2024  4:35 AM       10327304 earth_20241003_043540.jpeg
--a---           10/3/2024  4:45 AM       10415846 earth_20241003_044541.jpeg
--a---           10/3/2024  4:55 AM       10519621 earth_20241003_045542.jpeg
--a---           10/3/2024  5:05 AM       10519621 earth_20241003_050543.jpeg
--a---           10/3/2024  5:15 AM       10774322 earth_20241003_051543.jpeg
--a---           10/3/2024  5:25 AM       10774322 earth_20241003_052544.jpeg
--a---           10/3/2024  5:35 AM       10904956 earth_20241003_053545.jpeg
--a---           10/3/2024  5:45 AM       11036008 earth_20241003_054546.jpeg
--a---           10/3/2024  5:55 AM       11271532 earth_20241003_055547.jpeg
--a---           10/3/2024  6:05 AM       11271532 earth_20241003_060548.jpeg
--a---           10/3/2024  6:15 AM       11607799 earth_20241003_061549.jpeg
--a---           10/3/2024  6:25 AM       11783592 earth_20241003_062549.jpeg
--a---           10/3/2024  6:35 AM       12006412 earth_20241003_063550.jpeg
--a---           10/3/2024  6:45 AM       12207823 earth_20241003_064551.jpeg
--a---           10/3/2024  6:55 AM       12391374 earth_20241003_065552.jpeg
--a---           10/3/2024  7:05 AM       12391374 earth_20241003_070554.jpeg
--a---           10/3/2024  7:16 AM       12587624 earth_20241003_071559.jpeg
--a---           10/3/2024  7:26 AM       12932022 earth_20241003_072602.jpeg
--a---           10/3/2024  7:36 AM       12932022 earth_20241003_073604.jpeg
--a---           10/3/2024  7:46 AM       13383798 earth_20241003_074606.jpeg
--a---           10/3/2024  7:56 AM       13383798 earth_20241003_075608.jpeg
--a---           10/3/2024  8:06 AM       13575849 earth_20241003_080610.jpeg
--a---           10/3/2024  8:16 AM       13878601 earth_20241003_081612.jpeg
--a---           10/3/2024  8:26 AM       13878601 earth_20241003_082614.jpeg
--a---           10/3/2024  8:36 AM       14200991 earth_20241003_083616.jpeg
--a---           10/3/2024  8:46 AM       14393960 earth_20241003_084619.jpeg
--a---           10/3/2024  8:56 AM       14574108 earth_20241003_085621.jpeg
--a---           10/3/2024  9:06 AM       14574108 earth_20241003_090623.jpeg
--a---           10/3/2024  9:16 AM       14936933 earth_20241003_091625.jpeg
--a---           10/3/2024  9:26 AM       14936933 earth_20241003_092629.jpeg
--a---           10/3/2024  9:36 AM       15068658 earth_20241003_093631.jpeg
--a---           10/3/2024  9:46 AM       15298067 earth_20241003_094634.jpeg
--a---           10/3/2024  9:56 AM       15473234 earth_20241003_095636.jpeg
--a---           10/3/2024 10:06 AM       15473234 earth_20241003_100638.jpeg
--a---           10/3/2024 10:16 AM       16003477 earth_20241003_101641.jpeg
--a---           10/3/2024 10:26 AM       16320779 earth_20241003_102644.jpeg
--a---           10/3/2024 10:36 AM       16637751 earth_20241003_103647.jpeg
--a---           10/3/2024 10:46 AM       16897683 earth_20241003_104651.jpeg
--a---           10/3/2024 10:56 AM       17086470 earth_20241003_105654.jpeg
--a---           10/3/2024 11:07 AM       17086470 earth_20241003_110656.jpeg
--a---           10/3/2024 11:17 AM       17357625 earth_20241003_111700.jpeg
--a---           10/3/2024 11:27 AM       17512277 earth_20241003_112704.jpeg
--a---           10/3/2024 11:37 AM       17641817 earth_20241003_113707.jpeg
--a---           10/3/2024 11:47 AM       17754335 earth_20241003_114711.jpeg
--a---           10/3/2024 11:57 AM       17840920 earth_20241003_115713.jpeg
--a---           10/3/2024 12:07 PM       17840920 earth_20241003_120716.jpeg
--a---           10/3/2024 12:17 PM       17958266 earth_20241003_121718.jpeg
--a---           10/3/2024 12:27 PM       18006259 earth_20241003_122721.jpeg
--a---           10/3/2024 12:37 PM       18047738 earth_20241003_123725.jpeg
--a---           10/3/2024 12:47 PM       18090749 earth_20241003_124727.jpeg
--a---           10/3/2024 12:57 PM       18145438 earth_20241003_125731.jpeg
--a---           10/3/2024  1:07 PM       18201320 earth_20241003_130733.jpeg
--a---           10/3/2024  1:17 PM       18211259 earth_20241003_131737.jpeg
--a---           10/3/2024  1:27 PM       18147232 earth_20241003_132740.jpeg
--a---           10/3/2024  1:37 PM       18103318 earth_20241003_133744.jpeg
--a---           10/3/2024  1:47 PM       18094549 earth_20241003_134746.jpeg
--a---           10/3/2024  1:57 PM       18087809 earth_20241003_135749.jpeg
--a---           10/3/2024  2:07 PM       18068146 earth_20241003_140753.jpeg
--a---           10/3/2024  2:17 PM       18045793 earth_20241003_141756.jpeg
--a---           10/3/2024  2:28 PM       18011236 earth_20241003_142800.jpeg
--a---           10/3/2024  2:38 PM       17962347 earth_20241003_143802.jpeg
--a---           10/3/2024  2:48 PM       17915209 earth_20241003_144805.jpeg
--a---           10/3/2024  2:58 PM       17868046 earth_20241003_145807.jpeg
--a---           10/3/2024  3:08 PM       17868046 earth_20241003_150809.jpeg
--a---           10/3/2024  3:18 PM       17690333 earth_20241003_151812.jpeg
--a---           10/3/2024  3:28 PM       17532742 earth_20241003_152815.jpeg
--a---           10/3/2024  3:38 PM       17335645 earth_20241003_153818.jpeg
--a---           10/3/2024  3:48 PM       17099484 earth_20241003_154820.jpeg
--a---           10/3/2024  3:58 PM       16823701 earth_20241003_155823.jpeg
--a---           10/3/2024  4:08 PM       16525389 earth_20241003_160826.jpeg
--a---           10/3/2024  4:18 PM       16285227 earth_20241003_161829.jpeg
--a---           10/3/2024  4:28 PM       16065002 earth_20241003_162833.jpeg
--a---           10/3/2024  4:38 PM       15848820 earth_20241003_163838.jpeg
--a---           10/3/2024  4:48 PM       15634769 earth_20241003_164840.jpeg
--a---           10/3/2024  4:58 PM       15388400 earth_20241003_165843.jpeg
--a---           10/3/2024  5:08 PM       15154229 earth_20241003_170845.jpeg
--a---           10/3/2024  5:18 PM       14923442 earth_20241003_171847.jpeg
--a---           10/3/2024  5:28 PM       14688850 earth_20241003_172849.jpeg
--a---           10/3/2024  5:38 PM       14471316 earth_20241003_173851.jpeg
--a---           10/3/2024  5:48 PM       14210628 earth_20241003_174854.jpeg
--a---           10/3/2024  5:58 PM       13938753 earth_20241003_175856.jpeg
--a---           10/3/2024  6:09 PM       13660488 earth_20241003_180857.jpeg
--a---           10/3/2024  6:19 PM       13420923 earth_20241003_181859.jpeg
--a---           10/3/2024  6:29 PM       13195301 earth_20241003_182901.jpeg
--a---           10/3/2024  6:39 PM       12970028 earth_20241003_183903.jpeg
--a---           10/3/2024  6:49 PM       12757524 earth_20241003_184904.jpeg
--a---           10/3/2024  6:59 PM       12555987 earth_20241003_185905.jpeg
--a---           10/3/2024  7:09 PM       12390680 earth_20241003_190907.jpeg
--a---           10/3/2024  7:19 PM       12208587 earth_20241003_191908.jpeg
--a---           10/3/2024  7:29 PM       12056602 earth_20241003_192910.jpeg
--a---           10/3/2024  7:39 PM       11881492 earth_20241003_193911.jpeg
--a---           10/3/2024  7:49 PM       11694313 earth_20241003_194913.jpeg
--a---           10/3/2024  7:59 PM       11485284 earth_20241003_195916.jpeg
--a---           10/3/2024  8:09 PM       11275676 earth_20241003_200918.jpeg
--a---           10/3/2024  8:19 PM       11106375 earth_20241003_201920.jpeg
--a---           10/3/2024  8:29 PM       10947638 earth_20241003_202922.jpeg
--a---           10/3/2024  8:39 PM       10801571 earth_20241003_203924.jpeg
--a---           10/3/2024  8:49 PM       10697557 earth_20241003_204925.jpeg
--a---           10/3/2024  8:59 PM       10612798 earth_20241003_205927.jpeg
--a---           10/3/2024  9:09 PM       10534711 earth_20241003_210929.jpeg
--a---           10/3/2024  9:19 PM       10492702 earth_20241003_211931.jpeg
--a---           10/3/2024  9:29 PM       10461191 earth_20241003_212932.jpeg
--a---           10/3/2024  9:39 PM       10395778 earth_20241003_213934.jpeg
--a---           10/3/2024  9:49 PM       10316385 earth_20241003_214936.jpeg
--a---           10/3/2024  9:59 PM       10253534 earth_20241003_215938.jpeg
--a---           10/3/2024 10:09 PM       10219853 earth_20241003_220939.jpeg
--a---           10/3/2024 10:19 PM       10235629 earth_20241003_221941.jpeg
--a---           10/3/2024 10:29 PM       10227555 earth_20241003_222943.jpeg
--a---           10/3/2024 10:39 PM       10278376 earth_20241003_223944.jpeg
--a---           10/3/2024 10:49 PM       10289325 earth_20241003_224946.jpeg
--a---           10/3/2024 10:59 PM       10333776 earth_20241003_225947.jpeg
--a---           10/3/2024 11:09 PM       10356962 earth_20241003_230947.jpeg
--a---           10/3/2024 11:19 PM       10402813 earth_20241003_231949.jpeg
--a---           10/3/2024 11:29 PM       10416929 earth_20241003_232950.jpeg
--a---           10/3/2024 11:39 PM       10404737 earth_20241003_233951.jpeg
--a---           10/3/2024 11:49 PM       10381409 earth_20241003_234953.jpeg
--a---           10/3/2024 11:59 PM       10316394 earth_20241003_235955.jpeg
--a---           10/4/2024 12:09 AM       10147349 earth_20241004_000956.jpeg
--a---           10/4/2024 12:20 AM        9773510 earth_20241004_001958.jpeg
--a---           10/4/2024 12:30 AM        9205842 earth_20241004_003000.jpeg
--a---           10/4/2024 12:40 AM        9984381 earth_20241004_004001.jpeg
--a---           10/4/2024 12:50 AM       10540614 earth_20241004_005003.jpeg
--a---           10/4/2024  1:00 AM       10556244 earth_20241004_010004.jpeg
--a---           10/4/2024  1:10 AM       10557408 earth_20241004_011006.jpeg
--a---           10/4/2024  1:20 AM       10579480 earth_20241004_012008.jpeg
--a---           10/4/2024  1:30 AM        9742576 earth_20241004_013009.jpeg
--a---           10/4/2024  1:40 AM        9657118 earth_20241004_014012.jpeg
--a---           10/4/2024  1:50 AM       10041323 earth_20241004_015014.jpeg
--a---           10/4/2024  2:00 AM       10303335 earth_20241004_020016.jpeg
--a---           10/4/2024  2:10 AM       10409114 earth_20241004_021017.jpeg
--a---           10/4/2024  2:20 AM       10459774 earth_20241004_022019.jpeg
--a---           10/4/2024  2:30 AM       10481425 earth_20241004_023021.jpeg
--a---           10/4/2024  2:40 AM       10453541 earth_20241004_024023.jpeg
--a---           10/4/2024  2:50 AM       10430325 earth_20241004_025025.jpeg
--a---           10/4/2024  3:00 AM       10380975 earth_20241004_030027.jpeg
--a---           10/4/2024  3:10 AM       10320276 earth_20241004_031028.jpeg
--a---           10/4/2024  3:20 AM       10269057 earth_20241004_032030.jpeg
--a---           10/4/2024  3:30 AM       10192905 earth_20241004_033032.jpeg
--a---           10/4/2024  3:40 AM       10136719 earth_20241004_034034.jpeg
--a---           10/4/2024  3:50 AM       10082362 earth_20241004_035036.jpeg
--a---           10/4/2024  4:00 AM       10081305 earth_20241004_040038.jpeg
--a---           10/4/2024  4:10 AM       10084892 earth_20241004_041039.jpeg
--a---           10/4/2024  4:20 AM       10105606 earth_20241004_042041.jpeg
--a---           10/4/2024  4:30 AM       10190897 earth_20241004_043043.jpeg
--a---           10/4/2024  4:40 AM       10316048 earth_20241004_044045.jpeg
--a---           10/4/2024  4:50 AM       10425954 earth_20241004_045047.jpeg
--a---           10/4/2024  5:00 AM       10537565 earth_20241004_050048.jpeg
--a---           10/4/2024  5:10 AM       10665121 earth_20241004_051049.jpeg
--a---           10/4/2024  5:20 AM       10802283 earth_20241004_052051.jpeg
--a---           10/4/2024  5:30 AM       10916488 earth_20241004_053052.jpeg
--a---           10/4/2024  5:40 AM       11074180 earth_20241004_054053.jpeg
--a---           10/4/2024  5:50 AM       11214243 earth_20241004_055055.jpeg
--a---           10/4/2024  6:01 AM       11359499 earth_20241004_060056.jpeg
--a---           10/4/2024  6:11 AM       11548663 earth_20241004_061057.jpeg
--a---           10/4/2024  6:21 AM       11691727 earth_20241004_062059.jpeg
--a---           10/4/2024  6:31 AM       11898787 earth_20241004_063101.jpeg
--a---           10/4/2024  6:41 AM       12082180 earth_20241004_064103.jpeg
--a---           10/4/2024  6:51 AM       12271151 earth_20241004_065104.jpeg
--a---           10/4/2024  7:01 AM       12453110 earth_20241004_070106.jpeg
--a---           10/4/2024  7:11 AM       12649178 earth_20241004_071112.jpeg
--a---           10/4/2024  7:21 AM       12842805 earth_20241004_072114.jpeg
--a---           10/4/2024  7:31 AM       13055164 earth_20241004_073116.jpeg
--a---           10/4/2024  7:41 AM       13293310 earth_20241004_074118.jpeg
--a---           10/4/2024  7:51 AM       13493010 earth_20241004_075120.jpeg
--a---           10/4/2024  8:01 AM       13668193 earth_20241004_080122.jpeg
--a---           10/4/2024  8:11 AM       13801685 earth_20241004_081124.jpeg
--a---           10/4/2024  8:21 AM       13954659 earth_20241004_082134.jpeg
--a---           10/4/2024  8:31 AM       14117672 earth_20241004_083145.jpeg
--a---           10/4/2024  8:41 AM       14294340 earth_20241004_084147.jpeg
--a---           10/4/2024  8:51 AM       14478884 earth_20241004_085148.jpeg
--a---           10/4/2024  9:01 AM       14662616 earth_20241004_090150.jpeg
--a---           10/4/2024  9:11 AM       14816186 earth_20241004_091152.jpeg
--a---           10/4/2024  9:21 AM       14940375 earth_20241004_092154.jpeg
--a---           10/4/2024  9:32 AM       15031500 earth_20241004_093158.jpeg
--a---           10/4/2024  9:42 AM       15128552 earth_20241004_094201.jpeg
--a---           10/4/2024  9:52 AM       15256181 earth_20241004_095203.jpeg
--a---           10/4/2024 10:02 AM       15392193 earth_20241004_100206.jpeg
--a---           10/4/2024 10:12 AM       15585379 earth_20241004_101209.jpeg
--a---           10/4/2024 10:22 AM       15826355 earth_20241004_102211.jpeg
--a---           10/4/2024 10:32 AM       16078647 earth_20241004_103214.jpeg
--a---           10/4/2024 10:42 AM       16356870 earth_20241004_104216.jpeg
--a---           10/4/2024 10:52 AM       16600399 earth_20241004_105218.jpeg
--a---           10/4/2024 11:02 AM       16761231 earth_20241004_110220.jpeg
--a---           10/4/2024 11:12 AM       16858186 earth_20241004_111221.jpeg
--a---           10/4/2024 11:22 AM       16948088 earth_20241004_112224.jpeg
--a---           10/4/2024 11:32 AM       17057559 earth_20241004_113225.jpeg
--a---           10/4/2024 11:42 AM       17143911 earth_20241004_114227.jpeg
--a---           10/4/2024 11:52 AM       17229869 earth_20241004_115228.jpeg
--a---           10/4/2024 12:02 PM       17311400 earth_20241004_120231.jpeg
--a---           10/4/2024 12:12 PM       17311400 earth_20241004_121232.jpeg
--a---           10/4/2024 12:22 PM       17470964 earth_20241004_122234.jpeg
--a---           10/4/2024 12:32 PM       17554175 earth_20241004_123235.jpeg
--a---           10/4/2024 12:42 PM       17630693 earth_20241004_124238.jpeg
--a---           10/4/2024 12:52 PM       17713386 earth_20241004_125239.jpeg
--a---           10/4/2024  1:02 PM       17798448 earth_20241004_130242.jpeg
--a---           10/4/2024  1:12 PM       17798448 earth_20241004_131243.jpeg
--a---           10/4/2024  1:22 PM       17928313 earth_20241004_132245.jpeg
--a---           10/4/2024  1:32 PM       17908432 earth_20241004_133247.jpeg
--a---           10/4/2024  1:42 PM       17895514 earth_20241004_134249.jpeg
--a---           10/4/2024  1:52 PM       17905614 earth_20241004_135251.jpeg
--a---           10/4/2024  2:02 PM       17913995 earth_20241004_140253.jpeg
--a---           10/4/2024  2:12 PM       17913995 earth_20241004_141256.jpeg
--a---           10/4/2024  2:23 PM       17919097 earth_20241004_142259.jpeg
--a---           10/4/2024  2:33 PM       17914413 earth_20241004_143301.jpeg
--a---           10/4/2024  2:43 PM       17892573 earth_20241004_144304.jpeg
--a---           10/4/2024  2:53 PM       17842410 earth_20241004_145306.jpeg
--a---           10/4/2024  3:03 PM       17770882 earth_20241004_150308.jpeg
--a---           10/4/2024  3:13 PM       17770882 earth_20241004_151311.jpeg
--a---           10/4/2024  3:23 PM       17770882 earth_20241004_152314.jpeg
--a---           10/4/2024  3:33 PM       17770882 earth_20241004_153317.jpeg
--a---           10/4/2024  3:43 PM       17770882 earth_20241004_154322.jpeg
--a---           10/4/2024  3:53 PM       17770882 earth_20241004_155325.jpeg
--a---           10/4/2024  4:03 PM       16562100 earth_20241004_160328.jpeg
--a---           10/4/2024  4:13 PM       16562100 earth_20241004_161331.jpeg
--a---           10/4/2024  4:23 PM       16025923 earth_20241004_162333.jpeg
--a---           10/4/2024  4:33 PM       15789816 earth_20241004_163335.jpeg
--a---           10/4/2024  4:43 PM       15575542 earth_20241004_164338.jpeg
--a---           10/4/2024  4:53 PM       15354696 earth_20241004_165340.jpeg
--a---           10/4/2024  5:03 PM       15137846 earth_20241004_170343.jpeg
--a---           10/4/2024  5:13 PM       14899073 earth_20241004_171345.jpeg
--a---           10/4/2024  5:23 PM       14395830 earth_20241004_172347.jpeg
--a---           10/4/2024  5:33 PM       14431243 earth_20241004_173349.jpeg
--a---           10/4/2024  5:43 PM       14183565 earth_20241004_174351.jpeg
--a---           10/4/2024  5:53 PM       13937429 earth_20241004_175354.jpeg
--a---           10/4/2024  6:03 PM       13675224 earth_20241004_180356.jpeg
--a---           10/4/2024  6:14 PM       13416440 earth_20241004_181358.jpeg
--a---           10/4/2024  6:24 PM       13177179 earth_20241004_182400.jpeg
--a---           10/4/2024  6:34 PM       12957408 earth_20241004_183402.jpeg
--a---           10/4/2024  6:44 PM       12775090 earth_20241004_184404.jpeg
--a---           10/4/2024  6:54 PM       12600774 earth_20241004_185406.jpeg
--a---           10/4/2024  7:04 PM       12420706 earth_20241004_190409.jpeg
--a---           10/4/2024  7:14 PM       12247132 earth_20241004_191410.jpeg
--a---           10/4/2024  7:24 PM       12083169 earth_20241004_192412.jpeg
--a---           10/4/2024  7:34 PM       11923454 earth_20241004_193414.jpeg
--a---           10/4/2024  7:44 PM       11727949 earth_20241004_194417.jpeg
--a---           10/4/2024  7:54 PM       10243789 earth_20241004_195419.jpeg
--a---           10/4/2024  8:04 PM       11291348 earth_20241004_200421.jpeg
--a---           10/4/2024  8:14 PM       11094117 earth_20241004_201423.jpeg
--a---           10/4/2024  8:24 PM       10890591 earth_20241004_202425.jpeg
--a---           10/4/2024  8:34 PM       10757696 earth_20241004_203427.jpeg
--a---           10/4/2024  8:44 PM       10627921 earth_20241004_204429.jpeg
--a---           10/4/2024  8:54 PM       10521616 earth_20241004_205431.jpeg
--a---           10/4/2024  9:04 PM       10404667 earth_20241004_210432.jpeg
--a---           10/4/2024  9:14 PM       10327127 earth_20241004_211434.jpeg
--a---           10/4/2024  9:24 PM       10247734 earth_20241004_212436.jpeg
--a---           10/4/2024  9:34 PM       10188795 earth_20241004_213438.jpeg
--a---           10/4/2024  9:44 PM       10140443 earth_20241004_214440.jpeg
--a---           10/4/2024  9:54 PM       10078469 earth_20241004_215441.jpeg
--a---           10/4/2024 10:04 PM       10041461 earth_20241004_220443.jpeg
--a---           10/4/2024 10:14 PM       10012496 earth_20241004_221445.jpeg
--a---           10/4/2024 10:24 PM       10005763 earth_20241004_222447.jpeg
--a---           10/4/2024 10:34 PM        9999305 earth_20241004_223448.jpeg
--a---           10/4/2024 10:44 PM       10043522 earth_20241004_224450.jpeg
--a---           10/4/2024 10:54 PM       10058257 earth_20241004_225452.jpeg
--a---           10/4/2024 11:04 PM       10091103 earth_20241004_230453.jpeg
--a---           10/4/2024 11:14 PM       10172048 earth_20241004_231455.jpeg
--a---           10/4/2024 11:24 PM       10172048 earth_20241004_232457.jpeg
--a---           10/4/2024 11:35 PM       10209707 earth_20241004_233459.jpeg
--a---           10/4/2024 11:45 PM       10193080 earth_20241004_234501.jpeg
--a---           10/4/2024 11:55 PM       10201420 earth_20241004_235502.jpeg
--a---           10/5/2024 12:05 AM       10098882 earth_20241005_000504.jpeg
--a---           10/5/2024 12:15 AM        9933719 earth_20241005_001506.jpeg
--a---           10/5/2024 12:25 AM        8979872 earth_20241005_002507.jpeg
--a---           10/5/2024 12:35 AM        9461185 earth_20241005_003509.jpeg
--a---           10/5/2024 12:45 AM       10406439 earth_20241005_004511.jpeg
--a---           10/5/2024 12:55 AM       10426288 earth_20241005_005513.jpeg
--a---           10/5/2024  1:05 AM       10426288 earth_20241005_010514.jpeg
--a---           10/5/2024  1:15 AM       10432311 earth_20241005_011516.jpeg
--a---           10/5/2024  1:25 AM        9559157 earth_20241005_012518.jpeg
--a---           10/5/2024  1:35 AM        9566222 earth_20241005_013520.jpeg
--a---           10/5/2024  1:45 AM        9566222 earth_20241005_014522.jpeg
--a---           10/5/2024  1:55 AM        9995930 earth_20241005_015523.jpeg
--a---           10/5/2024  2:05 AM       10236881 earth_20241005_020525.jpeg
--a---           10/5/2024  2:15 AM       10393494 earth_20241005_021527.jpeg
--a---           10/5/2024  2:25 AM       10393494 earth_20241005_022532.jpeg
--a---           10/5/2024  2:35 AM       10422754 earth_20241005_023534.jpeg
--a---           10/5/2024  2:45 AM       10422754 earth_20241005_024536.jpeg
--a---           10/5/2024  2:55 AM       10401288 earth_20241005_025537.jpeg
--a---           10/5/2024  3:05 AM       10401288 earth_20241005_030539.jpeg
--a---           10/5/2024  3:15 AM       10342904 earth_20241005_031541.jpeg
--a---           10/5/2024  3:25 AM       10293948 earth_20241005_032543.jpeg
--a---           10/5/2024  3:35 AM       10173318 earth_20241005_033545.jpeg
--a---           10/5/2024  3:45 AM       10173318 earth_20241005_034547.jpeg
--a---           10/5/2024  3:55 AM       10103613 earth_20241005_035549.jpeg
--a---           10/5/2024  4:05 AM       10103613 earth_20241005_040551.jpeg
--a---           10/5/2024  4:15 AM       10181970 earth_20241005_041552.jpeg
--a---           10/5/2024  4:25 AM       10271347 earth_20241005_042554.jpeg
--a---           10/5/2024  4:36 AM       10271347 earth_20241005_043556.jpeg
--a---           10/5/2024  4:46 AM       10174479 earth_20241005_044558.jpeg
--a---           10/5/2024  4:56 AM       10174479 earth_20241005_045600.jpeg
--a---           10/5/2024  5:06 AM       10569489 earth_20241005_050602.jpeg
--a---           10/5/2024  5:16 AM       10844985 earth_20241005_051604.jpeg
--a---           10/5/2024  5:26 AM       10993211 earth_20241005_052606.jpeg
--a---           10/5/2024  5:36 AM       11154127 earth_20241005_053608.jpeg
--a---           10/5/2024  5:46 AM       11332000 earth_20241005_054610.jpeg
--a---           10/5/2024  5:56 AM       11464644 earth_20241005_055612.jpeg
--a---           10/5/2024  6:06 AM       11464644 earth_20241005_060614.jpeg
--a---           10/5/2024  6:16 AM       11796687 earth_20241005_061616.jpeg
--a---           10/5/2024  6:26 AM       11956336 earth_20241005_062618.jpeg
--a---           10/5/2024  6:36 AM       12115812 earth_20241005_063620.jpeg
--a---           10/5/2024  6:46 AM       12281113 earth_20241005_064622.jpeg
--a---           10/5/2024  6:56 AM       12422712 earth_20241005_065624.jpeg
--a---           10/5/2024  7:06 AM       12422712 earth_20241005_070626.jpeg
--a---           10/5/2024  7:16 AM       12778296 earth_20241005_071628.jpeg
--a---           10/5/2024  7:26 AM       12933390 earth_20241005_072630.jpeg
--a---           10/5/2024  7:36 AM       13104323 earth_20241005_073632.jpeg
--a---           10/5/2024  7:46 AM       13275468 earth_20241005_074635.jpeg
--a---           10/5/2024  7:56 AM       13460224 earth_20241005_075637.jpeg
--a---           10/5/2024  8:06 AM       13460224 earth_20241005_080640.jpeg
--a---           10/5/2024  8:16 AM       13803561 earth_20241005_081642.jpeg
--a---           10/5/2024  8:26 AM       13973873 earth_20241005_082645.jpeg
--a---           10/5/2024  8:36 AM       14140582 earth_20241005_083647.jpeg
--a---           10/5/2024  8:46 AM       14312845 earth_20241005_084649.jpeg
--a---           10/5/2024  8:56 AM       14481473 earth_20241005_085651.jpeg
--a---           10/5/2024  9:06 AM       14481473 earth_20241005_090653.jpeg
--a---           10/5/2024  9:17 AM       14660799 earth_20241005_091657.jpeg
--a---           10/5/2024  9:27 AM       14942622 earth_20241005_092659.jpeg
--a---           10/5/2024  9:37 AM       15025756 earth_20241005_093702.jpeg
--a---           10/5/2024  9:47 AM       15127937 earth_20241005_094705.jpeg
--a---           10/5/2024  9:57 AM       15265887 earth_20241005_095707.jpeg
--a---           10/5/2024 10:07 AM       15462029 earth_20241005_100711.jpeg
--a---           10/5/2024 10:17 AM       15698220 earth_20241005_101713.jpeg
--a---           10/5/2024 10:27 AM       15971187 earth_20241005_102716.jpeg
--a---           10/5/2024 10:37 AM       16239771 earth_20241005_103719.jpeg
--a---           10/5/2024 10:47 AM       16466482 earth_20241005_104722.jpeg
--a---           10/5/2024 10:57 AM       16638107 earth_20241005_105725.jpeg
--a---           10/5/2024 11:07 AM       16743520 earth_20241005_110727.jpeg
--a---           10/5/2024 11:17 AM       16851335 earth_20241005_111731.jpeg
--a---           10/5/2024 11:27 AM       16982528 earth_20241005_112733.jpeg
--a---           10/5/2024 11:37 AM       17095974 earth_20241005_113736.jpeg
--a---           10/5/2024 11:47 AM       17204072 earth_20241005_114737.jpeg
--a---           10/5/2024 11:57 AM       17305098 earth_20241005_115738.jpeg
--a---           10/5/2024 12:07 PM       17400698 earth_20241005_120741.jpeg
--a---           10/5/2024 12:17 PM       17479547 earth_20241005_121743.jpeg
--a---           10/5/2024 12:27 PM       17553947 earth_20241005_122746.jpeg
--a---           10/5/2024 12:37 PM       17611572 earth_20241005_123747.jpeg
--a---           10/5/2024 12:47 PM       11251262 earth_20241005_124750.jpeg
--a---           10/5/2024 12:57 PM       17726768 earth_20241005_125751.jpeg
--a---           10/5/2024  1:07 PM       17800259 earth_20241005_130754.jpeg
--a---           10/5/2024  1:18 PM       17835991 earth_20241005_131755.jpeg
--a---           10/5/2024  1:28 PM       17820529 earth_20241005_132758.jpeg
--a---           10/5/2024  1:38 PM       17824304 earth_20241005_133800.jpeg
--a---           10/5/2024  1:48 PM       17844811 earth_20241005_134802.jpeg
--a---           10/5/2024  1:58 PM       17864694 earth_20241005_135804.jpeg
--a---           10/5/2024  2:08 PM       17873226 earth_20241005_140808.jpeg
--a---           10/5/2024  2:18 PM       17879590 earth_20241005_141812.jpeg
--a---           10/5/2024  2:28 PM       17871144 earth_20241005_142817.jpeg
--a---           10/5/2024  2:38 PM       17840135 earth_20241005_143822.jpeg
--a---           10/5/2024  2:48 PM       17783658 earth_20241005_144830.jpeg
--a---           10/5/2024  2:58 PM       17708590 earth_20241005_145834.jpeg
--a---           10/5/2024  3:08 PM       17600745 earth_20241005_150838.jpeg
--a---           10/5/2024  3:18 PM       17448765 earth_20241005_151842.jpeg
--a---           10/5/2024  3:28 PM       17238058 earth_20241005_152845.jpeg
--a---           10/5/2024  3:38 PM       17002081 earth_20241005_153849.jpeg
--a---           10/5/2024  3:48 PM       16737360 earth_20241005_154853.jpeg
--a---           10/5/2024  3:59 PM       16435178 earth_20241005_155856.jpeg
--a---           10/5/2024  4:09 PM       16148738 earth_20241005_160900.jpeg
--a---           10/5/2024  4:19 PM       15876001 earth_20241005_161902.jpeg
--a---           10/5/2024  4:29 PM       15628238 earth_20241005_162904.jpeg
--a---           10/5/2024  4:39 PM       15379990 earth_20241005_163908.jpeg
--a---           10/5/2024  4:49 PM       15118958 earth_20241005_164912.jpeg
--a---           10/5/2024  4:59 PM       14870105 earth_20241005_165915.jpeg
--a---           10/5/2024  5:09 PM       14640695 earth_20241005_170920.jpeg
--a---           10/5/2024  5:19 PM       14404027 earth_20241005_171926.jpeg
--a---           10/5/2024  5:29 PM       14178030 earth_20241005_172929.jpeg
--a---           10/5/2024  5:39 PM       13956637 earth_20241005_173932.jpeg
--a---           10/5/2024  5:49 PM       13731261 earth_20241005_174936.jpeg
--a---           10/5/2024  5:59 PM       13515223 earth_20241005_175939.jpeg
--a---           10/5/2024  6:09 PM       13296961 earth_20241005_180942.jpeg
--a---           10/5/2024  6:19 PM       13087113 earth_20241005_181946.jpeg
--a---           10/5/2024  6:30 PM       12902149 earth_20241005_182952.jpeg
--a---           10/5/2024  6:40 PM       11685590 earth_20241005_184004.jpeg
--a---           10/5/2024  6:50 PM       12548632 earth_20241005_185009.jpeg
--a---           10/5/2024  7:00 PM       12372611 earth_20241005_190014.jpeg
--a---           10/5/2024  7:10 PM       12219065 earth_20241005_191018.jpeg
--a---           10/5/2024  7:20 PM       12061113 earth_20241005_192022.jpeg
--a---           10/5/2024  7:30 PM       11889845 earth_20241005_193024.jpeg
--a---           10/5/2024  7:40 PM       11673676 earth_20241005_194027.jpeg
--a---           10/5/2024  7:50 PM       11433440 earth_20241005_195030.jpeg
--a---           10/5/2024  8:00 PM       11189889 earth_20241005_200032.jpeg
--a---           10/5/2024  8:10 PM       10935379 earth_20241005_201034.jpeg
--a---           10/5/2024  8:20 PM       10709239 earth_20241005_202037.jpeg
--a---           10/5/2024  8:30 PM       10517389 earth_20241005_203041.jpeg
--a---           10/5/2024  8:40 PM       10386077 earth_20241005_204044.jpeg
--a---           10/5/2024  8:50 PM       10272439 earth_20241005_205047.jpeg
--a---           10/5/2024  9:00 PM       10185202 earth_20241005_210051.jpeg
--a---           10/5/2024  9:11 PM       10136349 earth_20241005_211109.jpeg
--a---           10/5/2024  9:21 PM       10107925 earth_20241005_212114.jpeg
--a---           10/5/2024  9:31 PM       10066283 earth_20241005_213119.jpeg
--a---           10/5/2024  9:41 PM       10034559 earth_20241005_214126.jpeg
--a---           10/5/2024  9:51 PM        9988219 earth_20241005_215130.jpeg
--a---           10/5/2024 10:01 PM        9940068 earth_20241005_220133.jpeg
--a---           10/5/2024 10:11 PM        9904538 earth_20241005_221136.jpeg
--a---           10/5/2024 10:21 PM        9862595 earth_20241005_222138.jpeg
--a---           10/5/2024 10:31 PM        9858171 earth_20241005_223142.jpeg
--a---           10/5/2024 10:41 PM        9859000 earth_20241005_224144.jpeg
--a---           10/5/2024 10:51 PM        9878013 earth_20241005_225146.jpeg
--a---           10/5/2024 11:01 PM        9909699 earth_20241005_230149.jpeg
--a---           10/5/2024 11:11 PM        9957870 earth_20241005_231151.jpeg
--a---           10/5/2024 11:21 PM        9989958 earth_20241005_232153.jpeg
--a---           10/5/2024 11:31 PM       10007448 earth_20241005_233155.jpeg
--a---           10/5/2024 11:41 PM       10008144 earth_20241005_234157.jpeg
--a---           10/5/2024 11:52 PM        9976001 earth_20241005_235159.jpeg
--a---           10/6/2024 12:02 AM        9905659 earth_20241006_000200.jpeg
--a---           10/6/2024 12:12 AM        9711163 earth_20241006_001203.jpeg
--a---           10/6/2024 12:22 AM        9400404 earth_20241006_002204.jpeg
--a---           10/6/2024 12:32 AM        8661516 earth_20241006_003206.jpeg
--a---           10/6/2024 12:42 AM        9137077 earth_20241006_004208.jpeg
--a---           10/6/2024 12:52 AM       10191889 earth_20241006_005210.jpeg
--a---           10/6/2024  1:02 AM       10209481 earth_20241006_010213.jpeg
--a---           10/6/2024  1:12 AM       10229368 earth_20241006_011215.jpeg
--a---           10/6/2024  1:22 AM        9295684 earth_20241006_012217.jpeg
--a---           10/6/2024  1:32 AM        9328690 earth_20241006_013219.jpeg
--a---           10/6/2024  1:42 AM        9417247 earth_20241006_014220.jpeg
--a---           10/6/2024  1:52 AM        9815425 earth_20241006_015222.jpeg
--a---           10/6/2024  2:02 AM       10022766 earth_20241006_020224.jpeg
--a---           10/6/2024  2:12 AM       10143295 earth_20241006_021227.jpeg
--a---           10/6/2024  2:22 AM       10213397 earth_20241006_022229.jpeg
--a---           10/6/2024  2:32 AM       10250974 earth_20241006_023230.jpeg
--a---           10/6/2024  2:42 AM       10265809 earth_20241006_024232.jpeg
--a---           10/6/2024  2:52 AM       10244423 earth_20241006_025234.jpeg
--a---           10/6/2024  3:02 AM       10223784 earth_20241006_030236.jpeg
--a---           10/6/2024  3:12 AM       10166773 earth_20241006_031238.jpeg
--a---           10/6/2024  3:22 AM       10133950 earth_20241006_032240.jpeg
--a---           10/6/2024  3:32 AM       10074815 earth_20241006_033242.jpeg
--a---           10/6/2024  3:42 AM       10025049 earth_20241006_034244.jpeg
--a---           10/6/2024  3:52 AM        9972927 earth_20241006_035246.jpeg
--a---           10/6/2024  4:02 AM        9966823 earth_20241006_040248.jpeg
--a---           10/6/2024  4:12 AM       10000733 earth_20241006_041249.jpeg
--a---           10/6/2024  4:22 AM       10068824 earth_20241006_042251.jpeg
--a---           10/6/2024  4:32 AM       10160442 earth_20241006_043253.jpeg
--a---           10/6/2024  4:42 AM       10276158 earth_20241006_044255.jpeg
--a---           10/6/2024  4:52 AM       10407261 earth_20241006_045257.jpeg
--a---           10/6/2024  5:03 AM       10526693 earth_20241006_050259.jpeg
--a---           10/6/2024  5:13 AM       10640546 earth_20241006_051300.jpeg
--a---           10/6/2024  5:23 AM       10750727 earth_20241006_052302.jpeg
--a---           10/6/2024  5:33 AM       10877833 earth_20241006_053305.jpeg
--a---           10/6/2024  5:43 AM       11031025 earth_20241006_054307.jpeg
--a---           10/6/2024  5:53 AM       11183744 earth_20241006_055309.jpeg
--a---           10/6/2024  6:03 AM       11347897 earth_20241006_060311.jpeg
--a---           10/6/2024  6:13 AM       11493637 earth_20241006_061313.jpeg
--a---           10/6/2024  6:23 AM       11670184 earth_20241006_062315.jpeg
--a---           10/6/2024  6:33 AM       11844993 earth_20241006_063317.jpeg
--a---           10/6/2024  6:43 AM       12018996 earth_20241006_064321.jpeg
--a---           10/6/2024  6:53 AM       12201824 earth_20241006_065323.jpeg
--a---           10/6/2024  7:03 AM       12367752 earth_20241006_070326.jpeg
--a---           10/6/2024  7:13 AM       12534079 earth_20241006_071329.jpeg
--a---           10/6/2024  7:23 AM       12723271 earth_20241006_072331.jpeg
--a---           10/6/2024  7:33 AM       12907818 earth_20241006_073334.jpeg
--a---           10/6/2024  7:43 AM       13100242 earth_20241006_074337.jpeg
--a---           10/6/2024  7:53 AM       13278899 earth_20241006_075339.jpeg
--a---           10/6/2024  8:03 AM       13436586 earth_20241006_080341.jpeg
--a---           10/6/2024  8:13 AM       13622312 earth_20241006_081344.jpeg
--a---           10/6/2024  8:23 AM       13800282 earth_20241006_082347.jpeg
--a---           10/6/2024  8:33 AM       13987574 earth_20241006_083351.jpeg
--a---           10/6/2024  8:43 AM       14160715 earth_20241006_084355.jpeg
--a---           10/6/2024  8:54 AM       14320963 earth_20241006_085358.jpeg
--a---           10/6/2024  9:04 AM       14485849 earth_20241006_090401.jpeg
--a---           10/6/2024  9:14 AM       14640627 earth_20241006_091422.jpeg
--a---           10/6/2024  9:24 AM       14771828 earth_20241006_092426.jpeg
--a---           10/6/2024  9:34 AM       14873780 earth_20241006_093429.jpeg
--a---           10/6/2024  9:44 AM       14974638 earth_20241006_094432.jpeg
--a---           10/6/2024  9:54 AM       15058787 earth_20241006_095435.jpeg
--a---           10/6/2024 10:04 AM       15175152 earth_20241006_100439.jpeg
--a---           10/6/2024 10:14 AM       15344228 earth_20241006_101443.jpeg
--a---           10/6/2024 10:24 AM       15565471 earth_20241006_102446.jpeg
--a---           10/6/2024 10:34 AM       15830012 earth_20241006_103449.jpeg
--a---           10/6/2024 10:44 AM       16101769 earth_20241006_104452.jpeg
--a---           10/6/2024 10:55 AM       16357695 earth_20241006_105456.jpeg
--a---           10/6/2024 11:05 AM       16550137 earth_20241006_110501.jpeg
--a---           10/6/2024 11:15 AM       16687343 earth_20241006_111509.jpeg
--a---           10/6/2024 11:25 AM       16828474 earth_20241006_112516.jpeg
--a---           10/6/2024 11:35 AM       16991268 earth_20241006_113520.jpeg
--a---           10/6/2024 11:45 AM       17128705 earth_20241006_114527.jpeg
--a---           10/6/2024 11:55 AM       17258226 earth_20241006_115532.jpeg
--a---           10/6/2024 12:05 PM       17379765 earth_20241006_120538.jpeg
--a---           10/6/2024 12:15 PM       17495704 earth_20241006_121543.jpeg
--a---           10/6/2024 12:25 PM       17595073 earth_20241006_122547.jpeg
--a---           10/6/2024 12:35 PM       17681592 earth_20241006_123553.jpeg
--a---           10/6/2024 12:45 PM       17746181 earth_20241006_124554.jpeg
--a---           10/6/2024 12:56 PM        5100500 earth_20241006_125600.jpeg
--a---           10/6/2024  1:06 PM       17870684 earth_20241006_130602.jpeg
--a---           10/6/2024  1:16 PM       17939939 earth_20241006_131608.jpeg
--a---           10/6/2024  1:26 PM       17966825 earth_20241006_132613.jpeg
--a---           10/6/2024  1:36 PM       17957845 earth_20241006_133618.jpeg
--a---           10/6/2024  1:46 PM       17962989 earth_20241006_134623.jpeg
--a---           10/6/2024  1:56 PM       17969670 earth_20241006_135627.jpeg
--a---           10/6/2024  2:06 PM       17969670 earth_20241006_140633.jpeg
--a---           10/6/2024  2:16 PM       17986038 earth_20241006_141642.jpeg
--a---           10/6/2024  2:26 PM       17987120 earth_20241006_142647.jpeg
--a---           10/6/2024  2:37 PM       17964716 earth_20241006_143658.jpeg
--a---           10/6/2024  2:47 PM       17920617 earth_20241006_144703.jpeg
--a---           10/6/2024  2:57 PM       17868614 earth_20241006_145711.jpeg
--a---           10/6/2024  3:07 PM       17868614 earth_20241006_150712.jpeg
--a---           10/6/2024  3:17 PM       17622620 earth_20241006_151719.jpeg
--a---           10/6/2024  3:27 PM       17408846 earth_20241006_152721.jpeg
--a---           10/6/2024  3:37 PM       17177081 earth_20241006_153726.jpeg
--a---           10/6/2024  3:47 PM       16927847 earth_20241006_154728.jpeg
--a---           10/6/2024  3:57 PM       16927847 earth_20241006_155735.jpeg
--a---           10/6/2024  4:07 PM       16363941 earth_20241006_160740.jpeg
--a---           10/6/2024  4:17 PM       16090295 earth_20241006_161746.jpeg
--a---           10/6/2024  4:27 PM       15809855 earth_20241006_162750.jpeg
--a---           10/6/2024  4:38 PM       15527035 earth_20241006_163758.jpeg
--a---           10/6/2024  4:48 PM       15246253 earth_20241006_164802.jpeg
--a---           10/6/2024  4:58 PM       14967394 earth_20241006_165808.jpeg
--a---           10/6/2024  5:08 PM       14967394 earth_20241006_170818.jpeg
--a---           10/6/2024  5:18 PM       14500060 earth_20241006_171831.jpeg
--a---           10/6/2024  5:28 PM       14323628 earth_20241006_172841.jpeg
--a---           10/6/2024  5:38 PM       14323628 earth_20241006_173848.jpeg
--a---           10/6/2024  5:48 PM       13981431 earth_20241006_174854.jpeg
--a---           10/6/2024  5:59 PM       13796414 earth_20241006_175859.jpeg
--a---           10/6/2024  6:09 PM       13796414 earth_20241006_180905.jpeg
--a---           10/6/2024  6:19 PM       13430248 earth_20241006_181911.jpeg
--a---           10/6/2024  6:29 PM       13430248 earth_20241006_182915.jpeg
--a---           10/6/2024  6:39 PM       13062168 earth_20241006_183920.jpeg
--a---           10/6/2024  6:49 PM       12867528 earth_20241006_184923.jpeg
--a---           10/6/2024  6:59 PM       12687809 earth_20241006_185927.jpeg
--a---           10/6/2024  7:09 PM       12546912 earth_20241006_190932.jpeg
--a---           10/6/2024  7:19 PM       12395356 earth_20241006_191936.jpeg
--a---           10/6/2024  7:29 PM       12395356 earth_20241006_192940.jpeg
--a---           10/6/2024  7:39 PM       11910627 earth_20241006_193944.jpeg
--a---           10/6/2024  7:49 PM       11649532 earth_20241006_194949.jpeg
--a---           10/6/2024  8:00 PM       11649532 earth_20241006_195955.jpeg
--a---           10/6/2024  8:10 PM       11215999 earth_20241006_201005.jpeg
--a---           10/6/2024  8:20 PM       11026656 earth_20241006_202011.jpeg
--a---           10/6/2024  8:30 PM       10863804 earth_20241006_203018.jpeg
--a---           10/6/2024  8:40 PM       10735508 earth_20241006_204025.jpeg
--a---           10/6/2024  8:50 PM       10735508 earth_20241006_205033.jpeg
--a---           10/6/2024  9:00 PM       10735508 earth_20241006_210038.jpeg
--a---           10/6/2024  9:10 PM       10540791 earth_20241006_211043.jpeg
--a---           10/6/2024  9:20 PM       10469744 earth_20241006_212046.jpeg
--a---           10/6/2024  9:30 PM       10397613 earth_20241006_213050.jpeg
--a---           10/6/2024  9:40 PM       10341400 earth_20241006_214056.jpeg
--a---           10/6/2024  9:51 PM       10341400 earth_20241006_215059.jpeg
--a---           10/6/2024 10:01 PM       10234541 earth_20241006_220101.jpeg
--a---           10/6/2024 10:11 PM       10200362 earth_20241006_221104.jpeg
--a---           10/6/2024 10:21 PM       10185367 earth_20241006_222107.jpeg
--a---           10/6/2024 10:31 PM       10186679 earth_20241006_223109.jpeg
--a---           10/6/2024 10:41 PM       10186679 earth_20241006_224111.jpeg
--a---           10/6/2024 10:51 PM       10237563 earth_20241006_225113.jpeg
--a---           10/6/2024 11:01 PM       10244029 earth_20241006_230115.jpeg
--a---           10/6/2024 11:11 PM       10306141 earth_20241006_231118.jpeg
--a---           10/6/2024 11:21 PM       10326309 earth_20241006_232120.jpeg
--a---           10/6/2024 11:31 PM       10337240 earth_20241006_233123.jpeg
--a---           10/6/2024 11:41 PM       10337240 earth_20241006_234126.jpeg
--a---           10/6/2024 11:51 PM       10302057 earth_20241006_235128.jpeg
--a---           10/7/2024 12:01 AM       10238176 earth_20241007_000130.jpeg
--a---           10/7/2024 12:11 AM       10058951 earth_20241007_001132.jpeg
--a---           10/7/2024 12:21 AM       10058951 earth_20241007_002135.jpeg
--a---           10/7/2024 12:31 AM       10058951 earth_20241007_003137.jpeg
--a---           10/7/2024 12:41 AM        9318995 earth_20241007_004139.jpeg
--a---           10/7/2024 12:51 AM       10566674 earth_20241007_005141.jpeg
--a---           10/7/2024  1:01 AM       10598548 earth_20241007_010143.jpeg
--a---           10/7/2024  1:11 AM       10598548 earth_20241007_011146.jpeg
--a---           10/7/2024  1:21 AM       10598548 earth_20241007_012148.jpeg
--a---           10/7/2024  1:31 AM        9531867 earth_20241007_013150.jpeg
--a---           10/7/2024  1:41 AM        9866768 earth_20241007_014152.jpeg
--a---           10/7/2024  1:51 AM       10255700 earth_20241007_015154.jpeg
--a---           10/7/2024  2:01 AM       10466016 earth_20241007_020156.jpeg
--a---           10/7/2024  2:12 AM       10466016 earth_20241007_021158.jpeg
--a---           10/7/2024  2:22 AM       10603709 earth_20241007_022201.jpeg
--a---           10/7/2024  2:32 AM       10635041 earth_20241007_023202.jpeg
--a---           10/7/2024  2:42 AM       10646885 earth_20241007_024204.jpeg
--a---           10/7/2024  2:52 AM       10666986 earth_20241007_025206.jpeg
--a---           10/7/2024  3:02 AM       10618984 earth_20241007_030208.jpeg
--a---           10/7/2024  3:12 AM       10593594 earth_20241007_031210.jpeg
--a---           10/7/2024  3:22 AM       10525604 earth_20241007_032212.jpeg
--a---           10/7/2024  3:32 AM       10454218 earth_20241007_033214.jpeg
--a---           10/7/2024  3:42 AM       10386280 earth_20241007_034215.jpeg
--a---           10/7/2024  3:52 AM       10338318 earth_20241007_035217.jpeg
--a---           10/7/2024  4:02 AM       10327163 earth_20241007_040218.jpeg
--a---           10/7/2024  4:12 AM       10325218 earth_20241007_041220.jpeg
--a---           10/7/2024  4:22 AM       10369418 earth_20241007_042221.jpeg
--a---           10/7/2024  4:32 AM       10467546 earth_20241007_043223.jpeg
--a---           10/7/2024  4:42 AM       10604309 earth_20241007_044224.jpeg
--a---           10/7/2024  4:52 AM       10604309 earth_20241007_045226.jpeg
--a---           10/7/2024  5:02 AM       10604309 earth_20241007_050227.jpeg
--a---           10/7/2024  5:12 AM       11042343 earth_20241007_051229.jpeg
--a---           10/7/2024  5:22 AM       11194409 earth_20241007_052232.jpeg
--a---           10/7/2024  5:32 AM       11354759 earth_20241007_053235.jpeg
--a---           10/7/2024  5:42 AM       11354759 earth_20241007_054237.jpeg
--a---           10/7/2024  5:52 AM       11663897 earth_20241007_055240.jpeg
--a---           10/7/2024  6:02 AM       11815131 earth_20241007_060242.jpeg
--a---           10/7/2024  6:12 AM       11922578 earth_20241007_061244.jpeg
--a---           10/7/2024  6:22 AM       12072010 earth_20241007_062247.jpeg
--a---           10/7/2024  6:32 AM       12236375 earth_20241007_063250.jpeg
--a---           10/7/2024  6:43 AM       12388566 earth_20241007_064253.jpeg
--a---           10/7/2024  6:53 AM       12564046 earth_20241007_065257.jpeg
--a---           10/7/2024  7:03 AM       12759688 earth_20241007_070301.jpeg
--a---           10/7/2024  7:13 AM       12932816 earth_20241007_071306.jpeg
--a---           10/7/2024  7:23 AM       13089697 earth_20241007_072311.jpeg
--a---           10/7/2024  7:33 AM       13089697 earth_20241007_073315.jpeg
--a---           10/7/2024  7:43 AM       13458443 earth_20241007_074319.jpeg
--a---           10/7/2024  7:53 AM       13613402 earth_20241007_075325.jpeg
--a---           10/7/2024  8:03 AM       13772560 earth_20241007_080331.jpeg
--a---           10/7/2024  8:13 AM       13909728 earth_20241007_081342.jpeg
--a---           10/7/2024  8:23 AM       14051049 earth_20241007_082347.jpeg
--a---           10/7/2024  8:34 AM       14160227 earth_20241007_083356.jpeg
--a---           10/7/2024  8:44 AM       14294798 earth_20241007_084410.jpeg
--a---           10/7/2024  8:54 AM       14414481 earth_20241007_085418.jpeg
--a---           10/7/2024  9:04 AM       14500429 earth_20241007_090426.jpeg
--a---           10/7/2024  9:14 AM       14500429 earth_20241007_091432.jpeg
--a---           10/7/2024  9:24 AM       14673732 earth_20241007_092440.jpeg
--a---           10/7/2024  9:35 AM       14797209 earth_20241007_093455.jpeg
--a---           10/7/2024  9:45 AM       14797209 earth_20241007_094514.jpeg
--a---           10/7/2024  9:55 AM       15028261 earth_20241007_095530.jpeg
--a---           10/7/2024 10:05 AM       15177401 earth_20241007_100545.jpeg
--a---           10/7/2024 10:16 AM       15366253 earth_20241007_101556.jpeg
--a---           10/7/2024 10:26 AM       15594754 earth_20241007_102608.jpeg
--a---           10/7/2024 10:36 AM       15594754 earth_20241007_103621.jpeg
--a---           10/7/2024 10:46 AM       15187953 earth_20241007_104637.jpeg
--a---           10/7/2024 10:57 AM       16518874 earth_20241007_105652.jpeg
--a---           10/7/2024 11:07 AM       16518874 earth_20241007_110711.jpeg
--a---           10/7/2024 11:18 AM       16702019 earth_20241007_111741.jpeg
--a---           10/7/2024 11:28 AM       16702019 earth_20241007_112806.jpeg
--a---           10/7/2024 11:38 AM       16952075 earth_20241007_113833.jpeg
--a---           10/7/2024 11:49 AM       16952075 earth_20241007_114855.jpeg
--a---           10/7/2024 12:00 PM       17196780 earth_20241007_115927.jpeg
--a---           10/7/2024 12:10 PM       17196780 earth_20241007_121008.jpeg
--a---           10/7/2024 12:21 PM       17196780 earth_20241007_122048.jpeg
--a---           10/7/2024 12:32 PM       17451559 earth_20241007_123122.jpeg
--a---           10/7/2024 12:42 PM       17501885 earth_20241007_124159.jpeg
--a---           10/7/2024 12:53 PM       13839567 earth_20241007_125235.jpeg
--a---           10/7/2024  1:03 PM       13839567 earth_20241007_130307.jpeg
--a---           10/7/2024  1:14 PM       17676828 earth_20241007_131334.jpeg
--a---           10/7/2024  1:24 PM       17716585 earth_20241007_132407.jpeg
--a---           10/7/2024  1:35 PM       17716585 earth_20241007_133440.jpeg
--a---           10/7/2024  1:45 PM       17708256 earth_20241007_134512.jpeg
--a---           10/7/2024  1:56 PM       17708256 earth_20241007_135547.jpeg
--a---           10/7/2024  2:07 PM       17726540 earth_20241007_140626.jpeg
--a---           10/7/2024  2:17 PM       17729541 earth_20241007_141706.jpeg
--a---           10/7/2024  2:28 PM       17729541 earth_20241007_142731.jpeg
--a---           10/7/2024  2:38 PM       17707050 earth_20241007_143757.jpeg
--a---           10/7/2024  2:48 PM       17707050 earth_20241007_144821.jpeg
--a---           10/7/2024  2:59 PM       17649018 earth_20241007_145846.jpeg
--a---           10/7/2024  3:09 PM       17576977 earth_20241007_150913.jpeg
--a---           10/7/2024  3:20 PM       17419533 earth_20241007_151942.jpeg
--a---           10/7/2024  3:30 PM       17419533 earth_20241007_153010.jpeg
--a---           10/7/2024  3:41 PM       16942132 earth_20241007_154037.jpeg
--a---           10/7/2024  3:51 PM       16942132 earth_20241007_155100.jpeg
--a---           10/7/2024  4:01 PM       16318516 earth_20241007_160126.jpeg
--a---           10/7/2024  4:12 PM       16318516 earth_20241007_161149.jpeg
--a---           10/7/2024  4:22 PM       15735557 earth_20241007_162209.jpeg
--a---           10/7/2024  4:32 PM       15482986 earth_20241007_163228.jpeg
--a---           10/7/2024  4:43 PM       15232821 earth_20241007_164246.jpeg
--a---           10/7/2024  4:53 PM       14982006 earth_20241007_165308.jpeg
--a---           10/7/2024  5:03 PM       14737424 earth_20241007_170327.jpeg
--a---           10/7/2024  5:14 PM       14514629 earth_20241007_171355.jpeg
--a---           10/7/2024  5:24 PM       14514629 earth_20241007_172419.jpeg
--a---           10/7/2024  5:34 PM       14113618 earth_20241007_173436.jpeg
--a---           10/7/2024  5:45 PM       13922053 earth_20241007_174452.jpeg
--a---           10/7/2024  5:55 PM       13922053 earth_20241007_175508.jpeg
--a---           10/7/2024  6:05 PM       13513661 earth_20241007_180520.jpeg
--a---           10/7/2024  6:15 PM       13513661 earth_20241007_181530.jpeg
--a---           10/7/2024  6:26 PM       12898975 earth_20241007_182547.jpeg
--a---           10/7/2024  6:36 PM       12726570 earth_20241007_183556.jpeg
--a---           10/7/2024  6:46 PM       12546550 earth_20241007_184604.jpeg
--a---           10/7/2024  6:56 PM       12546550 earth_20241007_185614.jpeg
--a---           10/7/2024  7:06 PM       12546550 earth_20241007_190622.jpeg
--a---           10/7/2024  7:16 PM       12118300 earth_20241007_191628.jpeg
--a---           10/7/2024  7:26 PM       12118300 earth_20241007_192638.jpeg
--a---           10/7/2024  7:37 PM       11759056 earth_20241007_193646.jpeg
--a---           10/7/2024  7:47 PM        5493436 earth_20241007_194656.jpeg
--a---           10/7/2024  7:57 PM       11357457 earth_20241007_195659.jpeg
--a---           10/7/2024  8:07 PM       11191601 earth_20241007_200708.jpeg
--a---           10/7/2024  8:17 PM       11191601 earth_20241007_201724.jpeg
--a---           10/7/2024  8:27 PM       10940623 earth_20241007_202737.jpeg
--a---           10/7/2024  8:38 PM       10864738 earth_20241007_203748.jpeg
--a---           10/7/2024  8:48 PM       10775662 earth_20241007_204758.jpeg
--a---           10/7/2024  8:58 PM       10699413 earth_20241007_205808.jpeg
--a---           10/7/2024  9:08 PM       10611874 earth_20241007_210816.jpeg
--a---           10/7/2024  9:18 PM       10560854 earth_20241007_211826.jpeg
--a---           10/7/2024  9:28 PM       10509834 earth_20241007_212837.jpeg
--a---           10/7/2024  9:38 PM       10441515 earth_20241007_213844.jpeg
--a---           10/7/2024  9:49 PM       10377493 earth_20241007_214852.jpeg
--a---           10/7/2024  9:59 PM       10320103 earth_20241007_215900.jpeg
--a---           10/7/2024 10:09 PM       10288583 earth_20241007_220907.jpeg
--a---           10/7/2024 10:19 PM       10268056 earth_20241007_221914.jpeg
--a---           10/7/2024 10:29 PM       10262882 earth_20241007_222919.jpeg
--a---           10/7/2024 10:39 PM       10296928 earth_20241007_223925.jpeg
--a---           10/7/2024 10:49 PM       10346143 earth_20241007_224929.jpeg
--a---           10/7/2024 10:59 PM       10395509 earth_20241007_225933.jpeg
--a---           10/7/2024 11:09 PM       10395509 earth_20241007_230940.jpeg
--a---           10/7/2024 11:19 PM       10395509 earth_20241007_231944.jpeg
--a---           10/7/2024 11:29 PM       10500146 earth_20241007_232948.jpeg
--a---           10/7/2024 11:40 PM       10500146 earth_20241007_233952.jpeg
--a---           10/7/2024 11:50 PM       10505734 earth_20241007_234956.jpeg
--a---           10/8/2024 12:00 AM       10505734 earth_20241007_235959.jpeg
--a---           10/8/2024 12:10 AM       10235896 earth_20241008_001001.jpeg
--a---           10/8/2024 12:20 AM        9949375 earth_20241008_002013.jpeg
--a---           10/8/2024 12:30 AM        9215485 earth_20241008_003014.jpeg
--a---           10/8/2024 12:40 AM        9215485 earth_20241008_004016.jpeg
--a---           10/8/2024 12:50 AM        9215485 earth_20241008_005018.jpeg
--a---           10/8/2024  1:00 AM       10771618 earth_20241008_010020.jpeg
--a---           10/8/2024  1:10 AM       10788253 earth_20241008_011022.jpeg
--a---           10/8/2024  1:20 AM       10788253 earth_20241008_012025.jpeg
--a---           10/8/2024  1:30 AM        9713497 earth_20241008_013028.jpeg
--a---           10/8/2024  1:40 AM        9713497 earth_20241008_014030.jpeg
--a---           10/8/2024  1:50 AM       10510270 earth_20241008_015032.jpeg
--a---           10/8/2024  2:00 AM       10669312 earth_20241008_020035.jpeg
--a---           10/8/2024  2:10 AM       10736567 earth_20241008_021038.jpeg
--a---           10/8/2024  2:20 AM       10784328 earth_20241008_022043.jpeg
--a---           10/8/2024  2:30 AM       10807577 earth_20241008_023044.jpeg
--a---           10/8/2024  2:40 AM       10807577 earth_20241008_024045.jpeg
--a---           10/8/2024  2:50 AM       10776856 earth_20241008_025046.jpeg
--a---           10/8/2024  3:00 AM       10776870 earth_20241008_030048.jpeg
--a---           10/8/2024  3:10 AM       10776870 earth_20241008_031049.jpeg
--a---           10/8/2024  3:20 AM       10666773 earth_20241008_032051.jpeg
--a---           10/8/2024  3:30 AM       10606354 earth_20241008_033052.jpeg
--a---           10/8/2024  3:40 AM       10581640 earth_20241008_034053.jpeg
--a---           10/8/2024  3:51 AM       10581640 earth_20241008_035055.jpeg
--a---           10/8/2024  4:01 AM       10542666 earth_20241008_040056.jpeg
--a---           10/8/2024  4:11 AM       10564880 earth_20241008_041058.jpeg
--a---           10/8/2024  4:21 AM       10628264 earth_20241008_042100.jpeg
--a---           10/8/2024  4:31 AM       10698499 earth_20241008_043101.jpeg
--a---           10/8/2024  4:41 AM       10776487 earth_20241008_044102.jpeg
--a---           10/8/2024  4:51 AM       10848507 earth_20241008_045104.jpeg
--a---           10/8/2024  5:01 AM       10945194 earth_20241008_050105.jpeg
--a---           10/8/2024  5:11 AM       10945194 earth_20241008_051107.jpeg
--a---           10/8/2024  5:21 AM       10945194 earth_20241008_052109.jpeg
--a---           10/8/2024  5:31 AM       11255834 earth_20241008_053111.jpeg
--a---           10/8/2024  5:41 AM       11255834 earth_20241008_054114.jpeg
--a---           10/8/2024  5:51 AM       11536326 earth_20241008_055116.jpeg
--a---           10/8/2024  6:01 AM       11536326 earth_20241008_060118.jpeg
--a---           10/8/2024  6:11 AM       11801009 earth_20241008_061122.jpeg
--a---           10/8/2024  6:21 AM       11954148 earth_20241008_062124.jpeg
--a---           10/8/2024  6:31 AM       12136713 earth_20241008_063129.jpeg
--a---           10/8/2024  6:41 AM       12329417 earth_20241008_064133.jpeg
--a---           10/8/2024  6:51 AM       12506857 earth_20241008_065137.jpeg
--a---           10/8/2024  7:01 AM       12690663 earth_20241008_070142.jpeg
--a---           10/8/2024  7:11 AM       12876180 earth_20241008_071147.jpeg
--a---           10/8/2024  7:22 AM       13060145 earth_20241008_072153.jpeg
--a---           10/8/2024  7:32 AM       13060145 earth_20241008_073200.jpeg
--a---           10/8/2024  7:42 AM       13313621 earth_20241008_074207.jpeg
--a---           10/8/2024  7:52 AM       13425422 earth_20241008_075213.jpeg
--a---           10/8/2024  8:02 AM       13533296 earth_20241008_080220.jpeg
--a---           10/8/2024  8:12 AM       13659662 earth_20241008_081231.jpeg
--a---           10/8/2024  8:22 AM       13809066 earth_20241008_082241.jpeg
--a---           10/8/2024  8:33 AM       13809066 earth_20241008_083254.jpeg
--a---           10/8/2024  8:43 AM       14151654 earth_20241008_084306.jpeg
--a---           10/8/2024  8:53 AM       14308513 earth_20241008_085318.jpeg
--a---           10/8/2024  9:03 AM       14440251 earth_20241008_090330.jpeg
--a---           10/8/2024  9:13 AM       14553034 earth_20241008_091343.jpeg
--a---           10/8/2024  9:24 AM       14660824 earth_20241008_092351.jpeg
--a---           10/8/2024  9:34 AM       14789628 earth_20241008_093408.jpeg
--a---           10/8/2024  9:44 AM       14943411 earth_20241008_094423.jpeg
--a---           10/8/2024  9:54 AM       15113945 earth_20241008_095434.jpeg
--a---           10/8/2024 10:05 AM       15321619 earth_20241008_100442.jpeg
--a---           10/8/2024 10:15 AM       15579601 earth_20241008_101454.jpeg
--a---           10/8/2024 10:25 AM       15864422 earth_20241008_102509.jpeg
--a---           10/8/2024 10:35 AM       16173358 earth_20241008_103524.jpeg
--a---           10/8/2024 10:46 AM       16173358 earth_20241008_104541.jpeg
--a---           10/8/2024 10:56 AM       16173358 earth_20241008_105557.jpeg
--a---           10/8/2024 11:06 AM       16984109 earth_20241008_110613.jpeg
--a---           10/8/2024 11:16 AM       17127359 earth_20241008_111632.jpeg
--a---           10/8/2024 11:27 AM       17127359 earth_20241008_112649.jpeg
--a---           10/8/2024 11:37 AM       17127359 earth_20241008_113709.jpeg
--a---           10/8/2024 11:47 AM       17682442 earth_20241008_114729.jpeg
--a---           10/8/2024 11:58 AM       17807287 earth_20241008_115752.jpeg
--a---           10/8/2024 12:08 PM       17920155 earth_20241008_120813.jpeg
--a---           10/8/2024 12:18 PM       17920155 earth_20241008_121831.jpeg
--a---           10/8/2024 12:29 PM       18078195 earth_20241008_122847.jpeg
--a---           10/8/2024 12:39 PM       18139071 earth_20241008_123908.jpeg
--a---           10/8/2024 12:49 PM       18139071 earth_20241008_124927.jpeg
--a---           10/8/2024  1:00 PM       18139071 earth_20241008_125948.jpeg
--a---           10/8/2024  1:10 PM       18139071 earth_20241008_131002.jpeg
--a---           10/8/2024  1:20 PM       18303446 earth_20241008_132021.jpeg
--a---           10/8/2024  1:31 PM       18290009 earth_20241008_133041.jpeg
--a---           10/8/2024  1:41 PM       18281664 earth_20241008_134106.jpeg
--a---           10/8/2024  1:51 PM       18284956 earth_20241008_135124.jpeg
--a---           10/8/2024  2:02 PM       18273477 earth_20241008_140151.jpeg
--a---           10/8/2024  2:12 PM       18256907 earth_20241008_141215.jpeg
--a---           10/8/2024  2:23 PM       18241948 earth_20241008_142239.jpeg
--a---           10/8/2024  2:33 PM       18213830 earth_20241008_143306.jpeg
--a---           10/8/2024  2:43 PM       18159607 earth_20241008_144332.jpeg
--a---           10/8/2024  2:54 PM       18087475 earth_20241008_145353.jpeg
--a---           10/8/2024  3:04 PM       18023057 earth_20241008_150421.jpeg
--a---           10/8/2024  3:15 PM       17923735 earth_20241008_151448.jpeg
--a---           10/8/2024  3:25 PM       17776088 earth_20241008_152517.jpeg
--a---           10/8/2024  3:36 PM       17776088 earth_20241008_153541.jpeg
--a---           10/8/2024  3:47 PM       17358768 earth_20241008_154621.jpeg
--a---           10/8/2024  3:57 PM       16812401 earth_20241008_155659.jpeg
--a---           10/8/2024  4:08 PM       16516196 earth_20241008_160730.jpeg
--a---           10/8/2024  4:18 PM       16231691 earth_20241008_161759.jpeg
--a---           10/8/2024  4:28 PM       16231691 earth_20241008_162821.jpeg
--a---           10/8/2024  4:39 PM       15682598 earth_20241008_163841.jpeg
--a---           10/8/2024  4:49 PM       15409054 earth_20241008_164902.jpeg
--a---           10/8/2024  4:59 PM       15151185 earth_20241008_165923.jpeg
--a---           10/8/2024  5:10 PM       14919423 earth_20241008_170951.jpeg
--a---           10/8/2024  5:20 PM       14679521 earth_20241008_172021.jpeg
--a---           10/8/2024  5:31 PM       14460917 earth_20241008_173043.jpeg
--a---           10/8/2024  5:41 PM       14460917 earth_20241008_174102.jpeg
--a---           10/8/2024  5:51 PM       14065726 earth_20241008_175123.jpeg
--a---           10/8/2024  6:01 PM       14065726 earth_20241008_180137.jpeg
--a---           10/8/2024  6:12 PM       14065726 earth_20241008_181148.jpeg
--a---           10/8/2024  6:22 PM       14065726 earth_20241008_182157.jpeg
--a---           10/8/2024  6:32 PM       13325389 earth_20241008_183210.jpeg
--a---           10/8/2024  6:42 PM       13325389 earth_20241008_184221.jpeg
--a---           10/8/2024  6:52 PM       12941012 earth_20241008_185231.jpeg
--a---           10/8/2024  7:02 PM       12767025 earth_20241008_190242.jpeg
--a---           10/8/2024  7:13 PM       12767025 earth_20241008_191253.jpeg
--a---           10/8/2024  7:23 PM       12491016 earth_20241008_192300.jpeg
--a---           10/8/2024  7:33 PM       12340485 earth_20241008_193307.jpeg
--a---           10/8/2024  7:43 PM       12174043 earth_20241008_194314.jpeg
--a---           10/8/2024  7:53 PM       12001952 earth_20241008_195325.jpeg
--a---           10/8/2024  8:03 PM       12001952 earth_20241008_200335.jpeg
--a---           10/8/2024  8:14 PM       11633617 earth_20241008_201348.jpeg
--a---           10/8/2024  8:24 PM       11425410 earth_20241008_202359.jpeg
--a---           10/8/2024  8:34 PM       11257911 earth_20241008_203407.jpeg
--a---           10/8/2024  8:44 PM       11257911 earth_20241008_204419.jpeg
--a---           10/8/2024  8:54 PM       10958888 earth_20241008_205429.jpeg
--a---           10/8/2024  9:04 PM       10855379 earth_20241008_210437.jpeg
--a---           10/8/2024  9:15 PM       10765685 earth_20241008_211450.jpeg
--a---           10/8/2024  9:25 PM       10685674 earth_20241008_212458.jpeg
--a---           10/8/2024  9:35 PM       10589978 earth_20241008_213507.jpeg
--a---           10/8/2024  9:45 PM       10491412 earth_20241008_214514.jpeg
--a---           10/8/2024  9:55 PM       10369806 earth_20241008_215522.jpeg
--a---           10/8/2024 10:05 PM       10369806 earth_20241008_220530.jpeg
--a---           10/8/2024 10:15 PM       10343979 earth_20241008_221537.jpeg
--a---           10/8/2024 10:25 PM       10372319 earth_20241008_222543.jpeg
--a---           10/8/2024 10:36 PM       10396515 earth_20241008_223550.jpeg
--a---           10/8/2024 10:46 PM       10438951 earth_20241008_224558.jpeg
--a---           10/8/2024 10:56 PM       10438951 earth_20241008_225608.jpeg
--a---           10/8/2024 11:06 PM       10438951 earth_20241008_230614.jpeg
--a---           10/8/2024 11:16 PM       10584183 earth_20241008_231621.jpeg
--a---           10/8/2024 11:26 PM       10589554 earth_20241008_232628.jpeg
--a---           10/8/2024 11:36 PM       10615657 earth_20241008_233632.jpeg
--a---           10/8/2024 11:46 PM       10573969 earth_20241008_234637.jpeg
--a---           10/8/2024 11:56 PM       10494381 earth_20241008_235640.jpeg
--a---           10/9/2024 12:06 AM       10494381 earth_20241009_000643.jpeg
--a---           10/9/2024 12:16 AM       10002430 earth_20241009_001646.jpeg
--a---           10/9/2024 12:26 AM        9371921 earth_20241009_002649.jpeg
--a---           10/9/2024 12:37 AM        9611145 earth_20241009_003651.jpeg
--a---           10/9/2024 12:47 AM       10489460 earth_20241009_004655.jpeg
--a---           10/9/2024 12:57 AM       10799256 earth_20241009_005658.jpeg
--a---           10/9/2024  1:07 AM        9355825 earth_20241009_010702.jpeg
--a---           10/9/2024  1:17 AM        9868462 earth_20241009_011705.jpeg
--a---           10/9/2024  1:27 AM        9868462 earth_20241009_012707.jpeg
--a---           10/9/2024  1:37 AM       10177398 earth_20241009_013710.jpeg
--a---           10/9/2024  1:47 AM       10177398 earth_20241009_014712.jpeg
--a---           10/9/2024  1:57 AM       10673266 earth_20241009_015714.jpeg
--a---           10/9/2024  2:07 AM       10767740 earth_20241009_020716.jpeg
--a---           10/9/2024  2:17 AM       10802765 earth_20241009_021718.jpeg
--a---           10/9/2024  2:27 AM       10802765 earth_20241009_022721.jpeg
--a---           10/9/2024  2:37 AM       10833928 earth_20241009_023723.jpeg
--a---           10/9/2024  2:47 AM       10833928 earth_20241009_024726.jpeg
--a---           10/9/2024  2:57 AM       10795149 earth_20241009_025728.jpeg
--a---           10/9/2024  3:07 AM       10795149 earth_20241009_030730.jpeg
--a---           10/9/2024  3:17 AM       10795149 earth_20241009_031733.jpeg
--a---           10/9/2024  3:27 AM       10593383 earth_20241009_032735.jpeg
--a---           10/9/2024  3:37 AM       10593383 earth_20241009_033737.jpeg
--a---           10/9/2024  3:47 AM       10487430 earth_20241009_034740.jpeg
--a---           10/9/2024  3:57 AM       10482747 earth_20241009_035742.jpeg
--a---           10/9/2024  4:07 AM       10494111 earth_20241009_040744.jpeg
--a---           10/9/2024  4:17 AM       10558406 earth_20241009_041746.jpeg
--a---           10/9/2024  4:27 AM       10631163 earth_20241009_042748.jpeg
--a---           10/9/2024  4:38 AM       10725936 earth_20241009_043750.jpeg
--a---           10/9/2024  4:48 AM       10809726 earth_20241009_044753.jpeg
--a---           10/9/2024  4:58 AM       10951424 earth_20241009_045755.jpeg
--a---           10/9/2024  5:08 AM       10951424 earth_20241009_050757.jpeg
--a---           10/9/2024  5:18 AM       11211806 earth_20241009_051801.jpeg
--a---           10/9/2024  5:28 AM       11375532 earth_20241009_052804.jpeg
--a---           10/9/2024  5:38 AM       11375532 earth_20241009_053806.jpeg
--a---           10/9/2024  5:48 AM       11707001 earth_20241009_054809.jpeg
--a---           10/9/2024  5:58 AM       11707001 earth_20241009_055811.jpeg
--a---           10/9/2024  6:08 AM       12031623 earth_20241009_060814.jpeg
--a---           10/9/2024  6:18 AM       12031623 earth_20241009_061818.jpeg
--a---           10/9/2024  6:28 AM       12413307 earth_20241009_062821.jpeg
--a---           10/9/2024  6:38 AM       12615139 earth_20241009_063824.jpeg
--a---           10/9/2024  6:48 AM       12801949 earth_20241009_064825.jpeg
--a---           10/9/2024  6:58 AM       12985619 earth_20241009_065827.jpeg
--a---           10/9/2024  7:08 AM       13165613 earth_20241009_070831.jpeg
--a---           10/9/2024  7:18 AM       13329066 earth_20241009_071838.jpeg
--a---           10/9/2024  7:29 AM       13329066 earth_20241009_072845.jpeg
--a---           10/9/2024  7:39 AM       13329066 earth_20241009_073853.jpeg
--a---           10/9/2024  7:49 AM       13728205 earth_20241009_074854.jpeg
--a---           10/9/2024  7:59 AM       13728205 earth_20241009_075904.jpeg
--a---           10/9/2024  8:09 AM       13728205 earth_20241009_080912.jpeg
--a---           10/9/2024  8:19 AM       13728205 earth_20241009_081925.jpeg
--a---           10/9/2024  8:29 AM       13728205 earth_20241009_082938.jpeg
--a---           10/9/2024  8:40 AM       14292470 earth_20241009_083949.jpeg
--a---           10/9/2024  8:50 AM       14405079 earth_20241009_085003.jpeg
--a---           10/9/2024  9:00 AM       14544403 earth_20241009_090018.jpeg
--a---           10/9/2024  9:10 AM       14544403 earth_20241009_091031.jpeg
--a---           10/9/2024  9:21 AM       14858695 earth_20241009_092047.jpeg
--a---           10/9/2024  9:31 AM       14858695 earth_20241009_093109.jpeg
--a---           10/9/2024  9:41 AM       15245564 earth_20241009_094125.jpeg
--a---           10/9/2024  9:51 AM       15478820 earth_20241009_095130.jpeg
--a---           10/9/2024 10:02 AM       15735401 earth_20241009_100144.jpeg
--a---           10/9/2024 10:12 AM       16019463 earth_20241009_101204.jpeg
--a---           10/9/2024 10:22 AM       16019463 earth_20241009_102221.jpeg
--a---           10/9/2024 10:32 AM       16668472 earth_20241009_103233.jpeg
--a---           10/9/2024 10:43 AM       16668472 earth_20241009_104250.jpeg
--a---           10/9/2024 10:53 AM       17247871 earth_20241009_105306.jpeg
--a---           10/9/2024 11:03 AM       17416836 earth_20241009_110325.jpeg
--a---           10/9/2024 11:14 AM       17523744 earth_20241009_111349.jpeg
--a---           10/9/2024 11:24 AM       17632133 earth_20241009_112418.jpeg
--a---           10/9/2024 11:35 AM       17737458 earth_20241009_113443.jpeg
--a---           10/9/2024 11:45 AM       17737458 earth_20241009_114505.jpeg
--a---           10/9/2024 11:56 AM       17897872 earth_20241009_115531.jpeg
--a---           10/9/2024 12:06 PM       17959215 earth_20241009_120553.jpeg
--a---           10/9/2024 12:16 PM       18041151 earth_20241009_121613.jpeg
--a---           10/9/2024 12:27 PM       18058827 earth_20241009_122633.jpeg
--a---           10/9/2024 12:37 PM       18058827 earth_20241009_123651.jpeg
--a---           10/9/2024 12:47 PM       18058827 earth_20241009_124715.jpeg
--a---           10/9/2024 12:58 PM       18121758 earth_20241009_125735.jpeg
--a---           10/9/2024  1:08 PM       18149262 earth_20241009_130758.jpeg
--a---           10/9/2024  1:18 PM       18174711 earth_20241009_131821.jpeg
--a---           10/9/2024  1:29 PM       18164402 earth_20241009_132844.jpeg
--a---           10/9/2024  1:39 PM       18133658 earth_20241009_133906.jpeg
--a---           10/9/2024  1:50 PM       18133658 earth_20241009_134931.jpeg
--a---           10/9/2024  2:00 PM       18105660 earth_20241009_135954.jpeg
--a---           10/9/2024  2:11 PM       18085603 earth_20241009_141025.jpeg
--a---           10/9/2024  2:21 PM       18066750 earth_20241009_142055.jpeg
--a---           10/9/2024  2:31 PM       18026815 earth_20241009_143124.jpeg
--a---           10/9/2024  2:42 PM       17967922 earth_20241009_144151.jpeg
--a---           10/9/2024  2:52 PM       17967922 earth_20241009_145218.jpeg
--a---           10/9/2024  3:03 PM       17835537 earth_20241009_150239.jpeg
--a---           10/9/2024  3:13 PM       17758197 earth_20241009_151305.jpeg
--a---           10/9/2024  3:23 PM       17596993 earth_20241009_152331.jpeg
--a---           10/9/2024  3:34 PM       17396433 earth_20241009_153351.jpeg
--a---           10/9/2024  3:44 PM       17173451 earth_20241009_154417.jpeg
--a---           10/9/2024  3:55 PM       17173451 earth_20241009_155436.jpeg
--a---           10/9/2024  4:05 PM       16642957 earth_20241009_160456.jpeg
--a---           10/9/2024  4:15 PM       16378653 earth_20241009_161521.jpeg
--a---           10/9/2024  4:26 PM       16133676 earth_20241009_162545.jpeg
--a---           10/9/2024  4:36 PM       15677693 earth_20241009_163612.jpeg
--a---           10/9/2024  4:47 PM       15460865 earth_20241009_164642.jpeg
--a---           10/9/2024  4:57 PM       15248172 earth_20241009_165703.jpeg
--a---           10/9/2024  5:08 PM       15027490 earth_20241009_170725.jpeg
--a---           10/9/2024  5:18 PM       14825059 earth_20241009_171754.jpeg
--a---           10/9/2024  5:28 PM       14624819 earth_20241009_172817.jpeg
--a---           10/9/2024  5:39 PM       14624819 earth_20241009_173836.jpeg
--a---           10/9/2024  5:49 PM       14260228 earth_20241009_174858.jpeg
--a---           10/9/2024  5:59 PM       14260228 earth_20241009_175917.jpeg
--a---           10/9/2024  6:09 PM       14260228 earth_20241009_180931.jpeg
--a---           10/9/2024  6:20 PM       14260228 earth_20241009_181945.jpeg
--a---           10/9/2024  6:30 PM       13451855 earth_20241009_182959.jpeg
--a---           10/9/2024  6:40 PM       13451855 earth_20241009_184013.jpeg
--a---           10/9/2024  6:50 PM       13451855 earth_20241009_185021.jpeg
--a---           10/9/2024  7:01 PM       12811463 earth_20241009_190038.jpeg
--a---           10/9/2024  7:11 PM       12603331 earth_20241009_191053.jpeg
--a---           10/9/2024  7:21 PM       12443939 earth_20241009_192114.jpeg
--a---           10/9/2024  7:31 PM       12297127 earth_20241009_193133.jpeg
--a---           10/9/2024  7:42 PM       12297127 earth_20241009_194147.jpeg
--a---           10/9/2024  7:52 PM       12007276 earth_20241009_195201.jpeg
--a---           10/9/2024  8:02 PM       12007276 earth_20241009_200220.jpeg
--a---           10/9/2024  8:12 PM       12007276 earth_20241009_201233.jpeg
--a---           10/9/2024  8:23 PM       11613035 earth_20241009_202249.jpeg
--a---           10/9/2024  8:33 PM       11471256 earth_20241009_203305.jpeg
--a---           10/9/2024  8:43 PM       11471256 earth_20241009_204328.jpeg
--a---           10/9/2024  8:54 PM       11205552 earth_20241009_205345.jpeg
--a---           10/9/2024  9:04 PM       11205552 earth_20241009_210400.jpeg
--a---           10/9/2024  9:14 PM       11205552 earth_20241009_211410.jpeg
--a---           10/9/2024  9:24 PM       10936481 earth_20241009_212424.jpeg
--a---           10/9/2024  9:34 PM       10840642 earth_20241009_213435.jpeg
--a---           10/9/2024  9:45 PM       10785066 earth_20241009_214445.jpeg
--a---           10/9/2024  9:55 PM       10709366 earth_20241009_215514.jpeg
--a---           10/9/2024 10:06 PM       10657269 earth_20241009_220538.jpeg
--a---           10/9/2024 10:16 PM       10620706 earth_20241009_221552.jpeg
--a---           10/9/2024 10:26 PM       10621988 earth_20241009_222615.jpeg
--a---           10/9/2024 10:36 PM       10640388 earth_20241009_223629.jpeg
--a---           10/9/2024 10:46 PM       10640388 earth_20241009_224638.jpeg
--a---           10/9/2024 10:57 PM       10699943 earth_20241009_225646.jpeg
--a---           10/9/2024 11:07 PM       10736627 earth_20241009_230652.jpeg
--a---           10/9/2024 11:17 PM       10736627 earth_20241009_231659.jpeg
--a---           10/9/2024 11:27 PM       10760688 earth_20241009_232705.jpeg
--a---           10/9/2024 11:37 PM       10760688 earth_20241009_233710.jpeg
--a---           10/9/2024 11:47 PM       10760688 earth_20241009_234714.jpeg
--a---           10/9/2024 11:57 PM       10634586 earth_20241009_235716.jpeg
--a---          10/10/2024 12:07 AM       10458827 earth_20241010_000719.jpeg
--a---          10/10/2024 12:17 AM       10155029 earth_20241010_001722.jpeg
--a---          10/10/2024 12:27 AM       10155029 earth_20241010_002726.jpeg
--a---          10/10/2024 12:37 AM        9618851 earth_20241010_003728.jpeg
--a---          10/10/2024 12:47 AM        9618851 earth_20241010_004730.jpeg
--a---          10/10/2024 12:57 AM       10926827 earth_20241010_005732.jpeg
--a---          10/10/2024  1:07 AM        9368491 earth_20241010_010735.jpeg
--a---          10/10/2024  1:17 AM        9837027 earth_20241010_011739.jpeg
--a---          10/10/2024  1:27 AM        9766213 earth_20241010_012742.jpeg
--a---          10/10/2024  1:37 AM       10402515 earth_20241010_013745.jpeg
--a---          10/10/2024  1:48 AM       10666744 earth_20241010_014747.jpeg
--a---          10/10/2024  1:58 AM       10803055 earth_20241010_015750.jpeg
--a---          10/10/2024  2:08 AM       10883395 earth_20241010_020752.jpeg
--a---          10/10/2024  2:18 AM       10921265 earth_20241010_021755.jpeg
--a---          10/10/2024  2:28 AM       10954076 earth_20241010_022758.jpeg
--a---          10/10/2024  2:38 AM       10954076 earth_20241010_023801.jpeg
--a---          10/10/2024  2:48 AM       10954076 earth_20241010_024803.jpeg
--a---          10/10/2024  2:58 AM       10949858 earth_20241010_025806.jpeg
--a---          10/10/2024  3:08 AM       10887327 earth_20241010_030808.jpeg
--a---          10/10/2024  3:18 AM       10827941 earth_20241010_031811.jpeg
--a---          10/10/2024  3:28 AM       10827941 earth_20241010_032814.jpeg
--a---          10/10/2024  3:38 AM       10719480 earth_20241010_033816.jpeg
--a---          10/10/2024  3:48 AM       10719480 earth_20241010_034818.jpeg
--a---          10/10/2024  3:58 AM       10563456 earth_20241010_035820.jpeg
--a---          10/10/2024  4:08 AM       10542114 earth_20241010_040822.jpeg
--a---          10/10/2024  4:18 AM       10580648 earth_20241010_041825.jpeg
--a---          10/10/2024  4:28 AM       10580648 earth_20241010_042826.jpeg
--a---          10/10/2024  4:38 AM       10685838 earth_20241010_043827.jpeg
--a---          10/10/2024  4:48 AM       10782014 earth_20241010_044828.jpeg
--a---          10/10/2024  4:58 AM       10904790 earth_20241010_045829.jpeg
--a---          10/10/2024  5:08 AM       10904790 earth_20241010_050831.jpeg
--a---          10/10/2024  5:18 AM       10904790 earth_20241010_051832.jpeg
--a---          10/10/2024  5:28 AM       11295377 earth_20241010_052833.jpeg
--a---          10/10/2024  5:38 AM       11295377 earth_20241010_053835.jpeg
--a---          10/10/2024  5:48 AM       11295377 earth_20241010_054836.jpeg
--a---          10/10/2024  5:58 AM       11797112 earth_20241010_055839.jpeg
--a---          10/10/2024  6:08 AM       11965912 earth_20241010_060842.jpeg
--a---          10/10/2024  6:18 AM       12129972 earth_20241010_061844.jpeg
--a---          10/10/2024  6:29 AM       12292021 earth_20241010_062847.jpeg
--a---          10/10/2024  6:39 AM       12456670 earth_20241010_063849.jpeg
--a---          10/10/2024  6:49 AM       12456670 earth_20241010_064851.jpeg
--a---          10/10/2024  6:59 AM       12778559 earth_20241010_065854.jpeg
--a---          10/10/2024  7:09 AM       12927045 earth_20241010_070856.jpeg
--a---          10/10/2024  7:19 AM       13102749 earth_20241010_071859.jpeg
--a---          10/10/2024  7:29 AM       13102749 earth_20241010_072902.jpeg
--a---          10/10/2024  7:39 AM       13431146 earth_20241010_073904.jpeg
--a---          10/10/2024  7:49 AM       13431146 earth_20241010_074907.jpeg
--a---          10/10/2024  7:59 AM       13431146 earth_20241010_075911.jpeg
--a---          10/10/2024  8:09 AM       13431146 earth_20241010_080914.jpeg
--a---          10/10/2024  8:19 AM       13431146 earth_20241010_081916.jpeg
--a---          10/10/2024  8:29 AM       13960582 earth_20241010_082919.jpeg
--a---          10/10/2024  8:39 AM       13960582 earth_20241010_083920.jpeg
--a---          10/10/2024  8:49 AM       14093747 earth_20241010_084922.jpeg
--a---          10/10/2024  8:59 AM       14093747 earth_20241010_085926.jpeg
--a---          10/10/2024  9:09 AM       14093747 earth_20241010_090930.jpeg
--a---          10/10/2024  9:19 AM       14473898 earth_20241010_091941.jpeg
--a---          10/10/2024  9:30 AM       14473898 earth_20241010_092946.jpeg
--a---          10/10/2024  9:40 AM       14766980 earth_20241010_093951.jpeg
--a---          10/10/2024  9:50 AM       14932023 earth_20241010_094955.jpeg
--a---          10/10/2024 10:00 AM       14932023 earth_20241010_095958.jpeg
--a---          10/10/2024 10:10 AM       15380981 earth_20241010_101002.jpeg
--a---          10/10/2024 10:20 AM       15678279 earth_20241010_102006.jpeg
--a---          10/10/2024 10:30 AM       15998788 earth_20241010_103010.jpeg
--a---          10/10/2024 10:40 AM       16298274 earth_20241010_104016.jpeg
--a---          10/10/2024 10:50 AM       16517342 earth_20241010_105019.jpeg
--a---          10/10/2024 11:00 AM       16652892 earth_20241010_110022.jpeg
--a---          10/10/2024 11:10 AM       16652892 earth_20241010_111026.jpeg
--a---          10/10/2024 11:20 AM       16842418 earth_20241010_112030.jpeg
--a---          10/10/2024 11:30 AM       16944118 earth_20241010_113033.jpeg
--a---          10/10/2024 11:40 AM       17046728 earth_20241010_114036.jpeg
--a---          10/10/2024 11:50 AM       17143622 earth_20241010_115040.jpeg
--a---          10/10/2024 12:00 PM       17231016 earth_20241010_120043.jpeg
--a---          10/10/2024 12:11 PM       17310509 earth_20241010_121048.jpeg
--a---          10/10/2024 12:21 PM       17310509 earth_20241010_122052.jpeg
--a---          10/10/2024 12:31 PM       17415956 earth_20241010_123055.jpeg
--a---          10/10/2024 12:41 PM       17457492 earth_20241010_124059.jpeg
--a---          10/10/2024 12:51 PM       14832782 earth_20241010_125103.jpeg
--a---          10/10/2024  1:01 PM       14832782 earth_20241010_130105.jpeg
--a---          10/10/2024  1:11 PM       17588352 earth_20241010_131110.jpeg
--a---          10/10/2024  1:21 PM       17621645 earth_20241010_132114.jpeg
--a---          10/10/2024  1:31 PM       17621645 earth_20241010_133118.jpeg
--a---          10/10/2024  1:41 PM       17636923 earth_20241010_134122.jpeg
--a---          10/10/2024  1:51 PM       17636923 earth_20241010_135125.jpeg
--a---          10/10/2024  2:01 PM       17653073 earth_20241010_140128.jpeg
--a---          10/10/2024  2:11 PM       17653073 earth_20241010_141130.jpeg
--a---          10/10/2024  2:21 PM       17664472 earth_20241010_142135.jpeg
--a---          10/10/2024  2:31 PM       17659826 earth_20241010_143138.jpeg
--a---          10/10/2024  2:42 PM       17659826 earth_20241010_144142.jpeg
--a---          10/10/2024  2:52 PM       17603148 earth_20241010_145148.jpeg
--a---          10/10/2024  3:02 PM       17541788 earth_20241010_150151.jpeg
--a---          10/10/2024  3:12 PM       17449416 earth_20241010_151201.jpeg
--a---          10/10/2024  3:22 PM       17294714 earth_20241010_152204.jpeg
--a---          10/10/2024  3:32 PM       17140474 earth_20241010_153208.jpeg
--a---          10/10/2024  3:42 PM       17140474 earth_20241010_154212.jpeg
--a---          10/10/2024  3:52 PM       16800368 earth_20241010_155214.jpeg
--a---          10/10/2024  4:02 PM       16586382 earth_20241010_160217.jpeg
--a---          10/10/2024  4:12 PM       16385582 earth_20241010_161220.jpeg
--a---          10/10/2024  4:22 PM       16186313 earth_20241010_162223.jpeg
--a---          10/10/2024  4:32 PM       15984628 earth_20241010_163226.jpeg
--a---          10/10/2024  4:42 PM       15783587 earth_20241010_164229.jpeg
--a---          10/10/2024  4:52 PM       15567925 earth_20241010_165232.jpeg
--a---          10/10/2024  5:02 PM       15348218 earth_20241010_170235.jpeg
--a---          10/10/2024  5:12 PM       15348218 earth_20241010_171238.jpeg
--a---          10/10/2024  5:22 PM       14922511 earth_20241010_172241.jpeg
--a---          10/10/2024  5:32 PM       14703854 earth_20241010_173244.jpeg
--a---          10/10/2024  5:43 PM       14492461 earth_20241010_174246.jpeg
--a---          10/10/2024  5:53 PM       14286764 earth_20241010_175249.jpeg
--a---          10/10/2024  6:03 PM       14060093 earth_20241010_180251.jpeg
--a---          10/10/2024  6:13 PM       13842050 earth_20241010_181254.jpeg
--a---          10/10/2024  6:23 PM       13842050 earth_20241010_182257.jpeg
--a---          10/10/2024  6:33 PM       13410961 earth_20241010_183259.jpeg
--a---          10/10/2024  6:43 PM       13410961 earth_20241010_184304.jpeg
--a---          10/10/2024  6:53 PM       13053285 earth_20241010_185307.jpeg
--a---          10/10/2024  7:03 PM       13053285 earth_20241010_190312.jpeg
--a---          10/10/2024  7:13 PM       12698309 earth_20241010_191315.jpeg
--a---          10/10/2024  7:23 PM       12565825 earth_20241010_192318.jpeg
--a---          10/10/2024  7:33 PM       12423457 earth_20241010_193322.jpeg
--a---          10/10/2024  7:43 PM       12423457 earth_20241010_194326.jpeg
--a---          10/10/2024  7:53 PM       12423457 earth_20241010_195330.jpeg
--a---          10/10/2024  8:03 PM       12021801 earth_20241010_200332.jpeg
--a---          10/10/2024  8:13 PM       11856750 earth_20241010_201337.jpeg
--a---          10/10/2024  8:23 PM       11710896 earth_20241010_202340.jpeg
--a---          10/10/2024  8:34 PM       11558025 earth_20241010_203343.jpeg
--a---          10/10/2024  8:44 PM       11558025 earth_20241010_204346.jpeg
--a---          10/10/2024  8:54 PM       11302270 earth_20241010_205349.jpeg
--a---          10/10/2024  9:04 PM       11302270 earth_20241010_210353.jpeg
--a---          10/10/2024  9:14 PM       11093378 earth_20241010_211356.jpeg
--a---          10/10/2024  9:24 PM       11093378 earth_20241010_212359.jpeg
--a---          10/10/2024  9:34 PM       10895524 earth_20241010_213401.jpeg
--a---          10/10/2024  9:44 PM       10823821 earth_20241010_214404.jpeg
--a---          10/10/2024  9:54 PM       10751828 earth_20241010_215406.jpeg
--a---          10/10/2024 10:04 PM       10714256 earth_20241010_220408.jpeg
--a---          10/10/2024 10:14 PM       10714256 earth_20241010_221410.jpeg
--a---          10/10/2024 10:24 PM       10714256 earth_20241010_222413.jpeg
--a---          10/10/2024 10:34 PM       10689281 earth_20241010_223414.jpeg
--a---          10/10/2024 10:44 PM       10701389 earth_20241010_224415.jpeg
--a---          10/10/2024 10:54 PM       10729550 earth_20241010_225416.jpeg
--a---          10/10/2024 11:04 PM       10729550 earth_20241010_230417.jpeg
--a---          10/10/2024 11:14 PM       10729550 earth_20241010_231418.jpeg
--a---          10/10/2024 11:24 PM       10729550 earth_20241010_232420.jpeg
--a---          10/10/2024 11:34 PM       10857494 earth_20241010_233421.jpeg
--a---          10/10/2024 11:44 PM       10857494 earth_20241010_234422.jpeg
--a---          10/10/2024 11:54 PM       10852781 earth_20241010_235424.jpeg
--a---          10/11/2024 12:04 AM       10852781 earth_20241011_000426.jpeg
--a---          10/11/2024 12:14 AM       10852781 earth_20241011_001429.jpeg
--a---          10/11/2024 12:24 AM       10335912 earth_20241011_002431.jpeg
--a---          10/11/2024 12:34 AM        9848076 earth_20241011_003434.jpeg
--a---          10/11/2024 12:44 AM        9529257 earth_20241011_004436.jpeg
--a---          10/11/2024 12:54 AM        9273010 earth_20241011_005438.jpeg
--a---          10/11/2024  1:04 AM        9273010 earth_20241011_010440.jpeg
--a---          10/11/2024  1:14 AM        9856532 earth_20241011_011442.jpeg
--a---          10/11/2024  1:25 AM        9856532 earth_20241011_012444.jpeg
--a---          10/11/2024  1:35 AM       10471883 earth_20241011_013446.jpeg
--a---          10/11/2024  1:45 AM       10793355 earth_20241011_014449.jpeg
--a---          10/11/2024  1:55 AM       10793355 earth_20241011_015452.jpeg
--a---          10/11/2024  2:05 AM       10902981 earth_20241011_020454.jpeg
--a---          10/11/2024  2:15 AM       10902981 earth_20241011_021456.jpeg
--a---          10/11/2024  2:25 AM       11018547 earth_20241011_022459.jpeg
--a---          10/11/2024  2:35 AM       11018347 earth_20241011_023501.jpeg
--a---          10/11/2024  2:45 AM       11014410 earth_20241011_024503.jpeg
--a---          10/11/2024  2:55 AM       10957131 earth_20241011_025506.jpeg
--a---          10/11/2024  3:05 AM       10957131 earth_20241011_030508.jpeg
--a---          10/11/2024  3:15 AM       10907608 earth_20241011_031510.jpeg
--a---          10/11/2024  3:25 AM       10851625 earth_20241011_032513.jpeg
--a---          10/11/2024  3:35 AM       10713052 earth_20241011_033515.jpeg
--a---          10/11/2024  3:45 AM       10713052 earth_20241011_034517.jpeg
--a---          10/11/2024  3:55 AM       10595924 earth_20241011_035520.jpeg
--a---          10/11/2024  4:05 AM       10595924 earth_20241011_040522.jpeg
--a---          10/11/2024  4:15 AM       10586088 earth_20241011_041523.jpeg
--a---          10/11/2024  4:25 AM       10586088 earth_20241011_042525.jpeg
--a---          10/11/2024  4:35 AM       10586088 earth_20241011_043527.jpeg
--a---          10/11/2024  4:45 AM       10676191 earth_20241011_044529.jpeg
--a---          10/11/2024  4:55 AM       10676191 earth_20241011_045531.jpeg
--a---          10/11/2024  5:05 AM       10840224 earth_20241011_050534.jpeg
--a---          10/11/2024  5:15 AM       10920286 earth_20241011_051536.jpeg
--a---          10/11/2024  5:25 AM       11050985 earth_20241011_052538.jpeg
--a---          10/11/2024  5:35 AM       11050985 earth_20241011_053541.jpeg
--a---          10/11/2024  5:46 AM       11331923 earth_20241011_054543.jpeg
--a---          10/11/2024  5:56 AM       11574848 earth_20241011_055545.jpeg
--a---          10/11/2024  6:06 AM       11574848 earth_20241011_060547.jpeg
--a---          10/11/2024  6:16 AM       11683578 earth_20241011_061550.jpeg
--a---          10/11/2024  6:26 AM       11923941 earth_20241011_062553.jpeg
--a---          10/11/2024  6:36 AM       12077258 earth_20241011_063555.jpeg
--a---          10/11/2024  6:46 AM       12250635 earth_20241011_064557.jpeg
--a---          10/11/2024  6:56 AM       12250635 earth_20241011_065600.jpeg
--a---          10/11/2024  7:06 AM       12450505 earth_20241011_070602.jpeg
--a---          10/11/2024  7:16 AM       12820479 earth_20241011_071603.jpeg
--a---          10/11/2024  7:26 AM       12984384 earth_20241011_072604.jpeg
--a---          10/11/2024  7:36 AM       12984384 earth_20241011_073606.jpeg
--a---          10/11/2024  7:46 AM       12984384 earth_20241011_074607.jpeg
--a---          10/11/2024  7:56 AM       13503637 earth_20241011_075608.jpeg
--a---          10/11/2024  8:06 AM       13503637 earth_20241011_080610.jpeg
--a---          10/11/2024  8:16 AM       13805853 earth_20241011_081611.jpeg
--a---          10/11/2024  8:26 AM       13805853 earth_20241011_082613.jpeg
--a---          10/11/2024  8:36 AM       13805853 earth_20241011_083614.jpeg
--a---          10/11/2024  8:46 AM       14067332 earth_20241011_084616.jpeg
--a---          10/11/2024  8:56 AM       14067332 earth_20241011_085617.jpeg
--a---          10/11/2024  9:06 AM       14067332 earth_20241011_090618.jpeg
--a---          10/11/2024  9:16 AM       14496501 earth_20241011_091620.jpeg
--a---          10/11/2024  9:26 AM       14837652 earth_20241011_092621.jpeg
--a---          10/11/2024  9:36 AM       14837652 earth_20241011_093623.jpeg
--a---          10/11/2024  9:46 AM       15186361 earth_20241011_094624.jpeg
--a---          10/11/2024  9:56 AM       15186361 earth_20241011_095626.jpeg
--a---          10/11/2024 10:06 AM       15186361 earth_20241011_100627.jpeg
--a---          10/11/2024 10:16 AM       15686921 earth_20241011_101628.jpeg
--a---          10/11/2024 10:26 AM       16349112 earth_20241011_102630.jpeg
--a---          10/11/2024 10:36 AM       16349112 earth_20241011_103631.jpeg
--a---          10/11/2024 10:46 AM       16947778 earth_20241011_104633.jpeg
--a---          10/11/2024 10:56 AM       17117646 earth_20241011_105634.jpeg
--a---          10/11/2024 11:06 AM       17117646 earth_20241011_110636.jpeg
--a---          10/11/2024 11:16 AM       17240536 earth_20241011_111638.jpeg
--a---          10/11/2024 11:26 AM       17240536 earth_20241011_112640.jpeg
--a---          10/11/2024 11:36 AM       17240536 earth_20241011_113641.jpeg
--a---          10/11/2024 11:47 AM       17687659 earth_20241011_114643.jpeg
--a---          10/11/2024 11:57 AM       17764238 earth_20241011_115645.jpeg
--a---          10/11/2024 12:07 PM       17764238 earth_20241011_120647.jpeg
--a---          10/11/2024 12:17 PM       17859183 earth_20241011_121649.jpeg
--a---          10/11/2024 12:27 PM       17884959 earth_20241011_122700.jpeg
--a---          10/11/2024 12:37 PM       17903886 earth_20241011_123704.jpeg
--a---          10/11/2024 12:47 PM       15921777 earth_20241011_124710.jpeg
--a---          10/11/2024 12:57 PM       17944849 earth_20241011_125713.jpeg
--a---          10/11/2024  1:07 PM       17972027 earth_20241011_130715.jpeg
--a---          10/11/2024  1:17 PM       17972027 earth_20241011_131717.jpeg
--a---          10/11/2024  1:27 PM       17978343 earth_20241011_132718.jpeg
--a---          10/11/2024  1:37 PM       17978343 earth_20241011_133720.jpeg
--a---          10/11/2024  1:47 PM       17977886 earth_20241011_134722.jpeg
--a---          10/11/2024  1:57 PM       17977886 earth_20241011_135724.jpeg
--a---          10/11/2024  2:07 PM       17977886 earth_20241011_140725.jpeg
--a---          10/11/2024  2:17 PM       17977886 earth_20241011_141727.jpeg
--a---          10/11/2024  2:27 PM       17929218 earth_20241011_142729.jpeg
--a---          10/11/2024  2:37 PM       17889706 earth_20241011_143731.jpeg
--a---          10/11/2024  2:47 PM       17840929 earth_20241011_144733.jpeg
--a---          10/11/2024  2:57 PM       17840929 earth_20241011_145735.jpeg
--a---          10/11/2024  3:07 PM       17840929 earth_20241011_150737.jpeg
--a---          10/11/2024  3:17 PM       17614828 earth_20241011_151740.jpeg
--a---          10/11/2024  3:28 PM       17441615 earth_20241011_152743.jpeg
--a---          10/11/2024  3:38 PM       17441615 earth_20241011_153747.jpeg
--a---          10/11/2024  3:48 PM       17095967 earth_20241011_154750.jpeg
--a---          10/11/2024  3:58 PM       16895687 earth_20241011_155753.jpeg
--a---          10/11/2024  4:08 PM       16693917 earth_20241011_160756.jpeg
--a---          10/11/2024  4:18 PM       16515995 earth_20241011_161800.jpeg
--a---          10/11/2024  4:28 PM       16326763 earth_20241011_162803.jpeg
--a---          10/11/2024  4:38 PM       16129172 earth_20241011_163807.jpeg
--a---          10/11/2024  4:48 PM       15930364 earth_20241011_164809.jpeg
--a---          10/11/2024  4:58 PM       15711949 earth_20241011_165830.jpeg
--a---          10/11/2024  5:08 PM       15711949 earth_20241011_170843.jpeg
--a---          10/11/2024  5:18 PM       15229948 earth_20241011_171846.jpeg
--a---          10/11/2024  5:28 PM       14967948 earth_20241011_172848.jpeg
--a---          10/11/2024  5:38 PM       14967948 earth_20241011_173851.jpeg
--a---          10/11/2024  5:48 PM       14420360 earth_20241011_174853.jpeg
--a---          10/11/2024  5:58 PM       14420360 earth_20241011_175856.jpeg
-
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\backup\flex14\nasa> dir > "C:\Users\kushal\src\myhtml\fromnepal\public\notes\2024\10\21\earth.txt"
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\backup\flex14\nasa> ffmpeg -framerate 60 -i "C:\Users\kushal\src\myhtml\fromnepal\public\notes\2024\10\21\earth2.txt" -c:v libx264 -pix_fmt yuv420p"C:\Users\kushal\Videos\earth.mp4"
-ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
-  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
-  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
-  libavutil      59. 39.100 / 59. 39.100
-  libavcodec     61. 19.100 / 61. 19.100
-  libavformat    61.  7.100 / 61.  7.100
-  libavdevice    61.  3.100 / 61.  3.100
-  libavfilter    10.  4.100 / 10.  4.100
-  libswscale      8.  3.100 /  8.  3.100
-  libswresample   5.  3.100 /  5.  3.100
-  libpostproc    58.  3.100 / 58.  3.100
-Input #0, tty, from 'C:\Users\kushal\src\myhtml\fromnepal\public\notes\2024\10\21\earth2.txt':
-  Duration: 00:00:10.85, start: 0.000000, bitrate: 47 kb/s
-  Stream #0:0: Video: ansi, pal8, 640x400, 60 fps, 60 tbr, 60 tbn
-Stream mapping:
-  Stream #0:0 -> #0:0 (ansi (native) -> h264 (libx264))
-Press [q] to stop, [?] for help
-[libx264 @ 000001fcf5f9c640] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
-[libx264 @ 000001fcf5f9c640] profile High, level 3.1, 4:2:0, 8-bit
-[libx264 @ 000001fcf5f9c640] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=12 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
-Output #0, mp4, to 'C:\Users\kushal\Videos\earth.mp4':
-  Metadata:
-    encoder         : Lavf61.7.100
-  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 640x400, q=2-31, 60 fps, 15360 tbn
-      Metadata:
-        encoder         : Lavc61.19.100 libx264
-      Side data:
-        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
-[out#0/mp4 @ 000001fcf5f88580] video:1233KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.687252%
-frame=  651 fps=0.0 q=-1.0 Lsize=    1242KiB time=00:00:10.81 bitrate= 940.3kbits/s speed=28.5x
-[libx264 @ 000001fcf5f9c640] frame I:3     Avg QP:20.76  size: 23895
-[libx264 @ 000001fcf5f9c640] frame P:166   Avg QP:33.81  size:  2847
-[libx264 @ 000001fcf5f9c640] frame B:482   Avg QP:36.49  size:  1489
-[libx264 @ 000001fcf5f9c640] consecutive B-frames:  0.8%  1.5%  0.0% 97.7%
-[libx264 @ 000001fcf5f9c640] mb I  I16..4:  0.5% 70.6% 29.0%
-[libx264 @ 000001fcf5f9c640] mb P  I16..4:  0.1%  0.3%  1.0%  P16..4:  2.7%  2.5%  2.4%  0.0%  0.0%    skip:91.0%
-[libx264 @ 000001fcf5f9c640] mb B  I16..4:  0.0%  0.1%  0.1%  B16..8:  3.8%  2.5%  1.5%  direct: 0.7%  skip:91.3%  L0:49.6% L1:43.6% BI: 6.8%
-[libx264 @ 000001fcf5f9c640] 8x8 transform intra:49.9% inter:1.1%
-[libx264 @ 000001fcf5f9c640] coded y,uvDC,uvAC intra: 44.2% 0.0% 0.0% inter: 2.7% 0.0% 0.0%
-[libx264 @ 000001fcf5f9c640] i16 v,h,dc,p: 20% 68% 12%  0%
-[libx264 @ 000001fcf5f9c640] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 65%  8% 27%  0%  0%  0%  0%  0%  0%
-[libx264 @ 000001fcf5f9c640] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 30% 27% 17%  3%  4%  4%  7%  5%  4%
-[libx264 @ 000001fcf5f9c640] i8c dc,h,v,p: 100%  0%  0%  0%
-[libx264 @ 000001fcf5f9c640] Weighted P-Frames: Y:0.0% UV:0.0%
-[libx264 @ 000001fcf5f9c640] ref P L0: 45.9%  5.6% 25.7% 22.8%
-[libx264 @ 000001fcf5f9c640] ref B L0: 76.1% 16.7%  7.2%
-[libx264 @ 000001fcf5f9c640] ref B L1: 90.5%  9.5%
-[libx264 @ 000001fcf5f9c640] kb/s:930.52
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\backup\flex14\nasa> ffmpeg -framerate 60 -f concat -safe 0 -i "C:\Users\kushal\src\myhtml\fromnepal\public\notes\2024\10\21\earth2.txt" -c:v libx264 -pix_fmt yuv420p "C:\Users\kushal\Videos\earth.mp4"
-ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
-  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
-  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
-  libavutil      59. 39.100 / 59. 39.100
-  libavcodec     61. 19.100 / 61. 19.100
-  libavformat    61.  7.100 / 61.  7.100
-  libavdevice    61.  3.100 / 61.  3.100
-  libavfilter    10.  4.100 / 10.  4.100
-  libswscale      8.  3.100 /  8.  3.100
-  libswresample   5.  3.100 /  5.  3.100
-  libpostproc    58.  3.100 / 58.  3.100
-[concat @ 0000022e5ba9ab40] Impossible to open 'C:\Users\kushal\src\myhtml\fromnepal\public\notes\2024\10\21\earth_20240928_180533.jpeg'
-[in#0 @ 0000022e5ba9a740] Error opening input: No such file or directory
-Error opening input file C:\Users\kushal\src\myhtml\fromnepal\public\notes\2024\10\21\earth2.txt.
-Error opening input files: No such file or directory
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\backup\flex14\nasa> ffmpeg -framerate 60 -f concat -safe 0 -i "earth2.txt" -c:v libx264 -pix_fmt yuv420p "C:\Users\kushal\Videos\earth.mp4"
-ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
-  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
-  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
-  libavutil      59. 39.100 / 59. 39.100
-  libavcodec     61. 19.100 / 61. 19.100
-  libavformat    61.  7.100 / 61.  7.100
-  libavdevice    61.  3.100 / 61.  3.100
-  libavfilter    10.  4.100 / 10.  4.100
-  libswscale      8.  3.100 /  8.  3.100
-  libswresample   5.  3.100 /  5.  3.100
-  libpostproc    58.  3.100 / 58.  3.100
-Option framerate not found.
-Error opening input file earth2.txt.
-Error opening input files: Option not found
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\backup\flex14\nasa> dir *.txt
-
-    Directory: \\TP-Share\G\shared\backup\flex14\nasa
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a---          10/21/2024  8:45 AM          65032 earth2.txt
-
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\backup\flex14\nasa> ffmpeg -f concat -safe 0 -i "earth2.txt" -c:v libx264 -pix_fmt yuv420p "C:\Users\kushal\Videos\earth.mp4"
-ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
-  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
-  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
-  libavutil      59. 39.100 / 59. 39.100
-  libavcodec     61. 19.100 / 61. 19.100
-  libavformat    61.  7.100 / 61.  7.100
-  libavdevice    61.  3.100 / 61.  3.100
-  libavfilter    10.  4.100 / 10.  4.100
-  libswscale      8.  3.100 /  8.  3.100
-  libswresample   5.  3.100 /  5.  3.100
-  libpostproc    58.  3.100 / 58.  3.100
-Input #0, concat, from 'earth2.txt':
-  Duration: N/A, start: 0.000000, bitrate: N/A
-  Stream #0:0: Video: mjpeg (Baseline), yuvj420p(pc, bt470bg/unknown/unknown), 10848x10848 [SAR 1:1 DAR 1:1], 25 fps, 25 tbr, 25 tbn
-Stream mapping:
-  Stream #0:0 -> #0:0 (mjpeg (native) -> h264 (libx264))
-Press [q] to stop, [?] for help
-[swscaler @ 000001b5b6b82400] deprecated pixel format used, make sure you did set range correctly
-[libx264 @ 000001b5b5a5fb80] using SAR=1/1
-[libx264 @ 000001b5b5a5fb80] frame MB size (678x678) > level limit (139264)
-[libx264 @ 000001b5b5a5fb80] DPB size (4 frames, 1838736 mbs) > level limit (1 frames, 696320 mbs)
-[libx264 @ 000001b5b5a5fb80] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
-[libx264 @ 000001b5b5a5fb80] profile High, level 6.2, 4:2:0, 8-bit
-[libx264 @ 000001b5b5a5fb80] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
-Output #0, mp4, to 'C:\Users\kushal\Videos\earth.mp4':
-  Metadata:
-    encoder         : Lavf61.7.100
-  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(pc, bt470bg/unknown/unknown, progressive), 10848x10848 [SAR 1:1 DAR 1:1], q=2-31, 25 fps, 12800 tbn
-      Metadata:
-        encoder         : Lavc61.19.100 libx264
-      Side data:
-        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
-x264 [error]: malloc of size 358649216 failedme=N/A bitrate=N/A speed=N/A
-[vost#0:0/libx264 @ 000001b5b5a5f900] Error submitting video frame to the encoder
-[vost#0:0/libx264 @ 000001b5b5a5f900] Error encoding a frame: Generic error in an external library
-[vost#0:0/libx264 @ 000001b5b5a5f900] Task finished with error code: -542398533 (Generic error in an external library)
-[vost#0:0/libx264 @ 000001b5b5a5f900] Terminating thread with return code -542398533 (Generic error in an external library)
-[out#0/mp4 @ 000001b5b5a42900] video:0KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
-[out#0/mp4 @ 000001b5b5a42900] Output file is empty, nothing was encoded(check -ss / -t / -frames parameters if used)
-frame=    0 fps=0.0 q=0.0 Lsize=       0KiB time=N/A bitrate=N/A speed=N/A
-Received > 3 system signals, hard exiting
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\backup\flex14\nasa>
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\backup\flex14\nasa>
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\backup\flex14\nasa> ffmpeg -f concat -safe 0 -i "earth2.txt" -c:v libx264 -pix_fmt yuv420p "earth.mp4"
-ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
-  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
-  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
-  libavutil      59. 39.100 / 59. 39.100
-  libavcodec     61. 19.100 / 61. 19.100
-  libavformat    61.  7.100 / 61.  7.100
-  libavdevice    61.  3.100 / 61.  3.100
-  libavfilter    10.  4.100 / 10.  4.100
-  libswscale      8.  3.100 /  8.  3.100
-  libswresample   5.  3.100 /  5.  3.100
-  libpostproc    58.  3.100 / 58.  3.100
-Input #0, concat, from 'earth2.txt':
-  Duration: N/A, start: 0.000000, bitrate: N/A
-  Stream #0:0: Video: mjpeg (Baseline), yuvj420p(pc, bt470bg/unknown/unknown), 10848x10848 [SAR 1:1 DAR 1:1], 25 fps, 25 tbr, 25 tbn
-Stream mapping:
-  Stream #0:0 -> #0:0 (mjpeg (native) -> h264 (libx264))
-Press [q] to stop, [?] for help
-[swscaler @ 0000023c0dd65ac0] deprecated pixel format used, make sure you did set range correctly
-[libx264 @ 0000023c0cc10ec0] using SAR=1/1
-[libx264 @ 0000023c0cc10ec0] frame MB size (678x678) > level limit (139264)
-[libx264 @ 0000023c0cc10ec0] DPB size (4 frames, 1838736 mbs) > level limit (1 frames, 696320 mbs)
-[libx264 @ 0000023c0cc10ec0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
-[libx264 @ 0000023c0cc10ec0] profile High, level 6.2, 4:2:0, 8-bit
-[libx264 @ 0000023c0cc10ec0] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
-Output #0, mp4, to 'earth.mp4':
-  Metadata:
-    encoder         : Lavf61.7.100
-  Stream #0:0: Video: h264 (avc1 / 0x31637661), yuv420p(pc, bt470bg/unknown/unknown, progressive), 10848x10848 [SAR 1:1 DAR 1:1], q=2-31, 25 fps, 12800 tbn
-      Metadata:
-        encoder         : Lavc61.19.100 libx264
-      Side data:
-        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
-x264 [error]: malloc of size 602747072 failedime=00:00:00.24 bitrate=1223340.3kbits/s speed=0.00113x
-[vost#0:0/libx264 @ 0000023c0cc41840] Error submitting video frame to the encoder
-[vost#0:0/libx264 @ 0000023c0cc41840] Error encoding a frame: Generic error in an external library
-[vost#0:0/libx264 @ 0000023c0cc41840] Task finished with error code: -542398533 (Generic error in an external library)
-[vost#0:0/libx264 @ 0000023c0cc41840] Terminating thread with return code -542398533 (Generic error in an external library)
-[out#0/mp4 @ 0000023c0cbfad80] video:42271KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.002324%
-frame=    8 fps=0.0 q=28.0 Lsize=   42272KiB time=00:00:00.24 bitrate=1442874.4kbits/s speed=0.00113x
-[libx264 @ 0000023c0cc10ec0] frame I:1     Avg QP:23.69  size:9007003
-[libx264 @ 0000023c0cc10ec0] frame P:3     Avg QP:26.37  size:7051970
-[libx264 @ 0000023c0cc10ec0] frame B:4     Avg QP:27.51  size:3280406
-[libx264 @ 0000023c0cc10ec0] consecutive B-frames:  9.1% 18.2%  0.0% 72.7%
-[libx264 @ 0000023c0cc10ec0] mb I  I16..4: 11.0% 86.6%  2.4%
-[libx264 @ 0000023c0cc10ec0] mb P  I16..4:  0.7% 52.8%  2.2%  P16..4:  6.9%  3.5%  2.0%  0.0%  0.0%    skip:31.8%
-[libx264 @ 0000023c0cc10ec0] mb B  I16..4:  0.4%  9.3%  0.6%  B16..8: 14.7%  7.0%  2.7%  direct:11.4%  skip:53.8%  L0:31.1% L1:25.8% BI:43.1%
-[libx264 @ 0000023c0cc10ec0] 8x8 transform intra:91.5% inter:77.8%
-[libx264 @ 0000023c0cc10ec0] coded y,uvDC,uvAC intra: 79.3% 42.7% 15.8% inter: 25.7% 9.3% 0.6%
-[libx264 @ 0000023c0cc10ec0] i16 v,h,dc,p: 77%  8%  6% 10%
-[libx264 @ 0000023c0cc10ec0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 19% 13% 23%  6%  8%  7%  7%  8%  9%
-[libx264 @ 0000023c0cc10ec0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 23% 17% 15%  7%  9%  8%  7%  6%  7%
-[libx264 @ 0000023c0cc10ec0] i8c dc,h,v,p: 66% 16% 16%  3%
-[libx264 @ 0000023c0cc10ec0] Weighted P-Frames: Y:0.0% UV:0.0%
-[libx264 @ 0000023c0cc10ec0] ref P L0: 68.5% 12.9% 12.1%  6.5%
-[libx264 @ 0000023c0cc10ec0] ref B L0: 95.7%  4.3%
-[libx264 @ 0000023c0cc10ec0] ref B L1: 99.8%  0.2%
-[libx264 @ 0000023c0cc10ec0] kb/s:1082113.38
-Conversion failed!
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\backup\flex14\nasa> date; cd "C:\Users\kushal\src\myhtml\matchthree\matchthree\"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master; date; git push origin master; date; cd "C:\Users\kushal\src\mylogging\"; date;git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main;date; git push origin main; date;
-
-Monday, October 21, 2024 8:57:01 AM
-Monday, October 21, 2024 8:57:01 AM
+Monday, October 21, 2024 11:54:47 AM
+Monday, October 21, 2024 11:54:47 AM
 yarn install v1.22.21
 [1/4] Resolving packages...
 success Already up-to-date.
 Done in 0.09s.
-Monday, October 21, 2024 8:57:01 AM
+Monday, October 21, 2024 11:54:48 AM
 yarn run v1.22.21
 $ tsc && vite build
 vite v5.4.8 building for production...
 ✓ 4 modules transformed.
 docs/index.html                0.42 kB │ gzip: 0.28 kB
 docs/assets/index-CGOwuZnp.js  8.87 kB │ gzip: 3.19 kB
-✓ built in 145ms
-Done in 2.47s.
-Monday, October 21, 2024 8:57:04 AM
+✓ built in 146ms
+Done in 1.88s.
+Monday, October 21, 2024 11:54:50 AM
 warning: in the working copy of 'docs/assets/index-CGOwuZnp.js', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Monday, October 21, 2024 8:57:04 AM
+Monday, October 21, 2024 11:54:50 AM
 On branch master
 Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
-Monday, October 21, 2024 8:57:04 AM
+Monday, October 21, 2024 11:54:50 AM
 On branch master
 Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
-Monday, October 21, 2024 8:57:04 AM
+Monday, October 21, 2024 11:54:50 AM
 From github.com:matchthree/matchthree.github.io
  * branch            master     -> FETCH_HEAD
 Already up to date.
-Monday, October 21, 2024 8:57:05 AM
+Monday, October 21, 2024 11:54:51 AM
 Everything up-to-date
-Monday, October 21, 2024 8:57:06 AM
-Monday, October 21, 2024 8:57:06 AM
-Monday, October 21, 2024 8:57:06 AM
+Monday, October 21, 2024 11:54:52 AM
+Monday, October 21, 2024 11:54:52 AM
+Monday, October 21, 2024 11:54:52 AM
 On branch main
 nothing to commit, working tree clean
-Monday, October 21, 2024 8:57:06 AM
-Monday, October 21, 2024 8:57:06 AM
-Monday, October 21, 2024 8:57:08 AM
+Monday, October 21, 2024 11:54:52 AM
+Monday, October 21, 2024 11:54:52 AM
+Monday, October 21, 2024 11:54:53 AM
 Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
-Monday, October 21, 2024 8:57:08 AM
-Monday, October 21, 2024 8:57:08 AM
+Monday, October 21, 2024 11:54:53 AM
+Monday, October 21, 2024 11:54:53 AM
 yarn install v1.22.21
 [1/4] Resolving packages...
 success Already up-to-date.
-Done in 0.08s.
-Monday, October 21, 2024 8:57:08 AM
+Done in 0.09s.
+Monday, October 21, 2024 11:54:53 AM
 yarn run v1.22.21
 $ tsc && vite build
 vite v5.4.8 building for production...
@@ -2144,48 +58,325 @@ vite v5.4.8 building for production...
 docs/index.html                 0.53 kB │ gzip: 0.32 kB
 docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
 docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
-✓ built in 2.26s
-Done in 3.54s.
-Monday, October 21, 2024 8:57:12 AM
+✓ built in 1.56s
+Done in 2.85s.
+Monday, October 21, 2024 11:54:56 AM
 warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Monday, October 21, 2024 8:57:21 AM
+Monday, October 21, 2024 11:55:04 AM
 On branch main
 Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        new file:   docs/notes/2024/10/21/earth.txt
-        new file:   docs/notes/2024/10/21/earth2.txt
         modified:   docs/notes/earth.jpeg
         modified:   docs/powershell.txt
-        new file:   public/notes/2024/10/21/earth.txt
-        new file:   public/notes/2024/10/21/earth2.txt
         modified:   public/notes/earth.jpeg
         modified:   public/powershell.txt
 
-Monday, October 21, 2024 8:57:21 AM
-[main f5f817c] build application
- 8 files changed, 8298 insertions(+), 1184 deletions(-)
- create mode 100644 docs/notes/2024/10/21/earth.txt
- create mode 100644 docs/notes/2024/10/21/earth2.txt
- create mode 100644 public/notes/2024/10/21/earth.txt
- create mode 100644 public/notes/2024/10/21/earth2.txt
-Monday, October 21, 2024 8:57:21 AM
+Monday, October 21, 2024 11:55:04 AM
+[main 2e29e7a] build application
+ 4 files changed, 4252 insertions(+), 786 deletions(-)
+Monday, October 21, 2024 11:55:04 AM
 From github.com:fromnepal/fromnepal.github.io
  * branch              main       -> FETCH_HEAD
 Current branch main is up to date.
-Monday, October 21, 2024 8:57:22 AM
-Enumerating objects: 21, done.
-Counting objects: 100% (21/21), done.
+Monday, October 21, 2024 11:55:07 AM
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
 Delta compression using up to 16 threads
-Compressing objects: 100% (12/12), done.
-Writing objects: 100% (12/12), 13.81 MiB | 7.79 MiB/s, done.
-Total 12 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 16.55 MiB | 8.90 MiB/s, done.
+Total 7 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
 To github.com:fromnepal/fromnepal.github.io.git
-   037a127..f5f817c  main -> main
-Monday, October 21, 2024 8:57:26 AM
+   f5f817c..2e29e7a  main -> main
+Monday, October 21, 2024 11:55:11 AM
 
-PS C:\Users\kushal\src\myhtml\fromnepal> date; cd "C:\Users\kushal\src\myhtml\matchthree\matchthree\"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master; date; git push origin master; date; cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_videos.ps1  -url "https://x.com/KamalaHQ/status/1843020699092295724"
+Create new folder for yt-dlp
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          10/21/2024  1:32 PM                yt-dlp
+
+DisplayHint : DateTime
+Date        : 10/21/2024 12:00:00 AM
+Day         : 21
+DayOfWeek   : Monday
+DayOfYear   : 295
+Hour        : 13
+Kind        : Local
+Millisecond : 383
+Microsecond : 107
+Nanosecond  : 500
+Minute      : 32
+Month       : 10
+Second      : 1
+Ticks       : 638651143213831075
+TimeOfDay   : 13:32:01.3831075
+Year        : 2024
+DateTime    : Monday, October 21, 2024 1:32:01 PM
+
+
+DisplayHint : DateTime
+Date        : 10/21/2024 12:00:00 AM
+Day         : 21
+DayOfWeek   : Monday
+DayOfYear   : 295
+Hour        : 13
+Kind        : Local
+Millisecond : 404
+Microsecond : 503
+Nanosecond  : 700
+Minute      : 32
+Month       : 10
+Second      : 1
+Ticks       : 638651143214045037
+TimeOfDay   : 13:32:01.4045037
+Year        : 2024
+DateTime    : Monday, October 21, 2024 1:32:01 PM
+
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241021133201.%(ext)s', 'https://x.com/KamalaHQ/status/1843020699092295724']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.10.07 from yt-dlp/yt-dlp [1a176d874] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.3, websockets-13.1
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1838 extractors
+[twitter] Extracting URL: https://x.com/KamalaHQ/status/1843020699092295724
+[twitter] 1843020699092295724: Downloading guest token
+[twitter] 1843020699092295724: Downloading GraphQL JSON
+[debug] [twitter] Extracting from video info: 1843020655773585409
+[twitter] 1843020699092295724: Downloading m3u8 information
+[debug] Sort order given by extractor: res, proto:m3u8, br, size
+[debug] Formats sorted by: hasvid, ie_pref, res, proto:m3u8(8), br, size, lang, quality, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, asr, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Twitter
+[info] 1843020655773585409: Downloading 1 format(s): http-2176
+[debug] Invoking http downloader on "https://video.twimg.com/amplify_video/1843020655773585409/vid/avc1/1014x578/repIHdbO8QJ66MFR.mp4?tag=14"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\20241021133201.mp4
+[download] 100% of    1.45MiB in 00:00:00 at 10.10MiB/s
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241021133201.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241021133201.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Kamala HQ - Trump says it’s “very dangerous” for Kamala Harris voters to identify themselves because they’ll “get hurt”" -metadata "date=20241006" -metadata "description=Trump says it’s “very dangerous” for Kamala Harris voters to identify themselves because they’ll “get hurt” https://t.co/ePb92JuyqB" -metadata "synopsis=Trump says it’s “very dangerous” for Kamala Harris voters to identify themselves because they’ll “get hurt” https://t.co/ePb92JuyqB" -metadata "purl=https://x.com/KamalaHQ/status/1843020699092295724" -metadata "comment=https://x.com/KamalaHQ/status/1843020699092295724" -metadata "artist=Kamala HQ" -movflags +faststart file:C:\Temp\yt-dlp\20241021133201.temp.mp4
+
+DisplayHint : DateTime
+Date        : 10/21/2024 12:00:00 AM
+Day         : 21
+DayOfWeek   : Monday
+DayOfYear   : 295
+Hour        : 13
+Kind        : Local
+Millisecond : 139
+Microsecond : 526
+Nanosecond  : 100
+Minute      : 32
+Month       : 10
+Second      : 5
+Ticks       : 638651143251395261
+TimeOfDay   : 13:32:05.1395261
+Year        : 2024
+DateTime    : Monday, October 21, 2024 1:32:05 PM
+
+
+DisplayHint : DateTime
+Date        : 10/21/2024 12:00:00 AM
+Day         : 21
+DayOfWeek   : Monday
+DayOfYear   : 295
+Hour        : 13
+Kind        : Local
+Millisecond : 145
+Microsecond : 23
+Nanosecond  : 900
+Minute      : 32
+Month       : 10
+Second      : 5
+Ticks       : 638651143251450239
+TimeOfDay   : 13:32:05.1450239
+Year        : 2024
+DateTime    : Monday, October 21, 2024 1:32:05 PM
+
+
+DisplayHint : DateTime
+Date        : 10/21/2024 12:00:00 AM
+Day         : 21
+DayOfWeek   : Monday
+DayOfYear   : 295
+Hour        : 13
+Kind        : Local
+Millisecond : 147
+Microsecond : 19
+Nanosecond  : 700
+Minute      : 32
+Month       : 10
+Second      : 5
+Ticks       : 638651143251470197
+TimeOfDay   : 13:32:05.1470197
+Year        : 2024
+DateTime    : Monday, October 21, 2024 1:32:05 PM
+
+
+    Directory: C:\Temp\yt-dlp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           10/6/2024  4:07 PM        1524433 20241021133201.mp4
+-a---           10/6/2024  4:07 PM        1524433 20241021133201.mp4
+Cleaned video name: 20241021133201mp4
+Cleaned video path: C:\Temp\yt-dlp\20241021133201mp4
+Running ffmpeg
+ffmpeg -i "C:\Temp\yt-dlp\20241021133201mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241021133201mp4_reencoded.mp4"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241021133201mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Kamala HQ - Trump says it’s “very dangerous” for Kamala Harris voters to identify themselves because they’ll “get hurt”
+    artist          : Kamala HQ
+    date            : 20241006
+    encoder         : Lavf61.7.100
+    comment         : https://x.com/KamalaHQ/status/1843020699092295724
+    description     : Trump says it’s “very dangerous” for Kamala Harris voters to identify themselves because they’ll “get hurt” https://t.co/ePb92JuyqB
+    synopsis        : Trump says it’s “very dangerous” for Kamala Harris voters to identify themselves because they’ll “get hurt” https://t.co/ePb92JuyqB
+  Duration: 00:00:19.93, start: 0.000000, bitrate: 612 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1014x578, 475 kb/s, SAR 1:1 DAR 507:289, 29.42 fps, 60 tbr, 60k tbn (default)
+      Metadata:
+        handler_name    : Twitter-vork muxer
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : Twitter-vork muxer
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000025ab215e940] using SAR=1/1
+[libx264 @ 0000025ab215e940] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000025ab215e940] profile High, level 3.2, 4:2:0, 8-bit
+[libx264 @ 0000025ab215e940] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=18 lookahead_threads=3 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\20241021133201mp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Kamala HQ - Trump says it’s “very dangerous” for Kamala Harris voters to identify themselves because they’ll “get hurt”
+    artist          : Kamala HQ
+    date            : 20241006
+    synopsis        : Trump says it’s “very dangerous” for Kamala Harris voters to identify themselves because they’ll “get hurt” https://t.co/ePb92JuyqB
+    comment         : https://x.com/KamalaHQ/status/1843020699092295724
+    description     : Trump says it’s “very dangerous” for Kamala Harris voters to identify themselves because they’ll “get hurt” https://t.co/ePb92JuyqB
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1014x578 [SAR 1:1 DAR 507:289], q=2-31, 60 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : Twitter-vork muxer
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : Twitter-vork muxer
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 aac
+[mp4 @ 0000025ab20d9100] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000025ab20d47c0] video:1898KiB audio:312KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 1.045866%
+frame=  585 fps=561 q=-1.0 Lsize=    2233KiB time=00:00:19.80 bitrate= 923.8kbits/s speed=  19x
+[libx264 @ 0000025ab215e940] frame I:3     Avg QP:20.77  size: 67744
+[libx264 @ 0000025ab215e940] frame P:250   Avg QP:23.77  size:  6293
+[libx264 @ 0000025ab215e940] frame B:332   Avg QP:29.18  size:   500
+[libx264 @ 0000025ab215e940] consecutive B-frames:  1.4% 65.0% 11.8% 21.9%
+[libx264 @ 0000025ab215e940] mb I  I16..4: 12.0% 33.9% 54.1%
+[libx264 @ 0000025ab215e940] mb P  I16..4:  1.0%  1.8%  0.6%  P16..4: 23.1% 10.3%  4.9%  0.0%  0.0%    skip:58.4%
+[libx264 @ 0000025ab215e940] mb B  I16..4:  0.1%  0.1%  0.0%  B16..8:  8.6%  1.0%  0.1%  direct: 0.4%  skip:89.7%  L0:30.9% L1:63.3% BI: 5.7%
+[libx264 @ 0000025ab215e940] 8x8 transform intra:48.3% inter:56.7%
+[libx264 @ 0000025ab215e940] coded y,uvDC,uvAC intra: 58.1% 59.3% 21.6% inter: 6.1% 4.7% 0.4%
+[libx264 @ 0000025ab215e940] i16 v,h,dc,p: 17% 70%  5%  7%
+[libx264 @ 0000025ab215e940] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26% 24% 16%  4%  6%  7%  6%  6%  6%
+[libx264 @ 0000025ab215e940] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 29% 32%  9%  4%  5%  7%  5%  5%  4%
+[libx264 @ 0000025ab215e940] i8c dc,h,v,p: 40% 39% 17%  4%
+[libx264 @ 0000025ab215e940] Weighted P-Frames: Y:1.2% UV:0.8%
+[libx264 @ 0000025ab215e940] ref P L0: 68.1% 14.9% 12.8%  4.2%  0.0%
+[libx264 @ 0000025ab215e940] ref B L0: 85.7% 12.7%  1.7%
+[libx264 @ 0000025ab215e940] ref B L1: 98.4%  1.6%
+[libx264 @ 0000025ab215e940] kb/s:781.53
+[aac @ 0000025ab213f180] Qavg: 1928.206
+
+DisplayHint : DateTime
+Date        : 10/21/2024 12:00:00 AM
+Day         : 21
+DayOfWeek   : Monday
+DayOfYear   : 295
+Hour        : 13
+Kind        : Local
+Millisecond : 288
+Microsecond : 619
+Nanosecond  : 500
+Minute      : 32
+Month       : 10
+Second      : 6
+Ticks       : 638651143262886195
+TimeOfDay   : 13:32:06.2886195
+Year        : 2024
+DateTime    : Monday, October 21, 2024 1:32:06 PM
+
+
+DisplayHint : DateTime
+Date        : 10/21/2024 12:00:00 AM
+Day         : 21
+DayOfWeek   : Monday
+DayOfYear   : 295
+Hour        : 13
+Kind        : Local
+Millisecond : 187
+Microsecond : 624
+Nanosecond  : 300
+Minute      : 32
+Month       : 10
+Second      : 7
+Ticks       : 638651143271876243
+TimeOfDay   : 13:32:07.1876243
+Year        : 2024
+DateTime    : Monday, October 21, 2024 1:32:07 PM
+
+
+DisplayHint : DateTime
+Date        : 10/21/2024 12:00:00 AM
+Day         : 21
+DayOfWeek   : Monday
+DayOfYear   : 295
+Hour        : 13
+Kind        : Local
+Millisecond : 192
+Microsecond : 616
+Nanosecond  : 400
+Minute      : 32
+Month       : 10
+Second      : 7
+Ticks       : 638651143271926164
+TimeOfDay   : 13:32:07.1926164
+Year        : 2024
+DateTime    : Monday, October 21, 2024 1:32:07 PM
+
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> date; cd "C:\Users\kushal\src\myhtml\matchthree\matchthree\"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master; date; git push origin master; date; cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn;date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main;
+ date;
