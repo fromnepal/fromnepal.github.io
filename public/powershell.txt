@@ -1864,3 +1864,607 @@ Tuesday, October 22, 2024 6:23:04 AM
 
 PS C:\Users\kushal\src\mydotnet> date; cd "C:\Users\kushal\src\myhtml\matchthree\matchthree\"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master; date; git push origin master; date; cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build;
  date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
+
+Tuesday, October 22, 2024 6:24:11 AM
+Tuesday, October 22, 2024 6:24:11 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.12s.
+Tuesday, October 22, 2024 6:24:12 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 4 modules transformed.
+docs/index.html                0.42 kB │ gzip: 0.28 kB
+docs/assets/index-CGOwuZnp.js  8.87 kB │ gzip: 3.19 kB
+✓ built in 194ms
+Done in 2.75s.
+Tuesday, October 22, 2024 6:24:15 AM
+warning: in the working copy of 'docs/assets/index-CGOwuZnp.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Tuesday, October 22, 2024 6:24:15 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Tuesday, October 22, 2024 6:24:15 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Tuesday, October 22, 2024 6:24:15 AM
+From github.com:matchthree/matchthree.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Tuesday, October 22, 2024 6:24:16 AM
+Everything up-to-date
+Tuesday, October 22, 2024 6:24:17 AM
+Tuesday, October 22, 2024 6:24:17 AM
+Tuesday, October 22, 2024 6:24:17 AM
+On branch main
+nothing to commit, working tree clean
+Tuesday, October 22, 2024 6:24:17 AM
+Tuesday, October 22, 2024 6:24:17 AM
+Tuesday, October 22, 2024 6:24:19 AM
+Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
+Tuesday, October 22, 2024 6:24:19 AM
+Tuesday, October 22, 2024 6:24:19 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.10s.
+Tuesday, October 22, 2024 6:24:19 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 2.04s
+Done in 3.71s.
+Tuesday, October 22, 2024 6:24:23 AM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Tuesday, October 22, 2024 6:24:34 AM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/notes/earth.jpeg
+        modified:   docs/powershell.txt
+        modified:   public/notes/earth.jpeg
+        modified:   public/powershell.txt
+
+Tuesday, October 22, 2024 6:24:34 AM
+[main 494c64d] build application
+ 4 files changed, 2968 insertions(+)
+Tuesday, October 22, 2024 6:24:35 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch              main       -> FETCH_HEAD
+Current branch main is up to date.
+Tuesday, October 22, 2024 6:24:38 AM
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 11.09 MiB | 7.28 MiB/s, done.
+Total 7 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   55b28a6..494c64d  main -> main
+Tuesday, October 22, 2024 6:24:42 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> $now = (Get-Date).ToString("yyyyMMddHHmmss"); "debug${now}"; cd C:\Users\kushal\src\mydotnet\; git status; date; dotnet build --verbosity=minimal; date; dotnet test --verbosity=minimal; date; dotnet tool restore; date; dotnet tool update dotnet-stryker; date; dotnet stryker | Out-File "docs\StrykerOutput\debug${now}.txt"; date; robocopy C:\Users\kushal\src\mydotnet\StrykerOutput C:\Users\kushal\src\mydotnet\docs\StrykerOutput /S /E /xf ".gitignore"; git status; date; git add .; date; git commit -m "run tests locally"; date; git push origin master --progress --verbose; date;
+debug20241022063431
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Tuesday, October 22, 2024 6:34:31 AM
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
+  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
+  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.10
+
+Workload updates are available. Run `dotnet workload list` for more information.
+Tuesday, October 22, 2024 6:34:34 AM
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
+Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:   178, Skipped:     0, Total:   178, Duration: 3 s - tests.dll (net8.0)
+
+Workload updates are available. Run `dotnet workload list` for more information.
+Tuesday, October 22, 2024 6:34:39 AM
+Tool 'dotnet-stryker' (version '4.3.0') was restored. Available commands: dotnet-stryker
+
+Restore was successful.
+Tuesday, October 22, 2024 6:34:39 AM
+Tool 'dotnet-stryker' is up to date (version '4.3.0' manifest file C:\Users\kushal\src\mydotnet\.config\dotnet-tools.json) .
+Tuesday, October 22, 2024 6:34:40 AM
+Out-File: Could not find a part of the path 'C:\Users\kushal\src\mydotnet\docs\StrykerOutput\debug20241022063431.txt'.
+Tuesday, October 22, 2024 6:34:40 AM
+
+-------------------------------------------------------------------------------
+   ROBOCOPY     ::     Robust File Copy for Windows
+-------------------------------------------------------------------------------
+
+  Started : Tuesday, October 22, 2024 6:34:40 AM
+   Source : C:\Users\kushal\src\mydotnet\StrykerOutput\
+     Dest : C:\Users\kushal\src\mydotnet\docs\StrykerOutput\
+
+    Files : *.*
+
+Exc Files : .gitignore
+
+  Options : *.* /S /E /DCOPY:DA /COPY:DAT /R:1000000 /W:30
+
+------------------------------------------------------------------------------
+
+          New Dir          0    C:\Users\kushal\src\mydotnet\StrykerOutput\
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-06.02-42-28\
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-06.02-42-28\reports\
+100%        New File              327369        mutation-report.html
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-06.02-52-30\
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-06.02-52-30\reports\
+100%        New File              327369        mutation-report.html
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-06.03-11-12\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-06.03-11-12\reports\
+100%        New File              327363        mutation-report.html
+100%        New File              127594        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-06.03-33-17\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-06.03-33-17\reports\
+100%        New File              327363        mutation-report.html
+100%        New File              127594        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-06.03-43-08\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-06.03-43-08\reports\
+100%        New File              327694        mutation-report.html
+100%        New File              127925        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-06.03-53-34\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-06.03-53-34\reports\
+100%        New File              327700        mutation-report.html
+100%        New File              127931        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-06.08-07-27\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-06.08-07-27\reports\
+100%        New File              327085        mutation-report.html
+100%        New File              127316        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.08-23-42\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.08-23-42\reports\
+100%        New File              327086        mutation-report.html
+100%        New File              127317        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.08-28-08\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.08-28-08\reports\
+100%        New File              327085        mutation-report.html
+100%        New File              127316        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.08-41-28\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.08-41-28\reports\
+100%        New File              327085        mutation-report.html
+100%        New File              127316        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.08-44-26\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.08-44-26\reports\
+100%        New File              327085        mutation-report.html
+100%        New File              127316        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.08-47-01\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.08-47-01\reports\
+100%        New File              327085        mutation-report.html
+100%        New File              127316        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.08-51-42\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.08-51-42\reports\
+100%        New File              327085        mutation-report.html
+100%        New File              127316        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.08-54-02\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.08-54-02\reports\
+100%        New File              327085        mutation-report.html
+100%        New File              127316        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.08-58-57\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.08-58-57\reports\
+100%        New File              327085        mutation-report.html
+100%        New File              127316        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.09-03-35\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.09-03-35\reports\
+100%        New File              327085        mutation-report.html
+100%        New File              127316        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.09-08-16\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.09-08-16\reports\
+100%        New File              327085        mutation-report.html
+100%        New File              127316        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.09-11-16\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.09-11-16\reports\
+100%        New File              327085        mutation-report.html
+100%        New File              127316        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.09-19-41\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.09-19-41\reports\
+100%        New File              327085        mutation-report.html
+100%        New File              127316        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.09-30-37\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.09-30-37\reports\
+100%        New File              327085        mutation-report.html
+100%        New File              127316        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.09-38-44\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.09-38-44\reports\
+100%        New File              327085        mutation-report.html
+100%        New File              127316        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.09-53-39\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.09-53-39\reports\
+100%        New File              327085        mutation-report.html
+100%        New File              127316        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.10-09-21\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.10-09-21\reports\
+100%        New File              327085        mutation-report.html
+100%        New File              127316        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.10-24-19\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.10-24-19\reports\
+100%        New File              327085        mutation-report.html
+100%        New File              127316        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.11-48-15\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-08.11-48-15\reports\
+100%        New File              327085        mutation-report.html
+100%        New File              127316        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-09.12-59-45\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-09.12-59-45\reports\
+100%        New File              364815        mutation-report.html
+100%        New File              165046        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-09.13-03-31\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-09.13-03-31\reports\
+100%        New File              364816        mutation-report.html
+100%        New File              165047        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-09.13-14-08\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-09.13-14-08\reports\
+100%        New File              367315        mutation-report.html
+100%        New File              167546        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-09.14-10-17\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-09.14-10-17\reports\
+100%        New File              367315        mutation-report.html
+100%        New File              167546        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-09.14-31-48\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-09.14-31-48\reports\
+100%        New File              370449        mutation-report.html
+100%        New File              170680        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-09.14-52-20\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-09.14-52-20\reports\
+100%        New File              370448        mutation-report.html
+100%        New File              170679        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-10.01-21-34\
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-10.05-52-53\
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-10.10-27-44\
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-10.10-41-58\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-10.10-41-58\reports\
+100%        New File              370448        mutation-report.html
+100%        New File              170679        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-11.15-56-32\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-11.15-56-32\reports\
+100%        New File              371847        mutation-report.html
+100%        New File              172078        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-11.16-09-58\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-11.16-09-58\reports\
+100%        New File              371850        mutation-report.html
+100%        New File              172081        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-11.16-21-03\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-11.16-21-03\reports\
+100%        New File              374901        mutation-report.html
+100%        New File              175132        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-11.17-00-58\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-11.17-00-58\reports\
+100%        New File              375438        mutation-report.html
+100%        New File              175669        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-14.11-21-17\
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-14.12-35-30\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-14.12-35-30\reports\
+100%        New File              400277        mutation-report.html
+100%        New File              197172        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-15.03-44-54\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-15.03-44-54\reports\
+100%        New File              400979        mutation-report.html
+100%        New File              197874        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-15.04-13-40\
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-15.05-48-48\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-15.05-48-48\reports\
+100%        New File              401133        mutation-report.html
+100%        New File              198028        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-15.06-11-27\
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-15.06-58-54\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-15.06-58-54\reports\
+100%        New File              401413        mutation-report.html
+100%        New File              198308        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-15.11-38-44\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-15.11-38-44\reports\
+100%        New File              401257        mutation-report.html
+100%        New File              198152        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-15.11-42-07\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-15.11-42-07\reports\
+100%        New File              400750        mutation-report.html
+100%        New File              197645        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-15.11-55-13\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-15.11-55-13\reports\
+100%        New File              400767        mutation-report.html
+100%        New File              197662        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-17.21-33-16\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-17.21-33-16\reports\
+100%        New File              399365        mutation-report.html
+100%        New File              196260        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-21.00-04-07\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-21.00-04-07\reports\
+100%        New File              400728        mutation-report.html
+100%        New File              197623        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-21.00-07-15\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-21.00-07-15\reports\
+100%        New File              401390        mutation-report.html
+100%        New File              198285        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-22.06-55-52\
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-24.12-26-39\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-24.12-26-39\reports\
+100%        New File              400067        mutation-report.html
+100%        New File              196962        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-28.08-37-05\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-28.08-37-05\reports\
+100%        New File              401313        mutation-report.html
+100%        New File              198208        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-28.11-24-44\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-05-28.11-24-44\reports\
+100%        New File              400962        mutation-report.html
+100%        New File              197857        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-06-01.06-25-14\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-06-01.06-25-14\reports\
+100%        New File              401120        mutation-report.html
+100%        New File              198015        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-06-01.10-30-29\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-06-01.10-30-29\reports\
+100%        New File              401547        mutation-report.html
+100%        New File              198442        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-06-01.10-49-43\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-06-01.10-49-43\reports\
+100%        New File              400689        mutation-report.html
+100%        New File              197584        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-06-05.07-40-05\
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-06-05.07-47-29\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-06-05.07-47-29\reports\
+100%        New File              401157        mutation-report.html
+100%        New File              198052        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-06-06.07-05-30\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-06-06.07-05-30\reports\
+100%        New File              400572        mutation-report.html
+100%        New File              197467        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-06-26.07-51-56\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-06-26.07-51-56\reports\
+100%        New File              401485        mutation-report.html
+100%        New File              198380        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-06-26.07-54-53\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2023-06-26.07-54-53\reports\
+100%        New File              401875        mutation-report.html
+100%        New File              198770        mutation-report.json
+          New Dir          1    C:\Users\kushal\src\mydotnet\StrykerOutput\2024-10-22.06-22-59\
+          New Dir          2    C:\Users\kushal\src\mydotnet\StrykerOutput\2024-10-22.06-22-59\reports\
+100%        New File              546971        mutation-report.html
+100%        New File              342917        mutation-report.json
+
+------------------------------------------------------------------------------
+
+               Total    Copied   Skipped  Mismatch    FAILED    Extras
+    Dirs :       123       123         0         0         0         0
+   Files :       177       112        65         0         0         0
+   Bytes :   28.53 m   28.53 m        65         0         0         0
+   Times :   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   Speed :           321,686,322 Bytes/sec.
+   Speed :            18,407.039 MegaBytes/min.
+   Ended : Tuesday, October 22, 2024 6:34:40 AM
+
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        docs/StrykerOutput/
+
+nothing added to commit but untracked files present (use "git add" to track)
+Tuesday, October 22, 2024 6:34:40 AM
+warning: in the working copy of 'docs/StrykerOutput/2023-05-06.02-42-28/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-06.02-52-30/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-06.03-11-12/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-06.03-33-17/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-06.03-43-08/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-06.03-53-34/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-06.08-07-27/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-08.08-23-42/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-08.08-28-08/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-08.08-41-28/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-08.08-44-26/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-08.08-47-01/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-08.08-51-42/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-08.08-54-02/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-08.08-58-57/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-08.09-03-35/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-08.09-08-16/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-08.09-11-16/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-08.09-19-41/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-08.09-30-37/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-08.09-38-44/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-08.09-53-39/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-08.10-09-21/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-08.10-24-19/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-08.11-48-15/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-09.12-59-45/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-09.13-03-31/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-09.13-14-08/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-09.14-10-17/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-09.14-31-48/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-09.14-52-20/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-10.10-41-58/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-11.15-56-32/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-11.16-09-58/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-11.16-21-03/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-11.17-00-58/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-14.12-35-30/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-15.03-44-54/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-15.05-48-48/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-15.06-58-54/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-15.11-38-44/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-15.11-42-07/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-15.11-55-13/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-17.21-33-16/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-21.00-04-07/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-21.00-07-15/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-24.12-26-39/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-28.08-37-05/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-05-28.11-24-44/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-06-01.06-25-14/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-06-01.10-30-29/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-06-01.10-49-43/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-06-05.07-47-29/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-06-06.07-05-30/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-06-26.07-51-56/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2023-06-26.07-54-53/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/StrykerOutput/2024-10-22.06-22-59/reports/mutation-report.html', LF will be replaced by CRLF the next time Git touches it
+Tuesday, October 22, 2024 6:34:44 AM
+[master 54629e9] run tests locally
+ 112 files changed, 16293 insertions(+)
+ create mode 100644 docs/StrykerOutput/2023-05-06.02-42-28/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-06.02-52-30/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-06.03-11-12/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-06.03-11-12/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-06.03-33-17/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-06.03-33-17/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-06.03-43-08/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-06.03-43-08/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-06.03-53-34/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-06.03-53-34/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-06.08-07-27/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-06.08-07-27/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-08.08-23-42/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-08.08-23-42/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-08.08-28-08/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-08.08-28-08/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-08.08-41-28/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-08.08-41-28/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-08.08-44-26/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-08.08-44-26/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-08.08-47-01/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-08.08-47-01/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-08.08-51-42/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-08.08-51-42/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-08.08-54-02/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-08.08-54-02/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-08.08-58-57/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-08.08-58-57/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-08.09-03-35/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-08.09-03-35/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-08.09-08-16/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-08.09-08-16/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-08.09-11-16/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-08.09-11-16/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-08.09-19-41/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-08.09-19-41/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-08.09-30-37/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-08.09-30-37/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-08.09-38-44/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-08.09-38-44/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-08.09-53-39/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-08.09-53-39/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-08.10-09-21/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-08.10-09-21/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-08.10-24-19/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-08.10-24-19/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-08.11-48-15/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-08.11-48-15/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-09.12-59-45/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-09.12-59-45/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-09.13-03-31/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-09.13-03-31/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-09.13-14-08/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-09.13-14-08/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-09.14-10-17/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-09.14-10-17/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-09.14-31-48/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-09.14-31-48/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-09.14-52-20/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-09.14-52-20/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-10.10-41-58/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-10.10-41-58/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-11.15-56-32/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-11.15-56-32/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-11.16-09-58/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-11.16-09-58/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-11.16-21-03/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-11.16-21-03/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-11.17-00-58/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-11.17-00-58/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-14.12-35-30/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-14.12-35-30/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-15.03-44-54/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-15.03-44-54/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-15.05-48-48/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-15.05-48-48/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-15.06-58-54/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-15.06-58-54/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-15.11-38-44/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-15.11-38-44/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-15.11-42-07/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-15.11-42-07/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-15.11-55-13/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-15.11-55-13/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-17.21-33-16/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-17.21-33-16/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-21.00-04-07/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-21.00-04-07/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-21.00-07-15/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-21.00-07-15/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-24.12-26-39/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-24.12-26-39/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-28.08-37-05/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-28.08-37-05/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-05-28.11-24-44/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-05-28.11-24-44/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-06-01.06-25-14/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-06-01.06-25-14/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-06-01.10-30-29/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-06-01.10-30-29/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-06-01.10-49-43/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-06-01.10-49-43/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-06-05.07-47-29/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-06-05.07-47-29/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-06-06.07-05-30/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-06-06.07-05-30/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-06-26.07-51-56/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-06-26.07-51-56/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2023-06-26.07-54-53/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2023-06-26.07-54-53/reports/mutation-report.json
+ create mode 100644 docs/StrykerOutput/2024-10-22.06-22-59/reports/mutation-report.html
+ create mode 100644 docs/StrykerOutput/2024-10-22.06-22-59/reports/mutation-report.json
+Tuesday, October 22, 2024 6:34:44 AM
+Pushing to github.com:patstha/mydotnet.git
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (11/11), 103.08 KiB | 4.29 MiB/s, done.
+Total 11 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To github.com:patstha/mydotnet.git
+   2a92ae7..54629e9  master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Tuesday, October 22, 2024 6:34:45 AM
+
+PS C:\Users\kushal\src\mydotnet> date; cd "C:\Users\kushal\src\myhtml\matchthree\matchthree\"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master; date; git push origin master; date; cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build;
+ date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
