@@ -1,82 +1,2086 @@
 PowerShell 7.4.5
-PS C:\Users\kushal> date; C:\src\omnibus.ps1; date;
+PS C:\Users\kushal> cd "C:\Users\kushal\src\mydotnet\"; date; dotnet clean; date; dotnet build; date; dotnet test; date; cd "C:\Users\kushal\src\mydotnet\tests\"; date; dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura; reportgenerator -reports:coverage.cobertura.xml -targetdir:coverage-report; date; Move-Item -Path "C:\Users\kushal\src\mydotnet\tests\coverage-report\*" -Destination "C:\Users\kushal\src\mydotnet\docs" -Force; date; cd  "C:\Users\kushal\src\mydotnet\"; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master --verbose; date; git push origin master --verbose; date; cd "C:\Users\kushal\src\myhtml\matchthree\matchthree\"; date; yarn; date; yarn run build; date; git add .; date; git status; date; gitcommit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master; date; git push origin master; date; cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
 
-Thursday, October 24, 2024 1:41:59 PM
-Thursday, October 24, 2024 1:41:59 PM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 31, done.
-Counting objects: 100% (31/31), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (16/16), done.
-Writing objects: 100% (16/16), 17.10 MiB | 4.91 MiB/s, done.
-Total 16 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   3a8ee339c1f..80ddd889abb  main -> main
-3.9952604
-Thursday, October 24, 2024 1:45:58 PM
-HTTP/1.1 200 OK
-Date: Thu, 24 Oct 2024 17:45:58 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: 7bef3675816edf6ef9b1cb62c136c9b4
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
+Thursday, October 24, 2024 1:42:08 PM
+Build started 10/24/2024 1:42:08 PM.
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" on node 1 (Clean target(s)).
+     1>ValidateSolutionConfiguration:
+         Building solution configuration "Debug|Any CPU".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj" (2) on node 1 (Clean target(s)).
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\TraceReloggerLib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Dia2Lib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\KernelTraceControl.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\KernelTraceControl.Win61.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\msdia140.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\amd64\KernelTraceControl.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\amd64\msdia140.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\arm64\KernelTraceControl.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\arm64\msdia140.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.exe".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.deps.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.runtimeconfig.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\BenchmarkDotNet.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\BenchmarkDotNet.Annotations.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\CommandLine.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Gee.External.Capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Iced.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.NETCore.Client.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.Runtime.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.FastSerialization.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.Tracing.TraceEvent.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\MoreLinq.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Perfolizer.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\System.CodeDom.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\System.Management.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-arm\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-arm64\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-x64\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-x86\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\osx-arm64\native\libcapstone.dylib".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\osx-x64\native\libcapstone.dylib".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-arm64\native\capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-x64\native\capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-x86\native\capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.0\System.Management.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\helloben.03AB233B.Up2Date".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\refint\hellobenchamarks.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.genruntimeconfig.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\ref\hellobenchamarks.dll".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (4) on node 2 (Clean target(s)).
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.deps.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.AssemblyInfoInputs.cache".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (3) on node 4 (Clean target(s)).
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.exe".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.sourcelink.json".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (5) on node 3 (Clean target(s)).
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\.msCoverageSourceRootsMapping_tests".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\refint\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.pdb".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.deps.json".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\ref\hellolib.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.runtimeconfig.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.pdb".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\CoverletSourceRootsMapping_tests".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\testhost.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\testhost.exe".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.visualstudio.testadapter.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.utility.netcoreapp10.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\authorizations.csv".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\MoreLinq.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.deps.json".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hellolib.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.runtimeconfig.json".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hellolib.pdb".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.pdb".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.GeneratedMSBuildEditorConfig.editorconfig".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Castle.Core.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.AssemblyInfo.cs".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\FluentAssertions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.csproj.Up2Date".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\refint\hello.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.pdb".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.genruntimeconfig.cache".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\ref\hello.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CoreUtilities.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.PlatformAbstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CommunicationUtilities.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CrossPlatEngine.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.Utilities.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.Common.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\MoreLinq.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Newtonsoft.Json.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\NSubstitute.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\System.Diagnostics.EventLog.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.assert.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.core.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.execution.dotnet.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.csproj.Up2Date".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\refint\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.genruntimeconfig.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\ref\tests.dll".
+     4>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
+     2>Done Building Project "C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj" (Clean target(s)).
+     3>Done Building Project "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (Clean target(s)).
+     5>Done Building Project "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (Clean target(s)).
+     1>Done Building Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (Clean target(s)).
 
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.390339
-Thursday, October 24, 2024 1:45:59 PM
-Thursday, October 24, 2024 1:45:59 PM
-Thursday, October 24, 2024 1:46:20 PM
-[master e22defd1df7] add all files for thunderbird
- 3 files changed, 5518 insertions(+)
- create mode 100644 imap.gmx-1.com/INBOX/cur/A9215D83-C09B-411C-87BD-9733D235B765.1@smtp-inbound1.duck.com.eml
- create mode 100644 imap.gmx-1.com/INBOX/cur/BA3A7B4D-D440-41C5-966E-8528271579FD.1@smtp-inbound1.duck.com.eml
- create mode 100644 imap.gmx-1.com/INBOX/cur/BC6A07EC-FAE3-4136-A4AC-B6B3BC8E525B.1@smtp-inbound1.duck.com.eml
-Thursday, October 24, 2024 1:46:24 PM
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.62
+Thursday, October 24, 2024 1:42:08 PM
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
+  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.dll
+  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.61
+
+Workload updates are available. Run `dotnet workload list` for more information.
+Thursday, October 24, 2024 1:42:11 PM
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
+Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:01.12]     tests.MyCleanerTests.CleanUrl_ShouldReturnValidOutput(input: "https://slickdeals.net/?adobeRef=d92c693a3d5011efb"···, expectedOutput: "https://www.amazon.com/gp/product/B0B5M5YB9G/") [FAIL]
+  Failed tests.MyCleanerTests.CleanUrl_ShouldReturnValidOutput(input: "https://slickdeals.net/?adobeRef=d92c693a3d5011efb"···, expectedOutput: "https://www.amazon.com/gp/product/B0B5M5YB9G/") [553 ms]
+  Error Message:
+   Expected actual to be "https://www.amazon.com/gp/product/B0B5M5YB9G/" with a length of 45, but "https://www.amazon.com/gp/redirect.html" has a length of 39, differs near "red" (index 26).
+  Stack Trace:
+     at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Primitives.StringEqualityValidator.ValidateAgainstLengthDifferences()
+   at FluentAssertions.Primitives.StringValidator.Validate()
+   at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
+   at tests.MyCleanerTests.CleanUrl_ShouldReturnValidOutput(String input, String expectedOutput) in C:\Users\kushal\src\mydotnet\tests\MyCleanerTests.cs:line 43
+--- End of stack trace from previous location ---
+
+Failed!  - Failed:     1, Passed:   194, Skipped:     0, Total:   195, Duration: 2 s - tests.dll (net8.0)
+
+Workload updates are available. Run `dotnet workload list` for more information.
+Thursday, October 24, 2024 1:42:16 PM
+Thursday, October 24, 2024 1:42:16 PM
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
+  [coverlet] _mapping file name: 'CoverletSourceRootsMapping_tests'
+Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:   195, Skipped:     0, Total:   195, Duration: 3 s - tests.dll (net8.0)
+  [coverlet]
+  Calculating coverage result...
+   Generating report 'C:\Users\kushal\src\mydotnet\tests\coverage.cobertura.xml'
+
++----------+--------+--------+--------+
+| Module   | Line   | Branch | Method |
++----------+--------+--------+--------+
+| hellolib | 87.65% | 79.35% | 92.2%  |
++----------+--------+--------+--------+
+
++---------+--------+--------+--------+
+|         | Line   | Branch | Method |
++---------+--------+--------+--------+
+| Total   | 87.65% | 79.35% | 92.2%  |
++---------+--------+--------+--------+
+| Average | 87.65% | 79.34% | 92.2%  |
++---------+--------+--------+--------+
+
+
+Workload updates are available. Run `dotnet workload list` for more information.
+2024-10-24T13:42:22: Arguments
+2024-10-24T13:42:22:  -reports:coverage.cobertura.xml
+2024-10-24T13:42:22:  -targetdir:coverage-report
+2024-10-24T13:42:22: Writing report file 'coverage-report\index.html'
+2024-10-24T13:42:22: Report generation took 0.1 seconds
+Thursday, October 24, 2024 1:42:22 PM
+Thursday, October 24, 2024 1:42:22 PM
+warning: in the working copy of 'docs/icon_cube.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_fork.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_sponsor.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir_active.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_wrench.svg', LF will be replaced by CRLF the next time Git touches it
+Thursday, October 24, 2024 1:42:23 PM
 On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/hellolib_BubbleSort.html
+        modified:   docs/hellolib_CurrentWeather.html
+        modified:   docs/hellolib_DesignDynamicArray.html
+        modified:   docs/hellolib_Entity.html
+        modified:   docs/hellolib_FindClosestNumberToZero.html
+        modified:   docs/hellolib_ListNode.html
+        modified:   docs/hellolib_MergeSort.html
+        modified:   docs/hellolib_MergeSortedArray.html
+        modified:   docs/hellolib_MergeStringsAlternately.html
+        modified:   docs/hellolib_MinimumCoin.html
+        modified:   docs/hellolib_MyCleaner.html
+        modified:   docs/hellolib_MySearch.html
+        modified:   docs/hellolib_PascalTriangle.html
+        modified:   docs/hellolib_Person.html
+        modified:   docs/hellolib_PersonFactory.html
+        modified:   docs/hellolib_Revocation.html
+        modified:   docs/hellolib_RomanToInteger.html
+        modified:   docs/hellolib_SinglyLinkedList.html
+        modified:   docs/hellolib_SinglyLinkedListAddTwoNumbers.html
+        modified:   docs/hellolib_SinglyLinkedListNode.html
+        modified:   docs/hellolib_TwoSum.html
+        modified:   docs/hellolib_Weather.html
+        modified:   docs/hellolib_WeatherFetchException.html
+        modified:   docs/index.htm
+        modified:   docs/index.html
+        modified:   tests/coverage.cobertura.xml
+
+Thursday, October 24, 2024 1:42:23 PM
+[master 80fe6e0] build application
+ 26 files changed, 28 insertions(+), 28 deletions(-)
+Thursday, October 24, 2024 1:42:23 PM
+From github.com:patstha/mydotnet
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Current branch master is up to date.
+Thursday, October 24, 2024 1:42:24 PM
+Pushing to github.com:patstha/mydotnet.git
+Enumerating objects: 57, done.
+Counting objects: 100% (57/57), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (29/29), done.
+Writing objects: 100% (29/29), 2.31 KiB | 2.31 MiB/s, done.
+Total 29 (delta 28), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (28/28), completed with 28 local objects.
+To github.com:patstha/mydotnet.git
+   3a570ef..80fe6e0  master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Thursday, October 24, 2024 1:42:25 PM
+Thursday, October 24, 2024 1:42:25 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.10s.
+Thursday, October 24, 2024 1:42:25 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 4 modules transformed.
+docs/index.html                0.42 kB │ gzip: 0.28 kB
+docs/assets/index-CGOwuZnp.js  8.87 kB │ gzip: 3.19 kB
+✓ built in 151ms
+Done in 2.33s.
+Thursday, October 24, 2024 1:42:28 PM
+warning: in the working copy of 'docs/assets/index-CGOwuZnp.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, October 24, 2024 1:42:28 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
 nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (fast-forwardable)
-Thursday, October 24, 2024 1:46:32 PM
-Enumerating objects: 12, done.
-Counting objects: 100% (12/12), done.
+Thursday, October 24, 2024 1:42:28 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thursday, October 24, 2024 1:42:28 PM
+From github.com:matchthree/matchthree.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Thursday, October 24, 2024 1:42:29 PM
+Everything up-to-date
+Thursday, October 24, 2024 1:42:29 PM
+Thursday, October 24, 2024 1:42:29 PM
+Thursday, October 24, 2024 1:42:29 PM
+On branch main
+nothing to commit, working tree clean
+Thursday, October 24, 2024 1:42:29 PM
+Thursday, October 24, 2024 1:42:29 PM
+Thursday, October 24, 2024 1:42:31 PM
+Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
+Thursday, October 24, 2024 1:42:31 PM
+Thursday, October 24, 2024 1:42:31 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.10s.
+Thursday, October 24, 2024 1:42:31 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 2.19s
+Done in 3.72s.
+Thursday, October 24, 2024 1:42:35 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/A3B318B569046159E1DD6616D2E646D9434350E6.asc', LF will be replaced by CRLF the next time Git touches it
+Thursday, October 24, 2024 1:42:45 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/notes/earth.jpeg
+        modified:   docs/powershell.txt
+        modified:   public/notes/earth.jpeg
+        modified:   public/powershell.txt
+
+Thursday, October 24, 2024 1:42:45 PM
+[main d1c89d7b] build application
+ 4 files changed, 1152 insertions(+)
+Thursday, October 24, 2024 1:42:45 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch              main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, October 24, 2024 1:42:46 PM
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
 Delta compression using up to 16 threads
 Compressing objects: 100% (7/7), done.
-Writing objects: 100% (8/8), 177.13 KiB | 53.00 KiB/s, done.
-Total 8 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Checking connectivity: 8, done.
-To \\tp-share\G\shared\git\mymail
-   48b410a18d1..e22defd1df7  master -> master
-Thursday, October 24, 2024 1:46:58 PM
-Thursday, October 24, 2024 1:46:58 PM
-Thursday, October 24, 2024 1:46:58 PM
-Thursday, October 24, 2024 1:46:58 PM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
+Writing objects: 100% (7/7), 17.10 MiB | 9.46 MiB/s, done.
+Total 7 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   88b60848..d1c89d7b  main -> main
+Thursday, October 24, 2024 1:42:50 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal>
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\mydotnet\"; date; dotnet clean; date; dotnet build; date; dotnet test; date; cd "C:\Users\kushal\src\mydotnet\tests\"; date; dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura; reportgenerator -reports:coverage.cobertura.xml -targetdir:coverage-report; date; Move-Item -Path "C:\Users\kushal\src\mydotnet\tests\coverage-report\*" -Destination "C:\Users\kushal\src\mydotnet\docs" -Force; date; cd  "C:\Users\kushal\src\mydotnet\"; git add .; date; git status; date; git commit--message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master --verbose; date; git push origin master --verbose; date; cd "C:\Users\kushal\src\myhtml\matchthree\matchthree\"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master; date; git push origin master; date; cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Imagedownloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
+
+Thursday, October 24, 2024 1:49:23 PM
+Build started 10/24/2024 1:49:23 PM.
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" on node 1 (Clean target(s)).
+     1>ValidateSolutionConfiguration:
+         Building solution configuration "Debug|Any CPU".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (2) on node 4 (Clean target(s)).
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.deps.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.csproj.AssemblyReference.cache".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (3) on node 3 (Clean target(s)).
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.exe".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.AssemblyInfoInputs.cache".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.deps.json".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.AssemblyInfo.cs".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.runtimeconfig.json".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.csproj.CoreCompileInputs.cache".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.dll".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.sourcelink.json".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.pdb".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\refint\hellolib.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.pdb".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\ref\hellolib.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\MoreLinq.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.csproj.Up2Date".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\refint\hello.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.genruntimeconfig.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\ref\hello.dll".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (4) on node 2 (Clean target(s)).
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\.msCoverageSourceRootsMapping_tests".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\CoverletSourceRootsMapping_tests".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\testhost.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\testhost.exe".
+     2>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.visualstudio.testadapter.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.utility.netcoreapp10.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\authorizations.csv".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.deps.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.runtimeconfig.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Castle.Core.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\FluentAssertions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CoreUtilities.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.PlatformAbstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CommunicationUtilities.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CrossPlatEngine.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.Utilities.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.Common.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\MoreLinq.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Newtonsoft.Json.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\NSubstitute.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\System.Diagnostics.EventLog.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.assert.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.core.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.execution.dotnet.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+     3>Done Building Project "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (Clean target(s)).
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.csproj.Up2Date".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\refint\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.genruntimeconfig.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\ref\tests.dll".
+     4>Done Building Project "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (Clean target(s)).
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj" (5) on node 1 (Clean target(s)).
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\TraceReloggerLib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Dia2Lib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\KernelTraceControl.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\KernelTraceControl.Win61.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\msdia140.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\amd64\KernelTraceControl.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\amd64\msdia140.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\arm64\KernelTraceControl.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\arm64\msdia140.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.exe".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.deps.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.runtimeconfig.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\BenchmarkDotNet.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\BenchmarkDotNet.Annotations.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\CommandLine.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Gee.External.Capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Iced.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.NETCore.Client.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.Runtime.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.FastSerialization.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.Tracing.TraceEvent.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\MoreLinq.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Perfolizer.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\System.CodeDom.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\System.Management.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-arm\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-arm64\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-x64\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-x86\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\osx-arm64\native\libcapstone.dylib".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\osx-x64\native\libcapstone.dylib".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-arm64\native\capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-x64\native\capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-x86\native\capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.0\System.Management.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\helloben.03AB233B.Up2Date".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\refint\hellobenchamarks.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.genruntimeconfig.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\ref\hellobenchamarks.dll".
+     5>Done Building Project "C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj" (Clean target(s)).
+     1>Done Building Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (Clean target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.46
+Thursday, October 24, 2024 1:49:24 PM
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
+  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
+  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.91
+
+Workload updates are available. Run `dotnet workload list` for more information.
+Thursday, October 24, 2024 1:49:25 PM
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
+Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:   195, Skipped:     0, Total:   195, Duration: 4 s - tests.dll (net8.0)
+
+Workload updates are available. Run `dotnet workload list` for more information.
+Thursday, October 24, 2024 1:49:31 PM
+Thursday, October 24, 2024 1:49:31 PM
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
+  [coverlet] _mapping file name: 'CoverletSourceRootsMapping_tests'
+Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:   195, Skipped:     0, Total:   195, Duration: 3 s - tests.dll (net8.0)
+  [coverlet]
+  Calculating coverage result...
+   Generating report 'C:\Users\kushal\src\mydotnet\tests\coverage.cobertura.xml'
+
++----------+--------+--------+--------+
+| Module   | Line   | Branch | Method |
++----------+--------+--------+--------+
+| hellolib | 87.65% | 79.35% | 92.2%  |
++----------+--------+--------+--------+
+
++---------+--------+--------+--------+
+|         | Line   | Branch | Method |
++---------+--------+--------+--------+
+| Total   | 87.65% | 79.35% | 92.2%  |
++---------+--------+--------+--------+
+| Average | 87.65% | 79.34% | 92.2%  |
++---------+--------+--------+--------+
+
+
+Workload updates are available. Run `dotnet workload list` for more information.
+2024-10-24T13:49:36: Arguments
+2024-10-24T13:49:36:  -reports:coverage.cobertura.xml
+2024-10-24T13:49:36:  -targetdir:coverage-report
+2024-10-24T13:49:36: Writing report file 'coverage-report\index.html'
+2024-10-24T13:49:36: Report generation took 0.1 seconds
+Thursday, October 24, 2024 1:49:36 PM
+Thursday, October 24, 2024 1:49:37 PM
+warning: in the working copy of 'docs/icon_cube.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_fork.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_sponsor.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir_active.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_wrench.svg', LF will be replaced by CRLF the next time Git touches it
+Thursday, October 24, 2024 1:49:37 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/hellolib_BubbleSort.html
+        modified:   docs/hellolib_CurrentWeather.html
+        modified:   docs/hellolib_DesignDynamicArray.html
+        modified:   docs/hellolib_Entity.html
+        modified:   docs/hellolib_FindClosestNumberToZero.html
+        modified:   docs/hellolib_ListNode.html
+        modified:   docs/hellolib_MergeSort.html
+        modified:   docs/hellolib_MergeSortedArray.html
+        modified:   docs/hellolib_MergeStringsAlternately.html
+        modified:   docs/hellolib_MinimumCoin.html
+        modified:   docs/hellolib_MyCleaner.html
+        modified:   docs/hellolib_MySearch.html
+        modified:   docs/hellolib_PascalTriangle.html
+        modified:   docs/hellolib_Person.html
+        modified:   docs/hellolib_PersonFactory.html
+        modified:   docs/hellolib_Revocation.html
+        modified:   docs/hellolib_RomanToInteger.html
+        modified:   docs/hellolib_SinglyLinkedList.html
+        modified:   docs/hellolib_SinglyLinkedListAddTwoNumbers.html
+        modified:   docs/hellolib_SinglyLinkedListNode.html
+        modified:   docs/hellolib_TwoSum.html
+        modified:   docs/hellolib_Weather.html
+        modified:   docs/hellolib_WeatherFetchException.html
+        modified:   docs/index.htm
+        modified:   docs/index.html
+        modified:   hellobenchamarks/BubbleVsMerge.cs
+        modified:   hellobenchamarks/Md5VsSha256.cs
+        modified:   hellolib/DesignDynamicArray.cs
+        modified:   hellolib/MinimumCoin.cs
+        modified:   hellolib/PersonFactory.cs
+        modified:   hellolib/SinglyLinkedList.cs
+        modified:   hellolib/TwoSum.cs
+        new file:   qodana.yaml
+        modified:   tests/MergeSortedArrayTests.cs
+        modified:   tests/MinimumCoinTests.cs
+        modified:   tests/MyCleanerTests.cs
+        modified:   tests/PersonTests.cs
+        modified:   tests/TwoSumTests.cs
+        modified:   tests/coverage.cobertura.xml
+
+Thursday, October 24, 2024 1:49:37 PM
+[master 8a4485c] build application
+ 39 files changed, 204 insertions(+), 179 deletions(-)
+ create mode 100644 qodana.yaml
+Thursday, October 24, 2024 1:49:37 PM
+From github.com:patstha/mydotnet
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Current branch master is up to date.
+Thursday, October 24, 2024 1:49:37 PM
+Pushing to github.com:patstha/mydotnet.git
+Enumerating objects: 86, done.
+Counting objects: 100% (86/86), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (44/44), done.
+Writing objects: 100% (44/44), 5.15 KiB | 1.72 MiB/s, done.
+Total 44 (delta 41), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (41/41), completed with 41 local objects.
+To github.com:patstha/mydotnet.git
+   80fe6e0..8a4485c  master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Thursday, October 24, 2024 1:49:38 PM
+Thursday, October 24, 2024 1:49:38 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Thursday, October 24, 2024 1:49:39 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 4 modules transformed.
+docs/index.html                0.42 kB │ gzip: 0.28 kB
+docs/assets/index-CGOwuZnp.js  8.87 kB │ gzip: 3.19 kB
+✓ built in 118ms
+Done in 1.05s.
+Thursday, October 24, 2024 1:49:40 PM
+warning: in the working copy of 'docs/assets/index-CGOwuZnp.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Thursday, October 24, 2024 1:49:40 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thursday, October 24, 2024 1:49:40 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Thursday, October 24, 2024 1:49:40 PM
+From github.com:matchthree/matchthree.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Thursday, October 24, 2024 1:49:41 PM
+Everything up-to-date
+Thursday, October 24, 2024 1:49:41 PM
+Thursday, October 24, 2024 1:49:41 PM
+Thursday, October 24, 2024 1:49:41 PM
+On branch main
+nothing to commit, working tree clean
+Thursday, October 24, 2024 1:49:41 PM
+Thursday, October 24, 2024 1:49:41 PM
+Thursday, October 24, 2024 1:49:42 PM
+Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
+Thursday, October 24, 2024 1:49:42 PM
+Thursday, October 24, 2024 1:49:43 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Thursday, October 24, 2024 1:49:43 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 1.90s
+Done in 2.71s.
+Thursday, October 24, 2024 1:49:46 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/A3B318B569046159E1DD6616D2E646D9434350E6.asc', LF will be replaced by CRLF the next time Git touches it
+Thursday, October 24, 2024 1:49:55 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/notes/earth.jpeg
+        modified:   docs/powershell.txt
+        modified:   public/notes/earth.jpeg
+        modified:   public/powershell.txt
+
+Thursday, October 24, 2024 1:49:55 PM
+[main b0663ce7] build application
+ 4 files changed, 158 insertions(+), 14422 deletions(-)
+Thursday, October 24, 2024 1:49:56 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch              main       -> FETCH_HEAD
+Current branch main is up to date.
+Thursday, October 24, 2024 1:49:56 PM
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 17.08 MiB | 10.59 MiB/s, done.
+Total 7 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   d1c89d7b..b0663ce7  main -> main
+Thursday, October 24, 2024 1:50:00 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_videos.ps1  -url "https://www.youtube.com/watch?v=imzLad_0fZM"
+Create new folder for yt-dlp
+
+    Directory: C:\TempMode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          10/24/2024  2:10 PM                yt-dlp
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 14
+Kind        : Local
+Millisecond : 222
+Microsecond : 816
+Nanosecond  : 0
+Minute      : 10
+Month       : 10
+Second      : 0
+Ticks       : 638653758002228160
+TimeOfDay   : 14:10:00.2228160
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 2:10:00 PM
+
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 14
+Kind        : Local
+Millisecond : 247
+Microsecond : 28
+Nanosecond  : 100
+Minute      : 10
+Month       : 10
+Second      : 0
+Ticks       : 638653758002470281
+TimeOfDay   : 14:10:00.2470281
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 2:10:00 PM
+
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241024141000.%(ext)s','https://www.youtube.com/watch?v=imzLad_0fZM']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.10.07 from yt-dlp/yt-dlp [1a176d874] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.3, websockets-13.1
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1838 extractors
+[youtube] Extracting URL: https://www.youtube.com/watch?v=imzLad_0fZM
+[youtube] imzLad_0fZM: Downloading webpage
+[youtube] imzLad_0fZM: Downloading ios player API JSON
+[youtube] imzLad_0fZM: Downloading mweb player API JSON
+[debug] [youtube] Extracting signature function js_fb725ac8_108
+[youtube] imzLad_0fZM: Downloading player fb725ac8
+[debug] Saving youtube-sigfuncs.js_fb725ac8_108 to cache
+[debug] Loading youtube-nsig.fb725ac8 from cache
+[debug] [youtube] Decrypted nsig q-70rSO7qNKh7PIP => Z-XR_R5QktOa1Q
+[debug] Loading youtube-nsig.fb725ac8 from cache
+[debug] [youtube] Decrypted nsig rHY0YZ-ST2DT5ufj => JwVD_KQODE3O1Q
+[youtube] imzLad_0fZM: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/6fd8?service=YouTube&categories=%5B%22intro%22%2C+%22music_offtopic%22%2C+%22outro%22%2C+%22filler%22%2C+%22chapter%22%2C+%22poi_highlight%22%2C+%22interaction%22%2C+%22sponsor%22%2C+%22preview%22%2C+%22selfpromo%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+[SponsorBlock] No matching segments were found in the SponsorBlock database
+[info] imzLad_0fZM: Downloading 1 format(s): 625+140
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1729815002/ei/eo0aZ665Gq20kucP_8mS0A8/ip/70.104.195.206/id/8a6ccb69dff47d93/itag/625/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D479619219%3Bdur%3D219.051%3Bgir%3Dyes%3Bitag%3D313%3Blmt%3D1640784254729578/rqh/1/hls_chunk_host/rr3---sn-8xgp1vo-gpjl.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/met/1729793402,/mh/7B/mm/31,29/mn/sn-8xgp1vo-gpjl,sn-8xgp1vo-p5ql/ms/au,rdu/mv/m/mvi/3/pl/20/rms/au,au/initcwndbps/942500/vprv/1/playlist_type/DVR/dover/13/txp/5532434/mt/1729793126/fvip/2/short_key/1/keepalive/yes/fexp/51312688,51326931/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,vprv,playlist_type/sig/AJfQdSswRgIhAOR1ohtaZACZU6KgMhQm0JZwnPXOTttFLmNpxqm1UfrEAiEArm3g0LdWRGwrxv1bz1KPKBkdD45YPFZx_M7ZU1VkbYc%3D/lsparams/hls_chunk_host,met,mh,mm,mn,ms,mv,mvi,pl,rms,initcwndbps/lsig/ACJ0pHgwRQIgfeeZMQo3Ew7kjpL4DygpmfY2QhKgV5O_XFe9VG8gUIkCIQCLL9sq17gNu1Ekhp01BTBHP0gff2NOhAc6p2CPV_noaQ%3D%3D/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 39
+[download] Destination: C:\Temp\yt-dlp\20241024141000.f625.mp4
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of  457.43MiB in 00:00:38 at 11.91MiB/s
+[debug] Invoking http downloader on "https://rr3---sn-8xgp1vo-gpjl.googlevideo.com/videoplayback?expire=1729815002&ei=eo0aZ665Gq20kucP_8mS0A8&ip=70.104.195.206&id=o-AI4yzWlaQSji_6z3abtpaRAwHBVLoG8cSnuSOv-f1cra&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&met=1729793402%2C&mh=7B&mm=31%2C29&mn=sn-8xgp1vo-gpjl%2Csn-8xgp1vo-p5ql&ms=au%2Crdu&mv=m&mvi=3&pl=20&rms=au%2Cau&initcwndbps=942500&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=3546991&dur=219.126&lmt=1640780186180624&mt=1729793126&fvip=2&keepalive=yes&fexp=51312688%2C51326931&c=IOS&txp=5532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRgIhAIWHqTQM0YmyU0rQ5ByzslzxWJUnUMlni_-iiArS4st5AiEAzd6Qmt1WqxoFdWloe00Sm-1qJ81eKWlTzJgVDoi32O8%3D&lsparams=met%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=ACJ0pHgwRQIgPdp87xTK2UneWnKGi-_eBZza8aKoEEik0c2yx4BMHeECIQCPuqVQhTTazOVK9Rl1E-gYlNdhi9x6exIQsfY2acF1iA%3D%3D"
+[download] Destination: C:\Temp\yt-dlp\20241024141000.f140.m4a
+[download] 100% of    3.38MiB in 00:00:00 at 7.51MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\20241024141000.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241024141000.f625.mp4 -i file:C:\Temp\yt-dlp\20241024141000.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241024141000.temp.mp4
+Deleting original file C:\Temp\yt-dlp\20241024141000.f625.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\20241024141000.f140.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241024141000.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241024141000.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=[4K] MOONLIGHT 트와이스 미나 직캠" -metadata "date=20211229" -metadata "description=PLEASE DO NOT RE-UPLOAD.
+
+211225 211226 4TH WORLD TOUR 'III' in SEOUL
+
+love me now!
+@lovemenow_324
+
+#TWICE #MINA #FANCAM" -metadata "synopsis=PLEASE DO NOT RE-UPLOAD.
+
+211225 211226 4TH WORLD TOUR 'III' in SEOUL
+
+love me now!
+@lovemenow_324
+
+#TWICE #MINA #FANCAM" -metadata "purl=https://www.youtube.com/watch?v=imzLad_0fZM" -metadata "comment=https://www.youtube.com/watch?v=imzLad_0fZM" -metadata "artist=love me now!" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\20241024141000.temp.mp4
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 14
+Kind        : Local
+Millisecond : 6
+Microsecond : 805
+Nanosecond  : 800
+Minute      : 10
+Month       : 10
+Second      : 46
+Ticks       : 638653758460068058
+TimeOfDay   : 14:10:46.0068058
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 2:10:46 PM
+
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 14
+Kind        : Local
+Millisecond : 15
+Microsecond : 217
+Nanosecond  : 200
+Minute      : 10
+Month       : 10
+Second      : 46
+Ticks       : 638653758460152172
+TimeOfDay   : 14:10:46.0152172
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 2:10:46 PM
+
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 14
+Kind        : Local
+Millisecond : 17
+Microsecond : 239
+Nanosecond  : 900
+Minute      : 10
+Month       : 10
+Second      : 46
+Ticks       : 638653758460172399
+TimeOfDay   : 14:10:46.0172399
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 2:10:46 PM
+
+
+    Directory: C:\Temp\yt-dlp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          12/29/2021  7:16 AM      483297953 20241024141000.mp4
+-a---          12/29/2021  7:16 AM      483297953 20241024141000.mp4
+Cleaned video name: 20241024141000mp4
+Cleaned video path: C:\Temp\yt-dlp\20241024141000mp4
+Running ffmpeg
+ffmpeg -i "C:\Temp\yt-dlp\20241024141000mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241024141000mp4_reencoded.mp4"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec--enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241024141000mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : [4K] MOONLIGHT 트와이스 미나 직캠
+    artist          : love me now!
+    date            : 20211229
+    encoder         : Lavf61.7.100
+    comment         : https://www.youtube.com/watch?v=imzLad_0fZM
+    description     : PLEASE DO NOT RE-UPLOAD.
+                    :
+                    : 211225 211226 4TH WORLD TOUR 'III' in SEOUL
+                    :
+                    : love me now!
+                    : @lovemenow_324
+                    :
+                    : #TWICE #MINA #FANCAM
+    synopsis        : PLEASE DO NOT RE-UPLOAD.
+                    :
+                    : 211225 211226 4TH WORLD TOUR 'III' in SEOUL
+                    :
+                    : love me now!
+                    : @lovemenow_324
+                    :
+                    : #TWICE #MINA #FANCAM
+  Duration: 00:03:39.13, start: 0.000000, bitrate: 17644 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 3840x2160, 17514 kb/s, 29.97 fps, 29.97 tbr, 16k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 10/24/2024.
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 127 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 00000266211c3100] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 00000266211c3100] profile High, level 5.1, 4:2:0, 8-bit
+[libx264 @ 00000266211c3100] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\20241024141000mp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : [4K] MOONLIGHT 트와이스 미나 직캠
+    artist          : love me now!
+    date            : 20211229
+    synopsis        : PLEASE DO NOT RE-UPLOAD.
+                    :
+                    : 211225 211226 4TH WORLD TOUR 'III' in SEOUL
+                    :
+                    : love me now!
+                    : @lovemenow_324
+                    :
+                    : #TWICE #MINA #FANCAM
+    comment         : https://www.youtube.com/watch?v=imzLad_0fZM
+    description     : PLEASE DO NOT RE-UPLOAD.
+                    :
+                    : 211225 211226 4TH WORLD TOUR 'III' in SEOUL
+                    :
+                    : love me now!
+                    : @lovemenow_324
+                    :
+                    : #TWICE #MINA #FANCAM
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 3840x2160, q=2-31, 29.97 fps, 30k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 10/24/2024.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 aac
+[mp4 @ 0000026620cb84c0] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000026620cbbf40] video:908779KiB audio:3463KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.025271%
+frame= 6565 fps= 20 q=-1.0 Lsize=  912473KiB time=00:03:38.98 bitrate=34134.6kbits/s speed=0.666x
+[libx264 @ 00000266211c3100] frame I:33    Avg QP:21.03  size:630685
+[libx264 @ 00000266211c3100] frame P:2175  Avg QP:24.39  size:255000
+[libx264 @ 00000266211c3100] frame B:4357  Avg QP:28.17  size: 81513
+[libx264 @ 00000266211c3100] consecutive B-frames:  7.8%  6.9% 12.2% 73.1%
+[libx264 @ 00000266211c3100] mb I  I16..4: 11.6% 57.4% 30.9%
+[libx264 @ 00000266211c3100] mb P  I16..4:  7.4% 18.4%  2.2%  P16..4: 37.7% 20.4%  8.2%  0.0%  0.0%    skip: 5.7%
+[libx264 @ 00000266211c3100] mb B  I16..4:  1.8%  2.5%  0.2%  B16..8: 43.6%  8.7%  1.6%  direct: 6.1%  skip:35.5%  L0:45.8% L1:42.8% BI:11.4%
+[libx264 @ 00000266211c3100] 8x8 transform intra:63.0% inter:71.4%
+[libx264 @ 00000266211c3100] coded y,uvDC,uvAC intra: 36.8% 64.1% 27.4% inter: 23.0% 33.9% 2.2%
+[libx264 @ 00000266211c3100] i16 v,h,dc,p: 36% 22% 11% 30%
+[libx264 @ 00000266211c3100] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 33% 18% 22%  4%  5%  6%  5%  5%  4%
+[libx264 @ 00000266211c3100] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 34% 19% 17%  3%  6%  7%  6%  4%  3%
+[libx264 @ 00000266211c3100] i8c dc,h,v,p: 45% 26% 24%  6%
+[libx264 @ 00000266211c3100] Weighted P-Frames: Y:44.3% UV:39.0%
+[libx264 @ 00000266211c3100] ref P L0: 60.0% 18.3% 14.4%  5.5%  1.7%
+[libx264 @ 00000266211c3100] ref B L0: 93.0%  5.6%  1.4%
+[libx264 @ 00000266211c3100] ref B L1: 97.7%  2.3%
+[libx264 @ 00000266211c3100] kb/s:33986.03
+[aac @ 00000266210df4c0] Qavg: 662.278
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 14
+Kind        : Local
+Millisecond : 50
+Microsecond : 256
+Nanosecond  : 400
+Minute      : 16
+Month       : 10
+Second      : 15
+Ticks       : 638653761750502564
+TimeOfDay   : 14:16:15.0502564
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 2:16:15 PM
+
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 14
+Kind        : Local
+Millisecond : 713
+Microsecond : 430
+Nanosecond  : 300
+Minute      : 16
+Month       : 10
+Second      : 49
+Ticks       : 638653762097134303
+TimeOfDay   : 14:16:49.7134303
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 2:16:49 PM
+
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 14
+Kind        : Local
+Millisecond : 736
+Microsecond : 114
+Nanosecond  : 300
+Minute      : 16
+Month       : 10
+Second      : 49
+Ticks       : 638653762097361143
+TimeOfDay   : 14:16:49.7361143
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 2:16:49 PM
+
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_videos.ps1  -url "https://www.youtube.com/watch?v=lsW_d2z_564"
+Create new folder for yt-dlp
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          10/24/2024  4:14 PM                yt-dlp
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 16
+Kind        : Local
+Millisecond : 150
+Microsecond : 207
+Nanosecond  : 600
+Minute      : 14
+Month       : 10
+Second      : 25
+Ticks       : 638653832651502076
+TimeOfDay   : 16:14:25.1502076
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 4:14:25 PM
+
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 16
+Kind        : Local
+Millisecond : 154
+Microsecond : 661
+Nanosecond  : 400
+Minute      : 14
+Month       : 10
+Second      : 25
+Ticks       : 638653832651546614
+TimeOfDay   : 16:14:25.1546614
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 4:14:25 PM
+
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241024161425.%(ext)s','https://www.youtube.com/watch?v=lsW_d2z_564']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.10.07 from yt-dlp/yt-dlp [1a176d874] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.3, websockets-13.1
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1838 extractors
+[youtube] Extracting URL: https://www.youtube.com/watch?v=lsW_d2z_564
+[youtube] lsW_d2z_564: Downloading webpage
+[youtube] lsW_d2z_564: Downloading ios player API JSON
+[youtube] lsW_d2z_564: Downloading mweb player API JSON
+[debug] Loading youtube-nsig.fb725ac8 from cache
+[debug] [youtube] Decrypted nsig VYmLr-FnBw3NixmW => ZOgNL-l3GLltAA
+[debug] Loading youtube-nsig.fb725ac8 from cache
+[debug] [youtube] Decrypted nsig sNLvE-3HcMAupIqG => 55u-MHF-dPA9jw
+[youtube] lsW_d2z_564: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/1219?service=YouTube&categories=%5B%22filler%22%2C+%22outro%22%2C+%22intro%22%2C+%22interaction%22%2C+%22preview%22%2C+%22selfpromo%22%2C+%22music_offtopic%22%2C+%22chapter%22%2C+%22sponsor%22%2C+%22poi_highlight%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+[SponsorBlock] No matching segments were found in the SponsorBlock database
+[info] Testing format 617
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 8
+[download] Destination: C:\Users\kushal\src\myhtml\fromnepal\public\notes\tmptr67tn7r.tmp
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of    712.00B in 00:00:00 at 7.04KiB/s
+[info] lsW_d2z_564: Downloading 1 format(s): 617+140
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1729822467/ei/o6oaZ9afIvi8kucP_I3QyQU/ip/70.104.195.206/id/96c5bf776cffe7ae/itag/617/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D7873571%3Bdur%3D42.132%3Bgir%3Dyes%3Bitag%3D303%3Blmt%3D1729691827480525/rqh/1/hls_chunk_host/rr5---sn-8xgp1vo-gpjl.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/met/1729800867,/mh/q4/mm/31,29/mn/sn-8xgp1vo-gpjl,sn-8xgp1vo-p5qs/ms/au,rdu/mv/m/mvi/5/pl/20/rms/au,au/initcwndbps/1156250/vprv/1/playlist_type/DVR/dover/13/txp/543C434/mt/1729800081/fvip/8/short_key/1/keepalive/yes/fexp/51312688,51326931/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,vprv,playlist_type/sig/AJfQdSswRAIgd-a7ZZ-AAsUOK4t0A5JttpsG0yz3sxPr4zEC3Uvoi8MCIG0S97TNFKOshKUUJaw3aeJ24KVK7eHkT_P6C2a_3YPc/lsparams/hls_chunk_host,met,mh,mm,mn,ms,mv,mvi,pl,rms,initcwndbps/lsig/ACJ0pHgwRAIgPhucsnFoRORTg7oGVwfXrPyUoyLnisCSAUuoYveIPTkCICYZepurCw48DGHXMyrXvCbV_AhnuQosiE4mUu4glYhr/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 8
+[download] Destination: C:\Temp\yt-dlp\20241024161425.f617.mp4
+[download] 100% of    7.52MiB in 00:00:00 at 9.06MiB/s
+[debug] Invoking http downloader on "https://rr5---sn-8xgp1vo-gpjl.googlevideo.com/videoplayback?expire=1729822467&ei=o6oaZ9afIvi8kucP_I3QyQU&ip=70.104.195.206&id=o-AEfT0-eilB_10hsQGaadjQobVF6FfHkA-jOpDJVujh1Y&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&met=1729800867%2C&mh=q4&mm=31%2C29&mn=sn-8xgp1vo-gpjl%2Csn-8xgp1vo-p5qs&ms=au%2Crdu&mv=m&mvi=5&pl=20&rms=au%2Cau&initcwndbps=1156250&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=683785&dur=42.190&lmt=1729660115211679&mt=1729800081&fvip=8&keepalive=yes&fexp=51312688%2C51326931&c=IOS&txp=5432434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRgIhAIHaaEZz3_jyAh2rCaqij9ULOK4_4TBhx4ha45t_hkakAiEAr7YTlXK-DiyaubNosFrEDPm6NCItaCUyJ4xIciKE4ME%3D&lsparams=met%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=ACJ0pHgwRAIgAQa8CTNRYYwqIJgbNsT6IcvCpiH0InDlXe9wTycQnaICIAoz05M446dGzLAzXFXN2a8Q4mTW7i9sQCRBVvBOqclk"
+[download] Destination: C:\Temp\yt-dlp\20241024161425.f140.m4a
+[download] 100% of  667.76KiB in 00:00:00 at 1.94MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\20241024161425.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241024161425.f617.mp4 -i file:C:\Temp\yt-dlp\20241024161425.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241024161425.temp.mp4
+Deleting original file C:\Temp\yt-dlp\20241024161425.f617.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\20241024161425.f140.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241024161425.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241024161425.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Police Come Knocking With a Warrant? Here's What to Do #Cops #Police" -metadata "date=20241023" -metadata "description=If the cops come to your door and say they have a search warrant for inside your home, they are allowed to come inside (if it's valid). However, that doesn't mean they have a warrant for everything inside of your home. Many search warrants only include specific rooms, not entire homes and entire properties. This is why you should always ask to see the warrant and say, \"I do not consent to a search of anything outside of this warrant.\"
+
+#4thAmendment
+#KnowYourRights
+#SearchWarrant
+#Lawyer
+#Attorney
+#LawyerReacts
+#Police
+#Cops
+#PoliceVideos
+#shorts" -metadata "synopsis=If the cops come to your door and say they have a search warrant for inside your home, they are allowed to come inside (if it's valid). However, that doesn't mean they have a warrant for everything inside of your home. Many search warrants only include specific rooms, not entire homes and entire properties. This is why you should always ask to see the warrant and say, \"I do not consent to a search of anything outside of this warrant.\"
+
+#4thAmendment
+#KnowYourRights
+#SearchWarrant
+#Lawyer
+#Attorney
+#LawyerReacts
+#Police
+#Cops
+#PoliceVideos
+#shorts" -metadata "purl=https://www.youtube.com/watch?v=lsW_d2z_564" -metadata "comment=https://www.youtube.com/watch?v=lsW_d2z_564" -metadata "artist=Hampton Law" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\20241024161425.temp.mp4
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 16
+Kind        : Local
+Millisecond : 571
+Microsecond : 835
+Nanosecond  : 600
+Minute      : 14
+Month       : 10
+Second      : 31
+Ticks       : 638653832715718356
+TimeOfDay   : 16:14:31.5718356
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 4:14:31 PM
+
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 16
+Kind        : Local
+Millisecond : 578
+Microsecond : 663
+Nanosecond  : 900
+Minute      : 14
+Month       : 10
+Second      : 31
+Ticks       : 638653832715786639
+TimeOfDay   : 16:14:31.5786639
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 4:14:31 PM
+
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 16
+Kind        : Local
+Millisecond : 581
+Microsecond : 3
+Nanosecond  : 600
+Minute      : 14
+Month       : 10
+Second      : 31
+Ticks       : 638653832715810036
+TimeOfDay   : 16:14:31.5810036
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 4:14:31 PM
+
+
+    Directory: C:\Temp\yt-dlp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          10/23/2024  1:08 AM        8596077 20241024161425.mp4
+-a---          10/23/2024  1:08 AM        8596077 20241024161425.mp4
+Cleaned video name: 20241024161425mp4
+Cleaned video path: C:\Temp\yt-dlp\20241024161425mp4
+Running ffmpeg
+ffmpeg -i "C:\Temp\yt-dlp\20241024161425mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241024161425mp4_reencoded.mp4"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec--enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241024161425mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Police Come Knocking With a Warrant? Here's What to Do #Cops #Police
+    artist          : Hampton Law
+    date            : 20241023
+    encoder         : Lavf61.7.100
+    comment         : https://www.youtube.com/watch?v=lsW_d2z_564
+    description     : If the cops come to your door and say they have a search warrant for inside your home, they are allowed to come inside (if it's valid). However, that doesn't mean they have a warrant for everything inside of your home. Many search warrants only include sp
+                    :
+                    : #4thAmendment
+                    : #KnowYourRights
+                    : #SearchWarrant
+                    : #Lawyer
+                    : #Attorney
+                    : #LawyerReacts
+                    : #Police
+                    : #Cops
+                    : #PoliceVideos
+                    : #shorts
+    synopsis        : If the cops come to your door and say they have a search warrant for inside your home, they are allowed to come inside (if it's valid). However, that doesn't mean they have a warrant for everything inside of your home. Many search warrants only include sp
+                    :
+                    : #4thAmendment
+                    : #KnowYourRights
+                    : #SearchWarrant
+                    : #Lawyer
+                    : #Attorney
+                    : #LawyerReacts
+                    : #Police
+                    : #Cops
+                    : #PoliceVideos
+                    : #shorts
+  Duration: 00:00:42.19, start: 0.000000, bitrate: 1629 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 1491 kb/s, 60 fps, 60 tbr, 16k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 10/24/2024.
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000021e7fb28f00] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000021e7fb28f00] profile High, level 4.2, 4:2:0, 8-bit
+[libx264 @ 0000021e7fb28f00] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\20241024161425mp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Police Come Knocking With a Warrant? Here's What to Do #Cops #Police
+    artist          : Hampton Law
+    date            : 20241023
+    synopsis        : If the cops come to your door and say they have a search warrant for inside your home, they are allowed to come inside (if it's valid). However, that doesn't mean they have a warrant for everything inside of your home. Many search warrants only include sp
+                    :
+                    : #4thAmendment
+                    : #KnowYourRights
+                    : #SearchWarrant
+                    : #Lawyer
+                    : #Attorney
+                    : #LawyerReacts
+                    : #Police
+                    : #Cops
+                    : #PoliceVideos
+                    : #shorts
+    comment         : https://www.youtube.com/watch?v=lsW_d2z_564
+    description     : If the cops come to your door and say they have a search warrant for inside your home, they are allowed to come inside (if it's valid). However, that doesn't mean they have a warrant for everything inside of your home. Many search warrants only include sp
+                    :
+                    : #4thAmendment
+                    : #KnowYourRights
+                    : #SearchWarrant
+                    : #Lawyer
+                    : #Attorney
+                    : #LawyerReacts
+                    : #Police
+                    : #Cops
+                    : #PoliceVideos
+                    : #shorts
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 60 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 10/24/2024.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 aac
+[mp4 @ 0000021e7fb29640] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000021e7fb281c0] video:12866KiB audio:658KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.519154%
+frame= 2528 fps=180 q=-1.0 Lsize=   13594KiB time=00:00:42.10 bitrate=2645.3kbits/s speed=   3x
+[libx264 @ 0000021e7fb28f00] frame I:13    Avg QP:20.82  size: 70715
+[libx264 @ 0000021e7fb28f00] frame P:674   Avg QP:22.81  size: 13593
+[libx264 @ 0000021e7fb28f00] frame B:1841  Avg QP:26.28  size:  1680
+[libx264 @ 0000021e7fb28f00] consecutive B-frames:  1.6%  3.5%  1.4% 93.5%
+[libx264 @ 0000021e7fb28f00] mb I  I16..4: 18.0% 74.2%  7.8%
+[libx264 @ 0000021e7fb28f00] mb P  I16..4:  4.0%  8.5%  0.3%  P16..4: 26.9%  5.2%  2.0%  0.0%  0.0%    skip:53.2%
+[libx264 @ 0000021e7fb28f00] mb B  I16..4:  0.2%  0.2%  0.0%  B16..8: 15.6%  0.3%  0.0%  direct: 0.3%  skip:83.4%  L0:44.7% L1:54.2% BI: 1.1%
+[libx264 @ 0000021e7fb28f00] 8x8 transform intra:66.7% inter:86.3%
+[libx264 @ 0000021e7fb28f00] coded y,uvDC,uvAC intra: 23.5% 26.5% 3.5% inter: 2.7% 2.6% 0.0%
+[libx264 @ 0000021e7fb28f00] i16 v,h,dc,p: 24% 32%  6% 37%
+[libx264 @ 0000021e7fb28f00] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 33% 20% 27%  3%  3%  4%  3%  4%  3%
+[libx264 @ 0000021e7fb28f00] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 30% 23% 12%  4%  7%  8%  6%  5%  4%
+[libx264 @ 0000021e7fb28f00] i8c dc,h,v,p: 64% 18% 15%  4%
+[libx264 @ 0000021e7fb28f00] Weighted P-Frames: Y:0.7% UV:0.3%
+[libx264 @ 0000021e7fb28f00] ref P L0: 66.2% 15.2% 14.4%  4.1%  0.0%
+[libx264 @ 0000021e7fb28f00] ref B L0: 90.4%  7.9%  1.7%
+[libx264 @ 0000021e7fb28f00] ref B L1: 97.4%  2.6%
+[libx264 @ 0000021e7fb28f00] kb/s:2501.45
+[aac @ 0000021e7fb5eec0] Qavg: 737.579
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 16
+Kind        : Local
+Millisecond : 759
+Microsecond : 354
+Nanosecond  : 400
+Minute      : 14
+Month       : 10
+Second      : 45
+Ticks       : 638653832857593544
+TimeOfDay   : 16:14:45.7593544
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 4:14:45 PM
+
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 16
+Kind        : Local
+Millisecond : 248
+Microsecond : 104
+Nanosecond  : 300
+Minute      : 14
+Month       : 10
+Second      : 48
+Ticks       : 638653832882481043
+TimeOfDay   : 16:14:48.2481043
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 4:14:48 PM
+
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 16
+Kind        : Local
+Millisecond : 254
+Microsecond : 459
+Nanosecond  : 900
+Minute      : 14
+Month       : 10
+Second      : 48
+Ticks       : 638653832882544599
+TimeOfDay   : 16:14:48.2544599
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 4:14:48 PM
+
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_videos.ps1  -url "https://www.tiktok.com/@nayibbukele/video/7426196108088462597"
+Create new folder for yt-dlp
+
+    Directory: C:\TempMode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          10/24/2024  4:50 PM                yt-dlp
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 16
+Kind        : Local
+Millisecond : 847
+Microsecond : 754
+Nanosecond  : 900
+Minute      : 50
+Month       : 10
+Second      : 0
+Ticks       : 638653854008477549
+TimeOfDay   : 16:50:00.8477549
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 4:50:00 PM
+
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 16
+Kind        : Local
+Millisecond : 852
+Microsecond : 546
+Nanosecond  : 200
+Minute      : 50
+Month       : 10
+Second      : 0
+Ticks       : 638653854008525462
+TimeOfDay   : 16:50:00.8525462
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 4:50:00 PM
+
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241024165000.%(ext)s','https://www.tiktok.com/@nayibbukele/video/7426196108088462597']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.10.07 from yt-dlp/yt-dlp [1a176d874] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.3, websockets-13.1
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1838 extractors
+[TikTok] Extracting URL: https://www.tiktok.com/@nayibbukele/video/7426196108088462597
+[TikTok] 7426196108088462597: Downloading webpage
+[debug] [TikTok] Found universal data for rehydration
+[debug] Extractor gave empty title. Creating a generic title
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for TikTok
+[info] 7426196108088462597: Downloading 1 format(s): bytevc1_720p_293419-1
+[debug] Invoking http downloader on "https://v19-webapp-prime.us.tiktok.com/video/tos/useast2a/tos-useast2a-ve-0068c003/oARGOHA4eKVkICkSqjtCqkUAIASzedig1geLjU/?a=1988&bti=ODszNWYuMDE6&ch=0&cr=3&dr=0&lr=all&cd=0%7C0%7C0%7C&cv=1&br=572&bt=286&cs=2&ds=3&eid=7936&ft=4KJMyMzm8Zmo0tudub4jVWXDdpWrKsd.&mime_type=video_mp4&qs=14&rc=NmdkOjdnOzg1Ojo5Z2hkOEBpajpkZXg5cmRsdjMzNzczM0BfLzMvMi82XjIxMl40YzIuYSNgZl4vMmRrXzRgLS1kMTZzcw%3D%3D&btag=e00098000&expire=1729824848&l=202410242050032AF3614B339626009FBB&ply_type=2&policy=2&signature=b84a390a85187a2e73d3fa883402ca2f&tk=tt_chain_token"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\20241024165000.mp4
+[download] 100% of    8.58MiB in 00:00:00 at 18.13MiB/s
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241024165000.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241024165000.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=original sound" -metadata "date=20241016" -metadata "purl=https://www.tiktok.com/@nayibbukele/video/7426196108088462597" -metadata "comment=https://www.tiktok.com/@nayibbukele/video/7426196108088462597" -metadata "artist=Nayib Bukele" -movflags +faststart file:C:\Temp\yt-dlp\20241024165000.temp.mp4
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 16
+Kind        : Local
+Millisecond : 717
+Microsecond : 80
+Nanosecond  : 200
+Minute      : 50
+Month       : 10
+Second      : 4
+Ticks       : 638653854047170802
+TimeOfDay   : 16:50:04.7170802
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 4:50:04 PM
+
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 16
+Kind        : Local
+Millisecond : 723
+Microsecond : 143
+Nanosecond  : 200
+Minute      : 50
+Month       : 10
+Second      : 4
+Ticks       : 638653854047231432
+TimeOfDay   : 16:50:04.7231432
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 4:50:04 PM
+
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 16
+Kind        : Local
+Millisecond : 724
+Microsecond : 819
+Nanosecond  : 900
+Minute      : 50
+Month       : 10
+Second      : 4
+Ticks       : 638653854047248199
+TimeOfDay   : 16:50:04.7248199
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 4:50:04 PM
+
+
+    Directory: C:\Temp\yt-dlp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          10/15/2024 10:49 PM        8995044 20241024165000.mp4
+-a---          10/15/2024 10:49 PM        8995044 20241024165000.mp4
+Cleaned video name: 20241024165000mp4
+Cleaned video path: C:\Temp\yt-dlp\20241024165000mp4
+Running ffmpeg
+ffmpeg -i "C:\Temp\yt-dlp\20241024165000mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241024165000mp4_reencoded.mp4"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec--enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241024165000mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : original sound
+    artist          : Nayib Bukele
+    date            : 20241016
+    encoder         : Lavf61.7.100
+    comment         : https://www.tiktok.com/@nayibbukele/video/7426196108088462597
+  Duration: 00:04:05.25, start: 0.000000, bitrate: 293 kb/s
+  Stream #0:0[0x1](und): Video: hevc (Main) (hvc1 / 0x31637668), yuv420p(tv, bt709/bt709/unknown, progressive), 720x1280, 224 kb/s, SAR 1:1 DAR 9:16, 24 fps, 24 tbr, 12288 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (HE-AACv2) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 64 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (hevc (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000001e3b548a800] using SAR=1/1
+[libx264 @ 000001e3b548a800] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001e3b548a800] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 000001e3b548a800] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=24 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\20241024165000mp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : original sound
+    artist          : Nayib Bukele
+    date            : 20241016
+    comment         : https://www.tiktok.com/@nayibbukele/video/7426196108088462597
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709/bt709/unknown, progressive), 720x1280 [SAR 1:1 DAR 9:16], q=2-31, 24 fps, 12288 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 aac
+[mp4 @ 000001e3b5487840] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001e3b4f34840] video:26856KiB audio:3819KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.606143%
+frame= 5885 fps=356 q=-1.0 Lsize=   30861KiB time=00:04:05.12 bitrate=1031.4kbits/s speed=14.8x
+[libx264 @ 000001e3b548a800] frame I:25    Avg QP:17.38  size: 58629
+[libx264 @ 000001e3b548a800] frame P:1622  Avg QP:20.83  size: 10746
+[libx264 @ 000001e3b548a800] frame B:4238  Avg QP:24.11  size:  2030
+[libx264 @ 000001e3b548a800] consecutive B-frames:  0.7%  9.3%  1.3% 88.7%
+[libx264 @ 000001e3b548a800] mb I  I16..4: 12.6% 69.6% 17.8%
+[libx264 @ 000001e3b548a800] mb P  I16..4:  2.7%  6.9%  0.7%  P16..4: 33.8%  8.7%  3.9%  0.0%  0.0%    skip:43.2%
+[libx264 @ 000001e3b548a800] mb B  I16..4:  0.1%  0.4%  0.0%  B16..8: 24.1%  1.3%  0.2%  direct: 0.4%  skip:73.3%  L0:44.2% L1:50.9% BI: 4.9%
+[libx264 @ 000001e3b548a800] 8x8 transform intra:67.9% inter:85.6%
+[libx264 @ 000001e3b548a800] coded y,uvDC,uvAC intra: 42.8% 44.1% 12.1% inter: 5.5% 5.3% 0.0%
+[libx264 @ 000001e3b548a800] i16 v,h,dc,p: 35% 24%  7% 33%
+[libx264 @ 000001e3b548a800] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 28% 18% 21%  5%  5%  5%  5%  6%  6%
+[libx264 @ 000001e3b548a800] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 31% 19% 13%  6%  7%  7%  6%  6%  4%
+[libx264 @ 000001e3b548a800] i8c dc,h,v,p: 53% 19% 22%  6%
+[libx264 @ 000001e3b548a800] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 000001e3b548a800] ref P L0: 60.5% 12.1% 19.3%  8.1%
+[libx264 @ 000001e3b548a800] ref B L0: 87.5%  9.9%  2.6%
+[libx264 @ 000001e3b548a800] ref B L1: 97.1%  2.9%
+[libx264 @ 000001e3b548a800] kb/s:897.18
+[aac @ 000001e3b5483680] Qavg: 572.340
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 16
+Kind        : Local
+Millisecond : 311
+Microsecond : 250
+Nanosecond  : 400
+Minute      : 50
+Month       : 10
+Second      : 21
+Ticks       : 638653854213112504
+TimeOfDay   : 16:50:21.3112504
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 4:50:21 PM
+
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 16
+Kind        : Local
+Millisecond : 533
+Microsecond : 428
+Nanosecond  : 700
+Minute      : 50
+Month       : 10
+Second      : 38
+Ticks       : 638653854385334287
+TimeOfDay   : 16:50:38.5334287
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 4:50:38 PM
+
+
+DisplayHint : DateTime
+Date        : 10/24/2024 12:00:00 AM
+Day         : 24
+DayOfWeek   : Thursday
+DayOfYear   : 298
+Hour        : 16
+Kind        : Local
+Millisecond : 537
+Microsecond : 501
+Nanosecond  : 100
+Minute      : 50
+Month       : 10
+Second      : 38
+Ticks       : 638653854385375011
+TimeOfDay   : 16:50:38.5375011
+Year        : 2024
+DateTime    : Thursday, October 24, 2024 4:50:38 PM
+
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> cd "C:\Users\kushal\src\mydotnet\"; date; dotnet clean; date; dotnet build; date; dotnet test; date; cd "C:\Users\kushal\src\mydotnet\tests\"; date; dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura; reportgenerator -reports:coverage.cobertura.xml -targetdir:coverage-report; date; Move-Item -Path "C:\Users\kushal\src\mydotnet\tests\coverage-report\*" -Destination "C:\Users\kushal\src\mydotnet\docs" -Force; date; cd  "C:\Users\kushal\src\mydotnet\"; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master --verbose; date; git push origin master --verbose; date; cd "C:\Users\kushal\src\myhtml\matchthree\matchthree\"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master; date; git push origin master; date; cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
