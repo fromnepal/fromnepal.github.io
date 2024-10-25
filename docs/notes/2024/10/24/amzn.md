@@ -64,3 +64,13 @@ Implement a customer service call dispatch.
 
 ## Data structures 
 Know the strengths and weaknesses of any data structure that you choose. 
+Could you implement it? 
+How and why would you use the given data structure in that particular situation? 
+Sometimes you can't solve a problem with a single data structure, how will you solve a problem with multiple data structures? 
+Consider run times for common operations and how they use memory. 
+Understand data structures in common core libraries like trees, hash maps, lists, arrays, queues, etc. 
+Algorithms: expectation is to handle edge cases in the problem we are working with, not memorize/repeat every algorithm ever.  
+Understand common algorithms: Traversal / divide and conquer, when to use breadth vs depth, recursion, etc. 
+Discuss the runtimes, theoretical limitations and basic implementation strategies for different classes of algorithms. 
+Find ways to optimize your solution and find optimal time complexity. 
+Example question: How would you remove duplicates from a given array in Java? 

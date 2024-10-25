@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                /* 1. Use a more-intuitive box-sizing model */
+        *, *::before, *::after {
+        box-sizing: border-box;
+        }
+
+        /* 2. Remove default margin */
+        * {
+        margin: 0;
+        }
+
+        body {
+        /* 3. Add accessible line-height */
+        line-height: 1.5;
+        /* 4. Improve text rendering */
+        -webkit-font-smoothing: antialiased;
+        }
+
+        /* 5. Improve media defaults */
+        img, picture, video, canvas, svg {
+        display: block;
+        max-width: 100%;
+        }
+
+        /* 6. Inherit fonts for form controls */
+        input, button, textarea, select {
+        font: inherit;
+        }
+
+        /* 7. Avoid text overflows */
+        p, h1, h2, h3, h4, h5, h6 {
+        overflow-wrap: break-word;
+        }
+
+        /* 8. Improve line wrapping */
+        p {
+        text-wrap: pretty;
+        }
+        h1, h2, h3, h4, h5, h6 {
+        text-wrap: balance;
+        }
+
+        /*
+        9. Create a root stacking context
+        */
+        #root, #__next {
+        isolation: isolate;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>
+            A Modern CSS Reset
+        </h1>
+        <p>Whenever I start a new project, the first order of business is to sand down some of the rough edges in the CSS language. I do this with a functional set of custom baseline styles.</p>
+        <p>For a long time, I used Eric Meyer's famous CSS Reset (opens in new tab). It's a solid chunk of CSS, but it's a bit long in the tooth at this point; it hasn't been updated in more than a decade, and a lot has changed since then!</p>
+        <p>Recently, I've been using my own custom CSS reset. It includes all of the little tricks I've discovered to improve both the user experience and the CSS authoring experience.</p>
+        <p>Like other CSS resets, it's unopinionated when it comes to design / cosmetics. You can use this reset for any project, no matter the aesthetic you're going for.</p>
+        <p>In this tutorial, we'll go on a tour of my custom CSS reset. We'll dig into each rule, and you'll learn what it does and why you might want to use it!</p>
+    </article>
+    <aside>
+            <h2>Applying this reset to an existing codebase</h2>
+            <p>As a general rule, I don’t recommend trying to apply any CSS reset to an existing codebase. Whenever we tinker with baseline styles, we risk things breaking in subtle ways that we might not notice (but our users will).</p>
+            <p>If you do go this route, be sure to do extensive testing to make sure everything still looks good.</p>
+    </aside>
+</body>
+</html>
