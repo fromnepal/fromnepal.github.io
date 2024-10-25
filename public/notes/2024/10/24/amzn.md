@@ -74,3 +74,30 @@ Understand common algorithms: Traversal / divide and conquer, when to use breadt
 Discuss the runtimes, theoretical limitations and basic implementation strategies for different classes of algorithms. 
 Find ways to optimize your solution and find optimal time complexity. 
 Example question: How would you remove duplicates from a given array in Java? 
+
+## System design
+Question will be a little vague. 
+It will be just a one liner question. 
+Expectation from the interviewer is that you will ask clarifying questions. 
+Understand who you are designing the system for and why. 
+What is the expectation that they have for functionality? 
+What things could the customer just assume will be in the system but they will not think about it in front of their mind? 
+Software systems need software components: 
+    i. Something to store data 
+    ii. Something make decisions 
+    iii. APIs or processes 
+Distributed systems, SOA, and entire software architecture
+Practice drawing system design by hand and on platforms such as invision 
+What if the service will become hyper popular with 10x as many customers as expected? 
+How will you improve the current system to meet demand? 
+Feel free to create a diagram if it helps clarify your thoughts. 
+Write down the requirements or assumptions you are making and make your design based on them. 
+
+
+
+
+
+
+System design: 
+Imagine you are building an app that backs up photos for customers. 
+The app already has the following solved for it: login and authentication, logging, crash handling, UX that scales for one million plus photos or videos. The service has been built to accept images to it at Amazon scale up to at least five thousand images uploaded a second. Your job in the app is to design the code that will queue up photos or videos stored on the customer's device and make sure they are backed up to the cloud. Things that you would want to consider are our customers on average store 90% photos and 10% videos in their gallery. Photos are on average 5 MB a piece and videos can range from 45 MB per minute to 1 GB per minute. Customers can have between one to a hundred thousand photos or videos to backup depending if they are doing it for the first time or subsequent time. The app should be able to discern between what has already been uploaded in the past and what has not been uploaded. The app should continue where it left off in the back up process if the app crashes or the phone shuts down or loses Internet connection. 
