@@ -103,3 +103,17 @@ Imagine you are building an app that backs up photos for customers.
 - Customers may have between 1 to 100,000 photos/videos to back up. 
 - The app should discern between previously uploaded and new content. 
 - It should resume backups after crashes, phone shutdowns, or lost internet connections.
+
+
+
+
+
+System Design Interview - Chapter 1: Scale from zero to millions of users 
+
+## Single server setup 
+Everything is running on one server 
+    i. web app 
+    ii. database 
+    iii. cache 
+    ... etc 
+
