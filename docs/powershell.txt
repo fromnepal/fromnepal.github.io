@@ -1,1054 +1,3 @@
-Line |
-  26 |      Get-ChildItem $tempDir
-     |      ~~~~~~~~~~~~~~~~~~~~~~
-     | Cannot find path 'C:\Temp\yt-dlp' because it does not exist.
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 939
-Microsecond : 866
-Nanosecond  : 0
-Minute      : 4
-Month       : 10
-Second      : 47
-Ticks       : 638657858879398660
-TimeOfDay   : 08:04:47.9398660
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:04:47 AM
-
-[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241029080447.%(ext)s','https://www.instagram.com/reel/DAqiGDAxXXQ']
-[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
-[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
-[debug] yt-dlp version stable@2024.10.22 from yt-dlp/yt-dlp [67adeb7ba] (win_exe)
-[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
-[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
-[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.3, websockets-13.1
-[debug] Proxy map: {}
-[debug] Request Handlers: urllib, requests, websockets, curl_cffi
-[debug] Loaded 1839 extractors
-[Instagram] Extracting URL: https://www.instagram.com/reel/DAqiGDAxXXQ
-[Instagram] DAqiGDAxXXQ: Setting up session
-[Instagram] DAqiGDAxXXQ: Downloading JSON metadata
-[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
-[SponsorBlock] SponsorBlock is not supported for Instagram
-[info] DAqiGDAxXXQ: Downloading 1 format(s): dash-3916628571993911v+dash-1246352733215426ad
-[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/v/t39.25447-16/461950369_2233075417049994_1034509725293810595_n.mp4?_nc_cat=105&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=yu1a3SNRwwEQ7kNvgFmoZfh&_nc_zt=28&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_gid=AjbCquNgUGYEbdpk8hGyH4j&oh=00_AYDd72oxhmkGy8tuDV-F1-OZeuKo5NslWECDa39xTGd20g&oe=6726B993"
-[debug] File locking is not supported. Proceeding without locking
-[download] Destination: C:\Temp\yt-dlp\20241029080447.fdash-3916628571993911v.mp4
-[download] 100% of   47.18MiB in 00:00:01 at 31.60MiB/s
-[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/v/t50.33967-16/461867986_1224872602182561_4491860003698989475_n.mp4?_nc_cat=108&ccb=1-7&_nc_sid=9a5d50&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsfQ%3D%3D&_nc_ohc=CYDKNq0HQl8Q7kNvgEOd8pE&_nc_zt=28&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_gid=AjbCquNgUGYEbdpk8hGyH4j&oh=00_AYD5Hnejf3jyYOPuMAWPd8V9KRaZgN7KVsdMBvlKAAPxig&oe=672691C3"
-[download] Destination: C:\Temp\yt-dlp\20241029080447.fdash-1246352733215426ad.m4a
-[download] 100% of  620.22KiB in 00:00:00 at 3.48MiB/s
-[Merger] Merging formats into "C:\Temp\yt-dlp\20241029080447.mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241029080447.fdash-3916628571993911v.mp4 -i file:C:\Temp\yt-dlp\20241029080447.fdash-1246352733215426ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241029080447.temp.mp4
-Deleting original file C:\Temp\yt-dlp\20241029080447.fdash-3916628571993911v.mp4 (pass -k to keep)
-Deleting original file C:\Temp\yt-dlp\20241029080447.fdash-1246352733215426ad.m4a (pass -k to keep)
-[ModifyChapters] SponsorBlock information is unavailable
-[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241029080447.mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241029080447.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by theneoniche" -metadata "date=20241003" -metadata "description=Two Harvard students just revealed howMeta’s Ray-Ban smart glasses can be used to dox anyone in seconds! Using facial recognition tools like PimEyes, they built a system called I-XRAY that instantly pulls up personal details like names, addresses, and phone numbers, all in real-time.
-
-Here’s how it works:
-- The smart glasses livestream video to Instagram
-- AI scans faces and cross-references public databases
-- The info is sent right to a phone app, revealing everything from relatives to home addresses!
-
-While the creators don’t plan to release the code, this shows how easy it is for bad actors to misuse current tech." -metadata "synopsis=Two Harvard students just revealed how Meta’s Ray-Ban smart glasses can be used to dox anyone in seconds! Using facial recognition tools like PimEyes, they built a system called I-XRAY that instantly pulls up personal details like names, addresses, and phone numbers, all in real-time.
-
-Here’s how it works:
-- The smart glasses livestream video to Instagram
-- AI scans faces and cross-references public databases
-- The info is sent right to a phone app, revealing everything from relatives to home addresses!
-
-While the creators don’t plan to release the code, this shows how easy it is for bad actors to misuse current tech." -metadata "purl=https://www.instagram.com/reel/DAqiGDAxXXQ" -metadata "comment=https://www.instagram.com/reel/DAqiGDAxXXQ" -metadata "artist=Neo Niche" -movflags +faststart file:C:\Temp\yt-dlp\20241029080447.temp.mp4
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 735
-Microsecond : 384
-Nanosecond  : 200
-Minute      : 4
-Month       : 10
-Second      : 51
-Ticks       : 638657858917353842
-TimeOfDay   : 08:04:51.7353842
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:04:51 AM
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 738
-Microsecond : 212
-Nanosecond  : 300
-Minute      : 4
-Month       : 10
-Second      : 51
-Ticks       : 638657858917382123
-TimeOfDay   : 08:04:51.7382123
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:04:51 AM
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 740
-Microsecond : 477
-Nanosecond  : 400
-Minute      : 4
-Month       : 10
-Second      : 51
-Ticks       : 638657858917404774
-TimeOfDay   : 08:04:51.7404774
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:04:51 AM
-
--a---           10/3/2024 12:54 AM       50128101 20241029080447.mp4
--a---           10/3/2024 12:54 AM       50128101 20241029080447.mp4
-Cleaned video name: 20241029080447mp4
-Cleaned video path: C:\Temp\yt-dlp\20241029080447mp4
-Running ffmpeg
-ffmpeg -i "C:\Temp\yt-dlp\20241029080447mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241029080447mp4_reencoded.mp4"
-ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
-  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
-  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec--enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
-  libavutil      59. 39.100 / 59. 39.100
-  libavcodec     61. 19.100 / 61. 19.100
-  libavformat    61.  7.100 / 61.  7.100
-  libavdevice    61.  3.100 / 61.  3.100
-  libavfilter    10.  4.100 / 10.  4.100
-  libswscale      8.  3.100 /  8.  3.100
-  libswresample   5.  3.100 /  5.  3.100
-  libpostproc    58.  3.100 / 58.  3.100
-Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241029080447mp4':
-  Metadata:
-    major_brand     : isom
-    minor_version   : 512
-    compatible_brands: isomiso2mp41
-    title           : Video by theneoniche
-    artist          : Neo Niche
-    date            : 20241003
-    encoder         : Lavf61.7.100
-    comment         : https://www.instagram.com/reel/DAqiGDAxXXQ
-    description     : Two Harvard students just revealed how Meta’s Ray-Ban smart glasses can be used to dox anyone in seconds! Using facial recognition tools like PimEyes, they built a system called I-XRAY that instantly pulls up personal details like names, addresses, and
-                    :
-                    : Here’s how it works:
-                    : - The smart glasses livestream video to Instagram
-                    : - AI scans faces and cross-references public databases
-                    : - The info is sent right to a phone app, revealing everything from relatives to home addresses!
-                    :
-                    : While the creators don’t plan to release the code, this shows how easy it is for bad actors to misuse current tech.
-    synopsis        : Two Harvard students just revealed how Meta’s Ray-Ban smart glasses can be used to dox anyone in seconds! Using facial recognition tools like PimEyes, they built a system called I-XRAY that instantly pulls up personal details like names, addresses, and
-                    :
-                    : Here’s how it works:
-                    : - The smart glasses livestream video to Instagram
-                    : - AI scans faces and cross-references public databases
-                    : - The info is sent right to a phone app, revealing everything from relatives to home addresses!
-                    :
-                    : While the creators don’t plan to release the code, this shows how easy it is for bad actors to misuse current tech.
-  Duration: 00:01:30.87, start: 0.000000, bitrate: 4413 kb/s
-  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 4353 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
-      Metadata:
-        handler_name    : VideoHandler
-        vendor_id       : [0][0][0][0]
-        encoder         : VPC Coding
-  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 54 kb/s (default)
-      Metadata:
-        handler_name    : SoundHandler
-        vendor_id       : [0][0][0][0]
-Stream mapping:
-  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
-  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
-Press [q] to stop, [?] for help
-[libx264 @ 000001dabbc280c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
-[libx264 @ 000001dabbc280c0] profile High, level 4.0, 4:2:0, 8-bit
-[libx264 @ 000001dabbc280c0] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
-Output #0, mp4, to 'C:\Temp\yt-dlp\20241029080447mp4_reencoded.mp4':
-  Metadata:
-    major_brand     : isom
-    minor_version   : 512
-    compatible_brands: isomiso2mp41
-    title           : Video by theneoniche
-    artist          : Neo Niche
-    date            : 20241003
-    synopsis        : Two Harvard students just revealed how Meta’s Ray-Ban smart glasses can be used to dox anyone in seconds! Using facial recognition tools like PimEyes, they built a system called I-XRAY that instantly pulls up personal details like names, addresses, and
-                    :
-                    : Here’s how it works:
-                    : - The smart glasses livestream video to Instagram
-                    : - AI scans faces and cross-references public databases
-                    : - The info is sent right to a phone app, revealing everything from relatives to home addresses!
-                    :
-                    : While the creators don’t plan to release the code, this shows how easy it is for bad actors to misuse current tech.
-    comment         : https://www.instagram.com/reel/DAqiGDAxXXQ
-    description     : Two Harvard students just revealed how Meta’s Ray-Ban smart glasses can be used to dox anyone in seconds! Using facial recognition tools like PimEyes, they built a system called I-XRAY that instantly pulls up personal details like names, addresses, and
-                    :
-                    : Here’s how it works:
-                    : - The smart glasses livestream video to Instagram
-                    : - AI scans faces and cross-references public databases
-                    : - The info is sent right to a phone app, revealing everything from relatives to home addresses!
-                    :
-                    : While the creators don’t plan to release the code, this shows how easy it is for bad actors to misuse current tech.
-    encoder         : Lavf61.7.100
-  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 30 fps, 15360 tbn (default)
-      Metadata:
-        handler_name    : VideoHandler
-        vendor_id       : [0][0][0][0]
-        encoder         : Lavc61.19.100 libx264
-      Side data:
-        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
-  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
-      Metadata:
-        handler_name    : SoundHandler
-        vendor_id       : [0][0][0][0]
-        encoder         : Lavc61.19.100 aac
-[mp4 @ 000001dabbc54b80] Starting second pass: moving the moov atom to the beginning of the file
-[out#0/mp4 @ 000001dabbc3b5c0] video:40758KiB audio:1419KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.230733%
-frame= 2726 fps=158 q=-1.0 Lsize=   42274KiB time=00:01:30.80 bitrate=3814.0kbits/s speed=5.26x
-[libx264 @ 000001dabbc280c0] frame I:13    Avg QP:19.15  size:498307
-[libx264 @ 000001dabbc280c0] frame P:957   Avg QP:22.39  size: 27516
-[libx264 @ 000001dabbc280c0] frame B:1756  Avg QP:28.40  size:  5082
-[libx264 @ 000001dabbc280c0] consecutive B-frames:  9.5% 10.5%  9.7% 70.3%
-[libx264 @ 000001dabbc280c0] mb I  I16..4:  8.9% 52.6% 38.6%
-[libx264 @ 000001dabbc280c0] mb P  I16..4:  3.2%  8.9%  0.9%  P16..4: 34.8%  5.3%  3.0%  0.0%  0.0%    skip:43.9%
-[libx264 @ 000001dabbc280c0] mb B  I16..4:  0.5%  1.0%  0.1%  B16..8: 20.0%  2.0%  0.3%  direct: 0.9%  skip:75.2%  L0:43.5% L1:51.7% BI: 4.8%
-[libx264 @ 000001dabbc280c0] 8x8 transform intra:65.8% inter:75.8%
-[libx264 @ 000001dabbc280c0] coded y,uvDC,uvAC intra: 41.4% 42.3% 8.9% inter: 10.1% 6.3% 0.1%
-[libx264 @ 000001dabbc280c0] i16 v,h,dc,p: 29% 36%  9% 26%
-[libx264 @ 000001dabbc280c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 23% 20%  4%  5%  6%  6%  5%  5%
-[libx264 @ 000001dabbc280c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 22% 21% 16%  6%  8%  7%  8%  6%  7%
-[libx264 @ 000001dabbc280c0] i8c dc,h,v,p: 52% 22% 21%  5%
-[libx264 @ 000001dabbc280c0] Weighted P-Frames: Y:1.4% UV:0.4%
-[libx264 @ 000001dabbc280c0] ref P L0: 57.4% 27.2% 10.4%  4.9%  0.1%
-[libx264 @ 000001dabbc280c0] ref B L0: 92.7%  5.9%  1.3%
-[libx264 @ 000001dabbc280c0] ref B L1: 97.0%  3.0%
-[libx264 @ 000001dabbc280c0] kb/s:3674.44
-[aac @ 000001dabbfdc180] Qavg: 867.631
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 121
-Microsecond : 979
-Nanosecond  : 600
-Minute      : 5
-Month       : 10
-Second      : 9
-Ticks       : 638657859091219796
-TimeOfDay   : 08:05:09.1219796
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:05:09 AM
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 855
-Microsecond : 25
-Nanosecond  : 100
-Minute      : 5
-Month       : 10
-Second      : 10
-Ticks       : 638657859108550251
-TimeOfDay   : 08:05:10.8550251
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:05:10 AM
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 860
-Microsecond : 549
-Nanosecond  : 500
-Minute      : 5
-Month       : 10
-Second      : 10
-Ticks       : 638657859108605495
-TimeOfDay   : 08:05:10.8605495
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:05:10 AM
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 862
-Microsecond : 96
-Nanosecond  : 400
-Minute      : 5
-Month       : 10
-Second      : 10
-Ticks       : 638657859108620964
-TimeOfDay   : 08:05:10.8620964
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:05:10 AM
-
-Get-ChildItem: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_videos.ps1:26
-Line |
-  26 |      Get-ChildItem $tempDir
-     |      ~~~~~~~~~~~~~~~~~~~~~~
-     | Cannot find path 'C:\Temp\yt-dlp' because it does not exist.
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 864
-Microsecond : 969
-Nanosecond  : 900
-Minute      : 5
-Month       : 10
-Second      : 10
-Ticks       : 638657859108649699
-TimeOfDay   : 08:05:10.8649699
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:05:10 AM
-
-[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241029080510.%(ext)s','https://www.instagram.com/reel/DBrKdtPxIhs']
-[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
-[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
-[debug] yt-dlp version stable@2024.10.22 from yt-dlp/yt-dlp [67adeb7ba] (win_exe)
-[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
-[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
-[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.3, websockets-13.1
-[debug] Proxy map: {}
-[debug] Request Handlers: urllib, requests, websockets, curl_cffi
-[debug] Loaded 1839 extractors
-[Instagram] Extracting URL: https://www.instagram.com/reel/DBrKdtPxIhs
-[Instagram] DBrKdtPxIhs: Setting up session
-[Instagram] DBrKdtPxIhs: Downloading JSON metadata
-[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
-[SponsorBlock] SponsorBlock is not supported for Instagram
-[info] DBrKdtPxIhs: Downloading 1 format(s): dash-1750299835803034v+dash-524953373671710ad
-[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/o1/v/t16/f2/m69/AQPLNAh0KawP6gQ2cqHYowmY45J0hojSwgVMRDk6FqzB28y7x4prc1Tf_8NxhgjhlqeF_gc89KmGH4bdVBPD78Dh.mp4?strext=1&_nc_cat=105&_nc_sid=9ca052&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_ohc=L90g96cPqZIQ7kNvgHtnUG9&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsLCJjbGllbnRfbmFtZSI6ImlnIiwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=9-4&oh=00_AYBNT-O6RWOemFvsOZJdBrxA43wAV5kS2WEDYbcT1uv3zQ&oe=6726B8B2"
-[debug] File locking is not supported. Proceeding without locking
-[download] Destination: C:\Temp\yt-dlp\20241029080510.fdash-1750299835803034v.mp4
-[download] 100% of    7.13MiB in 00:00:00 at 16.80MiB/s
-[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/o1/v/t16/f2/m69/AQMTmBN2lqvIwNqIjnCdrFOrNn6OKuRgluCLE6Dzw7Vy0nA3Kiqwb4sKKFKXLiHXSzDeuc5XI16kA7FINnLduA74.mp4?strext=1&_nc_cat=108&_nc_sid=9ca052&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_ohc=XM4nIXsRpVMQ7kNvgG6tScW&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsLCJjbGllbnRfbmFtZSI6ImlnIiwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=9-4&oh=00_AYDsvfhDtif-yXXXEEYhvpzyYmEzabIEfe94fGoy-QycWw&oe=6726A67D"
-[download] Destination: C:\Temp\yt-dlp\20241029080510.fdash-524953373671710ad.m4a
-[download] 100% of  625.21KiB in 00:00:00 at 3.35MiB/s
-[Merger] Merging formats into "C:\Temp\yt-dlp\20241029080510.mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241029080510.fdash-1750299835803034v.mp4 -i file:C:\Temp\yt-dlp\20241029080510.fdash-524953373671710ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241029080510.temp.mp4
-Deleting original file C:\Temp\yt-dlp\20241029080510.fdash-1750299835803034v.mp4 (pass -k to keep)
-Deleting original file C:\Temp\yt-dlp\20241029080510.fdash-524953373671710ad.m4a (pass -k to keep)
-[ModifyChapters] SponsorBlock information is unavailable
-[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241029080510.mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241029080510.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by chrisdier3" -metadata "date=20241028" -metadata "description=In 1939, over 20k American fascists gathered in Madison Square Garden.
-
-#madisonsquaregarden #teachersofinstagram" -metadata "synopsis=In 1939, over 20k American fascists gathered in Madison Square Garden.
-
-#madisonsquaregarden #teachersofinstagram" -metadata "purl=https://www.instagram.com/reel/DBrKdtPxIhs" -metadata "comment=https://www.instagram.com/reel/DBrKdtPxIhs" -metadata "artist=Chris Dier" -movflags +faststart file:C:\Temp\yt-dlp\20241029080510.temp.mp4
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 665
-Microsecond : 651
-Nanosecond  : 300
-Minute      : 5
-Month       : 10
-Second      : 13
-Ticks       : 638657859136656513
-TimeOfDay   : 08:05:13.6656513
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:05:13 AM
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 667
-Microsecond : 938
-Nanosecond  : 500
-Minute      : 5
-Month       : 10
-Second      : 13
-Ticks       : 638657859136679385
-TimeOfDay   : 08:05:13.6679385
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:05:13 AM
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 669
-Microsecond : 411
-Nanosecond  : 300
-Minute      : 5
-Month       : 10
-Second      : 13
-Ticks       : 638657859136694113
-TimeOfDay   : 08:05:13.6694113
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:05:13 AM
-
--a---          10/29/2024  8:05 AM        8135180 20241029080510.mp4
--a---          10/29/2024  8:05 AM        8135180 20241029080510.mp4
-Cleaned video name: 20241029080510mp4
-Cleaned video path: C:\Temp\yt-dlp\20241029080510mp4
-Running ffmpeg
-ffmpeg -i "C:\Temp\yt-dlp\20241029080510mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241029080510mp4_reencoded.mp4"
-ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
-  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
-  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec--enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
-  libavutil      59. 39.100 / 59. 39.100
-  libavcodec     61. 19.100 / 61. 19.100
-  libavformat    61.  7.100 / 61.  7.100
-  libavdevice    61.  3.100 / 61.  3.100
-  libavfilter    10.  4.100 / 10.  4.100
-  libswscale      8.  3.100 /  8.  3.100
-  libswresample   5.  3.100 /  5.  3.100
-  libpostproc    58.  3.100 / 58.  3.100
-Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241029080510mp4':
-  Metadata:
-    major_brand     : isom
-    minor_version   : 512
-    compatible_brands: isomiso2mp41
-    title           : Video by chrisdier3
-    artist          : Chris Dier
-    date            : 20241028
-    encoder         : Lavf61.7.100
-    comment         : https://www.instagram.com/reel/DBrKdtPxIhs
-    description     : In 1939, over 20k American fascists gathered in Madison Square Garden.
-                    :
-                    : #madisonsquaregarden #teachersofinstagram
-    synopsis        : In 1939, over 20k American fascists gathered in Madison Square Garden.
-                    :
-                    : #madisonsquaregarden #teachersofinstagram
-  Duration: 00:01:30.03, start: 0.000000, bitrate: 722 kb/s
-  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 664 kb/s, 25.07 fps, 25.07 tbr, 12537 tbn (default)
-      Metadata:
-        handler_name    : VideoHandler
-        vendor_id       : [0][0][0][0]
-        encoder         : VPC Coding
-  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 55 kb/s (default)
-      Metadata:
-        handler_name    : SoundHandler
-        vendor_id       : [0][0][0][0]
-Stream mapping:
-  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
-  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
-Press [q] to stop, [?] for help
-[libx264 @ 000001bb97111180] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
-[libx264 @ 000001bb97111180] profile High, level 4.0, 4:2:0, 8-bit
-[libx264 @ 000001bb97111180] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
-Output #0, mp4, to 'C:\Temp\yt-dlp\20241029080510mp4_reencoded.mp4':
-  Metadata:
-    major_brand     : isom
-    minor_version   : 512
-    compatible_brands: isomiso2mp41
-    title           : Video by chrisdier3
-    artist          : Chris Dier
-    date            : 20241028
-    synopsis        : In 1939, over 20k American fascists gathered in Madison Square Garden.
-                    :
-                    : #madisonsquaregarden #teachersofinstagram
-    comment         : https://www.instagram.com/reel/DBrKdtPxIhs
-    description     : In 1939, over 20k American fascists gathered in Madison Square Garden.
-                    :
-                    : #madisonsquaregarden #teachersofinstagram
-    encoder         : Lavf61.7.100
-  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 25.07 fps, 12537 tbn (default)
-      Metadata:
-        handler_name    : VideoHandler
-        vendor_id       : [0][0][0][0]
-        encoder         : Lavc61.19.100 libx264
-      Side data:
-        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
-  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
-      Metadata:
-        handler_name    : SoundHandler
-        vendor_id       : [0][0][0][0]
-        encoder         : Lavc61.19.100 aac
-[mp4 @ 000001bb970c84c0] Starting second pass: moving the moov atom to the beginning of the file
-[out#0/mp4 @ 000001bb970fd740] video:12391KiB audio:1401KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.546740%
-frame= 2256 fps=241 q=-1.0 Lsize=   13868KiB time=00:01:29.89 bitrate=1263.8kbits/s speed=9.61x
-[libx264 @ 000001bb97111180] frame I:11    Avg QP:13.49  size: 55496
-[libx264 @ 000001bb97111180] frame P:632   Avg QP:16.42  size: 12771
-[libx264 @ 000001bb97111180] frame B:1613  Avg QP:21.78  size:  2484
-[libx264 @ 000001bb97111180] consecutive B-frames:  2.3%  4.6%  7.4% 85.6%
-[libx264 @ 000001bb97111180] mb I  I16..4: 49.3% 43.9%  6.8%
-[libx264 @ 000001bb97111180] mb P  I16..4:  1.3%  4.1%  0.3%  P16..4: 13.4%  5.5%  2.7%  0.0%  0.0%    skip:72.6%
-[libx264 @ 000001bb97111180] mb B  I16..4:  0.2%  0.4%  0.0%  B16..8: 12.2%  1.1%  0.2%  direct: 0.3%  skip:85.6%  L0:47.7% L1:47.5% BI: 4.8%
-[libx264 @ 000001bb97111180] 8x8 transform intra:64.5% inter:84.4%
-[libx264 @ 000001bb97111180] coded y,uvDC,uvAC intra: 31.7% 0.3% 0.0% inter: 4.1% 0.1% 0.0%
-[libx264 @ 000001bb97111180] i16 v,h,dc,p: 63% 18%  4% 14%
-[libx264 @ 000001bb97111180] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 35% 15% 25%  3%  4%  5%  4%  5%  4%
-[libx264 @ 000001bb97111180] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 31% 20% 12%  5%  8%  8%  6%  6%  4%
-[libx264 @ 000001bb97111180] i8c dc,h,v,p: 97%  2%  0%  0%
-[libx264 @ 000001bb97111180] Weighted P-Frames: Y:6.6% UV:0.3%
-[libx264 @ 000001bb97111180] ref P L0: 54.3% 25.4% 13.9%  5.9%  0.6%
-[libx264 @ 000001bb97111180] ref B L0: 88.0%  9.3%  2.6%
-[libx264 @ 000001bb97111180] ref B L1: 96.5%  3.5%
-[libx264 @ 000001bb97111180] kb/s:1128.17
-[aac @ 000001bb978e8440] Qavg: 1086.641
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 129
-Microsecond : 795
-Nanosecond  : 100
-Minute      : 5
-Month       : 10
-Second      : 23
-Ticks       : 638657859231297951
-TimeOfDay   : 08:05:23.1297951
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:05:23 AM
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 634
-Microsecond : 638
-Nanosecond  : 800
-Minute      : 5
-Month       : 10
-Second      : 23
-Ticks       : 638657859236346388
-TimeOfDay   : 08:05:23.6346388
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:05:23 AM
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 638
-Microsecond : 501
-Nanosecond  : 500
-Minute      : 5
-Month       : 10
-Second      : 23
-Ticks       : 638657859236385015
-TimeOfDay   : 08:05:23.6385015
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:05:23 AM
-
-
-PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_videos.ps1  -url "https://youtu.be/2QmuhAvJuLE"
-Create new folder for yt-dlp
-
-    Directory: C:\Temp
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d----          10/29/2024  8:15 AM                yt-dlp
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 118
-Microsecond : 568
-Nanosecond  : 500
-Minute      : 15
-Month       : 10
-Second      : 52
-Ticks       : 638657865521185685
-TimeOfDay   : 08:15:52.1185685
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:15:52 AM
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 120
-Microsecond : 388
-Nanosecond  : 0
-Minute      : 15
-Month       : 10
-Second      : 52
-Ticks       : 638657865521203880
-TimeOfDay   : 08:15:52.1203880
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:15:52 AM
-
-[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241029081552.%(ext)s','https://youtu.be/2QmuhAvJuLE']
-[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
-[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
-[debug] yt-dlp version stable@2024.10.22 from yt-dlp/yt-dlp [67adeb7ba] (win_exe)
-[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
-[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
-[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.3, websockets-13.1
-[debug] Proxy map: {}
-[debug] Request Handlers: urllib, requests, websockets, curl_cffi
-[debug] Loaded 1839 extractors
-[youtube] Extracting URL: https://youtu.be/2QmuhAvJuLE
-[youtube] 2QmuhAvJuLE: Downloading webpage
-[youtube] 2QmuhAvJuLE: Downloading ios player API JSON
-WARNING: [youtube] Unable to download API page: HTTP Error 429: Too Many Requests (caused by <HTTPError 429: Too Many Requests>)
-[youtube] 2QmuhAvJuLE: Downloading mweb player API JSON
-WARNING: [youtube] Unable to download API page: HTTP Error 429: Too Many Requests (caused by <HTTPError 429: Too Many Requests>)
-WARNING: Only images are available for download. use --list-formats to see them
-[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
-[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
-[SponsorBlock] Fetching SponsorBlock segments
-[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/e428?service=YouTube&categories=%5B%22selfpromo%22%2C+%22sponsor%22%2C+%22poi_highlight%22%2C+%22chapter%22%2C+%22music_offtopic%22%2C+%22interaction%22%2C+%22intro%22%2C+%22outro%22%2C+%22preview%22%2C+%22filler%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
-[SponsorBlock] No matching segments were found in the SponsorBlock database
-ERROR: [youtube] 2QmuhAvJuLE: Requested format is not available. Use --list-formats for a list of available formats
-Traceback (most recent call last):
-  File "yt_dlp\YoutubeDL.py", line 1625, in wrapper
-  File "yt_dlp\YoutubeDL.py", line 1781, in __extract_info
-  File "yt_dlp\YoutubeDL.py", line 1840, in process_ie_result
-  File "yt_dlp\YoutubeDL.py", line 2976, in process_video_result
-yt_dlp.utils.ExtractorError: [youtube] 2QmuhAvJuLE: Requested format is not available. Use --list-formats for a list of available formats
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 197
-Microsecond : 950
-Nanosecond  : 800
-Minute      : 15
-Month       : 10
-Second      : 56
-Ticks       : 638657865561979508
-TimeOfDay   : 08:15:56.1979508
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:15:56 AM
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 200
-Microsecond : 285
-Nanosecond  : 200
-Minute      : 15
-Month       : 10
-Second      : 56
-Ticks       : 638657865562002852
-TimeOfDay   : 08:15:56.2002852
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:15:56 AM
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 201
-Microsecond : 768
-Nanosecond  : 500
-Minute      : 15
-Month       : 10
-Second      : 56
-Ticks       : 638657865562017685
-TimeOfDay   : 08:15:56.2017685
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:15:56 AM
-
-Failed to download video from https://youtu.be/2QmuhAvJuLE
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 204
-Microsecond : 652
-Nanosecond  : 0
-Minute      : 15
-Month       : 10
-Second      : 56
-Ticks       : 638657865562046520
-TimeOfDay   : 08:15:56.2046520
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:15:56 AM
-
-
-PS C:\Users\kushal\src\myhtml\fromnepal\public\notes>
-PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_videos.ps1  -url "https://youtu.be/2QmuhAvJuLE"
-Create new folder for yt-dlp
-
-    Directory: C:\Temp
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d----          10/29/2024  8:36 AM                yt-dlp
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 150
-Microsecond : 523
-Nanosecond  : 600
-Minute      : 36
-Month       : 10
-Second      : 21
-Ticks       : 638657877811505236
-TimeOfDay   : 08:36:21.1505236
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:36:21 AM
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 153
-Microsecond : 646
-Nanosecond  : 900
-Minute      : 36
-Month       : 10
-Second      : 21
-Ticks       : 638657877811536469
-TimeOfDay   : 08:36:21.1536469
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:36:21 AM
-
-[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241029083621.%(ext)s','https://youtu.be/2QmuhAvJuLE']
-[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
-[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
-[debug] yt-dlp version stable@2024.10.22 from yt-dlp/yt-dlp [67adeb7ba] (win_exe)
-[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
-[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
-[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.3, websockets-13.1
-[debug] Proxy map: {}
-[debug] Request Handlers: urllib, requests, websockets, curl_cffi
-[debug] Loaded 1839 extractors
-[youtube] Extracting URL: https://youtu.be/2QmuhAvJuLE
-[youtube] 2QmuhAvJuLE: Downloading webpage
-[youtube] 2QmuhAvJuLE: Downloading ios player API JSON
-WARNING: [youtube] Unable to download API page: HTTP Error 429: Too Many Requests (caused by <HTTPError 429: Too Many Requests>)
-[youtube] 2QmuhAvJuLE: Downloading mweb player API JSON
-WARNING: [youtube] Unable to download API page: HTTP Error 429: Too Many Requests (caused by <HTTPError 429: Too Many Requests>)
-WARNING: Only images are available for download. use --list-formats to see them
-[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
-[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
-[SponsorBlock] Fetching SponsorBlock segments
-[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/e428?service=YouTube&categories=%5B%22filler%22%2C+%22preview%22%2C+%22intro%22%2C+%22interaction%22%2C+%22chapter%22%2C+%22poi_highlight%22%2C+%22outro%22%2C+%22selfpromo%22%2C+%22music_offtopic%22%2C+%22sponsor%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
-[SponsorBlock] No matching segments were found in the SponsorBlock database
-ERROR: [youtube] 2QmuhAvJuLE: Requested format is not available. Use --list-formats for a list of available formats
-Traceback (most recent call last):
-  File "yt_dlp\YoutubeDL.py", line 1625, in wrapper
-  File "yt_dlp\YoutubeDL.py", line 1781, in __extract_info
-  File "yt_dlp\YoutubeDL.py", line 1840, in process_ie_result
-  File "yt_dlp\YoutubeDL.py", line 2976, in process_video_result
-yt_dlp.utils.ExtractorError: [youtube] 2QmuhAvJuLE: Requested format is not available. Use --list-formats for a list of available formats
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 548
-Microsecond : 618
-Nanosecond  : 900
-Minute      : 36
-Month       : 10
-Second      : 25
-Ticks       : 638657877855486189
-TimeOfDay   : 08:36:25.5486189
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:36:25 AM
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 552
-Microsecond : 157
-Nanosecond  : 300
-Minute      : 36
-Month       : 10
-Second      : 25
-Ticks       : 638657877855521573
-TimeOfDay   : 08:36:25.5521573
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:36:25 AM
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 554
-Microsecond : 71
-Nanosecond  : 100
-Minute      : 36
-Month       : 10
-Second      : 25
-Ticks       : 638657877855540711
-TimeOfDay   : 08:36:25.5540711
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:36:25 AM
-
-Failed to download video from https://youtu.be/2QmuhAvJuLE
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 8
-Kind        : Local
-Millisecond : 558
-Microsecond : 854
-Nanosecond  : 0
-Minute      : 36
-Month       : 10
-Second      : 25
-Ticks       : 638657877855588540
-TimeOfDay   : 08:36:25.5588540
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 8:36:25 AM
-
-
-PS C:\Users\kushal\src\myhtml\fromnepal\public\notes>
-PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_videos.ps1  -url "https://youtu.be/b0bI431YDqQ"
-Create new folder for yt-dlp
-
-    Directory: C:\Temp
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d----          10/29/2024  1:18 PM                yt-dlp
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 13
-Kind        : Local
-Millisecond : 915
-Microsecond : 667
-Nanosecond  : 900
-Minute      : 18
-Month       : 10
-Second      : 54
-Ticks       : 638658047349156679
-TimeOfDay   : 13:18:54.9156679
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 1:18:54 PM
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 13
-Kind        : Local
-Millisecond : 920
-Microsecond : 494
-Nanosecond  : 600
-Minute      : 18
-Month       : 10
-Second      : 54
-Ticks       : 638658047349204946
-TimeOfDay   : 13:18:54.9204946
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 1:18:54 PM
-
-[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241029131854.%(ext)s','https://youtu.be/b0bI431YDqQ']
-[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
-[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
-[debug] yt-dlp version stable@2024.10.22 from yt-dlp/yt-dlp [67adeb7ba] (win_exe)
-[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
-[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
-[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.3, websockets-13.1
-[debug] Proxy map: {}
-[debug] Request Handlers: urllib, requests, websockets, curl_cffi
-[debug] Loaded 1839 extractors
-[youtube] Extracting URL: https://youtu.be/b0bI431YDqQ
-[youtube] b0bI431YDqQ: Downloading webpage
-[youtube] b0bI431YDqQ: Downloading ios player API JSON
-WARNING: [youtube] Unable to download API page: HTTP Error 429: Too Many Requests (caused by <HTTPError 429: Too Many Requests>)
-[youtube] b0bI431YDqQ: Downloading mweb player API JSON
-WARNING: [youtube] Unable to download API page: HTTP Error 429: Too Many Requests (caused by <HTTPError 429: Too Many Requests>)
-WARNING: Only images are available for download. use --list-formats to see them
-[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec:vp9.2, channels, acodec, lang, proto
-[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec:vp9.2(10), channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
-[SponsorBlock] Fetching SponsorBlock segments
-[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/88dd?service=YouTube&categories=%5B%22filler%22%2C+%22poi_highlight%22%2C+%22sponsor%22%2C+%22music_offtopic%22%2C+%22outro%22%2C+%22preview%22%2C+%22selfpromo%22%2C+%22chapter%22%2C+%22intro%22%2C+%22interaction%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
-[SponsorBlock] No matching segments were found in the SponsorBlock database
-ERROR: [youtube] b0bI431YDqQ: Requested format is not available. Use --list-formats for a list of available formats
-Traceback (most recent call last):
-  File "yt_dlp\YoutubeDL.py", line 1625, in wrapper
-  File "yt_dlp\YoutubeDL.py", line 1781, in __extract_info
-  File "yt_dlp\YoutubeDL.py", line 1840, in process_ie_result
-  File "yt_dlp\YoutubeDL.py", line 2976, in process_video_result
-yt_dlp.utils.ExtractorError: [youtube] b0bI431YDqQ: Requested format is not available. Use --list-formats for a list of available formats
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 13
-Kind        : Local
-Millisecond : 903
-Microsecond : 612
-Nanosecond  : 100
-Minute      : 18
-Month       : 10
-Second      : 59
-Ticks       : 638658047399036121
-TimeOfDay   : 13:18:59.9036121
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 1:18:59 PM
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 13
-Kind        : Local
-Millisecond : 908
-Microsecond : 55
-Nanosecond  : 600
-Minute      : 18
-Month       : 10
-Second      : 59
-Ticks       : 638658047399080556
-TimeOfDay   : 13:18:59.9080556
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 1:18:59 PM
-
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 13
-Kind        : Local
-Millisecond : 913
-Microsecond : 107
-Nanosecond  : 900
-Minute      : 18
-Month       : 10
-Second      : 59
-Ticks       : 638658047399131079
-TimeOfDay   : 13:18:59.9131079
-Year        : 2024
-DateTime    : Tuesday, October 29, 2024 1:18:59 PM
-
-Failed to download video from https://youtu.be/b0bI431YDqQ
-
-DisplayHint : DateTime
-Date        : 10/29/2024 12:00:00 AM
-Day         : 29
-DayOfWeek   : Tuesday
-DayOfYear   : 303
-Hour        : 13
-Kind        : Local
-Millisecond : 919
-Microsecond : 259
-Nanosecond  : 500
-Minute      : 18
-Month       : 10
-Second      : 59
 Ticks       : 638658047399192595
 TimeOfDay   : 13:18:59.9192595
 Year        : 2024
@@ -8814,4 +7763,1084 @@ Wednesday, October 30, 2024 10:58:54 AM
 
 PS C:\Users\kushal\src\myhtml\fromnepal>
 PS C:\Users\kushal\src\myhtml\fromnepal>
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\RustroverProjects\helloworld\"; Get-Date; cargo clean; Get-Date; cargo build; Get-Date; cargo test --profile test --no-fail-fast; Get-Date;  git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master --verbose; date; git push origin master --verbose; date; cd "C:\Users\kushal\src\mydotnet\"; date; dotnet clean; date; dotnet build; date; dotnet test; date; cd "C:\Users\kushal\src\mydotnet\tests\"; date; dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura; reportgenerator -reports:coverage.cobertura.xml -targetdir:coverage-report; date; Move-Item -Path "C:\Users\kushal\src\mydotnet\tests\coverage-report\*" -Destination "C:\Users\kushal\src\mydotnet\docs" -Force; date; cd  "C:\Users\kushal\src\mydotnet\"; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master --verbose; date; git push origin master --verbose; date; cd "C:\Users\kushal\src\myhtml\matchthree\matchthree\"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master; date; git push origin master; date; cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
+
+Wednesday, October 30, 2024 3:28:05 PM
+     Removed 926 files, 454.1MiB total
+Wednesday, October 30, 2024 3:28:05 PM
+   Compiling windows_x86_64_msvc v0.52.6
+   Compiling proc-macro2 v1.0.89
+   Compiling unicode-ident v1.0.13
+   Compiling pin-project-lite v0.2.15
+   Compiling bytes v1.8.0
+   Compiling itoa v1.0.11
+   Compiling futures-core v0.3.31
+   Compiling autocfg v1.4.0
+   Compiling futures-sink v0.3.31
+   Compiling fnv v1.0.7
+   Compiling memchr v2.7.4
+   Compiling cfg-if v1.0.0
+   Compiling once_cell v1.20.2
+   Compiling futures-task v0.3.31
+   Compiling futures-io v0.3.31
+   Compiling equivalent v1.0.1
+   Compiling pin-utils v0.1.0
+   Compiling httparse v1.9.5
+   Compiling hashbrown v0.15.0
+   Compiling atomic-waker v1.1.2
+   Compiling windows_x86_64_msvc v0.48.5
+   Compiling native-tls v0.2.12
+   Compiling serde v1.0.213
+   Compiling tracing-core v0.1.32
+   Compiling tinyvec_macros v0.1.1
+   Compiling try-lock v0.2.5
+   Compiling futures-channel v0.3.31
+   Compiling tinyvec v1.8.0
+   Compiling percent-encoding v2.3.1
+   Compiling byteorder v1.5.0
+   Compiling want v0.3.1
+   Compiling smallvec v1.13.2
+   Compiling form_urlencoded v1.2.1
+   Compiling getrandom v0.2.15
+   Compiling unicode-bidi v0.3.17
+   Compiling slab v0.4.9
+   Compiling http v1.1.0
+   Compiling ryu v1.0.18
+   Compiling tower-service v0.3.3
+   Compiling tracing v0.1.40
+   Compiling indexmap v2.6.0
+   Compiling serde_json v1.0.132
+   Compiling rand_core v0.6.4
+   Compiling rustls-pki-types v1.10.0
+   Compiling windows-targets v0.52.6
+   Compiling windows-targets v0.48.5
+   Compiling windows-sys v0.52.0
+   Compiling windows-sys v0.59.0
+   Compiling windows-result v0.2.0
+   Compiling thiserror v1.0.65
+   Compiling futures-util v0.3.31
+   Compiling windows-sys v0.48.0
+   Compiling windows-strings v0.1.0
+   Compiling unicode-normalization v0.1.24
+   Compiling rustls-pemfile v2.2.0
+   Compiling quote v1.0.37
+   Compiling sync_wrapper v1.0.1
+   Compiling encoding_rs v0.8.35
+   Compiling base64 v0.22.1
+   Compiling windows-registry v0.2.0
+   Compiling ipnet v2.10.1
+   Compiling syn v2.0.85
+   Compiling http-body v1.0.1
+   Compiling log v0.4.22
+   Compiling mime v0.3.17
+   Compiling dotenv v0.15.0
+   Compiling idna v0.5.0
+   Compiling url v2.5.2
+   Compiling zerocopy-derive v0.7.35
+   Compiling serde_derive v1.0.213
+   Compiling thiserror-impl v1.0.65
+   Compiling mio v1.0.2
+   Compiling socket2 v0.5.7
+   Compiling home v0.5.9
+   Compiling etcetera v0.8.0
+   Compiling zerocopy v0.7.35
+   Compiling tokio v1.41.0
+   Compiling http-body-util v0.1.2
+   Compiling ppv-lite86 v0.2.20
+   Compiling schannel v0.1.26
+   Compiling rand_chacha v0.3.1
+   Compiling rand v0.8.5
+   Compiling serde_urlencoded v0.7.1
+   Compiling tokio-util v0.7.12
+   Compiling tokio-native-tls v0.3.1
+   Compiling h2 v0.4.6
+   Compiling hyper v1.5.0
+   Compiling hyper-util v0.1.9
+   Compiling hyper-tls v0.6.0
+   Compiling reqwest v0.12.8
+   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
+warning: struct `Graph` is never constructed
+ --> src\graph.rs:3:12
+  |
+3 | pub struct Graph {
+  |            ^^^^^
+  |
+  = note: `#[warn(dead_code)]` on by default
+
+warning: associated items `new`, `add_node`, `add_edge`, `bfs`, `dfs`, and `dfs_recursive` are never used
+  --> src\graph.rs:8:12
+   |
+7  | impl Graph {
+   | ---------- associated items in this implementation
+8  |     pub fn new() -> Self {
+   |            ^^^
+...
+14 |     pub fn add_node(&mut self, value: &str) {
+   |            ^^^^^^^^
+...
+18 |     pub fn add_edge(&mut self, from: &str, to: &str) {
+   |            ^^^^^^^^
+...
+24 |     pub fn bfs(&self, start: &str) -> Vec<String> {
+   |            ^^^
+...
+48 |     pub fn dfs(&self, start: &str) -> Vec<String> {
+   |            ^^^
+...
+55 |     fn dfs_recursive(&self, node: &str, visited: &mut HashMap<String, bool>, result: &mut Vec<String>) {
+   |        ^^^^^^^^^^^^^
+
+warning: `helloworld` (bin "helloworld") generated 2 warnings
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 18.08s
+Wednesday, October 30, 2024 3:28:24 PM
+   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.89s
+     Running unittests src/main.rs (target\debug\deps\helloworld-358f72777eb128ff.exe)
+
+running 24 tests
+test greatest_common_divisor::tests::test_both_are_zero ... ok
+test graph::tests::test_bfs ... ok
+test graph::tests::test_dfs ... ok
+test greatest_common_divisor::tests::test_large_composite_numbers ... ok
+test greatest_common_divisor::tests::test_large_numbers ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance ... ok
+test greatest_common_divisor::tests::test_gcd ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance_multiple ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance_single ... ok
+test greatest_common_divisor::tests::test_large_prime_numbers ... ok
+test greatest_common_divisor::tests::test_mixed_numbers ... ok
+test greatest_common_divisor::tests::test_one_is_one ... ok
+test greatest_common_divisor::tests::test_prime_numbers ... ok
+test greatest_common_divisor::tests::test_zero_input ... ok
+test greatest_common_divisor::tests::test_zero_input_3 ... ok
+test my_math::tests::test_add ... ok
+test greatest_common_divisor::tests::test_one_is_zero ... ok
+test my_data_types::tests::test_not_a_number ... ok
+test my_math::tests::test_add_multiply_ambiguous ... ok
+test my_math::tests::test_add_zero ... ok
+test my_math::tests::test_multiply ... ok
+test my_math::tests::test_multiply_zero ... ok
+test shadowing::tests::test_shadow ... ok
+test shadowing::tests::test_shadow_string_length ... ok
+
+test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+Wednesday, October 30, 2024 3:28:25 PM
+Wednesday, October 30, 2024 3:28:25 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Wednesday, October 30, 2024 3:28:25 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Wednesday, October 30, 2024 3:28:25 PM
+From github.com:kusl/hellorust20240711
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Already up to date.
+Wednesday, October 30, 2024 3:28:25 PM
+Pushing to github.com:kusl/hellorust20240711.git
+To github.com:kusl/hellorust20240711.git
+ = [up to date]      master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Everything up-to-date
+Wednesday, October 30, 2024 3:28:26 PM
+Wednesday, October 30, 2024 3:28:26 PM
+Build started 10/30/2024 3:28:26 PM.
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" on node 1 (Clean target(s)).
+     1>ValidateSolutionConfiguration:
+         Building solution configuration "Debug|Any CPU".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj" (2) on node 1 (Clean target(s)).
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\TraceReloggerLib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Dia2Lib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\KernelTraceControl.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\KernelTraceControl.Win61.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\msdia140.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\amd64\KernelTraceControl.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\amd64\msdia140.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\arm64\KernelTraceControl.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\arm64\msdia140.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.exe".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.deps.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.runtimeconfig.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\BenchmarkDotNet.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\BenchmarkDotNet.Annotations.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\CommandLine.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Gee.External.Capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Iced.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.NETCore.Client.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.Runtime.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.FastSerialization.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.Tracing.TraceEvent.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\MoreLinq.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Perfolizer.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\System.CodeDom.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\System.Management.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-arm\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-arm64\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-x64\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-x86\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\osx-arm64\native\libcapstone.dylib".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\osx-x64\native\libcapstone.dylib".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-arm64\native\capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-x64\native\capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-x86\native\capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.0\System.Management.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\helloben.03AB233B.Up2Date".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\refint\hellobenchamarks.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.genruntimeconfig.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\ref\hellobenchamarks.dll".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (3) on node 2 (Clean target(s)).
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.deps.json".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (4) on node 3 (Clean target(s)).
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.exe".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.deps.json".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.pdb".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.runtimeconfig.json".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.csproj.AssemblyReference.cache".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.GeneratedMSBuildEditorConfig.editorconfig".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.pdb".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.AssemblyInfoInputs.cache".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.AssemblyInfo.cs".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.sourcelink.json".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\refint\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.pdb".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\MoreLinq.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\ref\hellolib.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.csproj.Up2Date".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\refint\hello.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.genruntimeconfig.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\ref\hello.dll".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (5) on node 4 (Clean target(s)).
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\.msCoverageSourceRootsMapping_tests".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\CoverletSourceRootsMapping_tests".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\testhost.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\testhost.exe".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.visualstudio.testadapter.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.utility.netcoreapp10.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\authorizations.csv".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.deps.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.runtimeconfig.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Castle.Core.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\FluentAssertions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CoreUtilities.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.PlatformAbstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CommunicationUtilities.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CrossPlatEngine.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.Utilities.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.Common.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\MoreLinq.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Newtonsoft.Json.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\NSubstitute.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\System.Diagnostics.EventLog.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.assert.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.core.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.execution.dotnet.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.csproj.Up2Date".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\refint\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.genruntimeconfig.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\ref\tests.dll".
+     3>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
+     2>Done Building Project "C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj" (Clean target(s)).
+     4>Done Building Project "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (Clean target(s)).
+     5>Done Building Project "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (Clean target(s)).
+     1>Done Building Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (Clean target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.70
+Wednesday, October 30, 2024 3:28:27 PM
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
+  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.dll
+  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.67
+
+Workload updates are available. Run `dotnet workload list` for more information.
+Wednesday, October 30, 2024 3:28:30 PM
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
+Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:   318, Skipped:     0, Total:   318, Duration: 5 s - tests.dll (net8.0)
+
+Workload updates are available. Run `dotnet workload list` for more information.
+Wednesday, October 30, 2024 3:28:37 PM
+Wednesday, October 30, 2024 3:28:37 PM
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
+  [coverlet] _mapping file name: 'CoverletSourceRootsMapping_tests'
+Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:   318, Skipped:     0, Total:   318, Duration: 4 s - tests.dll (net8.0)
+  [coverlet]
+  Calculating coverage result...
+   Generating report 'C:\Users\kushal\src\mydotnet\tests\coverage.cobertura.xml'
+
++----------+------+--------+--------+
+| Module   | Line | Branch | Method |
++----------+------+--------+--------+
+| hellolib | 100% | 99.61% | 100%   |
++----------+------+--------+--------+
+
++---------+------+--------+--------+
+|         | Line | Branch | Method |
++---------+------+--------+--------+
+| Total   | 100% | 99.61% | 100%   |
++---------+------+--------+--------+
+| Average | 100% | 99.61% | 100%   |
++---------+------+--------+--------+
+
+
+Workload updates are available. Run `dotnet workload list` for more information.
+2024-10-30T15:28:44: Arguments
+2024-10-30T15:28:44:  -reports:coverage.cobertura.xml
+2024-10-30T15:28:44:  -targetdir:coverage-report
+2024-10-30T15:28:44: Writing report file 'coverage-report\index.html'
+2024-10-30T15:28:44: Report generation took 0.1 seconds
+Wednesday, October 30, 2024 3:28:44 PM
+Wednesday, October 30, 2024 3:28:44 PM
+warning: in the working copy of 'docs/icon_cube.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_fork.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_sponsor.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir_active.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_wrench.svg', LF will be replaced by CRLF the next time Git touches it
+Wednesday, October 30, 2024 3:28:44 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/hellolib_BubbleSort.html
+        modified:   docs/hellolib_CurrentWeather.html
+        modified:   docs/hellolib_DesignDynamicArray.html
+        modified:   docs/hellolib_Entity.html
+        modified:   docs/hellolib_FindClosestNumberToZero.html
+        modified:   docs/hellolib_Graph.html
+        modified:   docs/hellolib_ListNode.html
+        modified:   docs/hellolib_MergeSort.html
+        modified:   docs/hellolib_MergeSortedArray.html
+        modified:   docs/hellolib_MergeStringsAlternately.html
+        modified:   docs/hellolib_MinimumCoin.html
+        modified:   docs/hellolib_MyCleaner.html
+        modified:   docs/hellolib_MySearch.html
+        modified:   docs/hellolib_PascalTriangle.html
+        modified:   docs/hellolib_PasswordSettings.html
+        modified:   docs/hellolib_Person.html
+        modified:   docs/hellolib_PersonFactory.html
+        modified:   docs/hellolib_Revocation.html
+        modified:   docs/hellolib_RomanToInteger.html
+        modified:   docs/hellolib_SinglyLinkedList.html
+        modified:   docs/hellolib_SinglyLinkedListAddTwoNumbers.html
+        modified:   docs/hellolib_SinglyLinkedListNode.html
+        modified:   docs/hellolib_TwoSum.html
+        modified:   docs/hellolib_Weather.html
+        modified:   docs/hellolib_WeatherFetchException.html
+        modified:   docs/index.htm
+        modified:   docs/index.html
+        modified:   tests/coverage.cobertura.xml
+
+Wednesday, October 30, 2024 3:28:44 PM
+[master ff272c6] build application
+ 28 files changed, 30 insertions(+), 30 deletions(-)
+Wednesday, October 30, 2024 3:28:45 PM
+From github.com:patstha/mydotnet
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Current branch master is up to date.
+Wednesday, October 30, 2024 3:28:45 PM
+Pushing to github.com:patstha/mydotnet.git
+Enumerating objects: 61, done.
+Counting objects: 100% (61/61), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (31/31), done.
+Writing objects: 100% (31/31), 2.55 KiB | 2.55 MiB/s, done.
+Total 31 (delta 30), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (30/30), completed with 30 local objects.
+To github.com:patstha/mydotnet.git
+   c4119c7..ff272c6  master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Wednesday, October 30, 2024 3:28:46 PM
+Wednesday, October 30, 2024 3:28:46 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+Done in 0.96s.
+Wednesday, October 30, 2024 3:28:48 PM
+yarn run v1.22.21
+$ tsc && vite build
+src/main.ts:252:24 - error TS7006: Parameter 'dt' implicitly has an 'any' type.
+
+252     function updateFps(dt) {
+                           ~~
+
+src/main.ts:268:29 - error TS7006: Parameter 'text' implicitly has an 'any' type.
+
+268     function drawCenterText(text, x, y, width) {
+                                ~~~~
+
+src/main.ts:268:35 - error TS7006: Parameter 'x' implicitly has an 'any' type.
+
+268     function drawCenterText(text, x, y, width) {
+                                      ~
+
+src/main.ts:268:38 - error TS7006: Parameter 'y' implicitly has an 'any' type.
+
+268     function drawCenterText(text, x, y, width) {
+                                         ~
+
+src/main.ts:268:41 - error TS7006: Parameter 'width' implicitly has an 'any' type.
+
+268     function drawCenterText(text, x, y, width) {
+                                            ~~~~~
+
+src/main.ts:269:23 - error TS18047: 'context' is possibly 'null'.
+
+269         let textdim = context.measureText(text);
+                          ~~~~~~~
+
+src/main.ts:270:9 - error TS18047: 'context' is possibly 'null'.
+
+270         context.fillText(text, x + (width-textdim.width)/2, y);
+            ~~~~~~~
+
+src/main.ts:279:9 - error TS18047: 'context' is possibly 'null'.
+
+279         context.fillStyle = "#000000";
+            ~~~~~~~
+
+src/main.ts:280:9 - error TS18047: 'context' is possibly 'null'.
+
+280         context.font = "24px Verdana";
+            ~~~~~~~
+
+src/main.ts:290:9 - error TS18047: 'context' is possibly 'null'.
+
+290         context.fillStyle = "#000000";
+            ~~~~~~~
+
+src/main.ts:291:9 - error TS18047: 'context' is possibly 'null'.
+
+291         context.fillRect(level.x - 4, level.y - 4, levelwidth + 8, levelheight + 8);
+            ~~~~~~~
+
+src/main.ts:306:13 - error TS18047: 'context' is possibly 'null'.
+
+306             context.fillStyle = "rgba(0, 0, 0, 0.8)";
+                ~~~~~~~
+
+src/main.ts:307:13 - error TS18047: 'context' is possibly 'null'.
+
+307             context.fillRect(level.x, level.y, levelwidth, levelheight);
+                ~~~~~~~
+
+src/main.ts:309:13 - error TS18047: 'context' is possibly 'null'.
+
+309             context.fillStyle = "#ffffff";
+                ~~~~~~~
+
+src/main.ts:310:13 - error TS18047: 'context' is possibly 'null'.
+
+310             context.font = "24px Verdana";
+                ~~~~~~~
+
+src/main.ts:318:9 - error TS18047: 'context' is possibly 'null'.
+
+318         context.fillStyle = "#d0d0d0";
+            ~~~~~~~
+
+src/main.ts:319:9 - error TS18047: 'context' is possibly 'null'.
+
+319         context.fillRect(0, 0, canvas.width, canvas.height);
+            ~~~~~~~
+
+src/main.ts:320:9 - error TS18047: 'context' is possibly 'null'.
+
+320         context.fillStyle = "#e8eaec";
+            ~~~~~~~
+
+src/main.ts:321:9 - error TS18047: 'context' is possibly 'null'.
+
+321         context.fillRect(1, 1, canvas.width-2, canvas.height-2);
+            ~~~~~~~
+
+src/main.ts:324:9 - error TS18047: 'context' is possibly 'null'.
+
+324         context.fillStyle = "#303030";
+            ~~~~~~~
+
+src/main.ts:325:9 - error TS18047: 'context' is possibly 'null'.
+
+325         context.fillRect(0, 0, canvas.width, 65);
+            ~~~~~~~
+
+src/main.ts:328:9 - error TS18047: 'context' is possibly 'null'.
+
+328         context.fillStyle = "#ffffff";
+            ~~~~~~~
+
+src/main.ts:329:9 - error TS18047: 'context' is possibly 'null'.
+
+329         context.font = "24px Verdana";
+            ~~~~~~~
+
+src/main.ts:330:9 - error TS18047: 'context' is possibly 'null'.
+
+330         context.fillText("Match3 Example - Rembound.com", 10, 30);
+            ~~~~~~~
+
+src/main.ts:333:9 - error TS18047: 'context' is possibly 'null'.
+
+333         context.fillStyle = "#ffffff";
+            ~~~~~~~
+
+src/main.ts:334:9 - error TS18047: 'context' is possibly 'null'.
+
+334         context.font = "12px Verdana";
+            ~~~~~~~
+
+src/main.ts:335:9 - error TS18047: 'context' is possibly 'null'.
+
+335         context.fillText("Fps: " + fps, 13, 50);
+            ~~~~~~~
+
+src/main.ts:342:13 - error TS18047: 'context' is possibly 'null'.
+
+342             context.fillStyle = "#000000";
+                ~~~~~~~
+
+src/main.ts:343:13 - error TS18047: 'context' is possibly 'null'.
+
+343             context.fillRect(buttons[i].x, buttons[i].y, buttons[i].width, buttons[i].height);
+                ~~~~~~~
+
+src/main.ts:346:13 - error TS18047: 'context' is possibly 'null'.
+
+346             context.fillStyle = "#ffffff";
+                ~~~~~~~
+
+src/main.ts:347:13 - error TS18047: 'context' is possibly 'null'.
+
+347             context.font = "18px Verdana";
+                ~~~~~~~
+
+src/main.ts:348:27 - error TS18047: 'context' is possibly 'null'.
+
+348             let textdim = context.measureText(buttons[i].text);
+                              ~~~~~~~
+
+src/main.ts:349:13 - error TS18047: 'context' is possibly 'null'.
+
+349             context.fillText(buttons[i].text, buttons[i].x + (buttons[i].width-textdim.width)/2, buttons[i].y+30);
+                ~~~~~~~
+
+src/main.ts:416:32 - error TS7006: Parameter 'column' implicitly has an 'any' type.
+
+416     function getTileCoordinate(column, row, columnoffset, rowoffset) {
+                                   ~~~~~~
+
+src/main.ts:416:40 - error TS7006: Parameter 'row' implicitly has an 'any' type.
+
+416     function getTileCoordinate(column, row, columnoffset, rowoffset) {
+                                           ~~~
+
+src/main.ts:416:45 - error TS7006: Parameter 'columnoffset' implicitly has an 'any' type.
+
+416     function getTileCoordinate(column, row, columnoffset, rowoffset) {
+                                                ~~~~~~~~~~~~
+
+src/main.ts:416:59 - error TS7006: Parameter 'rowoffset' implicitly has an 'any' type.
+
+416     function getTileCoordinate(column, row, columnoffset, rowoffset) {
+                                                              ~~~~~~~~~
+
+src/main.ts:423:23 - error TS7006: Parameter 'x' implicitly has an 'any' type.
+
+423     function drawTile(x, y, r, g, b) {
+                          ~
+
+src/main.ts:423:26 - error TS7006: Parameter 'y' implicitly has an 'any' type.
+
+423     function drawTile(x, y, r, g, b) {
+                             ~
+
+src/main.ts:423:29 - error TS7006: Parameter 'r' implicitly has an 'any' type.
+
+423     function drawTile(x, y, r, g, b) {
+                                ~
+
+src/main.ts:423:32 - error TS7006: Parameter 'g' implicitly has an 'any' type.
+
+423     function drawTile(x, y, r, g, b) {
+                                   ~
+
+src/main.ts:423:35 - error TS7006: Parameter 'b' implicitly has an 'any' type.
+
+423     function drawTile(x, y, r, g, b) {
+                                      ~
+
+src/main.ts:424:9 - error TS18047: 'context' is possibly 'null'.
+
+424         context.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
+            ~~~~~~~
+
+src/main.ts:425:9 - error TS18047: 'context' is possibly 'null'.
+
+425         context.fillRect(x + 2, y + 2, level.tileWidth - 4, level.tileHeight - 4);
+            ~~~~~~~
+
+src/main.ts:436:17 - error TS18047: 'context' is possibly 'null'.
+
+436                 context.fillStyle = "#00ff00";
+                    ~~~~~~~
+
+src/main.ts:437:17 - error TS18047: 'context' is possibly 'null'.
+
+437                 context.fillRect(coord.tilex + level.tileWidth/2, coord.tiley + level.tileHeight/2 - 4, (clusters[i].length - 1) * level.tileWidth, 8);
+                    ~~~~~~~
+
+src/main.ts:440:17 - error TS18047: 'context' is possibly 'null'.
+
+440                 context.fillStyle = "#0000ff";
+                    ~~~~~~~
+
+src/main.ts:441:17 - error TS18047: 'context' is possibly 'null'.
+
+441                 context.fillRect(coord.tilex + level.tileWidth/2 - 4, coord.tiley + level.tileHeight/2, 8, (clusters[i].length - 1) * level.tileHeight);
+                    ~~~~~~~
+
+src/main.ts:454:13 - error TS18047: 'context' is possibly 'null'.
+
+454             context.strokeStyle = "#ff0000";
+                ~~~~~~~
+
+src/main.ts:455:13 - error TS18047: 'context' is possibly 'null'.
+
+455             context.beginPath();
+                ~~~~~~~
+
+src/main.ts:456:13 - error TS18047: 'context' is possibly 'null'.
+
+456             context.moveTo(coord1.tilex + level.tileWidth/2, coord1.tiley + level.tileHeight/2);
+                ~~~~~~~
+
+src/main.ts:457:13 - error TS18047: 'context' is possibly 'null'.
+
+457             context.lineTo(coord2.tilex + level.tileWidth/2, coord2.tiley + level.tileHeight/2);
+                ~~~~~~~
+
+src/main.ts:458:13 - error TS18047: 'context' is possibly 'null'.
+
+458             context.stroke();
+                ~~~~~~~
+
+src/main.ts:650:27 - error TS7006: Parameter 'func' implicitly has an 'any' type.
+
+650     function loopClusters(func) {
+                              ~~~~
+
+src/main.ts:671:31 - error TS6133: 'index' is declared but its value is never read.
+
+671         loopClusters(function(index, column, row, cluster) {
+                                  ~~~~~
+
+src/main.ts:671:31 - error TS7006: Parameter 'index' implicitly has an 'any' type.
+
+671         loopClusters(function(index, column, row, cluster) {
+                                  ~~~~~
+
+src/main.ts:671:38 - error TS7006: Parameter 'column' implicitly has an 'any' type.
+
+671         loopClusters(function(index, column, row, cluster) {
+                                         ~~~~~~
+
+src/main.ts:671:46 - error TS7006: Parameter 'row' implicitly has an 'any' type.
+
+671         loopClusters(function(index, column, row, cluster) {
+                                                 ~~~
+
+src/main.ts:671:51 - error TS7006: Parameter 'cluster' implicitly has an 'any' type.
+
+671         loopClusters(function(index, column, row, cluster) {
+                                                      ~~~~~~~
+
+src/main.ts:718:27 - error TS7006: Parameter 'pos' implicitly has an 'any' type.
+
+718     function getMouseTile(pos) {
+                              ~~~
+
+src/main.ts:742:22 - error TS7006: Parameter 'x1' implicitly has an 'any' type.
+
+742     function canSwap(x1, y1, x2, y2) {
+                         ~~
+
+src/main.ts:742:26 - error TS7006: Parameter 'y1' implicitly has an 'any' type.
+
+742     function canSwap(x1, y1, x2, y2) {
+                             ~~
+
+src/main.ts:742:30 - error TS7006: Parameter 'x2' implicitly has an 'any' type.
+
+742     function canSwap(x1, y1, x2, y2) {
+                                 ~~
+
+src/main.ts:742:34 - error TS7006: Parameter 'y2' implicitly has an 'any' type.
+
+742     function canSwap(x1, y1, x2, y2) {
+                                     ~~
+
+src/main.ts:753:19 - error TS7006: Parameter 'x1' implicitly has an 'any' type.
+
+753     function swap(x1, y1, x2, y2) {
+                      ~~
+
+src/main.ts:753:23 - error TS7006: Parameter 'y1' implicitly has an 'any' type.
+
+753     function swap(x1, y1, x2, y2) {
+                          ~~
+
+src/main.ts:753:27 - error TS7006: Parameter 'x2' implicitly has an 'any' type.
+
+753     function swap(x1, y1, x2, y2) {
+                              ~~
+
+src/main.ts:753:31 - error TS7006: Parameter 'y2' implicitly has an 'any' type.
+
+753     function swap(x1, y1, x2, y2) {
+                                  ~~
+
+src/main.ts:760:24 - error TS7006: Parameter 'c1' implicitly has an 'any' type.
+
+760     function mouseSwap(c1, r1, c2, r2) {
+                           ~~
+
+src/main.ts:760:28 - error TS7006: Parameter 'r1' implicitly has an 'any' type.
+
+760     function mouseSwap(c1, r1, c2, r2) {
+                               ~~
+
+src/main.ts:760:32 - error TS7006: Parameter 'c2' implicitly has an 'any' type.
+
+760     function mouseSwap(c1, r1, c2, r2) {
+                                   ~~
+
+src/main.ts:760:36 - error TS7006: Parameter 'r2' implicitly has an 'any' type.
+
+760     function mouseSwap(c1, r1, c2, r2) {
+                                       ~~
+
+
+Found 72 errors in the same file, starting at: src/main.ts:252
+
+error Command failed with exit code 2.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+Wednesday, October 30, 2024 3:28:48 PM
+Wednesday, October 30, 2024 3:28:48 PM
+On branch master
+Your branch is ahead of 'origin/master' by 10 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+Wednesday, October 30, 2024 3:28:48 PM
+On branch master
+Your branch is ahead of 'origin/master' by 10 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+Wednesday, October 30, 2024 3:28:48 PM
+From github.com:matchthree/matchthree.github.io
+ * branch            master     -> FETCH_HEAD
+Current branch master is up to date.
+Wednesday, October 30, 2024 3:28:49 PM
+Enumerating objects: 50, done.
+Counting objects: 100% (50/50), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (44/44), done.
+Writing objects: 100% (45/45), 16.93 KiB | 1020.00 KiB/s, done.
+Total 45 (delta 31), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (31/31), completed with 2 local objects.
+To github.com:matchthree/matchthree.github.io.git
+   2896864..934a48d  master -> master
+Wednesday, October 30, 2024 3:28:50 PM
+Wednesday, October 30, 2024 3:28:50 PM
+Wednesday, October 30, 2024 3:28:50 PM
+[main f10af592] add all files
+ 1 file changed, 403 insertions(+)
+ create mode 100644 src/recruiting/sweg.md
+Wednesday, October 30, 2024 3:28:50 PM
+Wednesday, October 30, 2024 3:28:50 PM
+Wednesday, October 30, 2024 3:28:53 PM
+Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
+Wednesday, October 30, 2024 3:28:53 PM
+Wednesday, October 30, 2024 3:28:53 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.09s.
+Wednesday, October 30, 2024 3:28:53 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 2.74s
+Done in 5.00s.
+Wednesday, October 30, 2024 3:28:58 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/A3B318B569046159E1DD6616D2E646D9434350E6.asc', LF will be replaced by CRLF the next time Git touches it
+Wednesday, October 30, 2024 3:29:13 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/notes/earth.jpeg
+        modified:   docs/powershell.txt
+        modified:   public/notes/earth.jpeg
+        modified:   public/powershell.txt
+
+Wednesday, October 30, 2024 3:29:13 PM
+[main 8e0721dd] build application
+ 4 files changed, 5762 insertions(+), 5716 deletions(-)
+Wednesday, October 30, 2024 3:29:13 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch              main       -> FETCH_HEAD
+Current branch main is up to date.
+Wednesday, October 30, 2024 3:29:14 PM
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 16.10 MiB | 9.83 MiB/s, done.
+Total 7 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   29335c4d..8e0721dd  main -> main
+Wednesday, October 30, 2024 3:29:19 PM
+
 PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\RustroverProjects\helloworld\"; Get-Date; cargo clean; Get-Date; cargo build; Get-Date; cargo test --profile test --no-fail-fast; Get-Date;  git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master --verbose; date; git push origin master --verbose; date; cd "C:\Users\kushal\src\mydotnet\"; date; dotnet clean; date; dotnet build; date; dotnet test; date; cd "C:\Users\kushal\src\mydotnet\tests\"; date; dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura; reportgenerator -reports:coverage.cobertura.xml -targetdir:coverage-report; date; Move-Item -Path "C:\Users\kushal\src\mydotnet\tests\coverage-report\*" -Destination "C:\Users\kushal\src\mydotnet\docs" -Force; date; cd  "C:\Users\kushal\src\mydotnet\"; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master --verbose; date; git push origin master --verbose; date; cd "C:\Users\kushal\src\myhtml\matchthree\matchthree\"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master; date; git push origin master; date; cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
