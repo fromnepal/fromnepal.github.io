@@ -1,1007 +1,3 @@
-   Compiling reqwest v0.12.8
-   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
-warning: struct `Graph` is never constructed
- --> src\graph.rs:3:12
-  |
-3 | pub struct Graph {
-  |            ^^^^^
-  |
-  = note: `#[warn(dead_code)]` on by default
-
-warning: associated items `new`, `add_node`, `add_edge`, `bfs`, `dfs`, and `dfs_recursive` are never used
-  --> src\graph.rs:8:12
-   |
-7  | impl Graph {
-   | ---------- associated items in this implementation
-8  |     pub fn new() -> Self {
-   |            ^^^
-...
-14 |     pub fn add_node(&mut self, value: &str) {
-   |            ^^^^^^^^
-...
-18 |     pub fn add_edge(&mut self, from: &str, to: &str) {
-   |            ^^^^^^^^
-...
-24 |     pub fn bfs(&self, start: &str) -> Vec<String> {
-   |            ^^^
-...
-48 |     pub fn dfs(&self, start: &str) -> Vec<String> {
-   |            ^^^
-...
-55 |     fn dfs_recursive(&self, node: &str, visited: &mut HashMap<String, bool>, result: &mut Vec<String>) {
-   |        ^^^^^^^^^^^^^
-
-warning: `helloworld` (bin "helloworld") generated 2 warnings
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 12.58s
-Monday, October 28, 2024 8:39:05 PM
-   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
-    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.73s
-     Running unittests src/main.rs (target\debug\deps\helloworld-358f72777eb128ff.exe)
-
-running 24 tests
-test graph::tests::test_bfs ... ok
-test graph::tests::test_dfs ... ok
-test greatest_common_divisor::tests::test_large_composite_numbers ... ok
-test greatest_common_divisor::tests::test_gcd ... ok
-test greatest_common_divisor::tests::test_mixed_numbers ... ok
-test greatest_common_divisor::tests::test_large_numbers ... ok
-test greatest_common_divisor::tests::test_zero_input_3 ... ok
-test greatest_common_divisor::tests::test_large_numbers_performance_single ... ok
-test greatest_common_divisor::tests::test_large_prime_numbers ... ok
-test greatest_common_divisor::tests::test_large_numbers_performance_multiple ... ok
-test greatest_common_divisor::tests::test_both_are_zero ... ok
-test greatest_common_divisor::tests::test_one_is_one ... ok
-test greatest_common_divisor::tests::test_prime_numbers ... ok
-test greatest_common_divisor::tests::test_large_numbers_performance ... ok
-test greatest_common_divisor::tests::test_one_is_zero ... ok
-test greatest_common_divisor::tests::test_zero_input ... ok
-test my_data_types::tests::test_not_a_number ... ok
-test my_math::tests::test_add ... ok
-test my_math::tests::test_add_multiply_ambiguous ... ok
-test my_math::tests::test_add_zero ... ok
-test my_math::tests::test_multiply ... ok
-test my_math::tests::test_multiply_zero ... ok
-test shadowing::tests::test_shadow ... ok
-test shadowing::tests::test_shadow_string_length ... ok
-
-test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
-Monday, October 28, 2024 8:39:06 PM
-Monday, October 28, 2024 8:39:06 PM
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-Monday, October 28, 2024 8:39:06 PM
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-Monday, October 28, 2024 8:39:06 PM
-From github.com:kusl/hellorust20240711
- * branch            master     -> FETCH_HEAD
- = [up to date]      master     -> origin/master
-Already up to date.
-Monday, October 28, 2024 8:39:07 PM
-Pushing to github.com:kusl/hellorust20240711.git
-To github.com:kusl/hellorust20240711.git
- = [up to date]      master -> master
-updating local tracking ref 'refs/remotes/origin/master'
-Everything up-to-date
-Monday, October 28, 2024 8:39:07 PM
-Monday, October 28, 2024 8:39:07 PM
-Build started 10/28/2024 8:39:08 PM.
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" on node 1 (Clean target(s)).
-     1>ValidateSolutionConfiguration:
-         Building solution configuration "Debug|Any CPU".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (2) on node 3 (Clean target(s)).
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.deps.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.csproj.AssemblyReference.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.GeneratedMSBuildEditorConfig.editorconfig".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (3) on node 4 (Clean target(s)).
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\.msCoverageSourceRootsMapping_tests".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\CoverletSourceRootsMapping_tests".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.AssemblyInfoInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.AssemblyInfo.cs".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\testhost.dll".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.csproj.CoreCompileInputs.cache".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\testhost.exe".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.sourcelink.json".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.visualstudio.testadapter.dll".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\refint\hellolib.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.utility.netcoreapp10.dll".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.pdb".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\authorizations.csv".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\ref\hellolib.dll".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (4) on node 2 (Clean target(s)).
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.exe".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.deps.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.runtimeconfig.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.deps.json".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.pdb".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.runtimeconfig.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.pdb".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Castle.Core.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\FluentAssertions.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\MoreLinq.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hellolib.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hellolib.pdb".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.csproj.AssemblyReference.cache".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.GeneratedMSBuildEditorConfig.editorconfig".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CoreUtilities.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.AssemblyInfoInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.AssemblyInfo.cs".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.PlatformAbstractions.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.csproj.CoreCompileInputs.cache".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.sourcelink.json".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CommunicationUtilities.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.csproj.Up2Date".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CrossPlatEngine.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.Utilities.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\refint\hello.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.genruntimeconfig.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\ref\hello.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.Common.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\MoreLinq.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Newtonsoft.Json.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\NSubstitute.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\System.Diagnostics.EventLog.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.abstractions.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.assert.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.core.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.execution.dotnet.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-     2>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\hellolib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\hellolib.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.csproj.AssemblyReference.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.GeneratedMSBuildEditorConfig.editorconfig".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.AssemblyInfoInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.AssemblyInfo.cs".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.csproj.CoreCompileInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.sourcelink.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.csproj.Up2Date".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\refint\tests.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.genruntimeconfig.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\ref\tests.dll".
-     4>Done Building Project "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (Clean target(s)).
-     3>Done Building Project "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (Clean target(s)).
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj" (5) on node 1 (Clean target(s)).
-     5>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\TraceReloggerLib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Dia2Lib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\KernelTraceControl.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\KernelTraceControl.Win61.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\msdia140.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\amd64\KernelTraceControl.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\amd64\msdia140.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\arm64\KernelTraceControl.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\arm64\msdia140.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.exe".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.deps.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.runtimeconfig.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\BenchmarkDotNet.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\BenchmarkDotNet.Annotations.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\CommandLine.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Gee.External.Capstone.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Iced.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.NETCore.Client.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.Runtime.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.FastSerialization.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.Tracing.TraceEvent.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\MoreLinq.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Perfolizer.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\System.CodeDom.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\System.Management.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-arm\native\libcapstone.so".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-arm64\native\libcapstone.so".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-x64\native\libcapstone.so".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-x86\native\libcapstone.so".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\osx-arm64\native\libcapstone.dylib".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\osx-x64\native\libcapstone.dylib".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-arm64\native\capstone.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-x64\native\capstone.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-x86\native\capstone.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.0\System.Management.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellolib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellolib.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.csproj.AssemblyReference.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.GeneratedMSBuildEditorConfig.editorconfig".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.AssemblyInfoInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.AssemblyInfo.cs".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.csproj.CoreCompileInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.sourcelink.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\helloben.03AB233B.Up2Date".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\refint\hellobenchamarks.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.genruntimeconfig.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\ref\hellobenchamarks.dll".
-     5>Done Building Project "C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj" (Clean target(s)).
-     1>Done Building Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (Clean target(s)).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:00.44
-Monday, October 28, 2024 8:39:08 PM
-  Determining projects to restore...
-  All projects are up-to-date for restore.
-  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
-  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.dll
-  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
-  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.dll
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:00.93
-
-Workload updates are available. Run `dotnet workload list` for more information.
-Monday, October 28, 2024 8:39:09 PM
-  Determining projects to restore...
-  All projects are up-to-date for restore.
-  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
-  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
-Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll (.NETCoreApp,Version=v8.0)
-VSTest version 17.11.1 (x64)
-
-Starting test execution, please wait...
-A total of 1 test files matched the specified pattern.
-
-Passed!  - Failed:     0, Passed:   311, Skipped:     0, Total:   311, Duration: 4 s - tests.dll (net8.0)
-
-Workload updates are available. Run `dotnet workload list` for more information.
-Monday, October 28, 2024 8:39:16 PM
-Monday, October 28, 2024 8:39:16 PM
-  Determining projects to restore...
-  All projects are up-to-date for restore.
-  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
-  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
-  [coverlet] _mapping file name: 'CoverletSourceRootsMapping_tests'
-Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll (.NETCoreApp,Version=v8.0)
-VSTest version 17.11.1 (x64)
-
-Starting test execution, please wait...
-A total of 1 test files matched the specified pattern.
-
-Passed!  - Failed:     0, Passed:   311, Skipped:     0, Total:   311, Duration: 5 s - tests.dll (net8.0)
-  [coverlet]
-  Calculating coverage result...
-   Generating report 'C:\Users\kushal\src\mydotnet\tests\coverage.cobertura.xml'
-
-+----------+------+--------+--------+
-| Module   | Line | Branch | Method |
-+----------+------+--------+--------+
-| hellolib | 100% | 99.61% | 100%   |
-+----------+------+--------+--------+
-
-+---------+------+--------+--------+
-|         | Line | Branch | Method |
-+---------+------+--------+--------+
-| Total   | 100% | 99.61% | 100%   |
-+---------+------+--------+--------+
-| Average | 100% | 99.61% | 100%   |
-+---------+------+--------+--------+
-
-
-Workload updates are available. Run `dotnet workload list` for more information.
-2024-10-28T20:39:23: Arguments
-2024-10-28T20:39:23:  -reports:coverage.cobertura.xml
-2024-10-28T20:39:23:  -targetdir:coverage-report
-2024-10-28T20:39:23: Writing report file 'coverage-report\index.html'
-2024-10-28T20:39:23: Report generation took 0.1 seconds
-Monday, October 28, 2024 8:39:23 PM
-Monday, October 28, 2024 8:39:23 PM
-warning: in the working copy of 'docs/icon_cube.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_fork.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_info-circled.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_info-circled_dark.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_minus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_plus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_search-minus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_search-plus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_sponsor.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_star.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_star_dark.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-dir.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-dir_active.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-down-dir.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-down-dir_dark.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_wrench.svg', LF will be replaced by CRLF the next time Git touches it
-Monday, October 28, 2024 8:39:23 PM
-On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
-  (use "git push" to publish your local commits)
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        modified:   docs/hellolib_BubbleSort.html
-        modified:   docs/hellolib_CurrentWeather.html
-        modified:   docs/hellolib_DesignDynamicArray.html
-        modified:   docs/hellolib_Entity.html
-        modified:   docs/hellolib_FindClosestNumberToZero.html
-        modified:   docs/hellolib_Graph.html
-        modified:   docs/hellolib_ListNode.html
-        modified:   docs/hellolib_MergeSort.html
-        modified:   docs/hellolib_MergeSortedArray.html
-        modified:   docs/hellolib_MergeStringsAlternately.html
-        modified:   docs/hellolib_MinimumCoin.html
-        modified:   docs/hellolib_MyCleaner.html
-        modified:   docs/hellolib_MySearch.html
-        modified:   docs/hellolib_PascalTriangle.html
-        modified:   docs/hellolib_PasswordSettings.html
-        modified:   docs/hellolib_Person.html
-        modified:   docs/hellolib_PersonFactory.html
-        modified:   docs/hellolib_Revocation.html
-        modified:   docs/hellolib_RomanToInteger.html
-        modified:   docs/hellolib_SinglyLinkedList.html
-        modified:   docs/hellolib_SinglyLinkedListAddTwoNumbers.html
-        modified:   docs/hellolib_SinglyLinkedListNode.html
-        modified:   docs/hellolib_TwoSum.html
-        modified:   docs/hellolib_Weather.html
-        modified:   docs/hellolib_WeatherFetchException.html
-        modified:   docs/index.htm
-        modified:   docs/index.html
-        modified:   tests/coverage.cobertura.xml
-
-Monday, October 28, 2024 8:39:23 PM
-[master 8f6889d] build application
- 28 files changed, 78 insertions(+), 78 deletions(-)
-Monday, October 28, 2024 8:39:23 PM
-From github.com:patstha/mydotnet
- * branch            master     -> FETCH_HEAD
- = [up to date]      master     -> origin/master
-Current branch master is up to date.
-Monday, October 28, 2024 8:39:24 PM
-Pushing to github.com:patstha/mydotnet.git
-Enumerating objects: 66, done.
-Counting objects: 100% (66/66), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (35/35), done.
-Writing objects: 100% (35/35), 5.98 KiB | 2.99 MiB/s, done.
-Total 35 (delta 33), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (33/33), completed with 31 local objects.
-To github.com:patstha/mydotnet.git
-   3a15659..8f6889d  master -> master
-updating local tracking ref 'refs/remotes/origin/master'
-Monday, October 28, 2024 8:39:25 PM
-Monday, October 28, 2024 8:39:25 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.07s.
-Monday, October 28, 2024 8:39:25 PM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.4.8 building for production...
-✓ 4 modules transformed.
-docs/index.html                0.42 kB │ gzip: 0.28 kB
-docs/assets/index-D5ax83Q5.js  8.81 kB │ gzip: 3.17 kB
-✓ built in 118ms
-Done in 1.37s.
-Monday, October 28, 2024 8:39:27 PM
-warning: in the working copy of 'docs/assets/index-D5ax83Q5.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Monday, October 28, 2024 8:39:27 PM
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-Monday, October 28, 2024 8:39:27 PM
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-Monday, October 28, 2024 8:39:27 PM
-From github.com:matchthree/matchthree.github.io
- * branch            master     -> FETCH_HEAD
-Already up to date.
-Monday, October 28, 2024 8:39:27 PM
-Everything up-to-date
-Monday, October 28, 2024 8:39:28 PM
-Monday, October 28, 2024 8:39:28 PM
-Monday, October 28, 2024 8:39:28 PM
-On branch main
-nothing to commit, working tree clean
-Monday, October 28, 2024 8:39:28 PM
-Monday, October 28, 2024 8:39:28 PM
-Monday, October 28, 2024 8:39:30 PM
-Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
-Monday, October 28, 2024 8:39:30 PM
-Monday, October 28, 2024 8:39:30 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.07s.
-Monday, October 28, 2024 8:39:30 PM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.4.8 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
-✓ built in 2.50s
-Done in 3.34s.
-Monday, October 28, 2024 8:39:34 PM
-warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/A3B318B569046159E1DD6616D2E646D9434350E6.asc', LF will be replaced by CRLF the next time Git touches it
-Monday, October 28, 2024 8:39:44 PM
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        modified:   docs/notes/earth.jpeg
-        modified:   docs/powershell.txt
-        modified:   public/notes/earth.jpeg
-        modified:   public/powershell.txt
-
-Monday, October 28, 2024 8:39:45 PM
-[main 923cbe5f] build application
- 4 files changed, 2000 insertions(+)
-Monday, October 28, 2024 8:39:45 PM
-From github.com:fromnepal/fromnepal.github.io
- * branch              main       -> FETCH_HEAD
-Current branch main is up to date.
-Monday, October 28, 2024 8:39:45 PM
-Enumerating objects: 13, done.
-Counting objects: 100% (13/13), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (7/7), done.
-Writing objects: 100% (7/7), 9.96 MiB | 7.92 MiB/s, done.
-Total 7 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   f6d169bd..923cbe5f  main -> main
-Monday, October 28, 2024 8:39:48 PM
-
-PS C:\Users\kushal\src\myhtml\fromnepal>
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\RustroverProjects\helloworld\"; Get-Date; cargo clean; Get-Date; cargo build; Get-Date; cargo test --profile test --no-fail-fast; Get-Date;  git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master --verbose; date; git push origin master --verbose; date; cd "C:\Users\kushal\src\mydotnet\"; date; dotnet clean; date; dotnet build; date; dotnet test; date; cd "C:\Users\kushal\src\mydotnet\tests\"; date; dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura; reportgenerator -reports:coverage.cobertura.xml -targetdir:coverage-report; date; Move-Item -Path "C:\Users\kushal\src\mydotnet\tests\coverage-report\*" -Destination "C:\Users\kushal\src\mydotnet\docs" -Force; date; cd  "C:\Users\kushal\src\mydotnet\"; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master --verbose; date; git push origin master --verbose; date; cd "C:\Users\kushal\src\myhtml\matchthree\matchthree\"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master; date; git push origin master; date; cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
-
-Monday, October 28, 2024 9:01:39 PM
-     Removed 926 files, 454.1MiB total
-Monday, October 28, 2024 9:01:40 PM
-   Compiling windows_x86_64_msvc v0.52.6
-   Compiling proc-macro2 v1.0.89
-   Compiling unicode-ident v1.0.13
-   Compiling pin-project-lite v0.2.15
-   Compiling bytes v1.8.0
-   Compiling futures-core v0.3.31
-   Compiling itoa v1.0.11
-   Compiling autocfg v1.4.0
-   Compiling futures-sink v0.3.31
-   Compiling fnv v1.0.7
-   Compiling once_cell v1.20.2
-   Compiling cfg-if v1.0.0
-   Compiling memchr v2.7.4
-   Compiling futures-io v0.3.31
-   Compiling pin-utils v0.1.0
-   Compiling hashbrown v0.15.0
-   Compiling httparse v1.9.5
-   Compiling equivalent v1.0.1
-   Compiling futures-task v0.3.31
-   Compiling try-lock v0.2.5
-   Compiling atomic-waker v1.1.2
-   Compiling windows_x86_64_msvc v0.48.5
-   Compiling tracing-core v0.1.32
-   Compiling serde v1.0.213
-   Compiling tinyvec_macros v0.1.1
-   Compiling native-tls v0.2.12
-   Compiling tinyvec v1.8.0
-   Compiling want v0.3.1
-   Compiling futures-channel v0.3.31
-   Compiling smallvec v1.13.2
-   Compiling percent-encoding v2.3.1
-   Compiling byteorder v1.5.0
-   Compiling http v1.1.0
-   Compiling form_urlencoded v1.2.1
-   Compiling getrandom v0.2.15
-   Compiling unicode-bidi v0.3.17
-   Compiling slab v0.4.9
-   Compiling tracing v0.1.40
-   Compiling indexmap v2.6.0
-   Compiling windows-targets v0.52.6
-   Compiling tower-service v0.3.3
-   Compiling serde_json v1.0.132
-   Compiling ryu v1.0.18
-   Compiling windows-sys v0.52.0
-   Compiling windows-sys v0.59.0
-   Compiling windows-result v0.2.0
-   Compiling windows-targets v0.48.5
-   Compiling rand_core v0.6.4
-   Compiling rustls-pki-types v1.10.0
-   Compiling windows-strings v0.1.0
-   Compiling thiserror v1.0.65
-   Compiling futures-util v0.3.31
-   Compiling windows-sys v0.48.0
-   Compiling unicode-normalization v0.1.24
-   Compiling windows-registry v0.2.0
-   Compiling sync_wrapper v1.0.1
-   Compiling quote v1.0.37
-   Compiling rustls-pemfile v2.2.0
-   Compiling encoding_rs v0.8.35
-   Compiling mime v0.3.17
-   Compiling http-body v1.0.1
-   Compiling base64 v0.22.1
-   Compiling syn v2.0.85
-   Compiling log v0.4.22
-   Compiling ipnet v2.10.1
-   Compiling dotenv v0.15.0
-   Compiling idna v0.5.0
-   Compiling url v2.5.2
-   Compiling zerocopy-derive v0.7.35
-   Compiling serde_derive v1.0.213
-   Compiling thiserror-impl v1.0.65
-   Compiling socket2 v0.5.7
-   Compiling mio v1.0.2
-   Compiling home v0.5.9
-   Compiling http-body-util v0.1.2
-   Compiling etcetera v0.8.0
-   Compiling zerocopy v0.7.35
-   Compiling tokio v1.41.0
-   Compiling ppv-lite86 v0.2.20
-   Compiling rand_chacha v0.3.1
-   Compiling schannel v0.1.26
-   Compiling rand v0.8.5
-   Compiling tokio-util v0.7.12
-   Compiling tokio-native-tls v0.3.1
-   Compiling h2 v0.4.6
-   Compiling serde_urlencoded v0.7.1
-   Compiling hyper v1.5.0
-   Compiling hyper-util v0.1.9
-   Compiling hyper-tls v0.6.0
-   Compiling reqwest v0.12.8
-   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
-warning: struct `Graph` is never constructed
- --> src\graph.rs:3:12
-  |
-3 | pub struct Graph {
-  |            ^^^^^
-  |
-  = note: `#[warn(dead_code)]` on by default
-
-warning: associated items `new`, `add_node`, `add_edge`, `bfs`, `dfs`, and `dfs_recursive` are never used
-  --> src\graph.rs:8:12
-   |
-7  | impl Graph {
-   | ---------- associated items in this implementation
-8  |     pub fn new() -> Self {
-   |            ^^^
-...
-14 |     pub fn add_node(&mut self, value: &str) {
-   |            ^^^^^^^^
-...
-18 |     pub fn add_edge(&mut self, from: &str, to: &str) {
-   |            ^^^^^^^^
-...
-24 |     pub fn bfs(&self, start: &str) -> Vec<String> {
-   |            ^^^
-...
-48 |     pub fn dfs(&self, start: &str) -> Vec<String> {
-   |            ^^^
-...
-55 |     fn dfs_recursive(&self, node: &str, visited: &mut HashMap<String, bool>, result: &mut Vec<String>) {
-   |        ^^^^^^^^^^^^^
-
-warning: `helloworld` (bin "helloworld") generated 2 warnings
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 14.08s
-Monday, October 28, 2024 9:01:54 PM
-   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
-    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.48s
-     Running unittests src/main.rs (target\debug\deps\helloworld-358f72777eb128ff.exe)
-
-running 24 tests
-test graph::tests::test_dfs ... ok
-test greatest_common_divisor::tests::test_both_are_zero ... ok
-test graph::tests::test_bfs ... ok
-test greatest_common_divisor::tests::test_large_numbers_performance ... ok
-test greatest_common_divisor::tests::test_gcd ... ok
-test greatest_common_divisor::tests::test_large_prime_numbers ... ok
-test greatest_common_divisor::tests::test_large_numbers ... ok
-test greatest_common_divisor::tests::test_large_numbers_performance_single ... ok
-test greatest_common_divisor::tests::test_one_is_zero ... ok
-test greatest_common_divisor::tests::test_large_numbers_performance_multiple ... ok
-test greatest_common_divisor::tests::test_large_composite_numbers ... ok
-test greatest_common_divisor::tests::test_mixed_numbers ... ok
-test greatest_common_divisor::tests::test_one_is_one ... ok
-test greatest_common_divisor::tests::test_prime_numbers ... ok
-test greatest_common_divisor::tests::test_zero_input ... ok
-test greatest_common_divisor::tests::test_zero_input_3 ... ok
-test my_data_types::tests::test_not_a_number ... ok
-test my_math::tests::test_add ... ok
-test my_math::tests::test_add_multiply_ambiguous ... ok
-test my_math::tests::test_add_zero ... ok
-test my_math::tests::test_multiply ... ok
-test my_math::tests::test_multiply_zero ... ok
-test shadowing::tests::test_shadow ... ok
-test shadowing::tests::test_shadow_string_length ... ok
-
-test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
-Monday, October 28, 2024 9:01:56 PM
-Monday, October 28, 2024 9:01:56 PM
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-Monday, October 28, 2024 9:01:56 PM
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-Monday, October 28, 2024 9:01:56 PM
-From github.com:kusl/hellorust20240711
- * branch            master     -> FETCH_HEAD
- = [up to date]      master     -> origin/master
-Already up to date.
-Monday, October 28, 2024 9:01:57 PM
-Pushing to github.com:kusl/hellorust20240711.git
-To github.com:kusl/hellorust20240711.git
- = [up to date]      master -> master
-updating local tracking ref 'refs/remotes/origin/master'
-Everything up-to-date
-Monday, October 28, 2024 9:01:57 PM
-Monday, October 28, 2024 9:01:57 PM
-Build started 10/28/2024 9:01:57 PM.
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" on node 1 (Clean target(s)).
-     1>ValidateSolutionConfiguration:
-         Building solution configuration "Debug|Any CPU".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj" (2) on node 1 (Clean target(s)).
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\TraceReloggerLib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Dia2Lib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\KernelTraceControl.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\KernelTraceControl.Win61.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\msdia140.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\amd64\KernelTraceControl.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\amd64\msdia140.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\arm64\KernelTraceControl.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\arm64\msdia140.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.exe".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.deps.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.runtimeconfig.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\BenchmarkDotNet.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\BenchmarkDotNet.Annotations.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\CommandLine.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Gee.External.Capstone.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Iced.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.NETCore.Client.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.Runtime.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.FastSerialization.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.Tracing.TraceEvent.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\MoreLinq.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Perfolizer.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\System.CodeDom.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\System.Management.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-arm\native\libcapstone.so".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-arm64\native\libcapstone.so".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-x64\native\libcapstone.so".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-x86\native\libcapstone.so".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\osx-arm64\native\libcapstone.dylib".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\osx-x64\native\libcapstone.dylib".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-arm64\native\capstone.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-x64\native\capstone.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-x86\native\capstone.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.0\System.Management.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellolib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellolib.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.csproj.AssemblyReference.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.GeneratedMSBuildEditorConfig.editorconfig".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.AssemblyInfoInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.AssemblyInfo.cs".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.csproj.CoreCompileInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.sourcelink.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\helloben.03AB233B.Up2Date".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\refint\hellobenchamarks.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.genruntimeconfig.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\ref\hellobenchamarks.dll".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (4) on node 3 (Clean target(s)).
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.deps.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.csproj.AssemblyReference.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.GeneratedMSBuildEditorConfig.editorconfig".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.AssemblyInfoInputs.cache".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (5) on node 2 (Clean target(s)).
-     5>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\.msCoverageSourceRootsMapping_tests".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.AssemblyInfo.cs".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.csproj.CoreCompileInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.sourcelink.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\refint\hellolib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\ref\hellolib.dll".
-     5>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\CoverletSourceRootsMapping_tests".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\testhost.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\testhost.exe".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (3) on node 4 (Clean target(s)).
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.exe".
-     5>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.visualstudio.testadapter.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.utility.netcoreapp10.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\authorizations.csv".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.deps.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.runtimeconfig.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.deps.json".
-     5>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Castle.Core.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.runtimeconfig.json".
-     5>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\FluentAssertions.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.dll".
-     5>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.pdb".
-     5>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
-     5>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
-     5>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
-     5>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CoreUtilities.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
-     5>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.PlatformAbstractions.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
-     5>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
-     5>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CommunicationUtilities.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CrossPlatEngine.dll".
      3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\MoreLinq.dll".
@@ -8877,6 +7873,998 @@ Ticks       : 638658205677762158
 TimeOfDay   : 17:42:47.7762158
 Year        : 2024
 DateTime    : Tuesday, October 29, 2024 5:42:47 PM
+
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> cd "C:\Users\kushal\RustroverProjects\helloworld\"; Get-Date; cargo clean; Get-Date; cargo build; Get-Date; cargo test --profile test --no-fail-fast; Get-Date;  git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master --verbose; date; git push origin master --verbose; date; cd "C:\Users\kushal\src\mydotnet\"; date; dotnet clean; date; dotnet build; date; dotnet test; date; cd "C:\Users\kushal\src\mydotnet\tests\"; date; dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura; reportgenerator -reports:coverage.cobertura.xml -targetdir:coverage-report; date; Move-Item -Path "C:\Users\kushal\src\mydotnet\tests\coverage-report\*" -Destination "C:\Users\kushal\src\mydotnet\docs" -Force; date; cd  "C:\Users\kushal\src\mydotnet\"; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master --verbose; date; git push origin master --verbose; date; cd "C:\Users\kushal\src\myhtml\matchthree\matchthree\"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master; date; git push origin master; date;cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
+
+Tuesday, October 29, 2024 5:43:42 PM
+     Removed 926 files, 454.1MiB total
+Tuesday, October 29, 2024 5:43:42 PM
+   Compiling windows_x86_64_msvc v0.52.6
+   Compiling proc-macro2 v1.0.89
+   Compiling unicode-ident v1.0.13
+   Compiling bytes v1.8.0
+   Compiling pin-project-lite v0.2.15
+   Compiling autocfg v1.4.0
+   Compiling itoa v1.0.11
+   Compiling futures-core v0.3.31
+   Compiling futures-sink v0.3.31
+   Compiling fnv v1.0.7
+   Compiling once_cell v1.20.2
+   Compiling cfg-if v1.0.0
+   Compiling memchr v2.7.4
+   Compiling hashbrown v0.15.0
+   Compiling futures-task v0.3.31
+   Compiling equivalent v1.0.1
+   Compiling futures-io v0.3.31
+   Compiling httparse v1.9.5
+   Compiling pin-utils v0.1.0
+   Compiling try-lock v0.2.5
+   Compiling atomic-waker v1.1.2
+   Compiling windows_x86_64_msvc v0.48.5
+   Compiling native-tls v0.2.12
+   Compiling tracing-core v0.1.32
+   Compiling tinyvec_macros v0.1.1
+   Compiling serde v1.0.213
+   Compiling want v0.3.1
+   Compiling tinyvec v1.8.0
+   Compiling futures-channel v0.3.31
+   Compiling byteorder v1.5.0
+   Compiling percent-encoding v2.3.1
+   Compiling smallvec v1.13.2
+   Compiling form_urlencoded v1.2.1
+   Compiling http v1.1.0
+   Compiling getrandom v0.2.15
+   Compiling slab v0.4.9
+   Compiling indexmap v2.6.0
+   Compiling unicode-bidi v0.3.17
+   Compiling tower-service v0.3.3
+   Compiling ryu v1.0.18
+   Compiling windows-targets v0.52.6
+   Compiling serde_json v1.0.132
+   Compiling rand_core v0.6.4
+   Compiling windows-sys v0.52.0
+   Compiling tracing v0.1.40
+   Compiling windows-sys v0.59.0
+   Compiling windows-result v0.2.0
+   Compiling windows-targets v0.48.5
+   Compiling rustls-pki-types v1.10.0
+   Compiling thiserror v1.0.65
+   Compiling futures-util v0.3.31
+   Compiling windows-strings v0.1.0
+   Compiling windows-sys v0.48.0
+   Compiling unicode-normalization v0.1.24
+   Compiling quote v1.0.37
+   Compiling sync_wrapper v1.0.1
+   Compiling encoding_rs v0.8.35
+   Compiling mime v0.3.17
+   Compiling rustls-pemfile v2.2.0
+   Compiling windows-registry v0.2.0
+   Compiling syn v2.0.85
+   Compiling ipnet v2.10.1
+   Compiling http-body v1.0.1
+   Compiling base64 v0.22.1
+   Compiling log v0.4.22
+   Compiling dotenv v0.15.0
+   Compiling idna v0.5.0
+   Compiling url v2.5.2
+   Compiling zerocopy-derive v0.7.35
+   Compiling serde_derive v1.0.213
+   Compiling thiserror-impl v1.0.65
+   Compiling mio v1.0.2
+   Compiling socket2 v0.5.7
+   Compiling home v0.5.9
+   Compiling etcetera v0.8.0
+   Compiling zerocopy v0.7.35
+   Compiling tokio v1.41.0
+   Compiling schannel v0.1.26
+   Compiling ppv-lite86 v0.2.20
+   Compiling http-body-util v0.1.2
+   Compiling rand_chacha v0.3.1
+   Compiling rand v0.8.5
+   Compiling serde_urlencoded v0.7.1
+   Compiling tokio-util v0.7.12
+   Compiling tokio-native-tls v0.3.1
+   Compiling h2 v0.4.6
+   Compiling hyper v1.5.0
+   Compiling hyper-util v0.1.9
+   Compiling hyper-tls v0.6.0
+   Compiling reqwest v0.12.8
+   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
+warning: struct `Graph` is never constructed
+ --> src\graph.rs:3:12
+  |
+3 | pub struct Graph {
+  |            ^^^^^
+  |
+  = note: `#[warn(dead_code)]` on by default
+
+warning: associated items `new`, `add_node`, `add_edge`, `bfs`, `dfs`, and `dfs_recursive` are never used
+  --> src\graph.rs:8:12
+   |
+7  | impl Graph {
+   | ---------- associated items in this implementation
+8  |     pub fn new() -> Self {
+   |            ^^^
+...
+14 |     pub fn add_node(&mut self, value: &str) {
+   |            ^^^^^^^^
+...
+18 |     pub fn add_edge(&mut self, from: &str, to: &str) {
+   |            ^^^^^^^^
+...
+24 |     pub fn bfs(&self, start: &str) -> Vec<String> {
+   |            ^^^
+...
+48 |     pub fn dfs(&self, start: &str) -> Vec<String> {
+   |            ^^^
+...
+55 |     fn dfs_recursive(&self, node: &str, visited: &mut HashMap<String, bool>, result: &mut Vec<String>) {
+   |        ^^^^^^^^^^^^^
+
+warning: `helloworld` (bin "helloworld") generated 2 warnings
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 17.24s
+Tuesday, October 29, 2024 5:44:00 PM
+   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.78s
+     Running unittests src/main.rs (target\debug\deps\helloworld-358f72777eb128ff.exe)
+
+running 24 tests
+test greatest_common_divisor::tests::test_both_are_zero ... ok
+test greatest_common_divisor::tests::test_large_composite_numbers ... ok
+test graph::tests::test_bfs ... ok
+test greatest_common_divisor::tests::test_gcd ... ok
+test greatest_common_divisor::tests::test_large_prime_numbers ... ok
+test greatest_common_divisor::tests::test_one_is_one ... ok
+test greatest_common_divisor::tests::test_zero_input ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance_single ... ok
+test graph::tests::test_dfs ... ok
+test greatest_common_divisor::tests::test_mixed_numbers ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance_multiple ... ok
+test greatest_common_divisor::tests::test_large_numbers ... ok
+test greatest_common_divisor::tests::test_one_is_zero ... ok
+test greatest_common_divisor::tests::test_prime_numbers ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance ... ok
+test greatest_common_divisor::tests::test_zero_input_3 ... ok
+test my_data_types::tests::test_not_a_number ... ok
+test my_math::tests::test_add ... ok
+test my_math::tests::test_add_multiply_ambiguous ... ok
+test my_math::tests::test_add_zero ... ok
+test my_math::tests::test_multiply ... ok
+test my_math::tests::test_multiply_zero ... ok
+test shadowing::tests::test_shadow ... ok
+test shadowing::tests::test_shadow_string_length ... ok
+
+test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+Tuesday, October 29, 2024 5:44:00 PM
+Tuesday, October 29, 2024 5:44:00 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Tuesday, October 29, 2024 5:44:00 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Tuesday, October 29, 2024 5:44:01 PM
+From github.com:kusl/hellorust20240711
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Already up to date.
+Tuesday, October 29, 2024 5:44:01 PM
+Pushing to github.com:kusl/hellorust20240711.git
+To github.com:kusl/hellorust20240711.git
+ = [up to date]      master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Everything up-to-date
+Tuesday, October 29, 2024 5:44:02 PM
+Tuesday, October 29, 2024 5:44:02 PM
+Build started 10/29/2024 5:44:02 PM.
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" on node 1 (Clean target(s)).
+     1>ValidateSolutionConfiguration:
+         Building solution configuration "Debug|Any CPU".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj" (2) on node 1 (Clean target(s)).
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\TraceReloggerLib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Dia2Lib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\KernelTraceControl.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\KernelTraceControl.Win61.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\msdia140.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\amd64\KernelTraceControl.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\amd64\msdia140.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\arm64\KernelTraceControl.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\arm64\msdia140.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.exe".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.deps.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.runtimeconfig.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\BenchmarkDotNet.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\BenchmarkDotNet.Annotations.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\CommandLine.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Gee.External.Capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Iced.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.NETCore.Client.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.Runtime.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.FastSerialization.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.Tracing.TraceEvent.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\MoreLinq.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Perfolizer.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\System.CodeDom.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\System.Management.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-arm\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-arm64\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-x64\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-x86\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\osx-arm64\native\libcapstone.dylib".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\osx-x64\native\libcapstone.dylib".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-arm64\native\capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-x64\native\capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-x86\native\capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.0\System.Management.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\helloben.03AB233B.Up2Date".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\refint\hellobenchamarks.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.genruntimeconfig.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\ref\hellobenchamarks.dll".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (3) on node 3 (Clean target(s)).
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.deps.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\refint\hellolib.dll".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (4) on node 4 (Clean target(s)).
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.exe".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\ref\hellolib.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.deps.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.runtimeconfig.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\MoreLinq.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.csproj.Up2Date".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\refint\hello.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.genruntimeconfig.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\ref\hello.dll".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (5) on node 2 (Clean target(s)).
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\.msCoverageSourceRootsMapping_tests".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\CoverletSourceRootsMapping_tests".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\testhost.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\testhost.exe".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.visualstudio.testadapter.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.utility.netcoreapp10.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\authorizations.csv".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.deps.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.runtimeconfig.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Castle.Core.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\FluentAssertions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CoreUtilities.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.PlatformAbstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CommunicationUtilities.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CrossPlatEngine.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.Utilities.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.Common.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\MoreLinq.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Newtonsoft.Json.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\NSubstitute.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\System.Diagnostics.EventLog.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.assert.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.core.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.execution.dotnet.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.csproj.Up2Date".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\refint\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.genruntimeconfig.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\ref\tests.dll".
+     3>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
+     2>Done Building Project "C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj" (Clean target(s)).
+     4>Done Building Project "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (Clean target(s)).
+     5>Done Building Project "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (Clean target(s)).
+     1>Done Building Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (Clean target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.68
+Tuesday, October 29, 2024 5:44:03 PM
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
+  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.dll
+  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.76
+
+Workload updates are available. Run `dotnet workload list` for more information.
+Tuesday, October 29, 2024 5:44:06 PM
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
+Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:   318, Skipped:     0, Total:   318, Duration: 5 s - tests.dll (net8.0)
+
+Workload updates are available. Run `dotnet workload list` for more information.
+Tuesday, October 29, 2024 5:44:13 PM
+Tuesday, October 29, 2024 5:44:13 PM
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
+  [coverlet] _mapping file name: 'CoverletSourceRootsMapping_tests'
+Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:   318, Skipped:     0, Total:   318, Duration: 4 s - tests.dll (net8.0)
+  [coverlet]
+  Calculating coverage result...
+   Generating report 'C:\Users\kushal\src\mydotnet\tests\coverage.cobertura.xml'
+
++----------+------+--------+--------+
+| Module   | Line | Branch | Method |
++----------+------+--------+--------+
+| hellolib | 100% | 99.61% | 100%   |
++----------+------+--------+--------+
+
++---------+------+--------+--------+
+|         | Line | Branch | Method |
++---------+------+--------+--------+
+| Total   | 100% | 99.61% | 100%   |
++---------+------+--------+--------+
+| Average | 100% | 99.61% | 100%   |
++---------+------+--------+--------+
+
+
+Workload updates are available. Run `dotnet workload list` for more information.
+2024-10-29T17:44:20: Arguments
+2024-10-29T17:44:20:  -reports:coverage.cobertura.xml
+2024-10-29T17:44:20:  -targetdir:coverage-report
+2024-10-29T17:44:20: Writing report file 'coverage-report\index.html'
+2024-10-29T17:44:20: Report generation took 0.1 seconds
+Tuesday, October 29, 2024 5:44:20 PM
+Tuesday, October 29, 2024 5:44:20 PM
+warning: in the working copy of 'docs/icon_cube.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_fork.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_sponsor.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir_active.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_wrench.svg', LF will be replaced by CRLF the next time Git touches it
+Tuesday, October 29, 2024 5:44:20 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/hellolib_BubbleSort.html
+        modified:   docs/hellolib_CurrentWeather.html
+        modified:   docs/hellolib_DesignDynamicArray.html
+        modified:   docs/hellolib_Entity.html
+        modified:   docs/hellolib_FindClosestNumberToZero.html
+        modified:   docs/hellolib_Graph.html
+        modified:   docs/hellolib_ListNode.html
+        modified:   docs/hellolib_MergeSort.html
+        modified:   docs/hellolib_MergeSortedArray.html
+        modified:   docs/hellolib_MergeStringsAlternately.html
+        modified:   docs/hellolib_MinimumCoin.html
+        modified:   docs/hellolib_MyCleaner.html
+        modified:   docs/hellolib_MySearch.html
+        modified:   docs/hellolib_PascalTriangle.html
+        modified:   docs/hellolib_PasswordSettings.html
+        modified:   docs/hellolib_Person.html
+        modified:   docs/hellolib_PersonFactory.html
+        modified:   docs/hellolib_Revocation.html
+        modified:   docs/hellolib_RomanToInteger.html
+        modified:   docs/hellolib_SinglyLinkedList.html
+        modified:   docs/hellolib_SinglyLinkedListAddTwoNumbers.html
+        modified:   docs/hellolib_SinglyLinkedListNode.html
+        modified:   docs/hellolib_TwoSum.html
+        modified:   docs/hellolib_Weather.html
+        modified:   docs/hellolib_WeatherFetchException.html
+        modified:   docs/index.htm
+        modified:   docs/index.html
+        modified:   tests/coverage.cobertura.xml
+
+Tuesday, October 29, 2024 5:44:21 PM
+[master c7dfe57] build application
+ 28 files changed, 30 insertions(+), 30 deletions(-)
+Tuesday, October 29, 2024 5:44:21 PM
+From github.com:patstha/mydotnet
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Current branch master is up to date.
+Tuesday, October 29, 2024 5:44:21 PM
+Pushing to github.com:patstha/mydotnet.git
+Enumerating objects: 61, done.
+Counting objects: 100% (61/61), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (31/31), done.
+Writing objects: 100% (31/31), 2.55 KiB | 1.28 MiB/s, done.
+Total 31 (delta 30), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (30/30), completed with 30 local objects.
+To github.com:patstha/mydotnet.git
+   1498923..c7dfe57  master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Tuesday, October 29, 2024 5:44:22 PM
+Tuesday, October 29, 2024 5:44:22 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Tuesday, October 29, 2024 5:44:23 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 4 modules transformed.
+docs/index.html                0.42 kB │ gzip: 0.28 kB
+docs/assets/index-D5ax83Q5.js  8.81 kB │ gzip: 3.17 kB
+✓ built in 141ms
+Done in 1.07s.
+Tuesday, October 29, 2024 5:44:24 PM
+warning: in the working copy of 'docs/assets/index-D5ax83Q5.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Tuesday, October 29, 2024 5:44:24 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Tuesday, October 29, 2024 5:44:24 PM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Tuesday, October 29, 2024 5:44:24 PM
+From github.com:matchthree/matchthree.github.io
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+Tuesday, October 29, 2024 5:44:25 PM
+Everything up-to-date
+Tuesday, October 29, 2024 5:44:25 PM
+Tuesday, October 29, 2024 5:44:25 PM
+Tuesday, October 29, 2024 5:44:26 PM
+[main 40faebde] add all files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 src/recruiting/indeed-ivorycloud.png
+Tuesday, October 29, 2024 5:44:26 PM
+Tuesday, October 29, 2024 5:44:26 PM
+Tuesday, October 29, 2024 5:44:27 PM
+Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
+Tuesday, October 29, 2024 5:44:27 PM
+Tuesday, October 29, 2024 5:44:27 PM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.10s.
+Tuesday, October 29, 2024 5:44:27 PM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 2.59s
+Done in 4.27s.
+Tuesday, October 29, 2024 5:44:32 PM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/A3B318B569046159E1DD6616D2E646D9434350E6.asc', LF will be replaced by CRLF the next time Git touches it
+Tuesday, October 29, 2024 5:44:45 PM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   docs/notes/baltimore-sun-guild.png
+        modified:   docs/notes/earth.jpeg
+        new file:   docs/notes/espanol-present-tense.png
+        new file:   docs/notes/infomaniak-requires-european-phone.png
+        new file:   docs/notes/some-book-recommendations.png
+        modified:   docs/powershell.txt
+        new file:   public/notes/baltimore-sun-guild.png
+        modified:   public/notes/earth.jpeg
+        new file:   public/notes/espanol-present-tense.png
+        new file:   public/notes/infomaniak-requires-european-phone.png
+        new file:   public/notes/some-book-recommendations.png
+        modified:   public/powershell.txt
+
+Tuesday, October 29, 2024 5:44:45 PM
+[main 1319b767] build application
+ 12 files changed, 9768 insertions(+), 9804 deletions(-)
+ create mode 100644 docs/notes/baltimore-sun-guild.png
+ create mode 100644 docs/notes/espanol-present-tense.png
+ create mode 100644 docs/notes/infomaniak-requires-european-phone.png
+ create mode 100644 docs/notes/some-book-recommendations.png
+ create mode 100644 public/notes/baltimore-sun-guild.png
+ create mode 100644 public/notes/espanol-present-tense.png
+ create mode 100644 public/notes/infomaniak-requires-european-phone.png
+ create mode 100644 public/notes/some-book-recommendations.png
+Tuesday, October 29, 2024 5:44:46 PM
+From github.com:fromnepal/fromnepal.github.io
+ * branch              main       -> FETCH_HEAD
+Current branch main is up to date.
+Tuesday, October 29, 2024 5:44:47 PM
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 15.57 MiB | 5.96 MiB/s, done.
+Total 11 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   e52c51df..1319b767  main -> main
+Tuesday, October 29, 2024 5:44:52 PM
+
+PS C:\Users\kushal\src\myhtml\fromnepal>
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_videos.ps1  -url "https://x.com/elonmusk/status/1851087655876092349"
+Create new folder for yt-dlp
+
+    Directory: C:\TempMode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          10/30/2024  6:48 AM                yt-dlp
+
+DisplayHint : DateTime
+Date        : 10/30/2024 12:00:00 AM
+Day         : 30
+DayOfWeek   : Wednesday
+DayOfYear   : 304
+Hour        : 6
+Kind        : Local
+Millisecond : 458
+Microsecond : 871
+Nanosecond  : 0
+Minute      : 48
+Month       : 10
+Second      : 18
+Ticks       : 638658676984588710
+TimeOfDay   : 06:48:18.4588710
+Year        : 2024
+DateTime    : Wednesday, October 30, 2024 6:48:18 AM
+
+
+DisplayHint : DateTime
+Date        : 10/30/2024 12:00:00 AM
+Day         : 30
+DayOfWeek   : Wednesday
+DayOfYear   : 304
+Hour        : 6
+Kind        : Local
+Millisecond : 467
+Microsecond : 252
+Nanosecond  : 500
+Minute      : 48
+Month       : 10
+Second      : 18
+Ticks       : 638658676984672525
+TimeOfDay   : 06:48:18.4672525
+Year        : 2024
+DateTime    : Wednesday, October 30, 2024 6:48:18 AM
+
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241030064818.%(ext)s','https://x.com/elonmusk/status/1851087655876092349']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.10.22 from yt-dlp/yt-dlp [67adeb7ba] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.35.5, urllib3-2.2.3, websockets-13.1
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1839 extractors
+[twitter] Extracting URL: https://x.com/elonmusk/status/1851087655876092349
+[twitter] 1851087655876092349: Downloading guest token
+[twitter] 1851087655876092349: Downloading GraphQL JSON
+[debug] [twitter] Extracting from video info: 1850598281019002880
+[twitter] 1851087655876092349: Downloading m3u8 information
+[debug] Sort order given by extractor: res, proto:m3u8, br, size
+[debug] Formats sorted by: hasvid, ie_pref, res, proto:m3u8(8), br, size, lang, quality, fps, hdr:12(7), vcodec:vp9.2(10), channels, acodec, asr, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Twitter
+[info] 1850598281019002880: Downloading 1 format(s): http-2176
+[debug] Invoking http downloader on "https://video.twimg.com/ext_tw_video/1850598281019002880/pu/vid/avc1/1320x720/_AkD8sorFWbzzD2J.mp4?tag=12"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\20241030064818.mp4
+[download] 100% of   26.61MiB in 00:00:00 at 34.32MiB/s
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241030064818.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241030064818.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Elon Musk - https://t.co/EWA9YAsJhP" -metadata "date=20241029" -metadata "description=https://t.co/EWA9YAsJhP" -metadata "synopsis=https://t.co/EWA9YAsJhP" -metadata "purl=https://x.com/elonmusk/status/1851087655876092349" -metadata "comment=https://x.com/elonmusk/status/1851087655876092349" -metadata "artist=Elon Musk" -movflags +faststart file:C:\Temp\yt-dlp\20241030064818.temp.mp4
+
+DisplayHint : DateTime
+Date        : 10/30/2024 12:00:00 AM
+Day         : 30
+DayOfWeek   : Wednesday
+DayOfYear   : 304
+Hour        : 6
+Kind        : Local
+Millisecond : 922
+Microsecond : 298
+Nanosecond  : 200
+Minute      : 48
+Month       : 10
+Second      : 22
+Ticks       : 638658677029222982
+TimeOfDay   : 06:48:22.9222982
+Year        : 2024
+DateTime    : Wednesday, October 30, 2024 6:48:22 AM
+
+
+DisplayHint : DateTime
+Date        : 10/30/2024 12:00:00 AM
+Day         : 30
+DayOfWeek   : Wednesday
+DayOfYear   : 304
+Hour        : 6
+Kind        : Local
+Millisecond : 935
+Microsecond : 136
+Nanosecond  : 800
+Minute      : 48
+Month       : 10
+Second      : 22
+Ticks       : 638658677029351368
+TimeOfDay   : 06:48:22.9351368
+Year        : 2024
+DateTime    : Wednesday, October 30, 2024 6:48:22 AM
+
+
+DisplayHint : DateTime
+Date        : 10/30/2024 12:00:00 AM
+Day         : 30
+DayOfWeek   : Wednesday
+DayOfYear   : 304
+Hour        : 6
+Kind        : Local
+Millisecond : 936
+Microsecond : 826
+Nanosecond  : 500
+Minute      : 48
+Month       : 10
+Second      : 22
+Ticks       : 638658677029368265
+TimeOfDay   : 06:48:22.9368265
+Year        : 2024
+DateTime    : Wednesday, October 30, 2024 6:48:22 AM
+
+
+    Directory: C:\Temp\yt-dlp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          10/27/2024  1:57 PM       27909931 20241030064818.mp4
+-a---          10/27/2024  1:57 PM       27909931 20241030064818.mp4
+Cleaned video name: 20241030064818mp4
+Cleaned video path: C:\Temp\yt-dlp\20241030064818mp4
+Running ffmpeg
+ffmpeg -i "C:\Temp\yt-dlp\20241030064818mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241030064818mp4_reencoded.mp4"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec--enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241030064818mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Elon Musk - https://t.co/EWA9YAsJhP
+    artist          : Elon Musk
+    date            : 20241029
+    encoder         : Lavf61.7.100
+    comment         : https://x.com/elonmusk/status/1851087655876092349
+    description     : https://t.co/EWA9YAsJhP
+    synopsis        : https://t.co/EWA9YAsJhP
+  Duration: 00:07:13.70, start: 0.000000, bitrate: 514 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(progressive), 1320x720, 378 kb/s, SAR 1:1 DAR 11:6, 30 fps, 30 tbr, 1920k tbn (default)
+      Metadata:
+        handler_name    : Twitter-vork muxer
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : Twitter-vork muxer
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000001d987f90300] using SAR=1/1
+[libx264 @ 000001d987f90300] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001d987f90300] profile High, level 3.2, 4:2:0, 8-bit
+[libx264 @ 000001d987f90300] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=22 lookahead_threads=3 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\20241030064818mp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Elon Musk - https://t.co/EWA9YAsJhP
+    artist          : Elon Musk
+    date            : 20241029
+    synopsis        : https://t.co/EWA9YAsJhP
+    comment         : https://x.com/elonmusk/status/1851087655876092349
+    description     : https://t.co/EWA9YAsJhP
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 1320x720 [SAR 1:1 DAR 11:6], q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : Twitter-vork muxer
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : Twitter-vork muxer
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 aac
+[mp4 @ 000001d9874997c0] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001d987499300] video:30606KiB audio:6751KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 1.231866%
+frame=13010 fps=431 q=-1.0 Lsize=   37818KiB time=00:07:13.60 bitrate= 714.5kbits/s speed=14.4x
+[libx264 @ 000001d987f90300] frame I:55    Avg QP:17.15  size: 88368
+[libx264 @ 000001d987f90300] frame P:4393  Avg QP:21.08  size:  5402
+[libx264 @ 000001d987f90300] frame B:8562  Avg QP:29.18  size:   321
+[libx264 @ 000001d987f90300] consecutive B-frames:  0.6% 33.6%  4.3% 61.6%
+[libx264 @ 000001d987f90300] mb I  I16..4:  7.7% 51.1% 41.2%
+[libx264 @ 000001d987f90300] mb P  I16..4:  0.6%  2.4%  0.4%  P16..4: 15.6%  4.3%  2.1%  0.0%  0.0%    skip:74.5%
+[libx264 @ 000001d987f90300] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  5.8%  0.1%  0.0%  direct: 0.1%  skip:93.9%  L0:43.3% L1:55.5% BI: 1.2%
+[libx264 @ 000001d987f90300] 8x8 transform intra:64.7% inter:71.6%
+[libx264 @ 000001d987f90300] coded y,uvDC,uvAC intra: 60.7% 59.3% 22.7% inter: 2.4% 2.9% 0.2%
+[libx264 @ 000001d987f90300] i16 v,h,dc,p: 27% 35%  6% 31%
+[libx264 @ 000001d987f90300] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 22% 23% 15%  4%  8%  8%  8%  5%  7%
+[libx264 @ 000001d987f90300] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26% 27% 10%  5%  7%  7%  8%  5%  6%
+[libx264 @ 000001d987f90300] i8c dc,h,v,p: 47% 27% 19%  8%
+[libx264 @ 000001d987f90300] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 000001d987f90300] ref P L0: 64.7% 15.4% 15.5%  4.5%
+[libx264 @ 000001d987f90300] ref B L0: 87.0% 11.1%  2.0%
+[libx264 @ 000001d987f90300] ref B L1: 98.4%  1.6%
+[libx264 @ 000001d987f90300] kb/s:578.14
+[aac @ 000001d987a18580] Qavg: 803.540
+
+DisplayHint : DateTime
+Date        : 10/30/2024 12:00:00 AM
+Day         : 30
+DayOfWeek   : Wednesday
+DayOfYear   : 304
+Hour        : 6
+Kind        : Local
+Millisecond : 229
+Microsecond : 117
+Nanosecond  : 500
+Minute      : 48
+Month       : 10
+Second      : 53
+Ticks       : 638658677332291175
+TimeOfDay   : 06:48:53.2291175
+Year        : 2024
+DateTime    : Wednesday, October 30, 2024 6:48:53 AM
+
+
+DisplayHint : DateTime
+Date        : 10/30/2024 12:00:00 AM
+Day         : 30
+DayOfWeek   : Wednesday
+DayOfYear   : 304
+Hour        : 6
+Kind        : Local
+Millisecond : 377
+Microsecond : 488
+Nanosecond  : 500
+Minute      : 48
+Month       : 10
+Second      : 55
+Ticks       : 638658677353774885
+TimeOfDay   : 06:48:55.3774885
+Year        : 2024
+DateTime    : Wednesday, October 30, 2024 6:48:55 AM
+
+
+DisplayHint : DateTime
+Date        : 10/30/2024 12:00:00 AM
+Day         : 30
+DayOfWeek   : Wednesday
+DayOfYear   : 304
+Hour        : 6
+Kind        : Local
+Millisecond : 383
+Microsecond : 795
+Nanosecond  : 0
+Minute      : 48
+Month       : 10
+Second      : 55
+Ticks       : 638658677353837950
+TimeOfDay   : 06:48:55.3837950
+Year        : 2024
+DateTime    : Wednesday, October 30, 2024 6:48:55 AM
 
 
 PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> cd "C:\Users\kushal\RustroverProjects\helloworld\"; Get-Date; cargo clean; Get-Date; cargo build; Get-Date; cargo test --profile test --no-fail-fast; Get-Date;  git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master --verbose; date; git push origin master --verbose; date; cd "C:\Users\kushal\src\mydotnet\"; date; dotnet clean; date; dotnet build; date; dotnet test; date; cd "C:\Users\kushal\src\mydotnet\tests\"; date; dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura; reportgenerator -reports:coverage.cobertura.xml -targetdir:coverage-report; date; Move-Item -Path "C:\Users\kushal\src\mydotnet\tests\coverage-report\*" -Destination "C:\Users\kushal\src\mydotnet\docs" -Force; date; cd  "C:\Users\kushal\src\mydotnet\"; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master --verbose; date; git push origin master --verbose; date; cd "C:\Users\kushal\src\myhtml\matchthree\matchthree\"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master; date; git push origin master; date;cd "C:\Users\kushal\src\mylogging\"; date; git add .; date; git commit --message "add all files" --message "from the terminal"; date; $imageUrl = "https://cdn.star.nesdis.noaa.gov/GOES16/ABI/FD/GEOCOLOR/10848x10848.jpg"; $outputPath = "C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg"; date; Invoke-WebRequest -Uri $imageUrl -OutFile $outputPath; date; Write-Output "Image downloaded successfully to $outputPath"; date; cd "C:\Users\kushal\src\myhtml\fromnepal"; date; yarn; date; yarn run build; date; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin main; date; git push origin main; date;
