@@ -43,20 +43,21 @@
             align-items: center; /* Center the image and caption */
         }
 
+        article figure img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
         article figure figcaption {
             font-size: 0.6em;
             line-height: 0.9;
             margin-top: 0.5em;
             text-align: left; /* Align text to the left */
+            width: 100%; /* Ensure it matches the image width */
             max-width: 100%; /* Ensure it doesn't exceed the image width */
-        }
-
-        article figure img {
-            aspect-ratio: 3 / 2;
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            padding-left: 0; /* Remove any padding that might affect alignment */
         }
 
         /* Progress bar styles */
