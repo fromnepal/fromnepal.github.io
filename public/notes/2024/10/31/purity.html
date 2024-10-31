@@ -40,10 +40,16 @@
         article figure {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center the image and caption */
+            align-items: center;
         }
 
-        article figure img {
+        article figure .media-wrapper {
+            display: block;
+            max-width: 100%;
+            width: auto;
+        }
+
+        article figure picture {
             display: block;
             max-width: 100%;
             height: auto;
@@ -53,11 +59,10 @@
             font-size: 0.6em;
             line-height: 0.9;
             margin-top: 0.5em;
-            text-align: left; /* Align text to the left */
-            width: 100%; /* Ensure it matches the image width */
-            max-width: 100%; /* Ensure it doesn't exceed the image width */
-            box-sizing: border-box; /* Include padding and border in the element's total width and height */
-            padding-left: 0; /* Remove any padding that might affect alignment */
+            text-align: left;
+            width: 100%;
+            box-sizing: border-box;
+            padding-left: 0;
         }
 
         /* Progress bar styles */
