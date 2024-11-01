@@ -199,3 +199,6 @@ The load balancer communicated with web server through these private IP addresse
 1. If an application server goes offline, all thriffic will be routed to the other servers. 
 This prevents the website from going offline if one application server is offline. 
 We will also add a new healthy server to the server pool o
+
+
+Virtual loop interview for [redacted], Software Development Engineer II, Alexa Subscriptions Growth + Alexa Communications
