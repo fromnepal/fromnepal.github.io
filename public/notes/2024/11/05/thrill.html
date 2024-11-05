@@ -267,15 +267,26 @@
                 const dialog = document.getElementById('infoDialog');
                 const dialogContent = document.getElementById('dialogContent');
                 if (speakerInfo[speaker]) {
-                    console.info(`speaker is ${speaker}`);
                     dialogContent.textContent = speakerInfo[speaker];
                     dialog.showModal();
                 } else {
                     dialogContent.textContent = 'Speaker information not available.';
                     dialog.showModal();
                 }
-                if (dialog.open && !dialog.contains(event.target) && event.target.id !== 'closeDialog') {
-                    dialog.close();
+
+                // Log the dialog opening
+                try {
+                    fetch('https://your-logging-server.com/log', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ event: 'dialog_opened', speaker: speaker })
+                    }).catch(error => {
+                        console.error('Logging failed:', error);
+                    });
+                } catch (error) {
+                    console.error('Logging failed:', error);
                 }
             });
         });
@@ -285,4 +296,10 @@
         });
         // document.addEventListener('click', function(event) {
         //     const dialog = document.getElementById('infoDialog');
-        //     if (dialog.open && !dialog.cont
+        //     if (dialog.open && !dialog.contains(event.target) && event.target.id !== 'closeDialog') {
+        //         dialog.close();
+        //     }
+        // });
+    </script>
+</body>
+</html>
