@@ -225,7 +225,10 @@
         <p class="muted">Michelle Goldberg has been an Opinion columnist since 2017. She is the author of several books about politics, religion and women’s rights, and was part of a team that won a Pulitzer Prize for public service in 2018 for reporting on workplace sexual harassment.</p>
         <p class="muted">Tressie McMillan Cottom (@tressiemcphd) became a New York Times Opinion columnist in 2022. She is a professor at the University of North Carolina at Chapel Hill School of Information and Library Science, the author of “Thick: And Other Essays” and a 2020 MacArthur fellow. @tressiemcphd </p>
     </article>
-
+    <dialog id="infoDialog">
+        <p id="dialogContent"></p>
+        <button id="closeDialog">Close</button>
+    </dialog>
     <script>
         function calculateReadingTime(text) {
             const wordsPerMinute = 200; // Average reading speed
@@ -261,13 +264,25 @@
         document.querySelectorAll('p[data-speaker]').forEach(function(paragraph) {
             paragraph.addEventListener('click', function() {
                 const speaker = paragraph.getAttribute('data-speaker');
+                const dialog = document.getElementById('infoDialog');
+                const dialogContent = document.getElementById('dialogContent');
                 if (speakerInfo[speaker]) {
-                    alert(speakerInfo[speaker]);
+                    console.info(`speaker is ${speaker}`);
+                    dialogContent.textContent = speakerInfo[speaker];
+                    dialog.showModal();
                 } else {
-                    alert('Speaker information not available.');
+                    dialogContent.textContent = 'Speaker information not available.';
+                    dialog.showModal();
+                }
+                if (dialog.open && !dialog.contains(event.target) && event.target.id !== 'closeDialog') {
+                    dialog.close();
                 }
             });
         });
-    </script>
-</body>
-</html>
+
+        document.getElementById('closeDialog').addEventListener('click', function() {
+            document.getElementById('infoDialog').close();
+        });
+        // document.addEventListener('click', function(event) {
+        //     const dialog = document.getElementById('infoDialog');
+        //     if (dialog.open && !dialog.cont
