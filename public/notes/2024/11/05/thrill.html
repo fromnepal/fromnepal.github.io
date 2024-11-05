@@ -255,10 +255,10 @@
 
         const speakerInfo = {
             "Healy": "Patrick Healy is the deputy Opinion editor of the New York Times.",
-            "Brooks": "David Brooks is an Opinion columnist for The Times, writing about political, social and cultural trends. @nytdavidbrooks",
-            "Douthat": "Ross Douthat has been an Opinion columnist for The Times since 2009. He is the author, most recently, of “The Deep Places: A Memoir of Illness and Discovery.” @DouthatNYT • Facebook",
+            "Brooks": "David Brooks is an Opinion columnist for The Times, writing about political, social and cultural trends. <a href='https://x.com/nytdavidbrooks' target='_blank'>@nytdavidbrooks</a>",
+            "Douthat": "Ross Douthat has been an Opinion columnist for The Times since 2009. He is the author, most recently, of “The Deep Places: A Memoir of Illness and Discovery.” <a href='https://x.com/DouthatNYT' target='_blank'>@DouthatNYT</a> • <a href='https://facebook.com/DouthatNYT' target='_blank'>Facebook</a>",
             "Goldberg": "Michelle Goldberg has been an Opinion columnist since 2017. She is the author of several books about politics, religion and women’s rights, and was part of a team that won a Pulitzer Prize for public service in 2018 for reporting on workplace sexual harassment.",
-            "Cottom": "Tressie McMillan Cottom (@tressiemcphd) became a New York Times Opinion columnist in 2022. She is a professor at the University of North Carolina at Chapel Hill School of Information and Library Science, the author of “Thick: And Other Essays” and a 2020 MacArthur fellow. @tressiemcphd"
+            "Cottom": "Tressie McMillan Cottom (<a href='https://x.com/tressiemcphd' target='_blank'>@tressiemcphd</a>) became a New York Times Opinion columnist in 2022. She is a professor at the University of North Carolina at Chapel Hill School of Information and Library Science, the author of “Thick: And Other Essays” and a 2020 MacArthur fellow. <a href='https://x.com/tressiemcphd' target='_blank'>@tressiemcphd</a>"
         };
 
         document.querySelectorAll('p[data-speaker]').forEach(function(paragraph) {
@@ -267,7 +267,7 @@
                 const dialog = document.getElementById('infoDialog');
                 const dialogContent = document.getElementById('dialogContent');
                 if (speakerInfo[speaker]) {
-                    dialogContent.textContent = speakerInfo[speaker];
+                    dialogContent.innerHTML = speakerInfo[speaker];
                     dialog.showModal();
                 } else {
                     dialogContent.textContent = 'Speaker information not available.';
