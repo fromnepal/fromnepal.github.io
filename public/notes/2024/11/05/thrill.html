@@ -250,9 +250,22 @@
             });
         });
 
+        const speakerInfo = {
+            "Healy": "Patrick Healy is the deputy Opinion editor of the New York Times.",
+            "Brooks": "David Brooks is an Opinion columnist for The Times, writing about political, social and cultural trends. @nytdavidbrooks",
+            "Douthat": "Ross Douthat has been an Opinion columnist for The Times since 2009. He is the author, most recently, of “The Deep Places: A Memoir of Illness and Discovery.” @DouthatNYT • Facebook",
+            "Goldberg": "Michelle Goldberg has been an Opinion columnist since 2017. She is the author of several books about politics, religion and women’s rights, and was part of a team that won a Pulitzer Prize for public service in 2018 for reporting on workplace sexual harassment.",
+            "Cottom": "Tressie McMillan Cottom (@tressiemcphd) became a New York Times Opinion columnist in 2022. She is a professor at the University of North Carolina at Chapel Hill School of Information and Library Science, the author of “Thick: And Other Essays” and a 2020 MacArthur fellow. @tressiemcphd"
+        };
+
         document.querySelectorAll('p[data-speaker]').forEach(function(paragraph) {
             paragraph.addEventListener('click', function() {
-                alert('Speaker: ' + paragraph.getAttribute('data-speaker'));
+                const speaker = paragraph.getAttribute('data-speaker');
+                if (speakerInfo[speaker]) {
+                    alert(speakerInfo[speaker]);
+                } else {
+                    alert('Speaker information not available.');
+                }
             });
         });
     </script>
