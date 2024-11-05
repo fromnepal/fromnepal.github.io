@@ -275,21 +275,32 @@
                 }
 
                 // Log the dialog opening
-                try {
-                    fetch('https://your-logging-server.com/log', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({ event: 'dialog_opened', speaker: speaker })
-                    }).catch(error => {
-                        console.error('Logging failed:', error);
-                    });
-                } catch (error) {
-                    console.error('Logging failed:', error);
-                }
+                logDialogOpen(speaker);
             });
         });
+
+
+        function logDialogOpen(speaker) {
+            const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+            const key = `click-${timestamp}`;
+            const data = {
+                timestamp: new Date().toISOString(),
+                userAgent: navigator.userAgent,
+                speaker: speaker
+            };
+
+            try {
+                fetch(`https://nice.runasp.net/Analytics/SaveAnalytics?key=${key}&data=${encodeURIComponent(JSON.stringify(data))}`, {
+                    method: 'POST',
+                    body: JSON.stringify(data)
+                }).catch(error => {
+                    console.error('Logging failed:', error);
+                });
+            } catch (error) {
+                console.error('Logging failed:', error);
+            }
+        }
+
 
         document.getElementById('closeDialog').addEventListener('click', function() {
             document.getElementById('infoDialog').close();
