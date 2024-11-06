@@ -229,6 +229,7 @@
         <p id="dialogContent"></p>
         <button id="closeDialog">Close</button>
     </dialog>
+
     <script>
         function calculateReadingTime(text) {
             const wordsPerMinute = 200; // Average reading speed
@@ -250,6 +251,21 @@
                 const scrollPosition = window.scrollY;
                 const scrollPercentage = (scrollPosition / articleHeight) * 100;
                 progressBar.style.width = `${scrollPercentage}%`;
+            });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const uniqueIdentifier = entry.target.getAttribute('data-unique-identifier');
+                        console.log(`Paragraph with unique identifier ${uniqueIdentifier} is visible on the screen.`);
+                        // Send information to the server or perform any other action
+                        logDialogView(uniqueIdentifier);
+                    }
+                });
+            });
+
+            document.querySelectorAll('p[data-unique-identifier]').forEach(paragraph => {
+                observer.observe(paragraph);
             });
         });
 
@@ -315,6 +331,34 @@
                     //     'sec-fetch-mode': 'cors',
                     //     'sec-fetch-site': 'cross-site'
                     // },
+                    body: JSON.stringify(data)
+                }).catch(error => {
+                    console.error('Logging failed:', error);
+                });
+            } catch (error) {
+                console.error('Logging failed:', error);
+            }
+        }
+
+        
+        function logDialogView(identifier) {
+            const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+            const key = `view-${timestamp}`;
+            const data = {
+                timestamp: new Date().toISOString(),
+                userAgent: navigator.userAgent,
+                identifier: identifier
+            };
+
+            const headers = new Headers({
+                'Content-Type': 'application/json',
+                'Referer': document.URL,
+                'User-Agent': navigator.userAgent
+            });
+
+            try {
+                fetch(`https://nice.runasp.net/Analytics/SaveAnalytics?key=${key}&data=${encodeURIComponent(JSON.stringify(data))}`, {
+                    method: 'POST',
                     body: JSON.stringify(data)
                 }).catch(error => {
                     console.error('Logging failed:', error);
