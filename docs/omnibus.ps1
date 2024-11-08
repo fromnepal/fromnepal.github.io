@@ -1,72 +1,72 @@
 $firefoxPath = "C:\Users\kushal\AppData\Local\Mozilla Firefox"
 $env:Path = "$firefoxPath;$env:Path"
 
-cd "C:\Users\kushal\src\angular\angulareighteen\"
-Get-Date
-Remove-Item -Recurse -Force .\node_modules
-Get-Date
-Remove-Item -Force .\yarn.lock
-Get-Date
-git fetch
-Get-Date
-git status
-Get-Date
-Get-Date
-git add .
-git commit --message "add all files" --message "update from terminal"
-Get-Date
-git pull --rebase origin master --strategy-option=theirs
-Get-Date
-git push origin master
-Get-Date
-yarn
-Get-Date
-yarn version --patch
-Get-Date
-yarn run ng update
-Get-Date
-yarn run ng build
-Get-Date
-Get-Date
-git fetch
-Get-Date
-git status
-Get-Date
-Get-Date
-git add .
-git commit --message "add all files" --message "update from terminal"
-Get-Date
-git pull --rebase origin master
-Get-Date
-git push origin master
-Get-Date
-yarn run ng test
-Get-Date
-yarn run ng update @angular/core @angular/cli @angular/material
-Get-Date
-git add .
-git commit --message "add all files" --message "update from terminal"
-Get-Date
-git pull --rebase origin master
-Get-Date
-git push origin master
-Get-Date
-echo y | npx update-browserslist-db@latest
-Get-Date
-git fetch
-Get-Date
-git status
-Get-Date
-Get-Date
-git add .
-git commit --message "add all files" --message "update from terminal"
-Get-Date
-git pull --rebase origin master
-Get-Date
-git push origin master
-Get-Date
-git remote show origin
-Get-Date
+# cd "C:\Users\kushal\src\angular\angulareighteen\"
+# Get-Date
+# Remove-Item -Recurse -Force .\node_modules
+# Get-Date
+# Remove-Item -Force .\yarn.lock
+# Get-Date
+# git fetch
+# Get-Date
+# git status
+# Get-Date
+# Get-Date
+# git add .
+# git commit --message "add all files" --message "update from terminal"
+# Get-Date
+# git pull --rebase origin master --strategy-option=theirs
+# Get-Date
+# git push origin master
+# Get-Date
+# yarn
+# Get-Date
+# yarn version --patch
+# Get-Date
+# yarn run ng update
+# Get-Date
+# yarn run ng build
+# Get-Date
+# Get-Date
+# git fetch
+# Get-Date
+# git status
+# Get-Date
+# Get-Date
+# git add .
+# git commit --message "add all files" --message "update from terminal"
+# Get-Date
+# git pull --rebase origin master
+# Get-Date
+# git push origin master
+# Get-Date
+# yarn run ng test
+# Get-Date
+# yarn run ng update @angular/core @angular/cli @angular/material
+# Get-Date
+# git add .
+# git commit --message "add all files" --message "update from terminal"
+# Get-Date
+# git pull --rebase origin master
+# Get-Date
+# git push origin master
+# Get-Date
+# echo y | npx update-browserslist-db@latest
+# Get-Date
+# git fetch
+# Get-Date
+# git status
+# Get-Date
+# Get-Date
+# git add .
+# git commit --message "add all files" --message "update from terminal"
+# Get-Date
+# git pull --rebase origin master
+# Get-Date
+# git push origin master
+# Get-Date
+# git remote show origin
+# Get-Date
 
 cd "C:\Users\kushal\RustroverProjects\helloworld\"
 Get-Date
