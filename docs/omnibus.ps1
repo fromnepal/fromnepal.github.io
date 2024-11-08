@@ -15,7 +15,7 @@ Get-Date
 git add .
 git commit --message "add all files" --message "update from terminal"
 Get-Date
-git pull --rebase origin master
+git pull --rebase origin master --strategy-option=theirs
 Get-Date
 git push origin master
 Get-Date
