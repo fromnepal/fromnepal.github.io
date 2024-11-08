@@ -2,7 +2,7 @@ Get-Date;
 # Define the directory containing HEIC files
 $sourceDir = "C:\Users\kushal\Pictures\heic"
 # Define the directory to save PNG files
-$destDir = "C:\Users\kushal\Pictures\2024-10-16"
+$destDir = "C:\Users\kushal\Pictures\png"
 
 # Create the destination directory if it doesn't exist
 if (!(Test-Path -Path $destDir)) {
