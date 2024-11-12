@@ -2970,3 +2970,2551 @@ To github.com:fromnepal/fromnepal.github.io.git
 Tuesday, November 12, 2024 6:59:57 AM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> C:\Users\kushal\src\myhtml\fromnepal\public\omnibus.ps1
+
+Tuesday, November 12, 2024 7:23:57 AM
+     Removed 926 files, 454.1MiB total
+Tuesday, November 12, 2024 7:23:57 AM
+   Compiling windows_x86_64_msvc v0.52.6
+   Compiling proc-macro2 v1.0.89
+   Compiling unicode-ident v1.0.13
+   Compiling bytes v1.8.0
+   Compiling pin-project-lite v0.2.15
+   Compiling autocfg v1.4.0
+   Compiling futures-core v0.3.31
+   Compiling itoa v1.0.11
+   Compiling futures-sink v0.3.31
+   Compiling fnv v1.0.7
+   Compiling once_cell v1.20.2
+   Compiling cfg-if v1.0.0
+   Compiling memchr v2.7.4
+   Compiling equivalent v1.0.1
+   Compiling hashbrown v0.15.0
+   Compiling futures-io v0.3.31
+   Compiling httparse v1.9.5
+   Compiling futures-task v0.3.31
+   Compiling pin-utils v0.1.0
+   Compiling windows_x86_64_msvc v0.48.5
+   Compiling native-tls v0.2.12
+   Compiling atomic-waker v1.1.2
+   Compiling serde v1.0.213
+   Compiling tracing-core v0.1.32
+   Compiling try-lock v0.2.5
+   Compiling tinyvec_macros v0.1.1
+   Compiling want v0.3.1
+   Compiling tinyvec v1.8.0
+   Compiling futures-channel v0.3.31
+   Compiling percent-encoding v2.3.1
+   Compiling smallvec v1.13.2
+   Compiling http v1.1.0
+   Compiling byteorder v1.5.0
+   Compiling form_urlencoded v1.2.1
+   Compiling getrandom v0.2.15
+   Compiling tracing v0.1.40
+   Compiling indexmap v2.6.0
+   Compiling slab v0.4.9
+   Compiling tower-service v0.3.3
+   Compiling windows-targets v0.52.6
+   Compiling serde_json v1.0.132
+   Compiling unicode-bidi v0.3.17
+   Compiling windows-sys v0.52.0
+   Compiling windows-sys v0.59.0
+   Compiling windows-result v0.2.0
+   Compiling ryu v1.0.18
+   Compiling rand_core v0.6.4
+   Compiling windows-strings v0.1.0
+   Compiling windows-targets v0.48.5
+   Compiling thiserror v1.0.65
+   Compiling rustls-pki-types v1.10.0
+   Compiling quote v1.0.37
+   Compiling futures-util v0.3.31
+   Compiling windows-registry v0.2.0
+   Compiling windows-sys v0.48.0
+   Compiling sync_wrapper v1.0.1
+   Compiling syn v2.0.85
+   Compiling http-body v1.0.1
+   Compiling unicode-normalization v0.1.24
+   Compiling encoding_rs v0.8.35
+   Compiling rustls-pemfile v2.2.0
+   Compiling log v0.4.22
+   Compiling ipnet v2.10.1
+   Compiling base64 v0.22.1
+   Compiling mime v0.3.17
+   Compiling dotenv v0.15.0
+   Compiling idna v0.5.0
+   Compiling url v2.5.2
+   Compiling zerocopy-derive v0.7.35
+   Compiling serde_derive v1.0.213
+   Compiling thiserror-impl v1.0.65
+   Compiling mio v1.0.2
+   Compiling socket2 v0.5.7
+   Compiling home v0.5.9
+   Compiling etcetera v0.8.0
+   Compiling zerocopy v0.7.35
+   Compiling http-body-util v0.1.2
+   Compiling tokio v1.41.0
+   Compiling ppv-lite86 v0.2.20
+   Compiling rand_chacha v0.3.1
+   Compiling rand v0.8.5
+   Compiling schannel v0.1.26
+   Compiling tokio-util v0.7.12
+   Compiling tokio-native-tls v0.3.1
+   Compiling h2 v0.4.6
+   Compiling serde_urlencoded v0.7.1
+   Compiling hyper v1.5.0
+   Compiling hyper-util v0.1.9
+   Compiling hyper-tls v0.6.0
+   Compiling reqwest v0.12.8
+   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
+warning: struct `Graph` is never constructed
+ --> src\graph.rs:3:12
+  |
+3 | pub struct Graph {
+  |            ^^^^^
+  |
+  = note: `#[warn(dead_code)]` on by default
+
+warning: associated items `new`, `add_node`, `add_edge`, `bfs`, `dfs`, and `dfs_recursive` are never used
+  --> src\graph.rs:8:12
+   |
+7  | impl Graph {
+   | ---------- associated items in this implementation
+8  |     pub fn new() -> Self {
+   |            ^^^
+...
+14 |     pub fn add_node(&mut self, value: &str) {
+   |            ^^^^^^^^
+...
+18 |     pub fn add_edge(&mut self, from: &str, to: &str) {
+   |            ^^^^^^^^
+...
+24 |     pub fn bfs(&self, start: &str) -> Vec<String> {
+   |            ^^^
+...
+48 |     pub fn dfs(&self, start: &str) -> Vec<String> {
+   |            ^^^
+...
+55 |     fn dfs_recursive(&self, node: &str, visited: &mut HashMap<String, bool>, result: &mut Vec<String>) {
+   |        ^^^^^^^^^^^^^
+
+warning: `helloworld` (bin "helloworld") generated 2 warnings
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 12.64s
+Tuesday, November 12, 2024 7:24:10 AM
+   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.76s
+     Running unittests src/main.rs (target\debug\deps\helloworld-358f72777eb128ff.exe)
+
+running 24 tests
+test greatest_common_divisor::tests::test_both_are_zero ... ok
+test greatest_common_divisor::tests::test_large_composite_numbers ... ok
+test graph::tests::test_bfs ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance_single ... ok
+test greatest_common_divisor::tests::test_one_is_zero ... ok
+test greatest_common_divisor::tests::test_zero_input ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance_multiple ... ok
+test graph::tests::test_dfs ... ok
+test greatest_common_divisor::tests::test_large_numbers ... ok
+test greatest_common_divisor::tests::test_large_prime_numbers ... ok
+test greatest_common_divisor::tests::test_mixed_numbers ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance ... ok
+test greatest_common_divisor::tests::test_prime_numbers ... ok
+test greatest_common_divisor::tests::test_gcd ... ok
+test greatest_common_divisor::tests::test_zero_input_3 ... ok
+test my_math::tests::test_add ... ok
+test greatest_common_divisor::tests::test_one_is_one ... ok
+test my_data_types::tests::test_not_a_number ... ok
+test my_math::tests::test_add_multiply_ambiguous ... ok
+test my_math::tests::test_add_zero ... ok
+test my_math::tests::test_multiply ... ok
+test my_math::tests::test_multiply_zero ... ok
+test shadowing::tests::test_shadow ... ok
+test shadowing::tests::test_shadow_string_length ... ok
+
+test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+Tuesday, November 12, 2024 7:24:11 AM
+Tuesday, November 12, 2024 7:24:11 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Tuesday, November 12, 2024 7:24:11 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Tuesday, November 12, 2024 7:24:11 AM
+From github.com:kusl/hellorust20240711
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Already up to date.
+Tuesday, November 12, 2024 7:24:12 AM
+Pushing to github.com:kusl/hellorust20240711.git
+To github.com:kusl/hellorust20240711.git
+ = [up to date]      master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Everything up-to-date
+Tuesday, November 12, 2024 7:24:12 AM
+Tuesday, November 12, 2024 7:24:12 AM
+Build started 11/12/2024 7:24:13 AM.
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" on node 1 (Clean target(s)).
+     1>ValidateSolutionConfiguration:
+         Building solution configuration "Debug|Any CPU".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj" (2) on node 1 (Clean target(s)).
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\TraceReloggerLib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Dia2Lib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\KernelTraceControl.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\KernelTraceControl.Win61.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\x86\msdia140.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\amd64\KernelTraceControl.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\amd64\msdia140.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\arm64\KernelTraceControl.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\arm64\msdia140.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.exe".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.deps.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.runtimeconfig.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\BenchmarkDotNet.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\BenchmarkDotNet.Annotations.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\CommandLine.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Gee.External.Capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Iced.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.NETCore.Client.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.Runtime.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.FastSerialization.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Diagnostics.Tracing.TraceEvent.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.DotNet.PlatformAbstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\MoreLinq.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\Perfolizer.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\System.CodeDom.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\System.Management.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-arm\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-arm64\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-x64\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\linux-x86\native\libcapstone.so".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\osx-arm64\native\libcapstone.dylib".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\osx-x64\native\libcapstone.dylib".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-arm64\native\capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-x64\native\capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win-x86\native\capstone.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.0\System.Management.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\helloben.03AB233B.Up2Date".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\refint\hellobenchamarks.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\hellobenchamarks.genruntimeconfig.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\obj\Debug\net8.0\ref\hellobenchamarks.dll".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (3) on node 3 (Clean target(s)).
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.deps.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\refint\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net8.0\ref\hellolib.dll".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (5) on node 2 (Clean target(s)).
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\.msCoverageSourceRootsMapping_tests".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\CoverletSourceRootsMapping_tests".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\testhost.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\testhost.exe".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.visualstudio.testadapter.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.runner.utility.netcoreapp10.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\authorizations.csv".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.deps.json".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (4) on node 4 (Clean target(s)).
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.exe".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.runtimeconfig.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Castle.Core.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\FluentAssertions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.deps.json".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.runtimeconfig.json".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.pdb".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CoreUtilities.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.PlatformAbstractions.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Options.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\MoreLinq.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CommunicationUtilities.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hellolib.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.CrossPlatEngine.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hellolib.pdb".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.TestPlatform.Utilities.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.csproj.AssemblyReference.cache".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Microsoft.VisualStudio.TestPlatform.Common.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.GeneratedMSBuildEditorConfig.editorconfig".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\MoreLinq.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.AssemblyInfo.cs".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\Newtonsoft.Json.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.csproj.CoreCompileInputs.cache".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\NSubstitute.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.csproj.Up2Date".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\System.Diagnostics.EventLog.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\refint\hello.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.abstractions.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\hello.genruntimeconfig.cache".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.assert.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net8.0\ref\hello.dll".
+     5>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.core.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\xunit.execution.dotnet.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.csproj.Up2Date".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\refint\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\tests.genruntimeconfig.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net8.0\ref\tests.dll".
+     3>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
+     2>Done Building Project "C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj" (Clean target(s)).
+     4>Done Building Project "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (Clean target(s)).
+     5>Done Building Project "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (Clean target(s)).
+     1>Done Building Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (Clean target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.65
+Tuesday, November 12, 2024 7:24:13 AM
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
+  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Debug\net8.0\hello.dll
+  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net8.0\hellobenchamarks.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.78
+
+Workload updates are available. Run `dotnet workload list` for more information.
+Tuesday, November 12, 2024 7:24:16 AM
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
+Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:   330, Skipped:     0, Total:   330, Duration: 5 s - tests.dll (net8.0)
+
+Workload updates are available. Run `dotnet workload list` for more information.
+Tuesday, November 12, 2024 7:24:24 AM
+Tuesday, November 12, 2024 7:24:24 AM
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net8.0\hellolib.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll
+  [coverlet] _mapping file name: 'CoverletSourceRootsMapping_tests'
+Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net8.0\tests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:   330, Skipped:     0, Total:   330, Duration: 5 s - tests.dll (net8.0)
+  [coverlet]
+  Calculating coverage result...
+   Generating report 'C:\Users\kushal\src\mydotnet\tests\coverage.cobertura.xml'
+
++----------+--------+--------+--------+
+| Module   | Line   | Branch | Method |
++----------+--------+--------+--------+
+| hellolib | 99.35% | 99.29% | 100%   |
++----------+--------+--------+--------+
+
++---------+--------+--------+--------+
+|         | Line   | Branch | Method |
++---------+--------+--------+--------+
+| Total   | 99.35% | 99.29% | 100%   |
++---------+--------+--------+--------+
+| Average | 99.35% | 99.29% | 100%   |
++---------+--------+--------+--------+
+
+
+Workload updates are available. Run `dotnet workload list` for more information.
+2024-11-12T07:24:31: Arguments
+2024-11-12T07:24:31:  -reports:coverage.cobertura.xml
+2024-11-12T07:24:31:  -targetdir:coverage-report
+2024-11-12T07:24:31: Writing report file 'coverage-report\index.html'
+2024-11-12T07:24:31: Report generation took 0.2 seconds
+Tuesday, November 12, 2024 7:24:31 AM
+Tuesday, November 12, 2024 7:24:31 AM
+warning: in the working copy of 'docs/icon_cube.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_fork.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_sponsor.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir_active.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_wrench.svg', LF will be replaced by CRLF the next time Git touches it
+Tuesday, November 12, 2024 7:24:31 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/hellolib_BabysFirstDynamicProgrammingMethods.html
+        modified:   docs/hellolib_BubbleSort.html
+        modified:   docs/hellolib_CurrentWeather.html
+        modified:   docs/hellolib_DesignDynamicArray.html
+        modified:   docs/hellolib_Entity.html
+        modified:   docs/hellolib_FindClosestNumberToZero.html
+        modified:   docs/hellolib_Graph.html
+        modified:   docs/hellolib_Knapsack.html
+        modified:   docs/hellolib_KnapsackItem.html
+        modified:   docs/hellolib_ListNode.html
+        modified:   docs/hellolib_MergeSort.html
+        modified:   docs/hellolib_MergeSortedArray.html
+        modified:   docs/hellolib_MergeStringsAlternately.html
+        modified:   docs/hellolib_MinimumCoin.html
+        modified:   docs/hellolib_MyCleaner.html
+        modified:   docs/hellolib_MySearch.html
+        modified:   docs/hellolib_PascalTriangle.html
+        modified:   docs/hellolib_PasswordSettings.html
+        modified:   docs/hellolib_Person.html
+        modified:   docs/hellolib_PersonFactory.html
+        modified:   docs/hellolib_Revocation.html
+        modified:   docs/hellolib_RomanToInteger.html
+        modified:   docs/hellolib_SinglyLinkedList.html
+        modified:   docs/hellolib_SinglyLinkedListAddTwoNumbers.html
+        modified:   docs/hellolib_SinglyLinkedListNode.html
+        modified:   docs/hellolib_TwoSum.html
+        modified:   docs/hellolib_Weather.html
+        modified:   docs/hellolib_WeatherFetchException.html
+        modified:   docs/index.htm
+        modified:   docs/index.html
+        modified:   tests/coverage.cobertura.xml
+
+Tuesday, November 12, 2024 7:24:31 AM
+[master 1f2b838] build application
+ 31 files changed, 33 insertions(+), 33 deletions(-)
+Tuesday, November 12, 2024 7:24:32 AM
+From github.com:patstha/mydotnet
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Current branch master is up to date.
+Tuesday, November 12, 2024 7:24:32 AM
+Pushing to github.com:patstha/mydotnet.git
+Enumerating objects: 67, done.
+Counting objects: 100% (67/67), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (34/34), done.
+Writing objects: 100% (34/34), 2.72 KiB | 2.72 MiB/s, done.
+Total 34 (delta 33), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (33/33), completed with 33 local objects.
+To github.com:patstha/mydotnet.git
+   979d2c1..1f2b838  master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Tuesday, November 12, 2024 7:24:33 AM
+Tuesday, November 12, 2024 7:24:33 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Tuesday, November 12, 2024 7:24:33 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 5 modules transformed.
+docs/index.html                0.27 kB │ gzip: 0.22 kB
+docs/assets/index-D1OKu7AJ.js  8.63 kB │ gzip: 3.19 kB
+✓ built in 121ms
+Done in 1.06s.
+Tuesday, November 12, 2024 7:24:35 AM
+warning: in the working copy of 'docs/assets/index-D1OKu7AJ.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Tuesday, November 12, 2024 7:24:35 AM
+On branch kus-2024-10-30-modules
+nothing to commit, working tree clean
+Tuesday, November 12, 2024 7:24:35 AM
+On branch kus-2024-10-30-modules
+nothing to commit, working tree clean
+Tuesday, November 12, 2024 7:24:35 AM
+From github.com:matchthree/matchthree.github.io
+ * branch            master     -> FETCH_HEAD
+Current branch kus-2024-10-30-modules is up to date.
+Tuesday, November 12, 2024 7:24:35 AM
+Everything up-to-date
+Tuesday, November 12, 2024 7:24:37 AM
+Tuesday, November 12, 2024 7:24:37 AM
+Tuesday, November 12, 2024 7:24:37 AM
+On branch main
+nothing to commit, working tree clean
+Tuesday, November 12, 2024 7:24:37 AM
+Tuesday, November 12, 2024 7:24:37 AM
+Tuesday, November 12, 2024 7:24:39 AM
+Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
+Tuesday, November 12, 2024 7:24:39 AM
+Tuesday, November 12, 2024 7:24:39 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Tuesday, November 12, 2024 7:24:39 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 2.83s
+Done in 3.65s.
+Tuesday, November 12, 2024 7:24:43 AM
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/A3B318B569046159E1DD6616D2E646D9434350E6.asc', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/favicon_io/about.txt', LF will be replaced by CRLF the next time Git touches it
+Tuesday, November 12, 2024 7:24:57 AM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   docs/notes/2024/11/12/fios.txt
+        modified:   docs/notes/earth.jpeg
+        modified:   docs/powershell.txt
+        new file:   public/notes/2024/11/12/fios.txt
+        modified:   public/notes/earth.jpeg
+        modified:   public/powershell.txt
+
+Tuesday, November 12, 2024 7:24:57 AM
+[main 297cab73] build application
+ 6 files changed, 1486 insertions(+)
+ create mode 100644 docs/notes/2024/11/12/fios.txt
+ create mode 100644 public/notes/2024/11/12/fios.txt
+Tuesday, November 12, 2024 7:24:57 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch              main       -> FETCH_HEAD
+Current branch main is up to date.
+Tuesday, November 12, 2024 7:24:58 AM
+Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 12.75 MiB | 7.42 MiB/s, done.
+Total 11 (delta 8), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (8/8), completed with 8 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   8ef8afd2..297cab73  main -> main
+Tuesday, November 12, 2024 7:25:01 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_videos.ps1  -url "https://www.instagram.com/reel/C-jCoQFusE7","https://www.instagram.com/reel/DCPAj-UNTn9","https://www.instagram.com/reel/DBE7j60SX0O","https://www.instagram.com/reel/C9fLEVMOpog","https://www.instagram.com/reel/DBhz1MspOwP","https://www.instagram.com/reel/C8YBT_kOjyV"
+Create new folder for yt-dlp
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          11/12/2024  7:41 AM                yt-dlp
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 826
+Microsecond : 444
+Nanosecond  : 100
+Minute      : 41
+Month       : 11
+Second      : 40
+Ticks       : 638669941008264441
+TimeOfDay   : 07:41:40.8264441
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:41:40 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 831
+Microsecond : 874
+Nanosecond  : 0
+Minute      : 41
+Month       : 11
+Second      : 40
+Ticks       : 638669941008318740
+TimeOfDay   : 07:41:40.8318740
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:41:40 AM
+
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241112074140.%(ext)s','https://www.instagram.com/reel/C-jCoQFusE7']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.11.04 from yt-dlp/yt-dlp [197d0b03b] (win_exe)
+[debug] Python 3.10.11 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1t  7 Feb 2023)
+[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.40.1, urllib3-2.2.3, websockets-13.1
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1838 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C-jCoQFusE7
+[Instagram] C-jCoQFusE7: Setting up session
+[Instagram] C-jCoQFusE7: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec, channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C-jCoQFusE7: Downloading 1 format(s): dash-1131941715061651v+dash-1459121028089762ad
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/o1/v/t16/f2/m69/AQNOuvUfBxlfTzIroAVpudDU9vQL-M0PyIJPHHDX2NQbo_1XlryaQF0LAYShmXWlsCOSJe6R_RF6FZSvJmUn46GG.mp4?strext=1&_nc_cat=111&_nc_sid=9ca052&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_ohc=Puj9wa15iogQ7kNvgGZH8DD&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsLCJjbGllbnRfbmFtZSI6ImlnIiwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=9-4&oh=00_AYBRgFBltk8vpVajnBQZtO8h9EwgfjPCazs9tQrrG0zksA&oe=67392DAC"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\20241112074140.fdash-1131941715061651v.mp4
+[download] 100% of    1.12MiB in 00:00:00 at 5.52MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/o1/v/t16/f2/m69/AQO3JQ7WboxZ5_sfIQPtN23WXM51pK3kvXFo0v73zDy5UAjm3vf-TP4Uuyk3wKTMAQ-obuAQ3CUs0y-NwvSMy1gG.mp4?strext=1&_nc_cat=109&_nc_sid=9ca052&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_ohc=SZjdFXXFwNsQ7kNvgGFSWk_&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsLCJjbGllbnRfbmFtZSI6ImlnIiwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=9-4&oh=00_AYAy5psLr9TlyPCxWz125AFUJycl26xQHyYbk-2BHUJ9vA&oe=673913AA"
+[download] Destination: C:\Temp\yt-dlp\20241112074140.fdash-1459121028089762ad.m4a
+[download] 100% of  374.69KiB in 00:00:00 at 5.36MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\20241112074140.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241112074140.fdash-1131941715061651v.mp4 -i file:C:\Temp\yt-dlp\20241112074140.fdash-1459121028089762ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241112074140.temp.mp4
+Deleting original file C:\Temp\yt-dlp\20241112074140.fdash-1131941715061651v.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\20241112074140.fdash-1459121028089762ad.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241112074140.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241112074140.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by khouloudnehme" -metadata "date=20240811" -metadata "description=Exercise can fix a lots of health issues and problems, but can not undo other health issues that a bad diet causes!
+Eat healthy and exercise is your way to live healthier and longer!
+@levels #diet #exercise" -metadata "synopsis=Exercise can fix a lots of health issues and problems, but can not undo other health issues that a bad diet causes!
+Eat healthy and exercise is your way to live healthier and longer!
+@levels #diet #exercise" -metadata "purl=https://www.instagram.com/reel/C-jCoQFusE7" -metadata "comment=https://www.instagram.com/reel/C-jCoQFusE7" -metadata "artist=LIT10" -movflags +faststart file:C:\Temp\yt-dlp\20241112074140.temp.mp4
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 164
+Microsecond : 484
+Nanosecond  : 800
+Minute      : 41
+Month       : 11
+Second      : 44
+Ticks       : 638669941041644848
+TimeOfDay   : 07:41:44.1644848
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:41:44 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 173
+Microsecond : 560
+Nanosecond  : 500
+Minute      : 41
+Month       : 11
+Second      : 44
+Ticks       : 638669941041735605
+TimeOfDay   : 07:41:44.1735605
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:41:44 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 175
+Microsecond : 681
+Nanosecond  : 200
+Minute      : 41
+Month       : 11
+Second      : 44
+Ticks       : 638669941041756812
+TimeOfDay   : 07:41:44.1756812
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:41:44 AM
+
+
+    Directory: C:\Temp\yt-dlp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          11/12/2024  7:41 AM        1567221 20241112074140.mp4
+-a---          11/12/2024  7:41 AM        1567221 20241112074140.mp4
+Cleaned video name: 20241112074140mp4
+Cleaned video path: C:\Temp\yt-dlp\20241112074140mp4
+Running ffmpeg
+ffmpeg -i "C:\Temp\yt-dlp\20241112074140mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241112074140mp4_reencoded.mp4"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec--enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241112074140mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by khouloudnehme
+    artist          : LIT10
+    date            : 20240811
+    encoder         : Lavf61.7.100
+    comment         : https://www.instagram.com/reel/C-jCoQFusE7
+    description     : Exercise can fix a lots of health issues and problems, but can not undo other health issues that a bad diet causes!
+                    : Eat healthy and exercise is your way to live healthier and longer!
+                    : @levels #diet #exercise
+    synopsis        : Exercise can fix a lots of health issues and problems, but can not undo other health issues that a bad diet causes!
+                    : Eat healthy and exercise is your way to live healthier and longer!
+                    : @levels #diet #exercise
+  Duration: 00:00:56.93, start: 0.000000, bitrate: 220 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 163 kb/s, 27.31 fps, 27.31 tbr, 27313 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 52 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000021c0d70d400] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000021c0d70d400] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 0000021c0d70d400] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\20241112074140mp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by khouloudnehme
+    artist          : LIT10
+    date            : 20240811
+    synopsis        : Exercise can fix a lots of health issues and problems, but can not undo other health issues that a bad diet causes!
+                    : Eat healthy and exercise is your way to live healthier and longer!
+                    : @levels #diet #exercise
+    comment         : https://www.instagram.com/reel/C-jCoQFusE7
+    description     : Exercise can fix a lots of health issues and problems, but can not undo other health issues that a bad diet causes!
+                    : Eat healthy and exercise is your way to live healthier and longer!
+                    : @levels #diet #exercise
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 27.31 fps, 27313 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 aac
+[mp4 @ 0000021c0d7373c0] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000021c0d74a8c0] video:2779KiB audio:860KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 1.575525%
+frame= 1555 fps=326 q=-1.0 Lsize=    3696KiB time=00:00:56.85 bitrate= 532.5kbits/s speed=11.9x
+[libx264 @ 0000021c0d70d400] frame I:7     Avg QP:11.60  size: 57801
+[libx264 @ 0000021c0d70d400] frame P:392   Avg QP:16.14  size:  4347
+[libx264 @ 0000021c0d70d400] frame B:1156  Avg QP:19.77  size:   637
+[libx264 @ 0000021c0d70d400] consecutive B-frames:  0.6%  0.3%  1.4% 97.7%
+[libx264 @ 0000021c0d70d400] mb I  I16..4: 57.2% 32.8% 10.0%
+[libx264 @ 0000021c0d70d400] mb P  I16..4:  0.2%  0.8%  0.1%  P16..4:  7.4%  2.1%  0.9%  0.0%  0.0%    skip:88.5%
+[libx264 @ 0000021c0d70d400] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  4.8%  0.1%  0.0%  direct: 0.0%  skip:95.0%  L0:47.7% L1:50.4% BI: 1.8%
+[libx264 @ 0000021c0d70d400] 8x8 transform intra:47.7% inter:91.2%
+[libx264 @ 0000021c0d70d400] coded y,uvDC,uvAC intra: 43.4% 28.5% 8.8% inter: 1.0% 0.9% 0.0%
+[libx264 @ 0000021c0d70d400] i16 v,h,dc,p: 81% 14%  2%  4%
+[libx264 @ 0000021c0d70d400] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 16% 35% 11%  4%  7%  8%  8%  5%  7%
+[libx264 @ 0000021c0d70d400] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 36% 11%  3%  5%  6%  5%  3%  4%
+[libx264 @ 0000021c0d70d400] i8c dc,h,v,p: 67% 15% 12%  5%
+[libx264 @ 0000021c0d70d400] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0000021c0d70d400] ref P L0: 59.5% 15.5% 19.2%  5.8%
+[libx264 @ 0000021c0d70d400] ref B L0: 83.8% 14.3%  2.0%
+[libx264 @ 0000021c0d70d400] ref B L1: 96.9%  3.1%
+[libx264 @ 0000021c0d70d400] kb/s:399.72
+[aac @ 0000021c0d77bf80] Qavg: 5309.615
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 69
+Microsecond : 836
+Nanosecond  : 300
+Minute      : 41
+Month       : 11
+Second      : 49
+Ticks       : 638669941090698363
+TimeOfDay   : 07:41:49.0698363
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:41:49 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 254
+Microsecond : 774
+Nanosecond  : 100
+Minute      : 41
+Month       : 11
+Second      : 49
+Ticks       : 638669941092547741
+TimeOfDay   : 07:41:49.2547741
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:41:49 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 259
+Microsecond : 911
+Nanosecond  : 600
+Minute      : 41
+Month       : 11
+Second      : 49
+Ticks       : 638669941092599116
+TimeOfDay   : 07:41:49.2599116
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:41:49 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 264
+Microsecond : 883
+Nanosecond  : 700
+Minute      : 41
+Month       : 11
+Second      : 49
+Ticks       : 638669941092648837
+TimeOfDay   : 07:41:49.2648837
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:41:49 AM
+
+Get-ChildItem: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_videos.ps1:26
+Line |
+  26 |      Get-ChildItem $tempDir
+     |      ~~~~~~~~~~~~~~~~~~~~~~
+     | Cannot find path 'C:\Temp\yt-dlp' because it does not exist.
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 482
+Microsecond : 516
+Nanosecond  : 900
+Minute      : 41
+Month       : 11
+Second      : 49
+Ticks       : 638669941094825169
+TimeOfDay   : 07:41:49.4825169
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:41:49 AM
+
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241112074149.%(ext)s','https://www.instagram.com/reel/DCPAj-UNTn9']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.11.04 from yt-dlp/yt-dlp [197d0b03b] (win_exe)
+[debug] Python 3.10.11 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1t  7 Feb 2023)
+[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.40.1, urllib3-2.2.3, websockets-13.1
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1838 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/DCPAj-UNTn9
+[Instagram] DCPAj-UNTn9: Setting up session
+[Instagram] DCPAj-UNTn9: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec, channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] DCPAj-UNTn9: Downloading 1 format(s): dash-448107841638479v+dash-546220974805868ad
+[debug] Invoking http downloader on "https://instagram.fagc3-1.fna.fbcdn.net/o1/v/t16/f2/m69/AQOfFnK_PjZBPou0R_DorfNmkLx425Z88fTTXz4vrL2irl4BZ2Y0nhh1yKn411blNB4550IihWrodGfw3oy6-M8p.mp4?strext=1&_nc_cat=1&_nc_sid=9ca052&_nc_ht=instagram.fagc3-1.fna.fbcdn.net&_nc_ohc=THTRQnLuq94Q7kNvgFn1AtU&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsLCJjbGllbnRfbmFtZSI6ImlnIiwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=9-4&oh=00_AYBOYknIavGN1fPqiFxq38QFanuSntxIzwbRSpFaDPTfmA&oe=67390ECC"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\20241112074149.fdash-448107841638479v.mp4
+[download] 100% of    8.87MiB in 00:00:00 at 15.46MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/o1/v/t16/f2/m69/AQNQqWpdOqucKw2DL8x8QQoixKn8wB9lP9YiiQlu2vBpY-nze6aHjRMsJMn4ixBdbetGh7XSg-caHeuTPGErWHRf.mp4?strext=1&_nc_cat=107&_nc_sid=9ca052&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_ohc=bsEcp0bgFBYQ7kNvgELe54B&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsLCJjbGllbnRfbmFtZSI6ImlnIiwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=9-4&oh=00_AYCMk9txUlFQCMifz4xNCydLeuiVrSms972RuORPDT0grg&oe=67390644"
+[download] Destination: C:\Temp\yt-dlp\20241112074149.fdash-546220974805868ad.m4a
+[download] 100% of  506.16KiB in 00:00:00 at 2.86MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\20241112074149.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241112074149.fdash-448107841638479v.mp4 -i file:C:\Temp\yt-dlp\20241112074149.fdash-546220974805868ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241112074149.temp.mp4
+Deleting original file C:\Temp\yt-dlp\20241112074149.fdash-546220974805868ad.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\20241112074149.fdash-448107841638479v.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241112074149.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241112074149.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by doctormyro" -metadata "date=20241111" -metadata "description=That’s some great news for carb lovers!
+
+#carbs #bread #nutrition #glycemicindex #glucose #metabolism #fitlifestyle #momhacks #foodhacks" -metadata "synopsis=That’s some great news for carb lovers!
+
+#carbs #bread #nutrition #glycemicindex #glucose #metabolism #fitlifestyle #momhacks #foodhacks" -metadata "purl=https://www.instagram.com/reel/DCPAj-UNTn9" -metadata "comment=https://www.instagram.com/reel/DCPAj-UNTn9" -metadata "artist=Myro Figura MD | Anesthesiologist 💉" -movflags +faststart file:C:\Temp\yt-dlp\20241112074149.temp.mp4
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 276
+Microsecond : 246
+Nanosecond  : 300
+Minute      : 41
+Month       : 11
+Second      : 52
+Ticks       : 638669941122762463
+TimeOfDay   : 07:41:52.2762463
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:41:52 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 278
+Microsecond : 473
+Nanosecond  : 800
+Minute      : 41
+Month       : 11
+Second      : 52
+Ticks       : 638669941122784738
+TimeOfDay   : 07:41:52.2784738
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:41:52 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 279
+Microsecond : 987
+Nanosecond  : 0
+Minute      : 41
+Month       : 11
+Second      : 52
+Ticks       : 638669941122799870
+TimeOfDay   : 07:41:52.2799870
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:41:52 AM
+
+-a---          11/12/2024  7:41 AM        9839933 20241112074149.mp4
+-a---          11/12/2024  7:41 AM        9839933 20241112074149.mp4
+Cleaned video name: 20241112074149mp4
+Cleaned video path: C:\Temp\yt-dlp\20241112074149mp4
+Running ffmpeg
+ffmpeg -i "C:\Temp\yt-dlp\20241112074149mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241112074149mp4_reencoded.mp4"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec--enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241112074149mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by doctormyro
+    artist          : Myro Figura MD | Anesthesiologist 💉
+    date            : 20241111
+    encoder         : Lavf61.7.100
+    comment         : https://www.instagram.com/reel/DCPAj-UNTn9
+    description     : That’s some great news for carb lovers!
+                    :
+                    : #carbs #bread #nutrition #glycemicindex #glucose #metabolism #fitlifestyle #momhacks #foodhacks
+    synopsis        : That’s some great news for carb lovers!
+                    :
+                    : #carbs #bread #nutrition #glycemicindex #glucose #metabolism #fitlifestyle #momhacks #foodhacks
+  Duration: 00:01:00.07, start: 0.000000, bitrate: 1310 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 1238 kb/s, 29.70 fps, 29.70 tbr, 19008 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 67 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000001e0a8519500] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001e0a8519500] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 000001e0a8519500] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\20241112074149mp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by doctormyro
+    artist          : Myro Figura MD | Anesthesiologist 💉
+    date            : 20241111
+    synopsis        : That’s some great news for carb lovers!
+                    :
+                    : #carbs #bread #nutrition #glycemicindex #glucose #metabolism #fitlifestyle #momhacks #foodhacks
+    comment         : https://www.instagram.com/reel/DCPAj-UNTn9
+    description     : That’s some great news for carb lovers!
+                    :
+                    : #carbs #bread #nutrition #glycemicindex #glucose #metabolism #fitlifestyle #momhacks #foodhacks
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 29.70 fps, 19008 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 aac
+[mp4 @ 000001e0a852ca00] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001e0a84f2980] video:16503KiB audio:963KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.373999%
+frame= 1784 fps=162 q=-1.0 Lsize=   17531KiB time=00:01:00.00 bitrate=2393.6kbits/s speed=5.44x
+[libx264 @ 000001e0a8519500] frame I:14    Avg QP:17.90  size:135621
+[libx264 @ 000001e0a8519500] frame P:491   Avg QP:20.66  size: 18876
+[libx264 @ 000001e0a8519500] frame B:1279  Avg QP:24.00  size:  4481
+[libx264 @ 000001e0a8519500] consecutive B-frames:  2.6%  3.1%  7.1% 87.2%
+[libx264 @ 000001e0a8519500] mb I  I16..4: 15.0% 67.4% 17.6%
+[libx264 @ 000001e0a8519500] mb P  I16..4:  4.0% 10.9%  0.8%  P16..4: 16.4%  4.8%  1.9%  0.0%  0.0%    skip:61.4%
+[libx264 @ 000001e0a8519500] mb B  I16..4:  0.5%  1.0%  0.0%  B16..8: 15.4%  1.6%  0.2%  direct: 0.7%  skip:80.7%  L0:47.4% L1:47.8% BI: 4.8%
+[libx264 @ 000001e0a8519500] 8x8 transform intra:68.9% inter:85.4%
+[libx264 @ 000001e0a8519500] coded y,uvDC,uvAC intra: 43.2% 43.4% 10.9% inter: 4.3% 4.5% 0.1%
+[libx264 @ 000001e0a8519500] i16 v,h,dc,p: 29% 22%  6% 43%
+[libx264 @ 000001e0a8519500] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 29% 19% 16%  5%  6%  6%  6%  7%  5%
+[libx264 @ 000001e0a8519500] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 31% 20% 10%  5%  9%  8%  8%  6%  4%
+[libx264 @ 000001e0a8519500] i8c dc,h,v,p: 52% 21% 22%  6%
+[libx264 @ 000001e0a8519500] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 000001e0a8519500] ref P L0: 63.0% 17.4% 13.6%  6.1%
+[libx264 @ 000001e0a8519500] ref B L0: 91.2%  7.0%  1.9%
+[libx264 @ 000001e0a8519500] ref B L1: 97.4%  2.6%
+[libx264 @ 000001e0a8519500] kb/s:2250.58
+[aac @ 000001e0a853e1c0] Qavg: 705.447
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 447
+Microsecond : 165
+Nanosecond  : 100
+Minute      : 42
+Month       : 11
+Second      : 3
+Ticks       : 638669941234471651
+TimeOfDay   : 07:42:03.4471651
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:03 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 434
+Microsecond : 579
+Nanosecond  : 500
+Minute      : 42
+Month       : 11
+Second      : 9
+Ticks       : 638669941294345795
+TimeOfDay   : 07:42:09.4345795
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:09 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 438
+Microsecond : 533
+Nanosecond  : 800
+Minute      : 42
+Month       : 11
+Second      : 9
+Ticks       : 638669941294385338
+TimeOfDay   : 07:42:09.4385338
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:09 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 440
+Microsecond : 487
+Nanosecond  : 900
+Minute      : 42
+Month       : 11
+Second      : 9
+Ticks       : 638669941294404879
+TimeOfDay   : 07:42:09.4404879
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:09 AM
+
+Get-ChildItem: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_videos.ps1:26
+Line |
+  26 |      Get-ChildItem $tempDir
+     |      ~~~~~~~~~~~~~~~~~~~~~~
+     | Cannot find path 'C:\Temp\yt-dlp' because it does not exist.
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 443
+Microsecond : 375
+Nanosecond  : 900
+Minute      : 42
+Month       : 11
+Second      : 9
+Ticks       : 638669941294433759
+TimeOfDay   : 07:42:09.4433759
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:09 AM
+
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241112074209.%(ext)s','https://www.instagram.com/reel/DBE7j60SX0O']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.11.04 from yt-dlp/yt-dlp [197d0b03b] (win_exe)
+[debug] Python 3.10.11 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1t  7 Feb 2023)
+[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.40.1, urllib3-2.2.3, websockets-13.1
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1838 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/DBE7j60SX0O
+[Instagram] DBE7j60SX0O: Setting up session
+[Instagram] DBE7j60SX0O: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec, channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] DBE7j60SX0O: Downloading 1 format(s): dash-1237995423887801v+dash-483306068190146ad
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/o1/v/t16/f2/m69/AQNIrvNnzrv-bUKPSdKnM3u8Q1MZY14CAeLUrckMxhB7h8iMIhOEZHWslVeFCk2h1pSeJOhUY0zpp1Uc6tB_OMRn.mp4?strext=1&_nc_cat=100&_nc_sid=9ca052&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_ohc=a1uE3v2M9TAQ7kNvgHxqHv6&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMyLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsLCJjbGllbnRfbmFtZSI6ImlnIiwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=9-4&oh=00_AYBvA7E8diqnf5iUe6bQIzz51mBO7q0Ybd-aOA6rdpSaQA&oe=673936A5"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\20241112074209.fdash-1237995423887801v.mp4
+[download] 100% of   13.58MiB in 00:00:00 at 22.38MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/o1/v/t16/f2/m69/AQNK8wRf-2NL5IcjOa1nQqzfjyVGNEInjt-XNJFk4fdodGO1GZMv7YuDgps67EdB46YGBMtArW3mu5yV5uutxlxX.mp4?strext=1&_nc_cat=106&_nc_sid=9ca052&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_ohc=lrSqpG5H9vUQ7kNvgGxtcDT&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMyLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsLCJjbGllbnRfbmFtZSI6ImlnIiwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=9-4&oh=00_AYASOINAtd8RpKpC5OQEJG9tnWXjj9dTE-XzkNT2r5iLGg&oe=673916FF"
+[download] Destination: C:\Temp\yt-dlp\20241112074209.fdash-483306068190146ad.m4a
+[download] 100% of  506.74KiB in 00:00:00 at 13.73MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\20241112074209.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241112074209.fdash-1237995423887801v.mp4 -i file:C:\Temp\yt-dlp\20241112074209.fdash-483306068190146ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241112074209.temp.mp4
+Deleting original file C:\Temp\yt-dlp\20241112074209.fdash-1237995423887801v.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\20241112074209.fdash-483306068190146ad.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241112074209.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241112074209.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by talkingwithdocs" -metadata "date=20241013" -metadata "description=🧠 Can You Really Prevent Dementia? 🧠
+
+There are many lifestyle factors that may help lower your risk of developing dementia. Staying active, nourishing your brain with the right foods, and keeping your mind engaged can all play a role in protecting your cognitive health.
+
+🧑‍⚕️ Consult a healthcare professional for personalized advice and early detection strategies.
+
+#dementia #alzheimers #caregiver #dementiacare #dementiaawareness #elderlycare #alzheimersawareness #seniorcare #caregiving #homecare #healthcare #eldercare #care #caregivers #alzheimer #elderly #health #seniorliving #assistedliving #love #aging #endalz #dementiasupport #caregiversupport #seniors #family #memorycare #alzheimersdisease #homehealthcare #covid" -metadata "synopsis=🧠 Can You Really Prevent Dementia? 🧠
+
+There are many lifestyle factors that may help lower your risk of developing dementia. Staying active, nourishing your brain with the right foods, and keeping your mind engaged can all play a role in protecting your cognitive health.
+
+🧑‍⚕️ Consult a healthcare professional for personalized advice and early detection strategies.
+
+#dementia #alzheimers #caregiver #dementiacare #dementiaawareness #elderlycare #alzheimersawareness #seniorcare #caregiving #homecare #healthcare #eldercare #care #caregivers #alzheimer #elderly #health #seniorliving #assistedliving #love #aging #endalz #dementiasupport #caregiversupport #seniors #family #memorycare #alzheimersdisease #homehealthcare #covid" -metadata "purl=https://www.instagram.com/reel/DBE7j60SX0O" -metadata "comment=https://www.instagram.com/reel/DBE7j60SX0O" -metadata "artist=Talking With Docs" -movflags +faststart file:C:\Temp\yt-dlp\20241112074209.temp.mp4
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 270
+Microsecond : 480
+Nanosecond  : 900
+Minute      : 42
+Month       : 11
+Second      : 12
+Ticks       : 638669941322704809
+TimeOfDay   : 07:42:12.2704809
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:12 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 272
+Microsecond : 654
+Nanosecond  : 400
+Minute      : 42
+Month       : 11
+Second      : 12
+Ticks       : 638669941322726544
+TimeOfDay   : 07:42:12.2726544
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:12 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 274
+Microsecond : 165
+Nanosecond  : 300
+Minute      : 42
+Month       : 11
+Second      : 12
+Ticks       : 638669941322741653
+TimeOfDay   : 07:42:12.2741653
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:12 AM
+
+-a---          11/12/2024  7:42 AM       14777084 20241112074209.mp4
+-a---          11/12/2024  7:42 AM       14777084 20241112074209.mp4
+Cleaned video name: 20241112074209mp4
+Cleaned video path: C:\Temp\yt-dlp\20241112074209mp4
+Running ffmpeg
+ffmpeg -i "C:\Temp\yt-dlp\20241112074209mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241112074209mp4_reencoded.mp4"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec--enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241112074209mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by talkingwithdocs
+    artist          : Talking With Docs
+    date            : 20241013
+    encoder         : Lavf61.7.100
+    comment         : https://www.instagram.com/reel/DBE7j60SX0O
+    description     : 🧠 Can You Really Prevent Dementia? 🧠
+                    :
+                    : There are many lifestyle factors that may help lower your risk of developing dementia. Staying active, nourishing your brain with the right foods, and keeping your mind engaged can all play a role in protecting your cognitive health.
+                    :
+                    : 🧑‍⚕️ Consult a healthcare professional for personalized advice and early detection strategies.
+                    :
+                    : #dementia #alzheimers #caregiver #dementiacare #dementiaawareness #elderlycare #alzheimersawareness #seniorcare #caregiving #homecare #healthcare #eldercare #care #caregivers #alzheimer #elderly #health #seniorliving #assistedliving #love #aging #endalz #
+    synopsis        : 🧠 Can You Really Prevent Dementia? 🧠
+                    :
+                    : There are many lifestyle factors that may help lower your risk of developing dementia. Staying active, nourishing your brain with the right foods, and keeping your mind engaged can all play a role in protecting your cognitive health.
+                    :
+                    : 🧑‍⚕️ Consult a healthcare professional for personalized advice and early detection strategies.
+                    :
+                    : #dementia #alzheimers #caregiver #dementiacare #dementiaawareness #elderlycare #alzheimersawareness #seniorcare #caregiving #homecare #healthcare #eldercare #care #caregivers #alzheimer #elderly #health #seniorliving #assistedliving #love #aging #endalz #
+  Duration: 00:01:02.58, start: 0.000000, bitrate: 1889 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 1819 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 64 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000001f8d9bf85c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001f8d9bf85c0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 000001f8d9bf85c0] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\20241112074209mp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by talkingwithdocs
+    artist          : Talking With Docs
+    date            : 20241013
+    synopsis        : 🧠 Can You Really Prevent Dementia? 🧠
+                    :
+                    : There are many lifestyle factors that may help lower your risk of developing dementia. Staying active, nourishing your brain with the right foods, and keeping your mind engaged can all play a role in protecting your cognitive health.
+                    :
+                    : 🧑‍⚕️ Consult a healthcare professional for personalized advice and early detection strategies.
+                    :
+                    : #dementia #alzheimers #caregiver #dementiacare #dementiaawareness #elderlycare #alzheimersawareness #seniorcare #caregiving #homecare #healthcare #eldercare #care #caregivers #alzheimer #elderly #health #seniorliving #assistedliving #love #aging #endalz #
+    comment         : https://www.instagram.com/reel/DBE7j60SX0O
+    description     : 🧠 Can You Really Prevent Dementia? 🧠
+                    :
+                    : There are many lifestyle factors that may help lower your risk of developing dementia. Staying active, nourishing your brain with the right foods, and keeping your mind engaged can all play a role in protecting your cognitive health.
+                    :
+                    : 🧑‍⚕️ Consult a healthcare professional for personalized advice and early detection strategies.
+                    :
+                    : #dementia #alzheimers #caregiver #dementiacare #dementiaawareness #elderlycare #alzheimersawareness #seniorcare #caregiving #homecare #healthcare #eldercare #care #caregivers #alzheimer #elderly #health #seniorliving #assistedliving #love #aging #endalz #
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 aac
+[mp4 @ 000001f8d93523c0] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001f8d93522c0] video:22790KiB audio:982KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.288203%
+frame= 1877 fps=133 q=-1.0 Lsize=   23841KiB time=00:01:02.50 bitrate=3124.8kbits/s speed=4.44x
+[libx264 @ 000001f8d9bf85c0] frame I:16    Avg QP:18.20  size: 85384
+[libx264 @ 000001f8d9bf85c0] frame P:577   Avg QP:22.40  size: 24455
+[libx264 @ 000001f8d9bf85c0] frame B:1284  Avg QP:25.72  size:  6121
+[libx264 @ 000001f8d9bf85c0] consecutive B-frames:  6.9%  3.6%  5.9% 83.5%
+[libx264 @ 000001f8d9bf85c0] mb I  I16..4: 18.2% 69.5% 12.3%
+[libx264 @ 000001f8d9bf85c0] mb P  I16..4:  7.7% 18.1%  0.8%  P16..4: 28.7%  6.9%  2.4%  0.0%  0.0%    skip:35.4%
+[libx264 @ 000001f8d9bf85c0] mb B  I16..4:  0.5%  1.3%  0.0%  B16..8: 26.4%  1.9%  0.2%  direct: 1.1%  skip:68.4%  L0:47.7% L1:48.5% BI: 3.8%
+[libx264 @ 000001f8d9bf85c0] 8x8 transform intra:68.3% inter:88.7%
+[libx264 @ 000001f8d9bf85c0] coded y,uvDC,uvAC intra: 35.4% 44.0% 11.3% inter: 6.2% 7.9% 0.2%
+[libx264 @ 000001f8d9bf85c0] i16 v,h,dc,p: 23% 31%  6% 40%
+[libx264 @ 000001f8d9bf85c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 28% 22% 19%  4%  6%  6%  6%  5%  4%
+[libx264 @ 000001f8d9bf85c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 31% 21% 11%  5%  9%  8%  7%  6%  3%
+[libx264 @ 000001f8d9bf85c0] i8c dc,h,v,p: 52% 21% 21%  6%
+[libx264 @ 000001f8d9bf85c0] Weighted P-Frames: Y:1.7% UV:1.7%
+[libx264 @ 000001f8d9bf85c0] ref P L0: 61.8% 14.9% 16.6%  6.7%  0.0%
+[libx264 @ 000001f8d9bf85c0] ref B L0: 90.7%  7.3%  1.9%
+[libx264 @ 000001f8d9bf85c0] ref B L1: 97.1%  2.9%
+[libx264 @ 000001f8d9bf85c0] kb/s:2983.81
+[aac @ 000001f8d9ba9e40] Qavg: 724.566
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 480
+Microsecond : 269
+Nanosecond  : 200
+Minute      : 42
+Month       : 11
+Second      : 26
+Ticks       : 638669941464802692
+TimeOfDay   : 07:42:26.4802692
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:26 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 278
+Microsecond : 897
+Nanosecond  : 300
+Minute      : 42
+Month       : 11
+Second      : 27
+Ticks       : 638669941472788973
+TimeOfDay   : 07:42:27.2788973
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:27 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 284
+Microsecond : 182
+Nanosecond  : 700
+Minute      : 42
+Month       : 11
+Second      : 27
+Ticks       : 638669941472841827
+TimeOfDay   : 07:42:27.2841827
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:27 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 285
+Microsecond : 988
+Nanosecond  : 900
+Minute      : 42
+Month       : 11
+Second      : 27
+Ticks       : 638669941472859889
+TimeOfDay   : 07:42:27.2859889
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:27 AM
+
+Get-ChildItem: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_videos.ps1:26
+Line |
+  26 |      Get-ChildItem $tempDir
+     |      ~~~~~~~~~~~~~~~~~~~~~~
+     | Cannot find path 'C:\Temp\yt-dlp' because it does not exist.
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 289
+Microsecond : 928
+Nanosecond  : 300
+Minute      : 42
+Month       : 11
+Second      : 27
+Ticks       : 638669941472899283
+TimeOfDay   : 07:42:27.2899283
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:27 AM
+
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241112074227.%(ext)s','https://www.instagram.com/reel/C9fLEVMOpog']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.11.04 from yt-dlp/yt-dlp [197d0b03b] (win_exe)
+[debug] Python 3.10.11 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1t  7 Feb 2023)
+[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.40.1, urllib3-2.2.3, websockets-13.1
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1838 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C9fLEVMOpog
+[Instagram] C9fLEVMOpog: Setting up session
+[Instagram] C9fLEVMOpog: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec, channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C9fLEVMOpog: Downloading 1 format(s): dash-1198998564589419vd+dash-1001480214848769ad
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/o1/v/t16/f1/m86/9945C49726DE77970953F20E2E83AF81_video_dashinit.mp4?_nc_cat=105&_nc_sid=9ca052&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_ohc=1zZV2SrOP70Q7kNvgH_Yil7&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfYmFzZWxpbmVfMV92MSIsInZpZGVvX2lkIjpudWxsLCJjbGllbnRfbmFtZSI6ImlnIiwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=9-4&oh=00_AYClXGGZamMnhHlPIAMZaV7SlhHF2u_mcEBPsW7ncFXcJg&oe=67353539"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\20241112074227.fdash-1198998564589419vd.mp4
+[download] 100% of    7.16MiB in 00:00:00 at 17.10MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/o1/v/t16/f2/m69/AQOMRtSH5xAKS4dFvIi3XXyY31Xe1QRKNhi3kFiAn1TF0K0-w33aLwY0aPKA3STZODvM6uyAi8iu--Le4BfdE7CT.mp4?strext=1&_nc_cat=106&_nc_sid=9ca052&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_ohc=ZgMlBiAe4PsQ7kNvgG3aF07&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsLCJjbGllbnRfbmFtZSI6ImlnIiwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=9-4&oh=00_AYBaq7o4QnoFoHvrocmRR4bjl-mgCYyMi6_AW3EQ5XYd2Q&oe=67390B67"
+[download] Destination: C:\Temp\yt-dlp\20241112074227.fdash-1001480214848769ad.m4a
+[download] 100% of  420.15KiB in 00:00:00 at 14.00MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\20241112074227.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241112074227.fdash-1198998564589419vd.mp4 -i file:C:\Temp\yt-dlp\20241112074227.fdash-1001480214848769ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241112074227.temp.mp4
+Deleting original file C:\Temp\yt-dlp\20241112074227.fdash-1198998564589419vd.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\20241112074227.fdash-1001480214848769ad.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241112074227.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241112074227.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by your.richbff" -metadata "date=20240716" -metadata "description=Comment RICHAF to get my NYT bestselling book to learn more rich people secrets! The rich have been doing things like this for YEARS to get ahead, so it’s only fair that you should know too 😉
+.
+.
+.
+.
+#money #finance #budgeting #savingmoney #investing #luxury #cash #lifehack #rich #retirement #family #save #saving #invest #health #healthcare #insurance #medicaid" -metadata "synopsis=Comment RICHAF to get my NYT bestselling book to learn more rich people secrets! The rich havebeen doing things like this for YEARS to get ahead, so it’s only fair that you should know too 😉
+.
+.
+.
+.
+#money #finance #budgeting #savingmoney #investing #luxury #cash #lifehack #rich #retirement #family #save #saving #invest #health #healthcare #insurance #medicaid" -metadata "purl=https://www.instagram.com/reel/C9fLEVMOpog" -metadata "comment=https://www.instagram.com/reel/C9fLEVMOpog" -metadata "artist=Vivian Tu | Your Rich BFF" -movflags +faststart file:C:\Temp\yt-dlp\20241112074227.temp.mp4
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 800
+Microsecond : 848
+Nanosecond  : 400
+Minute      : 42
+Month       : 11
+Second      : 29
+Ticks       : 638669941498008484
+TimeOfDay   : 07:42:29.8008484
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:29 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 803
+Microsecond : 829
+Nanosecond  : 300
+Minute      : 42
+Month       : 11
+Second      : 29
+Ticks       : 638669941498038293
+TimeOfDay   : 07:42:29.8038293
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:29 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 805
+Microsecond : 809
+Nanosecond  : 300
+Minute      : 42
+Month       : 11
+Second      : 29
+Ticks       : 638669941498058093
+TimeOfDay   : 07:42:29.8058093
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:29 AM
+
+-a---          11/12/2024  7:42 AM        7966182 20241112074227.mp4
+-a---          11/12/2024  7:42 AM        7966182 20241112074227.mp4
+Cleaned video name: 20241112074227mp4
+Cleaned video path: C:\Temp\yt-dlp\20241112074227mp4
+Running ffmpeg
+ffmpeg -i "C:\Temp\yt-dlp\20241112074227mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241112074227mp4_reencoded.mp4"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec--enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241112074227mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Video by your.richbff
+    artist          : Vivian Tu | Your Rich BFF
+    date            : 20240716
+    encoder         : Lavf61.7.100
+    comment         : https://www.instagram.com/reel/C9fLEVMOpog
+    description     : Comment RICHAF to get my NYT bestselling book to learn more rich people secrets! The rich have been doing things like this for YEARS to get ahead, so it’s only fair that you should know too 😉
+                    : .
+                    : .
+                    : .
+                    : .
+                    : #money #finance #budgeting #savingmoney #investing #luxury #cash #lifehack #rich #retirement #family #save #saving #invest #health #healthcare #insurance #medicaid
+    synopsis        : Comment RICHAF to get my NYT bestselling book to learn more rich people secrets! The rich have been doing things like this for YEARS to get ahead, so it’s only fair that you should know too 😉
+                    : .
+                    : .
+                    : .
+                    : .
+                    : #money #finance #budgeting #savingmoney #investing #luxury #cash #lifehack #rich #retirement #family #save #saving #invest #health #healthcare #insurance #medicaid
+  Duration: 00:00:59.40, start: 0.000000, bitrate: 1072 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 720x1280, 1009 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : AVC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 56 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000015c5d97e700] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000015c5d97e700] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 0000015c5d97e700] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\20241112074227mp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Video by your.richbff
+    artist          : Vivian Tu | Your Rich BFF
+    date            : 20240716
+    synopsis        : Comment RICHAF to get my NYT bestselling book to learn more rich people secrets! The rich have been doing things like this for YEARS to get ahead, so it’s only fair that you should know too 😉
+                    : .
+                    : .
+                    : .
+                    : .
+                    : #money #finance #budgeting #savingmoney #investing #luxury #cash #lifehack #rich #retirement #family #save #saving #invest #health #healthcare #insurance #medicaid
+    comment         : https://www.instagram.com/reel/C9fLEVMOpog
+    description     : Comment RICHAF to get my NYT bestselling book to learn more rich people secrets! The rich have been doing things like this for YEARS to get ahead, so it’s only fair that you should know too 😉
+                    : .
+                    : .
+                    : .
+                    : .
+                    : #money #finance #budgeting #savingmoney #investing #luxury #cash #lifehack #rich #retirement #family #save #saving #invest #health #healthcare #insurance #medicaid
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 720x1280, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 aac
+[mp4 @ 0000015c5d97eec0] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000015c5d95e8c0] video:9248KiB audio:928KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.641810%
+frame= 1782 fps=371 q=-1.0 Lsize=   10241KiB time=00:00:59.33 bitrate=1414.0kbits/s speed=12.4x
+[libx264 @ 0000015c5d97e700] frame I:9     Avg QP:19.54  size: 85342
+[libx264 @ 0000015c5d97e700] frame P:586   Avg QP:21.60  size: 10563
+[libx264 @ 0000015c5d97e700] frame B:1187  Avg QP:24.77  size:  2116
+[libx264 @ 0000015c5d97e700] consecutive B-frames:  0.8% 31.0%  0.7% 67.6%
+[libx264 @ 0000015c5d97e700] mb I  I16..4: 13.3% 52.5% 34.2%
+[libx264 @ 0000015c5d97e700] mb P  I16..4:  1.7%  6.6%  1.1%  P16..4: 21.3%  8.6%  3.3%  0.0%  0.0%    skip:57.5%
+[libx264 @ 0000015c5d97e700] mb B  I16..4:  0.3%  0.9%  0.0%  B16..8: 14.6%  1.5%  0.4%  direct: 0.8%  skip:81.5%  L0:45.7% L1:47.3% BI: 7.0%
+[libx264 @ 0000015c5d97e700] 8x8 transform intra:69.4% inter:85.0%
+[libx264 @ 0000015c5d97e700] coded y,uvDC,uvAC intra: 54.3% 52.9% 14.5% inter: 6.0% 4.5% 0.5%
+[libx264 @ 0000015c5d97e700] i16 v,h,dc,p: 22% 22%  6% 50%
+[libx264 @ 0000015c5d97e700] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 28% 15% 15%  5%  7% 10%  6%  8%  6%
+[libx264 @ 0000015c5d97e700] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 36% 19%  9%  4%  6%  9%  6%  6%  5%
+[libx264 @ 0000015c5d97e700] i8c dc,h,v,p: 47% 19% 25%  9%
+[libx264 @ 0000015c5d97e700] Weighted P-Frames: Y:0.2% UV:0.2%
+[libx264 @ 0000015c5d97e700] ref P L0: 62.4% 17.6% 14.0%  6.0%
+[libx264 @ 0000015c5d97e700] ref B L0: 88.6%  9.0%  2.4%
+[libx264 @ 0000015c5d97e700] ref B L1: 98.3%  1.7%
+[libx264 @ 0000015c5d97e700] kb/s:1275.34
+[aac @ 0000015c5d972ec0] Qavg: 881.899
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 711
+Microsecond : 305
+Nanosecond  : 600
+Minute      : 42
+Month       : 11
+Second      : 34
+Ticks       : 638669941547113056
+TimeOfDay   : 07:42:34.7113056
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:34 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 99
+Microsecond : 512
+Nanosecond  : 800
+Minute      : 42
+Month       : 11
+Second      : 35
+Ticks       : 638669941550995128
+TimeOfDay   : 07:42:35.0995128
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:35 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 103
+Microsecond : 521
+Nanosecond  : 900
+Minute      : 42
+Month       : 11
+Second      : 35
+Ticks       : 638669941551035219
+TimeOfDay   : 07:42:35.1035219
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:35 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 105
+Microsecond : 195
+Nanosecond  : 900
+Minute      : 42
+Month       : 11
+Second      : 35
+Ticks       : 638669941551051959
+TimeOfDay   : 07:42:35.1051959
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:35 AM
+
+Get-ChildItem: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_videos.ps1:26
+Line |
+  26 |      Get-ChildItem $tempDir
+     |      ~~~~~~~~~~~~~~~~~~~~~~
+     | Cannot find path 'C:\Temp\yt-dlp' because it does not exist.
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 108
+Microsecond : 675
+Nanosecond  : 100
+Minute      : 42
+Month       : 11
+Second      : 35
+Ticks       : 638669941551086751
+TimeOfDay   : 07:42:35.1086751
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:35 AM
+
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241112074235.%(ext)s','https://www.instagram.com/reel/DBhz1MspOwP']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.11.04 from yt-dlp/yt-dlp [197d0b03b] (win_exe)
+[debug] Python 3.10.11 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1t  7 Feb 2023)
+[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.40.1, urllib3-2.2.3, websockets-13.1
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1838 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/DBhz1MspOwP
+[Instagram] DBhz1MspOwP: Setting up session
+[Instagram] DBhz1MspOwP: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec, channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] DBhz1MspOwP: Downloading 1 format(s): dash-1249495852845797v+dash-440418025739348ad
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/o1/v/t16/f2/m69/AQOAAW13m3ppTrMbb71-DxV8MibJOXLZsiAlNgd4pj_qMnzlu94uTbQwmA-pHzDWbEYEFMSU9Kjd4PeMxnMKzuZX.mp4?strext=1&_nc_cat=101&_nc_sid=9ca052&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_ohc=SWVHkiklt14Q7kNvgFOfLOd&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5LWhmcl9xOTAiLCJ2aWRlb19pZCI6bnVsbCwiY2xpZW50X25hbWUiOiJpZyIsIm9pbF91cmxnZW5fYXBwX2lkIjo5MzY2MTk3NDMzOTI0NTksInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=9-4&oh=00_AYBoM6wNRDGeSe-s61jgiSlWzOmIawner4HUOB2R1Ma0Fw&oe=6739391A"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\20241112074235.fdash-1249495852845797v.mp4
+[download] 100% of    2.02MiB in 00:00:00 at 9.46MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/o1/v/t16/f2/m69/AQMFgnBSpvMP4FQ8Z28-JFHziI-kLD4W8rBlp751aMQIxMlQcZKfzswN0x5-haumVuZjQQNYZxme3C6byyR2QBxm.mp4?strext=1&_nc_cat=100&_nc_sid=9ca052&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_ohc=O5UWrpdOtYEQ7kNvgFEhwEu&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsLCJjbGllbnRfbmFtZSI6ImlnIiwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=9-4&oh=00_AYCJptPkKWmeZu00BG0VIXqV_rdCY0xCoG2HjfAy7VyRzg&oe=67391F91"
+[download] Destination: C:\Temp\yt-dlp\20241112074235.fdash-440418025739348ad.m4a
+[download] 100% of  316.23KiB in 00:00:00 at 2.02MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\20241112074235.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241112074235.fdash-1249495852845797v.mp4 -i file:C:\Temp\yt-dlp\20241112074235.fdash-440418025739348ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241112074235.temp.mp4
+Deleting original file C:\Temp\yt-dlp\20241112074235.fdash-440418025739348ad.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\20241112074235.fdash-1249495852845797v.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241112074235.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241112074235.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by dave.asprey" -metadata "date=20241025" -metadata "description=This is an easy fix. 😴👆🏼
+
+#DaveAsprey #biohacking #biohacker #biohacked #sleeprelief #sleepaid #sleeping #nighttimeroutine #sleep" -metadata "synopsis=This is an easy fix. 😴👆🏼
+
+#DaveAsprey #biohacking #biohacker #biohacked #sleeprelief #sleepaid #sleeping #nighttimeroutine #sleep" -metadata "purl=https://www.instagram.com/reel/DBhz1MspOwP" -metadata "comment=https://www.instagram.com/reel/DBhz1MspOwP" -metadata "artist=Dave Asprey" -movflags +faststartfile:C:\Temp\yt-dlp\20241112074235.temp.mp4
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 536
+Microsecond : 993
+Nanosecond  : 400
+Minute      : 42
+Month       : 11
+Second      : 37
+Ticks       : 638669941575369934
+TimeOfDay   : 07:42:37.5369934
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:37 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 541
+Microsecond : 926
+Nanosecond  : 400
+Minute      : 42
+Month       : 11
+Second      : 37
+Ticks       : 638669941575419264
+TimeOfDay   : 07:42:37.5419264
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:37 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 543
+Microsecond : 873
+Nanosecond  : 100
+Minute      : 42
+Month       : 11
+Second      : 37
+Ticks       : 638669941575438731
+TimeOfDay   : 07:42:37.5438731
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:37 AM
+
+-a---          11/12/2024  7:42 AM        2452480 20241112074235.mp4
+-a---          11/12/2024  7:42 AM        2452480 20241112074235.mp4
+Cleaned video name: 20241112074235mp4
+Cleaned video path: C:\Temp\yt-dlp\20241112074235mp4
+Running ffmpeg
+ffmpeg -i "C:\Temp\yt-dlp\20241112074235mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241112074235mp4_reencoded.mp4"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec--enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241112074235mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by dave.asprey
+    artist          : Dave Asprey
+    date            : 20241025
+    encoder         : Lavf61.7.100
+    comment         : https://www.instagram.com/reel/DBhz1MspOwP
+    description     : This is an easy fix. 😴👆🏼
+                    :
+                    : #DaveAsprey #biohacking #biohacker #biohacked #sleeprelief #sleepaid #sleeping #nighttimeroutine #sleep
+    synopsis        : This is an easy fix. 😴👆🏼
+                    :
+                    : #DaveAsprey #biohacking #biohacker #biohacked #sleeprelief #sleepaid #sleeping #nighttimeroutine #sleep
+  Duration: 00:00:40.61, start: 0.000000, bitrate: 483 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 415 kb/s, 60 fps, 60 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : VPC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 62 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 00000249dcd56d00] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 00000249dcd56d00] profile High, level 4.2, 4:2:0, 8-bit
+[libx264 @ 00000249dcd56d00] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\20241112074235mp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : Video by dave.asprey
+    artist          : Dave Asprey
+    date            : 20241025
+    synopsis        : This is an easy fix. 😴👆🏼
+                    :
+                    : #DaveAsprey #biohacking #biohacker #biohacked #sleeprelief #sleepaid #sleeping #nighttimeroutine #sleep
+    comment         : https://www.instagram.com/reel/DBhz1MspOwP
+    description     : This is an easy fix. 😴👆🏼
+                    :
+                    : #DaveAsprey #biohacking #biohacker #biohacked #sleeprelief #sleepaid #sleeping #nighttimeroutine #sleep
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 60 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 aac
+[mp4 @ 00000249dcd6d980] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 00000249dcd31540] video:5218KiB audio:669KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 1.138208%
+frame= 2435 fps=250 q=-1.0 Lsize=    5954KiB time=00:00:40.55 bitrate=1202.9kbits/s speed=4.16x
+[libx264 @ 00000249dcd56d00] frame I:10    Avg QP:17.01  size: 36010
+[libx264 @ 00000249dcd56d00] frame P:615   Avg QP:19.83  size:  5526
+[libx264 @ 00000249dcd56d00] frame B:1810  Avg QP:20.06  size:   875
+[libx264 @ 00000249dcd56d00] consecutive B-frames:  0.6%  0.7%  0.6% 98.1%
+[libx264 @ 00000249dcd56d00] mb I  I16..4: 31.3% 59.9%  8.7%
+[libx264 @ 00000249dcd56d00] mb P  I16..4:  1.0%  2.9%  0.2%  P16..4: 14.1%  2.3%  0.8%  0.0%  0.0%    skip:78.6%
+[libx264 @ 00000249dcd56d00] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  9.7%  0.1%  0.0%  direct: 0.0%  skip:90.1%  L0:42.6% L1:56.9% BI: 0.4%
+[libx264 @ 00000249dcd56d00] 8x8 transform intra:67.8% inter:92.5%
+[libx264 @ 00000249dcd56d00] coded y,uvDC,uvAC intra: 25.0% 0.3% 0.2% inter: 0.9% 0.0% 0.0%
+[libx264 @ 00000249dcd56d00] i16 v,h,dc,p: 47% 24%  6% 23%
+[libx264 @ 00000249dcd56d00] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 30% 18% 30%  3%  4%  4%  4%  4%  3%
+[libx264 @ 00000249dcd56d00] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 37% 20% 14%  4%  6%  6%  5%  5%  3%
+[libx264 @ 00000249dcd56d00] i8c dc,h,v,p: 100%  0%  0%  0%
+[libx264 @ 00000249dcd56d00] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 00000249dcd56d00] ref P L0: 66.7%  9.5% 18.5%  5.3%
+[libx264 @ 00000249dcd56d00] ref B L0: 89.2%  9.3%  1.5%
+[libx264 @ 00000249dcd56d00] ref B L1: 97.3%  2.7%
+[libx264 @ 00000249dcd56d00] kb/s:1053.09
+[aac @ 00000249dcd9b900] Qavg: 551.668
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 422
+Microsecond : 588
+Nanosecond  : 300
+Minute      : 42
+Month       : 11
+Second      : 47
+Ticks       : 638669941674225883
+TimeOfDay   : 07:42:47.4225883
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:47 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 671
+Microsecond : 296
+Nanosecond  : 400
+Minute      : 42
+Month       : 11
+Second      : 47
+Ticks       : 638669941676712964
+TimeOfDay   : 07:42:47.6712964
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:47 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 674
+Microsecond : 667
+Nanosecond  : 400
+Minute      : 42
+Month       : 11
+Second      : 47
+Ticks       : 638669941676746674
+TimeOfDay   : 07:42:47.6746674
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:47 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 676
+Microsecond : 371
+Nanosecond  : 500
+Minute      : 42
+Month       : 11
+Second      : 47
+Ticks       : 638669941676763715
+TimeOfDay   : 07:42:47.6763715
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:47 AM
+
+Get-ChildItem: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_videos.ps1:26
+Line |
+  26 |      Get-ChildItem $tempDir
+     |      ~~~~~~~~~~~~~~~~~~~~~~
+     | Cannot find path 'C:\Temp\yt-dlp' because it does not exist.
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 679
+Microsecond : 608
+Nanosecond  : 500
+Minute      : 42
+Month       : 11
+Second      : 47
+Ticks       : 638669941676796085
+TimeOfDay   : 07:42:47.6796085
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:47 AM
+
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241112074247.%(ext)s','https://www.instagram.com/reel/C8YBT_kOjyV']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.11.04 from yt-dlp/yt-dlp [197d0b03b] (win_exe)
+[debug] Python 3.10.11 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1t  7 Feb 2023)
+[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.40.1, urllib3-2.2.3, websockets-13.1
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1838 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C8YBT_kOjyV
+[Instagram] C8YBT_kOjyV: Setting up session
+[Instagram] C8YBT_kOjyV: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec, channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C8YBT_kOjyV: Downloading 1 format(s): dash-763035782649939vd+dash-3837717636511626ad
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/o1/v/t16/f1/m82/DC426E2239BD94BAAAF3F304C935EDB0_video_dashinit.mp4?_nc_cat=102&_nc_sid=9ca052&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_ohc=Vsly8z4nwFUQ7kNvgEmEtgk&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfYmFzZWxpbmVfMV92MSIsInZpZGVvX2lkIjpudWxsLCJjbGllbnRfbmFtZSI6ImlnIiwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=9-4&oh=00_AYB-5mU3T58JLkYmpJzcsoiZksFVeXMj85Zusv3ME7xM5g&oe=67351AF4"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\20241112074247.fdash-763035782649939vd.mp4
+[download] 100% of   11.02MiB in 00:00:00 at 22.93MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/o1/v/t16/f2/m69/AQPefh-dqtLTz2zDCYcT12fs1Gz_EtzYZuuBvG8i-rGVIl4LQbtlGL9s5dKKmsrSUG-7JUCcw0tMf4diZq1cSIAY.mp4?strext=1&_nc_cat=102&_nc_sid=9ca052&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_ohc=UGZm_W_5HDkQ7kNvgFKAbGR&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsLCJjbGllbnRfbmFtZSI6ImlnIiwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=9-4&oh=00_AYBiJ0tqVq_vAaOjxizZlC7KpEYnpRP5qoIrBRLo-WujjQ&oe=6739380B"
+[download] Destination: C:\Temp\yt-dlp\20241112074247.fdash-3837717636511626ad.m4a
+[download] 100% of  581.99KiB in 00:00:00 at 14.40MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\20241112074247.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241112074247.fdash-763035782649939vd.mp4 -i file:C:\Temp\yt-dlp\20241112074247.fdash-3837717636511626ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241112074247.temp.mp4
+Deleting original file C:\Temp\yt-dlp\20241112074247.fdash-763035782649939vd.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\20241112074247.fdash-3837717636511626ad.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241112074247.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241112074247.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by mortgagesbyderek" -metadata "date=20240618" -metadata "description=Here is a quick tutorial on how to compare lenders when shopping for a mortgage🏡
+.
+.
+.
+.
+#mortgage #mortgagetips #homebuyers #homeownership" -metadata "synopsis=Here is a quick tutorial on how to compare lenders when shopping for a mortgage🏡
+.
+.
+.
+.
+#mortgage #mortgagetips #homebuyers #homeownership" -metadata "purl=https://www.instagram.com/reel/C8YBT_kOjyV" -metadata "comment=https://www.instagram.com/reel/C8YBT_kOjyV" -metadata "artist=Derek Horton" -movflags +faststart file:C:\Temp\yt-dlp\20241112074247.temp.mp4
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 605
+Microsecond : 536
+Nanosecond  : 0
+Minute      : 42
+Month       : 11
+Second      : 50
+Ticks       : 638669941706055360
+TimeOfDay   : 07:42:50.6055360
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:50 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 607
+Microsecond : 722
+Nanosecond  : 700
+Minute      : 42
+Month       : 11
+Second      : 50
+Ticks       : 638669941706077227
+TimeOfDay   : 07:42:50.6077227
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:50 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 609
+Microsecond : 267
+Nanosecond  : 700
+Minute      : 42
+Month       : 11
+Second      : 50
+Ticks       : 638669941706092677
+TimeOfDay   : 07:42:50.6092677
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:50 AM
+
+-a---          11/12/2024  7:42 AM       12175292 20241112074247.mp4
+-a---          11/12/2024  7:42 AM       12175292 20241112074247.mp4
+Cleaned video name: 20241112074247mp4
+Cleaned video path: C:\Temp\yt-dlp\20241112074247mp4
+Running ffmpeg
+ffmpeg -i "C:\Temp\yt-dlp\20241112074247mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241112074247mp4_reencoded.mp4"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec--enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241112074247mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Video by mortgagesbyderek
+    artist          : Derek Horton
+    date            : 20240618
+    encoder         : Lavf61.7.100
+    comment         : https://www.instagram.com/reel/C8YBT_kOjyV
+    description     : Here is a quick tutorial on how to compare lenders when shopping for a mortgage🏡
+                    : .
+                    : .
+                    : .
+                    : .
+                    : #mortgage #mortgagetips #homebuyers #homeownership
+    synopsis        : Here is a quick tutorial on how to compare lenders when shopping for a mortgage🏡
+                    : .
+                    : .
+                    : .
+                    : .
+                    : #mortgage #mortgagetips #homebuyers #homeownership
+  Duration: 00:01:08.20, start: 0.000000, bitrate: 1428 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 720x1280, 1353 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : AVC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 68 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000020f7e22de80] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000020f7e22de80] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 0000020f7e22de80] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\20241112074247mp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Video by mortgagesbyderek
+    artist          : Derek Horton
+    date            : 20240618
+    synopsis        : Here is a quick tutorial on how to compare lenders when shopping for a mortgage🏡
+                    : .
+                    : .
+                    : .
+                    : .
+                    : #mortgage #mortgagetips #homebuyers #homeownership
+    comment         : https://www.instagram.com/reel/C8YBT_kOjyV
+    description     : Here is a quick tutorial on how to compare lenders when shopping for a mortgage🏡
+                    : .
+                    : .
+                    : .
+                    : .
+                    : #mortgage #mortgagetips #homebuyers #homeownership
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 720x1280, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 aac
+[mp4 @ 0000020f7ea80040] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000020f7e251e00] video:13223KiB audio:1075KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.518578%
+frame= 2045 fps=266 q=-1.0 Lsize=   14372KiB time=00:01:08.10 bitrate=1728.8kbits/s speed=8.85x
+[libx264 @ 0000020f7e22de80] frame I:10    Avg QP:19.89  size: 64011
+[libx264 @ 0000020f7e22de80] frame P:559   Avg QP:21.87  size: 15576
+[libx264 @ 0000020f7e22de80] frame B:1476  Avg QP:27.51  size:  2840
+[libx264 @ 0000020f7e22de80] consecutive B-frames:  0.6%  8.9%  1.5% 89.0%
+[libx264 @ 0000020f7e22de80] mb I  I16..4: 17.5% 53.5% 29.0%
+[libx264 @ 0000020f7e22de80] mb P  I16..4:  4.3%  8.2%  1.0%  P16..4: 37.1% 11.0%  5.3%  0.0%  0.0%    skip:33.1%
+[libx264 @ 0000020f7e22de80] mb B  I16..4:  0.4%  0.4%  0.0%  B16..8: 32.4%  2.3%  0.4%  direct: 0.7%  skip:63.4%  L0:48.3% L1:44.6% BI: 7.1%
+[libx264 @ 0000020f7e22de80] 8x8 transform intra:58.4% inter:72.1%
+[libx264 @ 0000020f7e22de80] coded y,uvDC,uvAC intra: 31.8% 35.0% 9.4% inter: 6.7% 3.5% 0.2%
+[libx264 @ 0000020f7e22de80] i16 v,h,dc,p: 23% 48%  9% 20%
+[libx264 @ 0000020f7e22de80] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 21% 33%  3%  3%  4%  4%  4%  3%
+[libx264 @ 0000020f7e22de80] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 36% 15%  3%  5%  4%  5%  3%  4%
+[libx264 @ 0000020f7e22de80] i8c dc,h,v,p: 55% 22% 18%  5%
+[libx264 @ 0000020f7e22de80] Weighted P-Frames: Y:0.4% UV:0.2%
+[libx264 @ 0000020f7e22de80] ref P L0: 58.7% 11.6% 19.4% 10.3%
+[libx264 @ 0000020f7e22de80] ref B L0: 78.8% 16.8%  4.4%
+[libx264 @ 0000020f7e22de80] ref B L1: 93.2%  6.8%
+[libx264 @ 0000020f7e22de80] kb/s:1588.97
+[aac @ 0000020f7e2cd100] Qavg: 478.774
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 447
+Microsecond : 630
+Nanosecond  : 900
+Minute      : 42
+Month       : 11
+Second      : 58
+Ticks       : 638669941784476309
+TimeOfDay   : 07:42:58.4476309
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:58 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 191
+Microsecond : 715
+Nanosecond  : 0
+Minute      : 42
+Month       : 11
+Second      : 59
+Ticks       : 638669941791917150
+TimeOfDay   : 07:42:59.1917150
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:59 AM
+
+
+DisplayHint : DateTime
+Date        : 11/12/2024 12:00:00 AM
+Day         : 12
+DayOfWeek   : Tuesday
+DayOfYear   : 317
+Hour        : 7
+Kind        : Local
+Millisecond : 195
+Microsecond : 205
+Nanosecond  : 400
+Minute      : 42
+Month       : 11
+Second      : 59
+Ticks       : 638669941791952054
+TimeOfDay   : 07:42:59.1952054
+Year        : 2024
+DateTime    : Tuesday, November 12, 2024 7:42:59 AM
+
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> C:\Users\kushal\src\myhtml\fromnepal\public\omnibus.ps1
