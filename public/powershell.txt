@@ -8885,36 +8885,39 @@ Batch size: 20
 Batch size: 20
 Batch size: 20
 Batch size: 20
-Batch size: 20
-Batch size: 20
 Batch size: 9
-[xUnit.net 00:00:05.65]   Finished:    tests
-  tests                                                                                   GenerateCoverageResult (6.5s)
+[xUnit.net 00:00:15.89]     tests.DotnetNineGuidTests.GenerateGuidv7_ShouldGenerateGuidv7_sequentially2 [FAIL]
+[xUnit.net 00:00:15.89]       Expected firstLong to be less than 101155096177690L, but found 101155096177690L.
+[xUnit.net 00:00:15.89]       Stack Trace:
+[xUnit.net 00:00:15.89]            at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+[xUnit.net 00:00:15.89]            at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+[xUnit.net 00:00:15.89]            at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+[xUnit.net 00:00:15.89]            at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+[xUnit.net 00:00:15.89]            at FluentAssertions.Numeric.NumericAssertions`2.BeLessThan(T expected, String because, Object[] becauseArgs)
+[xUnit.net 00:00:15.89]         C:\Users\kushal\src\mydotnet\tests\DotnetNineGuidTests.cs(40,0): at tests.DotnetNineGuidTests.GenerateGuidv7_ShouldGenerateGuidv7_sequentially2()
+[xUnit.net 00:00:15.89]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:15.89]   Finished:    tests
+  tests test failed with 1 error(s) (17.0s)
+    C:\Users\kushal\src\mydotnet\tests\DotnetNineGuidTests.cs(40): error TESTERROR:
+      tests.DotnetNineGuidTests.GenerateGuidv7_ShouldGenerateGuidv7_sequentially2 (15s 673ms): Error Message: Expected firstLong to be less than 101155096177690L, but found 101155096177690L.
+      Stack Trace:
+         at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+         at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+         at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+         at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+         at FluentAssertions.Numeric.NumericAssertions`2.BeLessThan(T expected, String because, Object[] becauseArgs)
+         at tests.DotnetNineGuidTests.GenerateGuidv7_ShouldGenerateGuidv7_sequentially2() in C:\Users\kushal\src\mydotnet\tests\DotnetNineGuidTests.cs:line 40
+      --- End of stack trace from previous location ---
 
-+----------+------+--------+--------+
-| Module   | Line | Branch | Method |
-+----------+------+--------+--------+
-| hellolib | 100% | 99.64% | 100%   |
-+----------+------+--------+--------+
-
-+---------+------+--------+--------+
-|         | Line | Branch | Method |
-+---------+------+--------+--------+
-| Total   | 100% | 99.64% | 100%   |
-+---------+------+--------+--------+
-| Average | 100% | 99.64% | 100%   |
-+---------+------+--------+--------+
-  tests test succeeded (6.6s)
-
-Test summary: total: 331, failed: 0, succeeded: 331, skipped: 0, duration: 6.1s
-Build succeeded in 7.4s
-2024-11-14T11:21:04: Arguments
-2024-11-14T11:21:04:  -reports:coverage.cobertura.xml
-2024-11-14T11:21:04:  -targetdir:coverage-report
-2024-11-14T11:21:04: Writing report file 'coverage-report\index.html'
-2024-11-14T11:21:04: Report generation took 0.1 seconds
-Thursday, November 14, 2024 11:21:04 AM
-Thursday, November 14, 2024 11:21:04 AM
+Test summary: total: 333, failed: 1, succeeded: 332, skipped: 0, duration: 16.5s
+Build failed with 1 error(s) in 18.2s
+2024-11-14T14:16:01: Arguments
+2024-11-14T14:16:01:  -reports:coverage.cobertura.xml
+2024-11-14T14:16:01:  -targetdir:coverage-report
+2024-11-14T14:16:01: Writing report file 'coverage-report\index.html'
+2024-11-14T14:16:01: Report generation took 0.2 seconds
+Thursday, November 14, 2024 2:16:01 PM
+Thursday, November 14, 2024 2:16:02 PM
 warning: in the working copy of 'docs/icon_cube.svg', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/icon_fork.svg', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/icon_info-circled.svg', LF will be replaced by CRLF the next time Git touches it
@@ -8931,10 +8934,9 @@ warning: in the working copy of 'docs/icon_up-dir_active.svg', LF will be replac
 warning: in the working copy of 'docs/icon_up-down-dir.svg', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/icon_up-down-dir_dark.svg', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/icon_wrench.svg', LF will be replaced by CRLF the next time Git touches it
-Thursday, November 14, 2024 11:21:04 AM
+Thursday, November 14, 2024 2:16:02 PM
 On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
-  (use "git push" to publish your local commits)
+Your branch is up to date with 'origin/master'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
@@ -8968,75 +8970,77 @@ Changes to be committed:
         modified:   docs/hellolib_WeatherFetchException.html
         modified:   docs/index.htm
         modified:   docs/index.html
-        modified:   docs/main.js
-        modified:   tests/coverage.cobertura.xml
+        new file:   hellolib/DotnetNineGuid.cs
+        new file:   tests/DotnetNineGuidTests.cs
 
-Thursday, November 14, 2024 11:21:05 AM
-[master 6d83bec] build application
- 32 files changed, 252 insertions(+), 252 deletions(-)
-Thursday, November 14, 2024 11:21:05 AM
+Thursday, November 14, 2024 2:16:02 PM
+[master 386f213] build application
+ 32 files changed, 89 insertions(+), 30 deletions(-)
+ create mode 100644 hellolib/DotnetNineGuid.cs
+ create mode 100644 tests/DotnetNineGuidTests.cs
+Thursday, November 14, 2024 2:16:02 PM
 From github.com:patstha/mydotnet
  * branch            master     -> FETCH_HEAD
  = [up to date]      master     -> origin/master
 Current branch master is up to date.
-Thursday, November 14, 2024 11:21:05 AM
+Thursday, November 14, 2024 2:16:03 PM
 Pushing to github.com:patstha/mydotnet.git
-Enumerating objects: 78, done.
-Counting objects: 100% (78/78), done.
+Enumerating objects: 69, done.
+Counting objects: 100% (69/69), done.
 Delta compression using up to 16 threads
-Compressing objects: 100% (41/41), done.
-Writing objects: 100% (41/41), 3.37 KiB | 1.69 MiB/s, done.
-Total 41 (delta 39), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (39/39), completed with 37 local objects.
+Compressing objects: 100% (36/36), done.
+Writing objects: 100% (36/36), 3.52 KiB | 721.00 KiB/s, done.
+Total 36 (delta 33), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (33/33), completed with 33 local objects.
 To github.com:patstha/mydotnet.git
-   f4834e1..6d83bec  master -> master
+   6d83bec..386f213  master -> master
 updating local tracking ref 'refs/remotes/origin/master'
-Thursday, November 14, 2024 11:21:06 AM
-Thursday, November 14, 2024 11:21:06 AM
+Thursday, November 14, 2024 2:16:05 PM
+Thursday, November 14, 2024 2:16:05 PM
 yarn install v1.22.21
 [1/4] Resolving packages...
 success Already up-to-date.
-Done in 0.07s.
-Thursday, November 14, 2024 11:21:06 AM
+Done in 0.11s.
+Thursday, November 14, 2024 2:16:06 PM
 yarn run v1.22.21
 $ tsc && vite build
 vite v5.4.8 building for production...
 ✓ 5 modules transformed.
 docs/index.html                0.27 kB │ gzip: 0.22 kB
 docs/assets/index-D1OKu7AJ.js  8.63 kB │ gzip: 3.19 kB
-✓ built in 119ms
-Done in 1.10s.
-Thursday, November 14, 2024 11:21:08 AM
+✓ built in 157ms
+Done in 2.07s.
+Thursday, November 14, 2024 2:16:08 PM
 warning: in the working copy of 'docs/assets/index-D1OKu7AJ.js', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Thursday, November 14, 2024 11:21:08 AM
+Thursday, November 14, 2024 2:16:08 PM
 On branch kus-2024-10-30-modules
 nothing to commit, working tree clean
-Thursday, November 14, 2024 11:21:08 AM
+Thursday, November 14, 2024 2:16:08 PM
 On branch kus-2024-10-30-modules
 nothing to commit, working tree clean
-Thursday, November 14, 2024 11:21:08 AM
+Thursday, November 14, 2024 2:16:08 PM
 From github.com:matchthree/matchthree.github.io
  * branch            master     -> FETCH_HEAD
 Current branch kus-2024-10-30-modules is up to date.
-Thursday, November 14, 2024 11:21:08 AM
+Thursday, November 14, 2024 2:16:09 PM
 Everything up-to-date
-Thursday, November 14, 2024 11:21:09 AM
-Thursday, November 14, 2024 11:21:09 AM
-Thursday, November 14, 2024 11:21:09 AM
+Thursday, November 14, 2024 2:16:09 PM
+Thursday, November 14, 2024 2:16:09 PM
+Thursday, November 14, 2024 2:16:09 PM
 On branch main
 nothing to commit, working tree clean
-Thursday, November 14, 2024 11:21:09 AM
-Thursday, November 14, 2024 11:21:09 AM
-Thursday, November 14, 2024 11:21:10 AM
+Thursday, November 14, 2024 2:16:10 PM
+Thursday, November 14, 2024 2:16:10 PM
+Thursday, November 14, 2024 2:16:14 PM
 Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
-Thursday, November 14, 2024 11:21:10 AM
-Thursday, November 14, 2024 11:21:10 AM
+Thursday, November 14, 2024 2:16:14 PM
+Thursday, November 14, 2024 2:16:14 PM
 yarn install v1.22.21
 [1/4] Resolving packages...
 success Already up-to-date.
-Done in 0.07s.
-Thursday, November 14, 2024 11:21:11 AM
+Done in 0.14s.
+Thursday, November 14, 2024 2:16:14 PM
 yarn run v1.22.21
 $ tsc && vite build
 vite v5.4.8 building for production...
@@ -9044,46 +9048,42 @@ vite v5.4.8 building for production...
 docs/index.html                 0.53 kB │ gzip: 0.32 kB
 docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
 docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
-✓ built in 3.11s
-Done in 3.92s.
-Thursday, November 14, 2024 11:21:15 AM
+✓ built in 3.57s
+Done in 5.98s.
+Thursday, November 14, 2024 2:16:20 PM
 warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/notes/A3B318B569046159E1DD6616D2E646D9434350E6.asc', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'docs/notes/favicon_io/about.txt', LF will be replaced by CRLF the next time Git touches it
-Thursday, November 14, 2024 11:21:31 AM
+Thursday, November 14, 2024 2:16:43 PM
 On branch main
 Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        new file:   docs/notes/2024/11/14/branch.md
         modified:   docs/notes/earth.jpeg
         modified:   docs/powershell.txt
-        new file:   public/notes/2024/11/14/branch.md
         modified:   public/notes/earth.jpeg
         modified:   public/powershell.txt
 
-Thursday, November 14, 2024 11:21:31 AM
-[main 4daf13ff] build application
- 6 files changed, 1842 insertions(+), 370 deletions(-)
- create mode 100644 docs/notes/2024/11/14/branch.md
- create mode 100644 public/notes/2024/11/14/branch.md
-Thursday, November 14, 2024 11:21:31 AM
+Thursday, November 14, 2024 2:16:43 PM
+[main 23df2d2d] build application
+ 4 files changed, 136 insertions(+), 136 deletions(-)
+Thursday, November 14, 2024 2:16:43 PM
 From github.com:fromnepal/fromnepal.github.io
  * branch              main       -> FETCH_HEAD
 Current branch main is up to date.
-Thursday, November 14, 2024 11:21:32 AM
-Enumerating objects: 20, done.
-Counting objects: 100% (20/20), done.
+Thursday, November 14, 2024 2:16:45 PM
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
 Delta compression using up to 16 threads
-Compressing objects: 100% (11/11), done.
-Writing objects: 100% (11/11), 16.57 MiB | 10.64 MiB/s, done.
-Total 11 (delta 7), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (7/7), completed with 6 local objects.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 16.34 MiB | 9.94 MiB/s, done.
+Total 7 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 4 local objects.
 To github.com:fromnepal/fromnepal.github.io.git
-   0916e55a..4daf13ff  main -> main
-Thursday, November 14, 2024 11:21:35 AM
+   4daf13ff..23df2d2d  main -> main
+Thursday, November 14, 2024 2:16:49 PM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> C:\Users\kushal\src\myhtml\fromnepal\public\omnibus.ps1
