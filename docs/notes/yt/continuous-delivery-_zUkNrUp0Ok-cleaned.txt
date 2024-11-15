@@ -1,0 +1,290 @@
+how good is AI code generation really
+there's clearly enormous commercial
+potential for companies if AI can
+generate good effective code more
+efficiently ultimately at lower cost
+than human programmers but can I really
+do that clearly AI can generate code but
+is it good and effective that's our
+topic for today
+hi I'm Dave Farley of continuous
+delivery and welcome to my channel if
+you haven't been here before please do
+hit subscribe and if you enjoy the
+content today hit like as well in this
+episode I'm going to be asking for your
+help but don't worry I think it'll also
+be some fun some friends of mine are
+conducting some interesting academic
+research into AI assisted coding and are
+looking for people to take part in their
+experiment they're aim is to see if AI
+systems can really help us to build high
+quality code in the real world of
+professional software development so do
+watch for a chance to do something
+interesting help with some research and
+also win some prizes whatever you think
+about machine Learning Systems writing
+code whether or not they're useful tools
+that help us to do a better job or
+whether or not they're just all going to
+replace all of our programming jobs next
+week it seems certain that they change
+the game
+but it also seems pretty clear that we
+don't really know how yet I don't think
+that anyone really understands yet the
+scale or nature of this change we may
+guess or imagine what is coming but it
+is certainly true that for the first
+time we have something other than people
+that can write code and we don't know
+what that means where it will be helpful
+and where it Won't Anyone who says that
+they know how this will play out is only
+guessing this stage we're extremely
+fortunate on on the continuous delivery
+channel to be sponsored by equal experts
+transic topple honeycomb and Ultra edit
+equal experts is a multinational
+consultancy built on applying the ideas
+and techniques that we talk about here
+to build great software for their
+clients transic is a financial
+technology company applying Advanced
+continuous delivery techniques to
+deliver low latency trade rout services
+to some of the biggest financial
+institutions in the world topple build
+software to make pair programming easier
+for people who work remotely honeycom
+help engineering teams deeply understand
+their own production systems through
+observability and Ultra edit is a
+powerful configurable text editor
+capable of hex and text code editing
+which boasts on rivaled performance
+particularly handling large files all
+these company offer products and
+services that are very very well aligned
+with the topics that we discuss on this
+channel every week so if you're looking
+for excellence in continuous delivery
+and software engineering in general do
+click on the links in the description
+below and check them out one things that
+seems pretty clear to me at least for
+the current generation of large language
+models is that they write code in a
+profoundly different way to the way that
+human beings write code and this is
+different in ways that matter maybe even
+limiting to how far the help the AI
+assisted coding can take us the most
+profound change as far as I can see is
+the loss of
+reproducibility if we ask a large
+language model to generate some code for
+us it will do so and it may or may not
+be good code but if we ask the same
+large language model in precisely the
+same words to write the same code again
+it won't generate the same code again
+it'll provide a new implementation to
+meet our needs and that too may be good
+or may be bad but there's nothing to say
+that the bits that were good before are
+still good in this new version because
+we aren't enhancing what's already there
+before the AI is rewriting everything
+from scratch if we use the AI assistance
+this way this profoundly changes our
+relationship with the code it's also
+very similar to the way that many past
+attempts at making programming easier
+have failed in the past because it
+misses something really important about
+software development there's a danger
+that we rely on the rather naive
+assumption that code creation or
+generation happens once and is then over
+leaving no room for refinement and
+correction as we learn more about what
+our users need and how best to solve the
+problems that we are faced with in human
+software development we've learned how
+to deal with this kind of complexity
+with ideas like Version Control giving
+us the freedom to make mistakes and to
+recover from it quickly easily and
+cheaply when we do building high quality
+code in systems is for humans at least
+always an incremental process these days
+mediated through Version Control complex
+systems are built step by step verifying
+things after each version controlled
+step those steps may be big or small big
+steps in the form of new releases over
+years or even decades think of the
+evolution of Windows or Mac OS version
+by version or better we may use small
+steps each one representing tiny
+increments in the behavior of our system
+think continuous delivery all this is
+still an incremental process but
+incrementalism like this relies on us
+being able to reestablish a known
+starting point and then modifying the
+code to add new features or correct
+broken ones if every change means
+rebuilding the whole system from scratch
+we even those of us who are machines
+limit our ability to learn and build on
+top of what we've already learned and so
+improve as we go large language models
+don't obviously allow for this and this
+is a very big deal because as far as we
+can tell this is the only way in which
+you can learn and improve things in
+human terms I would and do argue that
+the defining characteristics for quality
+in software is measured by our ability
+to change it in large part that's
+because it facilitates our ability to
+grow and evolve our software
+incrementally in this way high quality
+software is easy to change lowquality
+software is not it really is that simple
+so does this mean that generative AI
+helps or hinders in creating highquality
+software on that basis some of my
+friends that equal experts code scene
+and the department of computer science
+at lond University in Sweden agree that
+this is an interesting question and have
+designed a study to evaluate it previous
+empirical studies of AI code assistants
+have found that they offer substantial
+increases in productivity but as we know
+from practical Human Experience we can
+easily misjudge this kind of thing by
+looking at the wrong time scales when it
+comes to productivity I may make
+progress faster over the course of a few
+days by cutting Corners not testing and
+building crap software but over the
+course of weeks and months or years the
+cost of this strategy leads to us
+building Big Balls of unmaintainable mud
+and that can slow or even halt the
+process of software development alt
+together so it's certainly not a gain in
+productivity the Dora metrics tell us
+that for human-built software at least
+we must build high quality software if
+we want to move quickly so does AI
+assistance help us to keep moving fast
+over longer periods of time does it help
+us to build more maintainable code
+that's the question that we'd like to
+answer in this study the study will
+operate in two phases with three
+different groups of people and we are
+looking for people for each group the
+basic idea is that maintainable code is
+easy to reason about and change by
+someone other than the original author
+so that is what we aim to test we start
+with some tricky poor buggy code and the
+subjects of the experiment are then
+tasked with modifying it
+these subjects hopefully you are formed
+into two groups one group is asked to
+complete the task with the help of AI
+code assistance and the other without
+GitHub conducted a study of the use of
+co-pilot with 95 professional
+programmers tased with implementing an
+HTTP server in JavaScript a little while
+ago this study found that AI assistance
+made the developers in the group that
+use the AI assistance 55. 8% faster on
+average when completing this task than
+developers working without the aid of
+co-pilot our research is aimed to look
+at the to me more important measure of
+the maintain maintainability of the
+output rather than short-term
+development performance which as I've
+already suggested is a very poor measure
+of software development in the real
+world because if the output of AI
+assisted code is easier to maintain then
+we can be more confident that it really
+is helping us to improve our throughput
+but if it's not easier to maintain then
+AI assisted code will ultimately be more
+costly in the long run than working
+without it in phase two of the study we
+will evaluate the maintainability of the
+output from each of the groups in Phase
+One people in The Phase 2 group will
+take the output of the coding Challenge
+from phase one not knowing if the output
+was generated with or without AI
+assistance
+and then they will be asked to complete
+some new tasks to modify this code the
+study will determine which is easier to
+modify the AI assisted code or the not
+AI assisted code the code will be
+evaluated based on several different
+metrics including code scenes very well
+regarded measures of code Health time to
+complete the task and the perceived
+productivity of the people working on it
+based on Nicole forren space framework
+the problem itself is a fun real world
+simulation of the kind of things that
+human programmers do all the time the
+code is complex enough to be interesting
+more complicated than a simple coding
+Carter for example but simple enough to
+be able to understand and do useful work
+within just a few hours for disclosure
+here I should say that my name is on
+this study but the people at lond
+University equal experts and code scene
+have done all of the work I hope that
+you'll join us and give us a few hours
+of your time we expect the exercise will
+take you 2 to 4 hours to complete if
+you're interested in signing up there's
+a link in the description below or you
+could use this QR code both link to a
+short survey that will help the
+researchers to evaluate your fit as a
+subject for the study and allocate you
+to an appropriate group your code and
+data that the researchers will collect
+will be completely Anonymous and
+everyone who completes the exercise as a
+subject will win a prize including some
+signed books from and me but of course
+the most rewarding thing of all is that
+everyone who takes part will be adding
+to our understanding and knowledge of
+what AI code assistants can really do
+for us as developers so please do sign
+up and try and fix the poor code that
+the researchers have tried so hard to
+make nasty enough to be ready for you
+thank you very much for watching and if
+you enjoy our stuff here on the
+continuous delivery Channel then do
+consider supporting us by joining our
+patreon community and thanks once again
+to our patrons who support our work here
+thank you and bye-bye
+[Music]
