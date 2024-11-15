@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-rh="true">placeholder</title>
+    <meta data-rh="true" name="description" content="Is AI code generation actually any good? In this episode, Dave Farley talks about how artificial intelligence helps programmers in the modern day and asks the question of whether co-development with AI assistants improves the code we are writing already, or not."/>
+    <meta data-rh="true" property="og:url" content="https://youtu.be/_zUkNrUp0Ok"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="fb:app_id" content="9869919170" />
+    <meta name="twitter:site" content="@nytimes" />
+    <meta name="slack-app-id" content="A0121HXPPTQ" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .quote {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        article figure {
+            margin: 0;
+            padding: 0;
+            display: block;
+            width: 100%;
+        }
+
+        article figure img {
+            aspect-ratio: 3 / 2;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        article figure figcaption {
+            font-size: 0.6em;
+            line-height: 0.9;
+            margin-top: 0.5em;
+        }
+
+        /* Progress bar styles */
+        #progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #f3f3f3;
+        }
+        #progress-bar {
+            height: 100%;
+            width: 0;
+            background: #4caf50;
+        }
+        .muted {
+            color: #6c757d;
+            opacity: 0.6;
+        }
+        /* Drop cap styles */
+        .drop-cap::first-letter {
+            font-size: 3em;
+            float: left;
+            margin-right: 0.1em;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+    <div class="reading-time" id="reading-time"></div>
+    <article id="article">
+        <!-- <figure>
+            <picture>
+                <img alt="Description of the image" src="default.jpg">
+            </picture>
+            <figcaption>This is the caption for the image.</figcaption>
+        </figure> -->
+        <h1>*NEW STUDY* Does Co-Development With AI Assistants Improve Code?</h1>
+        <p>How good is AI code generation really? There's clearly enormous commercial potential for companies if AI can generate good, effective code more efficiently, ultimately at lower cost than human programmers. But can it really do that? Clearly, AI can generate code, but is it good and effective? That's our topic for today.</p>
+        
+        <p>Hi, I'm Dave Farley of Continuous Delivery, and welcome to my channel. In this episode, I'm going to be asking for your help, but don't worry, I think it'll also be some fun. Some friends of mine are conducting some interesting academic research into AI-assisted coding and are looking for people to take part in their experiment. Their aim is to see if AI systems can really help us to build high-quality code in the real world of professional software development. So do watch for a chance to do something interesting, help with some research, and also win some prizes.</p>
+        
+        <p>Whatever you think about machine learning systems writing code, whether or not they're useful tools that help us to do a better job, or whether or not they're just all going to replace all of our programming jobs next week, it seems certain that they change the game. But it also seems pretty clear that we don't really know how yet. I don't think that anyone really understands yet the scale or nature of this change. We may guess or imagine what is coming, but it is certainly true that for the first time, we have something other than people that can write code, and we don't know what that means, where it will be helpful, and where it won't. Anyone who says that they know how this will play out is only guessing at this stage.</p>
+        
+        <p>One thing that seems pretty clear to me, at least for the current generation of large language models, is that they write code in a profoundly different way to the way that human beings write code. And this is different in ways that matter, maybe even limiting to how far the help the AI-assisted coding can take us. The most profound change, as far as I can see, is the loss of reproducibility. If we ask a large language model to generate some code for us, it will do so, and it may or may not be good code. But if we ask the same large language model in precisely the same words to write the same code again, it won't generate the same code again. It'll provide a new implementation to meet our needs, and that too may be good or may be bad. But there's nothing to say that the bits that were good before are still good in this new version because we aren't enhancing what's already there before. The AI is rewriting everything from scratch. If we use the AI assistance this way, this profoundly changes our relationship with the code.</p>
+        
+        <p>It's also very similar to the way that many past attempts at making programming easier have failed in the past because it misses something really important about software development. There's a danger that we rely on the rather naive assumption that code creation or generation happens once and is then over, leaving no room for refinement and correction as we learn more about what our users need and how best to solve the problems that we are faced with. In human software development, we've learned how to deal with this kind of complexity with ideas like version control, giving us the freedom to make mistakes and to recover from them quickly, easily, and cheaply when we do. Building high-quality code in systems is, for humans at least, always an incremental process these days, mediated through version control. Complex systems are built step by step, verifying things after each version-controlled step. Those steps may be big or small. Big steps in the form of new releases over years or even decades—think of the evolution of Windows or Mac OS version by version. Or better, we may use small steps, each one representing tiny increments in the behavior of our system—think continuous delivery. All this is still an incremental process, but incrementalism like this relies on us being able to reestablish a known starting point and then modifying the code to add new features or correct broken ones. If every change means rebuilding the whole system from scratch, we—even those of us who are machines—limit our ability to learn and build on top of what we've already learned and so improve as we go. Large language models don't obviously allow for this, and this is a very big deal because, as far as we can tell, this is the only way in which you can learn and improve things in human terms.</p>
+        
+        <p>I would and do argue that the defining characteristic for quality in software is measured by our ability to change it. In large part, that's because it facilitates our ability to grow and evolve our software incrementally. In this way, high-quality software is easy to change; low-quality software is not. It really is that simple. So does this mean that generative AI helps or hinders in creating high-quality software on that basis? Some of my friends at Equal Experts, CodeScene, and the Department of Computer Science at Lund University in Sweden agree that this is an interesting question and have designed a study to evaluate it.</p>
+        
+        <p>Previous empirical studies of AI code assistants have found that they offer substantial increases in productivity. But as we know from practical human experience, we can easily misjudge this kind of thing by looking at the wrong time scales when it comes to productivity. I may make progress faster over the course of a few days by cutting corners, not testing, and building crap software. But over the course of weeks and months or years, the cost of this strategy leads to us building big balls of unmaintainable mud, and that can slow or even halt the process of software development altogether. So it's certainly not a gain in productivity. The DORA metrics tell us that for human-built software, at least, we must build high-quality software if we want to move quickly. So does AI assistance help us to keep moving fast over longer periods of time? Does it help us to build more maintainable code? That's the question that we'd like to answer in this study.</p>
+        
+        <p>The study will operate in two phases with three different groups of people, and we are looking for people for each group. The basic idea is that maintainable code is easy to reason about and change by someone other than the original author. So that is what we aim to test. We start with some tricky, poor, buggy code, and the subjects of the experiment are then tasked with modifying it. These subjects, hopefully you, are formed into two groups. One group is asked to complete the task with the help of AI code assistance and the other without.</p>
+        
+        <p>GitHub conducted a study of the use of Copilot with 95 professional programmers tasked with implementing an HTTP server in JavaScript a little while ago. This study found that AI assistance made the developers in the group that used the AI assistance 55.8% faster on average when completing this task than developers working without the aid of Copilot. Our research is aimed to look at the, to me, more important measure of the maintainability of the output rather than short-term development performance, which, as I've already suggested, is a very poor measure of software development in the real world. Because if the output of AI-assisted code is easier to maintain, then we can be more confident that it really is helping us to improve our throughput. But if it's not easier to maintain, then AI-assisted code will ultimately be more costly in the long run than working without it.</p>
+        
+        <p>In phase two of the study, we will evaluate the maintainability of the output from each of the groups in phase one. People in the phase two group will take the output of the coding challenge from phase one, not knowing if the output was generated with or without AI assistance, and then they will be asked to complete some new tasks to modify this code. The study will determine which is easier to modify: the AI-assisted code or the non-AI-assisted code. The code will be evaluated based on several different metrics, including CodeScene's very well-regarded measures of code health, time to complete the task, and the perceived productivity of the people working on it based on Nicole Forsgren's SPACE framework.</p>
+        
+        <p>The problem itself is a fun, real-world simulation of the kind of things that human programmers do all the time. The code is complex enough to be interesting—more complicated than a simple coding kata, for example—but simple enough to be able to understand and do useful work within just a few hours. For disclosure here, I should say that my name is on this study, but the people at Lund University, Equal Experts, and CodeScene have done all of the work. I hope that you'll join us and give us a few hours of your time. We expect the exercise will take you 2 to 4 hours to complete. If you're interested in signing up, there's a link in the description below, or you could use this QR code. Both link to a short survey that will help the researchers to evaluate your fit as a subject for the study and allocate you to an appropriate group. Your code and data that the researchers will collect will be completely anonymous, and everyone who completes the exercise as a subject will win a prize, including some signed books from me. But of course, the most rewarding thing of all is that everyone who takes part will be adding to our understanding and knowledge of what AI code assistants can really do for us as developers.</p>
+        
+        <p>So please do sign up and try and fix the poor code that the researchers have tried so hard to make nasty enough to be ready for you. Thank you very much for watching, and if you enjoy our stuff here on the Continuous Delivery Channel, then do consider supporting us by joining our Patreon community. And thanks once again to our patrons who support our work here. Thank you and bye-bye.</p>
+    </article>
+    <hr />
+    <aside>
+        <p>16,625 views  Nov 13, 2024  #ai #coding #softwareengineering</p>
+        <p>Is AI code generation actually any good? In this episode, Dave Farley talks about how artificial intelligence helps programmers in the modern day and asks the question of whether co-development with AI assistants improves the code we are writing already, or not.</p>
+
+        <p>Dave also encourages developers to join a study in partnership with Equal Experts to help answer that very question, you can find more details below.</p>
+
+        <p>-</p>
+
+        <p>SIGN UP FOR AI STUDY: Does Co-Development With AI Assistants Improve Code ➡️ https://form.typeform.com/to/PnVpuZGr...</p>
+
+        <p>-</p>
+
+        <p>⭐ PATREON:</p>
+
+        <p>Join the Continuous Delivery community and access extra perks & content! ➡️ https://bit.ly/ContinuousDeliveryPatreon </p>
+
+        <p>🎥 Join Us On TikTok ➡️   / modern.s.engineering  </p>
+
+        <p>-</p>
+
+        <p>CHANNEL SPONSORS:</p>
+
+        <p>Equal Experts is a product software development consultancy with a network of over 1,000 experienced technology consultants globally. They increase the pace of innovation by using modern software engineering practices that embrace Continuous Delivery, Security, and Operability from the outset ➡️ https://bit.ly/3ASy8n0</p>
+
+        <p>TransFICC provides low-latency connectivity, automated trading workflows and e-trading systems for Fixed Income and Derivatives. TransFICC resolves the issue of market fragmentation by providing banks and asset managers with a unified low-latency, robust and scalable API, which provides connectivity to multiple trading venues while supporting numerous complex workflows across asset classes such as Rates and Credit Bonds, Repos, Mortgage-Backed Securities and Interest Rate Swaps ➡️ https://transficc.com</p>
+
+        <p>Tuple is a remote ensemble and pair programming app for macOS and Windows, designed to make you feel like you're collaborating in person. It’s got loads of developer-specific touches you just don’t see with generic screen-sharing tools. Check out Tuple HERE ➡️ https://tuple.app/cd</p>
+
+        <p>Honeycomb is the observability platform that enables engineering teams to find and solve problems they couldn’t before. Query everything at once, fast enough to keep your train of thought, and connect your whole system and your teams ➡️ https://bit.ly/CDHC</p>
+
+        <p>Ultra Edit is a powerful, configurable text editor capable of hex and code editing, and boasts unrivaled performance in handling large files. You can get your 30-day free trial now ➡️ https://bit.ly/ue_cd</p>
+
+        <p>-</p>
+
+        <p>👕 T-SHIRTS:</p>
+
+        <p>A fan of the T-shirts I wear in my videos? Grab your own, at reduced prices EXCLUSIVE TO CONTINUOUS DELIVERY FOLLOWERS! Get money off the already reasonably priced t-shirts!</p>
+
+        <p>🔗 Check out their collection HERE: ➡️ https://bit.ly/3Uby9iA</p>
+        <p>🚨 DON'T FORGET TO USE THIS DISCOUNT CODE: ContinuousDelivery</p>
+
+        <p>-</p>
+
+        <p>BOOKS:</p>
+
+        <p>📖 Dave’s NEW BOOK "Modern Software Engineering" is available as paperback, or kindle here ➡️ https://amzn.to/3DwdwT3 </p>
+        <p>and NOW as an AUDIOBOOK available on iTunes, Amazon and Audible.</p>
+
+        <p>📖 The original, award-winning "Continuous Delivery" book by Dave Farley and Jez Humble ➡️ https://amzn.to/2WxRYmx</p>
+
+        <p>📖 "Continuous Delivery Pipelines" by Dave Farley</p>
+        <p>Paperback ➡️ https://amzn.to/3gIULlA</p>
+        <p>ebook version ➡️ https://leanpub.com/cd-pipelines</p>
+
+        <p>NOTE: If you click on one of the Amazon Affiliate links and buy the book, Continuous Delivery Ltd. will get a small fee for the recommendation with NO increase in cost to you.</p>
+
+        <p>-</p>
+
+        <p>🔗 LINKS:</p>
+
+
+
+        <p>-</p>
+
+        <p>#developer #softwareengineering #programming #software #coding #ai</p>
+    </aside>
+    <script>
+        function calculateReadingTime(text) {
+            const wordsPerMinute = 200; // Average reading speed
+            const textLength = text.trim().split(/\s+/).length; // Split by spaces to get word count
+            const readingTimeMinutes = Math.ceil(textLength / wordsPerMinute);
+            return readingTimeMinutes;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const article = document.getElementById("article");
+            const readingTimeElement = document.getElementById("reading-time");
+            const readingTime = calculateReadingTime(article.innerText);
+            readingTimeElement.innerText = `Estimated reading time: ${readingTime} minute${readingTime > 1 ? 's' : ''}`;
+
+            const progressBar = document.getElementById("progress-bar");
+
+            window.addEventListener("scroll", () => {
+                const articleHeight = article.scrollHeight - window.innerHeight;
+                const scrollPosition = window.scrollY;
+                const scrollPercentage = (scrollPosition / articleHeight) * 100;
+                progressBar.style.width = `${scrollPercentage}%`;
+            });
+        });
+    </script>
+</body>
+</html>
