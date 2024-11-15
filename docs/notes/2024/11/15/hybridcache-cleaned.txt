@@ -1,0 +1,538 @@
+hi my name is Mark Ral and I'm here to
+talk about the new hybrid cache API that
+we're introducing in net 9 uh in
+particular with asp.net core but it
+works in in all your
+applications
+so with any new API the first question
+is why so we're going to we're going to
+discuss that first and then in order to
+put that in context we're going to have
+a quick recap of the existing
+caches uh what how we use them and what
+their limitations are again looking at
+why we need a new API in hybrid cache uh
+then we're going to have a look at
+hybrid cache in use uh see how it
+simplifies our code uh see what new
+features it brings us uh and then I'll
+I'll wrap up with a summary of the the
+features that we're adding uh and the
+the direction that we're going to with
+this this new API so why are we adding a
+new API the existing cache apis they
+work but they they're very hard to to
+use well and in particular they're hard
+to use efficiently uh the the two main
+apis that we'd be talking about there
+are IM memory cache and I distributed
+cach and both of those have uh great
+features but they also have limitations
+and uh pain points that make make them
+awkward to use in most common
+scenarios but also your code ends up
+writing a lot of the things itself the
+very the libraries do very little
+internally
+so what we're trying to do since cach is
+so important is make it really easy to
+use cach well and in particular the most
+obvious code that you can write should
+work efficiently and well and and
+correctly without you needing to to
+worry about all those
+details so first thing I can do then is
+to show an example using IM memory cache
+as to what your what Your existing cache
+applications might look like so I have
+over here a fairly standard net 9
+application web application uh and it's
+very very simple I show you in a moment
+uh but in particular uh in the first
+version I'm going to show we don't have
+any caching so basically I've got a uh
+single web page uh that that acts talks
+to a simulated service that very
+deliberately just takes two and a half
+seconds to invent some data um in the
+real world we could be talking down to a
+SQL database or to uh some uh large
+language model uh HTTP uh grpc some some
+expensive resource whenever we're
+talking about caching we usually talk
+about some expensive
+resource so I've got a a simulated uh
+data query that that's expensive so I've
+started the application and now if I
+switch over to a browser for this web
+application and just refresh that we can
+see the uh traffic start down here and
+you can see we've got a simple page here
+that took roughly 2 and a half seconds
+and all it's done is generate a GD and
+because we've got no caching if I
+refresh that page every time I refresh
+it I'll get a new grid down here and
+it'll take two and a half seconds uh so
+that that changing GD is making it clear
+that we're we're doing new work each
+time um now obviously taking two and a
+half seconds isn't great um so and
+performance is important in any
+application so what we're going to do is
+we're going to add some simple caching
+to make this page run quicker and the
+simplest way to do that is with IM
+memory cache so if we go back to our
+application uh if I look at the uh
+original code that was uh that's just
+calling that underlying data fetch what
+I'm going to do I'm going to switch to a
+a different implementation which uses so
+this one requests I memory cache as a
+service and in that same operation when
+we get the expensive data uh we're going
+to use memory cache so to use memory
+cache first of all we need a unique key
+for our query and since we're this is a
+parameterized query we we take in an ID
+here we're going to build that ID into
+our key um and memory cache basically
+has a get API and a set API so we're
+going to ask the memory cache do you
+have this value um and if if it doesn't
+have it yet then we'll uh do the work to
+go down and perform the expensive
+operation and set that into the cache
+and then uh whether we've got whether we
+did that work this Qui request or
+whether we got the value out of the
+cache in this try get value we'll then
+return that back to the caller so the
+way I've got this uh working uh all I
+need to do to change the implementation
+that we're using is to come in and
+change T it to use this with memory
+cache implementation instead of our some
+backend data service uh and if I save
+that and restart our application
+and when that's going I'll go back to
+the web
+application now if I load the first page
+we expect it to take two and a half
+seconds because we haven't uh the first
+page needs to be we still need to do the
+work once but now that I've uh done that
+I can run it a few times and now it's
+getting taking zero milliseconds and
+importantly obvious it's just
+expired um now when it's taking zero
+milliseconds I'm getting I'm keeping
+this ID so that means we're not doing
+any extra work we're just getting that
+value straight out of cache and that'll
+last for a few seconds uh I think I've
+got it configured for about 10 seconds
+um
+uh before it has to do the work again so
+that's uh that's our memory cache but
+the the limitations to that is of course
+that's just running in process memory so
+if we've got uh any kind of cold start
+uh so the application recycles or if we
+have multiple nodes we can get into uh
+various problems either with an
+inconsistent cache where as a consumer
+bounces a caller bounces between
+different websites they get different
+values or we can get into the the
+situation where it looks fine um until
+everything shuts down and then all of a
+sudden the entire site takes ages to let
+start from from you know from uh a cold
+cold
+start so that's I memory cache it has
+limitations but you can you can use it
+it's relatively easy to use there's
+another big limitation which is uh
+there's no serialization going on here
+it's actually holding handing back the
+exact same object that you give it um
+that is a good thing it's it doesn't
+have any overhead but it's it's also
+dangerous because if that object is
+mutable so if you can change anything on
+that you could then be handing out that
+same object to lots and lots of requests
+and if they make changes to it obviously
+they're going to be changing the value
+that's that's live in the in the cache
+um so that's IR memory cache
+uh again very simple to use there we
+just register it with ad ad memory cache
+and that's the same code we just looked
+at there's one other thing we need to be
+really really careful of when caching
+which is stampede so what's
+that normally uh if we just have uh one
+request come in and we get a cash Miss
+so that value isn't around that's fine
+we'll just pay the cost we'll go down do
+the work uh store it into cash and
+everything's fine but if we're on a
+really really busy site and all of us
+our cash expires we suddenly get the
+problem where we could have 10 20 200
+requests all requesting that same bit of
+data and all uh getting a cash Miss and
+when that happens if we're not careful
+all 200 of those requests can end up
+doing the expensive operation which
+obviously is going to have a lot of
+overhead on your underlying system and
+you can also get the problem where they
+then do the work of storing that work
+into the cash so what what does that
+look like so if I go back to our website
+here and it's it's a cold situation at
+the moment all the cash has expired so
+if I quickly run this from three
+tabs you'll see all three of these
+they've all got different uh IDs they've
+all done the work and all three of them
+took two and a half
+seconds now now that we we've initiated
+the cach it's nice and fast and they're
+getting the the value out so that's
+great but when we were under load we
+were under a lot of pain there and that
+can that can really hurt um systems
+that's something we might want to avoid
+so that's I me I memory cache the next
+thing we might want to look at uh in the
+existing systems that you're familiar
+with is I distributed cache so what's I
+distributed
+cache that's a similar API to IM memory
+cache but now we're talking about out to
+process uh stores such as reddis SQL
+Server SQL live
+garet uh all of you it could even just
+be a file system uh any anything that
+lets us store data outside of the
+process now that has two great
+advantages in that uh it means that if
+we do a cold start with the out
+ofprocess data might still be available
+so we don't have to pay that that cost
+of just because we turned on the
+restarted the the service we have no
+cash um and the other thing is if we're
+using a central server for that again
+usually things like redis um we can then
+have a consistent uh data store our
+cache and configuring that we're getting
+quite a bit more work now uh but it's a
+very very similar concept we create a a
+key for our data with our unique ID um
+and call into the distributed cache has
+got a a similar get API um if the data
+isn't there which we we can tell by the
+null uh then we need to go and do the
+work um but now we need to actually
+store it back into the cache which means
+we need to serialize it um through some
+serializer um could be Json could be XML
+could be protuff and then we need to
+store that data into the
+cache um uh but if the data was there we
+need to do the opposite so we need to
+deserialize uh that those bytes that we
+got so we're starting to do quite a bit
+of of hard work here um but it's it's
+relatively easy to set up so now that
+I've changed the the service I can
+restart the
+application where's my build
+error build error is
+in
+program.cs oh yeah my
+bad
+so so if I run
+that restart our
+application
+and what I can also do is because we're
+talking to redis um this view over here
+shows reddish traffic and again I can
+bring up our our web application
+and now you can actually see some
+reddish traffic coming in here so the
+first time this we did a a hit on the
+page it went down to redis to see if the
+data was in there uh took two and half
+seconds to do the actual work then it
+pushed the data back into the redis and
+we see that go again if I do a slow page
+but now uh if I keep refreshing that
+we're getting the zero milliseconds but
+you can see it's going down to redis
+each time to get that data um so overall
+relatively easy to set up um but now
+we're paying
+the the cost of latency and bandwidth um
+down to reddis each time and we can also
+get into a lot of problems if our redis
+server becomes unavailable for any any
+reason um you know we're migrating the
+uh the reddis cluster or or something
+um and the the uted cache API uh plus
+serialization Al can also add quite a
+bit of overhead in terms of bite arrays
+and things into our request so uh very
+nice clean uh API really
+but it has some pain
+points what hybrid cach is meant to do
+is to bridge all of these advantages so
+let's go and have a look at what we can
+do now what we really want to look at is
+this new API hybrid cache
+so let's have a look at
+that because this is a new
+API what we need to do is add a new
+package reference into our
+project so you can see here that I've
+got a package reference to Microsoft
+extensions caching hybrid which is a new
+new get package that's hosting this um
+at whatever the the current version is
+and if I go to our program
+CS when I'm registering I'm going to add
+in uh call this add hybrid cache API and
+that's going to register this new hybrid
+cache server that we can use in our
+application and there are various
+options that uh that we can pass in on
+this all I'm going to do for now is just
+set a uh default expiration so the same
+exporation that I'm using uh in the
+other places and that's just going to
+that's just going to simplify our code
+there's lots of other things we can do
+uh configuration wise I'm not going to
+cover all of those here um
+but the other thing of course is to
+switch our implementation to hybrid
+cache and if I go and look at what that
+one's doing now we can see this is a lot
+less code so hybrid cache we we still
+have to come up with this unique string
+that's going to represent our uh our key
+for the cache but rather than having a a
+separate get and set API hybrid cache
+uses the the pattern that's already
+exists in some other uh cache mechanisms
+where we can do this get or create async
+um method where we pass in a call back
+to execute if the data isn't already
+there um so that's that's really really
+simple cuz all we need to do is say um I
+want to use hybrid cache get me this
+data here's the key here's the operation
+to perform so I want to call down to the
+the same expensive um operation that we
+had before um forwarding the uh the
+cancellation token uh that we we've
+got
+and if I restart it it's still going to
+take two and a half seconds to do the
+first page because we still need to do
+the work once um but now if I do these
+other Pages uh they all they took zero
+millisecond so they haven't done the
+work and they've got the same GD so we
+know we know for sure they haven't done
+the work but you'll notice on the left
+here it didn't do any reddis oper redis
+calls it stored the data down but on a
+per page basis we haven't done anything
+unless I let it expire um and again and
+I can just go through these and they're
+going to take 0o milliseconds and
+they're not doing any traffic down to
+redis so the way that works is hybrid
+cache basically brings together the IM
+memory cache API for inprocess memory
+and the I distributed cache API for
+outter process memory and uh takes care
+of all the other things for us it deals
+with the serialization it deals with um
+uh very various other uh you know key
+validation um things like that um but
+importantly we've got one other thing
+that it does that's that's really useful
+is the stampe protection so if I quickly
+refresh all of these Pages again they're
+taking two and a half seconds like that
+you might expect but rather than each of
+them generating their own work with the
+uh two and a half seconds we see that
+they've actually all generated the same
+GD and what's actually happened there is
+the hybrid cache library has detected
+that we've got three requests all
+querying the same data that isn't
+currently available so it's combined
+those and it's only done the underlying
+work once and it's queed up the other
+requests um so that when the data comes
+back from that one operation they all
+get that result um so that significantly
+reduces our overhead when we get when
+we're under heavy load and we get a cash
+Miss so if I run that again again we'll
+get get the uh pay the cost the first
+time um and then it all just works for
+free so it's really really simple to set
+up up and uh very easy to uh to work
+with and behind the scenes it's using
+Json serialization by default uh but
+that's fully configurable uh so if you
+have types that might work better with
+protobuf or XML or you know any other
+serializer we can configure all of that
+um so again really really easy to set up
+we just add in the hybrid cache package
+um called add hybrid cache and then most
+of the work is just hidden behind this
+get or create sync uh method making it
+really really simple to uh do all get
+all of the right behavior um by default
+um and if you're worried about the uh
+the delegate allocation and capture
+there's also a secondary API that allows
+us to to pass in a state to to hand down
+to our uh our call back uh so that we
+also don't need to uh pay the cost of um
+a capture context if you're in a really
+really high throughput uh scenario but
+for most purposes the the simple API
+where we just um give it our ASN call
+back that's going to be absolutely
+fine uh so that's the the the core uh
+parts of uh hybrid cache uh it's a new
+cache API it's releasing alongside net 9
+so what do I mean by that uh is that
+it's not just targeting net 9 so if
+you've got an existing net 8 uh
+application whether that's for um
+long-term support or a Net Framework
+applic
+you should be able to use this API um
+it's much much simpler to use and
+importantly you're much uh much simpler
+to get right um and as we saw uh we get
+the the Stampede protection and as we
+discussed this now gives us much much
+more predictable Behavior if the the
+backend cache uh becomes unavailable or
+anything else um UNT happens U lots of
+exception handling built in so that uh
+the cach isn't going to break your
+application if there's something that
+comes in um and we're also making use of
+new apis so there's a low allocation API
+very similar to ID distributed cache
+that is uh available on some backend
+providers so we've built this into the
+SQL Server uh backend cache and the
+redis backend cache and we would like to
+help build those into any other uh ID
+distributed cache implementations that
+people are using whether that's uh
+Cosmos or sqlite if we can help with
+that um I'm more than happy to to jump
+in there and see what we can do to help
+it's not as complicated API um so uh
+We've also got a lot of configuration uh
+points in this API including the ability
+to fully configure um serialization
+either on a per type basis or if you've
+got a a serializer that handles some
+family of types you know you can handle
+all Google Proto types for example
+that's really easy to configure um and
+we've also got um observability built in
+so that's uh all of your your standard
+uh events and counters um ETL that
+should just work another new feature
+that we're adding is the ability to uh
+invalidate data based on tags so if
+you've used output caching you'll be
+familiar with this um so when we
+actually add things to the cache in the
+get or create API um I can optionally
+specify one or more tags which are just
+string tokens that map to whatever your
+domain is for example you could uh in a
+sales application you could tag data
+that's in the you know the special
+offers and then if you want to um reset
+all of the data associated with special
+offers because you uh it's Black Friday
+or whatever you can just uh run a
+command to uh invalidate all the data
+associated with a specific tag and at a
+single uh moment all of that data will
+uh will become invalidated in one go um
+much more efficient than having to know
+all your keys to
+invalidate we're also looking at back
+end assisted um cach inv validation um
+so obviously we've got the process uh we
+got the problem if you've got an out
+ofprocess cach on an inprocess cache
+making sure that if if you want to
+forcibly invalidate the out ofprocess
+data that that gets into the inprocess
+data ASAP um that's not won't be in the
+net 9 initial version but we're looking
+to add that as soon as possible um and
+importantly what we're adding here isn't
+just a new API it's a whole new
+abstraction so yes when you call uh the
+add hybrid cache registration you're
+adding the default implementation but
+because it's just an abstraction uh
+other people are free to also Implement
+that API and so I know Fusion cache are
+looking to add an implementation with
+their own features which and you know
+that we may the inbuilt op the inbuilt
+option may have features we don't
+support and their option their
+implementation may have more Fe other
+features uh so you could got lots of
+options there
+so that's the uh the main overview of uh
+hybrid cache um obligatory download.
+net9 uh SL uh there's a a bunch of links
+there to the uh the documentation that
+exists on learn. microsoft.com uh the
+new get package and the GitHub
+repository and the demo code uh just to
+clarify in terms of time scales uh this
+API will still be preview when net 9
+lands uh it's in the net extensions
+family of libraries so this will be
+shipping in the 9.1 release of net
+extensions uh which is likely to be very
+soon after net 9 uh I can't commit to a
+specific date there um but uh you can
+you can play with it uh now um but it'll
+be uh GA in the 9.1 release of net
+extensions uh that's pretty much it um
+if there's any more questions uh on on
+this topic please feel free to uh ping
+me either on Twitter or directly and I
+look forward to see hearing what you can
+do with this API

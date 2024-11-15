@@ -1,0 +1,562 @@
+thanks guys I am Mary mcau and I am so
+excited to be here I am the
+engineering manager for the windows
+forms team I've got short brown hair and
+I'm wearing a bright blue T-shirt with
+the Microsoft logo that you can't see
+and my partner in crime here is Claus
+yeah I'm Claus I'm a deaf on the Wind
+fors team um I'm a little bit taller
+than Mary
+slightly um I have whatever hair color I
+have what is it like brown brown I would
+say brown yeah and um and yeah so that's
+that's about me and we're here to tell
+you about some of the cool modern things
+that we're able to do with Wind forms
+development Inn net 9 so I'm going to
+break down our agenda into kind of four
+main chunks of stuff that we're going to
+talk about we're going to talk about
+some of the highlights the new and
+exciting things that we've added to Wind
+forms and kind of our Focus that we've
+been um the the North Stars that we've
+been looking at as we've been working in
+Wind fors then we're going to get to a
+little bit more of a serious mode where
+we talk about security because security
+is a number one thing here at Microsoft
+and it's important for Wind forms as
+well finally we're going to get into or
+next we're going to get into some of I
+think the most exciting new develop
+velopments in Wind forms and that's the
+Simplicity in which we can do
+asynchronous development and finally a
+quick wrap up and a Bo mind-bogglingly
+long list of resources for you to use as
+you're developing your winforms
+applications and taking advantage of the
+modern news
+stuff so to start with taking a look at
+what's new in winforms for.net N I want
+to talk about some of the key Focus
+areas that we've always been kind of
+thinking about first of all is our
+Community Driven Focus we are a Vibrant
+Community in GitHub right now the
+community has been driving features from
+the very first PR that we ever took in
+wi forums back onstage for net core 3.1
+thanks Scott for uh merging that one
+without telling me that was the second
+one that was good that was good yes and
+in net n we've added the um fer browser
+dialogues multi- select option we've
+done a lot of nullability work is driven
+by the community and and much much more
+as I mentioned a moment ago though the
+security focus is something that has
+been across all of libraries and you
+know all of the other parts ofn net and
+winforms is a huge piece of that for us
+binary format or removal has really made
+us do some internal changes that may not
+be as VIs visible to the outside world
+but allow us to continue working in a
+world where binary formatter is no
+longer present yes I mean we have
+resource files and the binary format was
+always a big dependency on that and um
+resource files are not going away in
+right embedded resources are here to
+stay of course we've got a performance
+Focus that's something that really makes
+Wind forms in core standout orb forms in
+net standout from NET Framework we're
+able to take advantage of all of the
+modern C language features that enable
+us to improve performance we've improved
+our interop um as a matter of fact we've
+migrated most of our libraries to um a
+modern interop tool called
+cs132 that does code generation for all
+of our inot and the advantage there the
+big thing there is that now with it
+being code generated we know that it's
+accurate consistent and performant all
+the way across the board um everybody
+likes you enhancements and this release
+has been no different than any other
+release uh one of my personal little
+favorites I know it's tiny but um
+system. drawing now has a uh rounded
+rectangle and the ability to do image
+formats like convert an image to black
+and white or put a green cast over it
+it's funny right because this is a
+feature that has been requested like for
+the last 15 years and it's such a little
+thing but then um it really made an
+impact already oh yeah and the reason
+that we were able to do that if we go
+back to Modern interop because cs132
+makes it easy for us to consume Windows
+apis 132 apis uh the ones that maybe we
+didn't in the past were able to pull in
+new things from GDI GDI plus and make
+system drawing that much more robust oh
+and you know what we have forgotten one
+thing to to mention we also did
+something for Visual Basic and that was
+and we had a couple of
+uh updates for the project system and um
+I think we also had quite recently a
+blog post about that well it's a little
+bit longer ago already right but um it's
+definitely worth checking that out
+because Visual Basic is still 20 yes
+percenti is of Wind forms customers even
+in the net land so we want to make sure
+that our net Visual Basic net customers
+are still able to be supported and then
+of course for me like I said the most
+exciting work that we've been doing is
+in the asynchronous support because the
+world has changed from when Wind forms
+was created it's changed into an
+asynchronous sort of environment and we
+need to be able to work with that all
+right I'm going to hand it over now to
+clouse for a demo about wind fors
+getting a glow up as the kids would like
+to call it usually but some cool stuff
+we've done in Wind forms I hope I hope I
+hope people will like it so um let me
+start with just um a look on the typical
+Wind forms app as you know it well might
+look already a little bit different um
+this is a photo viewer that I wrote this
+morning
+um that um where I just had a couple of
+photos um that that I did the other day
+from from this from this studio here um
+but let me let me show something that is
+really
+um that is really new and really
+requested a lot and that is the the Wind
+forms dark mode so to to modernize your
+apps um it's really often all about the
+look and feel and I would say that dark
+mode at this point almost became an
+accessibility issue so I know a lot of
+people who are really you know wanted to
+have this this dark mode not to be able
+to be blinded by bright colors um but
+it's it's also of course a preference so
+disclaimer um before we go into it this
+is for net 9 still a experimental
+feature and what what that means is that
+when you are starting to use it you will
+be flagged a little bit by the compiler
+and um and need to adjust um your editor
+config setting uh settings to make it
+work but let me show you really quick
+how easy it is to actually have that
+light mode typical wind fors app and
+then you know make a dark mode out of it
+so um we have the application object and
+that's usually the place where we where
+we always set up
+the kind of like the base for the whole
+application and new in uh in net 9 is
+the set color mode and what I can do
+with it is um I have now the system
+colors
+enum which gives me three options and
+it's quite simple we have the dark mode
+we have classic and then we have system
+and what system does is it just takes
+over whatever settings you had set up
+for your windows environment so if
+you're using the light mode your wind
+fors app at that point will be light
+mode and if you do dark mode then it
+will be dark mode so with this change
+made uh let me just restart it and um
+hopefully um we should see Tada that
+thing already in action well there's one
+thing though that you see and of course
+this black text um on on the item
+doesn't doesn't really look like very
+readable now so when you are you know
+right ramping up your apps so that they
+are dark mode compatible there's um
+there's an easy way then to take those
+things into account um in this case we
+have
+a we have a new uh property which is
+also um on the application object and
+that is um is dark mode enabled so in
+other words we can do just this and uh
+let me quickly try to get this work
+with my note
+book which I hate actually to type on so
+and so if the dark mode is enabled
+then we are using a rather lighter color
+in that or brighter color in that regard
+and now let me start that again and we
+should see that now the text is still
+dark H Okay so
+the demo Gods that's the way it usually
+works yeah and um what does it mean that
+this is an experimental feature
+CLA so what that exactly means is that
+we have the moment you use an
+experimental feature in net per se it's
+not necessarily the dark mode then the
+compiler will show you an error message
+and then if it does that then there are
+several options that you can do
+um there will be showing up an analyzers
+where you can pick that you want to have
+a fix inside of um the code directly or
+if you want to have that Global for your
+whole solution or for the whole project
+then the analyzer can also set up a
+setting for the editor config um and
+that was not it let me bring up the
+text uh for that editor config so we can
+and you know focus on that that single
+setting and then um you will see that
+that diagnostic that is responsible for
+pointing out that it is in dark mode you
+can just adjust then to you know like
+put your level of warnings the way you
+want it like if it is an arrow or if it
+is a um if it is silent so it doesn't
+really uh bother you at all so this is
+the only thing that you need to do and
+um and yeah so that that is the way um
+you're best going to use it um what's
+important what we want to mention is um
+we need feedback that's why it's
+experimental is because there's a lot of
+ux and Wind forms a lot of UI in Wind
+forms and we haven't gotten to it all
+and we're wanting the feedback as well
+to make sure from the community that the
+approaches that we've taken are the
+approaches that that we want moving
+forward so I'm going to go ahead and
+switch gears now and steal the show back
+for myself because you know I like the
+attention uh actually it's because I do
+want to cover a pretty serious topic and
+an important topic and that is the
+security first focus with binary format
+or
+removal first and foremost the number
+one thing for me to tell everybody is
+that binary formatter is unsafe it is
+not something that we recommend and we
+have been slowly working our way towards
+removing binary form matter for years in
+net 9 the implementation code the inbox
+implementation actually is removed from
+the libraries code and put into a
+separate out of b outof band package or
+an Uub package as we' like to call it um
+and this is the final stage of the
+binary format or deprecation or
+obsoletion plan and this plan's actually
+been going on for quite a while um we
+announced it in Net 5 where we said we
+Ely want to remove binary form matter
+because it's unsafe because it can cause
+some of the
+um system uh uh what's the word um
+remote code execution thank you very
+much yeah that's that's the old age
+coming in um so it can do system uh
+remote code execution it can do denial
+of service it can do all sorts of things
+that um if you're not super careful with
+it that can really cause problems in
+security vulnerabilities so we decided
+in Net 7 that the all of the
+dependencies that could be removed have
+been removed inet 8 it was obsoleted and
+for almost all of the workloads it was
+throwing exceptions by default and the
+exception there of course was Windows
+desktop because as clus mentioned
+earlier we use resources and we do
+embedded resources which use a lot of
+potentially binary formatter
+serialization um in February we
+announced that binary formatter was
+going to be pulled out of the product
+and in August that was completed in the
+intervening time here what I have to do
+a huge shout out to uh the team to
+Jeremy Cooney to Adam sitnik to Jeff
+Handley to lonni tr um they really came
+together and pulled it out of the run
+time and
+replaced a lot of internal winforms
+implementations so Keynotes to to be
+aware of um the implementation is gone
+it is removed to a package if you depend
+on it you actually have two steps that
+you're going to need to do you're going
+to have to say I want to use binary
+formatter enable this unsafe binary
+formatter and now you'll also have to
+add a package um embedded resources most
+of the time now don't actually need
+binary formatter because we've done our
+own internal work to remove that and
+finally the thing I'm going to demo in
+just a few moments here is that we've
+got new analyzers that will warn you if
+you've inadvertently started to use
+binary form matter yeah and when in the
+time where Mary set up her demo demo um
+I want to want to say something to the
+analyzers that is something that we
+really want to want to add on foret 10
+and build in more guidance um in general
+to make your Wind forms code more secure
+so um there are so many places where we
+can use analyzers for for this security
+guidance and it's certainly something
+you would you are going to see much more
+in in the Run quite a bit of okay so let
+me bring up my demo here and what I've
+got is a net8 application and it has a
+form with an address control that
+address control has a few fields on it
+um
+and we're running it in net 8 and I'm
+going to build and you'll see that I um
+actually probably need to um clean and
+rebuild I must have accidentally hit a
+space bar
+somewhere nope that's not
+it me just a second here new line in a
+constant I told you I hit a space
+bar how about I do
+that yeah that happens to me all that
+Happ me way too often okay so now I'm
+going to build that is much better much
+happier and now we're down to zero
+errors and a bunch of warnings that
+don't really matter now if I go to my
+form here and I'm going to go to my
+button click code oh address one one
+away let
+me go to my button one click I've
+actually got a place here where I'm
+going to
+force binary serialization and this is
+just to tell you that there are going to
+be places where maybe third-party
+components maybe old components that
+you've written in VB6 or whatnot may
+need binary form matter the funny thing
+is that we really tried hard to find
+meanwhile um a scenario where we hit the
+binary formatter but Jeremy did such a
+good job that um it was almost hard to
+to get there to to get there right all
+right so I built I've got an error and
+that error is because U let me come back
+in here it is because binary format is
+not supported this is the DT net 8
+obsoletion that we were talking about so
+I'm going to go to my code and enable
+the binary formatter serialization this
+is what we did in net 8 and of course
+that run you know compiles everybody's
+happy but now let's change it to net 9
+really quick and I move it to nine let
+me save I'm going to do a quick clean
+because that always seems to make things
+go a little smoother and a rebuild
+[Music]
+and things are looking really good and I
+think that might be
+because oh there they are I've got the
+two errors that I was looking for the
+two errors are because I've got these
+public properties and the public
+properties first name and special
+property if I take a look at them me put
+my cursor here let the um help come up
+it says that I do not have the
+serialization information set for this
+particular property so I'm going to say
+that I want to hide it from
+serialization so that I am forcing it
+not to use binary formatter because by
+default it might and that's not what I
+want so that's where the error message
+comes in handy and when I build things
+are good things are working just fine
+but remember I had that code that was
+using binary formatter in my
+form mhm when I hit my button at run
+runtime I am now getting a compiler
+error or a runtime error saying platform
+not supported that's because the binary
+format or implementation code was
+removed and I need to come back and say
+and pull in that package um to do that
+let me stop my
+application and let me go back to my
+code here you pull in the package group
+simple as that is this what I'm supposed
+to be doing is this how I want my app to
+run forever
+no this is unsafe and unsupported but it
+will get us through the time where I
+need to go in and investigate how to
+move to system text Json deserialization
+or some other custom type converters
+that I might have and I'll go ahead and
+run everything is happy and I should um
+oh I needed
+to I needed to clean because I did
+something in my project file
+and there we go it's all working
+beautifully now that's the serious stuff
+binary form matter is going away it's
+important that everybody's aware of it
+but it's kind of like a speed bump we're
+not making development faster and easier
+we're making it safer we're making
+people sit back and kind of pay
+attention I do want to give clouse now
+the wheel for the next four minutes
+because he's going to show us about
+async in four minutes exactly uh but
+we've got another we've got a whole
+another talk where you're C some cool
+stuff we need to we we definitely need
+to do more yeah all right so CLA take
+over okay so um and it's a funny motive
+now because it's showing a binary clock
+um so um really quick then um it's about
+it's about asynchronous um programming
+in in in Wind forms um we had that
+before that we could like 20 years ago
+already we were able to do um
+asynchronous programming and we had apis
+that we're starting with begin and it's
+time for those to end because um it was
+just It produced so much spaghetti coat
+that nobody really could use it so in
+because of the of the time that we no
+longer have um let me quickly show you
+um the essence of what we have been
+doing so what you see here is a spinner
+control that that is just like iterating
+through a very special font type um and
+at the same time it'll show the the
+color bar and it's also fleshing so and
+um that is so cool because you're now
+writing you're using the uh UI thread
+from two different processes from two
+different things that you're trying to
+do and that's not something that Wind
+forms has ever been good at doing and
+and I just want to point out by code um
+how easy it is to do that so if you are
+experienced winforms developer you know
+that if you click and you double double
+click then of course the click event
+comes at the same time right so when I
+double clicked both of those things
+happened and if you take a look at the
+code now you see that we're waiting in
+the click event the the the spinner to
+to turn but then in the double click at
+the same time we are waiting the color
+blender um to do its job so the way
+you're setting up those things that are
+doing you know things in parallel
+because the message queue is always
+running it's like a very very easy thing
+and so now the question is should we do
+should we skip the other demo and should
+directly go to that the the kind of fun
+one um yeah let's go ahead and move to
+uh some of the applica the real world
+application of a scenario where async
+programming is going to uh change the
+world when it comes to a Wind forms app
+so adding this kind of capability the
+asynchronous capability to your existing
+line of business applications and wi
+forms take it away exactly so what this
+is is taking the async features and then
+as we said before being able to use all
+those new apis that are basically only
+providing their apis in an Asing form in
+this app and by the way we have another
+talk that is prerecorded where which
+explains in detail how this works
+um was exactly how how to do that so let
+me quickly show that um I'm this is like
+um a driver's lock sample and let me
+just type in a couple of stops here like
+I'm going from Duval to Monroe and then
+to Bellingham and I don't have time so I
+will do all kinds of you are terrible at
+spelling yeah but it doesn't really
+matter because I'm sending it over to an
+llm and getting it back and so it gets
+corrected and assisted automatically uh
+while I'm working and this counts for
+everything that is here on the Forum and
+wow so so all these web apis and the the
+open API open AI apis they all are
+asynchronous and we're able to now as
+part of the FL of a winforms app just be
+able to incorporate that which is really
+exciting now I'm going to take back over
+to the PowerPoint in a quick wrap-up
+since we are just about out of time um
+so we did our demo for async here's our
+wrapup for re and
+resources we talked about one
+experimental feature in net 9 and that
+was the dark mode now the control.
+invoke async that klouse was showing
+with his work just a moment ago that's
+not experimental that's a that's a real
+thing exactly but we wanted to take it a
+step further we wanted to see if maybe a
+form. show async and a form. show
+dialogue async would be something that
+people would take advantage of so those
+two are added also as experimental
+features the warning here is that all of
+these are still in flux and there might
+be some slight changes but they're in
+enough state we are able to get the
+feedback and want the feedback from our
+customers about it so please use these
+go to our GitHub repo file the
+issues submit some PRS for some of the
+issues we wouldn't argue with that um
+and that's our big thing with these
+experimental features is give us the
+feedback and finally some resources I'll
+make sure that these are uh all linked
+for you when you get to the presentation
+on
+YouTube and of course our stand get.
+net9 and thank you very much
