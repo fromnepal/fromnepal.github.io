@@ -1,0 +1,181 @@
+hey everyone welcome to the U Channel
+today we want to talk about cly
+multiplatform and some of the exciting
+product from jet brains which recently
+released and they are in a public
+preview like Amper and Fleet Amper is a
+new built system for software
+development especially cly multiplatform
+on Android we have great deal but it's
+kind of complicated to work on that but
+we know that it's quite powerful on the
+other hand emper tried to provide a
+simplified build system for us and as I
+said for cly multiplatform which is
+quite important and very useful we can
+have our project configuration across
+different platforms iOS Android web and
+jvn which is a big plus for us the other
+product I wanted to mention is Fleet I
+would say Fleet is a new generation of
+IDE for software development the
+environment is very simple but so
+powerful support so many languages and
+we can use it for cly multiplatform as
+well first I would like to take a look
+at Fleet to see what kind of feature it
+provides and then I will use Fleet in
+practice by creating a cly multiplatform
+project and having the configuration
+with Amper so stay
+tuned this is the Fleet website you can
+download the latest version from here as
+you see the environment looks so
+simplified and clean and it's totally
+different compared to other intell idea
+products and as you see here it's
+powered by Ai and you can have built-in
+AI code completion or some other AI
+features and it support different
+languages and especially for us
+developing cotl multiplatform in some
+cases we want to switch between Swift
+and cotl this idea support both
+languages you can continuously do the
+debugging in cotl and Swift which sounds
+amazing let's move along with other
+features I mentioned earlier it is so
+simplified and it's really easy to use
+for smaller project or if you have a
+bigger project it doesn't matter fit is
+the best choice it also has some team
+Fork features like having debugging
+sessions if you want to do it with your
+teammates or having the Cod review
+within the ID or just simply pair
+programming and some other building
+features like multiplatform Dockers
+or it also support customized plugins
+you can add to the IDE and yes I would
+say Fleet is a full package for software
+development in any
+kind let's take a look at the jetbrain
+website to see what is amp Amper is a
+tool for project configuration its goal
+is to improve project configuration user
+experience and tability it support
+inside the ID and provide it smooth
+outof thee boox experience Amper is a
+layer on top of gradeable system it has
+its own type of configuration with the
+AML files because under the hood is
+still used gradal Amper has the same
+power like defining customized plugins
+or having all those configuration we had
+before in grade same in Amper at this
+time Amper has two type of configuration
+one is Standalone means you only have
+yaming files to configure projects and
+the other type is something in between
+means you still use gradal files and
+within your modules you have these kind
+of Amper yaml configuration files I'm
+going to show you these two type of
+Amper configuration in a costly
+multiplatform project the first one is
+the Standalone example in the root of
+the project we have a project. yo we
+Define the modules in this file and each
+module has its own Amper file
+configuration we have Android app IOS
+and jvm app and a shared module look at
+the Android module configuration it's so
+simple we only set three property but
+obviously if the project is more complex
+these files get bigger but still it's so
+simple in this file we need to Define
+product product is a type of the module
+module is the Android app because this
+project is a compos multiplatform it use
+dependencies from shared module and the
+settings we just set the compost Ena to
+have our jetpack compost UI
+implementation so let's look at the IOS
+app module looks similar we have the
+product and the top is IOS app and we
+Define the platform and what kind of
+architecture we want to support for the
+IOS app same for the dependency as
+Android roid again here we enable the
+compos for having the jetpack compos in
+iOS and same for jvm app configuration
+share module configuration is a little
+bit different but still simple if we
+Define the type as a library and what
+kind of platform we going to support and
+defining the dependency and setting them
+exported to have them available in other
+modules one thing about dependency
+declaration in Amper it's support autoc
+completion and it is context aware
+depending on which module we are at
+least the relevant dependencies like the
+section above we can Define platform
+specific dependencies as well for
+example iOS or jvm or any other platform
+we can have in our cutting multiplatform
+project and each platform we Define has
+its own folder and they can have their
+own implementation the in this case we
+have a getf actual function and this is
+the implementation and the definition is
+here which is an expected getfor setting
+the other type of Amper configuration is
+mixed with Gradle the different here is
+we have a settings. Gradle file as you
+probably know before in this file we
+declare the modules and the plugins and
+uh our plugin management and any
+repository we want to fetch dependency
+all are getting set here the rest is
+quite similar let's have a look in the
+shared module we have a
+moduleo as you see here almost the same
+the jvm file IOS app and Android app and
+the other thing is we need to have this
+graded wrapper file as well as I said
+it's quite similar and I already run all
+three applications and you can see all
+of them run smoothly and there is no
+problem with that in general I think
+emper is a promising tool for
+simplifying the configuration especially
+if the project is getting more complex
+with the same power of Gradle build
+system the other thing I didn't mention
+I was showing all these example in the
+fleet IDE which is so cool so simplified
+and make the development experience much
+nicer and we don't have all the options
+visible and but it's more powerful as
+you may have noticed these two tools I
+introduced Fleet and Emperor are not
+stable and they are in a public preview
+and experimental phase but it's worth
+trying to get to know the future plan of
+jet Brain Company in my opinion these
+tools are so cool and make things so
+simplified especially for those people
+who want to start software development
+they get a positive impression when they
+see these nice and simplified tools that
+was it for this video hope you found
+this video useful I really recommend to
+trying out these tools I know they are
+not stable and you may face some issues
+but worth trying I'm Ali from Theo
+Channel I would like to ask you to show
+your support by liking this video and if
+you have any comments write it down in
+the comment section and subscribe to the
+channel see you till next video
