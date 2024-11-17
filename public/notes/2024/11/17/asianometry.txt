@@ -1,0 +1,511 @@
+5G marks yet another wireless technology
+transition one part of the transition
+promised immense bandwidth and super
+fast speeds millimeter Wave It's a
+fascinating technology but a few years
+into the 5G roll out difficult Technical
+and economic challenges remain if
+semiconductors are black magic then
+radio frequency integrated circuits or
+rfic are the darkest of the dark arts
+let us take our first defense against
+the dark art class no cursing allowed in
+this video we dip our toes into rfic and
+the 5G millimet wave
+deployment imagine a wave traveling
+through open space the distance that
+wave travels in a single cycle is called
+the wavelength and is measured in meters
+how many cycles pass through a given
+point is the frequency and it is
+measured in hertz named after the
+American car rental company based in
+Florida not really don't leave a comment
+about that
+a megahertz means a million Cycles
+passing in a second gigahertz a billion
+Tera a trillion frequency and wavelength
+are inversely related so as frequencies
+rise the wavelengths fall some of the
+highest frequency waves are Unholy
+things like gamma rays their wavelengths
+are measured in the picometers and they
+have so much energy we use them to kill
+cancer
+cells countries allocate parts of their
+Spectrum to certain use cases like radar
+or Wireless or Wi-Fi spectrum is
+fundamentally limited so making the most
+of what you have is a
+challenge the last big Wireless
+generation was 4G and in that generation
+the world's telecoms converged on the
+LTE standard due to its Superior data
+down link speeds but being a world
+standard LTE had to accommodate many
+different frequency slices anywhere from
+the 450 megaherz to the 3.6 GHz
+neighborhood this made developing an LTE
+World phone
+exceptionally difficult but a larger
+issue concerned the capacity constraints
+when you only use these small slices of
+frequency the 1G through 4G systems have
+always used frequency bands below 7.125
+GHz but over the years those
+neighborhoods had gotten very crowded
+and typically a cell operator in a
+particular geography has only around 200
+MHz of spectrum to work with and that is
+not enough so in that context Engineers
+began pondering the philosophical
+foundations of 5G what should 5G try to
+be yes 5G wireless networks must be able
+to handle yet more data traffic mostly
+mobile video it seems and the section of
+the 5G standard is called enhanced
+mobile broadband but its creators also
+Envision 5G enabling other types of
+communication one is an ultra reliable
+low latency networking or URL LC Ur LLC
+is for handling super important data
+that must be delivered quickly and
+reliably imagine self-driving cars
+communicating with each other to avoid
+collisions or robot arm being wirelessly
+controlled both cases we need to deliver
+signals in like less than 100
+milliseconds the other use case is
+massive machine type Communications
+meant for lots of lowcost machines that
+transmit data infrequently but for a
+long time think sensors actuators
+vending machines and the like these
+three cases involve different
+requirements for example streaming video
+on your phone does not require the same
+latency or reliability as autonomous
+cars exchanging data to determine how to
+avoid a collision because these
+philosophical goals for the 5G standard
+are so broad 5G was thusly designed to
+be more flexible particularly in what
+frequency bands it can use and for the
+first time 5G opens up a whole new slice
+of the Spectrum for us in 2011 dorier
+Pai and faruko Khan from Samsung
+Electronics wrote an influential article
+in the i e Communications magazine p and
+KH looked at all the tricks that LTE had
+to do to get the most out of the limited
+spectrum and concluded that something
+else was necessary so P con suggested
+entering the then largely unexplored
+millimeter wave regions pointing to
+several millimeter wave bands in the 7
+70 80 90 GHz range these are called
+millimeter wave bands because their
+wavelengths are in the 1 to 10 mm range
+the FCC opened them up in 2003 for New
+Economic Development before that the
+Spectrum was only used for military
+Radars satellite Communications or
+cellular backhole basically
+point-to-point connections were a big
+fix antenna fires narrow millimet wave
+beams and another big fixed antenna
+several kilm
+away the beam tolerances are such that
+strong winds can sway the towers and
+misalign the beams so you can guess why
+millimeter wave has not been much used
+for Consumer
+Wireless probably the first consumer use
+case after the FCC decision was
+Automotive radar the 77 GHz Spectrum ban
+was opened up to help the Advanced
+Driver assistance systems and cars
+identify dangerous situations and
+prevent
+crashes another use case was the the Y
+gig Wi-Fi standard which uses a 60 GHz
+band first formed in 2009 I can't really
+say that it has caught on but soon after
+Samsung's paper the idea gained traction
+and in 2014 published research at both
+NYU and UT Austin showed it technically
+feasible to bring millimeter wave to
+Consumer Wireless
+applications so in the end 5G gained
+support for a set of bands in the range
+from
+24.25 to 52. 6 GHz this is in addition
+to two other sets of bands located in
+more traditional sub7 GHz
+neighborhoods here we should take a
+pause and talk about rfic and how they
+work your slick sexy iPhone 16 and your
+grandpa's two-way radio might seem light
+years apart but at the end of it they're
+both radio transceivers a transceiver
+being combo devices that work as both
+transmitter and receiver let us
+sequentially step through how they work
+and bear with me there's going to be a
+lot of terminology but these big words
+convey relatively simple ideas imagine a
+phone and it wants to send a message
+first the phone's processor sends text
+data to the transceiver in the form of
+bits ones and zeros the rfic Begins by
+converting those digital bits into a
+continuous analog signal the analog
+signal you get as a result is called the
+baseband just an analog encoding of your
+Digital Data
+great we can transmit the signal now
+right no the problem is that the base
+band is low frequency and that will
+cause problems with the antenna the rule
+of thumb is that the antenna should be
+about half the wavelength a low
+frequency like with the baseband means a
+big wavelength and thus an impractically
+large antenna for a phone so we and by
+we I mean the rfic not literally us
+employ a mixer to mix the baseband
+signal with a higher frequency signal
+called the carrier frequency this Unholy
+ritual is known as up conversion and it
+transmogrifies the base band signal into
+a pass band
+signal the cell operator chooses the
+carrier frequency based on what was
+allotted to them by the regulator as
+well as what is supported by the
+wireless technology standard when we
+create the pass band signal we also
+create a small band of frequencies
+higher and or lower than the carrier
+frequency these are called side bands
+and this is where the actual data from
+the base band is encoded the whole slice
+of frequency from the lowest to highest
+sideband is called the bandwidth the
+size of the side bands is defined as a
+percentage and that explains why a
+higher carrier frequency like that of
+the millimeter wave get you more
+bandwidth 10% of 25 GHz is way higher
+than 10% of 7 GHz and that means more
+data
+capacity now the pass band signal is
+more suitable to send but not quite yet
+your iPhone needs to communicate with
+the cell tower but the nearest
+traditional Tower is usually about 2 km
+away from and 30 to 100 m above the
+iPhone and it needs to reach that
+imagine a wave traveling or propagating
+through plain air outwards from the
+phone you might imagine it as like a
+sperical wave moving outwards from the
+mobile device kind of like a force field
+or some bubble in a Sci-Fi movie The for
+formal name for this expanding bubble
+behavior is isotropic radiator in the
+real world a perfect isotropic radiator
+like a perfect marriage on Instagram
+does not exist at distance at certain
+areas the bubble will flatten out but I
+think it is helpful to visualize it like
+as such anyway so we have this bubble
+expanding outwardly from the mobile
+device in every direction the mobile
+phone use some amount of power to Output
+that bubble and that power is spread out
+across the bubbles quotequote surface
+area so as the bubble travels outwards
+its surface area expands diluting the
+wave's power density this dilution is
+known as path loss and it is measured
+using the free equation path loss in
+turn leads to attenuation which in the
+Wireless World refers to the gradual
+reduction of signal strength not all
+attenuation is due to path loss rain
+object obstruction and the like are
+other reasons the path loss is indeed a
+significant contributor to
+attenuation thanks to this path loss and
+other attenuating causing factors if we
+want the P band signal to reach the
+tower then we must amplify its power
+this is the job of the power
+amplifier the power amplifier is the
+rfc's most power hungry module it is
+also one of the most difficult modules
+to design designers must design a power
+amplifier that can achieve the highest
+level of output power to reach the tower
+while also maintaining good efficiency
+and linearity a wireless device is a
+power constrained environment plus
+pulling power also generates heat so we
+want to be as efficient as possible we
+can measure this with a metric called
+drain efficiency if the amplifier draws
+2 watts of power from the battery and
+outputs one watt then it has 50% drain
+efficiency another thing that power
+amplifier designers have to consider is
+something called linearity linearity
+describes this signals quality as it
+travels through the
+amplifier finally After exiting the
+power amplifier the boosted passband
+signal is transferred to the antennas
+antennas we finally at antennas so we're
+done right we transmit right no man that
+would be too easy I have one more thing
+to add if you were paying attention to
+the section about path loss then you
+might have been wondering per the free
+equation the path loss is proportional
+to the wavelength squared so higher
+frequency waves travel less well than
+lower frequency ones right if we go from
+3 GHz to 30 GHz Spectrum the path loss
+gets to be 100 times worse and we would
+need immense power to send any signal
+right luckily this is only the case with
+a pair of identically sized antennas but
+since the wavelengths are smaller with
+millimeter wave we can also make the
+antenna smaller they also have this
+gnarly spiral shape and so we can stuff
+whole arrays of them into the same area
+space in some cases as many as 32 these
+antenna arrays can generate directional
+beams aimed at the Tower or base station
+and vice versa I am strangely reminded
+of the eye of Sauron in that Lord of the
+Rings movie and that was on a tower
+too so that was transmitting to the
+tower when the tower sends a response it
+forms another beam towards the handset
+then inside the handset it is pretty
+much the process in first we receive and
+isolate the transmission amplify it and
+then use a mixer to pull out the analog
+signal for converting back into digital
+one of the big issues with millimeter
+wave one most people are familiar with
+is that the signal cannot easily
+penetrate certain objects buildings
+foliage and even the human body bricks
+trees and outdoor tinted glass are
+particularly good at attenuating
+millimeter wave signals AT&amp;T flag the
+ladder has a major issue during their
+trials on the other hand heavy rainfall
+does not seem to be a significant factor
+researchers conclude no major effect for
+people within 200 M of a base
+station even just facing away from the
+base station can hurt performance a 2022
+experiment done at a millimeter wave
+deployment in Boston found 10 times
+better down link and three times better
+up link as compared to
+LTE nice but if you only just turn your
+back to the base station then you suffer
+a drastic drop in both metrics so the
+general rule of thumb is that millimeter
+wave works best in extremely busy areas
+with quotequote line of site Sports
+Arenas malls
+airports I suppose that I should mention
+here the 5G conspiracy theories like the
+link to covid I've seen plenty of
+rhetoric and fear-mongering but little
+credible scientific evidence that these
+millimeter wave rollouts cause damaging
+health issues I am no doctor but it
+seems to me at worst the waves hit your
+skin and imperceptibly warm it without
+penetrating very deep I reckon the Sun's
+UV rays a considerably more ubiquitous
+and energetic electromagnetic wave do
+significantly more
+damage anyway so what does this
+densification mean for the telecoms
+previously with 1G through 4G telecoms
+installed large macro cells with range
+of several kilometers with millimet wave
+they will need to install many small
+cells in dense amounts perhaps as little
+as 50 to 100 m apart acquiring this many
+5G sites is a challenging timec
+consuming task these sites have to have
+power that is available 24/7 so to
+provide Emergency Services as well as a
+back hul connection to the larger
+Network they also have to be
+aesthetically inconspicuous because
+nobody likes to look at a cell tower not
+to mention the environmental permitting
+and all that telecoms have considered
+leveraging reflectors integrated into
+Billboards or exterior glass to bounce
+millimeter wave signals off of buildings
+kind of like how sunlight reflects off
+Windows to heat rate birds and cars it
+sounds a bit crazy but that saves money
+as opposed to acquiring another cell
+site the deployment from LTE to 5G has
+been complicated very complicated the
+definition of 5G is any device using the
+5G new radio standard and as I mentioned
+the 5G new radio standard supports three
+sets of 5G bands low mid and high the
+low and mid bands are between 410 MHz
+and 7.1 MHz this is more like 4G good
+coverage but weaker capacity so they
+particularly in the low bands are
+basically not that much different than
+4G
+LTE the high band is where the
+millimeter wave spectrum is and where
+the most capacity and data rates are
+promised however deploying it would be
+the most work due to the propagation and
+densification
+challenges now telecoms can't just
+abandon their expensive LTE networks so
+they got two ways to deploy 5G
+Standalone and non-standalone the
+Standalone option is to build and deploy
+a true 5G Network 5G base stations
+attached to a 5G core Network and
+connected to 5G new radio consumer
+devices it is completely new the
+non-standalone option is a middle ground
+stepping stone between 4G LTE and stand
+Standalone 5G there's a 5G new radio but
+it connects to a 4G LTE core this gets
+you somewhat faster speeds as well as an
+LTE fallback but the Improvement isn't
+great especially at lower bands the big
+American telecoms Verizon and 18t were
+the first to go into millimeter wave 5G
+and it made sense for them the lowed
+midband 5G frequencies were already
+occupied by their legacy 3G and 4 G
+networks so for those telecoms the high
+bands were Green Field territory in 2018
+Verizon started deploying non-standalone
+5G for mobile and their fixed wireless
+access service which is like internet
+Broadband but delivered using a wireless
+connection the fixed wireless access
+stuff works well other companies like US
+Cellular and T-Mobile offer it too but
+it is a niche service the issue had to
+do with the mobile service part of the
+millimeter wave roll out by the time 5G
+came around the smartphone ecosystem had
+matured most customers were not super
+willing to pay a big premium for some
+faster rates and the super confusing
+branding of what is or is not 5G did not
+help much either lots of people had no
+idea if they were connected to LTE the
+LTE 5G Middle Ground the quote unquote
+real 5G or the actually super fast
+5G the biggest Hope was in late 2020
+when Apple released the iPhone 12 in the
+United States the US version of the
+iPhone 12 had 5G millimet wave support
+unfortunately that still did not much
+change things analysts expected that
+millimeter wave would carry about 5% of
+mobile traffic in
+2021 and Verizon said that over time 50%
+of urban traffic will be on millimeter
+wave but in 2021 the analytics Company
+open signal reported that just about
+2.9% of mobile traffic in US urban areas
+was consumed on millimeter wave 5G a
+miss another study of San Diego by ejl
+Wireless research at the time hinted at
+why they found that after connection any
+slight movement would cause the phone to
+fall back onto 4G LTE and they were
+skeptical that Verizon could get a good
+return on its investment if it tried to
+cover a large city Verizon and Qualcomm
+the latter a major backer of millimeter
+wave argued that coverage added less
+than how much data traffic is being
+shifted to millimeter wave that would
+alleviate pressure on the existing 3G
+and 4G networks and thus be a net
+positive sum for the telecoms
+nevertheless Wall Street was not pleased
+especially as the Insurgent third
+Telecom T-Mobile came out with low and
+midband 5G deployments and that went
+well since then it seems like Verizon
+and AT&amp;T have tweaked their strategy in
+February 2021 the two companies bought
+licenses for 5G midband Spectrum in the
+C ban 3.7 GHz a prime ban Verizon by
+itself spent over $45 billion on this
+spectrum since then the two companies
+have focused on expanding their midband
+offerings including their newer
+Standalone 5G Network the real 5G
+meanwhile device support especially on
+the Apple front has been weird a few
+years in it is still only the US iPhones
+that support millimeter wave and their
+iPads even recently drop support for it
+entirely before we conclude I want to
+thank PhD student t elazar for his help
+in walking me through this complicated
+ecosystem the video would not be
+possible without him and any mistakes
+are mine not his the telecoms are still
+expanding out millimeter wave but mostly
+for fixed wireless access in rural areas
+and high density urban areas like
+airports and sports stadiums and
+honestly that is where a millimeter wave
+works best unless something changes is
+there a super compelling super broad
+killer app for millimeter wave out there
+many of the internet of things and
+Industry 4.0 initiatives that 5G was
+supposedly to be good for have not yet
+emerged in the United States deployments
+have not met expectations and so the FCC
+has started looking at more quotequote
+Creative Solutions to use this
+millimeter wave spectrum which remains
+largely unused outside of the US the
+rest of the world hasn't really jumped
+on on to millimeter wave one significant
+exception being Japan which set up a
+millimeter wave Network ahead of the
+2020 Tokyo Olympics but technology
+continues to evolve and telecoms
+continue to move towards Standalone 5G
+the true 5G bolstered by continuing
+improvements done by Qualcomm and others
+but will millimeter wave benefit from
+that progression we shall see all right
+everyone that's it for tonight thanks
+for watching subscribe to the Channel
+Sign up for the newsletter and I'll see
+you guys next time
