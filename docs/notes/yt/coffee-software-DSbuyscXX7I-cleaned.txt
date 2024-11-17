@@ -1,0 +1,2160 @@
+[Music]
+n
+[Music]
+this
+[Music]
+[Applause]
+[Music]
+oh
+[Music]
+all right we are live uh Al and learning
+hi everybody welcome to another show uh
+today I'm joined by the one the only the
+amazing the inimitable uh Dave uh Kramer
+I hope I didn't bot your first or
+surname there sir oh we're all good but
+I don't think I'm you're humble me
+though what you humble me though oh no
+no anybody who anybody who supports as
+uh interesting an effort as you do is
+deserves all the honor I can throw at
+them um uh I'm really glad you're here I
+I'm a
+huge uh postest fan and you uh I'm told
+do some of the work and when I say I'm
+told I mean by the internet and Decades
+of um articles code and uh discussions
+that's what tells me um can you
+introduce yourself before I butcher it
+sure um my name is Dave Kramer I have
+been working on uh post press for longer
+than I cared to admit to somewhere
+around 1999 even before postgress was
+cool um I'm a Canadian currently living
+in Florida some people may ask why but
+that's where I'm at weather's fine uh so
+the uh first post press work goes I've
+been the maintainer of the postrest jdbc
+driver since 1999 I've also picked up
+some other work uh with plr very know
+it's a procedural language for R I
+recently uh picked up the odbc driver as
+well so I'm maintaining that moved that
+to GitHub seeing a lot of good uptake on
+that and that's sort of where I'm at at
+this oh I'm currently work for Amazon
+too in the open source in the open
+source Community Amazon is now you know
+got a fairly substantial postgress open
+source team that's uh dedicated solely
+to work on the postgress project really
+that's wonderful that's that's wonderful
+I mean post is it's
+I've never felt like it was particularly
+vendor uh driven you know I I don't I
+can't point to the com the company
+behind it you
+know uh because I don't feel like there
+is one Maybe I'm Wrong maybe I'm just an
+idiot is there any single company that
+we could have said at any point in the
+last 30 years was the company to go to
+to affect change in that project or is
+it just has it always been a sort of
+loose Coalition
+of
+contributors that's an interesting
+question where you worded
+it you know that that affected change I
+think I think there was a couple things
+you know uh there was a long time ago
+actually uh a guy named Ned Lily tried
+to create a company and it was he was a
+little too uh he was a little ahead of
+us time it was called Great Bridge at
+the time and it had uh a number of the
+core members in it I think it was
+probably
+in the
+early 2000s when he tried to do that and
+it didn't succeed but then uh we had
+another company uh Enterprise DB they
+were kind
+of they did a lot of marketing so there
+was a there was a perception that they
+were the postgress company that's sort
+of never been true um they did a lot of
+of
+uh work on that and a friend of mine
+just told me that great bridge was 2001
+um
+wow enter Enterprise DB actually it's
+funny you mentioned that uh oh hello hi
+every we we started if you're wondering
+it's live right now hello when you're as
+you come into the chat group uh just let
+us know where you're coming from because
+uh I guess you're in the east coast uh
+and I'm in the west coast of the United
+States at the moment so I'm winning
+where all these wonderful people who are
+joining us are from uh by definition
+it'll be you know nine o'clock in Paris
+and uh uh 8 o'clock in the UK and
+extrapolate from that a few hours more
+and you're already looking at midnight
+you know in or near uh India and then uh
+very early in the morning way too early
+to wake up yet uh in East
+Asia and so on hello from Algeria hello
+so thanks for joining us um okay so
+anyway yeah so you mentioned Enterprise
+DB that's a that's actually a very I do
+remember them are they still around I
+don't know they very much still around
+they actually actually are pretty
+significant so when you asked the
+question it was like effective change
+that's an interesting question because
+the people that affect change are the
+are the are the core contributors and
+the people that are writing code so
+we've always been sort of distributed
+across a number of companies in fact the
+organization is is you know there's
+there's the organization is interesting
+because there's a core group of people
+that are kind of the
+uh they they have you know the power to
+make you a make you a committer or not
+make you a committer and do things like
+that and they by Design there's no they
+make sure that there's no way that any
+more than I believe any more there's no
+majority in any one company and right
+and um in fact at one point you know
+somebody moved from one place to another
+and there was a majority so they
+actually had to add core people to
+balance it out and then after that
+there's the all the contrib all the
+committers are like literally all over
+companies but now we're we're seeing a
+little bit of consolidation into sort of
+the hyperscalers Amazon and Microsoft
+particularly as well as EDB so there
+there's the three largest if I you know
+group them all together that's the three
+largest committers yeah uh but
+Enterprise DBI give them credit at least
+for being first because I I remember
+them back in 2004 2005 they were talking
+about
+um they had a I remember the original
+the reason reason I first learned about
+them was that there was a Erp thing
+called cier yep that was or Oracle only
+and they had Enterprise DB had done a
+port of it that made it work on their
+Oracle like Oracle compatible post you
+know um how much of that work has since
+been Consolidated and actually just
+merged Upstream like do you still need a
+separate is it still a separate effort
+to do Oracle compatible or are those
+just part of core posters at this point
+I wonder I don't think there's a whole I
+don't think a lot of that got merged in
+they Enterprise DB still sort of sells
+that as a as a product you know their
+Oracle compatibility layer there is some
+Oracle compatibility but it's not too
+much I mean we we've
+the project itself is not that we don't
+really Bend towards you know it works in
+Oracle so let's make it work here kind
+of thing so that doesn't happen too much
+but yeah Enterprise DB certainly had
+mind share for a long time yeah they
+were first and they did you know Market
+postgress quite quite a bit um then you
+know obviously more recently we've got
+the bigger companies come or you know
+the hyperscalers coming along and
+obviously marketing it well I I've I
+uh my first integ introduction to post
+was in the
+90s and and the reason it was in the 90s
+was because that was as opposed to like
+the early 90s when I first started using
+computers was because that was my first
+introduction to Linux and uh you know I
+don't think people appreciate that up
+until you know version 8 there was no
+windows Port oh yeah that was about 8.4
+I think or 8.5 so yeah which meant that
+if you're one of those people who was
+trying to get an app out the door and
+you're on the very large majority of the
+operating systems out there that are
+using or the the deployments out there
+that are using Windows up until that
+release which now is in the distant past
+but at the time it was you know decades
+into post's life already um there was no
+windows Port so like you had to like run
+and this is before virtual machines were
+OB equitus or and certainly not Docker
+was Docker was not there you know uh and
+I sort of
+think cynically uh that that my sequel
+had the day in the very
+beginning because it was like like a
+cockroach it was just everywhere you
+know you know like and you could run it
+on Windows it wasn't particularly well
+suited to running Windows but it did run
+there and uh you know it was easy to get
+started and and whereas with posters I
+think post I mean I've always loved
+posters it is the better database in my
+uh not so humble opinion but uh it was
+just so painful to get started now of
+course you know Docker you know who
+cares it's it's I can run I can run a
+thousand postes before most people can
+whistle um you know it's just an amazing
+result but uh I think that cost post a
+little bit of time I always wondered
+about this I think about this a lot like
+why did why did this provably inferior
+thing ever get more popular than posts
+you know like why why why why and uh I I
+have I have some opinions on that I
+think the other so there was two in my
+mind there's two big issues there one is
+there was a perception of speed
+difference between MySQL and postgress
+so
+you know one of the one of the downfalls
+if you will of postgress is that we
+shipped with a very very extremely
+conservative configuration so you know
+uh when you started it up you got very
+little memory and you and so if if you
+ran any queries of any size you know
+they were very very slow you had to tune
+it to make it work and uh you know that
+that didn't help us but it did run on
+everything and so that that was the
+reason why it was shipped that way
+secondly um I think the lamp stack was
+uh just ubiquitous at the time right so
+it was like you downloaded the lamp
+stack and you got you
+know you got SQL but you got Apache and
+you got uh PHP or whatever you know
+right and and you could you you could
+write some code and I do think that
+there and the one thing about my sequel
+was it was pretty forgiving if you made
+mistakes like if you put in
+a you know to the point where it would
+actually accept bad data so you know it
+didn't error out so you know for people
+that were not sort of uh computer
+science experts it kind of did
+everything for them you know they could
+they could get their application up and
+running and they didn't have to fight
+with it and then you know they were able
+to you know turn a dime and way you goes
+but postest you know you had to be a
+little bit more careful you had to get
+everything right it was a little more
+exacting and that didn't really that's
+not a you know it's not as pedestrian
+let's say as you know my sequel so I
+think that I think you're right there
+was a huge uh mind share that people had
+for a while that post now we're now I
+think what we're seeing now though is
+the Enterprises are going you know we
+can't accept bad data we we want
+transactions to actually work and you
+know we can actually get the the
+performance out of postgress that we
+need so you know that's where we're
+starting to you know the curve is
+definitely going the other way oh oh for
+sure and I actually there so one of the
+things I'm always reminded of is back in
+the early 2000s we you know we heard all
+the time that Google was using my SQL
+for AdWords right and I remember just
+thinking well of course they're using my
+SQL for AdWords it's a nosql database
+this is the original highly highly fast
+uh nosql database in that at the time
+the default configuration of my SQL was
+my iasm which was the table engine that
+thing didn't understand referential
+Integrity it didn't actually care you it
+would silently accept if you said this
+key references that table that ID it
+would would silently accept that ddl for
+the foreign key and then not do anything
+when you insert a data that didn't
+reference a valid ID right it didn't
+actually honor the constraint it what's
+the point of a relational database that
+doesn't understand
+relationships right like it's it was it
+was broken by default so of course it's
+fast if you don't have to honor
+referential integrity then then yeah
+fine you can be real fast Dev no is
+super fast too you know I just oh so
+grading I couldn't believe this thing
+was actually allowed to ship and people
+were like oh this is a great database no
+it's not it's a base there's data that I
+could trust actually it also didn't it
+didn't wasn't
+transactional
+yeah so yeah of course it's gonna scale
+it doesn't have to do anything you know
+um and uh but meanwhile I saw this great
+video a few weeks ago uh was it this
+YouTuber Anton Putra um has some really
+great videos and uh let me see if I can
+find the one here he Compares uh post
+[Music]
+videos he Compares a postes to my squel
+about a month ago right and like for the
+very large majority of use cases postz
+just crushes my SQL now in terms of like
+memory for uh you know the number of
+transactions and the ability to to
+sustain the transactions and uh uh just
+performance and so on and he does you
+know does a benchmarking he demonstrates
+all the benchmarks he does um I'm not
+saying it's a a clean sweep across the
+board there are some places where posts
+could improve surely but fact that it is
+definitely clear that you you're better
+off using post watching this video I'll
+link it here um I thought this was very
+insightful there you go that's him I it
+was just a really good I mean yeah so
+you're saying you know now it's starting
+to turn the page I think for sure it is
+so if you look at this uh video he's got
+um let me see CPU usage for postz is a
+little bit low lower after like 10
+minutes of sustain load testing uh he's
+got a he's got what some people have
+because they you know they no true
+Scotsman right they're always there's
+always a moving goalpost but basically
+he's got like five tables that have
+foreign keys and references and uh they
+do he does some joins and nothing like
+it's not an Erp solution right it's not
+it's not cier or Salesforce whatever but
+but it's still a squl data data
+structure uh where post just seems to
+just decimate the the alternative he's
+looking at memory usage here memory
+usage for post crit stays at like 6% all
+the way through and then 14% for MySQL
+queries per second seems to scale
+linearly with both MySQL and post
+quiz uh select latency P90 is basically
+the same for post quiz and then but
+actually post quiz has this uh no it's
+actually a little it's actually like
+half uh depending on where you're
+looking at there's little burps but
+basically on average it seems like it's
+uh better for post it's just a really
+it's a good result I mean this is I you
+know when people say oh post is postgis
+is slow or what I don't know what you're
+talking about anymore it just doesn't
+make any sense you know uh it's clearly
+very very good and uh if it weren't you
+know I don't know that there are all
+these large organizations that were that
+would be using it now and I I asked um
+Claude the AI because I don't want to do
+you know me I
+I'm I I tried doing research once and uh
+that was a you know that was a bad year
+so so anyway I asked uh the uh the AI um
+what it thought were organizations and
+sites that that us posts okay so it
+mentioned Apple for various internal
+systems Instagram primary database scale
+to massive uses massive usage Reddit
+main data store Skype main database for
+user data twitch core database I don't
+know how old these references are you
+know I don't know if this is like a case
+study from 10 years ago if they just
+published this last week I don't know I
+have no idea spot Spotify for large
+scale analytics Discord for core data
+storage Milla Firefox sync add-ons crash
+reports uh NASA apparently uses it for
+various projects the FAA US state
+department French National Social
+Security European Space Agency Financial
+Services revolute the core banking Robin
+Hood transferwise Japanese Banks Goldman
+Sachs education research CERN MIT
+Harvard Yale University of California
+system I don't know if it's
+hallucinating all this by the way I have
+no idea and I don't expect you to tell
+me it could be all wrong I have no idea
+it's just this is the question is what
+are some large organizations and sites
+uh uh built with postgress right I I
+even misspelled postgress
+so um open Street m app of course using
+uh
+postgis um Reddit uses it for multiple
+postris clusters heavy read write loads
+uh complex relationship data vote
+tracking system um Instagram apparently
+uses it I don't know I mean this is it's
+even if half of these are right there's
+no doubt that you can do big things with
+postes at this point right like a uh
+just an amazing amazing piece of
+tech I I think I think those you know I
+listen to to the people you know the
+companies you mentioned I think they
+they're probably mostly right I I I
+don't have direct evidence that they're
+right but I'm rather sure that they're
+pretty close I mean I'm I'm aware of
+NASA I'm aware of you know some of the
+other financial institutions but I think
+the other thing that's happening though
+right now is that you know you talk
+about MySQL and you know oracle now is
+the only company uh developing it and
+where whereas we now have postgress
+being developed and you know everybody's
+working you know we have some very smart
+people working for you know Microsoft
+Google Amazon EDB and they're all
+interested improving it whereas you know
+I don't think we have that kind of
+ecosystem in the in the myl world so
+know the open source Maria DB is that
+still a thing I don't know whatever it's
+still a thing but I don't again you know
+we don't have the I don't I just don't
+think they have the the uh
+horsepower you know paying attention to
+it that we do in postgress to put it
+bluntly right I mean there's some very
+smart people working on it now yeah
+really really smart and it's a it's a
+ecosystem project as opposed to just the
+this one Consolidated thing I'm a big
+fan huge fan so can you tell us a little
+bit about
+about I I don't I I don't mean to put
+you on the spot here but can you give us
+some of the the lower behind it you know
+uh you know Stone breaker and uh Ingress
+and all that like the basics so I don't
+really know that much about what that
+what happened there which is saying
+something because you started 30 years
+ago almost uh and the fact that this
+stuff precedes you even well yeah that's
+the interesting thing I think you know
+19 so I think there was like postgress
+95 or something and and that's when they
+actually added the SQL part to to
+postgress before that it didn't actually
+have SQL a squl interface to it but and
+Stonebreaker wasn't that interested in
+it at that time you know he's he's he's
+sort of come full circle he's now
+interested he's actually I think on the
+EDB board of directors okay but you know
+so yeah he he had sort of you know gone
+on to other things at the time but as
+far as you know the kind of the lore I
+mean the interesting thing I I
+I have an anecdote of how I got started
+because it was
+interesting way back way back then of
+course there was sort of nobody working
+on it it was like you know maybe 10
+people working on this project right and
+so you know I the the uh a friend of
+mine I'd asked a friend of mine all so I
+started I I I quit my job and I started
+doing consulting and I so I I was doing
+Java Consulting and I was into into you
+know post graphs and a little bit but I
+had a I had a contract and I had a
+problem and so I I had bought a
+Microsoft uh support contract so I so I
+had a problem so I I thought I'd you
+know asked this the support contract you
+know how do I solve this problem I said
+well we'll get back to in three months
+oh me this is back in 1999 right this is
+like a you know back in in the Stone
+Age this point so I but this this is not
+really you know a feasible solution here
+so I started looking at open source and
+so I asked a friend of mine I says you
+know how do you how do you get involved
+in open source and he says just go on
+The Mailing and start answering every
+question you again so of course I went
+on the jdbc list because that's what I
+was doing I was doing Java so I'm
+starting to answer all these questions
+right so you know the first question
+takes couple days to figure out second
+question takes you know few few hours
+later few hours less and by the time
+you're you've answered like 100
+questions you're you're able to answer
+them without actually looking anything
+up so and at the time there was I didn't
+actually write the jdbc driver there
+another guy wrote the driver and but he
+decided he didn't want to do this
+anymore so Bruce Momin who's one of the
+core members of postgress and he's been
+around at least a few years longer than
+me asked me if I wanted to do it I said
+sure So that's sort of where it started
+from so that's you know before it was
+cool to work on postgress I was working
+on postgress but it you know it was uh
+that's sort how it started for me and
+then you know at the time I was sort of
+a part-time thing and then eventually
+got a few gigs that I was getting paid
+for it and you know started working for
+it this is like
+um this kind of involvement is it's
+organic right you start with something
+you're you're scratching your own itch
+right that's what we say about open
+source people who are are getting into
+something and they're that's the those
+are the best people because they always
+have they know what it looks like to not
+feel the itch anymore you know they know
+what it looks like what to have the salv
+work um and so they're the best judge of
+what success looks like when you make
+changes to the code um but I to to to so
+there was already a working jdbc driver
+at the time that's oh yeah oh yeah there
+was a working jdbc driver yep so
+remember for folks who aren't quite
+aware if you're talking about 1999
+remember jdbc didn't exist as much of a
+thing before 98 is right so the fact
+that there was already a good one for
+post was pretty phenomenal there wasn't
+even J2 at that point that was still
+just jdbc as a separate thing that would
+then be used uh in j2e um later on so
+that was that's pretty amazing um and
+it's interesting also that you mentioned
+the obbc stuff so obbc is of course the
+windows object database connectivity uh
+thing
+and in jdbc there are four different
+kinds of drivers at least that's I
+remember from decades ago right you have
+uh like model one model two model three
+model four right um um and uh they're
+they're based on how do you implement
+the driver is it like a a what is it
+what is the difference it's like do you
+prefer only Java or is it a wrapper
+around some n code or is it a proxy for
+something you know we're we we're we're
+a layer for or version four or whatever
+it's fully implemented fully implemented
+in Java we actually implement the postr
+protocol there's not there's a couple of
+projects that do that also implement the
+protocol um and so I think you know um
+but yeah so jdbc was actually modeled
+after obbc for better for worse right I
+think it's for worse
+but because odbc was not particularly a
+great thing so no but I mean so but for
+Java to get that that boost in the very
+beginning that's why we had these
+different uh affordances in the kinds of
+models that you could build types of
+drivers a lot of the a lot of the
+earliest drivers for Java were actually
+rappers around the native obbc code uh
+and that mapped fairly straight
+forwardly to uh one to the other in
+terms of concept so you could get like
+like you said in the first year or the
+first two years of jdbc I remember these
+drivers coming up so the fact that
+there's a post one and it's a pure was
+it always a pure play Java one or was it
+ever like a it was pure always it was
+always
+pure that's the hardest one to do and
+it's worth I mean it pays dividends if
+you can get it right but well we're
+still trying to get it
+[Laughter]
+right surpris surprisingly there's still
+bugs in it oh I mean it's such a complex
+database surely um is the implementation
+of the driver like n Java I mean Java
+nio this is the thing that blows my mind
+Java nio came out half a decade later
+right like more than half a decade later
+um so did you integrate that
+retroactively or is that are you using
+that at all is it still just Java iio
+input stream or just Java IO input
+stream which is which so there so
+interesting enough there was somebody
+that wrote an nio driver and for for
+postgress and for a long time the
+blocking driver was faster so I'm sure
+Point um but it it does come with some
+you know there are some issues that we
+have with the blocking driver such as
+you know postgress has this thing of
+listen to notify and we because it's a
+blocking driver we don't get any we
+don't get the notifies because we have
+to actually do a query to get the
+notifiers
+so sorry the PG notifi
+the notifi there's a notify listen thing
+and you know it comes synchronously so
+you don't always get it but I've I've
+actually done videos on that one that's
+a pretty cool feature um speaking of
+since I have you can I ask you about the
+virtual threads support story like sure
+it does it yes okay next
+question but uh about a year ago
+somebody went through all the code and
+removed all the synchronized code
+however now that we've removed it all
+and of course I think I'm not sure which
+version of of java actually supports uh
+21 21 so we could actually put the
+synchronized back in so oh Oh you mean
+the pinning oh that's 24 that'll be uh
+yeah four months from now yeah so
+however you know um it's an interesting
+problem ja Java the enter ja Java
+Enterprise moves very very very
+slowly we we still support Java 1 .8
+because we have a lot of C we we just
+can't get off of it because the
+Enterprise doesn't move as fast as
+everybody else there's nobody you know
+they're they're just using 1.8 so you
+know whether not we support uh threading
+or not it's another somewhat irrelevant
+to
+us I mean I mean to the extent that you
+can just sort of maintain the same code
+base and have it do the right thing
+better with no change in Java 24 and
+later like you could in the you could
+have the synchronized blocking code from
+java 8 which would
+perform you know expectedly poorly by
+comparison uh and then just
+automatically benefit from the jbm's
+magic virtual thread support in Java 24
+that's that's pretty cool that's
+actually is actually that's one of the
+coolest things about Java the jvm is
+pretty amazing I mean the work the work
+that has been done in the jvm you know
+people kind of go oh it's Java I kind of
+got some you know the bad news is J the
+jbm is pretty fre amazing so
+um I
+I find
+it it's an interesting ecosystem to work
+in because of because of all the work
+that's been done in the jbm I mean you
+get cotlin you get groovy you get grow
+you get all these things that you can
+you know you can use oh yeah I mean I
+use so I'm using virtual threads I'm
+using grow VM I'm using postgrad like
+the stack fun I'm using spring I'm using
+the J I'm using Java or cotlin the stack
+fundamentally has not changed I would
+have been using spring 20 years ago I
+would have been using postgress 20 years
+ago not grm but the fact that I can get
+grm native images and virtual threads
+from the same exact code upgraded to use
+the latest libraries you know
+is I don't think there's any other
+ecosystem that has that kind of
+capability no um so you okay so so the
+jdbc thing uh is a full Java driver and
+it's at this point by the way do you
+have any anecdotal information on
+whether it performs as well or scales as
+well performs as in in terms of I can
+get a response back from a single query
+and then versus and then then the other
+question is does it scale as well that
+is to say can I handle you know more
+requests at the same time do you have
+any idea uh excuse me anecdotally on uh
+its performance relative to say obbc or
+python or
+whatever oh I don't have any of that
+information I mean you know that's a
+very that's a tough tough thing to to
+answer I mean the biggest challenge
+there is that when is you know R is uh
+not multi-threaded it's process based so
+the connection is there's a onetoone
+relationship between the connection a
+lot a lot of the
+time for the response isn't actually in
+the driver the time for the response is
+in the time it takes to get to the
+server the time it takes to get back the
+time it takes for the server to actually
+do things how much time it takes in the
+in the actual driver is probably
+insignificant amount of time we have
+seen some speed UPS in sort of being
+able to run things in uh binary mode uh
+there there's a in the in the postgress
+protocol you can ask for information in
+text mode or in binary mode so we've
+actually seen a huge speed up in you
+know recently you mentioned Ai and stuff
+there's a pretty popular extension
+called PG vector and uh when they first
+implemented that everything was coming
+back in text and uh you know one of my
+colleagues mentioned that this was a
+little slow and I said oh well you can
+do this in binaries oh okay cool that
+like speed it up like almost double the
+speed right away so um that was all that
+was that was all built into the driver
+that was you know it was very easy to do
+that in the
+driver I use the I I do presentations
+where I talk to people about the PG
+postgis plus the vector plugin right PG
+Vector um uh all the time I mean it's I
+just did a presentation at midnight
+California time this morning you know
+for some folks in the in the UK for
+example and uh I quite like that I mean
+the fact that I can just use
+good old friendly post guys and take it
+to these New Frontiers is one of the
+reasons why I love post because I don't
+feel quite so locked you know like
+you're not logged in if you have access
+to every plugin out there right like it
+there's no such thing as locked in here
+and to the extent that I can actually
+get some of the same benefits just using
+my old friend postc as I might by
+switching to a a completely different
+data store like uh like well pick you
+know have your pick right I mean there's
+a million of them uh is one of the
+reasons why I love it is is it's just
+incredible ecosystem my question then is
+what is the interaction with the driver
+when a plug-in adds new things to the
+server like how does it like how does
+the driver know what to do with a a
+vector uh coming back from the server
+for example what does that look like is
+there any coordination there what about
+postgis when postgis adds geospatial
+constructs to the server does that I
+don't even understand how that I mean do
+you have to have a conversation with it
+because it's not like an official part
+of postcript right it's a third party
+thing how does the Java code learn about
+it so so let me answer the first
+question about PG vectors so we actually
+so in the PG Vector I think he actually
+created a PG Vector type so he was able
+to you know there there are um custom
+types and post Quest so you you get the
+type coming back the type information is
+in the protocol then you know how to
+handle it then you can read it into your
+into a custom object in the Java world
+the driver really doesn't get involved
+in that now in the case of postgis yes
+uh the guys from postgis wrote a whole
+lot of code to actually handle all the
+different kind of custom types in there
+so but it's all done with custom types
+so they actually it's referred to in in
+the SQL world as domains but you know or
+or uni uh user defined types but that's
+all done sort of in the postc protocol
+but you're right though that the the
+ecosystem and the flexibility of postc
+is probably one of the other big reasons
+we didn't mention that and you know why
+is postgress so much better but you know
+like said we have you know forget about
+jdbc there's if there's a post if
+there's a computer language there is a
+there is a driver for it in post in
+postgress if there's if there's a reason
+to have an extension there's an
+extension for postgress so you know that
+you can you know we have uh we recently
+added Json which basically makes it a
+nosql
+database Oh you mean you're not talking
+about a PLP like a PL Json you're
+talking about like in the as a data type
+yeah data type okay okay right right
+that yeah totally you store unstructured
+data and have it transactional oh I know
+you can also do a like a you can select
+attributes from the Jason structure like
+their columns in a table yes is that
+recent I thought that was been there for
+a while I there for a while but I mean
+the fact that you the fact that we could
+just add add Json to it and it wasn't
+that difficult to do right it was you
+know right the harder thing was the
+harder thing for us was litigating how
+we were going to do it which is one of
+the things we we're very good at in
+postgress right well I mean Gotta Get It
+Right millions of people will be
+affected if you get it wrong I
+understand a little the The Liberation
+um so what so the post thing I guess
+what I'm trying to say oh uh that's a
+you've got a comment about your beard
+apparently your white beard is
+awesome so there's that very nice nice
+thing um I so did did the post guys the
+the postgis stuff require any
+coordination in the driver I mean I I
+have noidea I have no idea what they did
+do I I literally I mean I used to work
+with Paul Ramsey who's the one of the
+postgis guys and Martin and they wrote
+All That code and I have literally no
+idea what it
+does
+right they don't they don't they didn't
+talk to me what about what had to be
+done and I didn't have to help them with
+anything it worked it all works without
+any kind of coordination between the two
+of us which is pretty amazing right like
+but how do I get a strongly typed Java
+type pointing to a thing that EX in post
+oh because they actually created the
+types in the Java
+driver they added so when they not in
+the Java driver when they when they get
+the you can get an object back right so
+you can do get object from the results
+and when they get the object they get
+their type back okay yeah it just builds
+a type I guess I need to try I have a
+I'm unclear obviously about how
+this because I'm so used to using the
+the posts some stuff from uh spring that
+uh uh layer which somebody's done the
+work for you already but yeah we we
+actually do have a few types right we
+have PG box and so some other little
+types but we don't really do too much
+with too many other types right okay so
+that's what yeah I guess say you can can
+reg you can register a type with the oid
+so if you know the O so the oid is the
+uh ID of the there's a there's a
+metadata table and catalog table in
+postgress which is called PG type you
+can add so when you add a type you can
+it has an oid and when you so when the
+results head comes back you get an O ID
+and you can say okay this oid maps to
+this GIS object and automatically know
+how to read
+it oh oh so it's literally just a a
+table so oh yeah so that's a cool so
+that's the cool thing you know postgress
+is actually objectoriented if you look
+at the if you look if it's it's an if
+you look at the catalog it is all like
+an object oriented catalog everything
+has a has everything is has an ID
+everything references other things in
+the in the catalog and you know you
+could you you know you can build a an
+object model for the
+catalog huh I I never realized it was
+that easy to like
+connect I mean I I you know if there's
+only something that was missing I would
+be incentivized to try and figure out
+how to write a plugin but there are no
+gaps uh that I could foresee and so
+therefore there's no reason for me to
+learn um uh yeah that's amazing okay
+that's interesting I didn't realize it
+was that direct a connection um do other
+drivers benefit from that same mapping
+I'm I'm sure they must oh absolutely
+they can do exactly the same thing
+there's nothing magic about what we do
+we we you know we'll get back you know
+you'll you so basically you know when
+you when you make a request you get the
+fields first and the fields have an ID
+in them or an O ID which tell you what
+the field is and if the field is you
+know a you know a square or you know a
+rectangle or whatever you get the oid
+back for it and then you know okay how
+this is how I read it you know even with
+an arrays arrays are the same sort of
+thing there's a there's a complicated
+mechanism for knowing how to read an
+array out of out of the protocol
+right oh man it's really good um that
+the
+uh you mentioned that earlier that it's
+a process per
+uh request it's process per connection
+connection yeah assign so on the server
+side there's a whole process it's not
+it's not a thread it's actually a
+process like it's it's not a thread it's
+a process you're spawning a new thing um
+uh what are the I guess that makes
+concurrent I mean that is that why you
+have mvcc like is that why you have to
+be so careful about that's not really
+why you have MC mvcc um because you have
+no semaphores in the language anymore
+right it's now process based so how else
+would you create exclusionary views
+besides that well that that is how that
+is how we create exclusionary views but
+it's you know you could do that with
+threading just as easily mbcc is just a
+technique to have exclusionary views um
+so but we there is a actually you know
+some people in the community that want
+to try to do multi-threading we'll see
+how that
+goes I mean it couldn't be a you know I
+me famous as words of course but it
+could be good right like that that
+sounds pretty interesting like a the
+overhead of having a
+process Oracle apparently Oracle tried
+it and the results weren't exactly what
+they thought they were going to get
+so huh okay now I'm
+nervous wait so they're gonna try it in
+post proper or they gonna like create a
+for there's a there's a group of people
+that think that multi-thread is the way
+to go so they're they're and they're
+smart like they're not these are guys
+that are that I hold in high esteem so I
+I'm I'm interested to see how things go
+we'll see how it goes
+yeah that' be I mean that would be
+really cool because again this is one of
+those things where if you're using post
+um people like that can do things like
+that you upgrade to postz you know
+whatever 30 or whatever in some years uh
+and suddenly you've got hopefully even
+better scalability just for free you're
+you've done nothing just you know I mean
+these are the kinds of Epic engineering
+efforts that take decades or years I
+mean even virtual threads in the jvm
+took more than a decade to really come
+to fruition you know I do I do think the
+databases are a little different and far
+as as far as you know whether or not
+multi-threading is going to work because
+ultimately that comes down to resolving
+conflicts on the disc so you know we
+can't you know I recently had a
+conversation with somebody who wrote an
+application and thought they could just
+multi-thread this this application and
+sort of run it on a database and it
+would just sort of magically work and I
+said well jdbc isn't
+multi-threaded and he says oh yeah I
+found that
+out so it was it was like a
+he he I was I'm I guess I I'm I've been
+in the database world for so long that I
+just sort of take that for granted that
+you know ultimately we have to talk to a
+dis right you know we can't just sort of
+you know ask for data all over the place
+at the same time and expect to get a
+concurrent you know a a view of the data
+that's um correct you know right out of
+every thread right no somebody's gonna
+get the old stale view um right or block
+I guess which is what we want to avoid
+with
+nbcc um yeah but theidea the idea that
+you could actually have all these
+threads just hitting the database and
+sort of working magically was something
+that was he didn't realize that this was
+going to happen
+now so I so if we moved to a
+multi-threaded approach you're saying
+there' still be synchronization
+ultimately at the very last line of
+defense because only one person can
+truly make a change there at the same
+time right yeah right and so you might
+but it would it would in the meantime
+have the effect of lowering the
+Redundant uh process space yeah yeah
+yeah it it does make some things easier
+like currently we have to have shared
+buffers to you know communicate between
+processes we have to we as you said we
+have to spawn up a process to get
+started that's an expensive that's
+expensive uh you know that's why things
+like you know we have connection pools
+that exist PG bouncer is one of the
+famous ones that's why those actually
+exist because it is expensive to to to
+spin up a process so if you were just
+multi-threaded it would be you know
+there's no process to start um just
+start a thread and way you
+go yeah um that's another thing I mean
+the the tool the database has um over
+the decades it has become more and more
+critical to large scale uh systems and
+services about which we just spoke you
+know some minutes ago I I uh what are
+some of the you mentioned PG bouncer
+that's a connection pull on the server
+side there are obviously on the Java
+side and the C there's obviously
+different connection pools as well by
+the way what is your what do you know
+about connection pools on the Java side
+which one should people people be using
+oh God I'm not answering that question
+okay just
+wondering I we we tend to use Hikari but
+I I don't have an opinion really I mean
+okay that's what we're using I just
+wanted to know if we're like basically
+on the right track um but on the on the
+server side you've got all these things
+that are not exactly SQL standards but
+that exist in all the databases in
+different incarn ations uh and that
+serve to support scale right and and to
+do so as transparently as possible so in
+post because I know about a few of these
+things obviously mentioned PG bouncer
+there's also a a sharding you know you
+can do uh table sharding for example to
+partitioning you mean partitioning yeah
+thank you um uh what else you've got
+clustering I guess how what's the story
+for clustering these days what do people
+use there for like read versus write uh
+nodes is that a so the so the popular
+open source cluster if you will is is
+Patron um you know uh there's a few
+people out there so that that is you
+know basically a one right one writer
+know one primary multiple readers yeah
+there are a couple of you know
+Enterprise DB has a proprietary solution
+for doing uh you know mult you know
+primary primary um but as far as
+clusters go supported by Pro the
+postgress community we don't have a
+solution we you know we're we're sort of
+singly focused on providing a single
+instance which I think is I think has to
+change person this is my opinion not not
+the not the postgress opinion but I
+think I think you know um I personally
+believe or
+personally see or don't see anybody ever
+running a single version of you single
+instance of postgress in any kind of
+scale so I think it would be a good
+thing if the postgress community could
+you know figure how to at least make
+clustering easier for people you know
+add some features in to make it
+easier yeah I mean that would be that
+would be really good and the fact that
+it the fact that it works is uh you know
+pretty amazing um there are but I think
+if you also had some better support you
+know built in as you say I wonder what
+effect that would have if any on uh you
+know there there are the uh there are
+different databases that purport to be
+post
+compatible or wire protocol compatible
+or whatever um but there are you know
+they're they're they're not exactly post
+are they right they're they're postgres
+with some modifications or maybe they've
+ripped apart the engine a little bit or
+whatever so you got the uh coach TB the
+yugabyte these other sort of postc likes
+um that are that whose is to bring the
+joy of the postr uh modeling and and
+grammar and uh and feature set to a
+horizontally
+scalable uh sort of sort of workload
+right and um I don't
+know it's not like it's not like there's
+not a solution for some of this stuff
+now but it would be nice as you say to
+have that sort of built in I wonder if
+that would be
+uh I wonder what effect that would have
+if anything on on these other
+implementations that's a good question I
+think one of the challenges we have as
+as or I think one of the challenges a
+community has as as a as a community is
+trying to figure that out is you know as
+you sort of mentioned you have to get it
+right and we're kind of we're kind of
+letting you know for better for worse I
+think the other companies or or the
+other organizations or open source
+projects are trying to figure out what
+is right and you know I don't think
+anybody's actually got it perfect yet so
+I think they're in they're all
+interesting experiments the one cool
+thing that they get though and one of
+the great advantages of postgress is
+that it is completely open source right
+the postgress license allows you to
+create a company for it allows you to
+make money off it but when you do this
+you get this huge ecosystem you get all
+the extensions you get all the drivers
+you get you know the protocols open
+source so you know you don't have to
+write like I've heard you know other
+large companies with you know
+multi-million dollar client uh
+implementations right like they have you
+know hundreds of people working on the
+clients they don't you know they're
+getting all that basically for free so
+you know they can they get the advantage
+of being able to just you know add their
+uh Secret Sauce to whether it's like you
+mentioned coach DB or not coach but uh
+cockroach cockroach and yugabyte
+and few others you know cus did it they
+got cus is still around a little bit oh
+yeah so cus so that was
+um uh now part of azour right that's
+that's
+Microsoft and then Patron is the open
+source like that these are both
+horizontal scaling Solutions right uh is
+more just a a way to manage uh you know
+like a warm standby or hot standby right
+yeah scales for read only read you know
+read many multiple readers and one
+writer yeah which I think is
+actually
+fairly common I would I would imagine
+most sites are read only or read most
+you know read mostly so that's that
+seems like a very useful thing to start
+trying um because the alternative is
+that you get these
+denormalized Solutions where you're
+you're doing rights to a um you're doing
+rights to a postgis but then you have a
+asynchronous sort of right behind to a
+redus for the read you know for the
+constant time read and so having the
+ability to make read scale and available
+um yeah I mean it seems reasonable seems
+like it would be a good first cut at
+scaling out a system using post because
+obviously your workloads will determine
+that whether that's true or not but like
+for example Reddit uh I don't know what
+architecture is like but one imagines
+that most people are reading Reddit as
+opposed to writing to it you know yeah
+for sure although I do I do think
+there's a huge market for you know what
+you're talking about is uh with the
+other one is sort of a change data
+capture and I think there's a huge
+market for that I think there's a Hu
+that that pattern is pretty amazing you
+know especially for financial
+institutions where they you know they
+collect the data at the at the edge and
+then they push it out to wherever and
+they can have you know multiple Paths of
+where that's going to um you know uh the
+devium folks
+yeah gunar and um love him so good so
+you know he they're interesting because
+they actually pushed my implementation
+quite a bit so we've got a lot of uh you
+know I've had i' we've had lots of you
+know um collaboration there to make it
+all work yeah so that's been pretty cool
+doesn't surprise me that that's a really
+cool that's based on the right ahead log
+that you guys uh put out right the um so
+that's based on logical decoding so it
+is it is a right ahead log so the right
+ahead log has you know it has a logical
+logical stream and it also has a
+physical stream or binary stream the
+binary stream is used for like binary
+replication but if you want to get if
+you want to get something that's
+readable by uh sort of a program that
+you can uh the way it works is you can
+actually add your own decoders to it or
+and and encoders so you just get the
+data and encode it and decode it any way
+you
+want again again is flexible just like
+everything else in post right so for
+people who are that I I wonder to I
+wonder what of the last two minutes of
+conversation makes sense uh to a lot of
+people change data capture CDC is the
+idea that you emit as an event the delta
+in state
+Transformations on the
+database and uh so the idea is that you
+can say this this record changed from
+this to this and you publish that as an
+event or something so that somebody else
+can consume that and then modify their
+own view of the data accordingly deum is
+an open source Java project that is that
+takes the log called the right ahead log
+the W from postgres uh and it sends it
+off via Kafka so now consumers can
+listen for those changes via Kafka am I
+missing anything so
+far actually Deion will let you do it
+anywh you want you don't have to go to C
+you can go anywhere you want um so the
+cool thing the cool thing is previous
+the way you used have to do this is
+people would create log tables so and
+triggers so they would have the they
+would have a notion something changed in
+the database you know somebody updated
+their the balance in their bank account
+and then they would have it would a
+trigger would fire and then the trigger
+would put this data in a log table and
+then somebody else would read the log
+table and then delete the record right
+that caused that caused a lot of churn a
+lot of extra overhead on the database
+and if you man to miss whatever where
+CDC if if the um
+with logical decoding and CDC if the
+database crashes you don't lose the data
+it'll still be there when you bring the
+database back it is still there as long
+the first thing was committed then you
+don't then it's effectively gonna get
+reconciled later on right yep yep yeah
+so um that's super good super super good
+um actually that brings me up brings me
+to another question which is what is the
+role of the languages you mentioned
+plr uh earlier
+um and I you know one of the thing I
+mean I used I've used the jav there was
+Java I'm not sure if there's anymore but
+there was a PL Java still exist PL Java
+still exists I I haven't used it in
+decades but I I know it exists um and
+there's PL python I remember that one
+there Pearl for from decades ago I'm
+sure
+there's yeah uh and uh and Ruby and uh I
+mean m i just everything I mean anything
+tickle I'm sure there's like I mean just
+every language you can imagine um you
+can run as a sort of a story procedure
+it is a story procedure you can write a
+story procedure in any language you want
+so there is you know P the sort of the
+built-in one is plpg SQL that was
+written by Yan week R Yan week also
+wrote PL tickle but there as you said
+there if there's a if there is a
+language that exists in a computer
+language there is probably a language a
+language in the postris you know for a
+procedural language in postest and this
+allows you to write a proced in any
+language you actually happen to want to
+do
+it so the store procedure so you
+mentioned the triggers earlier you can
+have a a trigger function that then
+responds to an event in the database uh
+and it could just be a simple PLP SQL uh
+trigger function that does ddl or you
+know some sort of thing but also you can
+run Java code you can run python code in
+response to a database right and that
+runs in a separate process on the same
+server as the post I never really
+understood that part or is it in in the
+same process or it's actually in process
+which makes it a bit of a
+challenge oh wow um uh so yeah so you
+want to make sure you don't spend too
+much time in those triggers doing you
+don't just sit there and read the funny
+papers you know you gotta get off that
+execute as quick as possible right yeah
+I actually did write a plg jvm which
+more was more like a a remote procedural
+call so it didn't actually run in
+process and that never that never s of
+never got anywhere other than you know
+couple little oh that's a bummer is that
+more like fire and forget it just sends
+the request to the jvm and lets it
+handle it and then y the server okay
+that's really nice yeah see that's what
+you would want is to
+like not gum up the works in the put in
+the server process itself you know um uh
+but I I so you mentioned the r one how
+does that like do you have the ability
+to do R functions whatever whatever you
+can write in R you can write in in this
+function yes so how's that work like
+when when these plugins are installed do
+they install the r runtime and the Java
+runtime and they don't install the r
+runtime the r the r runtime has to be
+there we just link into it it's just a
+you know so there's a a an API and and
+we just link into it and but you have to
+install head time is it actually doing
+Java minus jar or ja is it doing Java
+you know Java the source code that you
+provideing the function in Java so the
+pl Java uses J Jenny right so it
+actually just calls through jni um
+oh it would have to fire up the jbm if
+it wasn't running but okay but does it
+that's what I'm trying to figure out
+does it keep the jbm
+warm in the process it would yeah yeah
+and then it would run a jar yeah it
+would load a jar and then run the
+function in the jar so which is it
+really you know it was really PL Java
+existed because of Oracle Oracle wrote
+their own jbm for in in the Oracle
+database you know they had the advantage
+there for sure so the postgress world it
+doesn't it didn't really make sense
+because there was you know the overhead
+of running a jbm in the process was huge
+yeah yeah no I get it and actually it
+sounds like you got the best solution
+because most of the latency in Java is
+in the startup but as long as you've got
+the jvm running then it's GNA be plenty
+fast you
+know one of the things in my spare time
+which I can't find any of I'd like to do
+it in Gro in Native
+yes so apparently that's what they're
+doing in uh Oracle that's that that is
+the Genesis of uh of grm I talked to
+Thomas wortinger on this very program
+about a year ago uh you weren't
+available at the time I I I believe we
+talked um and uh uh Thomas said
+that when he created grow VM one of the
+things that he had to do was to you know
+you know any large company you always
+got to find a way to tie yourself to the
+big product right and so he had this you
+know dashing idea this daring idea to
+build this ahead of time optimizing
+compiler and of course where's where's
+the connection there to uh to the money
+maker Oracle database and and later
+Oracle Cloud um and they realized they
+could use this to actually embed Java
+and have it perform really efficiently
+in the database right so he created that
+as that was the first like cut of the
+Native image support there and then it
+got generalized into a thing that could
+support everybody as opposed to just the
+native integration in the database
+itself so yeah I think it would be
+really good for that use case we know
+and there's a ex existence proof in the
+current implementation of
+article I could only find I could only
+find more few more round
+TOS sorry um just because it's easier
+doesn't mean it's possible because
+without without time right exactly so
+cool I just I mean there's this post
+thing I didn't know there was an attent
+I didn't realize it was a server process
+uh so when you say that I cannot you
+know I'm I'm sitting here giddy because
+I don't really have uh look I've used
+some of these uh tools to like scale out
+and I've certainly been in projects
+where we where we using them but I've
+never really had to deploy them myself
+you know to to get better availability
+or or um
+um uh uh consistency right I mean I mean
+just all these tools to scale out and to
+make my code go faster I didn't realize
+that was all being done despite the fact
+that it was all in in process it was a
+process based
+thing what was interesting you use the
+word despite the pro despite the fact
+the fact that it's in process it does it
+is pretty pretty efficient so it's you
+know yeah like imagine if we
+if I mean if if these people are right
+and there is something to that that
+would be just I cannot wait I mean
+that's like a Christmas you wake up in
+Sunday post is even better somehow you
+know yeah what about okay so the the
+code base for post is C and C++ the code
+base is actually just pretty much C okay
+and uh does that make life fun or oh
+yeah oh
+yeah so so it was originally written in
+lisp so there's like really yeah really
+when it was called
+Ingress I I don't know what it was
+called when Stonebreaker actually did it
+as his PhD thesis but so there's a whole
+bunch of so so one time I don't know how
+much it's been a while since I've been
+in the in the backend code but there was
+a whole there's a whole bunch of lists
+and you know traversing all these lists
+and it turns out that that's not very
+efficient the with today's processors so
+um I think they're mostly going away but
+there was a whole lot of code that was
+you so but
+but the the
+basic when you're when you're in the
+backend code you could be looking at one
+piece of code that was written 30 years
+ago and you could be looking at another
+piece of code that was written yesterday
+and the rule is you have to match the
+style wherever you are not just carry it
+Forward no no you can't just go rewrite
+the whole thing just because you like
+the style better well I mean so normally
+if I work on a project it's you know
+whatever you touch you you update right
+so if I touch a piece of code that's one
+code page and it has these functions
+I'll just modernize it you know not Mak
+sure to not break everything else of
+course but yeah no you kind of gotta
+match the style whatever it is oh dear
+so you gotta be you're fluent then not
+just in C but in three decades worth a c
+oh yeah there there are style there are
+style guides of how you got to write it
+and stuff like that right and there's a
+ton of macros oh yeah which end up which
+end up making your code look like it
+does something does something completely
+different it's an interesting challenge
+so I don't mean to be that guy but has
+anybody what am I has nobody
+suggested gradual rust ification of the
+code certainly certainly has been
+brought up I think there's some
+discussion about doing it but it's you
+know they so the you know everybody
+everybody's kind of I've heard this
+story before right let's let's just
+rewrite everything at rust and well or
+part of it like lanus is doing
+you gotta find you gotta find time you
+know yeah it's fair there's there's
+other there's other Pro problems to
+solve besides writing it in Rust and you
+know post the one cool thing about
+having it in process is if process goes
+away we don't have a memory
+leak that's true that that's actually
+true yeah it doesn't matter how poy set
+it up at is yeah well actually we
+actually do have our own memory you know
+we don't have we don't use Al we use
+something called pic which is you know
+postgress alic and at the end of it this
+once the process goes away or once the
+request goes away actually the the
+memory just goes back so there there
+isn't really the memory leak problem
+that you know people would like to think
+there is and see that we don't have that
+kind of problem we do you know it's not
+not to say we don't have you know null
+pointer errors but you know it's not as
+dire as yeah thing and there's there's a
+considerable amount of time that goes
+into any patch to make sure that you
+know there're you know there's a lot of
+people looking at patches to make sure
+that there's no bugs or obvious bugs and
+things like that well of course so I
+don't personally think there's like this
+huge bang for your buck to rewrite
+everything in Rust not well nobody's
+talking about rewriting everything I'm
+just wondering I I don't know uh uh I
+have no idea literally no idea but I
+I've noticed uh like even the Mr Mr
+kudin himself lus tals
+seems cautiously and
+angrily
+indulgent uh of some of these attempts
+to often the fringes and the hindin of
+the code
+base conceptually rewrite some of those
+things and of course there's a it's not
+Inspire it's not making any friends you
+know and I've noticed that in the
+traffic there on the mailing list
+there's this uh uh I mean didn't they
+just have somebody who resigned because
+of this and the guy that the person that
+was working on that part of the effort
+uh was just so fired and frustrated from
+the
+constant uh push back from the other C
+code C maintainers that he just resigned
+in frustration and it's not going well
+so yeah I wouldn't wish that upon the um
+the post Coast project but I do wonder
+you know
+uh you know the United States government
+just put out a paper talking about how
+they want memory safe languages uh of
+course that was today's government we'll
+see what
+happens yeah anyway um you know they put
+out out of paper ask encouraging people
+to use memory safe languages and uh I
+don't know that rust would make your
+make post any faster but it might make
+it more memory safe but if you've got
+palac then maybe it's fine maybe we
+don't care until that multi-threaded
+thing starts to become a real thing you
+know so you know because the government
+says we want you to do it doesn't mean
+you're gonna do it I mean no no it's
+encouraged not they're more reliant on
+postest than we are on them
+so I get the I get get the I get the
+desire to do that and I do think that
+you
+know it'll be harder and harder to find
+people to to write in see versus rust so
+ultimately you know it it will happen
+it's just probably not well I'm working
+on it oh I don't think that I I think
+it'll be decades before the number of
+rust programmers ever exceeds the number
+of C programmers I mean I yeah I'm I'm a
+a few years younger than you I think and
+even I know C right like uh C's I don't
+know Russ but I definitely know c i
+could write C I don't want to just to be
+clear don't send me Po request in C
+please but uh but my point is I yeah I
+think a lot of people know C you kind of
+have to I think my my point here though
+is that you know if you're if you're
+just coming out of school and you got a
+choice between which which language
+you're going to focus on not necessarily
+know everything you you probably
+wouldn't choose SE you'd probably choose
+something like rust because the
+opportunities as you just mentioned the
+government saying we want me more memory
+safe languages you're probably going to
+choose rust so you
+know and finding are that are you know
+going to work on postgress community or
+a postgress code that'll be harder and
+harder I think we do have you know
+obviously people work in C so yeah I was
+gonna say there's more jobs in C there's
+there's it's not even close it's like oh
+yeah of magnitude you know like it's
+it's yeah I don't know I I think you
+need to known both really is I guess
+what I'm trying to say there's no world
+where C doesn't
+I mean and again I'm the Java guy don't
+get me wrong but even I understand this
+you know C is going to be here for
+forever um yeah I don't know whatever
+yeah screw rust who cares I I'm
+just I don't know I mean uh maybe you
+rewrite it in Java and just use grow VM
+yes let's go I'm sure that happen
+anytime soon yeah that yeah okay right
+after uh right after the rust Port gets
+done um uh yeah no that's I mean it's
+just I didn't know all I'm saying is
+that the fact that it's so freaking good
+already and it's got this process model
+I didn't even realize that I mean it
+it's not low hanging food you know I'm
+not saying that I'm just
+saying it just seems like there's some
+uh opportunities there that I didn't
+even realize the fact that it's this
+good despite all that uh is wow I mean
+what an amazing piece of engineering you
+know
+uh and it was in list at at first I mean
+that's uh that was quite a while ago
+that was probably in the very early
+night 90s as yeah still though nice
+piece of software so why did you get
+into post quiz in so this you had a
+Microsoft uh contract you said why I had
+a contract to do some work in you know
+Java at the time you know it wasn't
+really I I had I was doing it in Java
+and I you know I bought a contract I I
+don't know I was doing on windows so you
+had Java and so that's kind of why I got
+into the into the Microsoft contract
+okay there was I don't think there was
+any way who I mean son would have owned
+Java at that time so yeah there wasn't
+really and they owned it it wasn't open
+source yeah yeah it wasn't really a way
+to get a a sun contract for you know
+support So Microsoft contract it was a
+Microsoft developer it was remember you
+could the msdn thing Microsoft developer
+Network and you could yeah you could buy
+a contract and get the CD yeah came with
+a oh it came with a bunch of CDs right
+yeah Vis Studio C++ six or five or
+whatever it was yeah um all the visual
+j+ let's not do that yeah
+j++
+exactly um
+uh so so you got into post at the time
+Oracle was already a known commodity uh
+sbase was already a known commodity uh
+post like you know how how entrenched
+was it because this is before um you
+know you said they only added sequel in
+the mid 90s so like if you went to an
+organization and said we're going to
+build everything on postgress what was
+the average response at the time I guess
+I is what I'm trying to figure out right
+so probably when I when I started I
+wasn't really you know I was using
+postgress as like a very wasn't an
+Enterprise thing I think I got my first
+bigger contract to do anything in
+postgress probably in you know
+2005 2008 maybe it was a
+large uh grocery company in Canada that
+wanted to switch off of hpu and um they
+were using informix and they had a 4gl
+language and um so they wanted to they
+wanted to go all open source and so
+there was people that were doing it at
+that point but they were they were you
+know we're talking about people that had
+some Vision as to how open source was
+going to play out there wasn't a lot of
+people there at that time to do that for
+sure well seems like a smart bet at the
+time I mean I you know hear but foric
+very often anymore so no you know they I
+don't think that's survived that
+particular CIO but uh for the time when
+I was getting paid he was he was behind
+it so um golf games um
+uh what well you know you know another
+database that I've always liked and I I
+kind of wondered why this one I don't
+actually have any understanding as to
+why it didn't take off uh you ever use a
+Firebird
+I I'm aware of Firebird but I never used
+it in any real capacity you you and me
+and most of the world has never used it
+like it's actually it was a one of those
+nice databases that it was featureful
+and I can't point to any reason why it
+never really took off I can point the
+reasons why post at
+first you know no windows port and and
+and the like but uh now I know I don't
+know it just seems like I'm just
+remembering that there was actually
+another database that would have been
+really nice compared to my seq 20 years
+ago as well 25 years ago and yet uh
+people still chose my sequel there's two
+of them I think the you know the bigger
+reason why people chose my sequel was
+because you could click on the you know
+the Debian or the red hat package and
+say you know give me the lamp stack and
+all of a sudden you know you had a stack
+whereas there was no fireb stack there
+you know a post stack so it was like you
+know you just downloaded the the
+packages and Away you went so and and
+you know at the time my SQL was
+certainly easier use in postc Crash so
+yeah I guess I don't know I don't know
+you have to set up the back then you had
+to set up roles and you had to set up a
+you know do all that stuff manually
+whereas my SQL is just wide open
+festering wound in the middle of your
+security network yeah that's the way
+they liked it yeah like yeah oh yeah
+look at that Firebird axon interbase and
+Derby is that Derby remember that that's
+a SQL database for moral right or no IBM
+IBM had that one
+right H okay so okay so I enough I don't
+mean to linger in the past it just it
+just occurred to me there's this other
+database out there um what is coming in
+postris like it's uh um you know it's
+obviously I think it's fair to say it's
+the it's the standard these days I I
+can't imagine using I think post has
+brought us back from the no
+sequel
+uh era you
+know there was this sort of I think
+discontent 101 15 years ago uh around
+the
+offerings coming from the SQL databases
+and the way I kind of see it is that we
+were looking for um options in terms of
+scalability and for specialized data
+data types and now you know post is good
+enough for most use cases and it has
+these specialized data types like you
+just said we have Json and we have XML
+we have postgis we have H full textt we
+have uh you know all the stuff that you
+might have otherwise had to go to a
+different Vector stores you know all
+these different things that are the
+foundations the basis the raise on De
+for all these different data stores out
+there so now postz is I think very much
+the standard what's what's next what's
+up look like you know upward and outward
+I I wish I knew the answer to this
+question I think I think like anything
+else the thing that will happen next we
+don't we don't really actually know what
+we can't predict the future of the next
+big thing but I think in general I think
+what you're going to see is that you're
+going to get a lot more performance out
+of postgress a lot of people working on
+that kind of stuff
+um there is performance to be had just
+you know we're working on on it you know
+uh there's some you know some of the
+people like Peter gagan working on
+indexes and um we mentioned the PG
+Vector stuff that kind of came out of
+nowhere I I honestly couldn't tell you
+what what the next big thing for postard
+I would like to see clustering of some
+kind I I do know that they're working on
+incremental backup which is surprisingly
+you think we'd already
+have well but we don't
+well one of the big challenges with
+postgress now is the data is getting big
+you know there there sort of um a couple
+of different ways to back up your
+database one is PG dump which basically
+dumped the the the data in a text format
+but now databases are so big that you
+can't actually dump it in one day so if
+you can't get it all out one day then
+you can't get you can't get a daily
+backup so we're star to look at
+incremental backup uh which was just
+added it's not really ready for prime
+time but it's coming along there's a
+couple of projects
+uh that support backup now wait so it's
+like a git file I mean like you have a
+no no it's not a file it's basically man
+it's basically manipulating the wall
+logs incremental chunks of the wall log
+okay so you because you know when the
+last offset was when you took a backup
+and you just take all the events yeah
+yeah after okay I mean it sounds easy
+but of course I'm sure it was a
+excruciating oh there's there's a touch
+of there's there's a bunch of stuff you
+have to worry about there but so sure
+yeah but I I'm sort of my my biggest
+challenge with the postr is getting the
+protocol
+changed oh what
+why uh why do I want it
+changed for for performance and for more
+information some of the stuff they you
+know wasn't in there that we would like
+in the J in the Java world uh or any
+other client world for that matter it's
+you know
+one of the so one of the things I
+mentioned earlier is you can get data
+back in binary or text right you have to
+you know avoid giving all the details
+but you have to do an extra round trip
+to uh get the types that you have to ask
+for in binary oh I would like I would
+like to just say at the beginning of the
+session give me all these types in
+binary I see so okay um but changing the
+protocol is one of those things that you
+know as you mentioned you got to get it
+right and so get everybody else involved
+uh as well right is this yeah that's
+problem like it has to it has to be such
+a way that you know everybody can use
+the old protocol and still and then also
+leverage the new protocol is there like
+a versioning scheme for the protocol
+itself like is it possible to do things
+like this there is a versioning scheme
+but we're working on a versioning scheme
+that's a little more extensible and
+we're still know we we've identified a
+number of needs to to changing the
+protocol but nobody's actually come up
+with a
+viable solution to actually you know
+concrete solution to changing the
+protocol so there is there has been
+another protocol we're on version three
+of the protocol version two protocol you
+know sort of just it had been there
+forever and kind of dropped off in the
+last five years
+so C could still use that if they wanted
+to no the V2 protocol is gone okay good
+riddens but it but it but it has you
+know it has a surprisingly long lifetime
+the uh the new generation of protocols
+that's interesting I didn't think about
+that
+like I mean it is a classic client
+server problem you have a evolving
+consumers and producers obviously that's
+G change so and imagine having a
+protocol as multifaceted as SQL you know
+like and the protocol itself is actually
+pretty simple it's it's only not very
+complicated um okay
+but it's just uh changing it is
+complicated just because you have future
+proof it so right yeah well this is I I
+think you I think you should do a talk
+when whenever this stuff lands you I
+would love I'm sure the software
+industry would love to have a talk about
+this because yeah the insights on of
+moving changing the engine on a plane
+while the plane is still flying you know
+yeah exactly right it's
+difficult oh okay so then what is uh
+what's the big thing in the Java climent
+because as you said you still have
+to you know care for the Java 8 users uh
+what's
+the as I so as I mentioned I would like
+to I would actually like to make the the
+protocol more or the J the jdbc driver
+asynchronous it's currently synchronous
+I'd like to make it asynchronous uh we
+have uh support for user defined types
+we've got a poll request for doing that
+that was done as a Google summer code
+project the iy did most of it it's uh
+hasn't got finished yet you know anybody
+that wants to help out uh reviewing pull
+requests I'm more than happy to have you
+come on board that's one of the thing
+one of the challenges is finding people
+to actually review PO requests yeah well
+this and this would can you imagine
+getting a chance to work with you that
+would be a real privilege I'm sure I'm
+sure doing that with uh this is the
+beauty of working in open source people
+is if you get a chance to work with some
+with somebody like Dave you're going to
+learn something you know um so where do
+people go to uh first of all where do
+they go to
+start kicking the tires looking at the
+source code what's the canonical place
+to find the code on which you work for
+example uh let's see PG jdbc
+doget I was gonna say you don't have a I
+don't have it I just type it in it comes
+up it's it's one of my you know the the
+AI just knows where everything is in my
+thing right
+so it's a PG jdbc yeah does that come up
+that come up with chat with everyone in
+the studio or does that come up
+as oh there you go yeah yeah there you
+go excuse me friends gotta blow my nose
+again okay so this is a this is the PG
+jdbc code people can find you there and
+uh if they want to learn more about the
+drivers I mean I'm sure releases are
+released there as well right yeah
+everything is released there uh so it
+basically comes from there um gets
+pushed to Maven uh interestingly I I had
+no idea I I I still have no idea how
+this is possible but it gets 20 million
+downloads a month oh I'm sure a million
+of those are just me I mean I'm a huge I
+I I it blew me away when I saw that
+number I had no idea that it was that
+large I'm sure it's actually markedly
+bigger because there's a lot of
+corporations that have artifact
+repositories that are doing cashing I'm
+sure it's 100 million or a billion maybe
+even it's just you know it's such an
+amazingly good project uh and like you
+say you even the the hypers skaters are
+converging on this it's it's one of the
+true few things in open source where we
+all just said yeah that'll do that we'll
+we'll just I'll have that one you know
+like we have Linux and post in in which
+we trust you
+know so that you know that sort of
+reminds me that one of the things that
+uh I you know some of the other people I
+mentioned Bruce mja and a few other
+people but one of the bigger things
+that I they've said or I sort of live by
+as one of the things I have to worry
+about is just not breaking the thing so
+there there's a Temptation like let's
+let's add this let's add this let's add
+this I go well you know it's not you
+know let's just step back a bit you know
+right is this really a feature that
+everybody's going to use and you know is
+it really worth doing because you know
+breaking it would break a lot of lot of
+people's code unfortunately I have done
+that before Oh no how bad was that like
+do you get pagers like minutes later or
+what I don't get pagers but I get you
+know people tell me oh this is broken so
+you know either either have to revert
+the the good thing about GitHub you know
+you revert the poll request and you
+issue it you know push out another uh
+release and you know go back and think
+about what you just did and maybe maybe
+not do it or but you know it's but yeah
+it does break a lot of code in a
+hurry well because I mean I it's such a
+stable project I wonder how many people
+just automatically upgrade to the latest
+and greatest anyway you know without
+hesitation because it does work so darn
+well over so much time you know well
+with the pendot we see a lot of people
+doing it now right they just you know or
+if you or if you have a security release
+all of a sudden it's like boom there
+tons of
+people uh we have a comment here hot
+take cannot you cannot get worse than
+that one common logging release which
+broke everything I don't know to which
+release that refers but okay uh anyway
+there there have definitely been things
+that break things that's for sure um so
+that's good that's post that's pgj DBC
+obviously post. uh postgresql org is the
+the database I don't think I mean just
+type that into a browser you'll get
+where you're gonna where you're gonna
+get going um what about yourself there
+sir are you on the internet do you want
+to be found and if so where can uh
+people I'm not really on the internet I
+do I do you know I don't have I don't
+have a web page I don't really have too
+much in the way of a Blog I'm on Twitter
+as Dave Kramer uh I think I'm on Blue
+Sky I think I just actually I heard that
+everybody was moving to Blue Sky so I
+I'm there I started it up again it's
+nice we have cookies you know come on in
+water the warm but Dave actually it's
+just that Dave
+Kramer oh dot it's no dots no nothing so
+you oh did you do your own domain thing
+no it's no no I have Beast just type it
+in there for
+you uh Dave
+Kramer oh but you're Dave creamer.
+bsky yeah okay so you know you can do
+your own domain too you can actually say
+uh like Dave kramer.com
+I there's a couple other Dave Kramers
+around so I probably probably lost that
+opportunity well I mean no it's tied to
+your domain if you if you put do you
+have your own domain if if so uh you can
+put DNS record in there and then Blue
+Sky will give you authorative rights to
+like for example my handle on Blue Sky
+is Starbucks man. josl long.com because
+I'm the authorative DNS holder for joshl
+long.com I actually do have postgraft di
+Rock so maybe I'll well there you go
+just you can be that on Blue Sky um
+there you go uh Dave this has been so so
+good I I'm just a I'm a huge fan of
+everything you're doing obviously I'm I
+speak for millions of people when I say
+that we're all big fans uh it's it's one
+of the most instrumental projects on the
+on the freaking planet and um it is
+changing day by day even to the point
+where a doar like myself can see it and
+appreciate it you know there's Market
+changes all the time that just make it
+better and I I I couldn't be more
+grateful um thank you for taking the
+time today on a Friday uh it's been a
+real real pleasure to talk to you thank
+you so much thank you for having me on
+here Josh it has been a pleasure enjoyed
+every minute of it and I I'm a big fan
+of your work as well so a you're
+thinking of somebody else but I
+appreciate that um okay everybody have a
+nice weekend and uh you know be good to
+each other bye bye
