@@ -1,0 +1,289 @@
+I've got quite the collection of 4
+terabyte t705 ssds from crucial yeah
+these came from Micro Center I had to
+buy these for like legitimate project
+reasons what do you do with 16 tabt of
+flash how do you even get this connected
+well most of the time you're going to
+want to use a pcie bifurcation card and
+your motherboard also has to support it
+so you have to have a a PCI card
+basically that'll hold a bunch of m. tws
+well IC do to the rescue again this is
+icy dos 4 by x16 adapter
+card and this was actually cooler than I
+thought it was going to be so we're
+going to take a look at it this is the
+MB 204 mpb this is a pcie card that is
+designed for motherboards that support
+PCI bifurcation but this thing takes
+maintenance to a whole new level let's
+take a closer
+[Music]
+look now if you're into building
+workstations you follow this channel for
+a while you know that I've covered a lot
+of other IC do products in the past
+whether you're building a small server
+or a specialty server or a workstation
+and you want something like removable
+u.2 drives or you want to build an array
+of u.2 or you're adding optain where it
+doesn't belong icy do is the physical
+connection for when I added optain to
+thread Ripper it's like an Intel optain
+product running on AMD stuff it's fine
+it's just pcie the IC do not only
+provides the con connection it provides
+the connection in style not this
+particular one but the other IC doc
+stuff I've covered in the past your
+motherboard still has to support the
+bifurcation as I said so you have to be
+able to turn that x16 slot into four
+physical
+slots but check out this pcie card it
+has four Bays on top now technically m.2
+is not hot swap so this is not a hot
+swap adapter but this is designed for
+servers and
+workstations and so behind me I've
+actually got set up my Falcon Northwest
+56 cor Zeon workstation as well as an
+AMD epic Turin server that I've put
+together now the Turin server is based
+on the new F CPU 64 cores 5 GHz this is
+the fastest clock speed we've ever had
+in a server and because I'm kind of
+diying this I need some uh some
+connectivity it's in a Silverstone case
+Silverstone has options for adding hot
+Swap and everything else but again m.2
+get the m.2 option this is another Bay
+from IC do this is the MB o 21 VP that
+I've used in the past in several builds
+it's basically an eject button this goes
+in a 3 and 1/2 in Drive slot and
+then you plug the drive in like that and
+you're good to go and this will work
+with even 15 mm u.2 drives the problem
+is that those t705 so I've got the the
+IC dog m.2 to u.2 adapter which
+theoretically this makes it physically
+hot plug for an m.2 so those t705 it's
+like oh all of a sudden we can use those
+in server yes you can use those in
+servers assuming that you get something
+that is Gen 5 compatible but the problem
+is when you start stringing Gen 5
+devices into adapters like this so your
+your m.2 goes in here and then the heat
+sink goes
+on and it is quite a heat sink and then
+this will slide into your u.2 Bay the
+problem is that when you've got these
+Gen 5 drives and you've got a lot of
+adapters you're potentially introducing
+a lot of errors or connectivity or it's
+like is the drive okay or is it actually
+something with all the interconnects and
+the adapters
+whereas with this pcie adapter it's
+basically native that is a much more
+native connection than when you're doing
+something like this this will work in a
+pinch this isn't really recommended for
+Enterprise use at the highest end but
+I've had several of these in use with
+Samsung 990s for like a database server
+where I've got you know eight of these
+in an array and it's part of a cluster
+so I'm not really worried if it's not
+179 of uptime reliability that's worked
+really well but in this video I really
+just want to mount those M do2s directly
+on to a pcie carrier because that is
+direct that is going to be more reliable
+and this adapter card from IC do is
+designed explicitly for Gen 5 let's take
+a closer look so in addition to the card
+that you get in the Box you also get
+these carriers and these carriers is
+part plastic and part aluminum and the
+aluminum part it comes with heat pads
+and everything else and this is designed
+to hold up to 2280 m.2 then you end up
+this with this fairly elaborate
+spring-loaded Contraption which then
+slides into the
+card so basically you go on your bi you
+set the option you install the card and
+then boom you're good to go we just got
+to do that three more times so what's it
+like actually running a workstation with
+16 terabytes of storage for a couple of
+weeks now while testing Linux and
+windows very different
+experiences so for Windows our Falcon
+North West system is based around the
+sapphire Rapids CPU Intel Sapphire
+Rapids and it also supports vrock now
+vck on Windows is actually really
+interesting virtual radon chip the idea
+is that Intel has done a lot of work to
+try to offload as much of the CPU
+software raid processing as possible to
+the parts of the CPU that accelerate
+those
+operations Real World what that means is
+that bypasses a lot of windows cruff but
+on Linux it's basically the same as
+Linux MD so it's not really accurate to
+say that it's the same facility as Linux
+MD but on Windows but it is functionally
+compatible meaning that I can have a
+volume that is mountable on both Linux
+and windows via the vrock machinery and
+the vrock mailbox and special device and
+all of that stuff works exactly as it
+should it's able to do its consistency
+raid five all that works exactly the way
+that you would expect which is awesome
+you need a common file system between
+Windows and Linux but this is useful for
+getting Apple's to Apple's comparison
+numbers between the platforms you see I
+also tested with uh just creating a
+software volume in Windows that is the
+least performance so if you're on the
+Intel platform it's worth getting a
+vrock key and doing that uh for Windows
+for Linux you can run Linux MD the
+performance of vrock and Linux MD uh on
+you know under Linux is very similar
+it's basically identical at this point
+but it is functionally a little
+different there's a couple of things
+that um well one of the big things that
+vrock does is it changes the way that
+the PCI devices are enumerated which is
+useful for Linux MD uh and there's a
+couple of little minor performance
+tweaks so it's slightly more stable and
+it's slightly better in vck mode than
+Linux MD mode but Linux MD doesn't
+require a key so that is that is neither
+here nor there it's a delightful
+Hardware experience now that I've got an
+IC do module to be able to mix and match
+my m.2 each one of them is 4 terabyt
+each one of them can manage you know 16
+gigabytes per second but even with that
+you know Crystal dis mark my software
+performance numbers here we top out at
+about 35.9 gbes per second so these are
+actually worst case scenario numbers in
+terms of performance the other thing you
+have to keep in mind when you have a
+raid volume like this is that things
+that are Q depth one where you can't
+have a lot of threads there not really
+an easy way for one thread to keep
+devices this fast engaged across the
+whole platform it's the other reason I
+went with the xon X for this part of the
+thing is because I could overclock the
+beesus out of it now something
+interesting happened when I switched
+platforms to Turin Turin is a server
+platform zen5 Zen
+4 zen4 is not going to do much for us
+here Zen Zen 4 on the desk like why
+don't you test zen4 like a 99 50x this
+kind of a setup does not make sense for
+a 950x because the PCI E Gen 5 storage
+is so fast you wouldn't have room for a
+GPU look 40 gbt per second on an
+unoptimized platform and that is largely
+owing to uh operating system overhead
+main memory bandwidth on a dual Channel
+ddr5 platform is somewhere between 90
+and 115 GB per second so our storage is
+on the order of as fast as main memory
+which is
+insane the CPU juggling that volume of
+data is not going to have room to do
+anything else and it doesn't have the
+pcie lanes to do anything else like run
+your graphics card so 16 Lanes is not
+enough if you want to run this much
+storage you could do two like one to two
+that would be fine but yeah four you're
+going to you're going to need a
+workstation you're going to need that
+thread Ripper you're going to need that
+sci-fi Rapids workstation and chances
+are you're going to need Linux this is
+also a really interesting thing
+workstations the higher in the
+workstation the more likely it is to be
+running
+Linux welcome to
+2025 I guess yay Linux all right wo the
+biggest Improvement if you do decide to
+go vrock a random 4K score 300 or 3,17
+microsc that's not
+fabulous cuz a single Drive is on the
+order of about 100 that's the software
+overhead Linux m D you're looking at 400
+to 600 give or take vrock is like 390 to
+420 450 it's a little more consistent
+give or take Turin is also pretty
+consistent but you'll need to tune your
+Linux kernel so that you give priority
+to IO you can actually use tun D to set
+you know throughput performance as your
+performance profile and then your nvme
+will always be fast there's there's a
+whole thing you get into with like power
+budget and juggling your power budget
+and it's like oh I don't have as much
+performance for boosting my cores or as
+much power budget for boosting my cores
+as I do when I'm running the iio at Full
+Tilt yeah that's basically a thing but
+the icy do the icy do
+solution fabulous in server and
+workstation contexts with good
+compatibility across a bunch of
+different motherboards so that is
+delightful if you have an application or
+a test or something that I can run to
+see something interesting for you reach
+out on the Forum at me and let me know
+that you know maybe we can set it up on
+this and see if it speeds something up
+dramatically uh about the best thing I
+can report from a gaming scenario
+standpoint is loading the levels in
+Flight Sim really nice that's about it
+most like game War clothes it doesn't
+really matter this is 100% a workstation
+kind of a thing and you're not even
+really going to it doesn't make sense to
+use this on a desktop part it's going to
+take lots of pie C lanes and lots of
+memory channels and even this each one
+of these m.2 being able to do 16 GB per
+second you really should be using an
+eight memory Channel platform I know
+Intel has a four memory Channel platform
+I know there's TRX 50 For Thread Ripper
+but eight memory channels actually
+populated eight memory
+channels when your storage is this fast
+good Lord crucial t705 in the IC do all
+right I'm going to go play with this now
+this is exciting signing out and you can
+find me in the level one forums
+[Music]
