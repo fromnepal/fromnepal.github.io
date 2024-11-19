@@ -1,8 +1,3 @@
-now can you also update these rows you just added? 
-
-Certainly! Here are some sample `UPDATE` statements for the rows we just inserted:
-
-```sql
 -- Update contacts
 update contacts
 set name = 'Johnathan Doe', modified_by = 'admin', modified_at = current_timestamp
@@ -47,6 +42,3 @@ where url = 'https://linkedin.com/in/johndoe';
 update social_media_links
 set url = 'https://twitter.com/acmecorp', modified_by = 'admin', modified_at = current_timestamp
 where url = 'https://twitter.com/acme';
-```
-
-These updates modify the previously inserted rows with new values and set the `modified_by` and `modified_at` fields to reflect the changes. Let me know if you need any further modifications!
