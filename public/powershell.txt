@@ -1586,3 +1586,1045 @@ Connection to kusfedoravm closed.
 PS C:\Users\kushal\src\myhtml\fromnepal>
 PS C:\Users\kushal\src\myhtml\fromnepal>
 PS C:\Users\kushal\src\myhtml\fromnepal> C:\Users\kushal\src\myhtml\fromnepal\public\omnibus.ps1
+Transcript started, output file is C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt
+
+Tuesday, November 19, 2024 8:10:13 AM
+     Removed 926 files, 454.2MiB total
+Tuesday, November 19, 2024 8:10:14 AM
+   Compiling windows_x86_64_msvc v0.52.6
+   Compiling proc-macro2 v1.0.89
+   Compiling unicode-ident v1.0.13
+   Compiling pin-project-lite v0.2.15
+   Compiling bytes v1.8.0
+   Compiling autocfg v1.4.0
+   Compiling futures-core v0.3.31
+   Compiling itoa v1.0.11
+   Compiling futures-sink v0.3.31
+   Compiling fnv v1.0.7
+   Compiling once_cell v1.20.2
+   Compiling memchr v2.7.4
+   Compiling cfg-if v1.0.0
+   Compiling httparse v1.9.5
+   Compiling equivalent v1.0.1
+   Compiling futures-task v0.3.31
+   Compiling futures-io v0.3.31
+   Compiling hashbrown v0.15.0
+   Compiling pin-utils v0.1.0
+   Compiling atomic-waker v1.1.2
+   Compiling try-lock v0.2.5
+   Compiling tinyvec_macros v0.1.1
+   Compiling native-tls v0.2.12
+   Compiling serde v1.0.213
+   Compiling windows_x86_64_msvc v0.48.5
+   Compiling tracing-core v0.1.32
+   Compiling tinyvec v1.8.0
+   Compiling want v0.3.1
+   Compiling futures-channel v0.3.31
+   Compiling percent-encoding v2.3.1
+   Compiling smallvec v1.13.2
+   Compiling windows-targets v0.52.6
+   Compiling http v1.1.0
+   Compiling windows-sys v0.52.0
+   Compiling windows-sys v0.59.0
+   Compiling byteorder v1.5.0
+   Compiling windows-result v0.2.0
+   Compiling form_urlencoded v1.2.1
+   Compiling getrandom v0.2.15
+   Compiling tower-service v0.3.3
+   Compiling slab v0.4.9
+   Compiling tracing v0.1.40
+   Compiling unicode-bidi v0.3.17
+   Compiling ryu v1.0.18
+   Compiling indexmap v2.6.0
+   Compiling serde_json v1.0.132
+   Compiling windows-strings v0.1.0
+   Compiling quote v1.0.37
+   Compiling rand_core v0.6.4
+   Compiling windows-targets v0.48.5
+   Compiling thiserror v1.0.65
+   Compiling rustls-pki-types v1.10.0
+   Compiling futures-util v0.3.31
+   Compiling windows-sys v0.48.0
+   Compiling syn v2.0.85
+   Compiling http-body v1.0.1
+   Compiling unicode-normalization v0.1.24
+   Compiling windows-registry v0.2.0
+   Compiling sync_wrapper v1.0.1
+   Compiling encoding_rs v0.8.35
+   Compiling ipnet v2.10.1
+   Compiling rustls-pemfile v2.2.0
+   Compiling base64 v0.22.1
+   Compiling log v0.4.22
+   Compiling mime v0.3.17
+   Compiling dotenv v0.15.0
+   Compiling idna v0.5.0
+   Compiling url v2.5.2
+   Compiling serde_derive v1.0.213
+   Compiling zerocopy-derive v0.7.35
+   Compiling thiserror-impl v1.0.65
+   Compiling mio v1.0.2
+   Compiling socket2 v0.5.7
+   Compiling home v0.5.9
+   Compiling etcetera v0.8.0
+   Compiling zerocopy v0.7.35
+   Compiling http-body-util v0.1.2
+   Compiling tokio v1.41.0
+   Compiling ppv-lite86 v0.2.20
+   Compiling rand_chacha v0.3.1
+   Compiling schannel v0.1.26
+   Compiling rand v0.8.5
+   Compiling tokio-util v0.7.12
+   Compiling tokio-native-tls v0.3.1
+   Compiling h2 v0.4.6
+   Compiling serde_urlencoded v0.7.1
+   Compiling hyper v1.5.0
+   Compiling hyper-util v0.1.9
+   Compiling hyper-tls v0.6.0
+   Compiling reqwest v0.12.8
+   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
+warning: struct `Graph` is never constructed
+ --> src\graph.rs:3:12
+  |
+3 | pub struct Graph {
+  |            ^^^^^
+  |
+  = note: `#[warn(dead_code)]` on by default
+
+warning: associated items `new`, `add_node`, `add_edge`, `bfs`, `dfs`, and `dfs_recursive` are never used
+  --> src\graph.rs:8:12
+   |
+7  | impl Graph {
+   | ---------- associated items in this implementation
+8  |     pub fn new() -> Self {
+   |            ^^^
+...
+14 |     pub fn add_node(&mut self, value: &str) {
+   |            ^^^^^^^^
+...
+18 |     pub fn add_edge(&mut self, from: &str, to: &str) {
+   |            ^^^^^^^^
+...
+24 |     pub fn bfs(&self, start: &str) -> Vec<String> {
+   |            ^^^
+...
+48 |     pub fn dfs(&self, start: &str) -> Vec<String> {
+   |            ^^^
+...
+55 |     fn dfs_recursive(&self, node: &str, visited: &mut HashMap<String, bool>, result: &mut Vec<String>) {
+   |        ^^^^^^^^^^^^^
+
+warning: `helloworld` (bin "helloworld") generated 2 warnings
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 12.79s
+Tuesday, November 19, 2024 8:10:27 AM
+   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.75s
+     Running unittests src/main.rs (target\debug\deps\helloworld-358f72777eb128ff.exe)
+
+running 24 tests
+test greatest_common_divisor::tests::test_both_are_zero ... ok
+test graph::tests::test_bfs ... ok
+test greatest_common_divisor::tests::test_gcd ... ok
+test graph::tests::test_dfs ... ok
+test greatest_common_divisor::tests::test_mixed_numbers ... ok
+test greatest_common_divisor::tests::test_large_numbers ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance_single ... ok
+test greatest_common_divisor::tests::test_large_prime_numbers ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance_multiple ... ok
+test greatest_common_divisor::tests::test_large_composite_numbers ... ok
+test greatest_common_divisor::tests::test_one_is_one ... ok
+test greatest_common_divisor::tests::test_one_is_zero ... ok
+test greatest_common_divisor::tests::test_prime_numbers ... ok
+test greatest_common_divisor::tests::test_zero_input ... ok
+test greatest_common_divisor::tests::test_zero_input_3 ... ok
+test my_data_types::tests::test_not_a_number ... ok
+test my_math::tests::test_add ... ok
+test my_math::tests::test_add_multiply_ambiguous ... ok
+test my_math::tests::test_add_zero ... ok
+test my_math::tests::test_multiply ... ok
+test my_math::tests::test_multiply_zero ... ok
+test shadowing::tests::test_shadow ... ok
+test shadowing::tests::test_shadow_string_length ... ok
+
+test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+Tuesday, November 19, 2024 8:10:27 AM
+Tuesday, November 19, 2024 8:10:27 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Tuesday, November 19, 2024 8:10:27 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Tuesday, November 19, 2024 8:10:28 AM
+From github.com:kusl/hellorust20240711
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Already up to date.
+Tuesday, November 19, 2024 8:10:28 AM
+Pushing to github.com:kusl/hellorust20240711.git
+To github.com:kusl/hellorust20240711.git
+ = [up to date]      master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Everything up-to-date
+Tuesday, November 19, 2024 8:10:29 AM
+warning: in the working copy of 'docs/icon_cube.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_fork.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_sponsor.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir_active.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_wrench.svg', LF will be replaced by CRLF the next time Git touches it
+Tuesday, November 19, 2024 8:11:58 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/hellolib_BabysFirstDynamicProgrammingMethods.html
+        modified:   docs/hellolib_BubbleSort.html
+        modified:   docs/hellolib_CurrentWeather.html
+        modified:   docs/hellolib_DesignDynamicArray.html
+        modified:   docs/hellolib_DotnetNineGuid.html
+        modified:   docs/hellolib_Entity.html
+        modified:   docs/hellolib_FindClosestNumberToZero.html
+        modified:   docs/hellolib_Graph.html
+        modified:   docs/hellolib_Knapsack.html
+        modified:   docs/hellolib_KnapsackItem.html
+        modified:   docs/hellolib_ListNode.html
+        modified:   docs/hellolib_MergeSort.html
+        modified:   docs/hellolib_MergeSortedArray.html
+        modified:   docs/hellolib_MergeStringsAlternately.html
+        modified:   docs/hellolib_MinimumCoin.html
+        modified:   docs/hellolib_MyCleaner.html
+        modified:   docs/hellolib_MySearch.html
+        modified:   docs/hellolib_PascalTriangle.html
+        modified:   docs/hellolib_PasswordSettings.html
+        modified:   docs/hellolib_Person.html
+        modified:   docs/hellolib_PersonFactory.html
+        modified:   docs/hellolib_Revocation.html
+        modified:   docs/hellolib_RomanToInteger.html
+        modified:   docs/hellolib_SinglyLinkedList.html
+        modified:   docs/hellolib_SinglyLinkedListAddTwoNumbers.html
+        modified:   docs/hellolib_SinglyLinkedListNode.html
+        modified:   docs/hellolib_TwoSum.html
+        modified:   docs/hellolib_Weather.html
+        modified:   docs/hellolib_WeatherFetchException.html
+        modified:   docs/index.htm
+        modified:   docs/index.html
+        modified:   dotnet.txt
+        modified:   tests/coverage.cobertura.xml
+        modified:   tests/dotnet.txt
+
+Tuesday, November 19, 2024 8:11:58 AM
+[master b2a9ea9] build application
+ 34 files changed, 534 insertions(+), 406 deletions(-)
+Tuesday, November 19, 2024 8:11:58 AM
+From github.com:patstha/mydotnet
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Current branch master is up to date.
+Tuesday, November 19, 2024 8:11:59 AM
+Pushing to github.com:patstha/mydotnet.git
+Enumerating objects: 73, done.
+Counting objects: 100% (73/73), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (37/37), done.
+Writing objects: 100% (37/37), 6.03 KiB | 2.01 MiB/s, done.
+Total 37 (delta 36), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (36/36), completed with 36 local objects.
+To github.com:patstha/mydotnet.git
+   9ce2c2d..b2a9ea9  master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Tuesday, November 19, 2024 8:12:00 AM
+Tuesday, November 19, 2024 8:12:00 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Tuesday, November 19, 2024 8:12:00 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 5 modules transformed.
+docs/index.html                0.27 kB │ gzip: 0.22 kB
+docs/assets/index-D1OKu7AJ.js  8.63 kB │ gzip: 3.19 kB
+✓ built in 121ms
+Done in 1.11s.
+Tuesday, November 19, 2024 8:12:02 AM
+warning: in the working copy of 'docs/assets/index-D1OKu7AJ.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Tuesday, November 19, 2024 8:12:02 AM
+On branch kus-2024-10-30-modules
+nothing to commit, working tree clean
+Tuesday, November 19, 2024 8:12:02 AM
+On branch kus-2024-10-30-modules
+nothing to commit, working tree clean
+Tuesday, November 19, 2024 8:12:02 AM
+From github.com:matchthree/matchthree.github.io
+ * branch            master     -> FETCH_HEAD
+Current branch kus-2024-10-30-modules is up to date.
+Tuesday, November 19, 2024 8:12:02 AM
+Everything up-to-date
+Tuesday, November 19, 2024 8:12:03 AM
+Tuesday, November 19, 2024 8:12:03 AM
+Tuesday, November 19, 2024 8:12:03 AM
+On branch main
+nothing to commit, working tree clean
+Tuesday, November 19, 2024 8:12:03 AM
+Tuesday, November 19, 2024 8:12:03 AM
+Tuesday, November 19, 2024 8:12:06 AM
+Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
+Tuesday, November 19, 2024 8:12:06 AM
+Tuesday, November 19, 2024 8:12:06 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Tuesday, November 19, 2024 8:12:06 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-DYhv0y2B.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-DlmTeNAq.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 2.92s
+Done in 3.72s.
+Tuesday, November 19, 2024 8:12:10 AM
+Transcript stopped, output file is C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt
+warning: in the working copy of 'docs/assets/index-DYhv0y2B.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-DlmTeNAq.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/hybridcache.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/l1-show.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/modernwinforms.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/myvtt.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/myvtt.en.vtt.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/nyt-podcasts-trump-cabinet-picks.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/tldr-global.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/.gitattributes', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/build.gradle.kts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/gradle/wrapper/gradle-wrapper.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/settings.gradle.kts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/main/kotlin/com/github/kusl/november2024a/November2024aApplication.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/main/resources/application.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/test/kotlin/com/github/kusl/november2024a/November2024aApplicationTests.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/requirements.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/A3B318B569046159E1DD6616D2E646D9434350E6.asc', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/Nationalism, Explained [AXz0kbMKPu0].en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/favicon_io/about.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/aoc-WoP9BJiItSI.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/asianometry-mm-wave-5g.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/bravos-ILJ41tmQAQ8.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/coffee-software-DSbuyscXX7I.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/continuous-delivery-_zUkNrUp0Ok.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/continuous-delivery-pair-programming-5TTsIkmtKUg.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/diabetes-PsQj2Hg1oFM.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/diabetes-PsQj2Hg1oFM.hi.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/diabetes-Yys5zeoDi2E.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/dotnet-new-c-sharp-13-japXYFS9YPQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/enrico-7nnyv4yJGJc.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/germany-_ywqDbHiMrs.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/hankschannel-nuclear-16203Tks_0I.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/l1-icydock-3KCaS7EK6Rc.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/l1show-EI5iZ4LNsyQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/mileage-mike-ring-road-DhZH0KbcwX4.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/mit-rto-4ec_yZCWOCY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/ndc-oA7xeRyxMSo.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-Dj05EvWQ8NY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-X_gotjGG4ug.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-daily-bernie-xvYvfOcEFXI.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-l7s8QizovG8.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/otago-kotlin-multiplatform.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/road-guy-rob-K1TFOK4_07s.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/the-economist-kyiv-xn-AnTYs2H8.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/the-millitary-show-china-hellscape.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/tldr-news-eu-COEfdZVTFCQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/tldr-news-global-2024-11-16-a8NmPDUdzhU.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/trudeau-immigration-vOB7-dbYuCc.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/versed-h_rsF8eVPqY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/william-spaniel-polling-hhaNiF5aCCY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/ytotago-kotlin-multiplatform.en.vtt', LF will be replaced by CRLF the next time Git touches it
+Tuesday, November 19, 2024 8:12:27 AM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/notes/earth.jpeg
+        modified:   docs/notes/output.txt
+        modified:   docs/powershell.txt
+        modified:   public/notes/earth.jpeg
+        modified:   public/notes/output.txt
+        modified:   public/powershell.txt
+
+Tuesday, November 19, 2024 8:12:27 AM
+[main 91fba223] build application
+ 6 files changed, 1406 insertions(+), 64 deletions(-)
+Tuesday, November 19, 2024 8:12:27 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch              main       -> FETCH_HEAD
+Current branch main is up to date.
+Tuesday, November 19, 2024 8:12:28 AM
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 14.20 MiB | 4.09 MiB/s, done.
+Total 10 (delta 7), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (7/7), completed with 5 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   f446c4f6..91fba223  main -> main
+Tuesday, November 19, 2024 8:12:33 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> dotnet tool install --global Microsoft.DataApiBuilder
+You can invoke the tool using the following command: dab
+Tool 'microsoft.dataapibuilder' (version '1.2.14') was successfully installed.
+PS C:\Users\kushal\src\myhtml\fromnepal> dotnet tool update --global Microsoft.DataApiBuilder
+Tool 'microsoft.dataapibuilder' is already installed.
+PS C:\Users\kushal\src\myhtml\fromnepal> dotnet tool list --global
+Package Id                             Version         Commands
+--------------------------------------------------------------------------
+dotnet-ef                              8.0.6           dotnet-ef
+dotnet-reportgenerator-globaltool      5.3.11          reportgenerator
+dotnet-sonarscanner                    9.0.0           dotnet-sonarscanner
+microsoft.dataapibuilder               1.2.14          dab
+upgrade-assistant                      0.4.410601      upgrade-assistant
+PS C:\Users\kushal\src\myhtml\fromnepal> Set-Location "C:\src\small"; dab start
+Information: Microsoft.DataApiBuilder 1.2.14
+Information: Config not provided. Trying to get default config based on DAB_ENVIRONMENT...
+Information: Environment variable DAB_ENVIRONMENT is (null)
+Loading config file from dab-config.json.
+Information: Loaded config file: dab-config.json
+Information: Setting default minimum LogLevel: Debug for Development mode.
+Starting the runtime engine...
+Loading config file from dab-config.json.
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[63]
+      User profile is available. Using 'C:\Users\kushal\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[58]
+      Creating key {cac50809-0d0b-49c9-95f1-dc99b0057f1c} with creation date 2024-11-19 14:47:43Z, activation date 2024-11-19 14:47:43Z, and expiration date 2025-02-17 14:47:43Z.
+info: Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository[39]
+      Writing data to file 'C:\Users\kushal\AppData\Local\ASP.NET\DataProtection-Keys\key-cac50809-0d0b-49c9-95f1-dc99b0057f1c.xml'.
+info: Azure.DataApiBuilder.Core.Services.ISqlMetadataProvider[0]
+      [Contact] REST path: /api/Contact
+info: Azure.DataApiBuilder.Core.Services.ISqlMetadataProvider[0]
+      [PhoneNumber] REST path: /api/PhoneNumber
+info: Azure.DataApiBuilder.Core.Services.ISqlMetadataProvider[0]
+      [Address] REST path: /api/Address
+info: Azure.DataApiBuilder.Core.Services.ISqlMetadataProvider[0]
+      [EmailAddress] REST path: /api/EmailAddress
+info: Azure.DataApiBuilder.Core.Services.ISqlMetadataProvider[0]
+      [SocialMediaLink] REST path: /api/SocialMediaLink
+dbug: Azure.DataApiBuilder.Core.Resolvers.IQueryExecutor[0]
+       Executing query: SELECT attname AS "COLUMN_NAME" FROM pg_attribute WHERE attrelid = (@param0 || '.' || @param1)::regclass AND attgenerated = 's';
+dbug: Azure.DataApiBuilder.Core.Resolvers.IQueryExecutor[0]
+       Executing query: SELECT attname AS "COLUMN_NAME" FROM pg_attribute WHERE attrelid = (@param0 || '.' || @param1)::regclass AND attgenerated = 's';
+dbug: Azure.DataApiBuilder.Core.Resolvers.IQueryExecutor[0]
+       Executing query: SELECT attname AS "COLUMN_NAME" FROM pg_attribute WHERE attrelid = (@param0 || '.' || @param1)::regclass AND attgenerated = 's';
+dbug: Azure.DataApiBuilder.Core.Resolvers.IQueryExecutor[0]
+       Executing query: SELECT attname AS "COLUMN_NAME" FROM pg_attribute WHERE attrelid = (@param0 || '.' || @param1)::regclass AND attgenerated = 's';
+dbug: Azure.DataApiBuilder.Core.Resolvers.IQueryExecutor[0]
+       Executing query: SELECT attname AS "COLUMN_NAME" FROM pg_attribute WHERE attrelid = (@param0 || '.' || @param1)::regclass AND attgenerated = 's';
+dbug: Azure.DataApiBuilder.Core.Services.ISqlMetadataProvider[0]
+      Logging primary key information for entity: Contact.
+dbug: Azure.DataApiBuilder.Core.Services.ISqlMetadataProvider[0]
+      Primary key column name: id
+      Primary key mapped name: id
+      Type: Int32
+      IsNullable: False
+      IsAutoGenerated: True
+dbug: Azure.DataApiBuilder.Core.Services.ISqlMetadataProvider[0]
+      Logging primary key information for entity: PhoneNumber.
+dbug: Azure.DataApiBuilder.Core.Services.ISqlMetadataProvider[0]
+      Primary key column name: id
+      Primary key mapped name: id
+      Type: Int32
+      IsNullable: False
+      IsAutoGenerated: True
+dbug: Azure.DataApiBuilder.Core.Services.ISqlMetadataProvider[0]
+      Logging primary key information for entity: Address.
+dbug: Azure.DataApiBuilder.Core.Services.ISqlMetadataProvider[0]
+      Primary key column name: id
+      Primary key mapped name: id
+      Type: Int32
+      IsNullable: False
+      IsAutoGenerated: True
+dbug: Azure.DataApiBuilder.Core.Services.ISqlMetadataProvider[0]
+      Logging primary key information for entity: EmailAddress.
+dbug: Azure.DataApiBuilder.Core.Services.ISqlMetadataProvider[0]
+      Primary key column name: id
+      Primary key mapped name: id
+      Type: Int32
+      IsNullable: False
+      IsAutoGenerated: True
+dbug: Azure.DataApiBuilder.Core.Services.ISqlMetadataProvider[0]
+      Logging primary key information for entity: SocialMediaLink.
+dbug: Azure.DataApiBuilder.Core.Services.ISqlMetadataProvider[0]
+      Primary key column name: id
+      Primary key mapped name: id
+      Type: Int32
+      IsNullable: False
+      IsAutoGenerated: True
+info: Azure.DataApiBuilder.Service.Startup[0]
+      Successfully completed runtime initialization.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\src\small
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/ - - -
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      6ac0cb79-203b-4f9a-ba99-756828857500 Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      6ac0cb79-203b-4f9a-ba99-756828857500 The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Health checks'
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Health checks'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/ - 200 - application/json;+charset=utf-8 43.6634ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      9fdf6ff2-84d3-4865-8eac-4396b33e4c30 Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      9fdf6ff2-84d3-4865-8eac-4396b33e4c30 The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+fail: Azure.DataApiBuilder.Service.Controllers.RestController[0]
+      9fdf6ff2-84d3-4865-8eac-4396b33e4c30 Error handling REST request.
+      Azure.DataApiBuilder.Service.Exceptions.DataApiBuilderException: GraphQL request redirected to favicon.ico.
+         at Azure.DataApiBuilder.Service.Controllers.RestController.HandleOperation(String route, EntityActionOperation operationType) in /_/src/Service/Controllers/RestController.cs:line 192
+info: Microsoft.AspNetCore.Mvc.Infrastructure.SystemTextJsonResultExecutor[1]
+      Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Azure.DataApiBuilder.Service, Version=1.2.14.0, Culture=neutral, PublicKeyToken=null]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 38.7118ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - 400 - application/json;+charset=utf-8 61.7595ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/swagger - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/swagger - 301 0 - 0.6295ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 - text/html;charset=utf-8 18.6477ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css - 200 144929 text/css 11.7680ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js - 200 312163 text/javascript 10.8141ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js - 200 1061536 text/javascript 16.3760ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/swagger/favicon-16x16.png - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/swagger/favicon-16x16.png - 200 665 image/png 0.3186ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/openapi - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      a3a91ad9-72ad-47ac-8787-622c97199d36 Request authentication state: Anonymous.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      a3a91ad9-72ad-47ac-8787-622c97199d36 The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor[1]
+      Executing ContentResult with HTTP Response ContentType of application/json
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 16.3917ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/api/openapi - 200 76802 application/json 17.5735ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/Contact - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      b4b194b1-ef7c-497a-a447-15b31e67b1d6 Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      b4b194b1-ef7c-497a-a447-15b31e67b1d6 The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+dbug: Azure.DataApiBuilder.Core.Resolvers.IQueryExecutor[0]
+      b4b194b1-ef7c-497a-a447-15b31e67b1d6 Executing query: SELECT COALESCE(jsonb_agg(to_jsonb("subq8")), '[]') AS "data" FROM ( SELECT "public_contacts"."id" AS "id", "public_contacts"."uuid" AS "uuid", "public_contacts"."name" AS "name", "public_contacts"."type" AS "type", "public_contacts"."created_by" AS "created_by", "public_contacts"."created_at" AS "created_at", "public_contacts"."modified_by" AS "modified_by", "public_contacts"."modified_at" AS "modified_at" FROM "public"."contacts" AS "public_contacts" WHERE 1 = 1 ORDER BY "public_contacts"."id" ASC LIMIT 101 ) AS "subq8"
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Collections.Generic.List`1[[System.Text.Json.JsonElement, System.Text.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 65.6106ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/api/Contact - 200 - application/json;+charset=utf-8 66.0656ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/Contact - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      ecb11a32-7b47-43fc-b220-86e84d0b2c4d Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      ecb11a32-7b47-43fc-b220-86e84d0b2c4d The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+dbug: Azure.DataApiBuilder.Core.Resolvers.IQueryExecutor[0]
+      ecb11a32-7b47-43fc-b220-86e84d0b2c4d Executing query: SELECT COALESCE(jsonb_agg(to_jsonb("subq8")), '[]') AS "data" FROM ( SELECT "public_contacts"."id" AS "id", "public_contacts"."uuid" AS "uuid", "public_contacts"."name" AS "name", "public_contacts"."type" AS "type", "public_contacts"."created_by" AS "created_by", "public_contacts"."created_at" AS "created_at", "public_contacts"."modified_by" AS "modified_by", "public_contacts"."modified_at" AS "modified_at" FROM "public"."contacts" AS "public_contacts" WHERE 1 = 1 ORDER BY "public_contacts"."id" ASC LIMIT 101 ) AS "subq8"
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Collections.Generic.List`1[[System.Text.Json.JsonElement, System.Text.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 48.6026ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/api/Contact - 200 - application/json;+charset=utf-8 49.0147ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      022da13f-bcae-4f13-b518-9563b33441f4 Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      022da13f-bcae-4f13-b518-9563b33441f4 The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+fail: Azure.DataApiBuilder.Service.Controllers.RestController[0]
+      022da13f-bcae-4f13-b518-9563b33441f4 Error handling REST request.
+      Azure.DataApiBuilder.Service.Exceptions.DataApiBuilderException: GraphQL request redirected to favicon.ico.
+         at Azure.DataApiBuilder.Service.Controllers.RestController.HandleOperation(String route, EntityActionOperation operationType) in /_/src/Service/Controllers/RestController.cs:line 192
+info: Microsoft.AspNetCore.Mvc.Infrastructure.SystemTextJsonResultExecutor[1]
+      Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Azure.DataApiBuilder.Service, Version=1.2.14.0, Culture=neutral, PublicKeyToken=null]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 0.4889ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - 400 - application/json;+charset=utf-8 0.8227ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/Contact - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      b2fea5f0-a52e-452b-b2da-e95b699cf672 Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      b2fea5f0-a52e-452b-b2da-e95b699cf672 The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+dbug: Azure.DataApiBuilder.Core.Resolvers.IQueryExecutor[0]
+      b2fea5f0-a52e-452b-b2da-e95b699cf672 Executing query: SELECT COALESCE(jsonb_agg(to_jsonb("subq8")), '[]') AS "data" FROM ( SELECT "public_contacts"."id" AS "id", "public_contacts"."uuid" AS "uuid", "public_contacts"."name" AS "name", "public_contacts"."type" AS "type", "public_contacts"."created_by" AS "created_by", "public_contacts"."created_at" AS "created_at", "public_contacts"."modified_by" AS "modified_by", "public_contacts"."modified_at" AS "modified_at" FROM "public"."contacts" AS "public_contacts" WHERE 1 = 1 ORDER BY "public_contacts"."id" ASC LIMIT 101 ) AS "subq8"
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Collections.Generic.List`1[[System.Text.Json.JsonElement, System.Text.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 38.7949ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/api/Contact - 200 - application/json;+charset=utf-8 39.1642ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      7618937a-e4e1-4801-82cb-26da480964e8 Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      7618937a-e4e1-4801-82cb-26da480964e8 The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+fail: Azure.DataApiBuilder.Service.Controllers.RestController[0]
+      7618937a-e4e1-4801-82cb-26da480964e8 Error handling REST request.
+      Azure.DataApiBuilder.Service.Exceptions.DataApiBuilderException: GraphQL request redirected to favicon.ico.
+         at Azure.DataApiBuilder.Service.Controllers.RestController.HandleOperation(String route, EntityActionOperation operationType) in /_/src/Service/Controllers/RestController.cs:line 192
+info: Microsoft.AspNetCore.Mvc.Infrastructure.SystemTextJsonResultExecutor[1]
+      Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Azure.DataApiBuilder.Service, Version=1.2.14.0, Culture=neutral, PublicKeyToken=null]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 0.3472ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - 400 - application/json;+charset=utf-8 0.6438ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/Contact - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      5f3d48df-4003-4afb-8392-e91bd4ae0ee0 Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      5f3d48df-4003-4afb-8392-e91bd4ae0ee0 The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+dbug: Azure.DataApiBuilder.Core.Resolvers.IQueryExecutor[0]
+      5f3d48df-4003-4afb-8392-e91bd4ae0ee0 Executing query: SELECT COALESCE(jsonb_agg(to_jsonb("subq8")), '[]') AS "data" FROM ( SELECT "public_contacts"."id" AS "id", "public_contacts"."uuid" AS "uuid", "public_contacts"."name" AS "name", "public_contacts"."type" AS "type", "public_contacts"."created_by" AS "created_by", "public_contacts"."created_at" AS "created_at", "public_contacts"."modified_by" AS "modified_by", "public_contacts"."modified_at" AS "modified_at" FROM "public"."contacts" AS "public_contacts" WHERE 1 = 1 ORDER BY "public_contacts"."id" ASC LIMIT 101 ) AS "subq8"
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Collections.Generic.List`1[[System.Text.Json.JsonElement, System.Text.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 34.5307ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/api/Contact - 200 - application/json;+charset=utf-8 34.8977ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      15bfe2ea-0de4-4d4f-a8ed-a7636d71942f Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      15bfe2ea-0de4-4d4f-a8ed-a7636d71942f The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+fail: Azure.DataApiBuilder.Service.Controllers.RestController[0]
+      15bfe2ea-0de4-4d4f-a8ed-a7636d71942f Error handling REST request.
+      Azure.DataApiBuilder.Service.Exceptions.DataApiBuilderException: GraphQL request redirected to favicon.ico.
+         at Azure.DataApiBuilder.Service.Controllers.RestController.HandleOperation(String route, EntityActionOperation operationType) in /_/src/Service/Controllers/RestController.cs:line 192
+info: Microsoft.AspNetCore.Mvc.Infrastructure.SystemTextJsonResultExecutor[1]
+      Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Azure.DataApiBuilder.Service, Version=1.2.14.0, Culture=neutral, PublicKeyToken=null]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 0.3403ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - 400 - application/json;+charset=utf-8 0.6465ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/Contact - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      7cd2407a-2d68-49db-9c68-13dfb58cfdcd Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      7cd2407a-2d68-49db-9c68-13dfb58cfdcd The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+dbug: Azure.DataApiBuilder.Core.Resolvers.IQueryExecutor[0]
+      7cd2407a-2d68-49db-9c68-13dfb58cfdcd Executing query: SELECT COALESCE(jsonb_agg(to_jsonb("subq8")), '[]') AS "data" FROM ( SELECT "public_contacts"."id" AS "id", "public_contacts"."uuid" AS "uuid", "public_contacts"."name" AS "name", "public_contacts"."type" AS "type", "public_contacts"."created_by" AS "created_by", "public_contacts"."created_at" AS "created_at", "public_contacts"."modified_by" AS "modified_by", "public_contacts"."modified_at" AS "modified_at" FROM "public"."contacts" AS "public_contacts" WHERE 1 = 1 ORDER BY "public_contacts"."id" ASC LIMIT 101 ) AS "subq8"
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Collections.Generic.List`1[[System.Text.Json.JsonElement, System.Text.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 33.3973ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/api/Contact - 200 - application/json;+charset=utf-8 33.8575ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      20cb9d46-e4e1-41a3-b551-ac8989b39fcd Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      20cb9d46-e4e1-41a3-b551-ac8989b39fcd The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+fail: Azure.DataApiBuilder.Service.Controllers.RestController[0]
+      20cb9d46-e4e1-41a3-b551-ac8989b39fcd Error handling REST request.
+      Azure.DataApiBuilder.Service.Exceptions.DataApiBuilderException: GraphQL request redirected to favicon.ico.
+         at Azure.DataApiBuilder.Service.Controllers.RestController.HandleOperation(String route, EntityActionOperation operationType) in /_/src/Service/Controllers/RestController.cs:line 192
+info: Microsoft.AspNetCore.Mvc.Infrastructure.SystemTextJsonResultExecutor[1]
+      Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Azure.DataApiBuilder.Service, Version=1.2.14.0, Culture=neutral, PublicKeyToken=null]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 0.3475ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - 400 - application/json;+charset=utf-8 0.6316ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/Contact - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      b10ecc9b-1a0c-4e5c-a674-c8b18399f5e4 Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      b10ecc9b-1a0c-4e5c-a674-c8b18399f5e4 The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+dbug: Azure.DataApiBuilder.Core.Resolvers.IQueryExecutor[0]
+      b10ecc9b-1a0c-4e5c-a674-c8b18399f5e4 Executing query: SELECT COALESCE(jsonb_agg(to_jsonb("subq8")), '[]') AS "data" FROM ( SELECT "public_contacts"."id" AS "id", "public_contacts"."uuid" AS "uuid", "public_contacts"."name" AS "name", "public_contacts"."type" AS "type", "public_contacts"."created_by" AS "created_by", "public_contacts"."created_at" AS "created_at", "public_contacts"."modified_by" AS "modified_by", "public_contacts"."modified_at" AS "modified_at" FROM "public"."contacts" AS "public_contacts" WHERE 1 = 1 ORDER BY "public_contacts"."id" ASC LIMIT 101 ) AS "subq8"
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Collections.Generic.List`1[[System.Text.Json.JsonElement, System.Text.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 36.1697ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/api/Contact - 200 - application/json;+charset=utf-8 36.5833ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      b724af85-cd8b-462a-851f-1ee2161ad256 Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      b724af85-cd8b-462a-851f-1ee2161ad256 The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+fail: Azure.DataApiBuilder.Service.Controllers.RestController[0]
+      b724af85-cd8b-462a-851f-1ee2161ad256 Error handling REST request.
+      Azure.DataApiBuilder.Service.Exceptions.DataApiBuilderException: GraphQL request redirected to favicon.ico.
+         at Azure.DataApiBuilder.Service.Controllers.RestController.HandleOperation(String route, EntityActionOperation operationType) in /_/src/Service/Controllers/RestController.cs:line 192
+info: Microsoft.AspNetCore.Mvc.Infrastructure.SystemTextJsonResultExecutor[1]
+      Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Azure.DataApiBuilder.Service, Version=1.2.14.0, Culture=neutral, PublicKeyToken=null]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 0.3533ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - 400 - application/json;+charset=utf-8 0.6422ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/Contact/1 - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      41d95c59-ed82-465d-8dab-a977ba8292d7 Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      41d95c59-ed82-465d-8dab-a977ba8292d7 The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+fail: Azure.DataApiBuilder.Service.Controllers.RestController[0]
+      41d95c59-ed82-465d-8dab-a977ba8292d7 Error handling REST request.
+      Azure.DataApiBuilder.Service.Exceptions.DataApiBuilderException: Support for url template with implicit primary key field names is not yet added.
+         at Azure.DataApiBuilder.Core.Parsers.RequestParser.ParsePrimaryKey(String primaryKeyRoute, RestRequestContext context) in /_/src/Core/Parsers/RequestParser.cs:line 53
+         at Azure.DataApiBuilder.Core.Services.RestService.ExecuteAsync(String entityName, EntityActionOperation operationType, String primaryKeyRoute) in /_/src/Core/Services/RestService.cs:line 171
+         at Azure.DataApiBuilder.Service.Controllers.RestController.HandleOperation(String route, EntityActionOperation operationType) in /_/src/Service/Controllers/RestController.cs:line 214
+info: Microsoft.AspNetCore.Mvc.Infrastructure.SystemTextJsonResultExecutor[1]
+      Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Azure.DataApiBuilder.Service, Version=1.2.14.0, Culture=neutral, PublicKeyToken=null]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 8.4169ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/api/Contact/1 - 400 - application/json;+charset=utf-8 8.7659ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      a16576f2-13ba-4faf-a380-767c5c069702 Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      a16576f2-13ba-4faf-a380-767c5c069702 The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+fail: Azure.DataApiBuilder.Service.Controllers.RestController[0]
+      a16576f2-13ba-4faf-a380-767c5c069702 Error handling REST request.
+      Azure.DataApiBuilder.Service.Exceptions.DataApiBuilderException: GraphQL request redirected to favicon.ico.
+         at Azure.DataApiBuilder.Service.Controllers.RestController.HandleOperation(String route, EntityActionOperation operationType) in /_/src/Service/Controllers/RestController.cs:line 192
+info: Microsoft.AspNetCore.Mvc.Infrastructure.SystemTextJsonResultExecutor[1]
+      Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Azure.DataApiBuilder.Service, Version=1.2.14.0, Culture=neutral, PublicKeyToken=null]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 0.3248ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - 400 - application/json;+charset=utf-8 0.5965ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/Contact/id/1 - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      cc90c4ee-c3d6-4e17-ad98-d57a256fbfb7 Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      cc90c4ee-c3d6-4e17-ad98-d57a256fbfb7 The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+dbug: Azure.DataApiBuilder.Core.Resolvers.IQueryExecutor[0]
+      cc90c4ee-c3d6-4e17-ad98-d57a256fbfb7 Executing query: SELECT to_jsonb("subq9") AS "data" FROM ( SELECT "public_contacts"."id" AS "id", "public_contacts"."uuid" AS "uuid", "public_contacts"."name" AS "name", "public_contacts"."type" AS "type", "public_contacts"."created_by" AS "created_by", "public_contacts"."created_at" AS "created_at", "public_contacts"."modified_by" AS "modified_by", "public_contacts"."modified_at" AS "modified_at" FROM "public"."contacts" AS "public_contacts" WHERE "public_contacts"."id" = @param0 ORDER BY "public_contacts"."id" ASC LIMIT 1 ) AS "subq9"
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Collections.Generic.List`1[[System.Text.Json.JsonElement, System.Text.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 40.0023ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/api/Contact/id/1 - 200 - application/json;+charset=utf-8 40.3560ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      f2a07fcc-c129-4f35-b248-19ad6d9af81b Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      f2a07fcc-c129-4f35-b248-19ad6d9af81b The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+fail: Azure.DataApiBuilder.Service.Controllers.RestController[0]
+      f2a07fcc-c129-4f35-b248-19ad6d9af81b Error handling REST request.
+      Azure.DataApiBuilder.Service.Exceptions.DataApiBuilderException: GraphQL request redirected to favicon.ico.
+         at Azure.DataApiBuilder.Service.Controllers.RestController.HandleOperation(String route, EntityActionOperation operationType) in /_/src/Service/Controllers/RestController.cs:line 192
+info: Microsoft.AspNetCore.Mvc.Infrastructure.SystemTextJsonResultExecutor[1]
+      Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Azure.DataApiBuilder.Service, Version=1.2.14.0, Culture=neutral, PublicKeyToken=null]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 0.3482ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - 400 - application/json;+charset=utf-8 0.6269ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost:5000/api/Contact - application/json 247
+info: Microsoft.AspNetCore.Cors.Infrastructure.CorsService[5]
+      CORS policy execution failed.
+info: Microsoft.AspNetCore.Cors.Infrastructure.CorsService[6]
+      Request origin http://localhost:5000 does not have permission to access the resource.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      06d434b2-d0fa-4838-bc2d-5fbe7004b1e9 Request authentication state: Anonymous.
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Insert (Azure.DataApiBuilder.Service)'
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      06d434b2-d0fa-4838-bc2d-5fbe7004b1e9 The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Insert", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Insert(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+dbug: Azure.DataApiBuilder.Core.Resolvers.IQueryExecutor[0]
+      06d434b2-d0fa-4838-bc2d-5fbe7004b1e9 Executing query: INSERT INTO "public"."contacts" ("uuid", "name", "type", "created_by", "created_at", "modified_by", "modified_at") VALUES (@param0, @param1, @param2, @param3, @param4, @param5, @param6) RETURNING "id" AS "id", "uuid" AS "uuid", "name" AS "name", "type" AS"type", "created_by" AS "created_by", "created_at" AS "created_at", "modified_by" AS "modified_by", "modified_at" AS "modified_at";
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing CreatedResult, writing value of type '<>f__AnonymousType1`1[[System.Collections.Generic.IEnumerable`1[[System.Text.Json.JsonElement, System.Text.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Insert (Azure.DataApiBuilder.Service) in 105.447ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Insert (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost:5000/api/Contact - 201 - application/json;+charset=utf-8 109.2622ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/Contact - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      1e7d0a13-fbe7-48d7-96af-bfa9f204f9f5 Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      1e7d0a13-fbe7-48d7-96af-bfa9f204f9f5 The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+dbug: Azure.DataApiBuilder.Core.Resolvers.IQueryExecutor[0]
+      1e7d0a13-fbe7-48d7-96af-bfa9f204f9f5 Executing query: SELECT COALESCE(jsonb_agg(to_jsonb("subq8")), '[]') AS "data" FROM ( SELECT "public_contacts"."id" AS "id", "public_contacts"."uuid" AS "uuid", "public_contacts"."name" AS "name", "public_contacts"."type" AS "type", "public_contacts"."created_by" AS "created_by", "public_contacts"."created_at" AS "created_at", "public_contacts"."modified_by" AS "modified_by", "public_contacts"."modified_at" AS "modified_at" FROM "public"."contacts" AS "public_contacts" WHERE 1 = 1 ORDER BY "public_contacts"."id" ASC LIMIT 101 ) AS "subq8"
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Collections.Generic.List`1[[System.Text.Json.JsonElement, System.Text.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 42.2365ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/api/Contact - 200 - application/json;+charset=utf-8 42.5498ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      5b217526-f669-4631-8517-44eabd7b75e4 Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      5b217526-f669-4631-8517-44eabd7b75e4 The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+fail: Azure.DataApiBuilder.Service.Controllers.RestController[0]
+      5b217526-f669-4631-8517-44eabd7b75e4 Error handling REST request.
+      Azure.DataApiBuilder.Service.Exceptions.DataApiBuilderException: GraphQL request redirected to favicon.ico.
+         at Azure.DataApiBuilder.Service.Controllers.RestController.HandleOperation(String route, EntityActionOperation operationType) in /_/src/Service/Controllers/RestController.cs:line 192
+info: Microsoft.AspNetCore.Mvc.Infrastructure.SystemTextJsonResultExecutor[1]
+      Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Azure.DataApiBuilder.Service, Version=1.2.14.0, Culture=neutral, PublicKeyToken=null]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 0.3047ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - 400 - application/json;+charset=utf-8 0.5463ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 DELETE http://localhost:5000/api/Contact/id/3 - - -
+info: Microsoft.AspNetCore.Cors.Infrastructure.CorsService[5]
+      CORS policy execution failed.
+info: Microsoft.AspNetCore.Cors.Infrastructure.CorsService[6]
+      Request origin http://localhost:5000 does not have permission to access the resource.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      d38fd7aa-6a20-4aee-b10f-ebc7491c6efb Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      d38fd7aa-6a20-4aee-b10f-ebc7491c6efb The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Delete (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Delete", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+dbug: Azure.DataApiBuilder.Core.Resolvers.IQueryExecutor[0]
+      d38fd7aa-6a20-4aee-b10f-ebc7491c6efb Executing query: DELETE FROM "public"."contacts" WHERE "id" = @param0
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing StatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Delete (Azure.DataApiBuilder.Service) in 87.7612ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Delete (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 DELETE http://localhost:5000/api/Contact/id/3 - 204 - - 90.2774ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/Contact - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      00edf272-849e-4e81-9ac4-1f90434330ef Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      00edf272-849e-4e81-9ac4-1f90434330ef The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+dbug: Azure.DataApiBuilder.Core.Resolvers.IQueryExecutor[0]
+      00edf272-849e-4e81-9ac4-1f90434330ef Executing query: SELECT COALESCE(jsonb_agg(to_jsonb("subq8")), '[]') AS "data" FROM ( SELECT "public_contacts"."id" AS "id", "public_contacts"."uuid" AS "uuid", "public_contacts"."name" AS "name", "public_contacts"."type" AS "type", "public_contacts"."created_by" AS "created_by", "public_contacts"."created_at" AS "created_at", "public_contacts"."modified_by" AS "modified_by", "public_contacts"."modified_at" AS "modified_at" FROM "public"."contacts" AS "public_contacts" WHERE 1 = 1 ORDER BY "public_contacts"."id" ASC LIMIT 101 ) AS "subq8"
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.Collections.Generic.List`1[[System.Text.Json.JsonElement, System.Text.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 38.7183ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/api/Contact - 200 - application/json;+charset=utf-8 39.0892ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico - - -
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      9c271636-6238-4c19-aa1d-ddd869221084 Request authentication state: Anonymous.
+dbug: Azure.DataApiBuilder.Core.AuthenticationHelpers.ClientRoleHeaderAuthenticationMiddleware[0]
+      9c271636-6238-4c19-aa1d-ddd869221084 The request will be executed in the context of the role: Anonymous
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Find", controller = "Rest"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Find(System.String) on controller Azure.DataApiBuilder.Service.Controllers.RestController (Azure.DataApiBuilder.Service).
+fail: Azure.DataApiBuilder.Service.Controllers.RestController[0]
+      9c271636-6238-4c19-aa1d-ddd869221084 Error handling REST request.
+      Azure.DataApiBuilder.Service.Exceptions.DataApiBuilderException: GraphQL request redirected to favicon.ico.
+         at Azure.DataApiBuilder.Service.Controllers.RestController.HandleOperation(String route, EntityActionOperation operationType) in /_/src/Service/Controllers/RestController.cs:line 192
+info: Microsoft.AspNetCore.Mvc.Infrastructure.SystemTextJsonResultExecutor[1]
+      Executing JsonResult, writing value of type '<>f__AnonymousType0`1[[<>f__AnonymousType1`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Azure.DataApiBuilder.Service, Version=1.2.14.0, Culture=neutral, PublicKeyToken=null]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service) in 0.7268ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'Azure.DataApiBuilder.Service.Controllers.RestController.Find (Azure.DataApiBuilder.Service)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - 400 - application/json;+charset=utf-8 1.0292ms
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+PS C:\src\small> C:\Users\kushal\src\myhtml\fromnepal\public\omnibus.ps1
