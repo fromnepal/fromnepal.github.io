@@ -1,175 +1,184 @@
-CREATE TABLE contacts (
-    id SERIAL PRIMARY KEY,
-    uuid UUID DEFAULT gen_random_uuid() NOT NULL,
-    name VARCHAR(255) NOT NULL,
-    type VARCHAR(50) CHECK (type IN ('person', 'company')) NOT NULL,
-    created_by VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    modified_by VARCHAR(255),
-    modified_at TIMESTAMP
-);
-CREATE TABLE phone_numbers (
-    id SERIAL PRIMARY KEY,
-    uuid UUID DEFAULT gen_random_uuid() NOT NULL,
-    contact_id INTEGER REFERENCES contacts(id) ON DELETE CASCADE,
-    country_code VARCHAR(5),
-    number VARCHAR(20) NOT NULL,
-    label VARCHAR(50),
-    created_by VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    modified_by VARCHAR(255),
-    modified_at TIMESTAMP
-);
-CREATE TABLE addresses (
-    id SERIAL PRIMARY KEY,
-    uuid UUID DEFAULT gen_random_uuid() NOT NULL,
-    contact_id INTEGER REFERENCES contacts(id) ON DELETE CASCADE,
-    address_line1 VARCHAR(255) NOT NULL,
-    address_line2 VARCHAR(255),
-    city VARCHAR(100),
-    state VARCHAR(100),
-    postal_code VARCHAR(20),
-    country VARCHAR(100) NOT NULL,
-    label VARCHAR(50),
-    created_by VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    modified_by VARCHAR(255),
-    modified_at TIMESTAMP
-);
-CREATE TABLE email_addresses (
-    id SERIAL PRIMARY KEY,
-    uuid UUID DEFAULT gen_random_uuid() NOT NULL,
-    contact_id INTEGER REFERENCES contacts(id) ON DELETE CASCADE,
-    email VARCHAR(255) NOT NULL,
-    label VARCHAR(50),
-    created_by VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    modified_by VARCHAR(255),
-    modified_at TIMESTAMP
-);
-CREATE TABLE social_media_links (
-    id SERIAL PRIMARY KEY,
-    uuid UUID DEFAULT gen_random_uuid() NOT NULL,
-    contact_id INTEGER REFERENCES contacts(id) ON DELETE CASCADE,
-    platform VARCHAR(50) NOT NULL,
-    url VARCHAR(255) NOT NULL,
-    label VARCHAR(50),
-    created_by VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    modified_by VARCHAR(255),
-    modified_at TIMESTAMP
-);
-CREATE TABLE phone_numbers_history (
-    id SERIAL PRIMARY KEY,
-    phone_number_id INTEGER NOT NULL,
-    uuid UUID NOT NULL,
-    contact_id INTEGER,
-    country_code VARCHAR(5),
-    number VARCHAR(20),
-    label VARCHAR(50),
-    created_by VARCHAR(255),
-    created_at TIMESTAMP,
-    modified_by VARCHAR(255),
-    modified_at TIMESTAMP,
-    changed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
-);
-CREATE OR REPLACE FUNCTION log_phone_number_changes() RETURNS TRIGGER AS $$
-BEGIN
-    IF TG_OP = 'UPDATE' THEN
-        INSERT INTO phone_numbers_history (phone_number_id, uuid, contact_id, country_code, number, label, created_by, created_at, modified_by, modified_at)
-        VALUES (OLD.id, OLD.uuid, OLD.contact_id, OLD.country_code, OLD.number, OLD.label, OLD.created_by, OLD.created_at, OLD.modified_by, OLD.modified_at);
-    END IF;
-    RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
-CREATE TRIGGER phone_number_changes
-AFTER UPDATE ON phone_numbers
-FOR EACH ROW EXECUTE FUNCTION log_phone_number_changes();
-CREATE TABLE addresses_history (
-    id SERIAL PRIMARY KEY,
-    address_id INTEGER NOT NULL,
-    uuid UUID NOT NULL,
-    contact_id INTEGER,
-    address_line1 VARCHAR(255),
-    address_line2 VARCHAR(255),
-    city VARCHAR(100),
-    state VARCHAR(100),
-    postal_code VARCHAR(20),
-    country VARCHAR(100),
-    label VARCHAR(50),
-    created_by VARCHAR(255),
-    created_at TIMESTAMP,
-    modified_by VARCHAR(255),
-    modified_at TIMESTAMP,
-    changed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+create table contacts (
+    id serial primary key,
+    uuid uuid default gen_random_uuid() not null,
+    name varchar(255) not null,
+    type varchar(50) check (type in ('person', 'company')) not null,
+    created_by varchar(255) not null,
+    created_at timestamp default current_timestamp not null,
+    modified_by varchar(255),
+    modified_at timestamp
 );
 
-CREATE OR REPLACE FUNCTION log_address_changes() RETURNS TRIGGER AS $$
-BEGIN
-    IF TG_OP = 'UPDATE' THEN
-        INSERT INTO addresses_history (address_id, uuid, contact_id, address_line1, address_line2, city, state, postal_code, country, label, created_by, created_at, modified_by, modified_at)
-        VALUES (OLD.id, OLD.uuid, OLD.contact_id, OLD.address_line1, OLD.address_line2, OLD.city, OLD.state, OLD.postal_code, OLD.country, OLD.label, OLD.created_by, OLD.created_at, OLD.modified_by, OLD.modified_at);
-    END IF;
-    RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
-CREATE TRIGGER address_changes
-AFTER UPDATE ON addresses
-FOR EACH ROW EXECUTE FUNCTION log_address_changes();
-CREATE TABLE email_addresses_history (
-    id SERIAL PRIMARY KEY,
-    email_address_id INTEGER NOT NULL,
-    uuid UUID NOT NULL,
-    contact_id INTEGER,
-    email VARCHAR(255),
-    label VARCHAR(50),
-    created_by VARCHAR(255),
-    created_at TIMESTAMP,
-    modified_by VARCHAR(255),
-    modified_at TIMESTAMP,
-    changed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+create table phone_numbers (
+    id serial primary key,
+    uuid uuid default gen_random_uuid() not null,
+    contact_id integer references contacts(id) on delete cascade,
+    country_code varchar(5),
+    number varchar(20) not null,
+    label varchar(50),
+    created_by varchar(255) not null,
+    created_at timestamp default current_timestamp not null,
+    modified_by varchar(255),
+    modified_at timestamp
 );
 
-CREATE OR REPLACE FUNCTION log_email_address_changes() RETURNS TRIGGER AS $$
-BEGIN
-    IF TG_OP = 'UPDATE' THEN
-        INSERT INTO email_addresses_history (email_address_id, uuid, contact_id, email, label, created_by, created_at, modified_by, modified_at)
-        VALUES (OLD.id, OLD.uuid, OLD.contact_id, OLD.email, OLD.label, OLD.created_by, OLD.created_at, OLD.modified_by, OLD.modified_at);
-    END IF;
-    RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
-CREATE TRIGGER email_address_changes
-AFTER UPDATE ON email_addresses
-FOR EACH ROW EXECUTE FUNCTION log_email_address_changes();
-CREATE TABLE social_media_links_history (
-    id SERIAL PRIMARY KEY,
-    social_media_link_id INTEGER NOT NULL,
-    uuid UUID NOT NULL,
-    contact_id INTEGER,
-    platform VARCHAR(50),
-    url VARCHAR(255),
-    label VARCHAR(50),
-    created_by VARCHAR(255),
-    created_at TIMESTAMP,
-    modified_by VARCHAR(255),
-    modified_at TIMESTAMP,
-    changed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+create table addresses (
+    id serial primary key,
+    uuid uuid default gen_random_uuid() not null,
+    contact_id integer references contacts(id) on delete cascade,
+    address_line1 varchar(255) not null,
+    address_line2 varchar(255),
+    city varchar(100),
+    state varchar(100),
+    postal_code varchar(20),
+    country varchar(100) not null,
+    label varchar(50),
+    created_by varchar(255) not null,
+    created_at timestamp default current_timestamp not null,
+    modified_by varchar(255),
+    modified_at timestamp
 );
 
-CREATE OR REPLACE FUNCTION log_social_media_link_changes() RETURNS TRIGGER AS $$
-BEGIN
-    IF TG_OP = 'UPDATE' THEN
-        INSERT INTO social_media_links_history (social_media_link_id, uuid, contact_id, platform, url, label, created_by, created_at, modified_by, modified_at)
-        VALUES (OLD.id, OLD.uuid, OLD.contact_id, OLD.platform, OLD.url, OLD.label, OLD.created_by, OLD.created_at, OLD.modified_by, OLD.modified_at);
-    END IF;
-    RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
+create table email_addresses (
+    id serial primary key,
+    uuid uuid default gen_random_uuid() not null,
+    contact_id integer references contacts(id) on delete cascade,
+    email varchar(255) not null,
+    label varchar(50),
+    created_by varchar(255) not null,
+    created_at timestamp default current_timestamp not null,
+    modified_by varchar(255),
+    modified_at timestamp
+);
 
-CREATE TRIGGER social_media_link_changes
-AFTER UPDATE ON social_media_links
-FOR EACH ROW EXECUTE FUNCTION log_social_media_link_changes();
+create table social_media_links (
+    id serial primary key,
+    uuid uuid default gen_random_uuid() not null,
+    contact_id integer references contacts(id) on delete cascade,
+    platform varchar(50) not null,
+    url varchar(255) not null,
+    label varchar(50),
+    created_by varchar(255) not null,
+    created_at timestamp default current_timestamp not null,
+    modified_by varchar(255),
+    modified_at timestamp
+);
+
+create table phone_numbers_history (
+    id serial primary key,
+    phone_number_id integer not null,
+    uuid uuid not null,
+    contact_id integer,
+    country_code varchar(5),
+    number varchar(20),
+    label varchar(50),
+    created_by varchar(255),
+    created_at timestamp,
+    modified_by varchar(255),
+    modified_at timestamp,
+    changed_at timestamp default current_timestamp not null
+);
+
+create or replace function log_phone_number_changes() returns trigger as $$
+begin
+    if tg_op = 'update' then
+        insert into phone_numbers_history (phone_number_id, uuid, contact_id, country_code, number, label, created_by, created_at, modified_by, modified_at)
+        values (old.id, old.uuid, old.contact_id, old.country_code, old.number, old.label, old.created_by, old.created_at, old.modified_by, old.modified_at);
+    end if;
+    return new;
+end;
+$$ language plpgsql;
+
+create trigger phone_number_changes
+after update on phone_numbers
+for each row execute function log_phone_number_changes();
+
+create table addresses_history (
+    id serial primary key,
+    address_id integer not null,
+    uuid uuid not null,
+    contact_id integer,
+    address_line1 varchar(255),
+    address_line2 varchar(255),
+    city varchar(100),
+    state varchar(100),
+    postal_code varchar(20),
+    country varchar(100),
+    label varchar(50),
+    created_by varchar(255),
+    created_at timestamp,
+    modified_by varchar(255),
+    modified_at timestamp,
+    changed_at timestamp default current_timestamp not null
+);
+
+create or replace function log_address_changes() returns trigger as $$
+begin
+    if tg_op = 'update' then
+        insert into addresses_history (address_id, uuid, contact_id, address_line1, address_line2, city, state, postal_code, country, label, created_by, created_at, modified_by, modified_at)
+        values (old.id, old.uuid, old.contact_id, old.address_line1, old.address_line2, old.city, old.state, old.postal_code, old.country, old.label, old.created_by, old.created_at, old.modified_by, old.modified_at);
+    end if;
+    return new;
+end;
+$$ language plpgsql;
+
+create trigger address_changes
+after update on addresses
+for each row execute function log_address_changes();
+
+create table email_addresses_history (
+    id serial primary key,
+    email_address_id integer not null,
+    uuid uuid not null,
+    contact_id integer,
+    email varchar(255),
+    label varchar(50),
+    created_by varchar(255),
+    created_at timestamp,
+    modified_by varchar(255),
+    modified_at timestamp,
+    changed_at timestamp default current_timestamp not null
+);
+
+create or replace function log_email_address_changes() returns trigger as $$
+begin
+    if tg_op = 'update' then
+        insert into email_addresses_history (email_address_id, uuid, contact_id, email, label, created_by, created_at, modified_by, modified_at)
+        values (old.id, old.uuid, old.contact_id, old.email, old.label, old.created_by, old.created_at, old.modified_by, old.modified_at);
+    end if;
+    return new;
+end;
+$$ language plpgsql;
+
+create trigger email_address_changes
+after update on email_addresses
+for each row execute function log_email_address_changes();
+
+create table social_media_links_history (
+    id serial primary key,
+    social_media_link_id integer not null,
+    uuid uuid not null,
+    contact_id integer,
+    platform varchar(50),
+    url varchar(255),
+    label varchar(50),
+    created_by varchar(255),
+    created_at timestamp,
+    modified_by varchar(255),
+    modified_at timestamp,
+    changed_at timestamp default current_timestamp not null
+);
+
+create or replace function log_social_media_link_changes() returns trigger as $$
+begin
+    if tg_op = 'update' then
+        insert into social_media_links_history (social_media_link_id, uuid, contact_id, platform, url, label, created_by, created_at, modified_by, modified_at)
+        values (old.id, old.uuid, old.contact_id, old.platform, old.url, old.label, old.created_by, old.created_at, old.modified_by, old.modified_at);
+    end if;
+    return new;
+end;
+$$ language plpgsql;
+
+create trigger social_media_link_changes
+after update on social_media_links
+for each row execute function log_social_media_link_changes();
