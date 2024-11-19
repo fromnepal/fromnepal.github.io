@@ -1,11 +1,23 @@
-cd "C:\Users\kushal\src\mydotnet\"
-Get-Date
-dotnet clean
-Get-Date
-dotnet build
-Get-Date
-dotnet test
-Get-Date
+$env:DOTNET_CLI_TELEMETRY_OPTOUT='1'
+$baseDir = "C:\Users\kushal\src\mydotnet\"
+$configurations = @("Debug", "Release")
+$osPlatforms = @("win-x64", "linux-x64", "osx-x64", "linux-arm64")
+
+cd $baseDir
+foreach ($config in $configurations) {
+    foreach ($os in $osPlatforms) {
+        Write-Host "Building with configuration: $config, OS: $os"
+        Get-Date
+        dotnet clean
+        Get-Date
+        dotnet build -c $config
+        Get-Date
+        dotnet publish -c $config -r $os
+        Get-Date
+        dotnet test
+        Get-Date
+    }
+}
 
 cd "C:\Users\kushal\src\mydotnet\tests\"
 Get-Date

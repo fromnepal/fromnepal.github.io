@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-rh="true">placeholder</title>
+    <meta data-rh="true" name="description" content="placeholder"/>
+    <meta data-rh="true" property="og:url" content="placeholder"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="fb:app_id" content="9869919170" />
+    <meta name="twitter:site" content="@nytimes" />
+    <meta name="slack-app-id" content="A0121HXPPTQ" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .quote {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        article figure {
+            margin: 0;
+            padding: 0;
+            display: block;
+            width: 100%;
+        }
+
+        article figure img {
+            aspect-ratio: 3 / 2;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        article figure figcaption {
+            font-size: 0.6em;
+            line-height: 0.9;
+            margin-top: 0.5em;
+        }
+
+        /* Progress bar styles */
+        #progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #f3f3f3;
+        }
+        #progress-bar {
+            height: 100%;
+            width: 0;
+            background: #4caf50;
+        }
+        .muted {
+            color: #6c757d;
+            opacity: 0.6;
+        }
+        /* Drop cap styles */
+        .drop-cap::first-letter {
+            font-size: 3em;
+            float: left;
+            margin-right: 0.1em;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+    <div class="reading-time" id="reading-time"></div>
+    <article id="article">
+        <!-- <figure>
+            <picture>
+                <img alt="Description of the image" src="default.jpg">
+            </picture>
+            <figcaption>This is the caption for the image.</figcaption>
+        </figure> -->
+        <h1>What a School Performance Shows Us About Japanese Education</h1>
+        <h2>A look into the delicate balance between teamwork, discipline and personal growth.</h2>
+        <p class="muted">By Ema Ryan Yamazaki</p>
+        <p class="muted">Ms. Yamazaki is a documentary filmmaker.</p>
+        <p>What makes Japanese people “Japanese”? For me, the key lies in what we are taught during our elementary school years.</p>
+        <p>Children as young as six are given the responsibility to clean their own classrooms and serve one another lunch. Schools are structured like mini societies, where everyone has a role and is expected to contribute to the community. There’s a strong focus on nonacademic education intended to teach teamwork, work ethic and a sense of accomplishment.</p>
+        <p>Growing up in Japan as the child of a Japanese mother and a British father, I struggled with my identity. It was only years later when I was living abroad that I came to appreciate the values and work ethic instilled in me by my elementary school education; they are so normalized in Japan that their worth is underappreciated. These traits also contribute to why Japanese society works the way it does: Our trains run on time because we are taught to prioritize harmony and consideration for others; on the other hand, we live under a collective pressure to conform and not bring shame upon our community.</p>
+        <p>In the short documentary above, “Instruments of a Beating Heart,” filmed in 2022, first graders at a Tokyo public school are presented with a challenge for their final semester: to form an orchestra and perform at a school ceremony. As the children are taught to “make your hearts as one” and rigorously rehearse, we see both the pressures and the wonders of being held responsible to a group. The character-building traditions in Japanese education are experienced through Ayame, who, in the face of newfound challenges, learns to be resilient. I believe the experience of overcoming obstacles, as Ayame does, is crucial to education. But where should the balance lie between discipline and freedom?</p>
+        <p>What is happening in our schools will shape what our future society will look like. While the Japanese system has its strengths and weaknesses, I hope this film provides the opportunity for other societies around the world to hold a mirror to their educational systems and to reflect on how they want to raise the next generation.</p>
+        <p class="muted">Ema Ryan Yamazaki is a Japanese British director and editor based in Tokyo.</p>
+    </article>
+
+    <script>
+        function calculateReadingTime(text) {
+            const wordsPerMinute = 200; // Average reading speed
+            const textLength = text.trim().split(/\s+/).length; // Split by spaces to get word count
+            const readingTimeMinutes = Math.ceil(textLength / wordsPerMinute);
+            return readingTimeMinutes;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const article = document.getElementById("article");
+            const readingTimeElement = document.getElementById("reading-time");
+            const readingTime = calculateReadingTime(article.innerText);
+            readingTimeElement.innerText = `Estimated reading time: ${readingTime} minute${readingTime > 1 ? 's' : ''}`;
+
+            const progressBar = document.getElementById("progress-bar");
+
+            window.addEventListener("scroll", () => {
+                const articleHeight = article.scrollHeight - window.innerHeight;
+                const scrollPosition = window.scrollY;
+                const scrollPercentage = (scrollPosition / articleHeight) * 100;
+                progressBar.style.width = `${scrollPercentage}%`;
+            });
+        });
+    </script>
+</body>
+</html>
