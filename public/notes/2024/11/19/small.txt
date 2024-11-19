@@ -9,3 +9,137 @@ I would also like each table to have audit columns such as created by, created a
 Also is it possible to have these tables be as normalized as possible to the highest normal form you can get them to? 
 also is it possible to somehow save old data when data is modified? how? 
 please generate all the table sql for me thank you. 
+
+
+
+
+
+
+
+
+
+Sure, I can help with that! Below are the SQL table definitions for a contact book application in PostgreSQL 17, designed to be as normalized as possible. I'll also include audit columns and a mechanism for saving old data using history tables.
+
+### Table Definitions
+
+#### Contacts Table
+```sql
+CREATE TABLE contacts (
+    id SERIAL PRIMARY KEY,
+    uuid UUID DEFAULT gen_random_uuid() NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    type VARCHAR(50) CHECK (type IN ('person', 'company')) NOT NULL,
+    created_by VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    modified_by VARCHAR(255),
+    modified_at TIMESTAMP
+);
+```
+
+#### Phone Numbers Table
+```sql
+CREATE TABLE phone_numbers (
+    id SERIAL PRIMARY KEY,
+    uuid UUID DEFAULT gen_random_uuid() NOT NULL,
+    contact_id INTEGER REFERENCES contacts(id) ON DELETE CASCADE,
+    country_code VARCHAR(5),
+    number VARCHAR(20) NOT NULL,
+    label VARCHAR(50),
+    created_by VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    modified_by VARCHAR(255),
+    modified_at TIMESTAMP
+);
+```
+
+#### Addresses Table
+```sql
+CREATE TABLE addresses (
+    id SERIAL PRIMARY KEY,
+    uuid UUID DEFAULT gen_random_uuid() NOT NULL,
+    contact_id INTEGER REFERENCES contacts(id) ON DELETE CASCADE,
+    address_line1 VARCHAR(255) NOT NULL,
+    address_line2 VARCHAR(255),
+    city VARCHAR(100),
+    state VARCHAR(100),
+    postal_code VARCHAR(20),
+    country VARCHAR(100) NOT NULL,
+    label VARCHAR(50),
+    created_by VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    modified_by VARCHAR(255),
+    modified_at TIMESTAMP
+);
+```
+
+#### Email Addresses Table
+```sql
+CREATE TABLE email_addresses (
+    id SERIAL PRIMARY KEY,
+    uuid UUID DEFAULT gen_random_uuid() NOT NULL,
+    contact_id INTEGER REFERENCES contacts(id) ON DELETE CASCADE,
+    email VARCHAR(255) NOT NULL,
+    label VARCHAR(50),
+    created_by VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    modified_by VARCHAR(255),
+    modified_at TIMESTAMP
+);
+```
+
+#### Social Media Links Table
+```sql
+CREATE TABLE social_media_links (
+    id SERIAL PRIMARY KEY,
+    uuid UUID DEFAULT gen_random_uuid() NOT NULL,
+    contact_id INTEGER REFERENCES contacts(id) ON DELETE CASCADE,
+    platform VARCHAR(50) NOT NULL,
+    url VARCHAR(255) NOT NULL,
+    label VARCHAR(50),
+    created_by VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    modified_by VARCHAR(255),
+    modified_at TIMESTAMP
+);
+```
+
+### History Tables for Auditing Changes
+
+To save old data when modified, you can create history tables and use triggers to populate them.
+
+#### Example: Phone Numbers History Table
+```sql
+CREATE TABLE phone_numbers_history (
+    id SERIAL PRIMARY KEY,
+    phone_number_id INTEGER NOT NULL,
+    uuid UUID NOT NULL,
+    contact_id INTEGER,
+    country_code VARCHAR(5),
+    number VARCHAR(20),
+    label VARCHAR(50),
+    created_by VARCHAR(255),
+    created_at TIMESTAMP,
+    modified_by VARCHAR(255),
+    modified_at TIMESTAMP,
+    changed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+CREATE OR REPLACE FUNCTION log_phone_number_changes() RETURNS TRIGGER AS $$
+BEGIN
+    IF TG_OP = 'UPDATE' THEN
+        INSERT INTO phone_numbers_history (phone_number_id, uuid, contact_id, country_code, number, label, created_by, created_at, modified_by, modified_at)
+        VALUES (OLD.id, OLD.uuid, OLD.contact_id, OLD.country_code, OLD.number, OLD.label, OLD.created_by, OLD.created_at, OLD.modified_by, OLD.modified_at);
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER phone_number_changes
+AFTER UPDATE ON phone_numbers
+FOR EACH ROW EXECUTE FUNCTION log_phone_number_changes();
+```
+
+You can create similar history tables and triggers for other tables as needed.
+
+This setup ensures your database is normalized and maintains a history of changes. Let me know if you need any further customization or additional tables!
+
