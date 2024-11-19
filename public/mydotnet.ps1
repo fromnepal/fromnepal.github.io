@@ -22,6 +22,7 @@ foreach ($config in $configurations) {
 cd "C:\Users\kushal\src\mydotnet\tests\"
 Get-Date
 dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura
+Get-Date
 reportgenerator -reports:coverage.cobertura.xml -targetdir:coverage-report
 Get-Date
 Move-Item -Path "C:\Users\kushal\src\mydotnet\tests\coverage-report\*" -Destination "C:\Users\kushal\src\mydotnet\docs" -Force
