@@ -1,8 +1,3 @@
--- can you generate some insert scripts as a sample for all the tables except the history tables? 
-
--- Sure! Here are some sample `INSERT` scripts for all the tables except the history tables:
-
--- ```sql
 -- Insert into contacts
 insert into contacts (uuid, name, type, created_by, created_at, modified_by, modified_at)
 values (gen_random_uuid(), 'John Doe', 'person', 'admin', current_timestamp, null, null);
@@ -37,6 +32,3 @@ values (gen_random_uuid(), 1, 'LinkedIn', 'https://linkedin.com/in/johndoe', 'pr
 
 insert into social_media_links (uuid, contact_id, platform, url, label, created_by, created_at, modified_by, modified_at)
 values (gen_random_uuid(), 2, 'Twitter', 'https://twitter.com/acme', 'official', 'admin', current_timestamp, null, null);
-```
-
--- These scripts should give you a good starting point. Let me know if you need any further assistance!
