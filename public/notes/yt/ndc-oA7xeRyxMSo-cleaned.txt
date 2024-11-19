@@ -1,0 +1,1247 @@
+uh so I think we are also on time um so
+let's get started and uh at this uh end
+of the very long day or at least the
+conference part um so hopefully I can
+keep you awake while you deal with the
+last talk this will be more of a a a
+collection of stories so even if you
+sewn out for a bit uh it should still be
+okay and you can pick up where you when
+you wake up again uh so my name is
+Rasmus uh I live here in Copenhagen or
+just north of Copenhagen with my family
+uh I've been writing code for about 30
+years now uh 18 of those years have been
+professionally or at least where have
+done it full-time uh I'm currently at
+tempy previously I've been at Microsoft
+and samaron and I'm basically always
+building something and that's also the
+reason that I'm I'm giving this talk is
+you know I'm fascinated with the whole
+idea of being able to build software
+right you don't really need anything you
+just sit down with your computer and
+your imagination and you can create
+something from nothing um and you know
+and then I see you know colleagues and
+Friends uh and they might not be
+building software outside of work and
+that's also perfectly okay but at least
+I feel like I've gotten a lot out of it
+and so I kind of wanted to share uh my
+story at least about side projects and
+so this is a story
+about uh
+the the side project project that I have
+that I've put the most time into so it's
+a website that I started eight years ago
+and then of course also hopefully you'll
+get some of my advice and my experience
+and what I've learned over the over the
+years and so side projects what what is
+a side project um like from the name
+it's pretty clear that it's something
+that's not your main occupation right so
+it's something that you're doing outside
+of work um or studying or whatever um
+and there's usually a lot of different
+reasons that people do side projects
+right and I at least have been burned by
+this a few times in the past and and my
+reflection has been that it's always
+good to just just briefly think about
+what am I trying to do here like why am
+I writing this code because that will
+help you with whatever you're trying to
+accomplish and the problem is that
+usually when you mix these together
+you're going to have a bad experience or
+at least everything is going to take a
+lot longer and so I usually like to put
+uh side projects into four buckets there
+could be four main reasons at least in
+in for me uh that I would try and create
+something and the first two are more
+like internal uh reasons for me uh one
+could be you know I've been looking at
+rust on Hacker News for the the past
+three months it's it's got a lot of hype
+I want to try it out I want to fight uh
+with the ownership model and everything
+um and so I want to learn something
+that's the the reason that I'm I'm
+sitting down to write this code could
+also be that you actually want to create
+create something you have something in
+your life where you're thinking I want
+to automate this I want to create
+something that can help someone I want
+to you know whatever whatever it might
+be you're trying to create something
+you're trying to get from to something
+actually working it could be a showcase
+so it could be a demo for a presentation
+it could be you trying to show off your
+skills for job hunting or other things
+and what I find with showcase side
+projects is that they're usually you
+know very focused it's usually less code
+maybe higher quality or at least you
+know showing some different property of
+um of of what you're trying to to show
+and then of course uh it could be that
+you are starting a side project because
+you want to earn more money for profit
+and I think while there might be things
+in this talk that you can use for that
+there's also a huge uh amount of
+information on starting businesses and
+startups uh and I think you know things
+here will mainly focus on the create uh
+uh goal uh but um I mean some of it will
+be useful regardless but there's I would
+recommend also looking into the whole
+startup uh all the information on
+startups so what I find with the the
+ones that I mix up the most is these two
+right the internal reasons so I decide
+that I want to create something I want
+to sit down and the reason that this
+Burns me is that if I want to learn
+something and I also want to create
+something at the same time usually I
+fall into all the friction that this new
+technology that I'm bringing in will
+will will have and so it means that it
+takes a lot longer for me to create
+something and so when I want to create
+something usually my advice would be to
+take some technology that you know one
+thing that's worked really well for me
+is to take the stack that I use at work
+because that has other benefits and
+usually it's a stack where you're
+already
+productive uh and then of course there
+might be some technology that's
+necessary for your crazy idea that
+you're trying to do but then at least
+try to reduce the amount of new things
+that you're taking in at the beginning
+and actually I would advise for the same
+thing with learn maybe don't take you
+know rust and web sockets and something
+new database but then take one of them
+and take some technologies that you know
+and this doesn't need to be a long
+process it's just reflecting just
+briefly before you start it's just like
+what am I trying to do here do I want to
+create something or do I want to learn
+something and because you're usually
+constrained on something and usually
+it's time um yeah and
+so uh what might uh what might these
+side predicts uh look like
+uh I have I I don't know maybe created
+100 side projects over the year right
+some have been just an evening some have
+been some code that I've been using for
+a long time one example could be I
+created a a brow a a Windows Launcher
+for myself uh some uh many years ago uh
+10 years ago by now and I still use it
+every day I think I'm the only user now
+but it's available on GitHub if you want
+want to try it out but there are lots of
+Windows launchers these days but I I
+don't know I had some some users at work
+once but um yeah uh another thing could
+be to try and create some uh some old
+Google AI competition uh this is a a
+side project called Space Battles it's
+started as a hackathon weekend with
+yesper who's in the audience and he's
+actually the one running it now it could
+also be and this is the only reference
+to AI in this talk um but this was
+actually there were these competitions
+that were called Google AI uh
+competitions and they were actually a WR
+about writing Bots that would then fight
+each other in this this space world uh
+another application that you might write
+is uh that you want to create something
+for actually managing your life uh notes
+projects tasks whatever uh and you just
+haven't been able to find the right tool
+for yourself um and this if you look at
+the at the list over here you can also
+see that this is one where I've
+basically been burned a lot on uh on the
+technology front and I'm on the nth
+rewrite of this app uh but I'm actually
+pretty happy with it now uh the main
+problem with an app such as this one is
+that you want something that's both
+crossplatform but you also want your
+data to be local and that turns out to
+be pretty complicated especially if
+you're limited on time and and effort
+and so these are just three examples of
+side projects there could be a bunch
+more uh you probably have some
+interesting ones as well um and so this
+brings me to the main side project that
+I'm going to talk talk about today which
+is called pe. ninja kind of happened as
+an accident but that is actually the
+full domain name of the of the site um
+and it is a a a website that tracks
+statistics in a video game called Path
+of Exile and it's a bit random uh but
+that's what I've been building for the
+last eight years um and just for
+reference does like who actually knows
+Path of
+Exile okay there's a few people at least
+that's good I will give a short
+introduction to what path of XL is uh
+anyway uh so Path of Exile is an arpg an
+action role playing game uh if you know
+Diablo or last Epoch uh
+then PA of Exile is very similar uh it's
+a relatively old game it was released uh
+the first version in 2013 uh by a
+company called grinding gear games uh
+from New
+Zealand and uh I think what Path of
+Exile does really well is it really
+leans into complexity and gives you a
+lot of options and I think uh some of
+the main parts that it really lean into
+is very deep character building so the
+the premise of the game is basically you
+have to build a character that will
+become increasingly better at killing
+monsters right that is the that's the
+point um and so it gives you a lot of
+tools to do that and one like Infamous
+example is a bit hard to see here up on
+the monitor but this is the the the
+passive skill tree from Path of Exile
+and you can see that it's a huge graph
+and basically one of the things that you
+do when you create a character is that
+you make a path in this tree and pick up
+a lot of of different bonuses that you
+want and you know a quote over here from
+someone on Reddit which is not an
+uncommon quote at all you know I have
+11,000 hours in this game and I'm still
+learning something new every day that
+talks a bit into the complexity of this
+game um and when you have something
+that's
+complex it usually also means that
+software developers like me who maybe
+are not so good at playing the game we
+feel like uh well maybe you know at
+least I can play with some data um and
+have fun um and just to give you a brief
+idea let's see if this works but here's
+just like 20 seconds of gameplay just if
+you haven't seen the game I took one
+that's not too crazy on the on the
+movement and and stuff but this is what
+the game looks like right you have some
+lives some mana and then you basically
+run around and kill monsters and it goes
+faster and faster
+basically all right so pe. ninja so
+eight years ago I was playing this game
+with my friend
+and um path Al has this player driven
+economy and that means that the it's
+pretty hard to figure out what things
+are worth and he was frustrated he was
+like I want to buy this
+item I have all these things I don't
+know what they're worth I mean how how
+am I get going to get from here to to
+actually buying the things that I want
+and he was like I wish that someone
+would just create an overview that would
+show me what things are worth and and
+the game had recently released an
+API and I thought well sounds fun I'll
+sit down for a weekend and I'll try and
+and build something and I did and then I
+posted it on Reddit and people really
+liked it and I thought okay that was
+that was good uh and I it was useful to
+me as well and so I thought okay let's
+just keep building this thing and I kind
+of just kept on expanding it and then
+here we are8 years later I'm still
+building it like there been on and off
+uh times of course um but you know it's
+been my entertainment for the last eight
+years uh when I've been not been working
+all and um so just to give you an idea
+of the scope of the project uh it's
+written in C spet Core it has a react
+front end in typescript it's processed
+uh nearly 500 terab of data from the API
+at this point uh and it served a lot
+more for sure uh it's about 50,000 lines
+of code usually the split is uh pretty
+even between C and typescript but I
+think I deleted a lot of typescript
+recently so um it's it's a a bit heavy
+on the C uh side now um and for the the
+graph you see at the bottom here is the
+the daily uh daily page views uh and you
+can see that it goes into the range of
+maybe between two and four million uh
+page views per day and that means that
+it is something in the range of maybe
+like 5 to 10,000 top website in the
+world so it's that's where it's about uh
+and for you know daily users it's around
+200,000 uh currently with the with the
+current lead that's going on and you can
+also see here that Path of Exile is a
+game that that actually has this league
+so every three months three or four
+months they will release a new version
+and then you know people will come back
+and then it'll kind of go down and then
+they'll come back and you can see that
+that has kept on going they had some
+some uh some pretty unpopular leaks in
+2022 as you can see but then you know
+they kind of recovered from that uh in
+2023 um and so now we're getting into
+the the whole story part about what what
+did I actually learn then from from
+doing this project over these these last
+eight years and the first one I'm going
+to take you through is one called
+Embrace constraints
+and when you're starting a side project
+you're going to be constrained in some
+way right you're are going to be
+constrained financially you won't have
+money to go out and buy a huge Server
+Like There's No Revenue there's no
+nothing uh you can't buy an expensive
+database license um you will be
+constrained on time for sure this is a
+side project it's not your main
+occupation uh so time and energy a lot
+of that will go into your main
+occupation and then you're kind of doing
+this on the
+side uh but you'll also be constrained
+on people right most of the time usually
+when you start up you're just one person
+or maybe a few uh but it also means that
+like there's a limit to how much code
+you can write like you can't write as
+much code as a team but on the other
+hand you also don't have to coordinate
+with a team so you can make decisions a
+lot faster so I mean there are pros and
+cons but you are definitely constrained
+on many things and one of the
+constraints that I I picked up recently
+that kind of became a design goal for me
+in this project was that because it as
+it happened I was deploying this site to
+an an Asha app service and because of
+the whole financial reasons it had one
+core and so I thought you know part of
+Exile is a big game there's a big
+audience let's build this site so it can
+run on a single CPU call that was kind
+of my design goal um and what does it
+mean to run on a single call well it
+means that if you have a request that
+takes a th000 milliseconds then you're
+going to be serving one request per
+second right and if you go above that
+one request per second bad things are
+going to happen like your service is
+going to fall over and die like you're
+going to go zero requests really quick
+if you can bring it down to to 10
+milliseconds per per request then
+suddenly you can serve 100 per second
+right so you can actually serve a lot on
+a on a single core if you just uh if you
+build it right and what you can see here
+on the bottom is actually uh from last
+week from my monitoring software this is
+the response times from my back end
+measured by engine x uh on the same
+server uh but you can see that actually
+the the 50th and 75th percentile they're
+both zero and then the 99th percentile
+is
+0.011 and this this is because enginex
+doesn't report anything less than 1
+millisecond and so the 75th percentile
+of all requests take below 1 millisecond
+today uh which is which makes me very
+happy because it means that I can still
+run it on on uh very few
+resources um I've later I mean so I
+started out with a single core but I've
+later expanded this to be a single ser
+so all the all the bad complexity
+happens when you go into multiple
+servers and distributed systems I do
+that at work um but if you're a single
+person keeping everything on one server
+really helps uh so I'm I'm fighting
+pretty hard to to keep that um and so
+this went fine for about the the first
+two years but then I was like H I've
+covered most of the economy in this game
+maybe I should try something new and I
+was like uh it's always hard with these
+characters I would love to
+I always have problems figuring out
+exactly how to build maybe if I could
+build something where I would be able to
+explore data from other how other people
+are building their characters maybe if I
+could do that you know that would be
+helpful to add um but the economy part
+was pretty easy right I was collecting
+data aggregating it serving it it's
+pretty simple to do on a single call but
+then you know this build site this is
+what it looked like back then when I
+released it it looks very different now
+but or at least somewhat different um
+but how do you build like faceted search
+sorting and search on a single core
+right that's going to be hard with a big
+audience um and so I remembered a
+library I had seen that was called cross
+filter and um it was made by Mike Bok
+who also created
+d3js um and the approach they took was
+basically to say we're going to serve
+all the data to the front end and then
+we're going to just do all the filtering
+in the front end and that sounded very
+appealing like given my constraint that
+sounded like a great
+idea um and so I had two challenges
+right there was 15,000 characters on the
+ladder uh of the game that I had to
+download and then I needed to make sure
+that I could make this data set small
+enough so I could reasonably serve it to
+a front end and then of course I I
+needed to to create some Logic for
+actually filtering
+this um and it turned down turned out
+that I could get it down to like maybe 5
+megabytes of Json and if I GED that it
+was like 500 kiloby that was a
+acceptable I could serve that and
+crossfilter was using bit sets and if
+you haven't looked into bit sets a lot
+they're magical and computers are really
+fast the filtering was also really good
+uh with the with these bit sets just in
+JavaScript and uh it basically you had a
+short loading period and then all the
+filtering was near instant also on
+phones so that was great and and this
+worked out well and let me just show you
+exactly what it looks like today just to
+give you an idea if you haven't seen the
+site uh but so this is basically Bally a
+list of all the characters you can see
+that the UI is a bit nicer now um and
+what you can also see here like for
+instance you can see the passive tree
+this is a heat map of what the like n
+like now
+97 uh, characters are are building and
+if we go and say okay I want to look at
+all the Slayers you can see that the
+heat map then changes and we can dive in
+so everything is basically we can
+explore this data set right and we can
+we can kind of drill into the data and
+it should be nice and fast and fun to
+explore uh and you can actually also
+press the heat map and say I want
+everyone who's actually using this note
+and then it'll actually also fil the the
+heat map I don't think a lot of people
+know that um but now at least it's
+shared with the world um and so that was
+great uh that was a fun experience and
+uh something I again I wouldn't have
+done it at work right I wouldn't have
+pushed all the data and doing the
+filtering uh on the front end but
+because I had this constraint and I
+leaned into it it became more of a
+creative challenge to find a solution to
+this problem but um the problems didn't
+stop there unfortunately so it turned
+out that 15,000 characters was not
+enough uh because people were reaching
+the max level faster and my side kind of
+got stale after that um so gr gear games
+released another API I increased my goal
+to be Ser be able to serve 100,000
+characters but this also meant that the
+Gip Json suddenly was maybe 5 megabytes
+and so we're getting into the space
+where maybe it's not so fun to search
+anymore and also getting into the space
+where phones don't really like it uh
+anymore it's getting too much data and
+so I started looking into like okay how
+can I make this better and still keep my
+constraint
+running and I looked at a lot of column
+databases that's usually what you'll get
+into if you're looking at these
+analytical queries and I I tried out a
+lot of them um it but they were all
+they're not they were not fast enough uh
+for what I was trying to do on a single
+server and so I had an idea that you
+know I could try and build a database
+myself uh but whenever you think that
+you should build a data database
+yourself you should stop and and you
+should not do it unless like you look
+around and you're in a database startup
+then you can do it but otherwise don't
+don't don't go there so I kind of put it
+off I thought I that's that's crazy
+um but a few months later I decided to
+do like a prototype and see you know
+would it work
+and it did work and so I continued
+building it and so I did build a
+database but I but it was a very so what
+I built was a very specialized database
+that is made for exactly this use case
+and it's also made to be very cashable
+by Cloud flare who's in front of my site
+um and so I think you know in total it's
+maybe one 2,000 lines of C code so it's
+not a it's not a huge project um but I I
+finished it and I launched it and that
+was the one that you saw before uh still
+very fast and it actually responds with
+to these queries in most of the time 1
+millisecond but then up to maybe 5
+milliseconds people are doing crazy
+crazy sorting or something um so that
+was quite fun and again I'll repeat bit
+sets are magic uh it's really the the
+main driving force behind this this uh
+this database uh and just to to give you
+an idea so there's like three
+3,000 Dimensions you can see all the
+ones on the left we need to do a count
+of each of them across 100,000
+characters so that's more than 300
+million operations right 300 million
+comparisons but because it's using bit
+sets that's just very fast and can be
+done in one one millisecond which is
+amazing um but actually I almost gave up
+on this uh back in
+2021 um
+because I I was at this point I was at a
+a server a virtual server with 16
+Calles and I had been watching my CPU
+usage go up and up as more users kind of
+use the site and it had been it had been
+very gradual but this was what I was
+looking at in 2021 and this is before I
+did the whole you know build a database
+stuff um and so I was looking at this
+graph and I was like okay maybe now is
+the time actually to drop my constraint
+maybe now is the time to start designing
+a distributed system or at least
+figuring out how to to offload some of
+this and um I tried profiling it's
+pretty hard to know exactly what your
+production server is doing I couldn't
+really find the the root course but
+luckily one day when I was uh profiling
+something else the the application
+startup time um I noticed that there was
+a bit of code that was uh collecting
+some data and serializing Json uh and
+putting it into the HTML of the page so
+basically since I'm I'm I'm caching a
+lot in front of my site I also include
+some IDs in the HTML to kind of break uh
+all the caching so that you can see the
+new data um and what clicked for me in
+that moment was that since this is
+embedded into the HTML it means that
+this code will run on all the unique
+URLs that people hit and so that's
+actually quite a significant amount of
+traffic coming into my site and I
+thought okay I mean I didn't really
+think that that was the issue at that
+point but I thought no what the heck let
+me try and see I'll just cash it it
+doesn't change very frequently so I mean
+I could just catch it for one minute and
+that would kind of remove that load and
+I I did and then I deployed
+it and my server load fell to four
+course and so that's just also a note on
+whatever you think your production
+server is
+doing I had no idea that my server was
+spending 10 calls serializing Json for
+the HTML like that was crazy to me so I
+mean whenever you're guessing anything
+so this is not actually about side
+projects this about profiling in general
+whenever you have the idea of what a
+performance problem is you need to
+measure and you need to find the issue
+because it's not it's usually not what
+you
+think so that was about leaning into um
+leaning into constraints and using them
+as not a bad thing but actually use them
+as a creative challenge it's also
+because maybe I like solving these
+problems uh and so that's what's good
+for me in a side
+project so incremental learning and
+Innovation so I told you in the
+beginning that you should think about
+not introducing a lot of technology in
+your when you're trying to create
+something
+um but it's fine to do it over time
+right once you've worked on a side
+project for a little bit you have a a
+working base and now is the time that
+you can start bringing in new
+technologies and you can play around
+with it because these migrations that
+maybe take a long time at work mostly
+because you don't want to have any
+downtime or anything else they're
+actually pretty fast in a a um when
+you're just one person right you can
+basically just change change it there's
+no training others there's no
+discussions you can basically just do it
+and so these migrations that we're used
+to are very expensive might not actually
+be so in a side project so it makes a
+lot of sense to kind of lean into this
+over time and also this is also about
+the whole uh choosing the same Tex stack
+as as work is that
+when you when you work on a side project
+you're suddenly responsible for all of
+it right you're are responsible for the
+whole stack you're responsible for the
+server the infrastructure the pipelines
+the backend code the front end code
+everything um and it means that if you
+use the same stack as work you're going
+to get into a lot of other Corners that
+maybe other teams or other team members
+are responsible for at work and that
+certainly means that you know a lot uh
+that others might not uh which is very
+beneficial at least this is one of the
+benefits that I've found in my career is
+that usually when people talked about
+something I had played around with it in
+some random side project and I would
+know something about it more so more
+than just the
+documentation um and so the story I want
+to tell you here is actually just the
+the evolution of the infrastructure to
+show you how that evolved over time and
+how I kind of grew it of course you know
+it's natural that infrastructure will
+grow over time but you can even actually
+do relatively big shifts especially when
+you're just one person um and especially
+if you also take some knowledge that you
+already have from work and you apply it
+so this was the initial version that I
+told you about before right I had an
+aure app service Asher SQL and the path
+of XL API and I was just deploying code
+directly from my machine because you
+know Asher app service makes that pretty
+easy so that was kind of the lowest
+friction I could could take to just get
+something
+out and so this is what it looks like
+today uh and don't don't be scared by
+the the whole kubernetes thing uh I I'll
+get to that um but basically what
+happened is that in
+2017 uh I moved off of Asher I could see
+that that was was would not be realistic
+in terms of you know erress traffic and
+and everything else and also just
+scaling up uh the server a bit more uh
+so I and this was also just about the
+time that as. net core actually was
+getting really solid on Linux so I moved
+to a Linux server uh I switched to postr
+which I can definitely recommend I put
+an engine X in front of it and I added
+Cloud flare as well um then in 2018 I
+added pipelines I added humo for
+monitoring because we were using it at
+work uh and it was really nice to use um
+I also by this time had moved servers a
+few times and we had used anable at a
+previous job so I introduced some anable
+scripts for provisioning my machines so
+whenever I moved to a new server
+whenever I needed to scale up further I
+would apply my anable scripts then in
+2019 I in I added another um Community
+tool from um From the Path of Exile
+Community called the path of building to
+do a lot of the calculations for me uh
+and I put this in a Docker container and
+then in 2022 because I was looking for
+better ways to do zero downtime
+deployments I then added kubernetes but
+again this is the the scariest
+kubernetes installation that you've ever
+seen right it's a single node kubernetes
+cluster that mounts stuff directly from
+disk right it's not a it's not it's not
+it's not a complicated version of
+kubernetes it's basically just the Bare
+Essentials of kubernetes which I already
+had had had a good idea about from work
+but I I definitely got deeper in uh like
+this but the main purpose that I have
+kubernetes here is to manage the path of
+building dogger instances and do zero
+downtime deployments on my on my main
+dogger image so it's a bare a bare the
+the Least Complicated kuet setup you can
+do basically and so this is just to give
+you an idea of you know how it can
+evolve over time and then just taking
+stuff that you already know from work
+and then slowly building it out and none
+of these migrations have been very bad I
+mean I think the worst one was probably
+the postest one because changing
+databases always hurt a little bit uh
+and lately I've been exp exploring uh
+Cloud flare R2 which is a an alternative
+to S3 and blob storage basically for
+some more more fire storage and also you
+can see also integrated a few more
+apis um and so the next thing is that
+when you have a side project it is uh
+it's important to remember that it is in
+fact a side project and I think
+especially if you have a long running
+side project like this one sometimes you
+will get lost in the project and you'll
+start thinking about how can I grow the
+site how can I you know how can I make
+all these things better and maybe maybe
+they're not the thing that you want to
+do but it's the thing that you think is
+The Logical next step for the site it's
+the right thing to do for the product
+and I know that I'm at least actively
+working on op I remind myself of this
+that this is my side project this is
+something that's supposed to give me
+energy something I'm supposed to be
+passionate about because like why else
+would I be doing it uh and so I actively
+have to take out of the how do I grow
+the site and think okay what do I think
+is fun like what do I want to do next
+and is that to you know dive into
+machine learning or is it something else
+uh there's always a ton of options
+always a ton of things that you can do
+uh but I think it's it's important to
+remember that this exists to if if you
+are actually looking to create something
+it's important to remember uh to to
+optimize for fun because otherwise you
+might just stop doing it uh and so one
+of the things that I've decided is that
+it's not open source there's been a
+number of people over the years that
+have um asked whether or not they could
+contribute and I of course I'm happy
+that they would uh and it would be great
+to have some more uh development power
+on the site but
+I realized pretty early that this is my
+playground this is where I get my energy
+and especially as my career has
+progressed and I've moved further away
+from code having this project that I can
+go back to and I can play around with
+code and actually you know feel the feel
+the metal uh really helps uh me also
+keeping my programming skills up to date
+and again if I have to make technology
+choices at my at my job
+me having played around with it at least
+that's how I work uh I I don't like
+reading about things I like using it
+that's how I learn so I I need this
+project to to um and I I want to write
+code I don't want to manage P requests I
+don't want to manage issues I'll take
+the occasional bu report I respond to
+people that write to me but I I don't
+want all the I I just want to write some
+code that's basically the goal of the
+project um and the other story here is a
+bit of a sad one at least for me but um
+so in 2020 uh after I had released this
+build site I suddenly got an email from
+um and you can see that everything looks
+a bit funky up here um it's because it's
+in Korean um but I got uh I got
+contacted by a company called caco games
+and they are the a Korean company that
+runs the Korean realm in Path of Exile
+and they had a problem they had a bunch
+of
+users uh that really wanted to use my
+site and there was a huge language
+barrier for them they the English was
+not uh was not good for them so they
+reached out to say like can we can we
+figure something out uh we're happy to
+help with translations and other things
+that you need uh but can you provide the
+site in Korean and I thought I mean sure
+uh let's I I would give it a try uh and
+I built a small translation system for
+the front end I spent some time
+extracting language data from the game
+files it took a few weeks it wasn't it
+wasn't a huge task um and actually I
+reached out to grinding year games they
+were nice enough to also uh use their
+translators to translate all the UI
+strings I had so I actually launched
+this with seven languages uh which was
+super nice and
+um then
+everything kind of slowed down a little
+bit because what I hadn't thought about
+is that when I added this translation
+system it actually meant that I suddenly
+couldn't do changes anymore I didn't
+have a team supporting me I didn't have
+someone who could go out and create new
+translations so if I wanted to change
+the UI and break something up I would
+now need to go and find these
+translations somewhere and I would need
+to create new translation strings and
+everything and that adds a lot of
+friction when you only have one person's
+time and it was also work that I didn't
+think was fun
+and
+so I kind
+of slowed down my Pace I didn't really
+know why at the time but I stopped
+working on the side as
+much
+um and then I think in
+2023 I kind of realized what it was and
+I took the somewhat painful decision of
+ripping out the entire translation
+system and deleting it because it meant
+that I wasn't building the site and if I
+have to optimize for fun it also means
+that it needs to be something that keeps
+me building and this was taking all the
+energy out of the work for me and um
+yeah it's I was sad to remove it because
+I know that it helped some people but it
+was it was the only path forward for me
+and of course you know if if I had had a
+team if it had been a company if
+something else then it might have been a
+different story but um it's just me so
+that was the decision and that really
+helped a lot though like that was the
+good part I really picked up the
+development so you can also see this is
+in 20 23 this is just before I did the
+whole you know build your own database
+idea thing
+um and so the last section here is
+unexpected events so if you build
+something like this and it takes off
+you're also going to have some weird
+things happening uh of of course like
+it's over eight years right I think the
+Koo game one was also so a bit
+unexpected
+um and so the first one that I'll tell
+you about here is uh back in 2018 after
+I launched the the build
+site uh there's a a big Chinese company
+called tensent who bought a large chunk
+of Path of Exile and grinding gear games
+and um I I got some emails from them and
+again here there was a pretty large
+language barrier and they were talking
+about a project I didn't really know
+what it was I tried to ask they
+responded but I didn't really understand
+what they were trying to do I wished
+them luck with the project and the
+conversation kind of turned down and
+then a few months went by and I didn't
+think anymore of it uh and then I wake
+up one morning and I'm like my Reddit
+inbox is like full of messages I have an
+email from tensent uh in my inbox as
+well they're talking about the launch of
+their project and I'm a bit confused I
+don't know exactly what they're talking
+about but I click the link and I see
+this and so if you remember what you saw
+before this looks
+familiar um so this do you remember that
+I told you that I built the the build
+site in a way where you just needed to
+supply the data from the back end well
+that's what they did so they they um
+they had copied my front end code and
+they had implemented a new back end and
+then uh and then they had launched that
+on the Chinese realm and I was a bit
+surprised um and you know I wrote back
+to them and we discussed back and forth
+also talk to grinding gear games and
+they were helpful um and it turned it
+was a misunderstanding they thought that
+I had okay this um and we talked back
+and forth no how can we do this I knew
+for a fact that I wouldn't go into the
+Chinese realm the Chinese API is and
+Chinese and yeah let's not go let's not
+go back to the the languages uh even
+though this happened before but I knew
+that I I would didn't want to enter the
+the the Chinese realm and so in the end
+I I said
+um I was actually okay with them running
+this on the Chinese realm because I knew
+that it would help people and I said you
+know just don't bring it to the
+international realm and also would could
+you add a link back to my site and they
+added this thing at the top you can see
+the the green one there and it it's a
+small button that says something I can't
+read ninja something I can't read Rasmus
+and it says I believe it says like
+special thanks to the ninja author
+Rasmus and to this day this side is
+still running by the way but to this day
+this button up here is actually one of
+my largest uh direct traffic
+sources which is a bit but this was an
+unexpected so I mean I can cross off the
+whole you know running on a a large
+Chinese company website uh off my list
+uh the second one was uh torch light
+infinite uh that launched in
+2022 uh it's a a also an arbd uh also
+very very inspired by Path of Exile and
+they reached out to me um and probably
+also other community uh builders in Path
+of Exile and asked you know do you want
+to build a site for this new game that
+we're launching and I thought you know
+looks kind of part of Exile uh there was
+a lot of the systems that were the same
+I thought you know I have all this tech
+for my build site I could probably build
+one uh and that would probably be fun
+and I said yeah sure I can I can build a
+build site that that would I I would
+give that a shot um and they're like no
+no they're not really looking for build
+side um they were thinking more like
+Wiki or something else okay that's fine
+but I decided to try out the game and I
+played it for a while and then I found
+uh out why they didn't want the build
+site and that's because inside the game
+uh there was this
+thing and if you look at it it is you
+can if you like there's the main skill
+five link plus and if you go over to my
+site you have my main skill five link
+plus so I mean it's it's not a complete
+copy but it's very similar so that turns
+out the reason they didn't want the
+build side is they had already built it
+in inside the game basically um so yeah
+um and the last one uh of these stories
+here uh is uh Exile conon so Path of
+Exile uh or grinding gear Games held a a
+conference last year called Exile conon
+and uh because of this project I decided
+to buy a ticket and travel uh to New
+Zealand uh again I cannot recommend
+traveling to New Zealand for six days uh
+but the the trip was good uh and it was
+really amazing uh I got to talk to a lot
+of players that are much more hardcore
+at Path of Exile than me for sure uh uh
+and I I uh I more importantly I got to
+talk to a lot of the other uh Community
+tool creators uh at the event and also
+got a chance to talk to a lot of people
+from grinding gear games and also
+especially to sit down with the web team
+which are the the people that I I
+collaborate mostly with at grinding gear
+games and the ones that are doing all of
+the API work um so yeah that was a a big
+experience that I definitely wouldn't
+have done if I hadn't if it hadn't been
+for this
+project um and yeah I think uh that kind
+of concludes the the war Story part of
+this so to recap I would uh I would
+encourage you to go and build something
+can be a small thing it like as I said
+you know I think I've done a 100 side
+projects this is the biggest one uh it
+can also just be a small thing that you
+automate today that will help you
+tomorrow or maybe you'll you'll discard
+it but you'll probably learn something
+but when you do pick an appropriate
+approach uh for what you're trying to do
+just reflect think what am I trying to
+do here am I creating or learning
+especially be mindful of your
+constraints use them as a force instead
+of seeing them as a limitation find
+creative ways around these building
+blocks and again you'll learn a lot as
+you go you'll also do things that you
+would never do at work uh and that will
+seem like horrible ideas but turn out to
+actually work um add Innovation and new
+tech as you go try to reduce it in the
+beginning and remember remember to have
+fun and I think uh that also brings you
+to the brings us to the end um and yeah
+remember to evaluate the talk uh if you
+have any questions I'm happy to answer
+and if you want a Ninja sticker you can
+also come up here and get
+[Applause]
+one question do you have to put any
+money
+uh
+do uh I I actually also pay for cloud
+flare uh one of the one of the plans uh
+but I I do have ads on the side so it
+does generate some Revenue uh so I don't
+I don't pay for the hosting
+edore uh I have had both uh people want
+to sell
+r&amp;t uh ads on my site at least uh and
+there has been some people interested in
+buying the side yes I've had some
+conversations but I I decided to keep
+can what what do you
+want I'm not sure okay no I was actually
+I was thinking about uh one of the the
+things that is exist in many other game
+statistic sites is actually a more so
+this is very power user right this is
+like you you need to know what you're
+doing I want to look at jugg and ODS I
+want to see you know I want to look at
+you know a specific skill you still need
+to know a lot of this it's hard to see
+exactly what's popular so one thing I've
+considered is to actually do uh a more
+like condensed what is the current meta
+what are the popular builds more like an
+overview instead uh another thing I
+recently started is to actually whenever
+this overview is created I'll actually
+save some pet files that I'm going to
+try and look at in Doc DB and see if I
+can generate some some uh some good
+information over time on like what
+ascendancies and skills and stuff have
+been popular over time uh so things like
+that uh another area that I want to go
+into which is a bit hard is I would love
+to try and do some machine learning on
+some of this data but you know there's
+there's a lot of of different options
+that you can can go for and if you have
+any ideas then like write me and I'll
+I'll look at it I have a very long list
+of things I want to do uh but usually
+some people also come up with bad
+ideas yes how of do you still play uh
+I'm playing right now I still play I I
+usually play every League I had you know
+in the Years where it kind of slowed
+down I I didn't play as much um but I I
+do still play every League mostly also
+just to keep the site up to date but I
+mean with the current league I've been
+having uh some fun as well
+yes
+yeah uh I think they are fairly
+protective but they're also
+collaborating with Community sites for
+sure um I think the the main limitation
+is probably people I think grinding gear
+game is primarily a game uh Design
+Studio they build games they don't build
+apis that's not their main thing uh so
+they do have the web team uh that I know
+of uh that that create apis but it's not
+the primary thing that happens at gr
+gear games so I think that's also why
+some sometimes that will just be lacking
+behind I think it's just a lack of
+Manpower because they're really right
+now uh they're also building Path of
+Exile 2 which is a huge a huge thing uh
+and so I think it's I I don't think they
+are they are uh they are conscious about
+you know privacy issues and stuff uh
+definitely some limitations around that
+when using their apis but other than
+that you know they they've made a lot of
+uh of data available at least um I think
+what they say is also don't you know
+don't monetize calling our API more
+don't please don't do that right but
+other than that I think they are
+relatively
+open
+yes uh it varies a lot I think uh just
+like leagues and Path of Exile my effort
+also goes up and down uh whenever I
+whenever I also have a need to build
+stuff uh but I think I know anywhere
+from I think most week most weeks will
+probably one to 5 hours or something
+like that uh but some things if I'm like
+building a database or something else it
+might be more if I'm doing something at
+that I think is fun um I usually have
+too many things active that I want to do
+at once in this project so I mean
+there's a lot of of ongoing stuff that
+that uh that is
+unreleased
+yes yes it
+has um it has because but there was
+actually not my fault but it there was a
+new version it's been down for other
+reasons I accidentally deleted the
+database once
+but but actually since none of my apis
+actually called the database the side
+was actually not down but
+um it has been down once because there
+was an asp.net upgrade uh at some point
+where the they had an API That was
+supposed to be async and in that version
+I think it was like 2.2 it's a long time
+ago but they they had a bug where that
+was suddenly synchronous instead of
+async and because I am handling a lot of
+traffic on one server that single thing
+just caused my acpu to go to max out and
+just die uh and it was actually pretty
+hard to actually deploy a new version
+because the the server was completely
+overwhelmed but other than
+that I don't think so I don't think so
+no any more questions otherwise also I'm
+here U the entire conference so just
+come and find me or find me on Discord
+one more question
+Core I don't know I think I just made
+the decision that I would serve
+everything from either memory or static
+file that was kind of the initial
+thought I had I just knew that I had
+very limited resources I knew that the
+the community was big so I was like I
+need to do something to do it and if you
+think about it having economy data it is
+very much just about collecting all this
+data and then running some aggregations
+over it and so producing an overview in
+adjacent file instead of creating that
+overview on every request makes a lot of
+sense regardless so it kind of just it
+fell naturally out of the problem as
+well but I I did think about you know
+this is this is going to be a problem if
+anyone uses
+it but the other thing I have is like if
+if you are doing data it has to be fast
+right if you're exploring data you you
+have to be able to click and get a
+response quickly because otherwise it's
+not going to be fun you're not going to
+be if you're waiting 3 seconds every
+time you click one of these filters
+you're not going to be exploring you're
+not going to be looking at the data for
+very
+long all
+right looks like the questions have
+stopped thank you thank you for
