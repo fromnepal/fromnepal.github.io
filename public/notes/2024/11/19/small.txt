@@ -1,0 +1,11 @@
+I would like to generate a new database in postgresql 17. 
+I want you to come up with sensible table definitions for me for a contact book application. 
+The purpose of this application is to store contact information of people, companies, and such entities. 
+A contact can have zero or more phone numbers, each phone number could have meta data such as country code such as 1 for the United States and Canada and a label such as home but a label does not mean it is unique for example a person might have two phone numbers with the same label home. 
+A contact can also have zero or more addresses. We can't assume the address is in the US and we want a label for each address. 
+Same for email addresses as well as social media links such as linked in, twitter, blue sky, facebook, instagram, twitter etc 
+I would like each table to have both a unique serial id as well as a uuid. 
+I would also like each table to have audit columns such as created by, created at, modified by, modified at. 
+Also is it possible to have these tables be as normalized as possible to the highest normal form you can get them to? 
+also is it possible to somehow save old data when data is modified? how? 
+please generate all the table sql for me thank you. 
