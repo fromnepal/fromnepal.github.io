@@ -1,6 +1,8 @@
 $firefoxPath = "C:\Users\kushal\AppData\Local\Mozilla Firefox"
 $env:Path = "$firefoxPath;$env:Path"
 
+Start-Transcript -Path "C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt"
+
 # cd "C:\Users\kushal\src\angular\angulareighteen\"
 # Get-Date
 # Remove-Item -Recurse -Force .\node_modules
@@ -127,6 +129,9 @@ yarn
 Get-Date
 yarn run build
 Get-Date
+
+Stop-Transcript
+
 git add .
 Get-Date
 git status
