@@ -4,6 +4,9 @@ $configurations = @("Debug", "Release")
 $osPlatforms = @("win-x64", "linux-x64", "osx-x64", "linux-arm64")
 
 cd $baseDir
+
+Start-Transcript -Path "output.txt"
+
 foreach ($config in $configurations) {
     foreach ($os in $osPlatforms) {
         Write-Host "Building with configuration: $config, OS: $os"
@@ -28,6 +31,8 @@ Get-Date
 Move-Item -Path "C:\Users\kushal\src\mydotnet\tests\coverage-report\*" -Destination "C:\Users\kushal\src\mydotnet\docs" -Force
 Get-Date
 
+Stop-Transcript
+
 cd "C:\Users\kushal\src\mydotnet\"
 git add .
 Get-Date
@@ -37,5 +42,5 @@ git commit --message "build application" --message "from the terminal" --verbose
 Get-Date
 git pull --rebase origin master --verbose
 Get-Date
-git push origin master --verbose
+# git push origin master --verbose
 Get-Date
