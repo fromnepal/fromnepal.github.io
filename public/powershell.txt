@@ -2627,4 +2627,908 @@ info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
       Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - 400 - application/json;+charset=utf-8 1.0292ms
 info: Microsoft.Hosting.Lifetime[0]
       Application is shutting down...
-PS C:\src\small> C:\Users\kushal\src\myhtml\fromnepal\public\omnibus.ps1
+PS C:\src\small> ssh kusfedoravm
+kushal@kusfedoravm's password:
+Last login: Tue Nov 19 08:03:41 2024 from fe80::975c:f636:bfb:5026%eth0
+kushal@kusfedoravm:~$ ip addr; sudo echo "Current date and time: $(date)"; free -h; df -h; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot -y;
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:00:0f:02 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.0.94/24 brd 192.168.0.255 scope global dynamic noprefixroute eth0
+       valid_lft 4090sec preferred_lft 4090sec
+    inet6 fe80::e9d4:f8c2:22bf:21a9/64 scope link noprefixroute
+       valid_lft forever preferred_lft forever
+[sudo] password for kushal:
+Current date and time: Tue Nov 19 09:58:10 AM EST 2024
+               total        used        free      shared  buff/cache   available
+Mem:           7.7Gi       910Mi       5.3Gi        14Mi       1.8Gi       6.9Gi
+Swap:          7.7Gi          0B       7.7Gi
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda3        31G  5.7G   24G  20% /
+devtmpfs        4.0M     0  4.0M   0% /dev
+tmpfs           3.9G  8.0K  3.9G   1% /dev/shm
+efivarfs        128M  6.8K  128M   1% /sys/firmware/efi/efivars
+tmpfs           1.6G  1.2M  1.6G   1% /run
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-network-generator.service
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-udev-load-credentials.service
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-sysctl.service
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-tmpfiles-setup-dev-early.service
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-tmpfiles-setup-dev.service
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-vconsole-setup.service
+tmpfs           3.9G  8.0K  3.9G   1% /tmp
+/dev/sda3        31G  5.7G   24G  20% /home
+/dev/sda2       974M  341M  567M  38% /boot
+/dev/sda1       599M   20M  580M   4% /boot/efi
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-tmpfiles-setup.service
+tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
+tmpfs           794M   88K  794M   1% /run/user/42
+tmpfs           794M   72K  794M   1% /run/user/1000
+PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.475 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.489 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.409 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.406 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.434 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.483 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.565 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.542 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.470 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.423 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.351 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.321 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.469 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.348 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.353 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.446 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.459 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.397 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.439 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.364 ms
+
+--- pcna.duckdns.org ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19466ms
+rtt min/avg/max/mdev = 0.321/0.432/0.565/0.063 ms
+
+real    0m19.512s
+user    0m0.000s
+sys     0m0.006s
+PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.449 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=5.53 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.328 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.296 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.324 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.307 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.316 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.351 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.323 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.489 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.371 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.311 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.323 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.325 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.377 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.332 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.364 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.622 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.399 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.467 ms
+
+--- kalimati.duckdns.org ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19444ms
+rtt min/avg/max/mdev = 0.296/0.630/5.529/1.126 ms
+
+real    0m20.480s
+user    0m0.002s
+sys     0m0.004s
+PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.370 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.632 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.443 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.365 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.414 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.457 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.520 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.615 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.660 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.751 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.368 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.334 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.291 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.294 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.327 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.320 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.352 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.358 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.356 ms
+64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.365 ms
+
+--- colorado.duckdns.org ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19482ms
+rtt min/avg/max/mdev = 0.291/0.429/0.751/0.130 ms
+
+real    0m19.520s
+user    0m0.005s
+sys     0m0.000s
+Current date and time: Tue Nov 19 09:59:16 AM EST 2024
+Updating and loading repositories:
+Repositories loaded.
+Nothing to do.
+
+real    0m2.239s
+user    0m0.004s
+sys     0m0.021s
+No offline transaction is stored.
+
+real    0m0.163s
+user    0m0.007s
+sys     0m0.017s
+kushal@kusfedoravm:~$ cd ~/src/hello-testcontainers/; time dotnet clean; time dotnet restore; time dotnet build; time dotnet test
+MSBuild version 17.8.5+b5265ef37 for .NET
+Build started 11/19/2024 9:59:53 AM.
+     1>Project "/home/kushal/src/hello-testcontainers/TestcontainersDemo.sln" on node 1 (Clean target(s)).
+     1>ValidateSolutionConfiguration:
+         Building solution configuration "Debug|Any CPU".
+     1>Project "/home/kushal/src/hello-testcontainers/TestcontainersDemo.sln" (1) is building "/home/kushal/src/hello-testcontainers/CustomerService.Tests/CustomerService.Tests.csproj" (2) on node 1 (Clean target(s)).
+     2>CoreClean:
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CoverletSourceRootsMapping_CustomerService.Tests".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.runner.reporters.netcoreapp10.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.runner.utility.netcoreapp10.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.deps.json".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.runtimeconfig.json".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.pdb".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Docker.DotNet.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Docker.DotNet.X509.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/FluentAssertions.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.TestPlatform.CoreUtilities.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.TestPlatform.PlatformAbstractions.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.TestPlatform.CommunicationUtilities.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.TestPlatform.CrossPlatEngine.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.TestPlatform.Utilities.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.VisualStudio.TestPlatform.Common.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/testhost.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Newtonsoft.Json.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Npgsql.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/NuGet.Frameworks.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ICSharpCode.SharpZipLib.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Renci.SshNet.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/SshNet.Security.Cryptography.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/System.Configuration.ConfigurationManager.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/System.Security.Cryptography.ProtectedData.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Testcontainers.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Testcontainers.PostgreSql.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.abstractions.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.assert.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.core.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.execution.dotnet.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/de/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/es/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/fr/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/it/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ja/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ko/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pl/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ru/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/tr/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/cs/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/cs/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/cs/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/de/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/de/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/de/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/es/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/es/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/es/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/fr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/fr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/fr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/it/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/it/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/it/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ja/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ja/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ja/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ko/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ko/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ko/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pl/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pl/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pl/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pt-BR/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pt-BR/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pt-BR/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ru/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ru/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ru/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/tr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/tr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/tr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hans/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hans/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.pdb".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.csproj.AssemblyReference.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.AssemblyInfoInputs.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.AssemblyInfo.cs".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.csproj.CoreCompileInputs.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.sourcelink.json".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.csproj.CopyComplete".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/refint/CustomerService.Tests.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.pdb".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.genruntimeconfig.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/ref/CustomerService.Tests.dll".
+     1>Project "/home/kushal/src/hello-testcontainers/TestcontainersDemo.sln" (1) is building "/home/kushal/src/hello-testcontainers/CustomerService/CustomerService.csproj" (3) on node 2 (Clean target(s)).
+     3>CoreClean:
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/bin/Debug/net8.0/CustomerService.deps.json".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/bin/Debug/net8.0/CustomerService.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/bin/Debug/net8.0/CustomerService.pdb".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.csproj.AssemblyReference.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.AssemblyInfoInputs.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.AssemblyInfo.cs".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.csproj.CoreCompileInputs.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.sourcelink.json".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/refint/CustomerService.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.pdb".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/ref/CustomerService.dll".
+     3>Done Building Project "/home/kushal/src/hello-testcontainers/CustomerService/CustomerService.csproj" (Clean target(s)).
+     2>Done Building Project "/home/kushal/src/hello-testcontainers/CustomerService.Tests/CustomerService.Tests.csproj" (Clean target(s)).
+     1>Done Building Project "/home/kushal/src/hello-testcontainers/TestcontainersDemo.sln" (Clean target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.87
+
+real    0m1.133s
+user    0m0.741s
+sys     0m0.177s
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+
+real    0m0.859s
+user    0m0.785s
+sys     0m0.130s
+MSBuild version 17.8.5+b5265ef37 for .NET
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  CustomerService -> /home/kushal/src/hello-testcontainers/CustomerService/bin/Debug/net8.0/CustomerService.dll
+  CustomerService.Tests -> /home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.46
+
+real    0m3.648s
+user    0m1.876s
+sys     0m0.385s
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  CustomerService -> /home/kushal/src/hello-testcontainers/CustomerService/bin/Debug/net8.0/CustomerService.dll
+  CustomerService.Tests -> /home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.dll
+Test run for /home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.dll (.NETCoreApp,Version=v8.0)
+Microsoft (R) Test Execution Command Line Tool Version 17.8.0 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.25]     CustomerService.Tests.CustomerServiceTest.ShouldReturnTwoCustomers [FAIL]
+  Failed CustomerService.Tests.CustomerServiceTest.ShouldReturnTwoCustomers [1 ms]
+  Error Message:
+   System.ArgumentException : Docker is either not running or misconfigured. Please ensure that Docker is running and that the endpoint is properly configured. You can customize your configuration using either the environment variables or the ~/.testcontainers.properties file. For more information, visit:
+https://dotnet.testcontainers.org/custom_configuration/ (Parameter 'DockerEndpointAuthConfig')
+  Stack Trace:
+     at DotNet.Testcontainers.Guard.ThrowIf[TType](ArgumentInfo`1& argument, Func`2 condition, Func`2 ifClause) in /_/src/Testcontainers/Guard.Null.cs:line 62
+   at DotNet.Testcontainers.Builders.AbstractBuilder`4.Validate() in /_/src/Testcontainers/Builders/AbstractBuilder`4.cs:line 145
+   at DotNet.Testcontainers.Builders.ContainerBuilder`3.Validate() in /_/src/Testcontainers/Builders/ContainerBuilder`3.cs:line 383
+   at Testcontainers.PostgreSql.PostgreSqlBuilder.Validate() in /_/src/Testcontainers.PostgreSql/PostgreSqlBuilder.cs:line 101
+   at Testcontainers.PostgreSql.PostgreSqlBuilder.Build() in /_/src/Testcontainers.PostgreSql/PostgreSqlBuilder.cs:line 75
+   at CustomerService.Tests.CustomerServiceTest..ctor() in /home/kushal/src/hello-testcontainers/CustomerService.Tests/CustomerServiceTest.cs:line 8
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+
+Failed!  - Failed:     1, Passed:     0, Skipped:     0, Total:     1, Duration: < 1 ms - CustomerService.Tests.dll (net8.0)
+
+real    0m2.743s
+user    0m3.574s
+sys     0m0.555s
+kushal@kusfedoravm:~/src/hello-testcontainers$ dotnet --info
+.NET SDK:
+ Version:           8.0.110
+ Commit:            87a66bb3d1
+ Workload version:  8.0.100-manifests.9143487c
+
+Runtime Environment:
+ OS Name:     fedora
+ OS Version:  41
+ OS Platform: Linux
+ RID:         fedora.41-x64
+ Base Path:   /usr/lib64/dotnet/sdk/8.0.110/
+
+.NET workloads installed:
+ Workload version: 8.0.100-manifests.9143487c
+There are no installed workloads to display.
+
+Host:
+  Version:      8.0.10
+  Architecture: x64
+  Commit:       81cabf2857
+
+.NET SDKs installed:
+  8.0.110 [/usr/lib64/dotnet/sdk]
+
+.NET runtimes installed:
+  Microsoft.AspNetCore.App 8.0.10 [/usr/lib64/dotnet/shared/Microsoft.AspNetCore.App]
+  Microsoft.NETCore.App 8.0.10 [/usr/lib64/dotnet/shared/Microsoft.NETCore.App]
+
+Other architectures found:
+  None
+
+Environment variables:
+  DOTNET_ROOT       [/usr/lib64/dotnet]
+
+global.json file:
+  Not found
+
+Learn more:
+  https://aka.ms/dotnet/info
+
+Download .NET:
+  https://aka.ms/dotnet/download
+kushal@kusfedoravm:~/src/hello-testcontainers$ export DOCKER_HOST=unix:///run/user/$UID/podman/podman.sock
+kushal@kusfedoravm:~/src/hello-testcontainers$ cd ~/src/hello-testcontainers/; time dotnet clean; time dotnet restore; time dotnet build; time dotnet test
+MSBuild version 17.8.5+b5265ef37 for .NET
+Build started 11/19/2024 10:03:21 AM.
+     1>Project "/home/kushal/src/hello-testcontainers/TestcontainersDemo.sln" on node 1 (Clean target(s)).
+     1>ValidateSolutionConfiguration:
+         Building solution configuration "Debug|Any CPU".
+     1>Project "/home/kushal/src/hello-testcontainers/TestcontainersDemo.sln" (1) is building "/home/kushal/src/hello-testcontainers/CustomerService/CustomerService.csproj" (2) on node 2 (Clean target(s)).
+     2>CoreClean:
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/bin/Debug/net8.0/CustomerService.deps.json".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/bin/Debug/net8.0/CustomerService.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/bin/Debug/net8.0/CustomerService.pdb".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.csproj.AssemblyReference.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.AssemblyInfoInputs.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.AssemblyInfo.cs".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.csproj.CoreCompileInputs.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.sourcelink.json".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/refint/CustomerService.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.pdb".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/ref/CustomerService.dll".
+     2>Done Building Project "/home/kushal/src/hello-testcontainers/CustomerService/CustomerService.csproj" (Clean target(s)).
+     1>Project "/home/kushal/src/hello-testcontainers/TestcontainersDemo.sln" (1) is building "/home/kushal/src/hello-testcontainers/CustomerService.Tests/CustomerService.Tests.csproj" (3) on node 1 (Clean target(s)).
+     3>CoreClean:
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CoverletSourceRootsMapping_CustomerService.Tests".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.runner.reporters.netcoreapp10.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.runner.utility.netcoreapp10.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.deps.json".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.runtimeconfig.json".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.pdb".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Docker.DotNet.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Docker.DotNet.X509.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/FluentAssertions.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.TestPlatform.CoreUtilities.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.TestPlatform.PlatformAbstractions.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.TestPlatform.CommunicationUtilities.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.TestPlatform.CrossPlatEngine.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.TestPlatform.Utilities.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.VisualStudio.TestPlatform.Common.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/testhost.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Newtonsoft.Json.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Npgsql.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/NuGet.Frameworks.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ICSharpCode.SharpZipLib.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Renci.SshNet.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/SshNet.Security.Cryptography.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/System.Configuration.ConfigurationManager.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/System.Security.Cryptography.ProtectedData.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Testcontainers.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Testcontainers.PostgreSql.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.abstractions.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.assert.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.core.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.execution.dotnet.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/de/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/es/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/fr/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/it/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ja/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ko/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pl/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ru/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/tr/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/cs/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/cs/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/cs/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/de/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/de/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/de/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/es/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/es/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/es/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/fr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/fr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/fr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/it/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/it/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/it/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ja/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ja/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ja/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ko/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ko/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ko/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pl/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pl/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pl/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pt-BR/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pt-BR/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pt-BR/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ru/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ru/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ru/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/tr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/tr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/tr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hans/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hans/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.pdb".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.csproj.AssemblyReference.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.AssemblyInfoInputs.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.AssemblyInfo.cs".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.csproj.CoreCompileInputs.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.sourcelink.json".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.csproj.CopyComplete".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/refint/CustomerService.Tests.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.pdb".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.genruntimeconfig.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/ref/CustomerService.Tests.dll".
+     3>Done Building Project "/home/kushal/src/hello-testcontainers/CustomerService.Tests/CustomerService.Tests.csproj" (Clean target(s)).
+     1>Done Building Project "/home/kushal/src/hello-testcontainers/TestcontainersDemo.sln" (Clean target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.58
+
+real    0m0.749s
+user    0m0.708s
+sys     0m0.149s
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+
+real    0m0.813s
+user    0m0.767s
+sys     0m0.152s
+MSBuild version 17.8.5+b5265ef37 for .NET
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  CustomerService -> /home/kushal/src/hello-testcontainers/CustomerService/bin/Debug/net8.0/CustomerService.dll
+  CustomerService.Tests -> /home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.25
+
+real    0m1.448s
+user    0m1.166s
+sys     0m0.220s
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  CustomerService -> /home/kushal/src/hello-testcontainers/CustomerService/bin/Debug/net8.0/CustomerService.dll
+  CustomerService.Tests -> /home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.dll
+Test run for /home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.dll (.NETCoreApp,Version=v8.0)
+Microsoft (R) Test Execution Command Line Tool Version 17.8.0 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+[testcontainers.org 00:00:00.21] Connected to Docker:
+  Host: unix:///run/user/1000/podman/podman.sock
+  Server Version: 5.2.5
+  Kernel Version: 6.11.8-300.fc41.x86_64
+  API Version: 1.41
+  Operating System: fedora
+  Total Memory: 7.75 GB
+[testcontainers.org 00:00:00.40] Docker container 1fda762383f5 created
+[testcontainers.org 00:00:00.45] Start Docker container 1fda762383f5
+[testcontainers.org 00:00:00.80] Wait for Docker container 1fda762383f5 to complete readiness checks
+[xUnit.net 00:00:02.40]     CustomerService.Tests.CustomerServiceTest.ShouldReturnTwoCustomers [FAIL]
+  Failed CustomerService.Tests.CustomerServiceTest.ShouldReturnTwoCustomers [1 ms]
+  Error Message:
+   Docker.DotNet.DockerContainerNotFoundException : Docker API responded with status code=NotFound, response={"cause":"no such container","message":"no container with name or ID \"1fda762383f530397f563ab899fb261a712fd51c87b6eaf7643692340e4acd93\" found: no such container","response":404}
+
+  Stack Trace:
+     at Docker.DotNet.ContainerOperations.<>c.<.cctor>b__30_0(HttpStatusCode statusCode, String responseBody)
+   at Docker.DotNet.DockerClient.HandleIfErrorResponseAsync(HttpStatusCode statusCode, HttpResponseMessage response, IEnumerable`1 handlers)
+   at Docker.DotNet.DockerClient.MakeRequestAsync(IEnumerable`1 errorHandlers, HttpMethod method, String path, IQueryString queryString, IRequestContent body, IDictionary`2 headers, TimeSpan timeout, CancellationToken token)
+   at Docker.DotNet.ContainerOperations.InspectContainerAsync(String id, CancellationToken cancellationToken)
+   at DotNet.Testcontainers.Clients.DockerContainerOperations.ByIdAsync(String id, CancellationToken ct) in /_/src/Testcontainers/Clients/DockerContainerOperations.cs:line 36
+   at DotNet.Testcontainers.Containers.DockerContainer.CheckReadinessAsync(WaitStrategy waitStrategy, CancellationToken ct) in /_/src/Testcontainers/Containers/DockerContainer.cs:line 539
+   at DotNet.Testcontainers.Configurations.WaitStrategy.<>c__DisplayClass24_0.<<WaitUntilAsync>g__UntilAsync|0>d.MoveNext() in /_/src/Testcontainers/Configurations/WaitStrategies/WaitStrategy.cs:line 184
+--- End of stack trace from previous location ---
+   at DotNet.Testcontainers.Configurations.WaitStrategy.WaitUntilAsync(Func`1 wait, TimeSpan interval, TimeSpan timeout, Int32 retries, CancellationToken ct) in /_/src/Testcontainers/Configurations/WaitStrategies/WaitStrategy.cs:line 213
+   at DotNet.Testcontainers.Containers.DockerContainer.CheckReadinessAsync(IEnumerable`1 waitStrategies, CancellationToken ct) in /_/src/Testcontainers/Containers/DockerContainer.cs:line 560
+   at DotNet.Testcontainers.Containers.DockerContainer.UnsafeStartAsync(CancellationToken ct) in /_/src/Testcontainers/Containers/DockerContainer.cs:line 480
+   at DotNet.Testcontainers.Containers.DockerContainer.StartAsync(CancellationToken ct) in /_/src/Testcontainers/Containers/DockerContainer.cs:line 283
+   at DotNet.Testcontainers.Containers.ResourceReaper.GetAndStartNewAsync(Guid sessionId, IDockerEndpointAuthenticationConfiguration dockerEndpointAuthConfig, IImage resourceReaperImage, IMount dockerSocket, ILogger logger, Boolean requiresPrivilegedMode, TimeSpan initTimeout, CancellationToken ct) in /_/src/Testcontainers/Containers/ResourceReaper.cs:line 224
+   at DotNet.Testcontainers.Containers.ResourceReaper.GetAndStartNewAsync(Guid sessionId, IDockerEndpointAuthenticationConfiguration dockerEndpointAuthConfig, IImage resourceReaperImage, IMount dockerSocket, ILogger logger, Boolean requiresPrivilegedMode, TimeSpan initTimeout, CancellationToken ct) in /_/src/Testcontainers/Containers/ResourceReaper.cs:line 248
+   at DotNet.Testcontainers.Containers.ResourceReaper.GetAndStartDefaultAsync(IDockerEndpointAuthenticationConfiguration dockerEndpointAuthConfig, ILogger logger, Boolean isWindowsEngineEnabled, CancellationToken ct) in /_/src/Testcontainers/Containers/ResourceReaper.cs:line 135
+   at DotNet.Testcontainers.Clients.TestcontainersClient.RunAsync(IContainerConfiguration configuration, CancellationToken ct) in /_/src/Testcontainers/Clients/TestcontainersClient.cs:line 297
+   at DotNet.Testcontainers.Containers.DockerContainer.UnsafeCreateAsync(CancellationToken ct) in /_/src/Testcontainers/Containers/DockerContainer.cs:line 416
+   at DotNet.Testcontainers.Containers.DockerContainer.StartAsync(CancellationToken ct) in /_/src/Testcontainers/Containers/DockerContainer.cs:line 280
+
+Failed!  - Failed:     1, Passed:     0, Skipped:     0, Total:     1, Duration: < 1 ms - CustomerService.Tests.dll (net8.0)
+
+real    0m4.948s
+user    0m6.366s
+sys     0m0.601s
+kushal@kusfedoravm:~/src/hello-testcontainers$ exit
+logout
+Connection to kusfedoravm closed.
+PS C:\src\small> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_videos.ps1  -url "https://v.redd.it/nypajvl4hu1e1"
+Create new folder for yt-dlp
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          11/19/2024 11:18 AM                yt-dlp
+
+DisplayHint : DateTime
+Date        : 11/19/2024 12:00:00 AM
+Day         : 19
+DayOfWeek   : Tuesday
+DayOfYear   : 324
+Hour        : 11
+Kind        : Local
+Millisecond : 179
+Microsecond : 364
+Nanosecond  : 700
+Minute      : 18
+Month       : 11
+Second      : 30
+Ticks       : 638676119101793647
+TimeOfDay   : 11:18:30.1793647
+Year        : 2024
+DateTime    : Tuesday, November 19, 2024 11:18:30 AM
+
+
+DisplayHint : DateTime
+Date        : 11/19/2024 12:00:00 AM
+Day         : 19
+DayOfWeek   : Tuesday
+DayOfYear   : 324
+Hour        : 11
+Kind        : Local
+Millisecond : 207
+Microsecond : 99
+Nanosecond  : 500
+Minute      : 18
+Month       : 11
+Second      : 30
+Ticks       : 638676119102070995
+TimeOfDay   : 11:18:30.2070995
+Year        : 2024
+DateTime    : Tuesday, November 19, 2024 11:18:30 AM
+
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241119111830.%(ext)s', 'https://v.redd.it/nypajvl4hu1e1']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.11.18 from yt-dlp/yt-dlp [7ea278792] (win_exe)
+[debug] Python 3.10.11 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1t  7 Feb 2023)
+[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.40.1, urllib3-2.2.3, websockets-13.1
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1837 extractors
+[generic] Extracting URL: https://v.redd.it/nypajvl4hu1e1
+[generic] nypajvl4hu1e1: Downloading webpage
+[redirect] Following redirect to https://www.reddit.com/r/Awww/comments/1guv3zr/good_people_treat_their_pets_like_they_would/?rdt=32772
+[Reddit] Extracting URL: https://www.reddit.com/r/Awww/comments/1guv3zr/good_people_treat_their_pets_like_they_would/?rdt=32772
+[Reddit] 1guv3zr: Downloading JSON metadata
+[Reddit] 1guv3zr: Downloading m3u8 information
+[Reddit] 1guv3zr: Downloading MPD manifest
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec, channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Reddit
+[info] nypajvl4hu1e1: Downloading 1 format(s): hls-1320+dash-6
+[debug] Invoking hlsnative downloader on "https://v.redd.it/nypajvl4hu1e1/HLS_480.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 5
+[download] Destination: C:\Temp\yt-dlp\20241119111830.fhls-1320.mp4
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of    3.57MiB in 00:00:00 at 12.91MiB/s
+[debug] Invoking http downloader on "https://v.redd.it/nypajvl4hu1e1/DASH_AUDIO_128.mp4"
+[download] Destination: C:\Temp\yt-dlp\20241119111830.fdash-6.m4a
+[download] 100% of  419.78KiB in 00:00:00 at 13.00MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\20241119111830.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241119111830.fhls-1320.mp4 -i file:C:\Temp\yt-dlp\20241119111830.fdash-6.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241119111830.temp.mp4
+Deleting original file C:\Temp\yt-dlp\20241119111830.fdash-6.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\20241119111830.fhls-1320.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241119111830.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241119111830.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Good people treat their pets like they would their own children. " -metadata "date=20241119" -metadata "purl=https://www.reddit.com/r/Awww/comments/1guv3zr/good_people_treat_their_pets_like_they_would/?rdt=32772" -metadata "comment=https://www.reddit.com/r/Awww/comments/1guv3zr/good_people_treat_their_pets_like_they_would/?rdt=32772" -metadata "artist=charmyybabby" -movflags +faststart file:C:\Temp\yt-dlp\20241119111830.temp.mp4
+
+DisplayHint : DateTime
+Date        : 11/19/2024 12:00:00 AM
+Day         : 19
+DayOfWeek   : Tuesday
+DayOfYear   : 324
+Hour        : 11
+Kind        : Local
+Millisecond : 426
+Microsecond : 389
+Nanosecond  : 900
+Minute      : 18
+Month       : 11
+Second      : 34
+Ticks       : 638676119144263899
+TimeOfDay   : 11:18:34.4263899
+Year        : 2024
+DateTime    : Tuesday, November 19, 2024 11:18:34 AM
+
+
+DisplayHint : DateTime
+Date        : 11/19/2024 12:00:00 AM
+Day         : 19
+DayOfWeek   : Tuesday
+DayOfYear   : 324
+Hour        : 11
+Kind        : Local
+Millisecond : 431
+Microsecond : 981
+Nanosecond  : 700
+Minute      : 18
+Month       : 11
+Second      : 34
+Ticks       : 638676119144319817
+TimeOfDay   : 11:18:34.4319817
+Year        : 2024
+DateTime    : Tuesday, November 19, 2024 11:18:34 AM
+
+
+DisplayHint : DateTime
+Date        : 11/19/2024 12:00:00 AM
+Day         : 19
+DayOfWeek   : Tuesday
+DayOfYear   : 324
+Hour        : 11
+Kind        : Local
+Millisecond : 433
+Microsecond : 864
+Nanosecond  : 300
+Minute      : 18
+Month       : 11
+Second      : 34
+Ticks       : 638676119144338643
+TimeOfDay   : 11:18:34.4338643
+Year        : 2024
+DateTime    : Tuesday, November 19, 2024 11:18:34 AM
+
+
+    Directory: C:\Temp\yt-dlp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          11/19/2024  6:35 AM        4021941 20241119111830.mp4
+-a---          11/19/2024  6:35 AM        4021941 20241119111830.mp4
+Cleaned video name: 20241119111830mp4
+Cleaned video path: C:\Temp\yt-dlp\20241119111830mp4
+Running ffmpeg
+ffmpeg -i "C:\Temp\yt-dlp\20241119111830mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241119111830mp4_reencoded.mp4"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241119111830mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Good people treat their pets like they would their own children.
+    artist          : charmyybabby
+    date            : 20241119
+    encoder         : Lavf61.7.100
+    comment         : https://www.reddit.com/r/Awww/comments/1guv3zr/good_people_treat_their_pets_like_they_would/?rdt=32772
+  Duration: 00:00:26.33, start: 0.000000, bitrate: 1221 kb/s
+  Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(progressive), 480x854 [SAR 1281:1280 DAR 9:16], 1084 kb/s, 30 fps, 30 tbr, 90k tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000024af66ce8c0] using SAR=1281/1280
+[libx264 @ 0000024af66ce8c0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000024af66ce8c0] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 0000024af66ce8c0] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\20241119111830mp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Good people treat their pets like they would their own children.
+    artist          : charmyybabby
+    date            : 20241119
+    comment         : https://www.reddit.com/r/Awww/comments/1guv3zr/good_people_treat_their_pets_like_they_would/?rdt=32772
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 480x854 [SAR 1281:1280 DAR 9:16], q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 aac
+[mp4 @ 0000024af6659480] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000024af66281c0] video:3822KiB audio:413KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.697583%
+frame=  790 fps=486 q=-1.0 Lsize=    4264KiB time=00:00:26.26 bitrate=1329.9kbits/s speed=16.1x
+[libx264 @ 0000024af66ce8c0] frame I:7     Avg QP:21.89  size: 24549
+[libx264 @ 0000024af66ce8c0] frame P:312   Avg QP:24.82  size:  8363
+[libx264 @ 0000024af66ce8c0] frame B:471   Avg QP:28.34  size:  2402
+[libx264 @ 0000024af66ce8c0] consecutive B-frames:  8.9% 32.7%  6.8% 51.6%
+[libx264 @ 0000024af66ce8c0] mb I  I16..4:  9.7% 48.9% 41.5%
+[libx264 @ 0000024af66ce8c0] mb P  I16..4:  7.4% 17.9%  3.8%  P16..4: 40.9% 14.3%  4.0%  0.0%  0.0%    skip:11.7%
+[libx264 @ 0000024af66ce8c0] mb B  I16..4:  0.4%  1.1%  0.2%  B16..8: 41.1%  5.6%  0.7%  direct: 1.3%  skip:49.6%  L0:44.1% L1:51.7% BI: 4.2%
+[libx264 @ 0000024af66ce8c0] 8x8 transform intra:61.0% inter:73.4%
+[libx264 @ 0000024af66ce8c0] coded y,uvDC,uvAC intra: 51.3% 52.6% 5.5% inter: 12.6% 11.5% 0.1%
+[libx264 @ 0000024af66ce8c0] i16 v,h,dc,p: 20% 26% 10% 44%
+[libx264 @ 0000024af66ce8c0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 19% 17%  7%  6%  6%  6%  8%  7%
+[libx264 @ 0000024af66ce8c0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 18% 13%  7%  9%  9%  8%  7%  5%
+[libx264 @ 0000024af66ce8c0] i8c dc,h,v,p: 60% 18% 17%  4%
+[libx264 @ 0000024af66ce8c0] Weighted P-Frames: Y:5.1% UV:2.9%
+[libx264 @ 0000024af66ce8c0] ref P L0: 66.9% 18.7% 11.5%  2.8%  0.1%
+[libx264 @ 0000024af66ce8c0] ref B L0: 92.4%  6.4%  1.2%
+[libx264 @ 0000024af66ce8c0] ref B L1: 98.9%  1.1%
+[libx264 @ 0000024af66ce8c0] kb/s:1188.62
+[aac @ 0000024af6c091c0] Qavg: 892.917
+
+DisplayHint : DateTime
+Date        : 11/19/2024 12:00:00 AM
+Day         : 19
+DayOfWeek   : Tuesday
+DayOfYear   : 324
+Hour        : 11
+Kind        : Local
+Millisecond : 171
+Microsecond : 699
+Nanosecond  : 700
+Minute      : 18
+Month       : 11
+Second      : 36
+Ticks       : 638676119161716997
+TimeOfDay   : 11:18:36.1716997
+Year        : 2024
+DateTime    : Tuesday, November 19, 2024 11:18:36 AM
+
+
+DisplayHint : DateTime
+Date        : 11/19/2024 12:00:00 AM
+Day         : 19
+DayOfWeek   : Tuesday
+DayOfYear   : 324
+Hour        : 11
+Kind        : Local
+Millisecond : 208
+Microsecond : 130
+Nanosecond  : 400
+Minute      : 18
+Month       : 11
+Second      : 37
+Ticks       : 638676119172081304
+TimeOfDay   : 11:18:37.2081304
+Year        : 2024
+DateTime    : Tuesday, November 19, 2024 11:18:37 AM
+
+
+DisplayHint : DateTime
+Date        : 11/19/2024 12:00:00 AM
+Day         : 19
+DayOfWeek   : Tuesday
+DayOfYear   : 324
+Hour        : 11
+Kind        : Local
+Millisecond : 213
+Microsecond : 797
+Nanosecond  : 300
+Minute      : 18
+Month       : 11
+Second      : 37
+Ticks       : 638676119172137973
+TimeOfDay   : 11:18:37.2137973
+Year        : 2024
+DateTime    : Tuesday, November 19, 2024 11:18:37 AM
+
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> C:\Users\kushal\src\myhtml\fromnepal\public\omnibus.ps1
