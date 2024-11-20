@@ -1408,3 +1408,977 @@ Deleting original file Part 6, Chapter 7 [Di6N4HGOBJ4].webm (pass -k to keep)
 Wednesday, November 20, 2024 9:01:11 AM
 
 PS C:\Users\kushal\src\myhtml\fromnepal\public\notes\win-friends> C:\Users\kushal\src\myhtml\fromnepal\public\omnibus.ps1
+Transcript started, output file is C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt
+
+Wednesday, November 20, 2024 9:02:41 AM
+     Removed 926 files, 454.2MiB total
+Wednesday, November 20, 2024 9:02:41 AM
+   Compiling windows_x86_64_msvc v0.52.6
+   Compiling proc-macro2 v1.0.89
+   Compiling unicode-ident v1.0.13
+   Compiling bytes v1.8.0
+   Compiling pin-project-lite v0.2.15
+   Compiling futures-core v0.3.31
+   Compiling autocfg v1.4.0
+   Compiling itoa v1.0.11
+   Compiling futures-sink v0.3.31
+   Compiling fnv v1.0.7
+   Compiling once_cell v1.20.2
+   Compiling cfg-if v1.0.0
+   Compiling memchr v2.7.4
+   Compiling futures-task v0.3.31
+   Compiling hashbrown v0.15.0
+   Compiling equivalent v1.0.1
+   Compiling httparse v1.9.5
+   Compiling futures-io v0.3.31
+   Compiling pin-utils v0.1.0
+   Compiling serde v1.0.213
+   Compiling try-lock v0.2.5
+   Compiling windows_x86_64_msvc v0.48.5
+   Compiling tracing-core v0.1.32
+   Compiling native-tls v0.2.12
+   Compiling atomic-waker v1.1.2
+   Compiling tinyvec_macros v0.1.1
+   Compiling want v0.3.1
+   Compiling tinyvec v1.8.0
+   Compiling futures-channel v0.3.31
+   Compiling smallvec v1.13.2
+   Compiling byteorder v1.5.0
+   Compiling percent-encoding v2.3.1
+   Compiling http v1.1.0
+   Compiling form_urlencoded v1.2.1
+   Compiling getrandom v0.2.15
+   Compiling unicode-bidi v0.3.17
+   Compiling slab v0.4.9
+   Compiling tower-service v0.3.3
+   Compiling indexmap v2.6.0
+   Compiling windows-targets v0.52.6
+   Compiling tracing v0.1.40
+   Compiling serde_json v1.0.132
+   Compiling ryu v1.0.18
+   Compiling rand_core v0.6.4
+   Compiling windows-sys v0.52.0
+   Compiling windows-sys v0.59.0
+   Compiling windows-result v0.2.0
+   Compiling windows-targets v0.48.5
+   Compiling rustls-pki-types v1.10.0
+   Compiling thiserror v1.0.65
+   Compiling windows-sys v0.48.0
+   Compiling futures-util v0.3.31
+   Compiling windows-strings v0.1.0
+   Compiling quote v1.0.37
+   Compiling sync_wrapper v1.0.1
+   Compiling unicode-normalization v0.1.24
+   Compiling encoding_rs v0.8.35
+   Compiling log v0.4.22
+   Compiling windows-registry v0.2.0
+   Compiling rustls-pemfile v2.2.0
+   Compiling syn v2.0.85
+   Compiling http-body v1.0.1
+   Compiling base64 v0.22.1
+   Compiling mime v0.3.17
+   Compiling ipnet v2.10.1
+   Compiling dotenv v0.15.0
+   Compiling idna v0.5.0
+   Compiling url v2.5.2
+   Compiling serde_derive v1.0.213
+   Compiling zerocopy-derive v0.7.35
+   Compiling thiserror-impl v1.0.65
+   Compiling socket2 v0.5.7
+   Compiling mio v1.0.2
+   Compiling home v0.5.9
+   Compiling etcetera v0.8.0
+   Compiling zerocopy v0.7.35
+   Compiling tokio v1.41.0
+   Compiling schannel v0.1.26
+   Compiling ppv-lite86 v0.2.20
+   Compiling http-body-util v0.1.2
+   Compiling rand_chacha v0.3.1
+   Compiling rand v0.8.5
+   Compiling serde_urlencoded v0.7.1
+   Compiling tokio-util v0.7.12
+   Compiling tokio-native-tls v0.3.1
+   Compiling h2 v0.4.6
+   Compiling hyper v1.5.0
+   Compiling hyper-util v0.1.9
+   Compiling hyper-tls v0.6.0
+   Compiling reqwest v0.12.8
+   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
+warning: struct `Graph` is never constructed
+ --> src\graph.rs:3:12
+  |
+3 | pub struct Graph {
+  |            ^^^^^
+  |
+  = note: `#[warn(dead_code)]` on by default
+
+warning: associated items `new`, `add_node`, `add_edge`, `bfs`, `dfs`, and `dfs_recursive` are never used
+  --> src\graph.rs:8:12
+   |
+7  | impl Graph {
+   | ---------- associated items in this implementation
+8  |     pub fn new() -> Self {
+   |            ^^^
+...
+14 |     pub fn add_node(&mut self, value: &str) {
+   |            ^^^^^^^^
+...
+18 |     pub fn add_edge(&mut self, from: &str, to: &str) {
+   |            ^^^^^^^^
+...
+24 |     pub fn bfs(&self, start: &str) -> Vec<String> {
+   |            ^^^
+...
+48 |     pub fn dfs(&self, start: &str) -> Vec<String> {
+   |            ^^^
+...
+55 |     fn dfs_recursive(&self, node: &str, visited: &mut HashMap<String, bool>, result: &mut Vec<String>) {
+   |        ^^^^^^^^^^^^^
+
+warning: `helloworld` (bin "helloworld") generated 2 warnings
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 17.27s
+Wednesday, November 20, 2024 9:02:59 AM
+   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.77s
+     Running unittests src/main.rs (target\debug\deps\helloworld-358f72777eb128ff.exe)
+
+running 24 tests
+test graph::tests::test_bfs ... ok
+test graph::tests::test_dfs ... ok
+test greatest_common_divisor::tests::test_both_are_zero ... ok
+test greatest_common_divisor::tests::test_one_is_zero ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance ... ok
+test greatest_common_divisor::tests::test_gcd ... ok
+test greatest_common_divisor::tests::test_large_composite_numbers ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance_multiple ... ok
+test greatest_common_divisor::tests::test_large_prime_numbers ... ok
+test greatest_common_divisor::tests::test_mixed_numbers ... ok
+test greatest_common_divisor::tests::test_one_is_one ... ok
+test greatest_common_divisor::tests::test_large_numbers ... ok
+test greatest_common_divisor::tests::test_prime_numbers ... ok
+test greatest_common_divisor::tests::test_zero_input ... ok
+test greatest_common_divisor::tests::test_zero_input_3 ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance_single ... ok
+test my_data_types::tests::test_not_a_number ... ok
+test my_math::tests::test_add ... ok
+test my_math::tests::test_add_multiply_ambiguous ... ok
+test my_math::tests::test_add_zero ... ok
+test my_math::tests::test_multiply ... ok
+test my_math::tests::test_multiply_zero ... ok
+test shadowing::tests::test_shadow ... ok
+test shadowing::tests::test_shadow_string_length ... ok
+
+test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+Wednesday, November 20, 2024 9:03:00 AM
+Wednesday, November 20, 2024 9:03:00 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Wednesday, November 20, 2024 9:03:00 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Wednesday, November 20, 2024 9:03:00 AM
+From github.com:kusl/hellorust20240711
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Already up to date.
+Wednesday, November 20, 2024 9:03:00 AM
+Pushing to github.com:kusl/hellorust20240711.git
+To github.com:kusl/hellorust20240711.git
+ = [up to date]      master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Everything up-to-date
+Wednesday, November 20, 2024 9:03:01 AM
+warning: in the working copy of 'docs/icon_cube.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_fork.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_sponsor.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir_active.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_wrench.svg', LF will be replaced by CRLF the next time Git touches it
+Wednesday, November 20, 2024 9:04:33 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/hellolib_BabysFirstDynamicProgrammingMethods.html
+        modified:   docs/hellolib_BubbleSort.html
+        modified:   docs/hellolib_CurrentWeather.html
+        modified:   docs/hellolib_DesignDynamicArray.html
+        modified:   docs/hellolib_DotnetNineGuid.html
+        modified:   docs/hellolib_Entity.html
+        modified:   docs/hellolib_FindClosestNumberToZero.html
+        modified:   docs/hellolib_Graph.html
+        modified:   docs/hellolib_Knapsack.html
+        modified:   docs/hellolib_KnapsackItem.html
+        modified:   docs/hellolib_ListNode.html
+        modified:   docs/hellolib_MergeSort.html
+        modified:   docs/hellolib_MergeSortedArray.html
+        modified:   docs/hellolib_MergeStringsAlternately.html
+        modified:   docs/hellolib_MinimumCoin.html
+        modified:   docs/hellolib_MyCleaner.html
+        modified:   docs/hellolib_MySearch.html
+        modified:   docs/hellolib_PascalTriangle.html
+        modified:   docs/hellolib_PasswordSettings.html
+        modified:   docs/hellolib_Person.html
+        modified:   docs/hellolib_PersonFactory.html
+        modified:   docs/hellolib_Revocation.html
+        modified:   docs/hellolib_RomanToInteger.html
+        modified:   docs/hellolib_SinglyLinkedList.html
+        modified:   docs/hellolib_SinglyLinkedListAddTwoNumbers.html
+        modified:   docs/hellolib_SinglyLinkedListNode.html
+        modified:   docs/hellolib_TwoSum.html
+        modified:   docs/hellolib_Weather.html
+        modified:   docs/hellolib_WeatherFetchException.html
+        modified:   docs/index.htm
+        modified:   docs/index.html
+        modified:   dotnet.txt
+        modified:   tests/coverage.cobertura.xml
+        modified:   tests/dotnet.txt
+
+Wednesday, November 20, 2024 9:04:33 AM
+[master fdd36ff] build application
+ 34 files changed, 498 insertions(+), 419 deletions(-)
+Wednesday, November 20, 2024 9:04:33 AM
+From github.com:patstha/mydotnet
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Current branch master is up to date.
+Wednesday, November 20, 2024 9:04:34 AM
+Pushing to github.com:patstha/mydotnet.git
+Enumerating objects: 73, done.
+Counting objects: 100% (73/73), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (37/37), done.
+Writing objects: 100% (37/37), 6.35 KiB | 3.17 MiB/s, done.
+Total 37 (delta 36), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (36/36), completed with 36 local objects.
+To github.com:patstha/mydotnet.git
+   c0d08bd..fdd36ff  master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Wednesday, November 20, 2024 9:04:35 AM
+Wednesday, November 20, 2024 9:04:35 AM
+yarn install v1.22.21
+(node:7100) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.13s.
+Wednesday, November 20, 2024 9:04:36 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 5 modules transformed.
+docs/index.html                0.27 kB │ gzip: 0.22 kB
+docs/assets/index-D1OKu7AJ.js  8.63 kB │ gzip: 3.19 kB
+✓ built in 119ms
+Done in 1.03s.
+Wednesday, November 20, 2024 9:04:37 AM
+warning: in the working copy of 'docs/assets/index-D1OKu7AJ.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Wednesday, November 20, 2024 9:04:37 AM
+On branch kus-2024-10-30-modules
+nothing to commit, working tree clean
+Wednesday, November 20, 2024 9:04:37 AM
+On branch kus-2024-10-30-modules
+nothing to commit, working tree clean
+Wednesday, November 20, 2024 9:04:37 AM
+From github.com:matchthree/matchthree.github.io
+ * branch            master     -> FETCH_HEAD
+Current branch kus-2024-10-30-modules is up to date.
+Wednesday, November 20, 2024 9:04:38 AM
+Everything up-to-date
+Wednesday, November 20, 2024 9:04:38 AM
+Wednesday, November 20, 2024 9:04:38 AM
+Wednesday, November 20, 2024 9:04:38 AM
+On branch main
+nothing to commit, working tree clean
+Wednesday, November 20, 2024 9:04:39 AM
+Wednesday, November 20, 2024 9:04:39 AM
+Wednesday, November 20, 2024 9:04:43 AM
+Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
+Wednesday, November 20, 2024 9:04:43 AM
+Wednesday, November 20, 2024 9:04:43 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.09s.
+Wednesday, November 20, 2024 9:04:43 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.11 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-C7fM1CLc.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-CG30pmQG.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 3.95s
+Done in 5.57s.
+Wednesday, November 20, 2024 9:04:49 AM
+Transcript stopped, output file is C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt
+warning: in the working copy of 'docs/assets/index-C7fM1CLc.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-CG30pmQG.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/hybridcache.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/l1-show.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/modernwinforms.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/myvtt.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/myvtt.en.vtt.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/nyt-podcasts-trump-cabinet-picks.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/tldr-global.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/.gitattributes', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/build.gradle.kts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/gradle/wrapper/gradle-wrapper.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/settings.gradle.kts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/main/kotlin/com/github/kusl/november2024a/November2024aApplication.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/main/resources/application.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/test/kotlin/com/github/kusl/november2024a/November2024aApplicationTests.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/requirements.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/A3B318B569046159E1DD6616D2E646D9434350E6.asc', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/Nationalism, Explained [AXz0kbMKPu0].en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/favicon_io/about.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/aoc-Eh7bFt7oUto.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/aoc-WoP9BJiItSI.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/asianometry-mm-wave-5g.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/bravos-ILJ41tmQAQ8.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/coffee-software-DSbuyscXX7I.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/continuous-delivery-_zUkNrUp0Ok.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/continuous-delivery-pair-programming-5TTsIkmtKUg.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/diabetes-PsQj2Hg1oFM.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/diabetes-PsQj2Hg1oFM.hi.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/diabetes-Yys5zeoDi2E.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/dotnet-new-c-sharp-13-japXYFS9YPQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/enrico-7nnyv4yJGJc.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/germany-_ywqDbHiMrs.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/hankschannel-nuclear-16203Tks_0I.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/l1-icydock-3KCaS7EK6Rc.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/l1show-EI5iZ4LNsyQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/mileage-mike-ring-road-DhZH0KbcwX4.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/mit-rto-4ec_yZCWOCY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/msnbc-EmvYGLySOVE.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/ndc-oA7xeRyxMSo.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-Dj05EvWQ8NY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-X_gotjGG4ug.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-daily-bernie-xvYvfOcEFXI.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-l7s8QizovG8.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/otago-kotlin-multiplatform.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/road-guy-rob-K1TFOK4_07s.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/the-economist-kyiv-xn-AnTYs2H8.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/the-millitary-show-china-hellscape.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/tldr-news-eu-COEfdZVTFCQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/tldr-news-global-2024-11-16-a8NmPDUdzhU.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/trudeau-immigration-vOB7-dbYuCc.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/versed-h_rsF8eVPqY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/vivienne-yang-FR6hhULZLfw.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/william-spaniel-polling-hhaNiF5aCCY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/ytotago-kotlin-multiplatform.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-ukraine-c_z8OoYWjQ0.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'public/notes/yt/nytimes-ukraine-c_z8OoYWjQ0.en.vtt', LF will be replaced by CRLF the next time Git touches it
+Wednesday, November 20, 2024 9:05:27 AM
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   docs/notes/2024/11/18/20241003_me_because_of_the_strike_by_dockworkers_bananas_could_soon_be_in_short_supply.mp3
+        new file:   docs/notes/2024/11/19/dab-config.json
+        modified:   docs/notes/earth.jpeg
+        new file:   "docs/notes/laws-of-power/Law 10\357\274\232 Infection\357\274\232 Avoid the unhappy and the unlucky [VObeSTTdjNc].mp3"
+        new file:   "docs/notes/laws-of-power/Law 11\357\274\232 Learn to keep people dependent on you [A-OoAf6ld3E].mp3"
+        new file:   "docs/notes/laws-of-power/Law 12\357\274\232 Use selective honesty and generosity to disarm your victim [yNNi0fmwheI].mp3"
+        new file:   "docs/notes/laws-of-power/Law 13\357\274\232 When asking for help, appeal to people\342\200\231s self-interest, never to their mercy [66aCLYEM0J8].mp3"
+        new file:   "docs/notes/laws-of-power/Law 14\357\274\232 Pose as a friend, work as a spy [9Bx2dKjlce0].mp3"
+        new file:   "docs/notes/laws-of-power/Law 15\357\274\232 Crush your enemy totally [0DMeSvQbZc0].mp3"
+        new file:   "docs/notes/laws-of-power/Law 16\357\274\232 Use absence to increase respect and honor [o4Ta7UbtgEs].mp3"
+        new file:   "docs/notes/laws-of-power/Law 17\357\274\232 Keep others in suspended terror\357\274\232 cultivate an air of unpredictability [yTvPY5-c67s].mp3"
+        new file:   "docs/notes/laws-of-power/Law 18\357\274\232 Do not build fortresses to protect yourself \342\200\223 isolation is dangerous [dcYT4kDvAWs].mp3"
+        new file:   "docs/notes/laws-of-power/Law 19\357\274\232 Know who you\342\200\231re dealing with \342\200\223 do not offend the wrong person [uPXCJcWZdJ4].mp3"
+        new file:   "docs/notes/laws-of-power/Law 1\357\274\232 Never outshine the master [N5BY05xUF-I].mp3"
+        new file:   "docs/notes/laws-of-power/Law 20\357\274\232 Do not commit to anyone [DEr2YPsRKfg].mp3"
+        new file:   "docs/notes/laws-of-power/Law 21\357\274\232 Play a sucker to catch a sucker- seem dumber than your mark [jjIRjpt5-9s].mp3"
+        new file:   "docs/notes/laws-of-power/Law 22\357\274\232 Use the surrender tactic\357\274\232 transformer weakness into power [peZwUkA3Sg0].mp3"
+        new file:   "docs/notes/laws-of-power/Law 23\357\274\232 Concentrate your forces [_pwneu7lPfs].mp3"
+        new file:   "docs/notes/laws-of-power/Law 24\357\274\232 Play the perfect courtier [LqDdXlW0Xr8].mp3"
+        new file:   "docs/notes/laws-of-power/Law 25\357\274\232 Re-create yourself [8QKpwA6CL0c].mp3"
+        new file:   "docs/notes/laws-of-power/Law 26\357\274\232 Keep your hands clean [0F6FSRCQhCo].mp3"
+        new file:   "docs/notes/laws-of-power/Law 28\357\274\232 Enter action with boldness [YWQiPNdsYVA].mp3"
+        new file:   "docs/notes/laws-of-power/Law 29\357\274\232 Plan all the way to the end [aixWxyCs44s].mp3"
+        new file:   "docs/notes/laws-of-power/Law 2\357\274\232 Never put too much trust in friends, learn to use enemies [UP4Mh-bdp3Q].mp3"
+        new file:   "docs/notes/laws-of-power/Law 30\357\274\232 Make your accomplishments seem effortless [dyWMZu00xWg].mp3"
+        new file:   "docs/notes/laws-of-power/Law 31\357\274\232 Control the opinions\357\274\232 get others to play with the cards you deal [URiYOx1bRIA].mp3"
+        new file:   "docs/notes/laws-of-power/Law 32\357\274\232 Play to people\342\200\231s fantasies [tZy8_z8SU8A].mp3"
+        new file:   "docs/notes/laws-of-power/Law 33\357\274\232 Discover each man\342\200\231s thumbscrew [DvmZTPEldNA].mp3"
+        new file:   "docs/notes/laws-of-power/Law 34\357\274\232 Be royal in your own fashion\357\274\232 act like a king to be treated like one [640DO-8ZDm4].mp3"
+        new file:   "docs/notes/laws-of-power/Law 36\357\274\232 Disdain things you cannot have\357\274\232 ignoring them if the best revenge [EpCX_duqUtE].mp3"
+        new file:   "docs/notes/laws-of-power/Law 37\357\274\232 Create compelling spectacles [OhSrVTgcxwg].mp3"
+        new file:   "docs/notes/laws-of-power/Law 38\357\274\232 Think as you like but behave like others [9hPCI-XMyTY].mp3"
+        new file:   "docs/notes/laws-of-power/Law 39\357\274\232 Stir up waters to catch fish [pL5rGIe2N00].mp3"
+        new file:   "docs/notes/laws-of-power/Law 3\357\274\232 Conceal your intentions [z511RSmUNvg].mp3"
+        new file:   "docs/notes/laws-of-power/Law 40\357\274\232 Despise the free lunch [hjWpcZt7FQU].mp3"
+        new file:   "docs/notes/laws-of-power/Law 41\357\274\232 Avoid stepping into a great man\342\200\231s shoes [48UudVvB9YI].mp3"
+        new file:   "docs/notes/laws-of-power/Law 42\357\274\232 Strike the shepherd and the sheep will scatter [KyMB-ybZQrk].mp3"
+        new file:   "docs/notes/laws-of-power/Law 43\357\274\232 Work on the hearts and minds of others [Dp2ORVRczzI].mp3"
+        new file:   "docs/notes/laws-of-power/Law 44\357\274\232 Disarm and infuriate with the mirror effect [AlnvLnM-vpI].mp3"
+        new file:   "docs/notes/laws-of-power/Law 45\357\274\232 Preach the need for change, but never reform too much at once [nTSyz8dlo2E].mp3"
+        new file:   "docs/notes/laws-of-power/Law 46\357\274\232 Never appear too perfect [GIgDVVN_Dzs].mp3"
+        new file:   "docs/notes/laws-of-power/Law 48\357\274\232 Assume formlessness [RDgKBi8IV7k].mp3"
+        new file:   "docs/notes/laws-of-power/Law 4\357\274\232 Always say less than necessary [ViTJLUHhGNU].mp3"
+        new file:   "docs/notes/laws-of-power/Law 5\357\274\232 So much depends on reputation \342\200\223 guard it with your life [mHp62yS55FY].mp3"
+        new file:   "docs/notes/laws-of-power/Law 6\357\274\232 Court attention at all cost [glbe_HL2304].mp3"
+        new file:   "docs/notes/laws-of-power/Law 7\357\274\232 Let others to do the work for you, but always take credit [YVwaw9w-OAg].mp3"
+        new file:   "docs/notes/laws-of-power/Law 8\357\274\232 Make other people come to you \342\200\223 use bait if necessary [rZn_8O5iEF4].mp3"
+        new file:   "docs/notes/laws-of-power/Law 9\357\274\232 Win through your actions, never through argument [txgoO0g2rfg].mp3"
+        modified:   docs/notes/output.txt
+        new file:   docs/notes/win-friends/Nine Suggestions on How to Get the Most out of This Book [gfmIMrp4Eyk].mp3
+        new file:   docs/notes/win-friends/Part 1, Chapter 1 [1cG0QJt8nHA].mp3
+        new file:   docs/notes/win-friends/Part 1, Chapter 2 [O1DbD-DDrGg].mp3
+        new file:   docs/notes/win-friends/Part 1, Chapter 3 [P4gf5DGLBhA].mp3
+        new file:   docs/notes/win-friends/Part 2, Chapter 1 [XeGtZyiSMns].mp3
+        new file:   docs/notes/win-friends/Part 2, Chapter 2 [kJp9AXhkINI].mp3
+        new file:   docs/notes/win-friends/Part 2, Chapter 3 [VYBNMf6x09E].mp3
+        new file:   docs/notes/win-friends/Part 2, Chapter 4 [OKprVrZp0AQ].mp3
+        new file:   docs/notes/win-friends/Part 2, Chapter 5 [Az5QZ0NZ3UQ].mp3
+        new file:   docs/notes/win-friends/Part 2, Chapter 6 [Lp0sKM5XW4g].mp3
+        new file:   docs/notes/win-friends/Part 3, Chapter 1 [RQnRlSNA02M].mp3
+        new file:   docs/notes/win-friends/Part 3, Chapter 10 [rUpBulmZd1c].mp3
+        new file:   docs/notes/win-friends/Part 3, Chapter 11 [j7nXrYzSNm4].mp3
+        new file:   docs/notes/win-friends/Part 3, Chapter 12 [3eskKI64XQ0].mp3
+        new file:   docs/notes/win-friends/Part 3, Chapter 2 [KKXYCQgkA0M].mp3
+        new file:   docs/notes/win-friends/Part 3, Chapter 3 [mxlpmQGIlto].mp3
+        new file:   docs/notes/win-friends/Part 3, Chapter 4 [B9cdvGx-phc].mp3
+        new file:   docs/notes/win-friends/Part 3, Chapter 5 [1UQUps9d45w].mp3
+        new file:   docs/notes/win-friends/Part 3, Chapter 6 [rDmWaOL5TqM].mp3
+        new file:   docs/notes/win-friends/Part 3, Chapter 7 [USAq0JxnJ1s].mp3
+        new file:   docs/notes/win-friends/Part 3, Chapter 8 [DuTMkYpE51g].mp3
+        new file:   docs/notes/win-friends/Part 3, Chapter 9 [2EBPjLE9MeM].mp3
+        new file:   docs/notes/win-friends/Part 4, Chapter 1 [nxwRkpoLyWE].mp3
+        new file:   docs/notes/win-friends/Part 4, Chapter 2 [UR8yDhkGf6E].mp3
+        new file:   docs/notes/win-friends/Part 4, Chapter 3 [-DPH_O8EDuA].mp3
+        new file:   docs/notes/win-friends/Part 4, Chapter 4 [0dQqOotlxKg].mp3
+        new file:   docs/notes/win-friends/Part 4, Chapter 5 [p8cut_8EiiU].mp3
+        new file:   docs/notes/win-friends/Part 4, Chapter 6 [2g7A9y__TBg].mp3
+        new file:   docs/notes/win-friends/Part 4, Chapter 7 [-1xYRfJsGhw].mp3
+        new file:   docs/notes/win-friends/Part 4, Chapter 8 [bx3myt4Qvq8].mp3
+        new file:   docs/notes/win-friends/Part 4, Chapter 9 [swmc_NZrmo0].mp3
+        new file:   docs/notes/win-friends/Part 5 [hR1bKmU8Wew].mp3
+        new file:   docs/notes/win-friends/Part 6, Chapter 1 [ISpqOZVCIYs].mp3
+        new file:   docs/notes/win-friends/Part 6, Chapter 2 [he5z7FDD9Rs].mp3
+        new file:   docs/notes/win-friends/Part 6, Chapter 3 [q-yygqB5Nxw].mp3
+        new file:   docs/notes/win-friends/Part 6, Chapter 4 [lx-mebyslDc].mp3
+        new file:   docs/notes/win-friends/Part 6, Chapter 5 [B6D34up3jpQ].mp3
+        new file:   docs/notes/win-friends/Part 6, Chapter 6 [EHeR2aQSSyo].mp3
+        new file:   docs/notes/win-friends/Part 6, Chapter 7 [Di6N4HGOBJ4].mp3
+        new file:   docs/notes/win-friends/Preface [qn98AQb66zQ].mp3
+        new file:   docs/notes/yt/nytimes-ukraine-c_z8OoYWjQ0-cleaned.txt
+        new file:   docs/notes/yt/nytimes-ukraine-c_z8OoYWjQ0.en.vtt
+        modified:   docs/powershell.txt
+        new file:   public/notes/2024/11/18/20241003_me_because_of_the_strike_by_dockworkers_bananas_could_soon_be_in_short_supply.mp3
+        new file:   public/notes/2024/11/19/dab-config.json
+        modified:   public/notes/earth.jpeg
+        new file:   "public/notes/laws-of-power/Law 10\357\274\232 Infection\357\274\232 Avoid the unhappy and the unlucky [VObeSTTdjNc].mp3"
+        new file:   "public/notes/laws-of-power/Law 11\357\274\232 Learn to keep people dependent on you [A-OoAf6ld3E].mp3"
+        new file:   "public/notes/laws-of-power/Law 12\357\274\232 Use selective honesty and generosity to disarm your victim [yNNi0fmwheI].mp3"
+        new file:   "public/notes/laws-of-power/Law 13\357\274\232 When asking for help, appeal to people\342\200\231s self-interest, never to their mercy [66aCLYEM0J8].mp3"
+        new file:   "public/notes/laws-of-power/Law 14\357\274\232 Pose as a friend, work as a spy [9Bx2dKjlce0].mp3"
+        new file:   "public/notes/laws-of-power/Law 15\357\274\232 Crush your enemy totally [0DMeSvQbZc0].mp3"
+        new file:   "public/notes/laws-of-power/Law 16\357\274\232 Use absence to increase respect and honor [o4Ta7UbtgEs].mp3"
+        new file:   "public/notes/laws-of-power/Law 17\357\274\232 Keep others in suspended terror\357\274\232 cultivate an air of unpredictability [yTvPY5-c67s].mp3"
+        new file:   "public/notes/laws-of-power/Law 18\357\274\232 Do not build fortresses to protect yourself \342\200\223 isolation is dangerous [dcYT4kDvAWs].mp3"
+        new file:   "public/notes/laws-of-power/Law 19\357\274\232 Know who you\342\200\231re dealing with \342\200\223 do not offend the wrong person [uPXCJcWZdJ4].mp3"
+        new file:   "public/notes/laws-of-power/Law 1\357\274\232 Never outshine the master [N5BY05xUF-I].mp3"
+        new file:   "public/notes/laws-of-power/Law 20\357\274\232 Do not commit to anyone [DEr2YPsRKfg].mp3"
+        new file:   "public/notes/laws-of-power/Law 21\357\274\232 Play a sucker to catch a sucker- seem dumber than your mark [jjIRjpt5-9s].mp3"
+        new file:   "public/notes/laws-of-power/Law 22\357\274\232 Use the surrender tactic\357\274\232 transformer weakness into power [peZwUkA3Sg0].mp3"
+        new file:   "public/notes/laws-of-power/Law 23\357\274\232 Concentrate your forces [_pwneu7lPfs].mp3"
+        new file:   "public/notes/laws-of-power/Law 24\357\274\232 Play the perfect courtier [LqDdXlW0Xr8].mp3"
+        new file:   "public/notes/laws-of-power/Law 25\357\274\232 Re-create yourself [8QKpwA6CL0c].mp3"
+        new file:   "public/notes/laws-of-power/Law 26\357\274\232 Keep your hands clean [0F6FSRCQhCo].mp3"
+        new file:   "public/notes/laws-of-power/Law 28\357\274\232 Enter action with boldness [YWQiPNdsYVA].mp3"
+        new file:   "public/notes/laws-of-power/Law 29\357\274\232 Plan all the way to the end [aixWxyCs44s].mp3"
+        new file:   "public/notes/laws-of-power/Law 2\357\274\232 Never put too much trust in friends, learn to use enemies [UP4Mh-bdp3Q].mp3"
+        new file:   "public/notes/laws-of-power/Law 30\357\274\232 Make your accomplishments seem effortless [dyWMZu00xWg].mp3"
+        new file:   "public/notes/laws-of-power/Law 31\357\274\232 Control the opinions\357\274\232 get others to play with the cards you deal [URiYOx1bRIA].mp3"
+        new file:   "public/notes/laws-of-power/Law 32\357\274\232 Play to people\342\200\231s fantasies [tZy8_z8SU8A].mp3"
+        new file:   "public/notes/laws-of-power/Law 33\357\274\232 Discover each man\342\200\231s thumbscrew [DvmZTPEldNA].mp3"
+        new file:   "public/notes/laws-of-power/Law 34\357\274\232 Be royal in your own fashion\357\274\232 act like a king to be treated like one [640DO-8ZDm4].mp3"
+        new file:   "public/notes/laws-of-power/Law 36\357\274\232 Disdain things you cannot have\357\274\232 ignoring them if the best revenge [EpCX_duqUtE].mp3"
+        new file:   "public/notes/laws-of-power/Law 37\357\274\232 Create compelling spectacles [OhSrVTgcxwg].mp3"
+        new file:   "public/notes/laws-of-power/Law 38\357\274\232 Think as you like but behave like others [9hPCI-XMyTY].mp3"
+        new file:   "public/notes/laws-of-power/Law 39\357\274\232 Stir up waters to catch fish [pL5rGIe2N00].mp3"
+        new file:   "public/notes/laws-of-power/Law 3\357\274\232 Conceal your intentions [z511RSmUNvg].mp3"
+        new file:   "public/notes/laws-of-power/Law 40\357\274\232 Despise the free lunch [hjWpcZt7FQU].mp3"
+        new file:   "public/notes/laws-of-power/Law 41\357\274\232 Avoid stepping into a great man\342\200\231s shoes [48UudVvB9YI].mp3"
+        new file:   "public/notes/laws-of-power/Law 42\357\274\232 Strike the shepherd and the sheep will scatter [KyMB-ybZQrk].mp3"
+        new file:   "public/notes/laws-of-power/Law 43\357\274\232 Work on the hearts and minds of others [Dp2ORVRczzI].mp3"
+        new file:   "public/notes/laws-of-power/Law 44\357\274\232 Disarm and infuriate with the mirror effect [AlnvLnM-vpI].mp3"
+        new file:   "public/notes/laws-of-power/Law 45\357\274\232 Preach the need for change, but never reform too much at once [nTSyz8dlo2E].mp3"
+        new file:   "public/notes/laws-of-power/Law 46\357\274\232 Never appear too perfect [GIgDVVN_Dzs].mp3"
+        new file:   "public/notes/laws-of-power/Law 48\357\274\232 Assume formlessness [RDgKBi8IV7k].mp3"
+        new file:   "public/notes/laws-of-power/Law 4\357\274\232 Always say less than necessary [ViTJLUHhGNU].mp3"
+        new file:   "public/notes/laws-of-power/Law 5\357\274\232 So much depends on reputation \342\200\223 guard it with your life [mHp62yS55FY].mp3"
+        new file:   "public/notes/laws-of-power/Law 6\357\274\232 Court attention at all cost [glbe_HL2304].mp3"
+        new file:   "public/notes/laws-of-power/Law 7\357\274\232 Let others to do the work for you, but always take credit [YVwaw9w-OAg].mp3"
+        new file:   "public/notes/laws-of-power/Law 8\357\274\232 Make other people come to you \342\200\223 use bait if necessary [rZn_8O5iEF4].mp3"
+        new file:   "public/notes/laws-of-power/Law 9\357\274\232 Win through your actions, never through argument [txgoO0g2rfg].mp3"
+        modified:   public/notes/output.txt
+        new file:   public/notes/win-friends/Nine Suggestions on How to Get the Most out of This Book [gfmIMrp4Eyk].mp3
+        new file:   public/notes/win-friends/Part 1, Chapter 1 [1cG0QJt8nHA].mp3
+        new file:   public/notes/win-friends/Part 1, Chapter 2 [O1DbD-DDrGg].mp3
+        new file:   public/notes/win-friends/Part 1, Chapter 3 [P4gf5DGLBhA].mp3
+        new file:   public/notes/win-friends/Part 2, Chapter 1 [XeGtZyiSMns].mp3
+        new file:   public/notes/win-friends/Part 2, Chapter 2 [kJp9AXhkINI].mp3
+        new file:   public/notes/win-friends/Part 2, Chapter 3 [VYBNMf6x09E].mp3
+        new file:   public/notes/win-friends/Part 2, Chapter 4 [OKprVrZp0AQ].mp3
+        new file:   public/notes/win-friends/Part 2, Chapter 5 [Az5QZ0NZ3UQ].mp3
+        new file:   public/notes/win-friends/Part 2, Chapter 6 [Lp0sKM5XW4g].mp3
+        new file:   public/notes/win-friends/Part 3, Chapter 1 [RQnRlSNA02M].mp3
+        new file:   public/notes/win-friends/Part 3, Chapter 10 [rUpBulmZd1c].mp3
+        new file:   public/notes/win-friends/Part 3, Chapter 11 [j7nXrYzSNm4].mp3
+        new file:   public/notes/win-friends/Part 3, Chapter 12 [3eskKI64XQ0].mp3
+        new file:   public/notes/win-friends/Part 3, Chapter 2 [KKXYCQgkA0M].mp3
+        new file:   public/notes/win-friends/Part 3, Chapter 3 [mxlpmQGIlto].mp3
+        new file:   public/notes/win-friends/Part 3, Chapter 4 [B9cdvGx-phc].mp3
+        new file:   public/notes/win-friends/Part 3, Chapter 5 [1UQUps9d45w].mp3
+        new file:   public/notes/win-friends/Part 3, Chapter 6 [rDmWaOL5TqM].mp3
+        new file:   public/notes/win-friends/Part 3, Chapter 7 [USAq0JxnJ1s].mp3
+        new file:   public/notes/win-friends/Part 3, Chapter 8 [DuTMkYpE51g].mp3
+        new file:   public/notes/win-friends/Part 3, Chapter 9 [2EBPjLE9MeM].mp3
+        new file:   public/notes/win-friends/Part 4, Chapter 1 [nxwRkpoLyWE].mp3
+        new file:   public/notes/win-friends/Part 4, Chapter 2 [UR8yDhkGf6E].mp3
+        new file:   public/notes/win-friends/Part 4, Chapter 3 [-DPH_O8EDuA].mp3
+        new file:   public/notes/win-friends/Part 4, Chapter 4 [0dQqOotlxKg].mp3
+        new file:   public/notes/win-friends/Part 4, Chapter 5 [p8cut_8EiiU].mp3
+        new file:   public/notes/win-friends/Part 4, Chapter 6 [2g7A9y__TBg].mp3
+        new file:   public/notes/win-friends/Part 4, Chapter 7 [-1xYRfJsGhw].mp3
+        new file:   public/notes/win-friends/Part 4, Chapter 8 [bx3myt4Qvq8].mp3
+        new file:   public/notes/win-friends/Part 4, Chapter 9 [swmc_NZrmo0].mp3
+        new file:   public/notes/win-friends/Part 5 [hR1bKmU8Wew].mp3
+        new file:   public/notes/win-friends/Part 6, Chapter 1 [ISpqOZVCIYs].mp3
+        new file:   public/notes/win-friends/Part 6, Chapter 2 [he5z7FDD9Rs].mp3
+        new file:   public/notes/win-friends/Part 6, Chapter 3 [q-yygqB5Nxw].mp3
+        new file:   public/notes/win-friends/Part 6, Chapter 4 [lx-mebyslDc].mp3
+        new file:   public/notes/win-friends/Part 6, Chapter 5 [B6D34up3jpQ].mp3
+        new file:   public/notes/win-friends/Part 6, Chapter 6 [EHeR2aQSSyo].mp3
+        new file:   public/notes/win-friends/Part 6, Chapter 7 [Di6N4HGOBJ4].mp3
+        new file:   public/notes/win-friends/Preface [qn98AQb66zQ].mp3
+        new file:   public/notes/yt/nytimes-ukraine-c_z8OoYWjQ0-cleaned.txt
+        new file:   public/notes/yt/nytimes-ukraine-c_z8OoYWjQ0.en.vtt
+        modified:   public/powershell.txt
+
+Wednesday, November 20, 2024 9:05:27 AM
+[main eb164c41] build application
+ 184 files changed, 6744 insertions(+), 9354 deletions(-)
+ create mode 100644 docs/notes/2024/11/18/20241003_me_because_of_the_strike_by_dockworkers_bananas_could_soon_be_in_short_supply.mp3
+ create mode 100644 docs/notes/2024/11/19/dab-config.json
+ create mode 100644 "docs/notes/laws-of-power/Law 10\357\274\232 Infection\357\274\232 Avoid the unhappy and the unlucky [VObeSTTdjNc].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 11\357\274\232 Learn to keep people dependent on you [A-OoAf6ld3E].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 12\357\274\232 Use selective honesty and generosity to disarm your victim [yNNi0fmwheI].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 13\357\274\232 When asking for help, appeal to people\342\200\231s self-interest, never to their mercy [66aCLYEM0J8].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 14\357\274\232 Pose as a friend, work as a spy [9Bx2dKjlce0].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 15\357\274\232 Crush your enemy totally [0DMeSvQbZc0].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 16\357\274\232 Use absence to increase respect and honor [o4Ta7UbtgEs].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 17\357\274\232 Keep others in suspended terror\357\274\232 cultivate an air of unpredictability [yTvPY5-c67s].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 18\357\274\232 Do not build fortresses to protect yourself \342\200\223 isolation is dangerous [dcYT4kDvAWs].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 19\357\274\232 Know who you\342\200\231re dealing with \342\200\223 do not offend the wrong person [uPXCJcWZdJ4].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 1\357\274\232 Never outshine the master [N5BY05xUF-I].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 20\357\274\232 Do not commit to anyone [DEr2YPsRKfg].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 21\357\274\232 Play a sucker to catch a sucker- seem dumber than your mark [jjIRjpt5-9s].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 22\357\274\232 Use the surrender tactic\357\274\232 transformer weakness into power [peZwUkA3Sg0].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 23\357\274\232 Concentrate your forces [_pwneu7lPfs].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 24\357\274\232 Play the perfect courtier [LqDdXlW0Xr8].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 25\357\274\232 Re-create yourself [8QKpwA6CL0c].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 26\357\274\232 Keep your hands clean [0F6FSRCQhCo].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 28\357\274\232 Enter action with boldness [YWQiPNdsYVA].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 29\357\274\232 Plan all the way to the end [aixWxyCs44s].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 2\357\274\232 Never put too much trust in friends, learn to use enemies [UP4Mh-bdp3Q].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 30\357\274\232 Make your accomplishments seem effortless [dyWMZu00xWg].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 31\357\274\232 Control the opinions\357\274\232 get others to play with the cards you deal [URiYOx1bRIA].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 32\357\274\232 Play to people\342\200\231s fantasies [tZy8_z8SU8A].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 33\357\274\232 Discover each man\342\200\231s thumbscrew [DvmZTPEldNA].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 34\357\274\232 Be royal in your own fashion\357\274\232 act like a king to be treated like one [640DO-8ZDm4].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 36\357\274\232 Disdain things you cannot have\357\274\232 ignoring them if the best revenge [EpCX_duqUtE].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 37\357\274\232 Create compelling spectacles [OhSrVTgcxwg].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 38\357\274\232 Think as you like but behave like others [9hPCI-XMyTY].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 39\357\274\232 Stir up waters to catch fish [pL5rGIe2N00].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 3\357\274\232 Conceal your intentions [z511RSmUNvg].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 40\357\274\232 Despise the free lunch [hjWpcZt7FQU].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 41\357\274\232 Avoid stepping into a great man\342\200\231s shoes [48UudVvB9YI].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 42\357\274\232 Strike the shepherd and the sheep will scatter [KyMB-ybZQrk].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 43\357\274\232 Work on the hearts and minds of others [Dp2ORVRczzI].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 44\357\274\232 Disarm and infuriate with the mirror effect [AlnvLnM-vpI].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 45\357\274\232 Preach the need for change, but never reform too much at once [nTSyz8dlo2E].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 46\357\274\232 Never appear too perfect [GIgDVVN_Dzs].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 48\357\274\232 Assume formlessness [RDgKBi8IV7k].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 4\357\274\232 Always say less than necessary [ViTJLUHhGNU].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 5\357\274\232 So much depends on reputation \342\200\223 guard it with your life [mHp62yS55FY].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 6\357\274\232 Court attention at all cost [glbe_HL2304].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 7\357\274\232 Let others to do the work for you, but always take credit [YVwaw9w-OAg].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 8\357\274\232 Make other people come to you \342\200\223 use bait if necessary [rZn_8O5iEF4].mp3"
+ create mode 100644 "docs/notes/laws-of-power/Law 9\357\274\232 Win through your actions, never through argument [txgoO0g2rfg].mp3"
+ create mode 100644 docs/notes/win-friends/Nine Suggestions on How to Get the Most out of This Book [gfmIMrp4Eyk].mp3
+ create mode 100644 docs/notes/win-friends/Part 1, Chapter 1 [1cG0QJt8nHA].mp3
+ create mode 100644 docs/notes/win-friends/Part 1, Chapter 2 [O1DbD-DDrGg].mp3
+ create mode 100644 docs/notes/win-friends/Part 1, Chapter 3 [P4gf5DGLBhA].mp3
+ create mode 100644 docs/notes/win-friends/Part 2, Chapter 1 [XeGtZyiSMns].mp3
+ create mode 100644 docs/notes/win-friends/Part 2, Chapter 2 [kJp9AXhkINI].mp3
+ create mode 100644 docs/notes/win-friends/Part 2, Chapter 3 [VYBNMf6x09E].mp3
+ create mode 100644 docs/notes/win-friends/Part 2, Chapter 4 [OKprVrZp0AQ].mp3
+ create mode 100644 docs/notes/win-friends/Part 2, Chapter 5 [Az5QZ0NZ3UQ].mp3
+ create mode 100644 docs/notes/win-friends/Part 2, Chapter 6 [Lp0sKM5XW4g].mp3
+ create mode 100644 docs/notes/win-friends/Part 3, Chapter 1 [RQnRlSNA02M].mp3
+ create mode 100644 docs/notes/win-friends/Part 3, Chapter 10 [rUpBulmZd1c].mp3
+ create mode 100644 docs/notes/win-friends/Part 3, Chapter 11 [j7nXrYzSNm4].mp3
+ create mode 100644 docs/notes/win-friends/Part 3, Chapter 12 [3eskKI64XQ0].mp3
+ create mode 100644 docs/notes/win-friends/Part 3, Chapter 2 [KKXYCQgkA0M].mp3
+ create mode 100644 docs/notes/win-friends/Part 3, Chapter 3 [mxlpmQGIlto].mp3
+ create mode 100644 docs/notes/win-friends/Part 3, Chapter 4 [B9cdvGx-phc].mp3
+ create mode 100644 docs/notes/win-friends/Part 3, Chapter 5 [1UQUps9d45w].mp3
+ create mode 100644 docs/notes/win-friends/Part 3, Chapter 6 [rDmWaOL5TqM].mp3
+ create mode 100644 docs/notes/win-friends/Part 3, Chapter 7 [USAq0JxnJ1s].mp3
+ create mode 100644 docs/notes/win-friends/Part 3, Chapter 8 [DuTMkYpE51g].mp3
+ create mode 100644 docs/notes/win-friends/Part 3, Chapter 9 [2EBPjLE9MeM].mp3
+ create mode 100644 docs/notes/win-friends/Part 4, Chapter 1 [nxwRkpoLyWE].mp3
+ create mode 100644 docs/notes/win-friends/Part 4, Chapter 2 [UR8yDhkGf6E].mp3
+ create mode 100644 docs/notes/win-friends/Part 4, Chapter 3 [-DPH_O8EDuA].mp3
+ create mode 100644 docs/notes/win-friends/Part 4, Chapter 4 [0dQqOotlxKg].mp3
+ create mode 100644 docs/notes/win-friends/Part 4, Chapter 5 [p8cut_8EiiU].mp3
+ create mode 100644 docs/notes/win-friends/Part 4, Chapter 6 [2g7A9y__TBg].mp3
+ create mode 100644 docs/notes/win-friends/Part 4, Chapter 7 [-1xYRfJsGhw].mp3
+ create mode 100644 docs/notes/win-friends/Part 4, Chapter 8 [bx3myt4Qvq8].mp3
+ create mode 100644 docs/notes/win-friends/Part 4, Chapter 9 [swmc_NZrmo0].mp3
+ create mode 100644 docs/notes/win-friends/Part 5 [hR1bKmU8Wew].mp3
+ create mode 100644 docs/notes/win-friends/Part 6, Chapter 1 [ISpqOZVCIYs].mp3
+ create mode 100644 docs/notes/win-friends/Part 6, Chapter 2 [he5z7FDD9Rs].mp3
+ create mode 100644 docs/notes/win-friends/Part 6, Chapter 3 [q-yygqB5Nxw].mp3
+ create mode 100644 docs/notes/win-friends/Part 6, Chapter 4 [lx-mebyslDc].mp3
+ create mode 100644 docs/notes/win-friends/Part 6, Chapter 5 [B6D34up3jpQ].mp3
+ create mode 100644 docs/notes/win-friends/Part 6, Chapter 6 [EHeR2aQSSyo].mp3
+ create mode 100644 docs/notes/win-friends/Part 6, Chapter 7 [Di6N4HGOBJ4].mp3
+ create mode 100644 docs/notes/win-friends/Preface [qn98AQb66zQ].mp3
+ create mode 100644 docs/notes/yt/nytimes-ukraine-c_z8OoYWjQ0-cleaned.txt
+ create mode 100644 docs/notes/yt/nytimes-ukraine-c_z8OoYWjQ0.en.vtt
+ create mode 100644 public/notes/2024/11/18/20241003_me_because_of_the_strike_by_dockworkers_bananas_could_soon_be_in_short_supply.mp3
+ create mode 100644 public/notes/2024/11/19/dab-config.json
+ create mode 100644 "public/notes/laws-of-power/Law 10\357\274\232 Infection\357\274\232 Avoid the unhappy and the unlucky [VObeSTTdjNc].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 11\357\274\232 Learn to keep people dependent on you [A-OoAf6ld3E].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 12\357\274\232 Use selective honesty and generosity to disarm your victim [yNNi0fmwheI].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 13\357\274\232 When asking for help, appeal to people\342\200\231s self-interest, never to their mercy [66aCLYEM0J8].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 14\357\274\232 Pose as a friend, work as a spy [9Bx2dKjlce0].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 15\357\274\232 Crush your enemy totally [0DMeSvQbZc0].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 16\357\274\232 Use absence to increase respect and honor [o4Ta7UbtgEs].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 17\357\274\232 Keep others in suspended terror\357\274\232 cultivate an air of unpredictability [yTvPY5-c67s].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 18\357\274\232 Do not build fortresses to protect yourself \342\200\223 isolation is dangerous [dcYT4kDvAWs].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 19\357\274\232 Know who you\342\200\231re dealing with \342\200\223 do not offend the wrong person [uPXCJcWZdJ4].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 1\357\274\232 Never outshine the master [N5BY05xUF-I].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 20\357\274\232 Do not commit to anyone [DEr2YPsRKfg].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 21\357\274\232 Play a sucker to catch a sucker- seem dumber than your mark [jjIRjpt5-9s].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 22\357\274\232 Use the surrender tactic\357\274\232 transformer weakness into power [peZwUkA3Sg0].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 23\357\274\232 Concentrate your forces [_pwneu7lPfs].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 24\357\274\232 Play the perfect courtier [LqDdXlW0Xr8].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 25\357\274\232 Re-create yourself [8QKpwA6CL0c].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 26\357\274\232 Keep your hands clean [0F6FSRCQhCo].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 28\357\274\232 Enter action with boldness [YWQiPNdsYVA].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 29\357\274\232 Plan all the way to the end [aixWxyCs44s].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 2\357\274\232 Never put too much trust in friends, learn to use enemies [UP4Mh-bdp3Q].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 30\357\274\232 Make your accomplishments seem effortless [dyWMZu00xWg].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 31\357\274\232 Control the opinions\357\274\232 get others to play with the cards you deal [URiYOx1bRIA].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 32\357\274\232 Play to people\342\200\231s fantasies [tZy8_z8SU8A].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 33\357\274\232 Discover each man\342\200\231s thumbscrew [DvmZTPEldNA].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 34\357\274\232 Be royal in your own fashion\357\274\232 act like a king to be treated like one [640DO-8ZDm4].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 36\357\274\232 Disdain things you cannot have\357\274\232 ignoring them if the best revenge [EpCX_duqUtE].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 37\357\274\232 Create compelling spectacles [OhSrVTgcxwg].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 38\357\274\232 Think as you like but behave like others [9hPCI-XMyTY].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 39\357\274\232 Stir up waters to catch fish [pL5rGIe2N00].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 3\357\274\232 Conceal your intentions [z511RSmUNvg].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 40\357\274\232 Despise the free lunch [hjWpcZt7FQU].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 41\357\274\232 Avoid stepping into a great man\342\200\231s shoes [48UudVvB9YI].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 42\357\274\232 Strike the shepherd and the sheep will scatter [KyMB-ybZQrk].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 43\357\274\232 Work on the hearts and minds of others [Dp2ORVRczzI].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 44\357\274\232 Disarm and infuriate with the mirror effect [AlnvLnM-vpI].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 45\357\274\232 Preach the need for change, but never reform too much at once [nTSyz8dlo2E].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 46\357\274\232 Never appear too perfect [GIgDVVN_Dzs].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 48\357\274\232 Assume formlessness [RDgKBi8IV7k].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 4\357\274\232 Always say less than necessary [ViTJLUHhGNU].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 5\357\274\232 So much depends on reputation \342\200\223 guard it with your life [mHp62yS55FY].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 6\357\274\232 Court attention at all cost [glbe_HL2304].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 7\357\274\232 Let others to do the work for you, but always take credit [YVwaw9w-OAg].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 8\357\274\232 Make other people come to you \342\200\223 use bait if necessary [rZn_8O5iEF4].mp3"
+ create mode 100644 "public/notes/laws-of-power/Law 9\357\274\232 Win through your actions, never through argument [txgoO0g2rfg].mp3"
+ create mode 100644 public/notes/win-friends/Nine Suggestions on How to Get the Most out of This Book [gfmIMrp4Eyk].mp3
+ create mode 100644 public/notes/win-friends/Part 1, Chapter 1 [1cG0QJt8nHA].mp3
+ create mode 100644 public/notes/win-friends/Part 1, Chapter 2 [O1DbD-DDrGg].mp3
+ create mode 100644 public/notes/win-friends/Part 1, Chapter 3 [P4gf5DGLBhA].mp3
+ create mode 100644 public/notes/win-friends/Part 2, Chapter 1 [XeGtZyiSMns].mp3
+ create mode 100644 public/notes/win-friends/Part 2, Chapter 2 [kJp9AXhkINI].mp3
+ create mode 100644 public/notes/win-friends/Part 2, Chapter 3 [VYBNMf6x09E].mp3
+ create mode 100644 public/notes/win-friends/Part 2, Chapter 4 [OKprVrZp0AQ].mp3
+ create mode 100644 public/notes/win-friends/Part 2, Chapter 5 [Az5QZ0NZ3UQ].mp3
+ create mode 100644 public/notes/win-friends/Part 2, Chapter 6 [Lp0sKM5XW4g].mp3
+ create mode 100644 public/notes/win-friends/Part 3, Chapter 1 [RQnRlSNA02M].mp3
+ create mode 100644 public/notes/win-friends/Part 3, Chapter 10 [rUpBulmZd1c].mp3
+ create mode 100644 public/notes/win-friends/Part 3, Chapter 11 [j7nXrYzSNm4].mp3
+ create mode 100644 public/notes/win-friends/Part 3, Chapter 12 [3eskKI64XQ0].mp3
+ create mode 100644 public/notes/win-friends/Part 3, Chapter 2 [KKXYCQgkA0M].mp3
+ create mode 100644 public/notes/win-friends/Part 3, Chapter 3 [mxlpmQGIlto].mp3
+ create mode 100644 public/notes/win-friends/Part 3, Chapter 4 [B9cdvGx-phc].mp3
+ create mode 100644 public/notes/win-friends/Part 3, Chapter 5 [1UQUps9d45w].mp3
+ create mode 100644 public/notes/win-friends/Part 3, Chapter 6 [rDmWaOL5TqM].mp3
+ create mode 100644 public/notes/win-friends/Part 3, Chapter 7 [USAq0JxnJ1s].mp3
+ create mode 100644 public/notes/win-friends/Part 3, Chapter 8 [DuTMkYpE51g].mp3
+ create mode 100644 public/notes/win-friends/Part 3, Chapter 9 [2EBPjLE9MeM].mp3
+ create mode 100644 public/notes/win-friends/Part 4, Chapter 1 [nxwRkpoLyWE].mp3
+ create mode 100644 public/notes/win-friends/Part 4, Chapter 2 [UR8yDhkGf6E].mp3
+ create mode 100644 public/notes/win-friends/Part 4, Chapter 3 [-DPH_O8EDuA].mp3
+ create mode 100644 public/notes/win-friends/Part 4, Chapter 4 [0dQqOotlxKg].mp3
+ create mode 100644 public/notes/win-friends/Part 4, Chapter 5 [p8cut_8EiiU].mp3
+ create mode 100644 public/notes/win-friends/Part 4, Chapter 6 [2g7A9y__TBg].mp3
+ create mode 100644 public/notes/win-friends/Part 4, Chapter 7 [-1xYRfJsGhw].mp3
+ create mode 100644 public/notes/win-friends/Part 4, Chapter 8 [bx3myt4Qvq8].mp3
+ create mode 100644 public/notes/win-friends/Part 4, Chapter 9 [swmc_NZrmo0].mp3
+ create mode 100644 public/notes/win-friends/Part 5 [hR1bKmU8Wew].mp3
+ create mode 100644 public/notes/win-friends/Part 6, Chapter 1 [ISpqOZVCIYs].mp3
+ create mode 100644 public/notes/win-friends/Part 6, Chapter 2 [he5z7FDD9Rs].mp3
+ create mode 100644 public/notes/win-friends/Part 6, Chapter 3 [q-yygqB5Nxw].mp3
+ create mode 100644 public/notes/win-friends/Part 6, Chapter 4 [lx-mebyslDc].mp3
+ create mode 100644 public/notes/win-friends/Part 6, Chapter 5 [B6D34up3jpQ].mp3
+ create mode 100644 public/notes/win-friends/Part 6, Chapter 6 [EHeR2aQSSyo].mp3
+ create mode 100644 public/notes/win-friends/Part 6, Chapter 7 [Di6N4HGOBJ4].mp3
+ create mode 100644 public/notes/win-friends/Preface [qn98AQb66zQ].mp3
+ create mode 100644 public/notes/yt/nytimes-ukraine-c_z8OoYWjQ0-cleaned.txt
+ create mode 100644 public/notes/yt/nytimes-ukraine-c_z8OoYWjQ0.en.vtt
+Wednesday, November 20, 2024 9:05:32 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch              main       -> FETCH_HEAD
+Current branch main is up to date.
+Wednesday, November 20, 2024 9:05:33 AM
+Enumerating objects: 119, done.
+Counting objects: 100% (119/119), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (106/106), done.
+Writing objects: 100% (106/106), 611.15 MiB | 5.65 MiB/s, done.
+Total 106 (delta 11), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (11/11), completed with 9 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   055c6400..eb164c41  main -> main
+Wednesday, November 20, 2024 9:07:43 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> ssh kusfedoravm
+kushal@kusfedoravm's password:
+Last login: Tue Nov 19 09:58:08 2024 from fe80::975c:f636:bfb:5026%eth0
+kushal@kusfedoravm:~$ cd ~/src/hello-testcontainers/; time dotnet clean; time dotnet restore; time dotnet build; time dotnet test
+MSBuild version 17.8.5+b5265ef37 for .NET
+Build started 11/20/2024 10:39:36 AM.
+     1>Project "/home/kushal/src/hello-testcontainers/TestcontainersDemo.sln" on node 1 (Clean target(s)).
+     1>ValidateSolutionConfiguration:
+         Building solution configuration "Debug|Any CPU".
+     1>Project "/home/kushal/src/hello-testcontainers/TestcontainersDemo.sln" (1) is building "/home/kushal/src/hello-testcontainers/CustomerService.Tests/CustomerService.Tests.csproj" (2) on node 1 (Clean target(s)).
+     2>CoreClean:
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CoverletSourceRootsMapping_CustomerService.Tests".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.runner.reporters.netcoreapp10.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.runner.utility.netcoreapp10.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.deps.json".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.runtimeconfig.json".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.pdb".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Docker.DotNet.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Docker.DotNet.X509.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/FluentAssertions.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.Extensions.Logging.Abstractions.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.TestPlatform.CoreUtilities.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.TestPlatform.PlatformAbstractions.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.TestPlatform.CommunicationUtilities.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.TestPlatform.CrossPlatEngine.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.TestPlatform.Utilities.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Microsoft.VisualStudio.TestPlatform.Common.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/testhost.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Newtonsoft.Json.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Npgsql.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/NuGet.Frameworks.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ICSharpCode.SharpZipLib.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Renci.SshNet.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/SshNet.Security.Cryptography.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/System.Configuration.ConfigurationManager.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/System.Security.Cryptography.ProtectedData.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Testcontainers.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/Testcontainers.PostgreSql.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.abstractions.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.assert.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.core.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/xunit.execution.dotnet.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/de/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/es/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/fr/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/it/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ja/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ko/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pl/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ru/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/tr/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/cs/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/cs/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/cs/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/de/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/de/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/de/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/es/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/es/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/es/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/fr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/fr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/fr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/it/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/it/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/it/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ja/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ja/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ja/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ko/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ko/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ko/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pl/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pl/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pl/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pt-BR/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pt-BR/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/pt-BR/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ru/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ru/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/ru/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/tr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/tr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/tr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hans/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hans/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.pdb".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.csproj.AssemblyReference.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.AssemblyInfoInputs.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.AssemblyInfo.cs".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.csproj.CoreCompileInputs.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.sourcelink.json".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.csproj.CopyComplete".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/refint/CustomerService.Tests.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.pdb".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/CustomerService.Tests.genruntimeconfig.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService.Tests/obj/Debug/net8.0/ref/CustomerService.Tests.dll".
+     1>Project "/home/kushal/src/hello-testcontainers/TestcontainersDemo.sln" (1) is building "/home/kushal/src/hello-testcontainers/CustomerService/CustomerService.csproj" (3) on node 2 (Clean target(s)).
+     3>CoreClean:
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/bin/Debug/net8.0/CustomerService.deps.json".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/bin/Debug/net8.0/CustomerService.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/bin/Debug/net8.0/CustomerService.pdb".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.csproj.AssemblyReference.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.AssemblyInfoInputs.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.AssemblyInfo.cs".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.csproj.CoreCompileInputs.cache".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.sourcelink.json".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/refint/CustomerService.dll".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/CustomerService.pdb".
+         Deleting file "/home/kushal/src/hello-testcontainers/CustomerService/obj/Debug/net8.0/ref/CustomerService.dll".
+     3>Done Building Project "/home/kushal/src/hello-testcontainers/CustomerService/CustomerService.csproj" (Clean target(s)).
+     2>Done Building Project "/home/kushal/src/hello-testcontainers/CustomerService.Tests/CustomerService.Tests.csproj" (Clean target(s)).
+     1>Done Building Project "/home/kushal/src/hello-testcontainers/TestcontainersDemo.sln" (Clean target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.82
+
+real    0m0.994s
+user    0m0.716s
+sys     0m0.156s
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+
+real    0m0.832s
+user    0m0.763s
+sys     0m0.150s
+MSBuild version 17.8.5+b5265ef37 for .NET
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  CustomerService -> /home/kushal/src/hello-testcontainers/CustomerService/bin/Debug/net8.0/CustomerService.dll
+  CustomerService.Tests -> /home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.19
+
+real    0m3.372s
+user    0m1.767s
+sys     0m0.334s
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  CustomerService -> /home/kushal/src/hello-testcontainers/CustomerService/bin/Debug/net8.0/CustomerService.dll
+  CustomerService.Tests -> /home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.dll
+Test run for /home/kushal/src/hello-testcontainers/CustomerService.Tests/bin/Debug/net8.0/CustomerService.Tests.dll (.NETCoreApp,Version=v8.0)
+Microsoft (R) Test Execution Command Line Tool Version 17.8.0 (x64)
+Copyright (c) Microsoft Corporation.  All rights reserved.
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.26]     CustomerService.Tests.CustomerServiceTest.ShouldReturnTwoCustomers [FAIL]
+  Failed CustomerService.Tests.CustomerServiceTest.ShouldReturnTwoCustomers [1 ms]
+  Error Message:
+   System.ArgumentException : Docker is either not running or misconfigured. Please ensure that Docker is running and that the endpoint is properly configured. You can customize your configuration using either the environment variables or the ~/.testcontainers.properties file. For more information, visit:
+https://dotnet.testcontainers.org/custom_configuration/ (Parameter 'DockerEndpointAuthConfig')
+  Stack Trace:
+     at DotNet.Testcontainers.Guard.ThrowIf[TType](ArgumentInfo`1& argument, Func`2 condition, Func`2 ifClause) in /_/src/Testcontainers/Guard.Null.cs:line 62
+   at DotNet.Testcontainers.Builders.AbstractBuilder`4.Validate() in /_/src/Testcontainers/Builders/AbstractBuilder`4.cs:line 145
+   at DotNet.Testcontainers.Builders.ContainerBuilder`3.Validate() in /_/src/Testcontainers/Builders/ContainerBuilder`3.cs:line 383
+   at Testcontainers.PostgreSql.PostgreSqlBuilder.Validate() in /_/src/Testcontainers.PostgreSql/PostgreSqlBuilder.cs:line 101
+   at Testcontainers.PostgreSql.PostgreSqlBuilder.Build() in /_/src/Testcontainers.PostgreSql/PostgreSqlBuilder.cs:line 75
+   at CustomerService.Tests.CustomerServiceTest..ctor() in /home/kushal/src/hello-testcontainers/CustomerService.Tests/CustomerServiceTest.cs:line 8
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean wrapExceptions)
+
+Failed!  - Failed:     1, Passed:     0, Skipped:     0, Total:     1, Duration: < 1 ms - CustomerService.Tests.dll (net8.0)
+
+real    0m2.820s
+user    0m4.434s
+sys     0m0.560s
+kushal@kusfedoravm:~/src/hello-testcontainers$ ip addr; sudo echo "Current date and time: $(date)"; free -h; df -h; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot -y;
