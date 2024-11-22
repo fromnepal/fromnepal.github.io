@@ -1,5 +1,5 @@
 # Number of concurrent requests
-$numberOfRequests = 10
+$numberOfRequests = 10000
 
 # Array to hold job results
 $jobs = @()
