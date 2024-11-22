@@ -1,10 +1,34 @@
-# Infinite loop to repeatedly measure the time taken for a web request
-while ($true) {
-    # Measure the time taken to perform the web request
-    $timing = Measure-Command {
-        Invoke-WebRequest -UseBasicParsing -Uri "http://colorado:5000/api/Contact"
+# Number of concurrent requests
+$numberOfRequests = 10
+
+# Array to hold job results
+$jobs = @()
+
+# Function to perform the web request and measure time
+function Invoke-LoadTest {
+    param (
+        [string]$url
+    )
+    Measure-Command {
+        Invoke-WebRequest -UseBasicParsing -Uri $url
     }
-    
-    # Output the total seconds taken for the request
-    Write-Host "Request time: $($timing.TotalSeconds) seconds"
+}
+
+# Start multiple background jobs for load testing
+for ($i = 1; $i -le $numberOfRequests; $i++) {
+    $jobs += Start-Job -ScriptBlock {
+        param ($url)
+        Invoke-LoadTest -url $url
+    } -ArgumentList "http://colorado:5000/api/Contact"
+}
+
+# Wait for all jobs to complete and collect results
+$results = $jobs | ForEach-Object {
+    Receive-Job -Job $_
+    Remove-Job -Job $_
+}
+
+# Output the results
+$results | ForEach-Object {
+    Write-Host "Request time: $($_.TotalSeconds) seconds"
 }
