@@ -1,5 +1,9 @@
 PowerShell 7.4.6
-PS C:\Users\kushal>
+PS C:\Users\kushal> ssh colorado
+ssh: Could not resolve hostname colorado: No such host is known.
+PS C:\Users\kushal> tail -f /var/log/syslog
+tail: The term 'tail' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
 PS C:\Users\kushal> ssh colorado
 Linux colorado 6.1.0-27-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.115-1 (2024-11-01) x86_64
 
@@ -9,50 +13,67 @@ individual files in /usr/share/doc/*/copyright.
 
 Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
 permitted by applicable law.
-Last login: Fri Nov 22 06:29:20 2024 from fe80::975c:f636:bfb:5026%enp3s0
+Last login: Fri Nov 22 20:18:33 2024 from fe80::975c:f636:bfb:5026%enp3s0
+kushal@colorado:~$ tail -f /var/log/syslog
+tail: cannot open '/var/log/syslog' for reading: No such file or directory
+tail: no files remaining
+kushal@colorado:~$ sudo tail -f /var/log/syslog
+[sudo] password for kushal:
+tail: cannot open '/var/log/syslog' for reading: No such file or directory
+tail: no files remaining
+kushal@colorado:~$ journalctl -u syslog
+Hint: You are currently not seeing messages from other users and the system.
+      Users in groups 'adm', 'systemd-journal' can see all messages.
+      Pass -q to turn off this notice.
+-- No entries --
+kushal@colorado:~$ sudo journalctl -u syslog
+-- No entries --
+kushal@colorado:~$ crontab -e
+No modification made
+kushal@colorado:~$ No modification made
 kushal@colorado:~$ time bash ~/src/angular/coloradoquiz/update.sh; time bash ~/source/angulareighteen/update.sh; time bash ~/src/angular/mycontacts/update.sh;
 ping: sock4.fd: 3 (socktype: SOCK_RAW), sock6.fd: 4 (socktype: SOCK_RAW), hints.ai_family: AF_UNSPEC
 
-[master d341be746] add timestamp
- 2 files changed, 25 insertions(+), 309 deletions(-)
-[master 95dba100e] begin add system status
+[master e39547198] add timestamp
+ 2 files changed, 25 insertions(+), 310 deletions(-)
+[master 5e8423360] begin add system status
  2 files changed, 39 insertions(+)
-[master e9ed08a77] add system status
+[master 42d377df1] add system status
  1 file changed, 6 insertions(+)
-[master 6043c35cf] end add system status
+[master faf5c63d4] end add system status
  1 file changed, 1 insertion(+)
-[master 4a9466e8f] begin update node
+[master 6fb8d342c] begin update node
  2 files changed, 29 insertions(+)
 Installing latest LTS version.
 v22.11.0 is already installed.
 Now using node v22.11.0 (npm v10.9.0)
 
-real    0m0.661s
-user    0m0.447s
-sys     0m0.122s
+real    0m0.824s
+user    0m0.457s
+sys     0m0.137s
 Now using node v22.11.0 (npm v10.9.0)
 
-real    0m0.258s
-user    0m0.244s
-sys     0m0.072s
+real    0m0.257s
+user    0m0.264s
+sys     0m0.049s
 
-changed 297 packages in 22s
+changed 297 packages in 18s
 
 52 packages are looking for funding
   run `npm fund` for details
 
-real    0m22.187s
-user    0m11.278s
-sys     0m2.366s
+real    0m18.150s
+user    0m11.215s
+sys     0m2.467s
 
-real    0m1.448s
-user    0m1.136s
-sys     0m0.230s
+real    0m1.459s
+user    0m1.206s
+sys     0m0.244s
 
-real    0m0.896s
-user    0m1.359s
-sys     0m0.091s
-[master 9cff7eeef] end update node
+real    0m0.887s
+user    0m1.330s
+sys     0m0.106s
+[master b78fda401] end update node
  2 files changed, 67 insertions(+)
 On branch master
 Your branch is ahead of 'origin/master' by 6 commits.
@@ -69,30 +90,30 @@ Package '@angular/core' is already up to date.
 Package '@angular/cli' is already up to date.
 Package '@angular/material' is already up to date.
 Package '@angular/localize' is already up to date.
-Done in 2.56s.
+Done in 2.40s.
 
-real    0m2.830s
-user    0m1.680s
-sys     0m0.372s
+real    0m2.663s
+user    0m1.774s
+sys     0m0.303s
 On branch master
 Your branch is ahead of 'origin/master' by 6 commits.
   (use "git push" to publish your local commits)
 
 nothing to commit, working tree clean
 
-real    0m3.648s
-user    0m3.839s
-sys     0m0.387s
-[master ce9d06ba4] begin prepare to build angular
- 2 files changed, 37 insertions(+)
+real    0m3.603s
+user    0m3.783s
+sys     0m0.402s
+[master 65911fc51] begin prepare to build angular
+ 2 files changed, 36 insertions(+)
 
-real    0m15.155s
-user    0m32.391s
-sys     0m2.091s
-[master c52cd37fc] end prepare to build angular
+real    0m15.867s
+user    0m34.477s
+sys     0m2.120s
+[master f9faa6981] end prepare to build angular
  1 file changed, 17 insertions(+)
-[master c1d2b5bb3] begin prepare to unit test angular
- 2 files changed, 28 insertions(+), 381 deletions(-)
+[master 8a228eee3] begin prepare to unit test angular
+ 2 files changed, 28 insertions(+), 130 deletions(-)
 - Generating browser application bundles (phase: setup)...
 ✔ Browser application bundle generation complete.
 ✔ Browser application bundle generation complete.
@@ -100,16 +121,16 @@ sys     0m2.091s
 ✔ Browser application bundle generation complete.
 error Command failed with exit code 1.
 
-real    0m57.990s
-user    0m41.032s
-sys     0m5.047s
-[master 129ad3a30] end prepare to unit test angular
- 2 files changed, 303 insertions(+)
+real    0m54.066s
+user    0m41.537s
+sys     0m4.030s
+[master 06b8ef3ad] end prepare to unit test angular
+ 2 files changed, 176 insertions(+)
 
-real    0m0.383s
-user    0m0.264s
-sys     0m0.070s
-[master d689064f8] add timestamp
+real    0m0.336s
+user    0m0.279s
+sys     0m0.053s
+[master 1fef3d171] add timestamp
  2 files changed, 33 insertions(+)
 From github.com:teamkushal/coloradoquiz
  * branch                master     -> FETCH_HEAD
@@ -123,24 +144,24 @@ Enumerating objects: 52, done.
 Counting objects: 100% (52/52), done.
 Delta compression using up to 4 threads
 Compressing objects: 100% (44/44), done.
-Writing objects: 100% (46/46), 6.39 KiB | 2.13 MiB/s, done.
+Writing objects: 100% (46/46), 6.12 KiB | 1.22 MiB/s, done.
 Total 46 (delta 32), reused 1 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (32/32), completed with 6 local objects.
 To github.com:teamkushal/coloradoquiz.git
-   dad2ae9a3..d689064f8  master -> master
+   8bd8f4ae7..1fef3d171  master -> master
 
-real    2m10.530s
-user    1m34.265s
-sys     0m11.625s
-Fri Nov 22 07:43:31 PM EST 2024
+real    2m3.220s
+user    1m36.893s
+sys     0m10.708s
+Sat Nov 23 07:46:56 AM EST 2024
 /home/kushal/source/angulareighteen/update.sh: line 10: nvm: command not found
 /home/kushal/source/angulareighteen/update.sh: line 11: nvm: command not found
 v22.11.0
 10.9.0
 
-changed 1 package in 1s
-Fri Nov 22 07:43:33 PM EST 2024
-Fri Nov 22 07:43:33 PM EST 2024
+changed 1 package in 803ms
+Sat Nov 23 07:46:57 AM EST 2024
+Sat Nov 23 07:46:57 AM EST 2024
 yarn install v1.22.22
 info No lockfile found.
 [1/4] Resolving packages...
@@ -154,23 +175,23 @@ warning "@angular-devkit/build-angular > @vitejs/plugin-basic-ssl@1.1.0" has unm
 warning "@angular-devkit/build-angular > @angular/build > @inquirer/confirm@5.0.2" has unmet peer dependency "@types/node@>=18".
 warning "@angular-devkit/build-angular > @angular/build > @inquirer/confirm > @inquirer/type@3.0.1" has unmet peer dependency "@types/node@>=18".
 warning "@angular/cli > @inquirer/prompts@7.1.0" has unmet peer dependency "@types/node@>=18".
+warning "@angular/cli > @inquirer/prompts > @inquirer/checkbox@4.0.2" has unmet peer dependency "@types/node@>=18".
+warning "@angular/cli > @inquirer/prompts > @inquirer/number@3.0.2" has unmet peer dependency "@types/node@>=18".
+warning "@angular/cli > @inquirer/prompts > @inquirer/expand@4.0.2" has unmet peer dependency "@types/node@>=18".
 warning "@angular/cli > @inquirer/prompts > @inquirer/editor@4.1.0" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/input@4.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/search@3.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/select@4.0.2" has unmet peer dependency "@types/node@>=18".
 warning "@angular/cli > @inquirer/prompts > @inquirer/password@4.0.2" has unmet peer dependency "@types/node@>=18".
 warning "@angular/cli > @inquirer/prompts > @inquirer/rawlist@4.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/expand@4.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/number@3.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/checkbox@4.0.2" has unmet peer dependency "@types/node@>=18".
+warning "@angular/cli > @inquirer/prompts > @inquirer/search@3.0.2" has unmet peer dependency "@types/node@>=18".
+warning "@angular/cli > @inquirer/prompts > @inquirer/select@4.0.2" has unmet peer dependency "@types/node@>=18".
+warning "@angular/cli > @inquirer/prompts > @inquirer/input@4.0.2" has unmet peer dependency "@types/node@>=18".
 [4/4] Building fresh packages...
 success Saved lockfile.
-Done in 23.29s.
+Done in 15.91s.
 
-real    0m23.663s
-user    0m13.244s
-sys     0m2.547s
-Fri Nov 22 07:43:56 PM EST 2024
+real    0m16.267s
+user    0m14.496s
+sys     0m2.758s
+Sat Nov 23 07:47:13 AM EST 2024
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -180,8 +201,8 @@ Changes not staged for commit:
         modified:   yarn.lock
 
 no changes added to commit (use "git add" and/or "git commit -a")
-[master 9e51571] add all files
- 1 file changed, 3 insertions(+), 3 deletions(-)
+[master ef9a580] add all files
+ 1 file changed, 96 insertions(+), 96 deletions(-)
 From github.com:angulareighteen/angulareighteen.github.io
  * branch            master     -> FETCH_HEAD
 Current branch master is up to date.
@@ -189,1294 +210,11 @@ Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 Delta compression using up to 4 threads
 Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 474 bytes | 474.00 KiB/s, done.
+Writing objects: 100% (3/3), 3.02 KiB | 618.00 KiB/s, done.
 Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To github.com:angulareighteen/angulareighteen.github.io.git
-   c315b4c..9e51571  master -> master
-yarn install v1.22.22
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.61s.
-yarn run v1.22.22
-$ ng update
-Using package manager: yarn
-Collecting installed dependencies...
-Found 27 dependencies.
-    We analyzed your package.json and everything seems to be in order. Good work!
-Done in 3.36s.
-yarn run v1.22.22
-$ ng build
-Initial chunk files   | Names         |  Raw size | Estimated transfer size
-chunk-I6WO6DMZ.js     | -             | 114.11 kB |                33.70 kB
-main-ZYUJU5LJ.js      | main          |  98.22 kB |                25.34 kB
-styles-U4H6PSGJ.css   | styles        |  53.25 kB |                 5.25 kB
-polyfills-FFHMD2TL.js | polyfills     |  34.52 kB |                11.28 kB
-
-                      | Initial total | 300.09 kB |                75.57 kB
-
-Lazy chunk files      | Names         |  Raw size | Estimated transfer size
-chunk-6VKC6WYA.js     | browser       |  67.49 kB |                17.70 kB
-
-Application bundle generation complete. [8.219 seconds]
-
-▲ [WARNING] angular:styles/component:css;802bd11d2fffcfccea9b81d73128145c62e67559689fbf7b080b6d250733a2b1;/home/kushal/source/angulareighteen/src/app/app.component.html exceeded maximum budget. Budget 2.05 kB was not met by 878 bytes with a total of 2.93 kB.
-
-
-Output location: /home/kushal/source/angulareighteen/docs
-
-Done in 9.51s.
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-From github.com:angulareighteen/angulareighteen.github.io
- * branch            master     -> FETCH_HEAD
-Already up to date.
-Everything up-to-date
-yarn run v1.22.22
-$ ng test
-✔ Browser application bundle generation complete.
-22 11 2024 19:44:31.027:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
-22 11 2024 19:44:31.029:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
-22 11 2024 19:44:31.041:INFO [launcher]: Starting browser Firefox
-22 11 2024 19:44:35.077:INFO [Firefox 128.0 (Linux x86_64)]: Connected on socket cNvf563M-pYhSavrAAAB with id 21452766
-Firefox 128.0 (Linux x86_64): Executed 3 of 3 SUCCESS (0.365 secs / 0.324 secs)
-TOTAL: 3 SUCCESS
-Done in 21.60s.
-yarn run v1.22.22
-$ ng update @angular/core @angular/cli @angular/material
-Using package manager: yarn
-Collecting installed dependencies...
-Found 27 dependencies.
-Fetching dependency metadata from registry...
-Package '@angular/core' is already up to date.
-Package '@angular/cli' is already up to date.
-Package '@angular/material' is already up to date.
-Done in 1.57s.
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-From github.com:angulareighteen/angulareighteen.github.io
- * branch            master     -> FETCH_HEAD
-Already up to date.
-Everything up-to-date
-Latest version:     1.0.30001683
-Installed version:  1.0.30001683
-caniuse-lite is up to date
-caniuse-lite has been successfully updated
-
-No target browser changes
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-From github.com:angulareighteen/angulareighteen.github.io
- * branch            master     -> FETCH_HEAD
-Already up to date.
-Everything up-to-date
-* remote origin
-  Fetch URL: git@github.com:angulareighteen/angulareighteen.github.io.git
-  Push  URL: git@github.com:angulareighteen/angulareighteen.github.io.git
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local branch configured for 'git pull':
-    master merges with remote master
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Fri Nov 22 07:44:44 PM EST 2024
-
-real    1m12.654s
-user    1m23.174s
-sys     0m8.979s
-Fri Nov 22 07:44:44 PM EST 2024
-/home/kushal/src/angular/mycontacts/update.sh: line 10: nvm: command not found
-/home/kushal/src/angular/mycontacts/update.sh: line 11: nvm: command not found
-v22.11.0
-10.9.0
-
-changed 1 package in 786ms
-Fri Nov 22 07:44:45 PM EST 2024
-Fri Nov 22 07:44:45 PM EST 2024
-yarn install v1.22.22
-info No lockfile found.
-[1/4] Resolving packages...
-warning karma > glob@7.2.3: Glob versions prior to v9 are no longer supported
-warning karma > rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
-warning karma > rimraf > glob@7.2.3: Glob versions prior to v9 are no longer supported
-warning karma > glob > inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
-warning karma-coverage-istanbul-reporter > istanbul-lib-source-maps > rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
-warning karma-coverage-istanbul-reporter > istanbul-lib-source-maps > rimraf > glob@7.2.3: Glob versions prior to v9 are no longer supported
-[2/4] Fetching packages...
-[3/4] Linking dependencies...
-warning "@angular-devkit/build-angular > @vitejs/plugin-basic-ssl@1.1.0" has unmet peer dependency "vite@^3.0.0 || ^4.0.0 || ^5.0.0".
-[4/4] Building fresh packages...
-success Saved lockfile.
-Done in 15.46s.
-
-real    0m15.707s
-user    0m12.978s
-sys     0m2.187s
-Fri Nov 22 07:45:01 PM EST 2024
-On branch master
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   yarn.lock
-
-no changes added to commit (use "git add" and/or "git commit -a")
-[master 1851be7] add all files
- 1 file changed, 3 insertions(+), 3 deletions(-)
-From github.com:kusl/mycontacts
- * branch            master     -> FETCH_HEAD
-Current branch master is up to date.
-Enumerating objects: 14, done.
-Counting objects: 100% (14/14), done.
-Delta compression using up to 4 threads
-Compressing objects: 100% (9/9), done.
-Writing objects: 100% (9/9), 1.40 KiB | 1.40 MiB/s, done.
-Total 9 (delta 6), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (6/6), completed with 5 local objects.
-To github.com:kusl/mycontacts.git
-   3944bfe..1851be7  master -> master
-yarn install v1.22.22
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.63s.
-yarn run v1.22.22
-$ ng update
-Using package manager: yarn
-Collecting installed dependencies...
-Found 28 dependencies.
-    We analyzed your package.json and everything seems to be in order. Good work!
-Done in 3.14s.
-yarn run v1.22.22
-$ ng build
-Initial chunk files | Names         |  Raw size | Estimated transfer size
-chunk-Z3QRDSSJ.js   | -             | 119.77 kB |                35.11 kB
-main-4IGC7X44.js    | main          | 106.09 kB |                27.13 kB
-styles-CXQUZ3PB.css | styles        |   6.98 kB |                 1.13 kB
-
-                    | Initial total | 232.84 kB |                63.37 kB
-
-Lazy chunk files    | Names         |  Raw size | Estimated transfer size
-chunk-QOEJKQYO.js   | browser       |  67.49 kB |                17.70 kB
-
-Application bundle generation complete. [4.640 seconds]
-
-Output location: /home/kushal/src/angular/mycontacts/dist/mycontacts
-
-Done in 5.88s.
-On branch master
-nothing to commit, working tree clean
-On branch master
-nothing to commit, working tree clean
-From github.com:kusl/mycontacts
- * branch            master     -> FETCH_HEAD
-Already up to date.
-Everything up-to-date
-yarn run v1.22.22
-$ ng test
-✔ Browser application bundle generation complete.
-22 11 2024 19:45:26.681:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
-22 11 2024 19:45:26.685:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
-22 11 2024 19:45:26.701:INFO [launcher]: Starting browser Firefox
-22 11 2024 19:45:30.812:INFO [Firefox 128.0 (Linux x86_64)]: Connected on socket 3n3tvJASeuTBPf6LAAAB with id 99146495
-Firefox 128.0 (Linux x86_64) AppComponent should have the 'mycontacts' title FAILED
-        Expected 'My Contacts' to equal 'mycontacts'.
-        <Jasmine>
-        1675/</<@main.js:34:23
-        <Jasmine>
-Firefox 128.0 (Linux x86_64): Executed 3 of 3 (1 FAILED) (0 secs / 0.507 secs)
-Firefox 128.0 (Linux x86_64) AppComponent should have the 'mycontacts' title FAILED
-        Expected 'My Contacts' to equal 'mycontacts'.
-        <Jasmine>
-        1675/</<@main.js:34:23
-Firefox 128.0 (Linux x86_64): Executed 3 of 3 (1 FAILED) (0.535 secs / 0.507 secs)
-TOTAL: 1 FAILED, 2 SUCCESS
-TOTAL: 1 FAILED, 2 SUCCESS
-error Command failed with exit code 1.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-yarn run v1.22.22
-$ ng update @angular/core @angular/cli @angular/material
-Using package manager: yarn
-Collecting installed dependencies...
-Found 28 dependencies.
-Fetching dependency metadata from registry...
-Package '@angular/core' is already up to date.
-Package '@angular/cli' is already up to date.
-Package '@angular/material' is already up to date.
-Done in 1.80s.
-On branch master
-nothing to commit, working tree clean
-From github.com:kusl/mycontacts
- * branch            master     -> FETCH_HEAD
-Already up to date.
-Everything up-to-date
-Latest version:     1.0.30001683
-Installed version:  1.0.30001683
-caniuse-lite is up to date
-caniuse-lite has been successfully updated
-
-No target browser changes
-On branch master
-nothing to commit, working tree clean
-On branch master
-nothing to commit, working tree clean
-From github.com:kusl/mycontacts
- * branch            master     -> FETCH_HEAD
-Already up to date.
-Everything up-to-date
-* remote origin
-  Fetch URL: git@github.com:kusl/mycontacts.git
-  Push  URL: git@github.com:kusl/mycontacts.git
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Fri Nov 22 07:45:40 PM EST 2024
-
-real    0m56.243s
-user    1m1.926s
-sys     0m7.733s
-kushal@colorado:~$ time bash ~/src/angular/coloradoquiz/update.sh; time bash ~/source/angulareighteen/update.sh; time bash ~/src/angular/mycontacts/update.sh;
-ping: sock4.fd: 3 (socktype: SOCK_RAW), sock6.fd: 4 (socktype: SOCK_RAW), hints.ai_family: AF_UNSPEC
-
-[master 9c244fc1b] add timestamp
- 2 files changed, 25 insertions(+), 310 deletions(-)
-[master 02c6a6083] begin add system status
- 2 files changed, 39 insertions(+)
-[master 8f43f94a6] add system status
- 1 file changed, 6 insertions(+)
-[master 4d095276f] end add system status
- 1 file changed, 1 insertion(+)
-[master 709c2dde9] begin update node
- 2 files changed, 29 insertions(+)
-Installing latest LTS version.
-v22.11.0 is already installed.
-Now using node v22.11.0 (npm v10.9.0)
-
-real    0m0.623s
-user    0m0.430s
-sys     0m0.113s
-Now using node v22.11.0 (npm v10.9.0)
-
-real    0m0.258s
-user    0m0.236s
-sys     0m0.078s
-
-changed 297 packages in 23s
-
-52 packages are looking for funding
-  run `npm fund` for details
-
-real    0m22.817s
-user    0m10.663s
-sys     0m2.632s
-
-real    0m1.437s
-user    0m1.146s
-sys     0m0.227s
-
-real    0m0.882s
-user    0m1.333s
-sys     0m0.084s
-[master d588aa0d2] end update node
- 2 files changed, 67 insertions(+)
-On branch master
-Your branch is ahead of 'origin/master' by 6 commits.
-  (use "git push" to publish your local commits)
-
-nothing to commit, working tree clean
-yarn run v1.22.22
-$ ng update @angular/core @angular/cli @angular/material @angular/localize
-Using package manager: yarn
-Collecting installed dependencies...
-Found 31 dependencies.
-Fetching dependency metadata from registry...
-Package '@angular/core' is already up to date.
-Package '@angular/cli' is already up to date.
-Package '@angular/material' is already up to date.
-Package '@angular/localize' is already up to date.
-Done in 2.14s.
-
-real    0m2.401s
-user    0m1.637s
-sys     0m0.349s
-On branch master
-Your branch is ahead of 'origin/master' by 6 commits.
-  (use "git push" to publish your local commits)
-
-nothing to commit, working tree clean
-
-real    0m3.481s
-user    0m3.773s
-sys     0m0.406s
-[master d9c891686] begin prepare to build angular
- 2 files changed, 37 insertions(+)
-
-real    0m15.230s
-user    0m32.906s
-sys     0m1.978s
-[master 37a8d81d4] end prepare to build angular
- 1 file changed, 17 insertions(+)
-[master 09e9be93c] begin prepare to unit test angular
- 2 files changed, 28 insertions(+), 275 deletions(-)
-- Generating browser application bundles (phase: setup)...
-✔ Browser application bundle generation complete.
-✔ Browser application bundle generation complete.
-✔ Browser application bundle generation complete.
-✔ Browser application bundle generation complete.
-error Command failed with exit code 1.
-
-real    0m55.461s
-user    0m41.454s
-sys     0m4.718s
-[master efbecd157] end prepare to unit test angular
- 2 files changed, 406 insertions(+)
-
-real    0m0.416s
-user    0m0.271s
-sys     0m0.072s
-[master 47ab05432] add timestamp
- 2 files changed, 33 insertions(+)
-From github.com:teamkushal/coloradoquiz
- * branch                master     -> FETCH_HEAD
-Current branch master is up to date.
-On branch master
-Your branch is ahead of 'origin/master' by 12 commits.
-  (use "git push" to publish your local commits)
-
-nothing to commit, working tree clean
-Enumerating objects: 52, done.
-Counting objects: 100% (52/52), done.
-Delta compression using up to 4 threads
-Compressing objects: 100% (44/44), done.
-Writing objects: 100% (46/46), 6.98 KiB | 2.33 MiB/s, done.
-Total 46 (delta 32), reused 1 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (32/32), completed with 6 local objects.
-To github.com:teamkushal/coloradoquiz.git
-   d689064f8..47ab05432  master -> master
-
-real    2m8.571s
-user    1m34.447s
-sys     0m11.443s
-Fri Nov 22 07:54:19 PM EST 2024
-/home/kushal/source/angulareighteen/update.sh: line 10: nvm: command not found
-/home/kushal/source/angulareighteen/update.sh: line 11: nvm: command not found
-v22.11.0
-10.9.0
-
-changed 1 package in 1s
-Fri Nov 22 07:54:20 PM EST 2024
-Fri Nov 22 07:54:20 PM EST 2024
-yarn install v1.22.22
-info No lockfile found.
-[1/4] Resolving packages...
-warning karma > glob@7.2.3: Glob versions prior to v9 are no longer supported
-warning karma > rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
-warning karma > rimraf > glob@7.2.3: Glob versions prior to v9 are no longer supported
-warning karma > glob > inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
-[2/4] Fetching packages...
-[3/4] Linking dependencies...
-warning "@angular-devkit/build-angular > @vitejs/plugin-basic-ssl@1.1.0" has unmet peer dependency "vite@^3.0.0 || ^4.0.0 || ^5.0.0".
-warning "@angular-devkit/build-angular > @angular/build > @inquirer/confirm@5.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular-devkit/build-angular > @angular/build > @inquirer/confirm > @inquirer/type@3.0.1" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts@7.1.0" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/expand@4.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/checkbox@4.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/editor@4.1.0" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/password@4.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/number@3.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/search@3.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/select@4.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/rawlist@4.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/input@4.0.2" has unmet peer dependency "@types/node@>=18".
-[4/4] Building fresh packages...
-success Saved lockfile.
-Done in 17.50s.
-
-real    0m17.863s
-user    0m12.876s
-sys     0m2.230s
-Fri Nov 22 07:54:38 PM EST 2024
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-From github.com:angulareighteen/angulareighteen.github.io
- * branch            master     -> FETCH_HEAD
-Already up to date.
-Everything up-to-date
-yarn install v1.22.22
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.60s.
-yarn run v1.22.22
-$ ng update
-Using package manager: yarn
-Collecting installed dependencies...
-Found 27 dependencies.
-    We analyzed your package.json and everything seems to be in order. Good work!
-Done in 2.77s.
-yarn run v1.22.22
-$ ng build
-Initial chunk files   | Names         |  Raw size | Estimated transfer size
-chunk-I6WO6DMZ.js     | -             | 114.11 kB |                33.70 kB
-main-ZYUJU5LJ.js      | main          |  98.22 kB |                25.34 kB
-styles-U4H6PSGJ.css   | styles        |  53.25 kB |                 5.25 kB
-polyfills-FFHMD2TL.js | polyfills     |  34.52 kB |                11.28 kB
-
-                      | Initial total | 300.09 kB |                75.57 kB
-
-Lazy chunk files      | Names         |  Raw size | Estimated transfer size
-chunk-6VKC6WYA.js     | browser       |  67.49 kB |                17.70 kB
-
-Application bundle generation complete. [8.485 seconds]
-
-▲ [WARNING] angular:styles/component:css;802bd11d2fffcfccea9b81d73128145c62e67559689fbf7b080b6d250733a2b1;/home/kushal/source/angulareighteen/src/app/app.component.html exceeded maximum budget. Budget 2.05 kB was not met by 878 bytes with a total of 2.93 kB.
-
-
-Output location: /home/kushal/source/angulareighteen/docs
-
-Done in 9.74s.
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-From github.com:angulareighteen/angulareighteen.github.io
- * branch            master     -> FETCH_HEAD
-Already up to date.
-Everything up-to-date
-yarn run v1.22.22
-$ ng test
-✔ Browser application bundle generation complete.
-22 11 2024 19:55:02.624:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
-22 11 2024 19:55:02.626:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
-22 11 2024 19:55:02.636:INFO [launcher]: Starting browser Firefox
-22 11 2024 19:55:05.776:INFO [Firefox 128.0 (Linux x86_64)]: Connected on socket ChVGwJfNSrZ9G42mAAAB with id 65874822
-Firefox 128.0 (Linux x86_64): Executed 3 of 3 SUCCESS (0.283 secs / 0.223 secs)
-TOTAL: 3 SUCCESS
-Done in 11.55s.
-yarn run v1.22.22
-$ ng update @angular/core @angular/cli @angular/material
-Using package manager: yarn
-Collecting installed dependencies...
-Found 27 dependencies.
-Fetching dependency metadata from registry...
-Package '@angular/core' is already up to date.
-Package '@angular/cli' is already up to date.
-Package '@angular/material' is already up to date.
-Done in 1.80s.
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-From github.com:angulareighteen/angulareighteen.github.io
- * branch            master     -> FETCH_HEAD
-Already up to date.
-Everything up-to-date
-Latest version:     1.0.30001683
-Installed version:  1.0.30001683
-caniuse-lite is up to date
-caniuse-lite has been successfully updated
-
-No target browser changes
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-From github.com:angulareighteen/angulareighteen.github.io
- * branch            master     -> FETCH_HEAD
-Already up to date.
-Everything up-to-date
-* remote origin
-  Fetch URL: git@github.com:angulareighteen/angulareighteen.github.io.git
-  Push  URL: git@github.com:angulareighteen/angulareighteen.github.io.git
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local branch configured for 'git pull':
-    master merges with remote master
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Fri Nov 22 07:55:15 PM EST 2024
-
-real    0m56.408s
-user    0m59.769s
-sys     0m7.234s
-Fri Nov 22 07:55:15 PM EST 2024
-/home/kushal/src/angular/mycontacts/update.sh: line 10: nvm: command not found
-/home/kushal/src/angular/mycontacts/update.sh: line 11: nvm: command not found
-v22.11.0
-10.9.0
-
-changed 1 package in 786ms
-Fri Nov 22 07:55:16 PM EST 2024
-Fri Nov 22 07:55:16 PM EST 2024
-yarn install v1.22.22
-info No lockfile found.
-[1/4] Resolving packages...
-warning karma > glob@7.2.3: Glob versions prior to v9 are no longer supported
-warning karma > rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
-warning karma > rimraf > glob@7.2.3: Glob versions prior to v9 are no longer supported
-warning karma > glob > inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
-warning karma-coverage-istanbul-reporter > istanbul-lib-source-maps > rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
-warning karma-coverage-istanbul-reporter > istanbul-lib-source-maps > rimraf > glob@7.2.3: Glob versions prior to v9 are no longer supported
-[2/4] Fetching packages...
-[3/4] Linking dependencies...
-warning "@angular-devkit/build-angular > @vitejs/plugin-basic-ssl@1.1.0" has unmet peer dependency "vite@^3.0.0 || ^4.0.0 || ^5.0.0".
-[4/4] Building fresh packages...
-success Saved lockfile.
-Done in 16.37s.
-
-real    0m16.630s
-user    0m12.700s
-sys     0m1.998s
-Fri Nov 22 07:55:33 PM EST 2024
-On branch master
-nothing to commit, working tree clean
-On branch master
-nothing to commit, working tree clean
-From github.com:kusl/mycontacts
- * branch            master     -> FETCH_HEAD
-Current branch master is up to date.
-Enumerating objects: 13, done.
-Counting objects: 100% (13/13), done.
-Delta compression using up to 4 threads
-Compressing objects: 100% (8/8), done.
-Writing objects: 100% (8/8), 1.26 KiB | 1.26 MiB/s, done.
-Total 8 (delta 6), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (6/6), completed with 5 local objects.
-To github.com:kusl/mycontacts.git
-   1851be7..9574f3c  master -> master
-yarn install v1.22.22
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.63s.
-yarn run v1.22.22
-$ ng update
-Using package manager: yarn
-Collecting installed dependencies...
-Found 28 dependencies.
-    We analyzed your package.json and everything seems to be in order. Good work!
-Done in 3.02s.
-yarn run v1.22.22
-$ ng build
-Initial chunk files | Names         |  Raw size | Estimated transfer size
-chunk-Z3QRDSSJ.js   | -             | 119.77 kB |                35.11 kB
-main-4IGC7X44.js    | main          | 106.09 kB |                27.13 kB
-styles-CXQUZ3PB.css | styles        |   6.98 kB |                 1.13 kB
-
-                    | Initial total | 232.84 kB |                63.37 kB
-
-Lazy chunk files    | Names         |  Raw size | Estimated transfer size
-chunk-QOEJKQYO.js   | browser       |  67.49 kB |                17.70 kB
-
-Application bundle generation complete. [4.597 seconds]
-
-Output location: /home/kushal/src/angular/mycontacts/dist/mycontacts
-
-Done in 5.87s.
-On branch master
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        docs/
-
-nothing added to commit but untracked files present (use "git add" to track)
-[master a25d5d4] add all files
- 8 files changed, 409 insertions(+)
- create mode 100644 docs/3rdpartylicenses.txt
- create mode 100644 docs/browser/chunk-QOEJKQYO.js
- create mode 100644 docs/browser/chunk-Z3QRDSSJ.js
- create mode 100644 docs/browser/favicon.ico
- create mode 100644 docs/browser/index.html
- create mode 100644 docs/browser/main-4IGC7X44.js
- create mode 100644 docs/browser/styles-CXQUZ3PB.css
- create mode 100644 docs/prerendered-routes.json
-From github.com:kusl/mycontacts
- * branch            master     -> FETCH_HEAD
-Current branch master is up to date.
-Enumerating objects: 13, done.
-Counting objects: 100% (13/13), done.
-Delta compression using up to 4 threads
-Compressing objects: 100% (11/11), done.
-Writing objects: 100% (12/12), 100.66 KiB | 6.71 MiB/s, done.
-Total 12 (delta 1), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To github.com:kusl/mycontacts.git
-   9574f3c..a25d5d4  master -> master
-yarn run v1.22.22
-$ ng test
-✔ Browser application bundle generation complete.
-22 11 2024 19:55:55.229:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
-22 11 2024 19:55:55.231:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
-22 11 2024 19:55:55.240:INFO [launcher]: Starting browser Firefox
-22 11 2024 19:55:58.602:INFO [Firefox 128.0 (Linux x86_64)]: Connected on socket MlkEd58Hh1azEpVTAAAB with id 37239963
-Firefox 128.0 (Linux x86_64): Executed 3 of 3 SUCCESS (0.266 secs / 0.236 secs)
-TOTAL: 3 SUCCESS
-TOTAL: 3 SUCCESS
-Done in 12.26s.
-yarn run v1.22.22
-$ ng update @angular/core @angular/cli @angular/material
-Using package manager: yarn
-Collecting installed dependencies...
-Found 28 dependencies.
-Fetching dependency metadata from registry...
-Package '@angular/core' is already up to date.
-Package '@angular/cli' is already up to date.
-Package '@angular/material' is already up to date.
-Done in 1.58s.
-On branch master
-nothing to commit, working tree clean
-From github.com:kusl/mycontacts
- * branch            master     -> FETCH_HEAD
-Already up to date.
-Everything up-to-date
-Latest version:     1.0.30001683
-Installed version:  1.0.30001683
-caniuse-lite is up to date
-caniuse-lite has been successfully updated
-
-No target browser changes
-On branch master
-nothing to commit, working tree clean
-On branch master
-nothing to commit, working tree clean
-From github.com:kusl/mycontacts
- * branch            master     -> FETCH_HEAD
-Already up to date.
-Everything up-to-date
-* remote origin
-  Fetch URL: git@github.com:kusl/mycontacts.git
-  Push  URL: git@github.com:kusl/mycontacts.git
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Fri Nov 22 07:56:07 PM EST 2024
-
-real    0m52.263s
-user    0m49.193s
-sys     0m6.515s
-kushal@colorado:~$ sudo echo "Current date and time: $(date)"; free -h; df -h; sudo ip addr; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; export DEBIAN_FRONTEND=noninteractive; time sudo apt update; time sudo apt -y upgrade; time sudo apt -y full-upgrade; time sudo apt -y autoremove; time sudo reboot;
-[sudo] password for kushal:
-Current date and time: Fri Nov 22 07:57:04 PM EST 2024
-               total        used        free      shared  buff/cache   available
-Mem:           3.7Gi       1.7Gi       1.3Gi       8.7Mi       1.1Gi       2.1Gi
-Swap:          975Mi       698Mi       277Mi
-Filesystem                     Size  Used Avail Use% Mounted on
-udev                           1.9G     0  1.9G   0% /dev
-tmpfs                          381M  1.5M  380M   1% /run
-/dev/mapper/colorado--vg-root  915G  415G  454G  48% /
-tmpfs                          1.9G     0  1.9G   0% /dev/shm
-tmpfs                          5.0M  8.0K  5.0M   1% /run/lock
-/dev/sda1                      455M  149M  282M  35% /boot
-tmpfs                          381M   60K  381M   1% /run/user/113
-tmpfs                          381M   52K  381M   1% /run/user/1000
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    inet 127.0.0.1/8 scope host lo
-       valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host noprefixroute
-       valid_lft forever preferred_lft forever
-2: enp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
-    link/ether d0:67:e5:18:40:c1 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.0.102/24 brd 192.168.0.255 scope global dynamic noprefixroute enp3s0
-       valid_lft 6542sec preferred_lft 6542sec
-    inet6 fe80::d267:e5ff:fe18:40c1/64 scope link noprefixroute
-       valid_lft forever preferred_lft forever
-3: wlx34e894d0564e: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
-    link/ether 34:e8:94:d0:56:4e brd ff:ff:ff:ff:ff:ff
-4: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
-    link/ether 02:42:22:9e:b3:91 brd ff:ff:ff:ff:ff:ff
-    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
-       valid_lft forever preferred_lft forever
-    inet6 fe80::42:22ff:fe9e:b391/64 scope link
-       valid_lft forever preferred_lft forever
-5: br-2f8ddf5bc2ec: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
-    link/ether 02:42:91:97:1a:64 brd ff:ff:ff:ff:ff:ff
-    inet 172.19.0.1/16 brd 172.19.255.255 scope global br-2f8ddf5bc2ec
-       valid_lft forever preferred_lft forever
-6: br-44e2aa3623ed: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
-    link/ether 02:42:55:8d:ac:a8 brd ff:ff:ff:ff:ff:ff
-    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-44e2aa3623ed
-       valid_lft forever preferred_lft forever
-8: veth39eb629@if7: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default
-    link/ether 32:3c:fa:aa:7f:c2 brd ff:ff:ff:ff:ff:ff link-netnsid 0
-    inet6 fe80::303c:faff:feaa:7fc2/64 scope link
-       valid_lft forever preferred_lft forever
-10: veth4826be4@if9: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default
-    link/ether ea:60:80:fe:89:33 brd ff:ff:ff:ff:ff:ff link-netnsid 1
-    inet6 fe80::e860:80ff:fefe:8933/64 scope link
-       valid_lft forever preferred_lft forever
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=2.06 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=1.11 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=5.60 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=1.67 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=1.28 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=1.27 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=1.44 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=4.90 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=2.43 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=2.05 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=1.77 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=1.59 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=18.3 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=1.38 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=1.39 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=12.0 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=1.47 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.975 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=1.41 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=1.29 ms
-
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19029ms
-rtt min/avg/max/mdev = 0.975/3.269/18.271/4.245 ms
-
-real    0m19.069s
-user    0m0.005s
-sys     0m0.004s
-PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=1.12 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=1.46 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=6.95 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=15.5 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=3.57 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=13.6 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=13.5 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=6.71 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=1.44 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=2.30 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=1.21 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=1.45 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=1.51 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=1.09 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=1.26 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=3.22 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=1.12 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=1.16 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=3.04 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=1.13 ms
-
---- kalimati.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19028ms
-rtt min/avg/max/mdev = 1.092/4.115/15.456/4.565 ms
-
-real    0m19.073s
-user    0m0.004s
-sys     0m0.006s
-PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=1.15 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=1.53 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=20.3 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=2.99 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=1.17 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=9.47 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=10.3 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=1.41 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=1.98 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=7.32 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=1.55 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=1.05 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=3.96 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=1.60 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=1.53 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=15.7 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=5.48 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=4.83 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=4.58 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=39.2 ms
-
---- colorado.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19029ms
-rtt min/avg/max/mdev = 1.054/6.851/39.190/9.004 ms
-
-real    0m19.130s
-user    0m0.005s
-sys     0m0.005s
-Current date and time: Fri Nov 22 07:58:06 PM EST 2024
-Hit:1 http://deb.debian.org/debian bookworm InRelease
-Get:2 http://security.debian.org/debian-security bookworm-security InRelease [48.0 kB]
-Get:3 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
-Get:4 http://security.debian.org/debian-security bookworm-security/main Sources [126 kB]
-Get:5 http://security.debian.org/debian-security bookworm-security/main amd64 Packages [204 kB]
-Fetched 434 kB in 1s (778 kB/s)
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-All packages are up to date.
-
-real    0m1.872s
-user    0m0.001s
-sys     0m0.010s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-
-real    0m0.541s
-user    0m0.007s
-sys     0m0.003s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-
-real    0m0.572s
-user    0m0.006s
-sys     0m0.005s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-
-real    0m0.487s
-user    0m0.002s
-sys     0m0.006s
-
-Broadcast message from root@colorado on pts/5 (Fri 2024-11-22 19:58:10 EST):
-
-The system will reboot now!
-
-
-real    0m0.053s
-user    0m0.000s
-sys     0m0.009s
-kushal@colorado:~$ Connection to colorado closed by remote host.
-Connection to colorado closed.
-PS C:\Users\kushal> ssh kusfedoravm
-kushal@kusfedoravm's password:
-Last login: Thu Nov 21 08:12:19 2024 from fe80::975c:f636:bfb:5026%eth0
-kushal@kusfedoravm:~$ ip addr; sudo echo "Current date and time: $(date)"; free -h; df -h; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot -y;
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    inet 127.0.0.1/8 scope host lo
-       valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host noprefixroute
-       valid_lft forever preferred_lft forever
-2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
-    link/ether 00:15:5d:00:0f:02 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.0.94/24 brd 192.168.0.255 scope global dynamic noprefixroute eth0
-       valid_lft 6637sec preferred_lft 6637sec
-    inet6 fe80::e9d4:f8c2:22bf:21a9/64 scope link noprefixroute
-       valid_lft forever preferred_lft forever
-[sudo] password for kushal:
-Current date and time: Fri Nov 22 07:58:39 PM EST 2024
-               total        used        free      shared  buff/cache   available
-Mem:           7.7Gi       944Mi       5.1Gi        14Mi       2.0Gi       6.8Gi
-Swap:          7.7Gi          0B       7.7Gi
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda3        31G  5.7G   24G  20% /
-devtmpfs        4.0M     0  4.0M   0% /dev
-tmpfs           3.9G  8.0K  3.9G   1% /dev/shm
-efivarfs        128M  6.8K  128M   1% /sys/firmware/efi/efivars
-tmpfs           1.6G  1.2M  1.6G   1% /run
-tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-journald.service
-tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-network-generator.service
-tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-udev-load-credentials.service
-tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-tmpfiles-setup-dev-early.service
-tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-sysctl.service
-tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-tmpfiles-setup-dev.service
-tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-vconsole-setup.service
-tmpfs           3.9G  8.0K  3.9G   1% /tmp
-/dev/sda3        31G  5.7G   24G  20% /home
-/dev/sda2       974M  341M  567M  38% /boot
-/dev/sda1       599M   20M  580M   4% /boot/efi
-tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-tmpfiles-setup.service
-tmpfs           1.0M     0  1.0M   0% /run/credentials/systemd-resolved.service
-tmpfs           794M   88K  794M   1% /run/user/42
-tmpfs           794M   72K  794M   1% /run/user/1000
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.458 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.552 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.332 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.429 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.505 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.376 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.354 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.651 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.569 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.453 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.373 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.427 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.540 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.415 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.475 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.445 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.764 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.405 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.478 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.567 ms
-
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19431ms
-rtt min/avg/max/mdev = 0.332/0.478/0.764/0.103 ms
-
-real    0m19.475s
-user    0m0.001s
-sys     0m0.005s
-PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.568 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.407 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.354 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.592 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.451 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.357 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.480 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.308 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=0.345 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.354 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.739 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=1.26 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.388 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.405 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.297 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.339 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.322 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.887 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.441 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.413 ms
-
---- kalimati.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19415ms
-rtt min/avg/max/mdev = 0.297/0.485/1.257/0.229 ms
-
-real    0m19.456s
-user    0m0.001s
-sys     0m0.004s
-PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=0.430 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=0.395 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=0.366 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=0.605 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=0.391 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=0.739 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=0.391 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=0.573 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=1.23 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=0.552 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=0.376 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=0.443 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=0.417 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=0.345 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.412 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=0.375 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=0.567 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.539 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=0.579 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=0.445 ms
-
---- colorado.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19481ms
-rtt min/avg/max/mdev = 0.345/0.508/1.231/0.194 ms
-
-real    0m19.520s
-user    0m0.001s
-sys     0m0.004s
-Current date and time: Fri Nov 22 07:59:41 PM EST 2024
-Updating and loading repositories:
- Fedora 41 - x86_64 - Updates                                                                                                                                                                                                                                                       100% | 130.9 KiB/s |  30.4 KiB |  00m00s
- Fedora 41 - x86_64 - Updates                                                                                                                                                                                                                                                       100% |   1.8 MiB/s |   1.3 MiB |  00m01s
-Repositories loaded.
-Package                                                                                                       Arch                   Version                                                                                                       Repository                                                           Size
-Upgrading:
- fedora-release-common                                                                                        noarch                 41-28                                                                                                         updates                                                          19.7 KiB
-   replacing fedora-release-common                                                                            noarch                 41-27                                                                                                         @stored_transaction                                              19.6 KiB
- fedora-release-identity-workstation                                                                          noarch                 41-28                                                                                                         updates                                                           2.2 KiB
-   replacing fedora-release-identity-workstation                                                              noarch                 41-27                                                                                                         @stored_transaction                                               2.2 KiB
- fedora-release-workstation                                                                                   noarch                 41-28                                                                                                         updates                                                           0.0   B
-   replacing fedora-release-workstation                                                                       noarch                 41-27                                                                                                         @stored_transaction                                               0.0   B
- grub2-common                                                                                                 noarch                 1:2.12-13.fc41                                                                                                updates                                                           6.1 MiB
-   replacing grub2-common                                                                                     noarch                 1:2.12-10.fc41                                                                                                fedora                                                            6.1 MiB
- grub2-efi-ia32                                                                                               x86_64                 1:2.12-13.fc41                                                                                                updates                                                           5.2 MiB
-   replacing grub2-efi-ia32                                                                                   x86_64                 1:2.12-10.fc41                                                                                                fedora                                                            5.2 MiB
- grub2-efi-ia32-cdboot                                                                                        x86_64                 1:2.12-13.fc41                                                                                                updates                                                           5.2 MiB
-   replacing grub2-efi-ia32-cdboot                                                                            x86_64                 1:2.12-10.fc41                                                                                                fedora                                                            5.2 MiB
- grub2-efi-x64                                                                                                x86_64                 1:2.12-13.fc41                                                                                                updates                                                           6.2 MiB
-   replacing grub2-efi-x64                                                                                    x86_64                 1:2.12-10.fc41                                                                                                fedora                                                            6.2 MiB
- grub2-efi-x64-cdboot                                                                                         x86_64                 1:2.12-13.fc41                                                                                                updates                                                           6.2 MiB
-   replacing grub2-efi-x64-cdboot                                                                             x86_64                 1:2.12-10.fc41                                                                                                fedora                                                            6.2 MiB
- grub2-pc                                                                                                     x86_64                 1:2.12-13.fc41                                                                                                updates                                                          31.0   B
-   replacing grub2-pc                                                                                         x86_64                 1:2.12-10.fc41                                                                                                fedora                                                           31.0   B
- grub2-pc-modules                                                                                             noarch                 1:2.12-13.fc41                                                                                                updates                                                           3.2 MiB
-   replacing grub2-pc-modules                                                                                 noarch                 1:2.12-10.fc41                                                                                                fedora                                                            3.2 MiB
- grub2-tools                                                                                                  x86_64                 1:2.12-13.fc41                                                                                                updates                                                           7.7 MiB
-   replacing grub2-tools                                                                                      x86_64                 1:2.12-10.fc41                                                                                                fedora                                                            7.7 MiB
- grub2-tools-efi                                                                                              x86_64                 1:2.12-13.fc41                                                                                                updates                                                           2.5 MiB
-   replacing grub2-tools-efi                                                                                  x86_64                 1:2.12-10.fc41                                                                                                fedora                                                            2.5 MiB
- grub2-tools-extra                                                                                            x86_64                 1:2.12-13.fc41                                                                                                updates                                                           5.0 MiB
-   replacing grub2-tools-extra                                                                                x86_64                 1:2.12-10.fc41                                                                                                fedora                                                            5.0 MiB
- grub2-tools-minimal                                                                                          x86_64                 1:2.12-13.fc41                                                                                                updates                                                           3.0 MiB
-   replacing grub2-tools-minimal                                                                              x86_64                 1:2.12-10.fc41                                                                                                fedora                                                            3.0 MiB
- libsndfile                                                                                                   x86_64                 1.2.2-5.fc41                                                                                                  updates                                                         534.0 KiB
-   replacing libsndfile                                                                                       x86_64                 1.2.2-4.fc41                                                                                                  fedora                                                          534.0 KiB
- selinux-policy                                                                                               noarch                 41.26-1.fc41                                                                                                  updates                                                          31.4 KiB
-   replacing selinux-policy                                                                                   noarch                 41.25-1.fc41                                                                                                  @stored_transaction                                              31.4 KiB
- selinux-policy-targeted                                                                                      noarch                 41.26-1.fc41                                                                                                  updates                                                          18.6 MiB
-   replacing selinux-policy-targeted                                                                          noarch                 41.25-1.fc41                                                                                                  @stored_transaction                                              18.6 MiB
-
-Transaction Summary:
- Upgrading:         17 packages
- Replacing:         17 package
-
-Total size of inbound packages is 21 MiB. Need to download 21 MiB.
-After this operation, 5 KiB extra will be used (install 69 MiB, remove 69 MiB).
-[ 1/17] fedora-release-workstation-0:41-28.noarch                                                                                                                                                                                                                                   100% |  60.8 KiB/s |  12.7 KiB |  00m00s
-[ 2/17] fedora-release-identity-workstation-0:41-28.noarch                                                                                                                                                                                                                          100% |  52.7 KiB/s |  15.1 KiB |  00m00s
-[ 3/17] fedora-release-common-0:41-28.noarch                                                                                                                                                                                                                                        100% |  80.1 KiB/s |  23.5 KiB |  00m00s
-[ 4/17] grub2-tools-minimal-1:2.12-13.fc41.x86_64                                                                                                                                                                                                                                   100% |   1.4 MiB/s | 610.0 KiB |  00m00s
-[ 5/17] grub2-common-1:2.12-13.fc41.noarch                                                                                                                                                                                                                                          100% |   1.9 MiB/s |   1.0 MiB |  00m01s
-[ 6/17] grub2-tools-extra-1:2.12-13.fc41.x86_64                                                                                                                                                                                                                                     100% |   1.6 MiB/s | 831.8 KiB |  00m00s
-[ 7/17] grub2-tools-efi-1:2.12-13.fc41.x86_64                                                                                                                                                                                                                                       100% |   4.0 MiB/s | 542.1 KiB |  00m00s
-[ 8/17] grub2-pc-1:2.12-13.fc41.x86_64                                                                                                                                                                                                                                              100% | 206.8 KiB/s |  16.3 KiB |  00m00s
-[ 9/17] grub2-tools-1:2.12-13.fc41.x86_64                                                                                                                                                                                                                                           100% |   8.5 MiB/s |   1.8 MiB |  00m00s
-[10/17] grub2-pc-modules-1:2.12-13.fc41.noarch                                                                                                                                                                                                                                      100% |   5.4 MiB/s |   1.1 MiB |  00m00s
-[11/17] grub2-efi-ia32-cdboot-1:2.12-13.fc41.x86_64                                                                                                                                                                                                                                 100% |  10.2 MiB/s |   2.1 MiB |  00m00s
-[12/17] grub2-efi-x64-1:2.12-13.fc41.x86_64                                                                                                                                                                                                                                         100% |   8.2 MiB/s |   2.1 MiB |  00m00s
-[13/17] grub2-efi-x64-cdboot-1:2.12-13.fc41.x86_64                                                                                                                                                                                                                                  100% |   7.5 MiB/s |   2.1 MiB |  00m00s
-[14/17] grub2-efi-ia32-1:2.12-13.fc41.x86_64                                                                                                                                                                                                                                        100% |   8.6 MiB/s |   2.1 MiB |  00m00s
-[15/17] libsndfile-0:1.2.2-5.fc41.x86_64                                                                                                                                                                                                                                            100% | 773.5 KiB/s | 213.5 KiB |  00m00s
-[16/17] selinux-policy-0:41.26-1.fc41.noarch                                                                                                                                                                                                                                        100% | 193.2 KiB/s |  53.7 KiB |  00m00s
-[17/17] selinux-policy-targeted-0:41.26-1.fc41.noarch                                                                                                                                                                                                                               100% |   6.2 MiB/s |   6.7 MiB |  00m01s
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[17/17] Total                                                                                                                                                                                                                                                                       100% |   7.4 MiB/s |  21.2 MiB |  00m03s
-Testing offline transaction
-Transaction stored to be performed offline. Run `dnf5 offline reboot` to reboot and run the transaction. To cancel the transaction and delete the downloaded files, use `dnf5 offline clean`.
-Complete!
-
-real    0m6.298s
-user    0m0.007s
-sys     0m0.019s
-The system will now reboot to perform the offline transaction initiated by the following command:
-        dnf offline-upgrade download -y
-
-real    0m0.176s
-user    0m0.012s
-sys     0m0.012s
-kushal@kusfedoravm:~$ Connection to kusfedoravm closed by remote host.
-Connection to kusfedoravm closed.
-PS C:\Users\kushal> ssh colorado
-Linux colorado 6.1.0-27-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.115-1 (2024-11-01) x86_64
-
-The programs included with the Debian GNU/Linux system are free software;
-the exact distribution terms for each program are described in the
-individual files in /usr/share/doc/*/copyright.
-
-Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
-permitted by applicable law.
-Last login: Fri Nov 22 19:41:15 2024 from fe80::975c:f636:bfb:5026%enp3s0
-kushal@colorado:~$ cd /home/kushal/src/small/; docker run --name dab --restart=unless-stopped --publish 5000:5000 --detach --mount type=bind,source=$(pwd)/dab-config.json,target=/App/dab-config.json,readonly mcr.microsoft.com/azure-databases/data-api-builder
-docker: Error response from daemon: Conflict. The container name "/dab" is already in use by container "5cbb5fcb6347a0aaea84639af85425900823048251b992443c2b32c811f6a13b". You have to remove (or rename) that container to be able to reuse that name.
-See 'docker run --help'.
-kushal@colorado:~/src/small$ docker ps
-CONTAINER ID   IMAGE                    COMMAND                  CREATED        STATUS                   PORTS                                       NAMES
-79664f33b7d8   louislam/uptime-kuma:1   "/usr/bin/dumb-init …"   9 months ago   Up 4 minutes (healthy)   0.0.0.0:3001->3001/tcp, :::3001->3001/tcp   uptime-kuma
-kushal@colorado:~/src/small$ docker rm 5cbb5fcb6347a0aaea84639af85425900823048251b992443c2b32c811f6a13b
-5cbb5fcb6347a0aaea84639af85425900823048251b992443c2b32c811f6a13b
-kushal@colorado:~/src/small$ cd /home/kushal/src/small/; docker run --name dab --restart=unless-stopped --publish 5000:5000 --detach --mount type=bind,source=$(pwd)/dab-config.json,target=/App/dab-config.json,readonly mcr.microsoft.com/azure-databases/data-api-builder
-f02de4bec190e57a1575e96e861072698470d229a621fbcbd53333154a5d6927
-kushal@colorado:~/src/small$ time bash ~/src/angular/coloradoquiz/update.sh; time bash ~/source/angulareighteen/update.sh; time bash ~/src/angular/mycontacts/update.sh;
-ping: sock4.fd: 3 (socktype: SOCK_RAW), sock6.fd: 4 (socktype: SOCK_RAW), hints.ai_family: AF_UNSPEC
-
-[master 8db42bc1c] add timestamp
- 2 files changed, 25 insertions(+), 310 deletions(-)
-[master f4ce28b17] begin add system status
- 2 files changed, 39 insertions(+)
-[master 596b87e58] add system status
- 1 file changed, 6 insertions(+)
-[master 66b80cae6] end add system status
- 1 file changed, 1 insertion(+)
-[master 7593c338c] begin update node
- 2 files changed, 29 insertions(+)
-Installing latest LTS version.
-v22.11.0 is already installed.
-Now using node v22.11.0 (npm v10.9.0)
-
-real    0m0.940s
-user    0m0.472s
-sys     0m0.130s
-Now using node v22.11.0 (npm v10.9.0)
-
-real    0m0.258s
-user    0m0.244s
-sys     0m0.072s
-
-changed 297 packages in 19s
-
-52 packages are looking for funding
-  run `npm fund` for details
-
-real    0m18.877s
-user    0m10.934s
-sys     0m2.349s
-
-real    0m1.427s
-user    0m1.241s
-sys     0m0.188s
-
-real    0m0.881s
-user    0m1.356s
-sys     0m0.062s
-[master fb3025656] end update node
- 2 files changed, 67 insertions(+)
-On branch master
-Your branch is ahead of 'origin/master' by 6 commits.
-  (use "git push" to publish your local commits)
-
-nothing to commit, working tree clean
-yarn run v1.22.22
-$ ng update @angular/core @angular/cli @angular/material @angular/localize
-Using package manager: yarn
-Collecting installed dependencies...
-Found 31 dependencies.
-Fetching dependency metadata from registry...
-Package '@angular/core' is already up to date.
-Package '@angular/cli' is already up to date.
-Package '@angular/material' is already up to date.
-Package '@angular/localize' is already up to date.
-Done in 2.55s.
-
-real    0m2.801s
-user    0m1.714s
-sys     0m0.363s
-On branch master
-Your branch is ahead of 'origin/master' by 6 commits.
-  (use "git push" to publish your local commits)
-
-nothing to commit, working tree clean
-
-real    0m3.584s
-user    0m3.811s
-sys     0m0.376s
-[master 815a31c97] begin prepare to build angular
- 2 files changed, 37 insertions(+)
-
-real    0m16.165s
-user    0m35.085s
-sys     0m2.139s
-[master ae15948da] end prepare to build angular
- 1 file changed, 17 insertions(+)
-[master f0cb52224] begin prepare to unit test angular
- 2 files changed, 28 insertions(+), 378 deletions(-)
-- Generating browser application bundles (phase: setup)...
-✔ Browser application bundle generation complete.
-✔ Browser application bundle generation complete.
-✔ Browser application bundle generation complete.
-✔ Browser application bundle generation complete.
-error Command failed with exit code 1.
-
-real    0m53.929s
-user    0m41.502s
-sys     0m4.143s
-[master 7fef7ae2c] end prepare to unit test angular
- 2 files changed, 158 insertions(+)
-
-real    0m0.375s
-user    0m0.259s
-sys     0m0.084s
-[master 8bd8f4ae7] add timestamp
- 2 files changed, 33 insertions(+)
-From github.com:teamkushal/coloradoquiz
- * branch                master     -> FETCH_HEAD
-Current branch master is up to date.
-On branch master
-Your branch is ahead of 'origin/master' by 12 commits.
-  (use "git push" to publish your local commits)
-
-nothing to commit, working tree clean
-Enumerating objects: 52, done.
-Counting objects: 100% (52/52), done.
-Delta compression using up to 4 threads
-Compressing objects: 100% (44/44), done.
-Writing objects: 100% (46/46), 6.10 KiB | 2.03 MiB/s, done.
-Total 46 (delta 32), reused 1 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (32/32), completed with 6 local objects.
-To github.com:teamkushal/coloradoquiz.git
-   47ab05432..8bd8f4ae7  master -> master
-
-real    2m5.287s
-user    1m37.300s
-sys     0m10.690s
-Fri Nov 22 08:09:51 PM EST 2024
-/home/kushal/source/angulareighteen/update.sh: line 10: nvm: command not found
-/home/kushal/source/angulareighteen/update.sh: line 11: nvm: command not found
-v22.11.0
-10.9.0
-
-changed 1 package in 902ms
-Fri Nov 22 08:09:52 PM EST 2024
-Fri Nov 22 08:09:52 PM EST 2024
-yarn install v1.22.22
-info No lockfile found.
-[1/4] Resolving packages...
-warning karma > glob@7.2.3: Glob versions prior to v9 are no longer supported
-warning karma > rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
-warning karma > rimraf > glob@7.2.3: Glob versions prior to v9 are no longer supported
-warning karma > glob > inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
-[2/4] Fetching packages...
-[3/4] Linking dependencies...
-warning "@angular-devkit/build-angular > @vitejs/plugin-basic-ssl@1.1.0" has unmet peer dependency "vite@^3.0.0 || ^4.0.0 || ^5.0.0".
-warning "@angular-devkit/build-angular > @angular/build > @inquirer/confirm@5.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular-devkit/build-angular > @angular/build > @inquirer/confirm > @inquirer/type@3.0.1" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts@7.1.0" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/editor@4.1.0" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/search@3.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/select@4.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/expand@4.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/rawlist@4.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/password@4.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/input@4.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/checkbox@4.0.2" has unmet peer dependency "@types/node@>=18".
-warning "@angular/cli > @inquirer/prompts > @inquirer/number@3.0.2" has unmet peer dependency "@types/node@>=18".
-[4/4] Building fresh packages...
-success Saved lockfile.
-Done in 15.91s.
-
-real    0m16.265s
-user    0m12.342s
-sys     0m2.287s
-Fri Nov 22 08:10:08 PM EST 2024
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-From github.com:angulareighteen/angulareighteen.github.io
- * branch            master     -> FETCH_HEAD
-Already up to date.
-Everything up-to-date
+   9e51571..ef9a580  master -> master
 yarn install v1.22.22
 [1/4] Resolving packages...
 success Already up-to-date.
@@ -1487,7 +225,7 @@ Using package manager: yarn
 Collecting installed dependencies...
 Found 27 dependencies.
     We analyzed your package.json and everything seems to be in order. Good work!
-Done in 3.61s.
+Done in 2.70s.
 yarn run v1.22.22
 $ ng build
 Initial chunk files   | Names         |  Raw size | Estimated transfer size
@@ -1501,14 +239,14 @@ polyfills-FFHMD2TL.js | polyfills     |  34.52 kB |                11.28 kB
 Lazy chunk files      | Names         |  Raw size | Estimated transfer size
 chunk-6VKC6WYA.js     | browser       |  67.49 kB |                17.70 kB
 
-Application bundle generation complete. [8.751 seconds]
+Application bundle generation complete. [8.478 seconds]
 
 ▲ [WARNING] angular:styles/component:css;802bd11d2fffcfccea9b81d73128145c62e67559689fbf7b080b6d250733a2b1;/home/kushal/source/angulareighteen/src/app/app.component.html exceeded maximum budget. Budget 2.05 kB was not met by 878 bytes with a total of 2.93 kB.
 
 
 Output location: /home/kushal/source/angulareighteen/docs
 
-Done in 10.07s.
+Done in 9.85s.
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -1524,13 +262,13 @@ Everything up-to-date
 yarn run v1.22.22
 $ ng test
 ✔ Browser application bundle generation complete.
-22 11 2024 20:10:34.240:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
-22 11 2024 20:10:34.242:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
-22 11 2024 20:10:34.252:INFO [launcher]: Starting browser Firefox
-22 11 2024 20:10:36.894:INFO [Firefox 128.0 (Linux x86_64)]: Connected on socket oa8OTtS3-BRFk2JLAAAB with id 44014732
-Firefox 128.0 (Linux x86_64): Executed 3 of 3 SUCCESS (0.259 secs / 0.208 secs)
+23 11 2024 07:47:47.289:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
+23 11 2024 07:47:47.291:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
+23 11 2024 07:47:47.301:INFO [launcher]: Starting browser Firefox
+23 11 2024 07:47:51.330:INFO [Firefox 128.0 (Linux x86_64)]: Connected on socket smW5omabZtqSch8mAAAB with id 59589864
+Firefox 128.0 (Linux x86_64): Executed 3 of 3 SUCCESS (0.328 secs / 0.299 secs)
 TOTAL: 3 SUCCESS
-Done in 11.13s.
+Done in 21.74s.
 yarn run v1.22.22
 $ ng update @angular/core @angular/cli @angular/material
 Using package manager: yarn
@@ -1540,7 +278,7 @@ Fetching dependency metadata from registry...
 Package '@angular/core' is already up to date.
 Package '@angular/cli' is already up to date.
 Package '@angular/material' is already up to date.
-Done in 1.67s.
+Done in 1.43s.
 On branch master
 Your branch is up to date with 'origin/master'.
 
@@ -1577,20 +315,20 @@ Everything up-to-date
     master merges with remote master
   Local ref configured for 'git push':
     master pushes to master (up to date)
-Fri Nov 22 08:10:46 PM EST 2024
+Sat Nov 23 07:48:01 AM EST 2024
 
-real    0m55.645s
-user    1m0.599s
-sys     0m6.580s
-Fri Nov 22 08:10:46 PM EST 2024
+real    1m5.181s
+user    1m26.085s
+sys     0m8.775s
+Sat Nov 23 07:48:01 AM EST 2024
 /home/kushal/src/angular/mycontacts/update.sh: line 10: nvm: command not found
 /home/kushal/src/angular/mycontacts/update.sh: line 11: nvm: command not found
 v22.11.0
 10.9.0
 
-changed 1 package in 769ms
-Fri Nov 22 08:10:47 PM EST 2024
-Fri Nov 22 08:10:47 PM EST 2024
+changed 1 package in 774ms
+Sat Nov 23 07:48:02 AM EST 2024
+Sat Nov 23 07:48:02 AM EST 2024
 yarn install v1.22.22
 info No lockfile found.
 [1/4] Resolving packages...
@@ -1605,41 +343,46 @@ warning karma-coverage-istanbul-reporter > istanbul-lib-source-maps > rimraf > g
 warning "@angular-devkit/build-angular > @vitejs/plugin-basic-ssl@1.1.0" has unmet peer dependency "vite@^3.0.0 || ^4.0.0 || ^5.0.0".
 [4/4] Building fresh packages...
 success Saved lockfile.
-Done in 16.14s.
+Done in 15.82s.
 
-real    0m16.396s
-user    0m12.712s
-sys     0m1.941s
-Fri Nov 22 08:11:04 PM EST 2024
+real    0m16.068s
+user    0m12.740s
+sys     0m2.172s
+Sat Nov 23 07:48:18 AM EST 2024
 On branch master
-nothing to commit, working tree clean
-On branch master
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   yarn.lock
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[master 6333d28] add all files
+ 1 file changed, 96 insertions(+), 96 deletions(-)
 From github.com:kusl/mycontacts
  * branch            master     -> FETCH_HEAD
 Current branch master is up to date.
-Enumerating objects: 5, done.
-Counting objects: 100% (5/5), done.
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
 Delta compression using up to 4 threads
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 321 bytes | 321.00 KiB/s, done.
-Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 4.28 KiB | 876.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
 To github.com:kusl/mycontacts.git
-   a25d5d4..ef9e6db  master -> master
+   dafd680..6333d28  master -> master
 yarn install v1.22.22
 [1/4] Resolving packages...
 success Already up-to-date.
-Done in 0.63s.
+Done in 0.62s.
 yarn run v1.22.22
 $ ng update
 Using package manager: yarn
 Collecting installed dependencies...
 Found 28 dependencies.
     We analyzed your package.json and everything seems to be in order. Good work!
-Done in 3.52s.
+Done in 2.92s.
 yarn run v1.22.22
-$ ng build
+$ ng build --base-href=mycontacts
 Initial chunk files | Names         |  Raw size | Estimated transfer size
 chunk-Z3QRDSSJ.js   | -             | 119.77 kB |                35.11 kB
 main-4IGC7X44.js    | main          | 106.09 kB |                27.13 kB
@@ -1650,67 +393,30 @@ styles-CXQUZ3PB.css | styles        |   6.98 kB |                 1.13 kB
 Lazy chunk files    | Names         |  Raw size | Estimated transfer size
 chunk-QOEJKQYO.js   | browser       |  67.49 kB |                17.70 kB
 
-Application bundle generation complete. [4.835 seconds]
+Application bundle generation complete. [4.857 seconds]
 
 Output location: /home/kushal/src/angular/mycontacts/dist/mycontacts
 
-Done in 6.13s.
+Done in 6.15s.
 On branch master
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        deleted:    docs/3rdpartylicenses.txt
-        deleted:    docs/browser/chunk-QOEJKQYO.js
-        deleted:    docs/browser/chunk-Z3QRDSSJ.js
-        deleted:    docs/browser/favicon.ico
-        deleted:    docs/browser/index.html
-        deleted:    docs/browser/main-4IGC7X44.js
-        deleted:    docs/browser/styles-CXQUZ3PB.css
-        deleted:    docs/prerendered-routes.json
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-        docs/chunk-QOEJKQYO.js
-        docs/chunk-Z3QRDSSJ.js
-        docs/favicon.ico
-        docs/index.html
-        docs/main-4IGC7X44.js
-        docs/styles-CXQUZ3PB.css
-
-no changes added to commit (use "git add" and/or "git commit -a")
-[master 00ac8f0] add all files
- 8 files changed, 384 deletions(-)
- delete mode 100644 docs/3rdpartylicenses.txt
- rename docs/{browser => }/chunk-QOEJKQYO.js (100%)
- rename docs/{browser => }/chunk-Z3QRDSSJ.js (100%)
- rename docs/{browser => }/favicon.ico (100%)
- rename docs/{browser => }/index.html (100%)
- rename docs/{browser => }/main-4IGC7X44.js (100%)
- delete mode 100644 docs/prerendered-routes.json
- rename docs/{browser => }/styles-CXQUZ3PB.css (100%)
+nothing to commit, working tree clean
+On branch master
+nothing to commit, working tree clean
 From github.com:kusl/mycontacts
  * branch            master     -> FETCH_HEAD
-Current branch master is up to date.
-Enumerating objects: 3, done.
-Counting objects: 100% (3/3), done.
-Delta compression using up to 4 threads
-Compressing objects: 100% (2/2), done.
-Writing objects: 100% (2/2), 265 bytes | 265.00 KiB/s, done.
-Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To github.com:kusl/mycontacts.git
-   ef9e6db..00ac8f0  master -> master
+Already up to date.
+Everything up-to-date
 yarn run v1.22.22
 $ ng test
 ✔ Browser application bundle generation complete.
-22 11 2024 20:11:26.039:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
-22 11 2024 20:11:26.042:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
-22 11 2024 20:11:26.052:INFO [launcher]: Starting browser Firefox
-22 11 2024 20:11:28.695:INFO [Firefox 128.0 (Linux x86_64)]: Connected on socket _WzO401ZxlCQ8aAAAAAB with id 45045350
-Firefox 128.0 (Linux x86_64): Executed 3 of 3 SUCCESS (0.255 secs / 0.236 secs)
+23 11 2024 07:48:44.160:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
+23 11 2024 07:48:44.165:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
+23 11 2024 07:48:44.191:INFO [launcher]: Starting browser Firefox
+23 11 2024 07:48:47.903:INFO [Firefox 128.0 (Linux x86_64)]: Connected on socket vMSsyXsOUJEhBNzUAAAB with id 3393560
+Firefox 128.0 (Linux x86_64): Executed 3 of 3 SUCCESS (0.333 secs / 0.309 secs)
 TOTAL: 3 SUCCESS
 TOTAL: 3 SUCCESS
-Done in 11.17s.
+Done in 16.81s.
 yarn run v1.22.22
 $ ng update @angular/core @angular/cli @angular/material
 Using package manager: yarn
@@ -1720,7 +426,7 @@ Fetching dependency metadata from registry...
 Package '@angular/core' is already up to date.
 Package '@angular/cli' is already up to date.
 Package '@angular/material' is already up to date.
-Done in 1.99s.
+Done in 1.48s.
 On branch master
 nothing to commit, working tree clean
 From github.com:kusl/mycontacts
@@ -1749,1531 +455,41 @@ Everything up-to-date
     master tracked
   Local ref configured for 'git push':
     master pushes to master (up to date)
-Fri Nov 22 08:11:38 PM EST 2024
+Sat Nov 23 07:48:57 AM EST 2024
 
-real    0m51.951s
-user    0m49.736s
-sys     0m6.106s
-kushal@colorado:~/src/small$ crontab -e
-crontab: installing new crontab
-kushal@colorado:~/src/small$ sudo echo "Current date and time: $(date)"; free -h; df -h; sudo ip addr; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; export DEBIAN_FRONTEND=noninteractive; time sudo apt update; time sudo apt -y upgrade; time sudo apt -y full-upgrade; time sudo apt -y autoremove; time sudo reboot;
-[sudo] password for kushal:
-Current date and time: Fri Nov 22 08:13:57 PM EST 2024
-               total        used        free      shared  buff/cache   available
-Mem:           3.7Gi       1.3Gi       1.0Gi        39Mi       1.7Gi       2.4Gi
-Swap:          975Mi        23Mi       952Mi
-Filesystem                     Size  Used Avail Use% Mounted on
-udev                           1.9G     0  1.9G   0% /dev
-tmpfs                          381M  1.5M  380M   1% /run
-/dev/mapper/colorado--vg-root  915G  415G  454G  48% /
-tmpfs                          1.9G     0  1.9G   0% /dev/shm
-tmpfs                          5.0M  8.0K  5.0M   1% /run/lock
-/dev/sda1                      455M  149M  282M  35% /boot
-tmpfs                          381M   60K  381M   1% /run/user/113
-tmpfs                          381M   52K  381M   1% /run/user/1000
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    inet 127.0.0.1/8 scope host lo
-       valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host noprefixroute
-       valid_lft forever preferred_lft forever
-2: enp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
-    link/ether d0:67:e5:18:40:c1 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.0.102/24 brd 192.168.0.255 scope global dynamic noprefixroute enp3s0
-       valid_lft 6278sec preferred_lft 6278sec
-    inet6 fe80::d267:e5ff:fe18:40c1/64 scope link noprefixroute
-       valid_lft forever preferred_lft forever
-3: wlx34e894d0564e: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
-    link/ether 34:e8:94:d0:56:4e brd ff:ff:ff:ff:ff:ff
-4: br-2f8ddf5bc2ec: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
-    link/ether 02:42:b5:6c:8f:b9 brd ff:ff:ff:ff:ff:ff
-    inet 172.19.0.1/16 brd 172.19.255.255 scope global br-2f8ddf5bc2ec
-       valid_lft forever preferred_lft forever
-5: br-44e2aa3623ed: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
-    link/ether 02:42:80:9d:d2:c3 brd ff:ff:ff:ff:ff:ff
-    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-44e2aa3623ed
-       valid_lft forever preferred_lft forever
-6: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
-    link/ether 02:42:7e:6c:15:57 brd ff:ff:ff:ff:ff:ff
-    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
-       valid_lft forever preferred_lft forever
-    inet6 fe80::42:7eff:fe6c:1557/64 scope link
-       valid_lft forever preferred_lft forever
-8: veth3cc9b75@if7: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default
-    link/ether fa:aa:7f:89:f4:2d brd ff:ff:ff:ff:ff:ff link-netnsid 0
-    inet6 fe80::f8aa:7fff:fe89:f42d/64 scope link
-       valid_lft forever preferred_lft forever
-10: veth693a666@if9: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default
-    link/ether 2e:9a:23:ef:a0:4b brd ff:ff:ff:ff:ff:ff link-netnsid 1
-    inet6 fe80::2c9a:23ff:feef:a04b/64 scope link
-       valid_lft forever preferred_lft forever
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=1.08 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=1.22 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=49.7 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=2.69 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=2.50 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=1.12 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=1.30 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=1.29 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=17.7 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=8.26 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=1.53 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=1.43 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=1.85 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=14.9 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=1.69 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=1.44 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=3.63 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=1.48 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=1.98 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=1.15 ms
-
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19028ms
-rtt min/avg/max/mdev = 1.084/5.897/49.678/11.024 ms
-
-real    0m19.071s
-user    0m0.003s
-sys     0m0.006s
-PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=1.04 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=4.05 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=19.2 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=1.73 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=1.71 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=1.17 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=18.0 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=7.33 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=3.65 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=1.17 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=1.16 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=1.09 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=48.1 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=1.42 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=1.16 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=1.48 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=1.38 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=2.90 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=1.46 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=18.8 ms
-
---- kalimati.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19027ms
-rtt min/avg/max/mdev = 1.041/6.902/48.095/11.229 ms
-
-real    0m19.107s
-user    0m0.005s
-sys     0m0.005s
-PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=42.1 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=1.17 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=1.53 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=1.81 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=5.51 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=1.31 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=1.24 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=1.19 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=4.56 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=8.64 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=1.30 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=1.21 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=1.10 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=1.85 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=21.7 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=3.23 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=1.82 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=1.41 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=1.10 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=14.7 ms
-
---- colorado.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19028ms
-rtt min/avg/max/mdev = 1.095/5.922/42.077/9.792 ms
-
-real    0m19.130s
-user    0m0.000s
-sys     0m0.010s
-Current date and time: Fri Nov 22 08:15:07 PM EST 2024
-Hit:1 http://security.debian.org/debian-security bookworm-security InRelease
-Hit:2 http://deb.debian.org/debian bookworm InRelease
-Hit:3 http://deb.debian.org/debian bookworm-updates InRelease
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-All packages are up to date.
-
-real    0m1.846s
-user    0m0.004s
-sys     0m0.009s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-
-real    0m0.555s
-user    0m0.003s
-sys     0m0.009s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-
-real    0m0.584s
-user    0m0.005s
-sys     0m0.005s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-
-real    0m0.493s
-user    0m0.000s
-sys     0m0.008s
-
-Broadcast message from root@colorado on pts/6 (Fri 2024-11-22 20:15:11 EST):
-
-The system will reboot now!
-
-
-real    0m0.047s
-user    0m0.008s
-sys     0m0.000s
-kushal@colorado:~/src/small$ Connection to colorado closed by remote host.
+real    0m56.454s
+user    1m1.904s
+sys     0m7.650s
+kushal@colorado:~$ exit
+logout
 Connection to colorado closed.
-PS C:\Users\kushal> C:\Users\kushal\src\myhtml\fromnepal\public\omnibus.ps1
-Transcript started, output file is C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt
-
-Friday, November 22, 2024 8:15:56 PM
-     Removed 926 files, 454.1MiB total
-Friday, November 22, 2024 8:15:56 PM
-   Compiling windows_x86_64_msvc v0.52.6
-   Compiling proc-macro2 v1.0.89
-   Compiling unicode-ident v1.0.13
-   Compiling bytes v1.8.0
-   Compiling pin-project-lite v0.2.15
-   Compiling futures-core v0.3.31
-   Compiling autocfg v1.4.0
-   Compiling itoa v1.0.11
-   Compiling futures-sink v0.3.31
-   Compiling fnv v1.0.7
-   Compiling cfg-if v1.0.0
-   Compiling memchr v2.7.4
-   Compiling once_cell v1.20.2
-   Compiling futures-io v0.3.31
-   Compiling pin-utils v0.1.0
-   Compiling hashbrown v0.15.0
-   Compiling httparse v1.9.5
-   Compiling equivalent v1.0.1
-   Compiling futures-task v0.3.31
-   Compiling native-tls v0.2.12
-   Compiling atomic-waker v1.1.2
-   Compiling serde v1.0.213
-   Compiling tinyvec_macros v0.1.1
-   Compiling try-lock v0.2.5
-   Compiling tracing-core v0.1.32
-   Compiling windows_x86_64_msvc v0.48.5
-   Compiling want v0.3.1
-   Compiling tinyvec v1.8.0
-   Compiling futures-channel v0.3.31
-   Compiling smallvec v1.13.2
-   Compiling percent-encoding v2.3.1
-   Compiling byteorder v1.5.0
-   Compiling form_urlencoded v1.2.1
-   Compiling getrandom v0.2.15
-   Compiling http v1.1.0
-   Compiling ryu v1.0.18
-   Compiling unicode-bidi v0.3.17
-   Compiling serde_json v1.0.132
-   Compiling slab v0.4.9
-   Compiling tower-service v0.3.3
-   Compiling windows-targets v0.52.6
-   Compiling indexmap v2.6.0
-   Compiling windows-targets v0.48.5
-   Compiling windows-sys v0.52.0
-   Compiling windows-sys v0.59.0
-   Compiling tracing v0.1.40
-   Compiling windows-result v0.2.0
-   Compiling rand_core v0.6.4
-   Compiling rustls-pki-types v1.10.0
-   Compiling thiserror v1.0.65
-   Compiling futures-util v0.3.31
-   Compiling windows-strings v0.1.0
-   Compiling windows-sys v0.48.0
-   Compiling sync_wrapper v1.0.1
-   Compiling quote v1.0.37
-   Compiling unicode-normalization v0.1.24
-   Compiling rustls-pemfile v2.2.0
-   Compiling encoding_rs v0.8.35
-   Compiling base64 v0.22.1
-   Compiling syn v2.0.85
-   Compiling windows-registry v0.2.0
-   Compiling mime v0.3.17
-   Compiling ipnet v2.10.1
-   Compiling http-body v1.0.1
-   Compiling log v0.4.22
-   Compiling dotenv v0.15.0
-   Compiling idna v0.5.0
-   Compiling url v2.5.2
-   Compiling zerocopy-derive v0.7.35
-   Compiling serde_derive v1.0.213
-   Compiling thiserror-impl v1.0.65
-   Compiling mio v1.0.2
-   Compiling socket2 v0.5.7
-   Compiling home v0.5.9
-   Compiling etcetera v0.8.0
-   Compiling zerocopy v0.7.35
-   Compiling tokio v1.41.0
-   Compiling schannel v0.1.26
-   Compiling ppv-lite86 v0.2.20
-   Compiling http-body-util v0.1.2
-   Compiling rand_chacha v0.3.1
-   Compiling rand v0.8.5
-   Compiling serde_urlencoded v0.7.1
-   Compiling tokio-util v0.7.12
-   Compiling tokio-native-tls v0.3.1
-   Compiling h2 v0.4.6
-   Compiling hyper v1.5.0
-   Compiling hyper-util v0.1.9
-   Compiling hyper-tls v0.6.0
-   Compiling reqwest v0.12.8
-   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
-warning: struct `Graph` is never constructed
- --> src\graph.rs:3:12
-  |
-3 | pub struct Graph {
-  |            ^^^^^
-  |
-  = note: `#[warn(dead_code)]` on by default
-
-warning: associated items `new`, `add_node`, `add_edge`, `bfs`, `dfs`, and `dfs_recursive` are never used
-  --> src\graph.rs:8:12
-   |
-7  | impl Graph {
-   | ---------- associated items in this implementation
-8  |     pub fn new() -> Self {
-   |            ^^^
-...
-14 |     pub fn add_node(&mut self, value: &str) {
-   |            ^^^^^^^^
-...
-18 |     pub fn add_edge(&mut self, from: &str, to: &str) {
-   |            ^^^^^^^^
-...
-24 |     pub fn bfs(&self, start: &str) -> Vec<String> {
-   |            ^^^
-...
-48 |     pub fn dfs(&self, start: &str) -> Vec<String> {
-   |            ^^^
-...
-55 |     fn dfs_recursive(&self, node: &str, visited: &mut HashMap<String, bool>, result: &mut Vec<String>) {
-   |        ^^^^^^^^^^^^^
-
-warning: `helloworld` (bin "helloworld") generated 2 warnings
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 16.56s
-Friday, November 22, 2024 8:16:13 PM
-   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
-    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.74s
-     Running unittests src/main.rs (target\debug\deps\helloworld-358f72777eb128ff.exe)
-
-running 24 tests
-test graph::tests::test_dfs ... ok
-test greatest_common_divisor::tests::test_both_are_zero ... ok
-test graph::tests::test_bfs ... ok
-test greatest_common_divisor::tests::test_large_composite_numbers ... ok
-test greatest_common_divisor::tests::test_prime_numbers ... ok
-test greatest_common_divisor::tests::test_large_numbers_performance ... ok
-test greatest_common_divisor::tests::test_gcd ... ok
-test greatest_common_divisor::tests::test_large_numbers_performance_multiple ... ok
-test greatest_common_divisor::tests::test_large_numbers_performance_single ... ok
-test greatest_common_divisor::tests::test_large_prime_numbers ... ok
-test greatest_common_divisor::tests::test_mixed_numbers ... ok
-test greatest_common_divisor::tests::test_one_is_one ... ok
-test greatest_common_divisor::tests::test_one_is_zero ... ok
-test greatest_common_divisor::tests::test_large_numbers ... ok
-test greatest_common_divisor::tests::test_zero_input ... ok
-test greatest_common_divisor::tests::test_zero_input_3 ... ok
-test my_math::tests::test_add ... ok
-test my_data_types::tests::test_not_a_number ... ok
-test my_math::tests::test_add_multiply_ambiguous ... ok
-test my_math::tests::test_add_zero ... ok
-test my_math::tests::test_multiply ... ok
-test my_math::tests::test_multiply_zero ... ok
-test shadowing::tests::test_shadow ... ok
-test shadowing::tests::test_shadow_string_length ... ok
-
-test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
-Friday, November 22, 2024 8:16:14 PM
-Friday, November 22, 2024 8:16:14 PM
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-Friday, November 22, 2024 8:16:14 PM
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-Friday, November 22, 2024 8:16:14 PM
-From github.com:kusl/hellorust20240711
- * branch            master     -> FETCH_HEAD
- = [up to date]      master     -> origin/master
-Already up to date.
-Friday, November 22, 2024 8:16:15 PM
-Pushing to github.com:kusl/hellorust20240711.git
-To github.com:kusl/hellorust20240711.git
- = [up to date]      master -> master
-updating local tracking ref 'refs/remotes/origin/master'
-Everything up-to-date
-Friday, November 22, 2024 8:16:15 PM
-warning: in the working copy of 'docs/icon_cube.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_fork.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_info-circled.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_info-circled_dark.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_minus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_plus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_search-minus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_search-plus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_sponsor.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_star.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_star_dark.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-dir.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-dir_active.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-down-dir.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-down-dir_dark.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_wrench.svg', LF will be replaced by CRLF the next time Git touches it
-Friday, November 22, 2024 8:17:49 PM
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        modified:   docs/hellolib_BabysFirstDynamicProgrammingMethods.html
-        modified:   docs/hellolib_BubbleSort.html
-        modified:   docs/hellolib_CurrentWeather.html
-        modified:   docs/hellolib_DesignDynamicArray.html
-        modified:   docs/hellolib_DotnetNineGuid.html
-        modified:   docs/hellolib_Entity.html
-        modified:   docs/hellolib_FindClosestNumberToZero.html
-        modified:   docs/hellolib_Graph.html
-        modified:   docs/hellolib_Knapsack.html
-        modified:   docs/hellolib_KnapsackItem.html
-        modified:   docs/hellolib_ListNode.html
-        modified:   docs/hellolib_MergeSort.html
-        modified:   docs/hellolib_MergeSortedArray.html
-        modified:   docs/hellolib_MergeStringsAlternately.html
-        modified:   docs/hellolib_MinimumCoin.html
-        modified:   docs/hellolib_MyCleaner.html
-        modified:   docs/hellolib_MySearch.html
-        modified:   docs/hellolib_PascalTriangle.html
-        modified:   docs/hellolib_PasswordSettings.html
-        modified:   docs/hellolib_Person.html
-        modified:   docs/hellolib_PersonFactory.html
-        modified:   docs/hellolib_Revocation.html
-        modified:   docs/hellolib_RomanToInteger.html
-        modified:   docs/hellolib_SinglyLinkedList.html
-        modified:   docs/hellolib_SinglyLinkedListAddTwoNumbers.html
-        modified:   docs/hellolib_SinglyLinkedListNode.html
-        modified:   docs/hellolib_TwoSum.html
-        modified:   docs/hellolib_Weather.html
-        modified:   docs/hellolib_WeatherFetchException.html
-        modified:   docs/index.htm
-        modified:   docs/index.html
-        modified:   dotnet.txt
-        modified:   tests/coverage.cobertura.xml
-        modified:   tests/dotnet.txt
-
-Friday, November 22, 2024 8:17:49 PM
-[master 1d0e97d] build application
- 34 files changed, 482 insertions(+), 418 deletions(-)
-Friday, November 22, 2024 8:17:49 PM
-From github.com:patstha/mydotnet
- * branch            master     -> FETCH_HEAD
- = [up to date]      master     -> origin/master
-Current branch master is up to date.
-Friday, November 22, 2024 8:17:50 PM
-Pushing to github.com:patstha/mydotnet.git
-Enumerating objects: 73, done.
-Counting objects: 100% (73/73), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (37/37), done.
-Writing objects: 100% (37/37), 5.95 KiB | 1.98 MiB/s, done.
-Total 37 (delta 36), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (36/36), completed with 36 local objects.
-To github.com:patstha/mydotnet.git
-   fceaf68..1d0e97d  master -> master
-updating local tracking ref 'refs/remotes/origin/master'
-Friday, November 22, 2024 8:17:51 PM
-Friday, November 22, 2024 8:17:51 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.07s.
-Friday, November 22, 2024 8:17:51 PM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.4.8 building for production...
-✓ 5 modules transformed.
-docs/index.html                0.27 kB │ gzip: 0.22 kB
-docs/assets/index-D1OKu7AJ.js  8.63 kB │ gzip: 3.19 kB
-✓ built in 121ms
-Done in 1.13s.
-Friday, November 22, 2024 8:17:53 PM
-warning: in the working copy of 'docs/assets/index-D1OKu7AJ.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Friday, November 22, 2024 8:17:53 PM
-On branch kus-2024-10-30-modules
-nothing to commit, working tree clean
-Friday, November 22, 2024 8:17:53 PM
-On branch kus-2024-10-30-modules
-nothing to commit, working tree clean
-Friday, November 22, 2024 8:17:53 PM
-From github.com:matchthree/matchthree.github.io
- * branch            master     -> FETCH_HEAD
-Current branch kus-2024-10-30-modules is up to date.
-Friday, November 22, 2024 8:17:53 PM
-Everything up-to-date
-Friday, November 22, 2024 8:17:54 PM
-Friday, November 22, 2024 8:17:54 PM
-Friday, November 22, 2024 8:17:54 PM
-On branch main
-nothing to commit, working tree clean
-Friday, November 22, 2024 8:17:54 PM
-Friday, November 22, 2024 8:17:54 PM
-Friday, November 22, 2024 8:17:55 PM
-Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
-Friday, November 22, 2024 8:17:55 PM
-Friday, November 22, 2024 8:17:55 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.10s.
-Friday, November 22, 2024 8:17:55 PM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.4.11 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-C7fM1CLc.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-CG30pmQG.js   2.94 kB │ gzip: 1.31 kB
-✓ built in 3.92s
-Done in 5.48s.
-Friday, November 22, 2024 8:18:01 PM
-Transcript stopped, output file is C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt
-warning: in the working copy of 'docs/assets/index-C7fM1CLc.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-CG30pmQG.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/hybridcache.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/l1-show.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/modernwinforms.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/myvtt.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/myvtt.en.vtt.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/nyt-podcasts-trump-cabinet-picks.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/tldr-global.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/.gitattributes', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/.gitignore', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/build.gradle.kts', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/gradle/wrapper/gradle-wrapper.properties', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/settings.gradle.kts', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/main/kotlin/com/github/kusl/november2024a/November2024aApplication.kt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/main/resources/application.properties', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/test/kotlin/com/github/kusl/november2024a/November2024aApplicationTests.kt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/requirements.txt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/A3B318B569046159E1DD6616D2E646D9434350E6.asc', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/Nationalism, Explained [AXz0kbMKPu0].en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/favicon_io/about.txt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/3-blue-1-brown-llm-LPZh9BOjkQs.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/aoc-Eh7bFt7oUto.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/aoc-WoP9BJiItSI.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/asianometry-mm-wave-5g.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/bravos-ILJ41tmQAQ8.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/coffee-software-DSbuyscXX7I.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/continuous-delivery-_zUkNrUp0Ok.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/continuous-delivery-pair-programming-5TTsIkmtKUg.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/diabetes-PsQj2Hg1oFM.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/diabetes-PsQj2Hg1oFM.hi.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/diabetes-Yys5zeoDi2E.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/dotnet-new-c-sharp-13-japXYFS9YPQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/enrico-7nnyv4yJGJc.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/escuela-XdI2e8QqzbQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/first-ring-wnfcFflmvLo.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/germany-_ywqDbHiMrs.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/hankschannel-nuclear-16203Tks_0I.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/l1-icydock-3KCaS7EK6Rc.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/l1show-EI5iZ4LNsyQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/mileage-mike-ring-road-DhZH0KbcwX4.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/mit-rto-4ec_yZCWOCY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/msnbc-EmvYGLySOVE.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/ndc-oA7xeRyxMSo.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-Dj05EvWQ8NY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-X_gotjGG4ug.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-daily-bernie-xvYvfOcEFXI.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-l7s8QizovG8.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-ukraine-c_z8OoYWjQ0.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/otago-kotlin-multiplatform.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/road-guy-rob-K1TFOK4_07s.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/the-economist-kyiv-xn-AnTYs2H8.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/the-millitary-show-china-hellscape.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/tldr-global-Lj0J3ioOnIY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/tldr-news-eu-COEfdZVTFCQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/tldr-news-global-2024-11-16-a8NmPDUdzhU.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/trudeau-immigration-vOB7-dbYuCc.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/ufd-amd-BJjdGxRRh2E.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/versed-h_rsF8eVPqY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/vivienne-yang-FR6hhULZLfw.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/william-spaniel-polling-hhaNiF5aCCY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/ytotago-kotlin-multiplatform.en.vtt', LF will be replaced by CRLF the next time Git touches it
-Friday, November 22, 2024 8:18:22 PM
-On branch main
-Your branch is ahead of 'origin/main' by 3 commits.
-  (use "git push" to publish your local commits)
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        new file:   docs/notes/2024/11/22/facebook-terms-options.png
-        new file:   docs/notes/2024/11/22/facebook-terms.png
-        new file:   docs/notes/2024/11/22/notification-settings.png
-        new file:   docs/notes/2024/11/22/pagalfree.png
-        modified:   docs/notes/earth.jpeg
-        modified:   docs/notes/output.txt
-        modified:   docs/powershell.txt
-        modified:   public/notes/earth.jpeg
-        modified:   public/notes/output.txt
-        modified:   public/powershell.txt
-
-Friday, November 22, 2024 8:18:22 PM
-[main 3d309ae3] build application
- 10 files changed, 2644 insertions(+), 9128 deletions(-)
- create mode 100644 docs/notes/2024/11/22/facebook-terms-options.png
- create mode 100644 docs/notes/2024/11/22/facebook-terms.png
- create mode 100644 docs/notes/2024/11/22/notification-settings.png
- create mode 100644 docs/notes/2024/11/22/pagalfree.png
-Friday, November 22, 2024 8:18:22 PM
-From github.com:fromnepal/fromnepal.github.io
- * branch              main       -> FETCH_HEAD
-Current branch main is up to date.
-Friday, November 22, 2024 8:18:23 PM
-Enumerating objects: 40, done.
-Counting objects: 100% (40/40), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (29/29), done.
-Writing objects: 100% (29/29), 9.64 MiB | 5.31 MiB/s, done.
-Total 29 (delta 19), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (19/19), completed with 9 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   fb933026..3d309ae3  main -> main
-Friday, November 22, 2024 8:18:27 PM
-
-PS C:\Users\kushal\src\myhtml\fromnepal> ssh colorado
-Linux colorado 6.1.0-27-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.115-1 (2024-11-01) x86_64
-
-The programs included with the Debian GNU/Linux system are free software;
-the exact distribution terms for each program are described in the
-individual files in /usr/share/doc/*/copyright.
-
-Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
-permitted by applicable law.
-Last login: Fri Nov 22 20:00:15 2024 from fe80::975c:f636:bfb:5026%enp3s0
-kushal@colorado:~$ cd ~/src/angular/mycontacts;time yarn run ng build --base-href=mycontacts
-yarn run v1.22.22
-$ ng build --base-href=mycontacts
-Initial chunk files | Names         |  Raw size | Estimated transfer size
-chunk-Z3QRDSSJ.js   | -             | 119.77 kB |                35.11 kB
-main-4IGC7X44.js    | main          | 106.09 kB |                27.13 kB
-styles-CXQUZ3PB.css | styles        |   6.98 kB |                 1.13 kB
-
-                    | Initial total | 232.84 kB |                63.37 kB
-
-Lazy chunk files    | Names         |  Raw size | Estimated transfer size
-chunk-QOEJKQYO.js   | browser       |  67.49 kB |                17.70 kB
-
-Application bundle generation complete. [4.725 seconds]
-
-Output location: /home/kushal/src/angular/mycontacts/dist/mycontacts
-
-Done in 6.30s.
-
-real    0m6.807s
-user    0m9.701s
-sys     0m0.749s
-kushal@colorado:~/src/angular/mycontacts$
-kushal@colorado:~/src/angular/mycontacts$ cd ~/src/angular/mycontacts;time yarn run ng deploy --base-href=mycontacts
-yarn run v1.22.22
-$ ng deploy --base-href=mycontacts
-Error: Unknown argument: base-href
-error Command failed with exit code 1.
-info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
-
-real    0m0.634s
-user    0m0.612s
-sys     0m0.119s
-kushal@colorado:~/src/angular/mycontacts$ time bash ~/src/angular/mycontacts/update.sh;
-Fri Nov 22 08:27:48 PM EST 2024
-/home/kushal/src/angular/mycontacts/update.sh: line 10: nvm: command not found
-/home/kushal/src/angular/mycontacts/update.sh: line 11: nvm: command not found
-v22.11.0
-10.9.0
-
-changed 1 package in 1s
-Fri Nov 22 08:27:49 PM EST 2024
-Fri Nov 22 08:27:49 PM EST 2024
-yarn install v1.22.22
-info No lockfile found.
-[1/4] Resolving packages...
-warning karma > glob@7.2.3: Glob versions prior to v9 are no longer supported
-warning karma > rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
-warning karma > rimraf > glob@7.2.3: Glob versions prior to v9 are no longer supported
-warning karma > glob > inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
-warning karma-coverage-istanbul-reporter > istanbul-lib-source-maps > rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
-warning karma-coverage-istanbul-reporter > istanbul-lib-source-maps > rimraf > glob@7.2.3: Glob versions prior to v9 are no longer supported
-[2/4] Fetching packages...
-[3/4] Linking dependencies...
-warning "@angular-devkit/build-angular > @vitejs/plugin-basic-ssl@1.1.0" has unmet peer dependency "vite@^3.0.0 || ^4.0.0 || ^5.0.0".
-[4/4] Building fresh packages...
-success Saved lockfile.
-Done in 14.67s.
-
-real    0m14.917s
-user    0m12.545s
-sys     0m2.132s
-Fri Nov 22 08:28:04 PM EST 2024
-On branch master
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   update.sh
-
-no changes added to commit (use "git add" and/or "git commit -a")
-[master 40ab2f2] add all files
- 1 file changed, 1 insertion(+), 1 deletion(-)
-From github.com:kusl/mycontacts
- * branch            master     -> FETCH_HEAD
-Current branch master is up to date.
-Enumerating objects: 5, done.
-Counting objects: 100% (5/5), done.
-Delta compression using up to 4 threads
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 333 bytes | 333.00 KiB/s, done.
-Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-To github.com:kusl/mycontacts.git
-   00ac8f0..40ab2f2  master -> master
-yarn install v1.22.22
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.66s.
-yarn run v1.22.22
-$ ng update
-Using package manager: yarn
-Collecting installed dependencies...
-Found 28 dependencies.
-    We analyzed your package.json and everything seems to be in order. Good work!
-Done in 2.73s.
-yarn run v1.22.22
-$ ng build --base-href=mycontacts
-Initial chunk files | Names         |  Raw size | Estimated transfer size
-chunk-Z3QRDSSJ.js   | -             | 119.77 kB |                35.11 kB
-main-4IGC7X44.js    | main          | 106.09 kB |                27.13 kB
-styles-CXQUZ3PB.css | styles        |   6.98 kB |                 1.13 kB
-
-                    | Initial total | 232.84 kB |                63.37 kB
-
-Lazy chunk files    | Names         |  Raw size | Estimated transfer size
-chunk-QOEJKQYO.js   | browser       |  67.49 kB |                17.70 kB
-
-Application bundle generation complete. [4.544 seconds]
-
-Output location: /home/kushal/src/angular/mycontacts/dist/mycontacts
-
-Done in 5.72s.
-On branch master
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-        modified:   docs/index.html
-
-no changes added to commit (use "git add" and/or "git commit -a")
-[master dafd680] add all files
- 1 file changed, 1 insertion(+), 1 deletion(-)
-From github.com:kusl/mycontacts
- * branch            master     -> FETCH_HEAD
-Current branch master is up to date.
-Enumerating objects: 7, done.
-Counting objects: 100% (7/7), done.
-Delta compression using up to 4 threads
-Compressing objects: 100% (4/4), done.
-Writing objects: 100% (4/4), 378 bytes | 378.00 KiB/s, done.
-Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
-To github.com:kusl/mycontacts.git
-   40ab2f2..dafd680  master -> master
-yarn run v1.22.22
-$ ng test
-✔ Browser application bundle generation complete.
-22 11 2024 20:28:25.587:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
-22 11 2024 20:28:25.589:INFO [launcher]: Launching browsers FirefoxHeadless with concurrency unlimited
-22 11 2024 20:28:25.601:INFO [launcher]: Starting browser Firefox
-22 11 2024 20:28:29.378:INFO [Firefox 128.0 (Linux x86_64)]: Connected on socket a2cRyYDA5e2fzzXQAAAB with id 35135454
-Firefox 128.0 (Linux x86_64): Executed 3 of 3 SUCCESS (0.301 secs / 0.276 secs)
-TOTAL: 3 SUCCESS
-TOTAL: 3 SUCCESS
-Done in 12.53s.
-yarn run v1.22.22
-$ ng update @angular/core @angular/cli @angular/material
-Using package manager: yarn
-Collecting installed dependencies...
-Found 28 dependencies.
-Fetching dependency metadata from registry...
-Package '@angular/core' is already up to date.
-Package '@angular/cli' is already up to date.
-Package '@angular/material' is already up to date.
-Done in 2.21s.
-On branch master
-nothing to commit, working tree clean
-From github.com:kusl/mycontacts
- * branch            master     -> FETCH_HEAD
-Already up to date.
-Everything up-to-date
-Latest version:     1.0.30001683
-Installed version:  1.0.30001683
-caniuse-lite is up to date
-caniuse-lite has been successfully updated
-
-No target browser changes
-On branch master
-nothing to commit, working tree clean
-On branch master
-nothing to commit, working tree clean
-From github.com:kusl/mycontacts
- * branch            master     -> FETCH_HEAD
-Already up to date.
-Everything up-to-date
-* remote origin
-  Fetch URL: git@github.com:kusl/mycontacts.git
-  Push  URL: git@github.com:kusl/mycontacts.git
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Fri Nov 22 08:28:40 PM EST 2024
-
-real    0m51.769s
-user    0m48.780s
-sys     0m6.574s
-kushal@colorado:~/src/angular/mycontacts$ which node
-/home/kushal/.nvm/versions/node/v22.11.0/bin/node
-kushal@colorado:~/src/angular/mycontacts$ nvm
-
-Node Version Manager (v0.40.0)
-
-Note: <version> refers to any version-like string nvm understands. This includes:
-  - full or partial version numbers, starting with an optional "v" (0.10, v0.1.2, v1)
-  - default (built-in) aliases: node, stable, unstable, iojs, system
-  - custom aliases you define with `nvm alias foo`
-
- Any options that produce colorized output should respect the `--no-colors` option.
-
-Usage:
-  nvm --help                                  Show this message
-    --no-colors                               Suppress colored output
-  nvm --version                               Print out the installed version of nvm
-  nvm install [<version>]                     Download and install a <version>. Uses .nvmrc if available and version is omitted.
-   The following optional arguments, if provided, must appear directly after `nvm install`:
-    -s                                        Skip binary download, install from source only.
-    -b                                        Skip source download, install from binary only.
-    --reinstall-packages-from=<version>       When installing, reinstall packages installed in <node|iojs|node version number>
-    --lts                                     When installing, only select from LTS (long-term support) versions
-    --lts=<LTS name>                          When installing, only select from versions for a specific LTS line
-    --skip-default-packages                   When installing, skip the default-packages file if it exists
-    --latest-npm                              After installing, attempt to upgrade to the latest working npm on the given node version
-    --no-progress                             Disable the progress bar on any downloads
-    --alias=<name>                            After installing, set the alias specified to the version specified. (same as: nvm alias <name> <version>)
-    --default                                 After installing, set default alias to the version specified. (same as: nvm alias default <version>)
-    --save                                    After installing, write the specified version to .nvmrc
-  nvm uninstall <version>                     Uninstall a version
-  nvm uninstall --lts                         Uninstall using automatic LTS (long-term support) alias `lts/*`, if available.
-  nvm uninstall --lts=<LTS name>              Uninstall using automatic alias for provided LTS line, if available.
-  nvm use [<version>]                         Modify PATH to use <version>. Uses .nvmrc if available and version is omitted.
-   The following optional arguments, if provided, must appear directly after `nvm use`:
-    --silent                                  Silences stdout/stderr output
-    --lts                                     Uses automatic LTS (long-term support) alias `lts/*`, if available.
-    --lts=<LTS name>                          Uses automatic alias for provided LTS line, if available.
-    --save                                    Writes the specified version to .nvmrc.
-  nvm exec [<version>] [<command>]            Run <command> on <version>. Uses .nvmrc if available and version is omitted.
-   The following optional arguments, if provided, must appear directly after `nvm exec`:
-    --silent                                  Silences stdout/stderr output
-    --lts                                     Uses automatic LTS (long-term support) alias `lts/*`, if available.
-    --lts=<LTS name>                          Uses automatic alias for provided LTS line, if available.
-  nvm run [<version>] [<args>]                Run `node` on <version> with <args> as arguments. Uses .nvmrc if available and version is omitted.
-   The following optional arguments, if provided, must appear directly after `nvm run`:
-    --silent                                  Silences stdout/stderr output
-    --lts                                     Uses automatic LTS (long-term support) alias `lts/*`, if available.
-    --lts=<LTS name>                          Uses automatic alias for provided LTS line, if available.
-  nvm current                                 Display currently activated version of Node
-  nvm ls [<version>]                          List installed versions, matching a given <version> if provided
-    --no-colors                               Suppress colored output
-    --no-alias                                Suppress `nvm alias` output
-  nvm ls-remote [<version>]                   List remote versions available for install, matching a given <version> if provided
-    --lts                                     When listing, only show LTS (long-term support) versions
-    --lts=<LTS name>                          When listing, only show versions for a specific LTS line
-    --no-colors                               Suppress colored output
-  nvm version <version>                       Resolve the given description to a single local version
-  nvm version-remote <version>                Resolve the given description to a single remote version
-    --lts                                     When listing, only select from LTS (long-term support) versions
-    --lts=<LTS name>                          When listing, only select from versions for a specific LTS line
-  nvm deactivate                              Undo effects of `nvm` on current shell
-    --silent                                  Silences stdout/stderr output
-  nvm alias [<pattern>]                       Show all aliases beginning with <pattern>
-    --no-colors                               Suppress colored output
-  nvm alias <name> <version>                  Set an alias named <name> pointing to <version>
-  nvm unalias <name>                          Deletes the alias named <name>
-  nvm install-latest-npm                      Attempt to upgrade to the latest working `npm` on the current node version
-  nvm reinstall-packages <version>            Reinstall global `npm` packages contained in <version> to current version
-  nvm unload                                  Unload `nvm` from shell
-  nvm which [current | <version>]             Display path to installed node version. Uses .nvmrc if available and version is omitted.
-    --silent                                  Silences stdout/stderr output when a version is omitted
-  nvm cache dir                               Display path to the cache directory for nvm
-  nvm cache clear                             Empty cache directory for nvm
-  nvm set-colors [<color codes>]              Set five text colors using format "yMeBg". Available when supported.
-                                               Initial colors are:
-                                                  bygre
-                                               Color codes:
-                                                r/R = red / bold red
-                                                g/G = green / bold green
-                                                b/B = blue / bold blue
-                                                c/C = cyan / bold cyan
-                                                m/M = magenta / bold magenta
-                                                y/Y = yellow / bold yellow
-                                                k/K = black / bold black
-                                                e/W = light grey / white
-Example:
-  nvm install 8.0.0                     Install a specific version number
-  nvm use 8.0                           Use the latest available 8.0.x release
-  nvm run 6.10.3 app.js                 Run app.js using node 6.10.3
-  nvm exec 4.8.3 node app.js            Run `node app.js` with the PATH pointing to node 4.8.3
-  nvm alias default 8.1.0               Set default node version on a shell
-  nvm alias default node                Always default to the latest available node version on a shell
-
-  nvm install node                      Install the latest available version
-  nvm use node                          Use the latest version
-  nvm install --lts                     Install the latest LTS version
-  nvm use --lts                         Use the latest LTS version
-
-  nvm set-colors cgYmW                  Set text colors to cyan, green, bold yellow, magenta, and white
-
-Note:
-  to remove, delete, or uninstall nvm - just remove the `$NVM_DIR` folder (usually `~/.nvm`)
-
-kushal@colorado:~/src/angular/mycontacts$ nvm --version
-0.40.0
-kushal@colorado:~/src/angular/mycontacts$ sudo echo "Current date and time: $(date)"; free -h; df -h; sudo ip addr; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; export DEBIAN_FRONTEND=noninteractive; time sudo apt update; time sudo apt -y upgrade; time sudo apt -y full-upgrade; time sudo apt -y autoremove; time sudo reboot;
-[sudo] password for kushal:
-Current date and time: Fri Nov 22 08:29:35 PM EST 2024
-               total        used        free      shared  buff/cache   available
-Mem:           3.7Gi       2.2Gi       1.1Gi        34Mi       709Mi       1.5Gi
-Swap:          975Mi       114Mi       861Mi
-Filesystem                     Size  Used Avail Use% Mounted on
-udev                           1.9G     0  1.9G   0% /dev
-tmpfs                          381M  1.5M  380M   1% /run
-/dev/mapper/colorado--vg-root  915G  415G  454G  48% /
-tmpfs                          1.9G     0  1.9G   0% /dev/shm
-tmpfs                          5.0M  8.0K  5.0M   1% /run/lock
-/dev/sda1                      455M  149M  282M  35% /boot
-tmpfs                          381M   60K  381M   1% /run/user/113
-tmpfs                          381M   52K  381M   1% /run/user/1000
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    inet 127.0.0.1/8 scope host lo
-       valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host noprefixroute
-       valid_lft forever preferred_lft forever
-2: enp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
-    link/ether d0:67:e5:18:40:c1 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.0.102/24 brd 192.168.0.255 scope global dynamic noprefixroute enp3s0
-       valid_lft 6367sec preferred_lft 6367sec
-    inet6 fe80::d267:e5ff:fe18:40c1/64 scope link noprefixroute
-       valid_lft forever preferred_lft forever
-3: wlx34e894d0564e: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
-    link/ether 34:e8:94:d0:56:4e brd ff:ff:ff:ff:ff:ff
-4: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
-    link/ether 02:42:eb:13:25:54 brd ff:ff:ff:ff:ff:ff
-    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
-       valid_lft forever preferred_lft forever
-    inet6 fe80::42:ebff:fe13:2554/64 scope link
-       valid_lft forever preferred_lft forever
-5: br-2f8ddf5bc2ec: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
-    link/ether 02:42:1b:b7:28:eb brd ff:ff:ff:ff:ff:ff
-    inet 172.19.0.1/16 brd 172.19.255.255 scope global br-2f8ddf5bc2ec
-       valid_lft forever preferred_lft forever
-6: br-44e2aa3623ed: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
-    link/ether 02:42:b8:85:44:27 brd ff:ff:ff:ff:ff:ff
-    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-44e2aa3623ed
-       valid_lft forever preferred_lft forever
-8: veth9ece359@if7: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default
-    link/ether 6a:17:37:82:88:65 brd ff:ff:ff:ff:ff:ff link-netnsid 1
-    inet6 fe80::6817:37ff:fe82:8865/64 scope link
-       valid_lft forever preferred_lft forever
-10: veth96b1c66@if9: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default
-    link/ether da:60:f1:44:e0:88 brd ff:ff:ff:ff:ff:ff link-netnsid 0
-    inet6 fe80::d860:f1ff:fe44:e088/64 scope link
-       valid_lft forever preferred_lft forever
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=1.37 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=1.32 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=1.29 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=1.12 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=14.8 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=1.33 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=1.23 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=1.55 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=1.75 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=2.42 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=1.18 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=7.31 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=3.24 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=2.01 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=0.967 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=1.17 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=1.21 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=1.20 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=1.22 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=1.58 ms
-
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19029ms
-rtt min/avg/max/mdev = 0.967/2.461/14.787/3.138 ms
-
-real    0m19.085s
-user    0m0.005s
-sys     0m0.005s
-PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=1.08 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=1.67 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=7.22 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=3.17 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=3.41 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=1.23 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=2.21 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=1.86 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=1.02 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=2.15 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=1.67 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=1.09 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=3.63 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=1.09 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=1.51 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=1.53 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=1.21 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=1.21 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=1.12 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=1.26 ms
-
---- kalimati.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19028ms
-rtt min/avg/max/mdev = 1.022/2.016/7.220/1.425 ms
-
-real    0m19.072s
-user    0m0.005s
-sys     0m0.005s
-PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=1.17 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=1.29 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=1.34 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=1.12 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=1.65 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=2.36 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=1.09 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=2.50 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=1.16 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=1.24 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=1.25 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=1.24 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=1.41 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=1.10 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=1.35 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=2.68 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=1.36 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=1.84 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=2.02 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=2.59 ms
-
---- colorado.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19029ms
-rtt min/avg/max/mdev = 1.088/1.587/2.676/0.528 ms
-
-real    0m19.077s
-user    0m0.002s
-sys     0m0.008s
-Current date and time: Fri Nov 22 08:30:37 PM EST 2024
-Hit:1 http://deb.debian.org/debian bookworm InRelease
-Hit:2 http://security.debian.org/debian-security bookworm-security InRelease
-Hit:3 http://deb.debian.org/debian bookworm-updates InRelease
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-All packages are up to date.
-
-real    0m1.801s
-user    0m0.006s
-sys     0m0.007s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-
-real    0m0.557s
-user    0m0.005s
-sys     0m0.005s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-
-real    0m0.584s
-user    0m0.000s
-sys     0m0.011s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-
-real    0m0.487s
-user    0m0.004s
-sys     0m0.004s
-
-Broadcast message from root@colorado on pts/5 (Fri 2024-11-22 20:30:41 EST):
-
-The system will reboot now!
-
-
-real    0m0.047s
-user    0m0.000s
-sys     0m0.009s
-kushal@colorado:~/src/angular/mycontacts$ Connection to colorado closed by remote host.
-Connection to colorado closed.
-PS C:\Users\kushal\src\myhtml\fromnepal> C:\Users\kushal\src\myhtml\fromnepal\public\omnibus.ps1
-Transcript started, output file is C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt
-
-Friday, November 22, 2024 8:57:10 PM
-     Removed 926 files, 454.2MiB total
-Friday, November 22, 2024 8:57:10 PM
-   Compiling windows_x86_64_msvc v0.52.6
-   Compiling proc-macro2 v1.0.89
-   Compiling unicode-ident v1.0.13
-   Compiling pin-project-lite v0.2.15
-   Compiling bytes v1.8.0
-   Compiling futures-core v0.3.31
-   Compiling itoa v1.0.11
-   Compiling autocfg v1.4.0
-   Compiling futures-sink v0.3.31
-   Compiling fnv v1.0.7
-   Compiling memchr v2.7.4
-   Compiling cfg-if v1.0.0
-   Compiling once_cell v1.20.2
-   Compiling futures-task v0.3.31
-   Compiling hashbrown v0.15.0
-   Compiling futures-io v0.3.31
-   Compiling equivalent v1.0.1
-   Compiling httparse v1.9.5
-   Compiling pin-utils v0.1.0
-   Compiling windows_x86_64_msvc v0.48.5
-   Compiling tracing-core v0.1.32
-   Compiling serde v1.0.213
-   Compiling atomic-waker v1.1.2
-   Compiling try-lock v0.2.5
-   Compiling native-tls v0.2.12
-   Compiling tinyvec_macros v0.1.1
-   Compiling want v0.3.1
-   Compiling futures-channel v0.3.31
-   Compiling tinyvec v1.8.0
-   Compiling percent-encoding v2.3.1
-   Compiling smallvec v1.13.2
-   Compiling byteorder v1.5.0
-   Compiling http v1.1.0
-   Compiling tracing v0.1.40
-   Compiling form_urlencoded v1.2.1
-   Compiling getrandom v0.2.15
-   Compiling indexmap v2.6.0
-   Compiling ryu v1.0.18
-   Compiling windows-targets v0.52.6
-   Compiling slab v0.4.9
-   Compiling tower-service v0.3.3
-   Compiling unicode-bidi v0.3.17
-   Compiling windows-sys v0.52.0
-   Compiling windows-sys v0.59.0
-   Compiling windows-result v0.2.0
-   Compiling serde_json v1.0.132
-   Compiling rand_core v0.6.4
-   Compiling windows-targets v0.48.5
-   Compiling thiserror v1.0.65
-   Compiling windows-strings v0.1.0
-   Compiling rustls-pki-types v1.10.0
-   Compiling windows-sys v0.48.0
-   Compiling sync_wrapper v1.0.1
-   Compiling quote v1.0.37
-   Compiling futures-util v0.3.31
-   Compiling windows-registry v0.2.0
-   Compiling encoding_rs v0.8.35
-   Compiling ipnet v2.10.1
-   Compiling syn v2.0.85
-   Compiling http-body v1.0.1
-   Compiling unicode-normalization v0.1.24
-   Compiling rustls-pemfile v2.2.0
-   Compiling log v0.4.22
-   Compiling mime v0.3.17
-   Compiling base64 v0.22.1
-   Compiling dotenv v0.15.0
-   Compiling idna v0.5.0
-   Compiling url v2.5.2
-   Compiling serde_derive v1.0.213
-   Compiling zerocopy-derive v0.7.35
-   Compiling thiserror-impl v1.0.65
-   Compiling socket2 v0.5.7
-   Compiling mio v1.0.2
-   Compiling home v0.5.9
-   Compiling etcetera v0.8.0
-   Compiling http-body-util v0.1.2
-   Compiling zerocopy v0.7.35
-   Compiling tokio v1.41.0
-   Compiling ppv-lite86 v0.2.20
-   Compiling rand_chacha v0.3.1
-   Compiling rand v0.8.5
-   Compiling schannel v0.1.26
-   Compiling tokio-util v0.7.12
-   Compiling tokio-native-tls v0.3.1
-   Compiling h2 v0.4.6
-   Compiling serde_urlencoded v0.7.1
-   Compiling hyper v1.5.0
-   Compiling hyper-util v0.1.9
-   Compiling hyper-tls v0.6.0
-   Compiling reqwest v0.12.8
-   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
-warning: struct `Graph` is never constructed
- --> src\graph.rs:3:12
-  |
-3 | pub struct Graph {
-  |            ^^^^^
-  |
-  = note: `#[warn(dead_code)]` on by default
-
-warning: associated items `new`, `add_node`, `add_edge`, `bfs`, `dfs`, and `dfs_recursive` are never used
-  --> src\graph.rs:8:12
-   |
-7  | impl Graph {
-   | ---------- associated items in this implementation
-8  |     pub fn new() -> Self {
-   |            ^^^
-...
-14 |     pub fn add_node(&mut self, value: &str) {
-   |            ^^^^^^^^
-...
-18 |     pub fn add_edge(&mut self, from: &str, to: &str) {
-   |            ^^^^^^^^
-...
-24 |     pub fn bfs(&self, start: &str) -> Vec<String> {
-   |            ^^^
-...
-48 |     pub fn dfs(&self, start: &str) -> Vec<String> {
-   |            ^^^
-...
-55 |     fn dfs_recursive(&self, node: &str, visited: &mut HashMap<String, bool>, result: &mut Vec<String>) {
-   |        ^^^^^^^^^^^^^
-
-warning: `helloworld` (bin "helloworld") generated 2 warnings
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 11.99s
-Friday, November 22, 2024 8:57:22 PM
-   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
-    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.70s
-     Running unittests src/main.rs (target\debug\deps\helloworld-358f72777eb128ff.exe)
-
-running 24 tests
-test graph::tests::test_bfs ... ok
-test graph::tests::test_dfs ... ok
-test greatest_common_divisor::tests::test_both_are_zero ... ok
-test greatest_common_divisor::tests::test_large_composite_numbers ... ok
-test greatest_common_divisor::tests::test_large_numbers ... ok
-test greatest_common_divisor::tests::test_zero_input_3 ... ok
-test greatest_common_divisor::tests::test_gcd ... ok
-test greatest_common_divisor::tests::test_large_numbers_performance_multiple ... ok
-test greatest_common_divisor::tests::test_large_numbers_performance_single ... ok
-test greatest_common_divisor::tests::test_large_prime_numbers ... ok
-test greatest_common_divisor::tests::test_mixed_numbers ... ok
-test greatest_common_divisor::tests::test_one_is_one ... ok
-test greatest_common_divisor::tests::test_one_is_zero ... ok
-test greatest_common_divisor::tests::test_prime_numbers ... ok
-test greatest_common_divisor::tests::test_zero_input ... ok
-test greatest_common_divisor::tests::test_large_numbers_performance ... ok
-test my_data_types::tests::test_not_a_number ... ok
-test my_math::tests::test_add ... ok
-test my_math::tests::test_add_multiply_ambiguous ... ok
-test my_math::tests::test_add_zero ... ok
-test my_math::tests::test_multiply ... ok
-test my_math::tests::test_multiply_zero ... ok
-test shadowing::tests::test_shadow ... ok
-test shadowing::tests::test_shadow_string_length ... ok
-
-test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
-Friday, November 22, 2024 8:57:23 PM
-Friday, November 22, 2024 8:57:23 PM
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-Friday, November 22, 2024 8:57:23 PM
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-Friday, November 22, 2024 8:57:23 PM
-From github.com:kusl/hellorust20240711
- * branch            master     -> FETCH_HEAD
- = [up to date]      master     -> origin/master
-Already up to date.
-Friday, November 22, 2024 8:57:24 PM
-Pushing to github.com:kusl/hellorust20240711.git
-To github.com:kusl/hellorust20240711.git
- = [up to date]      master -> master
-updating local tracking ref 'refs/remotes/origin/master'
-Everything up-to-date
-Friday, November 22, 2024 8:57:24 PM
-warning: in the working copy of 'docs/icon_cube.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_fork.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_info-circled.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_info-circled_dark.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_minus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_plus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_search-minus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_search-plus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_sponsor.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_star.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_star_dark.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-dir.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-dir_active.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-down-dir.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-down-dir_dark.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_wrench.svg', LF will be replaced by CRLF the next time Git touches it
-Friday, November 22, 2024 8:58:56 PM
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        modified:   docs/hellolib_BabysFirstDynamicProgrammingMethods.html
-        modified:   docs/hellolib_BubbleSort.html
-        modified:   docs/hellolib_CurrentWeather.html
-        modified:   docs/hellolib_DesignDynamicArray.html
-        modified:   docs/hellolib_DotnetNineGuid.html
-        modified:   docs/hellolib_Entity.html
-        modified:   docs/hellolib_FindClosestNumberToZero.html
-        modified:   docs/hellolib_Graph.html
-        modified:   docs/hellolib_Knapsack.html
-        modified:   docs/hellolib_KnapsackItem.html
-        modified:   docs/hellolib_ListNode.html
-        modified:   docs/hellolib_MergeSort.html
-        modified:   docs/hellolib_MergeSortedArray.html
-        modified:   docs/hellolib_MergeStringsAlternately.html
-        modified:   docs/hellolib_MinimumCoin.html
-        modified:   docs/hellolib_MyCleaner.html
-        modified:   docs/hellolib_MySearch.html
-        modified:   docs/hellolib_PascalTriangle.html
-        modified:   docs/hellolib_PasswordSettings.html
-        modified:   docs/hellolib_Person.html
-        modified:   docs/hellolib_PersonFactory.html
-        modified:   docs/hellolib_Revocation.html
-        modified:   docs/hellolib_RomanToInteger.html
-        modified:   docs/hellolib_SinglyLinkedList.html
-        modified:   docs/hellolib_SinglyLinkedListAddTwoNumbers.html
-        modified:   docs/hellolib_SinglyLinkedListNode.html
-        modified:   docs/hellolib_TwoSum.html
-        modified:   docs/hellolib_Weather.html
-        modified:   docs/hellolib_WeatherFetchException.html
-        modified:   docs/index.htm
-        modified:   docs/index.html
-        modified:   dotnet.txt
-        modified:   tests/coverage.cobertura.xml
-        modified:   tests/dotnet.txt
-
-Friday, November 22, 2024 8:58:56 PM
-[master 0132db7] build application
- 34 files changed, 506 insertions(+), 475 deletions(-)
-Friday, November 22, 2024 8:58:56 PM
-From github.com:patstha/mydotnet
- * branch            master     -> FETCH_HEAD
- = [up to date]      master     -> origin/master
-Current branch master is up to date.
-Friday, November 22, 2024 8:58:57 PM
-Pushing to github.com:patstha/mydotnet.git
-Enumerating objects: 73, done.
-Counting objects: 100% (73/73), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (37/37), done.
-Writing objects: 100% (37/37), 5.91 KiB | 1.97 MiB/s, done.
-Total 37 (delta 36), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (36/36), completed with 36 local objects.
-To github.com:patstha/mydotnet.git
-   1d0e97d..0132db7  master -> master
-updating local tracking ref 'refs/remotes/origin/master'
-Friday, November 22, 2024 8:58:58 PM
-Friday, November 22, 2024 8:58:58 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.06s.
-Friday, November 22, 2024 8:58:58 PM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.4.8 building for production...
-✓ 5 modules transformed.
-docs/index.html                0.27 kB │ gzip: 0.22 kB
-docs/assets/index-D1OKu7AJ.js  8.63 kB │ gzip: 3.19 kB
-✓ built in 118ms
-Done in 1.49s.
-Friday, November 22, 2024 8:59:00 PM
-warning: in the working copy of 'docs/assets/index-D1OKu7AJ.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Friday, November 22, 2024 8:59:00 PM
-On branch kus-2024-10-30-modules
-nothing to commit, working tree clean
-Friday, November 22, 2024 8:59:00 PM
-On branch kus-2024-10-30-modules
-nothing to commit, working tree clean
-Friday, November 22, 2024 8:59:00 PM
-From github.com:matchthree/matchthree.github.io
- * branch            master     -> FETCH_HEAD
-Current branch kus-2024-10-30-modules is up to date.
-Friday, November 22, 2024 8:59:00 PM
-Everything up-to-date
-Friday, November 22, 2024 8:59:01 PM
-Friday, November 22, 2024 8:59:01 PM
-Friday, November 22, 2024 8:59:01 PM
-On branch main
-nothing to commit, working tree clean
-Friday, November 22, 2024 8:59:01 PM
-Friday, November 22, 2024 8:59:01 PM
-Friday, November 22, 2024 8:59:01 PM
-Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
-Friday, November 22, 2024 8:59:01 PM
-Friday, November 22, 2024 8:59:01 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.07s.
-Friday, November 22, 2024 8:59:02 PM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.4.11 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-C7fM1CLc.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-CG30pmQG.js   2.94 kB │ gzip: 1.31 kB
-✓ built in 3.12s
-Done in 3.88s.
-Friday, November 22, 2024 8:59:06 PM
-Transcript stopped, output file is C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt
-warning: in the working copy of 'docs/assets/index-C7fM1CLc.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-CG30pmQG.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/hybridcache.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/l1-show.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/modernwinforms.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/myvtt.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/myvtt.en.vtt.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/nyt-podcasts-trump-cabinet-picks.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/tldr-global.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/.gitattributes', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/.gitignore', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/build.gradle.kts', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/gradle/wrapper/gradle-wrapper.properties', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/settings.gradle.kts', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/main/kotlin/com/github/kusl/november2024a/November2024aApplication.kt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/main/resources/application.properties', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/test/kotlin/com/github/kusl/november2024a/November2024aApplicationTests.kt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/requirements.txt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/A3B318B569046159E1DD6616D2E646D9434350E6.asc', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/Nationalism, Explained [AXz0kbMKPu0].en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/favicon_io/about.txt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/3-blue-1-brown-llm-LPZh9BOjkQs.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/aoc-Eh7bFt7oUto.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/aoc-WoP9BJiItSI.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/asianometry-mm-wave-5g.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/bravos-ILJ41tmQAQ8.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/coffee-software-DSbuyscXX7I.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/continuous-delivery-_zUkNrUp0Ok.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/continuous-delivery-pair-programming-5TTsIkmtKUg.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/diabetes-PsQj2Hg1oFM.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/diabetes-PsQj2Hg1oFM.hi.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/diabetes-Yys5zeoDi2E.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/dotnet-new-c-sharp-13-japXYFS9YPQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/enrico-7nnyv4yJGJc.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/escuela-XdI2e8QqzbQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/first-ring-wnfcFflmvLo.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/germany-_ywqDbHiMrs.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/hankschannel-nuclear-16203Tks_0I.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/l1-icydock-3KCaS7EK6Rc.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/l1show-EI5iZ4LNsyQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/mileage-mike-ring-road-DhZH0KbcwX4.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/mit-rto-4ec_yZCWOCY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/msnbc-EmvYGLySOVE.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/ndc-oA7xeRyxMSo.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-Dj05EvWQ8NY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-X_gotjGG4ug.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-daily-bernie-xvYvfOcEFXI.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-l7s8QizovG8.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-ukraine-c_z8OoYWjQ0.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/otago-kotlin-multiplatform.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/road-guy-rob-K1TFOK4_07s.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/the-economist-kyiv-xn-AnTYs2H8.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/the-millitary-show-china-hellscape.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/tldr-global-Lj0J3ioOnIY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/tldr-news-eu-COEfdZVTFCQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/tldr-news-global-2024-11-16-a8NmPDUdzhU.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/trudeau-immigration-vOB7-dbYuCc.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/ufd-amd-BJjdGxRRh2E.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/versed-h_rsF8eVPqY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/vivienne-yang-FR6hhULZLfw.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/william-spaniel-polling-hhaNiF5aCCY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/ytotago-kotlin-multiplatform.en.vtt', LF will be replaced by CRLF the next time Git touches it
-Friday, November 22, 2024 8:59:24 PM
-On branch main
-Your branch is ahead of 'origin/main' by 2 commits.
-  (use "git push" to publish your local commits)
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        new file:   docs/notes/2024/11/22/iPhone.json
-        modified:   docs/notes/earth.jpeg
-        modified:   docs/notes/output.txt
-        modified:   docs/powershell.txt
-        modified:   public/notes/earth.jpeg
-        modified:   public/notes/output.txt
-        modified:   public/powershell.txt
-
-Friday, November 22, 2024 8:59:25 PM
-[main 60ae9322] build application
- 7 files changed, 1897 insertions(+), 64 deletions(-)
- create mode 100644 docs/notes/2024/11/22/iPhone.json
-Friday, November 22, 2024 8:59:25 PM
-From github.com:fromnepal/fromnepal.github.io
- * branch              main       -> FETCH_HEAD
-Current branch main is up to date.
-Friday, November 22, 2024 8:59:25 PM
-Enumerating objects: 39, done.
-Counting objects: 100% (37/37), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (26/26), done.
-Writing objects: 100% (26/26), 9.12 MiB | 6.65 MiB/s, done.
-Total 26 (delta 21), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (21/21), completed with 10 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   3d309ae3..60ae9322  main -> main
-Friday, November 22, 2024 8:59:29 PM
-
-PS C:\Users\kushal\src\myhtml\fromnepal>
-PS C:\Users\kushal\src\myhtml\fromnepal> C:\Users\kushal\src\myhtml\fromnepal\public\omnibus.ps1
+PS C:\Users\kushal> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\2024\11\23"; convert flair.png -resize 600x flair-small.jpg
+Invalid Parameter - -resize
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes\2024\11\23> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\2024\11\23"; magick -version; magick convert flair.png -resize 600x flair-small.jpg
+Version: ImageMagick 7.1.1-41 Q16-HDRI x64 bbdcbf7:20241116 https://imagemagick.org
+Copyright: (C) 1999 ImageMagick Studio LLC
+License: https://imagemagick.org/script/license.php
+Features: Channel-masks(64-bit) Cipher DPC HDRI Modules OpenCL OpenMP(2.0)
+Delegates (built-in): bzlib cairo flif freetype gslib heic jng jp2 jpeg jxl lcms lqr lzma openexr pangocairo png ps raqm raw rsvg tiff webp xml zip zlib
+Compiler: Visual Studio 2022 (194234433)
+WARNING: The convert command is deprecated in IMv7, use "magick" instead of "convert" or "magick convert"
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes\2024\11\23> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\2024\11\23"; magick -version; magick convert flair.png -resize 1200x flair-medium.jpg
+Version: ImageMagick 7.1.1-41 Q16-HDRI x64 bbdcbf7:20241116 https://imagemagick.org
+Copyright: (C) 1999 ImageMagick Studio LLC
+License: https://imagemagick.org/script/license.php
+Features: Channel-masks(64-bit) Cipher DPC HDRI Modules OpenCL OpenMP(2.0)
+Delegates (built-in): bzlib cairo flif freetype gslib heic jng jp2 jpeg jxl lcms lqr lzma openexr pangocairo png ps raqm raw rsvg tiff webp xml zip zlib
+Compiler: Visual Studio 2022 (194234433)
+WARNING: The convert command is deprecated in IMv7, use "magick" instead of "convert" or "magick convert"
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes\2024\11\23> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\2024\11\23"; magick -version; magick convert flair.png -resize 1600x flair-large.jpg
+Version: ImageMagick 7.1.1-41 Q16-HDRI x64 bbdcbf7:20241116 https://imagemagick.org
+Copyright: (C) 1999 ImageMagick Studio LLC
+License: https://imagemagick.org/script/license.php
+Features: Channel-masks(64-bit) Cipher DPC HDRI Modules OpenCL OpenMP(2.0)
+Delegates (built-in): bzlib cairo flif freetype gslib heic jng jp2 jpeg jxl lcms lqr lzma openexr pangocairo png ps raqm raw rsvg tiff webp xml zip zlib
+Compiler: Visual Studio 2022 (194234433)
+WARNING: The convert command is deprecated in IMv7, use "magick" instead of "convert" or "magick convert"
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes\2024\11\23> C:\Users\kushal\src\myhtml\fromnepal\public\omnibus.ps1
