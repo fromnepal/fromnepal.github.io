@@ -1,0 +1,514 @@
+hello everyone today we are going to
+talk about acing challenges uh in EF
+core when we have large data set and
+we're going to just going through some
+uh different diagrams to understand what
+is the problem
+exactly uh my name is
+sad uh I'm Microsoft MVP currently
+working as a senior software engineer at
+leads Building Society usually I create
+some content on my personal blog Linked
+In YouTube so if you would like you can
+check my uh profile uh as
+well so here is the agenda for today we
+are uh going to start with explaining
+the scenario uh what is exactly
+happening uh in the async apis uh in EF
+cor also after that we are trying to uh
+see The Benchmark and the result to just
+get uh more idea what's going on and
+after uh we go through the what is the
+issue and where it comes from
+exactly and for sure we're going to talk
+about the the solutions and after
+applying those solution we're going to
+PR on The Benchmark again and see the
+updated number numbers and we're going
+to have one uh conclusion at the
+end so let's go a right to the point in
+eor async corporation is much slower
+than sync Corporation when we are
+dealing with the large data set apart
+from that okay everywhere everyone
+saying that AC Corporation is the best
+practice and everywhere we need to use
+it that's correct but not always in such
+a this kind of scenarios that we got we
+are going to talk about AC cooperation
+is not that good right and uh so what is
+the reason to have the uh large data set
+when we are saying that okay uh what is
+that size that we are talking about is
+actually when we have a Vare Max or V
+binary Max in our data based as a column
+type we have we may have um a size big
+ex size when we are trying to retrieve
+the data from database and of course in
+any case maybe we going to return I
+don't know Millions rows from database
+so obviously we're going to have more
+size in case of the megabyte or more but
+here I'm going to just focus on the uh
+Vare Max and see what's uh going to
+happen so what is the use cases when we
+are using the V care Max or V binary Max
+some properties that we don't know about
+the
+length maybe we have a description
+property in for example user profile but
+as a developer I don't know user how
+much uh text gonna put on this
+description so I just said let it be uh
+V Max and then let user free to put
+everything right and then the storing
+file is another interesting scenario
+that I don't like it to be honest for
+the serving file usually we are using
+kind of OB cidian or other uh Azure blob
+storage or something like that but still
+there is some scenarios that maybe team
+decide to um assorting files into the
+database as a v binary Max or maybe
+convert the file to the base 64 and then
+save it as a string um but I mean maybe
+there is some use cases for having more
+security over the when user wants to
+download the file you you you're saying
+that okay okay I can authorize fully the
+the user and everything is secure but um
+for my opinion it's not a good
+idea uh but let let's go for the The
+Benchmark and U seeing the result so
+here is the the entities that I'm going
+to uh show The Benchmark on them I
+simply just created two tables uh with
+two uh properties IDE as a primary key
+takes as a a string which is will be the
+worker Max so if we we just uh run the
+migration with the EF core because we
+didn't put any constraint on the text it
+will select the nare max this is the
+default behavior for the EF core so
+nothing special here and now let's uh I
+I want to show the The Benchmark code as
+well what I'm talking about so here is
+the Benchmark using
+benchmark.pl everything on my tables and
+then just insert only one record right I
+have four methods as a for running the
+Benchmark one is the async API first
+default only top one and then using the
+sync one nothing special I just wanted
+to keep it very simple to run the
+Benchmark and here in DB context as well
+I just have two DB sets and then setting
+connection string like this uh one
+because I want to use it for uh one of
+the solution and also I have the uh
+Benchmark for the postgress as well just
+to make a comparison between um SQL
+server and the post for just getting
+better idea about the The Benchmark
+result everything is the same entities
+tables The Benchmark code all the same
+just different database provider okay so
+for sake of the time I don't want to run
+the Benchmark because it's uh taking
+time but I already have the result here
+and we are going to talk on
+uh those
+numbers okay this is the EF core the
+latest version that Tuesday
+released and uh here is the result for
+theq Server which is very surprising as
+you can you can see that acing operation
+um first or default acing actually is
+taking more than one second where the
+sync operation is only taking
+25 milliseconds means it is around sync
+one 50 times faster than a sync one and
+more importantly this is the memory
+allocation which I uh care more about it
+okay performance the speed of the query
+is matter but the memory allocation here
+is more important for us as a backend
+developer it is going to using lots of
+memory lots of I don't know cost in your
+cloud provider so the memory allocation
+as you can see is much more for the
+async one but let's see the post post is
+totally normal actually when we are
+checking the numbers even allocation
+part is the same and uh the the
+performance the spe of the query async
+one is slightly different which making
+sense because when you are using the
+asyn uh apis by default you are putting
+a little more uh overhead on your run
+time for checking the lots of events
+State machine everything so that makes
+sense and we are accepting that uh
+slightly changes for the using async but
+seems the the problem is only in the SQL
+Server so furthermore we just going
+through the SQL server and find out what
+is the the problem
+exactly so let's ask this question is it
+really about the EF core that we had
+those Benchmark and for the squ server
+provider can be the cprit efcore
+we will see the exact point of the
+problem so for understanding the the big
+picture of this issue first of all we
+need to understand how EF core exactly
+executes a query right because we need
+to get this idea how uh what is going on
+so when we have this um first or default
+a sync and the first step is link query
+translator this is a very high level
+overview of the different steps and then
+after it will use the database provider
+to translate that c code to the
+appropriate
+database which in our case is skq server
+will translate to this tsql very simple
+one and then after we're going to run
+this query getting result from database
+then after that uh EF core will create
+some classes relation fix up in case of
+any includes and then just simply
+returning to the color one right so if
+we see this um steps here it seems we
+need to focus more on the database
+provider for the SQL Server we are using
+disnet package Entity framework
+core. server which is responsible based
+on your database
+uh creating the
+appropriate uh command query actually
+the database query so here because we
+are using the SQL Server it will
+generate this csql based on the the link
+one right but who is responsible for
+executing this query against our
+database here is the nuget package
+microsoft. dat. sko client which is
+separated nugget package also separate
+repository for dealing with the SQL
+Server one so what I'm going to do is I
+am going to run um already run the The
+Benchmark for this specific uh esol
+client nugget package but the question
+is how would I know which version of
+this uh ESO client package is using in
+the uh esql server uh package so I'm
+going to introduce this very interesting
+new feature in net 9 for net net y so if
+I go to my command line here I am
+already in the school server provider
+project so simply if I just type net
+nety um microsoft. dat. client the
+package that I'm looking for and then if
+I run this we can see in the uh SQL
+Server nuget package page this uh client
+School client internally is using and
+the version is
+516 so I'm going to run this uh
+Benchmark for this specific um version
+of the Skool client so let's go back to
+our
+presentation so here is the the result
+and again
+surprising it seems that the number are
+the same with the F core for the Skool
+client for exact same tables same schema
+everything right so what we understand
+here what it means it means actually the
+problem is happening in the school Cent
+nugget package not in the the EF core
+itself so we're gonna go more deep in
+this ESO
+client so here is the the open
+um issue in the school client repository
+which she created around four years
+ago that pointing okay for large data
+asynchronous uh API is much slower than
+sync one so this is a very very nice
+thread uh you can go and read all of the
+comments here highly recommended I
+already learned a lot from the the
+comments that uh
+Community replying on this um issue but
+what I'm going to do here is just going
+to understand what exactly happening for
+this school client and then how to fix
+that okay so as we saw in the previous
+slide here this uh kind of um the
+application side all the steps happening
+in the application side are this uh
+steps and then at some point we're going
+to go out of our application and then
+executing the query for uh our database
+and then getting the result right so we
+need to understand what is going on here
+exactly in this step so after running
+the query esql server start sending back
+our um response chunk by chunk but here
+we need to know what protocol is using
+for uh moving and sending this
+packets well actually SQL Server is
+using TDS protocol to uh exchange the
+packets tabular data stream which is
+specifically for This Server only so
+next slide we're going to just um see
+what is going on in this TDS because
+this is very
+important TDS was originally designed
+and developed by sbase company and after
+that Microsoft bought it and owned that
+um company which was actually uh was the
+creator of the sko
+server and Microsoft keep using the TDS
+as a protocol for um sending and uh
+communicating between client and uh
+server
+the each um default size for the TDS
+package is 8
+kiloby so for example if we have 5
+megabyte of the the response for sending
+back to the client es server has to send
+around um 640 TDS message to the client
+you can see how much frequently between
+the um server and client is is happening
+this is the TDS message format so here
+the server first start will with the
+sending the column metadata saying that
+hey client I'm going to send this
+columns as a data to you prepare
+yourself and then start sending the row
+data one by one and uh until all of the
+those row data is done and then send the
+done data right
+and um here each of this row data is 8
+kilobyte it doesn't mean it's whole row
+depends on your row size maybe it's 5
+megabytes and then the scool server has
+to send lots of this row data until it's
+done so for this reason everyone that
+wants to deal with the school server
+which is here is school client nuget
+package they need to have uh TDS parer
+then uh which is responsible actually
+for the getting those um messages
+aggregate all of them parsing them and
+then uh prepare everything for the upper
+layer and saying that okay this row is
+done and then you can use it right so
+but this is TS Parts there is um the
+actually our critical point because
+the problem exactly happening in this uh
+TDS
+par the way that TDs parer is
+implemented in the ESL client nugget
+package for acing API is causing much
+more memory
+allocation and consequently we're going
+to have a slower query so it seems I
+already put the um the GitHub link for
+in the resources you you can go and see
+the code in the this
+repository very interesting to uh review
+the code uh but here when we have it
+seems when for each of those uh packet
+TDS packet that is coming to the uh the
+application part they are resetting the
+the copy of data because the sync one it
+needs to wait and then getting all the
+uh data but async is actually using
+those kind of uh task cancellation
+Source waiting uh checking if there is
+more packages so every time they are
+actually resetting the uh like array of
+binary copy this binary to this one this
+array to this one so it causes much more
+memory allocation and guess what when we
+have this kind of copy paste who is come
+to the picture garbage collection it
+needs to run very frequently and causes
+maybe at run time to have a slower query
+right so this is the the main issue in
+the school client and after that we're
+gon to
+check what we can do about it as we know
+that the issue is already open it means
+it's not not fixed um totally and then
+here I'm not going to just fix that
+problem but because the in the the
+thread as well they mentioned it taking
+years to fix that but we are just going
+to improve uh our code by doing some
+tricks
+right okay so the first one the simple
+one actually is using sync over async
+method when we say Okay um sync method
+is 50 times faster than a sync why not
+just using sync but as we know we need
+to be careful about using sync uh apis
+making your application not scalable
+actually and um so if we have very
+specific table one table for example two
+table in our uh database that we know
+it's going to taking more data and has a
+an Max with lots of uh megabytes so
+we're going to put sub comment okay I am
+going to use this sync method because of
+this issue right
+perfect another one if you are using the
+SQL client directly we can actually
+change the command behavior and then set
+it to the um sequential axis what sequen
+access does here is actually streaming
+the data as they come from the scho
+server instead of waiting for getting
+entire uh row and loading entire row
+into the memory which is the default
+Behavior actually it will stream the
+data as they come to the upper layer and
+then it causes much less um memory
+allocation and then better performance
+we cannot use the sequential AIS in EF
+core because by default is using the in
+Entity framework when trying to uh run
+the query using the default Behavior but
+is already in process for a long time
+and you can check the GitHub issue as
+well another one is updating the Skol
+package to the latest version and so
+pressing the internal one I already
+asked this question in the
+um E4
+repository because here uh currently in
+the SCH server efcore 9 we are using
+516 as the version for SQ client but
+it's not the latest one the latest one
+is a
+522 so the the reason that they are
+using the five um. 1.6
+is that is the LTS version for theol
+client because of this kind of issues
+that every time EF core release that um
+EF that SQL client obsolete or has some
+problem so they are frequently needs to
+uh release another EF core version so
+they decided to just using the
+um uh the latest uh
+the LTS version sorry so but here we can
+use this EF um the updated version
+because we know that the 522 version has
+a signifant significant uh Improvement
+for the specific issues that we are
+talking about I already put the uh the
+URL uh for this pool request you can go
+and check the code very interesting uh
+they made very good uh Improvement on
+this issue so after that if we just run
+the net y again we can see the internal
+package using the latest one we're going
+to run the The Benchmark and seeing the
+result after applying these
+changes and as a last one we know that
+um the default package here uh the
+default packet size for the TDs is 8
+kilobytes so very simple uh question is
+why not just increasing the packet size
+which is a good one we can increase the
+packet size and telling a school server
+to sending a bigger package to just uh
+preventing lots of frequency for sending
+the TDS packets the maximum allot value
+is 32 kiloby right so when we um trying
+to use the connection string we can just
+saying that packet size this the bytes
+for um as a packet size and this is the
+maximum value if you set it more you
+will get exception that you're not
+allowed it to uh set more than 32
+kilobyte and um if we want to run the
+Benchmark based on this uh um
+suggested Solutions I'm not going to go
+to The Benchmark code this is the the
+the same code but just doing these
+tricks so here is the last um Benchmark
+that we did for the SQ server with these
+numbers and by only updating SQL client
+5 to2 we are getting around nine times
+faster in case of performance which
+doesn't matter that one that you know
+that much but very importantly the
+allocation part you can see how much is
+different for the allocation part if you
+check the pull request for the SQL
+client it is not that much changes or
+refactoring the code but it's just
+simply you need to understand the way
+that the TDS package coming to your
+application and then trying to make it
+effective for uh aggregating the
+packages and in case of using the latest
+school client and also uh increasing the
+packet size we're going to get 17 faster
+uh as a the result the allocated part is
+the same because still we are getting
+the same amount of the data from
+database but the performance is better
+depends on your scenario which uh um
+case is matter for you if you're caring
+about the speed you can go for this
+solution so here
+we understand what is the issue with the
+large data set in EF core where is it
+and how to fix it
+partially keep an eye I on the on the
+the GitHub issue update your packages as
+they release and care about the internal
+packages as well not only as we saw okay
+this is EF core but internally is using
+the older uh LTS version for the Skol
+client always set the max um value uh
+Max L for the string property if
+possible I would suggest to set a global
+Max L for all the strings in your all
+tables or entities it is possible
+possible by using the convention in the
+DB context um you can just saying that
+for all the strings for example put 200
+500 as a Max Lin uh if I for or forget
+for um for example setting constraint on
+a string it will take the default one
+and Global constraint so another Point
+here is if you have an work uh or van
+binary Marx in your database then it
+could be a secure issue as well for
+example I have a description for the the
+user profile for my user for example I
+log in and putting 100 megabyte text in
+my description uh for and then save it
+right you don't know because you already
+set the envir Car Max in your table and
+then after if I just call in my user
+profile for sure your um back end will
+get out of memory exception and will be
+crashed right as a last Point here EF
+core is just an
+omm cannot do magic for you you have to
+understand and learning about underlying
+database based on your situation which
+database you are using with ef core you
+have to uh go and learn that in this
+kind of tricks and understand the issues
+following the uh community and the gthp
+uh issues so that's it for me this is
+the uh resources that I mentioned during
+the
+presentation and thank you so much
