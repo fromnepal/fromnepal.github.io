@@ -1,0 +1,732 @@
+hello so we're gonna talk about the net
+9 jit and some of the new updates that
+are in there let me bring in your slides
+sure there we go now we we've heard a
+lot about performance and some of the
+updates and we heard from our friend
+Stephen Tobe about some of the updates
+that have happened feels like you're
+going to go deep on some of those topics
+uh we're GNA try you know we can't get
+super deep in in half an hour but we'll
+we'll do our best to sort of give you a
+flavor of what's going on sort of under
+the hood so to speak in in the net n all
+right well thank you so much Andy the
+stage is yours okay um so let me just
+sort of jump into things because again
+we don't have a super super long time
+frame um every release we try to make
+some pretty fundamental and important
+improvements in the in the ability ofet
+to make your programs run more efficient
+and you've heard a lot about things
+happening at sort of the library level
+but in coordination with that kind of
+you know down in the depths of the
+system we also do a whole bunch of
+changes just to try to get the basic
+efficiency of programs running better
+I'm going to go through a couple
+different areas here I'm going to talk
+about some work that we did or just give
+you some background on exactly what the
+jit is in case it's not clear or you
+need a refresher um some things that we
+did about improving handling of just
+basic objects um and some exciting work
+that we're having done net n and that
+we're plan on building on in future
+releases uh some support that we've
+added now for arm 64 in particular
+scaler Vector extensions scalable Vector
+extensions um which are now available in
+the new cobalt 100 that Azure is
+hosting uh Loops are important part of
+every program and we've made some big
+improvements in the ability of the jit
+to optimize Loops we'll talk about those
+briefly some general things that sort of
+apply broadly across the board and then
+just sort of wrap things up um and give
+you ways remind you of ways to get a
+hold of us if you see issues where you
+think we could be doing a better job or
+you want to congratulate us for already
+doing a good
+job so the that jit we also sometimes
+call it the Cen um is a thing that
+translates your um programs from
+assembly or from Intermediate Language
+the thing that gets produced when you
+run a net build into the actual machine
+code that the the chip knows how to
+execute um our code generator includes
+the ability to generate code for x64 x86
+arm
+arm64 and then also the community has
+added support for risk V and for Larch
+so that means you can take your net
+program and run it on many different
+pieces of Hardware um and each of those
+pieces of Hardware often has many
+different variants inside of it of
+things that it can do you might be
+familiar with a term like ABX 512 which
+are the advanced Vector extensions that
+Intel processors and AMD processors
+offer these days
+um arm has similar sort of gradations 8X
+and 9x features um and then also many
+different operating systems these
+operating systems all have different
+conventions for the way that the the
+machine code needs to operate in order
+to be compatible with the system so we
+handle Windows cisv those most flavors
+of Unix Mac OS and so on and so forth so
+there's a lot of different variations
+here but there's sort of one engine
+behind all of this um and that's the net
+J
+um we usually compile methods one at a
+time and the method is compiled to
+machine code just the very first time
+that you run it inst the name just in
+time compilation turns out that same
+piece of technology also handles code
+generation if you're building your code
+ahead of time like in Native aot or
+ready to run so you know terminology
+gets a bit fuzzy here but basically we
+are generating the code that your
+application needs to actually run on the
+hardware that you want to run it on and
+so in this talk let's do a let's go
+through a sample of things that we've
+done in9 to make that process work
+better um before I get started I just
+want to remind people in case you're
+curious to look under the hood sometime
+and see what's going on we've been
+trying to make it easier and easier to
+actually look at what the jit does when
+it takes your program there's a variety
+of ways you can do it there's a very
+nice VSS add-in plugin called dis asmo
+where you can basically hover your mouse
+cursor over a piece of code that you've
+written and look at what the jit would
+produce for that code um you can also
+get that information from command line
+processing or there are some web
+interfaces where you can basically copy
+and paste your code into you know
+website and and look at the same thing
+these are all pretty cool if you're ever
+curious to sort of know more or Tinker
+around with your code and see how the
+expression of that code in Assembly
+Language changes these are awesome
+things to know about um all right so
+let's talk about objects in particular
+about something called Escape
+analysis so you probably know in the
+world of.net there's roughly two kinds
+of data type
+there are ref types and there are value
+types or sometimes we would call those
+objects and structs um and ref types um
+or classes instructs and ref types are
+things that are allocated always on the
+GC Heap uh historically their lifetime
+is determined by the GC and that's one
+of the big values that the GC brings
+like you can create an object you don't
+have to do anything explicit to deal
+with the fact that the object is
+eventually going to become an
+interesting and that that storage can be
+reclaimed and reused for something else
+that GC figures it all out before you
+um and then there are structs or value
+types these are usually allocated on the
+stack but you can box them and put them
+on heap if you really want them there or
+sometimes inadvertently they'll get
+boxed when you weren't expecting it um
+if they're allocated on the stack then a
+bunch of good things happen the fields
+of that value type can be promoted to
+the jit and act as if they were
+effectively local variables in your
+method and those promoted Fields can
+live in registers they can be
+aggressively analyzed and optimized and
+so a lot of good things happen when
+promotion kicks in for a struct um and
+the lifetime of the struct is determined
+by the lifetime of the stack frame where
+the struct is allocated so when that
+particular stack frame returns that
+storage is freed up and it can be reused
+so you get somewhat cheaper allocation
+one might say it's not not slam dunk but
+likely cheaper um if you end up copying
+your struck to the heat via boxing then
+the lifetime just as with a class is
+going to be determined by the GC um and
+when you want to operate on the thing
+typically you have to unbox it copy it
+to a local stack allocated case use that
+in your computation so what we've done
+in doet 9 is we've enabled a new
+technology in the jit called object
+stack allocation where if we can prove
+that even though you created an object
+and you said to put it on the Heap if
+the lifetime of that object is bounded
+constrained by that stack frame that
+allocated it then we'll treat that
+object like a value type like a struct
+and so we'll allocate the storage for
+the object on the stack
+and then we will all those good things
+that happen when you have a struct kick
+in we can promote the fields we can
+aggressively optimize the fields this
+will work even if you have a box value
+type and the key enabler is this proof
+that the lifetime is constrained and
+that's the thing we call Escape analysis
+if you're familiar with Java orgo they
+have had this capability for a long time
+in the case of java they don't have
+struct so having Escape analysis and
+stack allocation turned out to be key to
+doing a lot of things the upshot is when
+this kicks in you have less Heap
+allocation
+and better code optimization at the same
+time so it's really nice
+combination there's a simple example
+hopefully simple we have a a struct here
+or actually we have a class here called
+a rectangle it implements a shape
+interface and we're just going to create
+one of these guys and we're going to
+call a method on it um so pretty
+straightforward but when we create it
+we're going to refer to it through its
+interface type rather than through its
+Class Type and when we do that then the
+runtime has to assume generally that
+this interface could be implemented by a
+bunch of other classes um and
+so when we generate code for it um you
+know we have a bunch of possibilities
+now in 8.0 we were smart enough to see
+that this thing was really a rectangle
+under the covers so we basically Dev
+viralize that interface call but in
+order to do make interface dispatch work
+we had to allocate an object and so
+we're still allocating an object in 8.0
+and then we're initializing its field so
+if you sort of look at that little box
+of Coden that says 8.0 you'll see
+there's a call in there to a method
+called or a routine called core info new
+help help newest fast that's allocating
+Heap object we then fill in the fields
+of the Heap object writing twos and
+threes and then we read those back to
+compute the area so we immediately read
+back the values that we just wrote and
+then we return now that object that we
+just allocated can't be referred to
+anymore and so it's going to eventually
+be collected by the GC you can see we
+went through a lot of work to create an
+object that we didn't use for very long
+and that just seems kind of unnecessary
+and D at n we're able to prove that that
+object cannot live longer than the
+method that it's allocated in so we no
+longer need to allocate the object we
+promote its Fields very aggressively and
+so we're able to see that instead of
+writing two and three to memory we can
+just keep them in registers and then we
+see the way that those are used and we
+understand that the values are just
+immediately consumed by this
+multiplication we propagate those
+constants to the multiply and we figure
+out what the answer is so in do at 9 we
+just return the number six There's No
+Object there's no Fields there's no
+computation you know everything is
+nicely cleaned
+up all right so let's switch gears a
+little bit and talk about arm 64 as you
+know Microsoft has just introduced uh
+its own first uh captive arm 64 host in
+in Azure called the Cobalt 100 offers
+very awesome computing power you know I
+think also very attractive pricing
+something everybody ought to really be
+thinking about for their Cloud workloads
+um one of the nice things that this
+machine offers is something called
+scalable Vector extensions and I'm going
+to just give you just a very brief taste
+of what this means um when you have
+Vector processing you're able to to do
+things you know in basically in chunks
+in Vector sized chunks so let's imagine
+that we're trying to add up you know an
+array here and say our array has got 10
+elements in it if I have um a vector of
+size four I can do two ads of eight and
+then I can do one add of two and then I
+can accumulate but that one add of two
+is not Vector sized and so you'll see in
+the circle there instead of me being
+able to do just Vector operations I have
+to drop back for this little tail of
+processing this last few elements to
+scalar processing and sort of add them
+up one by one um and so you find very
+commonly in these machines with
+vectorized code that you end up writing
+a lot of this little residual Loop codes
+people call it tail Loops for example um
+in sve there's a very nice feature it's
+also available in ABX 512 on Intel where
+you can actually add predicated
+operations into your vector operations
+and so one of the benefits is you can
+eliminate the need for these tail Loops
+entirely so what happens is in this case
+we do two Vector operations both of
+length four we also produce a mask at
+each step saying which elements of the
+vector are active and we get to that
+last step The Mask basically turns off
+two of the elements the vector and so
+instead of doing a size four add we end
+up doing a size two add so in three
+steps we've managed to add up all the
+numbers we have to do one more reduction
+at the end to add the four Vector Lanes
+together and voila we have our answer
+without any extra fussing around with a
+tail Loop or anything like that so you
+can really get some nice benefit out of
+these predicated or mased operations in
+your vector processing obviously you got
+to do some manual coding here to take
+advantage of it um but it's something
+that if you're interested in really high
+performance Vector code it's worth
+checking
+out um and so in net 9 we've added
+support for 281 new apis for sve
+including
+all those categories you see there a
+whole bunch of actual instructions that
+we canm this is all hooked up to Vector
+of
+T so it's going to act like we have
+scalable vectors it turns out in this
+implementation we're going to hardcode
+the vector length to 16 bytes but in the
+future when we get onto Hardware that
+has longer Vector support in Hardware
+we're going to have that value be able
+to adjust upwards one is a cool thing to
+check out um we'd love to get feedback
+on this and see how well you know our
+implementation works in practice on code
+that you might want to vectorize
+uh let's switch topics again and talk a
+little bit about loops um these are
+things that if you're familiar with
+compiler technology probably thought
+that we were already doing inside of our
+code generator turns out that we weren't
+um basically one of the key things about
+loops is to understand so-called
+induction variables and induction
+variables are values within the loop
+that change predictably from one
+iteration to the next let's look at this
+simple Loop here on the left we have a
+value here I and I is simp incrementing
+by one every single Loop iteration right
+so we're able to do the analysis now to
+understand quite a bit about how the
+value of I evolves as the loop
+processes and in this particular case
+we're going to take advantage of that
+we're going to realize that inside the
+loop you're not actually making any
+reference to I at all the value of I
+isn't used anywhere it's only used to
+control the loop um and because of that
+it's actually more efficient for us to
+reexpress the loop as counting downwards
+instead of counting upwards so instead
+of effectively writing for I equals 1 to
+I equals 1 I less than n we change it to
+be if I you know is equal
+to and and we go downwards until we get
+to zero or n minus one so anyway so we
+end up effectively doing this
+transformation that you see over here on
+the side um now you might wonder like
+well what's the point of that why do you
+even bother if you look at the code
+that's in purple obviously this is
+machine code and not all of you may be
+comfortable with it but you can notice
+one thing is that on the left we had
+four inst instructions and on the right
+we have three so hey we got rid of one
+instruction in the loop it should run a
+little faster the other thing that's
+actually a bigger deal is that the
+verion on the left is using two
+registers it's using a register to
+remember what the value of I is and it
+has another register to remember what
+the value of n is where the code on the
+right only needs to keep track of one
+thing and so we've freed up a register
+that could be super useful somewhere
+else in the loop say we had an actual
+interesting computation going on here so
+we get a smaller Loop it uses fewer
+registers it's just better
+overall um similar kind of thing we can
+do now that we can analyze induction
+variables is strength reduction so now
+you have some sort of operation in your
+Loop typically that involves a multiply
+so there on the left you can see we have
+I controlling the loop now we do have a
+reference to I inside the loop but when
+we use it we're all always multiplying
+it by three now multiplication on most
+computers is not as cheap as addition um
+and so if we could somehow reexpress
+that mult multiplication as an addition
+we might be able to make Loop run faster
+save some time and this is what we can
+do when we have strength reduction so in
+this case we understand that while I is
+incrementing by one every iteration I *
+3 is incrementing by three every
+iteration right and then we also
+understand again how the value of I is
+evolving we turn this into a down
+counted Loop okay and we replace the
+multiplication in there by an addition
+so if you look at that transformation
+and you might have to squint a little to
+to convince yourself that we're actually
+doing things correctly but now we have a
+down count to Loop so we're using
+potentially a few
+register plus registers for that and
+also we've gotten gotten rid of the
+multiply changed it into an addition so
+again the loop is now operating more
+efficiently and as a final piece this
+one might be a little bit hard for
+people to understand but let's give it a
+try um there's a mode in arm 64 called
+post increment addressing mode so if you
+are walking through data structure like
+an array effectively somewhere in there
+there has to be a pointer that's
+advancing along pointing at each element
+of the array um and in net 8 we would
+actually compute that pointer value on
+the Fly by taking I and multiplying it
+by the size of the array element and
+adding it to that base element of the
+array to figure out where to point and
+that's what that very first instruction
+in purple there on the in the middle
+column is showing was basically adding
+result of that um thing and then that
+addition happens sort of just for the
+array access and then we have to
+increment I and we have to do the
+computation of loop which is adding up
+the sum so you'll see that there's
+effectively three additions going on in
+that Loop one of which is just sort of
+used transiently compute the element
+address so if you could capture that and
+you could do the addition and take
+advantage of the fact that it's
+incrementing you know effectively the
+loop control thing you can eliminate an
+addition and there we have it on net 9
+there's one less addition
+happening um and the addition that was
+explicit in the addressing mode before
+is now in blue has a special syntax
+which basically means we're going to use
+x0 as the as the address of the element
+and then we're going to increment x0 by
+four so there's an ad hidden in there so
+again fewer registers um a fewer
+instructions faster processing you know
+all good stuffff
+all right let's talk a little bit about
+some general optimizations so as you
+know in net 8 we introduced Dynamic pjo
+and net 9 we've made some enhancements
+to Dynamic pggo I'd like to just touch
+on one of those here and then we've also
+made some improvements to
+inlining um
+so in net 8 most of the activity around
+pggo had to do with virtual calls and
+interface calls so we would profile look
+at what types were involved in those and
+try to make those operations be more
+efficient by by by guessing or
+predicting what the outcomes might be
+and so in dnet um nine we've extended
+that to include some other operations
+that deal with types like casting so in
+this case we
+have um a simple question like we're
+just going to look at an object and say
+hey um is this object Implement I
+collection right so might think well
+okay that seems like a fairly simple
+thing to do but when you actually look
+at the codee that net 8 generated for
+that the code for this is collection it
+has to delegate the heavy lifting off to
+this helper method and the helper method
+I don't have the code here for it but
+turns out it actually does a fair amount
+of analysis because
+they're implementation of interfaces can
+go through some twisty paths and so
+there's a lot of checking that goes on
+here um and so you know potentially it
+takes a while um now what we did in net
+9 is when we run this version at tier
+zero we sort of Watch What types you
+present to this interface call or this
+this helper call we're like are you
+asking about the same type a lot and if
+so maybe we can sort of guess that that
+might be the type that you ask about
+here and bypass all of this and figure
+out what the answer is up front and
+indeed that's what we've actually done
+in net 9 so here's the same code you'll
+notice that if you look at the Coden on
+the right at the very bottom you still
+see sometimes we have to fall back to
+that General Helper and be like hey we
+couldn't figure it out we got to go do
+the general thing but before we get to
+that point we do a couple of quick
+checks like okay is the object that you
+pass us not null and if so is it this
+specific class that we saw you asking
+about a lot before if the answer to that
+is yes then we actually know the answer
+and we sort of just quickly comput it
+and we're done so this is another kind
+of profile guided optimization where by
+observing how your code behaves we can
+try to anticipate when we go to generate
+optimized code that it's still going to
+behave that way and provide these fast
+path and speed things up now you might
+think this can't be that big of a deal
+like how much difference is this going
+to make so here's some little benchmarks
+that we ran um you know these sometimes
+are kind of misleading because we're
+really focusing here on some of the
+overhead involved in doing these casts
+instead of you know there's not a lot of
+computation once you get the answer but
+still these are things that you might
+end up doing in your code or that your
+program might doing so if you look at
+the at the
+benchmark.us over there on the right you
+can see that you know these things
+something like a factor of two factor of
+you know six Factor something faster
+because of these changes so it actually
+speeds things up quite a bit in
+general all right and then one last
+thing um so one of the big powerful
+features in net is are generic types and
+generic methods um and there's a fair
+amount of Machinery under the cover to
+implement these things and Implement
+them
+efficiently and we're always looking for
+ways to get in there and actually make
+that stuff work even better um one of
+the things you may have seen in the past
+or maybe you haven't seen it but uh is
+that when you have say two different
+generic methods like here we have two
+different generic methods called test
+and coli um that when one of them calls
+another sometimes there was actually a
+bunch of extra computation that had to
+go on um because we couldn't effectively
+combine them together via inlining so if
+you look at net 8 here here have test
+calling call E it looks like sort of the
+same thing is going on like there's a t
+in all of these it turns out at when we
+generate code for um test you know and
+it's calling Ki we don't necessarily
+know right ahead of time that Kali is
+going to get the same type that test has
+it may seem weird but that's actually
+the way it is so when we go to call ki
+we got to go do a bunch of work and
+figure out like hey like what type is K
+actually going to be instantiated on
+here and that code in the box where it
+says runtime lookup is actually going
+off and doing this thing and not only do
+you see like a bunch of checking you see
+yet again another helper in there like
+wait a minute like we got to go and ask
+you know go to some other piece of code
+and figure this thing out so potentially
+kind of inefficient um and then when we
+actually go to invoke the call E we
+can't inline the code we have to call it
+so down there at the bottom in that thin
+skinny box we're actually calling this
+method um so and if we invoke it on
+something like string
+um that'll turn out that string is a
+reference type so type of t. is value
+type is going to be false so we're doing
+all of this work basically to discover
+something that maybe should have been
+obvious to us that the answer was indeed
+like
+false anyway so when we get to
+um
+net9 then the end and the we we excuse
+me we managed to remove all those
+bottlenecks about inlining from one
+shared generic method into another um
+and once we do that we know in this case
+that we have whenever we have a Shar
+generic the type that it's being shared
+over is always a reference type so it's
+never a value type and so all this
+method does in dot at n is simply
+immediately return false so again you
+can see you know big difference in
+performance between doing this kind of
+stuff to discover that the answer is
+false and basically doing this kind of
+thing to know that the answer is false
+and uh I had a chart on here I think I I
+must have lost that version but anyways
+this this this box here down at the
+bottom is showing what our Benchmark
+system told us this this change made in
+our in our code you can see many many
+benchmarks improved you're probably
+going to see some you know Improvement
+in your own code if you do this kind of
+thing fairly frequently so the upshot is
+with this optimization generics
+basically compose more uh compose better
+with each other they play along nicely
+um you can use them without worrying
+about the fact that when you you cross
+from one generic method to another or
+from one generic class to methods of
+another generic class that potentially
+you're losing a little bit of
+performance because of these things um
+all right so let's wrap things up um so
+I've shown you in the past 20 minutes or
+so a small sample of the changes that we
+made in net 9 it turned out we made
+about 1100 changes to the jit over the
+year um between donet 8 and donet N um
+clearly there's no way I could even
+bother to you know give you a view of
+more than a very small fraction of them
+I try to just highlight a few things
+that we thought were interesting
+um and the good news is the only thing
+you really need to do to see the benefit
+of all this work is updated. net9 you
+don't have to change anything about the
+way you code or deploy or anything like
+that um you might be curious to try your
+code on a different platform like hey
+maybe I should run on arm64 instead of
+on Intel or whatever but you know you
+you just pick up the new release and
+immediately you get these benefits
+without changing your code at all um and
+you know we would love to hear your
+feedback if you see things when you do
+this where performance isn't what you
+expect or if performance is is good we
+always love to hear feedback um we
+especially interested if you are going
+to try out arm 64 and the Cobalt 100 um
+and try these new experimental sve
+extensions that we talked about so if
+you try to vectorize your code in arm 64
+you're taking advantage of the
+predication and all of that you know
+please please let us know how it
+goes and here are our various links for
+some things that you can try so you know
+one good way to get a hold of us is
+actually to open up issues on theet
+runtime GitHub repo we're super
+responsive we we generally are you know
+quite active looking for feedback and
+problems that people report or anything
+like that or suggestions on how we can
+do things better I mentioned sharp lab
+that's the online web viewer um you can
+try and look at your code we did a blog
+post talking about the engineering of
+the sve extensions that might be
+interest to you um the asmo the plugin
+that I showed the VSS plugin to shoot to
+look at the code um and then a couple
+issues you might want to look at in our
+GitHub one is a a discussion of some
+enhancements to the object stack
+allocation phase that I've talked about
+earlier and another is our proposed work
+for Net 10 anyways so feel free to check
+those things out again get a hold of if
+you have any questions and with that I
+want to thank you very much for
+listening in

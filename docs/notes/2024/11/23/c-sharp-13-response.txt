@@ -1,0 +1,157 @@
+I'm Matt Ston. I'm an architect at Microsoft, and I'm also the lead designer of CP. 
+
+Uh, I'm Dustin Campbell. I'm an architect on .NET tooling and also a member of the C language design team. I work a lot with this guy. 
+
+Today, we have .NET 9 coming out, which also means that we have C# 13 meeting the world today. We're here to tell you a little about what's in this version of C#. We want to start by taking you on a very brief tour of how you can stay updated on what's going on with C#. Like everything else here, it's open source. 
+
+I've got a couple of things up here on my laptop that should show you a few ways to get involved or stay engaged if you're new to the C# universe. We have a few examples of ways to do that at various levels of interest. 
+
+This first thing is learn.microsoft.com, which has the "What's New in C# 13." If you want to find out what's in the product for C# 13 and get documentation on these features and how they play in, all of it is here. This is a great way to get an overview of the languages that have shipped. 
+
+However, language features that have shipped are just the beginning. As we go, the C# 14 cycle essentially starts now, and we tend to put language features out in preview. We actually have one that we'll be showing today that's already going to be in preview. We try to keep the "What's New" page updated, even with preview documentation of preview features, so it is a good place to keep an eye on C# as it evolves over the year. 
+
+Another spot you can look at is on GitHub in the Roslyn repo, which is where the C# and Visual Basic compilers and IDE stacks live. This is the language feature status page in the docs folder, where you can see the nitty-gritty on who's working on what and what we're looking at for C# 13, as well as what's happening next. If you're interested in seeing branches merge, this is where to go. 
+
+The working state is everything that we currently have engineering activity on. As the C# language design team, we work on even more things that haven't yet started being implemented. The place to go if you really want to engage with the C# design is our separate repo, C# Lang, which is again in the .NET Foundation on GitHub. This is where notes from our language design meetings are posted, where proposals are made, and where issues and discussions happen. This is also an active development area, though it's not necessarily code development; it's where the nitty-gritty of the language design itself occurs. If you want to get involved in some way, provide feedback, or discuss with the team or other like-minded folks, then this is the place to go for that. 
+
+There is quite a lot of community contribution in this repo as well, particularly regarding the design of C# as opposed to the implementation we saw before. 
+
+Absolutely, but I guess we're here to look at code. Let's talk about many of the features in C# 13. By "features," I mean that some of them really feel like just bug fixes. We're going to show some of the more interesting ones, but as you can see on that language status page and the "What's New," there's plenty. 
+
+In a way, we've been looking at the features that landed in C# 13, and it feels very much like, almost not necessarily small features, but features that might feel smaller. They are there to genuinely improve the consumption of code, making it easier and ensuring you're doing the right things. They provide type authors and library authors with the right tools they need to help you get on the right path for consuming APIs. 
+
+There is a theme to it, even though it feels a little grab-baggy. I like the idea that it's very light on new syntax, but there's a lot of semantics behind familiar syntax. 
+
+Starting with this one here: params. Yes, this has been in the language since C# 10. Params has been around forever, and it's always been about arrays. You can have a params array, which means that the call up there on the first line packages all the arguments for that parameter into an array that gets created on the spot and passed on to the method. 
+
+Almost immediately after this shipped, we wondered why we couldn't do params with IEnumerable. Then .NET 2 came out with generics, and we thought, "Well, why can't I do one with params IEnumerable<T>?" That's been a long-standing request. 
+
+To be clear, if you want to have a general API that takes all kinds of collections but also uses params, you need two overloads: the general one that takes IEnumerable<T> and then an array one that is params because only arrays can be params. You can kind of guess where we're going with this. 
+
+This gives you
+
+the ability to have something where, if you've got a list in hand, you can pass that, and it will make its way into the IEnumerable<T>. In the other overload, you can pass a list of arguments, and they'll get into the params. Often, this is implemented in a way that you wouldn't normally do; you usually take the params one and use that to call the IEnumerable<T> one. However, it seems like every API that wants to expose params ends up doing something like this as well. 
+
+We've had it on our list for well over a decade to do something about that. But then there's the question: if we do params for IEnumerable, what about other types? People will immediately be like, "Okay, params for other things, right?" So we kind of left it alone. 
+
+Last year, when we were releasing C# 12, a very consequential feature came out: collection expressions. My favorite feature in years! To be able to surround this with brackets and just say this is now a collection that is not opinionated on the type of that collection is a game changer. It decides what the collection is going to be based on its surroundings. 
+
+In this case, we could pass it in here and get a result that looks very similar to passing params, but with just these square brackets. The big difference with collection expressions is that you can pass them to almost any collection type. There are standard ways that they will work, and they will function like old-fashioned collection initializers if you don't do anything else. However, you can also set things up in your API to tell it how to create your collection in a smart way. 
+
+The compiler specializes in a lot of common types, and it can create all kinds of different collections from the same syntactic expression. It does a really good job at creating efficient implementations of interfaces and that kind of stuff. 
+
+Now, in this case, overload resolution will make it so it calls the array still. But if I delete that, I can do so now because I've got that collection expression up there. The compiler will generate a type that's very efficient and implements IEnumerable<T> for you, so you don't have to go and say, "I'm newing up a list" or "I'm newing up something else" to pass in here. Instead, it will create something that implements IEnumerable<T> so that it can be passed here successfully and efficiently. 
+
+That little extra step we took in C# 13 is that now we have machinery to create all kinds of different collections from a list of elements. Couldn't we just do that with params as well? Could we allow params on all those collection types and have it do the same thing? It turns out we can! 
+
+So, this is, of course, legal in C# 13. We have params for all sorts of things, essentially for the things that you can create with collection expressions. We know how to build that machinery now, so if I delete these brackets, it works just fine, and it's going to do essentially the same thing under the hood as if you passed in a collection expression. 
+
+You can think about it as params being the compiler putting those square brackets around the elements that you're listing as arguments. Those two features are very closely connected. 
+
+In this case, because it's IEnumerable<T>, we're going to be allocating something under the hood. There are cases where you don't want that, and you might wonder what other things we could do with params. If I wanted to do something a little more efficient using some of the span-based types that we have, that's also allowed. 
+
+I could type Span<T> in here, and that works. Or I could use its read-only cousin to pass in arguments that could be from some heap-allocated type, from an array, or even just allocated on the stack. This could point to memory on the stack, so that you're not making any objects to pass something in that can then be iterated over like this. 
+
+This is probably the second longest request we've had for params: support for span types. The compiler can choose to allocate that span on the stack, and when it does, no memory is wasted. It's actually very similar to if you had all those parameters individually in your signature; they would also have gone on the stack. 
+
+From a memory layout and performance perspective, this mirrors multiple parameters the best. There's another piece of this that I think is really interesting: overload resolution would like to say that in this case, ReadOnlySpan<T> is a better overload because it would implement IEnumerable<T>. However, it can't, and so we end up picking the ReadOnlySpan<T> type here. 
+
+This is part of another feature of C# 13 that is somewhat under the hood. You won't see it pop up, but it will help you do the right thing. We essentially embarked on a new story arc, if you will, in C# for spans—making spans first-class citizens. 
+
+Even though spans have been around for a long time, many people find them challenging due to their restrictions, as they have to live on the stack. As a result, a lot of developers don't use them directly. We want to make it so that you can get a lot of benefits from spans without having to understand too much of that machinery. 
+
+However, the language itself has kept spans at arm's length for a bit. There are conversions from arrays to spans to ReadOnlySpans, but they haven't been fully integrated into the language. This means spans haven't felt completely integrated into the language. 
+
+We have started down this path, and there will be more in C# 14 to make spans first-class citizens. The down payment on that in C# 13 is that we make spans better than arrays in all the interfaces implemented by arrays in overload resolution. It is generally a more efficient way of doing things, and it makes sense. 
+
+Another thing about params and collections is that we can do IEnumerable<T> and ReadOnlySpan<T>, but we can also work with many other types. There are ways with collection expressions to expose them in such a way that the collection expressions know how to build them. 
+
+One of the types that has been challenging is the mutable array. I even showed an analyzer on this years ago in a "What's New in C#" talk. The idea is that a mutable array is one of those types we use a lot, but it can't be used with the old-style collection initializer. 
+
+This has been a long-standing limitation, and we are looking to address it. The goal is to make it easier for developers to work with mutable arrays in a way that feels natural and integrated into the language. 
+
+As we continue to evolve C#, we are committed to listening to the community and addressing these long-standing requests. We want to ensure that the language remains powerful, flexible, and easy to use for all developers. 
+
+In summary, C# 13 introduces several exciting features that enhance the language's usability and performance. From improved support for params and spans to the introduction of collection expressions, we are making strides toward a more efficient and developer-friendly experience. 
+
+We encourage everyone to explore these new features and provide feedback as we continue to refine and improve the language. Thank you for joining us today, and we look forward to seeing how you leverage these new capabilities in your projects!
+
+Right where I knew up and put the curries and added the elements, because under the hood, a collection initializer just calls add methods. However, the add method on an immutable array doesn't mutate it; it just creates a new immutable array, so it doesn't work. We made sure that when we added collection expressions, we could support types like these as well, which means they're also supported with params. This is due to a special attribute you can add to make your collections work with collection expressions and also with params. 
+
+So, you really have a lot of freedom now in how you use params. Of course, you want overload resolution to still work. This is one of those situations where you might find yourself thinking, "Oh gosh, what's wrong?" You may have no idea, and even these sorts of overload resolution problems can lead to ambiguities. 
+
+In this case, we have params and three different overloads, and you probably wouldn't have that issue if we fixed it. We could fix it by saying we probably want the ReadOnlySpan to be the params one since that's the most efficient choice. However, if I add this and make it so I was passing in a collection expression—which could be either an immutable array, an IEnumerable, or a ReadOnlySpan—we're right back in the same problem. 
+
+This is a situation you sometimes find yourself in if you are consuming or, especially, if you're writing a library and adding to it over the years. You want to add new overloads, like in this case, where the ReadOnlySpan overload is new. You want to add that for more efficiency for your users when they compile, but now you've introduced ambiguities. 
+
+The language just didn't understand the rules well enough for that particular fine-tuning use case. You might have an API that has a better way to do it, but it doesn't work, and there's an ambiguity. Now you have to do other things, like change the method names, trying to fit into the rules. Sometimes the language can't make rules that fit everyone, and you want to have some agency when you evolve your API. 
+
+You want to ensure that the user of the API gets the right options and doesn't get presented with ambiguities, especially since we don't want to break their existing code. Maybe it didn't use to be ambiguous, but now it will be. C# 13 brings something for that API author, whether it's an internal or public API, to fine-tune the overload resolution. 
+
+You can use this new overload resolution priority attribute, which essentially says that all the overloads here have a priority of zero. If I want one to be picked above that, I can give it a higher priority, which actually fixes the issue here. Now it picks the ReadOnlySpan, which is cool. 
+
+Sometimes, of course, you want a particular overload not to step in front of the others; you want one to step behind them. You can use negative numbers for this, meaning you have a wide range of options available as you build out your applications. Using a negative integer here allows you to prioritize it below IEnumerable and mutable array, and there's still no error. 
+
+It's choosing a mutable array because now regular overload resolution is kicking in and saying that a mutable array is a better choice than IEnumerable, as mutable arrays implement IEnumerable. It's not just a matter of positive and negative; you can use different numbers for relative priority. You could use prime numbers or squares, but I would probably use squares. 
+
+However, I feel like this should be used sparingly. This is meant for fine-tuning situations where you need to get the rules to choose the right thing. If you find yourself using 32 of these, you might want to rethink things. It would still be a smell; usually, you want your API to work by the rules and not against the grain of the language. 
+
+This is mostly for situations where you are evolving an API and want to keep existing code happy while taking bolder steps for better performance, like adding a new overload and moving the params to it. 
+
+If I recall, this doesn't create situations where someone could add an extension method and subvert your type. It's only the overloads within this type, right? Yes, exactly. The priorities are only used between members of the same type. Essentially, it takes all the applicable members, finds the highest priority among them, and only the ones with that highest priority get to compete for being chosen. 
+
+If the top one succeeds, it wins. If it doesn't apply, it falls down to the next priority and lets them compete. This is great! 
+
+Now, let's go and look at some other code. That's three features down in C# 13, and we haven't introduced much new syntax so far—actually, no new syntax. 
+
+Here we are in this file, and it takes a little bit to absorb. We have a type called MyFile that's partial, and in here, there's a partial method. Think back to C# 2 to remember your partial methods.
+
+Down here is the implementation of that partial method. Partial methods have always been used for code generation scenarios, right? They are ways to say, "Here's a method that I want to provide an implementation for in a partial part." They are used more now in the world of source generators. We've had them for a long time, but they work well in scenarios where you can say, "Oh, here's a hook that the source generator can fill in an implementation for," or vice versa, where you want to provide an implementation and the source generator is going to provide a hook. 
+
+Up until now, the only member kind that could be partial was methods. We have finally taken the step and added partial properties as well. I can go ahead and add a partial keyword to the implementation side, and I will come back here because now it's complaining that there's no definition. So, I'll go ahead and add my definition. I think I need a private set because we need the accessibility accessors to match. 
+
+You might wonder why we haven't done this before; it seems so straightforward. The reason is that there were challenges. If you notice that private set, it looks like the body of an abstract property, but it also looks like the body of a concrete property that happens to be an auto-property. We had to make the choice to say that when you put just the accessors and semicolons, is that an auto-property that's on the implementation, or is that a definition? We decided it has to be a definition; that's the only way this can work sensibly. 
+
+That means you can't use the same auto-property syntax to implement it; you have to do something manually. So, auto-properties aren't supported in that exact syntax you're used to. However, hold that thought! This is a great feature for source generation and any code generation scenario, and now it supports properties. 
+
+Honestly, we are already getting requests for supporting partial other member kinds now. As the scenarios continue to evolve, it might be very little work, and we will probably keep looking at that to generalize it. But for now, you have methods and properties, which is fantastic. 
+
+This brings us to another feature we have here. We are locking some data using the classic lock keyword, which has been in C# since version 10. Again, this is not new syntax; it's something that's been there for a very long time. In C# 1 and .NET 1, we decided that every object could be something that could be locked on. Any object could be used with the monitor classes in .NET. 
+
+That pattern is the one unlock, but since then, we have had no limits on putting new locks into .NET. There are so many locks to choose from, and for various situations, in hindsight, maybe it wasn't the greatest idea to enshrine the first idea we had about locking into the language itself. It almost created an adoption blocker for the other options. 
+
+Now we have a new idea for a lock, and that's what this feature is about. We have a new lock in .NET, and it's not called SemaphoreSlim or anything like that. It's simply called Lock. I changed that map lock field from object to the new System.Threading.Lock, and it works with the lock keyword. 
+
+This is the new feature here: we allow the lock statement to be used with this new lock because we feel that this is used in similar scenarios. However, it is lighter weight than the old one. The old one has extra baggage with Monitor and features that felt like they could be streamlined. 
+
+To be clear, this would have worked even if we had done nothing in C# because lock is an object. Locking on it should just do the same monitor thing. But we said, "That's wrong. Let's embrace this new lock type in the language." When the lock statement is used on an object of the lock type, the compiler can see this is the lock and will generate more efficient code to use it as intended. 
+
+Does that mean that if I create a lock and turn it into an object, it can still use Monitor? Yes, it will still use Monitor, which is the risk of doing something like this. You can see the green squiggle there that says, "Don't do that, please." If you have a lock object, don't upcast it and forget that it's a lock. If you use the result of that in a subsequent lock statement, it won't do the same kind of locking, which can get very dangerous and silly. 
+
+So, we put some guardrails in place to prevent people from mixing lock and non-locks. Things might not lock as you think they should, and they might have different semantics, leading to unexpected behavior. The C# compiler has no way of knowing that it's not an object statically unless we build a runtime check into lock, which would start getting inefficient. 
+
+We didn't do that, but we put these guardrails in place. To be clear, this doesn't mean we've generalized
+the lock statement to be pluggable in a way that allows you to write your own types that can plug in and have their own behavior in the lock statement. There's no lock pattern today. This is not that. 
+
+Again, it's a situation where we feel that it is important to do something different for this specific type. If the need arises for a more general solution, we could explore that in the future. For now, we are embracing this really good type from the core libraries, which is a significant improvement.
+
+In summary, C# 13 introduces several exciting features that enhance the language's usability and performance. From improved support for params and spans to the introduction of collection expressions and partial properties, we are making strides toward a more efficient and developer-friendly experience. 
+
+We encourage everyone to explore these new features and provide feedback as we continue to refine and improve the language. Thank you for joining us today, and we look forward to seeing how you leverage these new capabilities in your projects!
+Um, all right, let's talk about one of our features that's maybe not quite there, but it's very, very ready. I've been using it a lot. Yes, it is a feature that right now in .NET 9 is only in preview. When I say "language version preview," I don't mean .NET SDK preview. I mean you can go into your project file, use .NET 9 GA (the general release), and specify "LangVersion Preview" to get access to this feature. 
+
+We will come back to why it's in preview and not part of C# 13 proper. Absolutely, but let's show that feature. That feature is something that we've shown a number of times, often with squiggles, but it really is here now, and it's the "field" keyword. So, the ability to access the backing field within an auto property is something that, you know, with an auto property, there's always been this big cliff. If you want to do various things, like, you know, in your setter, you just want to say, "trim that value" that's coming into the string before it gets set, or just lock on something before you do the mutation, as in this case, that results in a huge cliff where you've now got to declare a field. You can't use an auto property anymore, and you must specify both accessors even though you only wanted to fiddle with one of them. 
+
+Absolutely, so we're taking that cliff away with the "field" keyword. It is something you can use in accessors and property accesses to say, "Well, I am an auto property; I do have a generated backing field, and 'field' is how I access it." Now, I can still write an accessor manually if I want to. If you want to, this one actually does right now because it sets a field that's different from this, which is now the backing field. Yes, and so we're actually getting a warning here that we should be using "field" because the other accessor does. That helps me not make a mistake and ensures that I'm using the backing field keyword as well, which is awesome. 
+
+Now, that "mapField" isn't needed up there; you can see it's grayed out. We're not referencing it anymore, so we just get a backing field of the same type as the property generated for us. Now, it may be a little excessive that we're actually locking on "get." Oh yeah, so if we amend the "get" accessor to just return "field," if we took out that lock, we could do so just like this. Because it's an auto property, I used to think that auto properties had to have a "get" and a "set" with semicolons, no bodies. I thought that's what made it an auto property, at least when I looked at it. 
+
+But really, what makes it an auto property is whether you created a backing field or whether one was generated for you. Now, auto properties come in this large variation of syntax that you can use to make your property experience much nicer and more expressive. Just to circle back to the preview flag, we will get there as well, but just the partial thing from before: now we are actually writing the implementation as an auto property. 
+
+But because it has an auto property where at least one of the accessors has a body, it doesn't conflict with the definition. We can tell those apart. Yes, and because it acts as the "field" keyword only, it is an auto property, which is exciting. So, that is pretty cool. But yeah, we should talk about why we didn't just ship it. Why didn't we ship it, and why is it in preview right now? 
+
+The reason it's in preview is that this is a breaking change. In fact, we've talked with customers who have said they've gone through their codebases and said, "I have a lot of fields called 'field.'" Maybe they're writing database schemas, and they have an object hierarchy, and they're talking about fields in their databases. Or maybe this is an academic thing, and it's like, "Oh, well, I have a person that has a field of study," or "it's a force field in physics," or "it's in Star Wars," or "agriculture." It turns out that many fields have fields. 
+
+So, it's a little bit of a breaking change to start saying, "Well, inside accessors, it's now a keyword." Sometimes this now becomes a problem if you had that field and you were referencing that. We decided to go through many alternative designs for this feature, and we concluded that this is the best design. This is the one that we're going to be happy that we landed on, like, ten years from now. 
+
+However, in order to do that, we have to make a little more of a breaking change to C# than we usually do. We sat down and said, "Okay, now's the time for us to come up with
