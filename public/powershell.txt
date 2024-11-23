@@ -1822,3 +1822,2274 @@ To github.com:fromnepal/fromnepal.github.io.git
 Saturday, November 23, 2024 10:39:39 AM
 
 PS C:\Users\kushal\src\myhtml\fromnepal> C:\Users\kushal\src\myhtml\fromnepal\public\omnibus.ps1
+Transcript started, output file is C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt
+
+Saturday, November 23, 2024 11:09:20 AM
+     Removed 926 files, 454.2MiB total
+Saturday, November 23, 2024 11:09:20 AM
+   Compiling windows_x86_64_msvc v0.52.6
+   Compiling proc-macro2 v1.0.89
+   Compiling unicode-ident v1.0.13
+   Compiling pin-project-lite v0.2.15
+   Compiling bytes v1.8.0
+   Compiling futures-core v0.3.31
+   Compiling autocfg v1.4.0
+   Compiling itoa v1.0.11
+   Compiling futures-sink v0.3.31
+   Compiling fnv v1.0.7
+   Compiling memchr v2.7.4
+   Compiling once_cell v1.20.2
+   Compiling cfg-if v1.0.0
+   Compiling hashbrown v0.15.0
+   Compiling pin-utils v0.1.0
+   Compiling equivalent v1.0.1
+   Compiling httparse v1.9.5
+   Compiling futures-task v0.3.31
+   Compiling futures-io v0.3.31
+   Compiling try-lock v0.2.5
+   Compiling native-tls v0.2.12
+   Compiling serde v1.0.213
+   Compiling windows_x86_64_msvc v0.48.5
+   Compiling tinyvec_macros v0.1.1
+   Compiling tracing-core v0.1.32
+   Compiling atomic-waker v1.1.2
+   Compiling tinyvec v1.8.0
+   Compiling want v0.3.1
+   Compiling futures-channel v0.3.31
+   Compiling byteorder v1.5.0
+   Compiling percent-encoding v2.3.1
+   Compiling smallvec v1.13.2
+   Compiling http v1.1.0
+   Compiling form_urlencoded v1.2.1
+   Compiling getrandom v0.2.15
+   Compiling tower-service v0.3.3
+   Compiling windows-targets v0.52.6
+   Compiling indexmap v2.6.0
+   Compiling windows-sys v0.52.0
+   Compiling tracing v0.1.40
+   Compiling windows-sys v0.59.0
+   Compiling slab v0.4.9
+   Compiling windows-result v0.2.0
+   Compiling ryu v1.0.18
+   Compiling serde_json v1.0.132
+   Compiling unicode-bidi v0.3.17
+   Compiling windows-strings v0.1.0
+   Compiling rand_core v0.6.4
+   Compiling windows-targets v0.48.5
+   Compiling rustls-pki-types v1.10.0
+   Compiling thiserror v1.0.65
+   Compiling windows-registry v0.2.0
+   Compiling windows-sys v0.48.0
+   Compiling quote v1.0.37
+   Compiling futures-util v0.3.31
+   Compiling unicode-normalization v0.1.24
+   Compiling sync_wrapper v1.0.1
+   Compiling encoding_rs v0.8.35
+   Compiling rustls-pemfile v2.2.0
+   Compiling mime v0.3.17
+   Compiling syn v2.0.85
+   Compiling base64 v0.22.1
+   Compiling ipnet v2.10.1
+   Compiling http-body v1.0.1
+   Compiling log v0.4.22
+   Compiling dotenv v0.15.0
+   Compiling idna v0.5.0
+   Compiling url v2.5.2
+   Compiling serde_derive v1.0.213
+   Compiling zerocopy-derive v0.7.35
+   Compiling thiserror-impl v1.0.65
+   Compiling socket2 v0.5.7
+   Compiling mio v1.0.2
+   Compiling home v0.5.9
+   Compiling etcetera v0.8.0
+   Compiling zerocopy v0.7.35
+   Compiling http-body-util v0.1.2
+   Compiling tokio v1.41.0
+   Compiling ppv-lite86 v0.2.20
+   Compiling rand_chacha v0.3.1
+   Compiling rand v0.8.5
+   Compiling schannel v0.1.26
+   Compiling tokio-util v0.7.12
+   Compiling tokio-native-tls v0.3.1
+   Compiling h2 v0.4.6
+   Compiling serde_urlencoded v0.7.1
+   Compiling hyper v1.5.0
+   Compiling hyper-util v0.1.9
+   Compiling hyper-tls v0.6.0
+   Compiling reqwest v0.12.8
+   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
+warning: struct `Graph` is never constructed
+ --> src\graph.rs:3:12
+  |
+3 | pub struct Graph {
+  |            ^^^^^
+  |
+  = note: `#[warn(dead_code)]` on by default
+
+warning: associated items `new`, `add_node`, `add_edge`, `bfs`, `dfs`, and `dfs_recursive` are never used
+  --> src\graph.rs:8:12
+   |
+7  | impl Graph {
+   | ---------- associated items in this implementation
+8  |     pub fn new() -> Self {
+   |            ^^^
+...
+14 |     pub fn add_node(&mut self, value: &str) {
+   |            ^^^^^^^^
+...
+18 |     pub fn add_edge(&mut self, from: &str, to: &str) {
+   |            ^^^^^^^^
+...
+24 |     pub fn bfs(&self, start: &str) -> Vec<String> {
+   |            ^^^
+...
+48 |     pub fn dfs(&self, start: &str) -> Vec<String> {
+   |            ^^^
+...
+55 |     fn dfs_recursive(&self, node: &str, visited: &mut HashMap<String, bool>, result: &mut Vec<String>) {
+   |        ^^^^^^^^^^^^^
+
+warning: `helloworld` (bin "helloworld") generated 2 warnings
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 12.05s
+Saturday, November 23, 2024 11:09:33 AM
+   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.71s
+     Running unittests src/main.rs (target\debug\deps\helloworld-358f72777eb128ff.exe)
+
+running 24 tests
+test greatest_common_divisor::tests::test_both_are_zero ... ok
+test graph::tests::test_bfs ... ok
+test graph::tests::test_dfs ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance_single ... ok
+test greatest_common_divisor::tests::test_large_prime_numbers ... ok
+test greatest_common_divisor::tests::test_one_is_zero ... ok
+test greatest_common_divisor::tests::test_zero_input_3 ... ok
+test greatest_common_divisor::tests::test_large_composite_numbers ... ok
+test greatest_common_divisor::tests::test_large_numbers ... ok
+test greatest_common_divisor::tests::test_mixed_numbers ... ok
+test greatest_common_divisor::tests::test_one_is_one ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance_multiple ... ok
+test greatest_common_divisor::tests::test_prime_numbers ... ok
+test greatest_common_divisor::tests::test_zero_input ... ok
+test greatest_common_divisor::tests::test_gcd ... ok
+test my_data_types::tests::test_not_a_number ... ok
+test my_math::tests::test_add ... ok
+test my_math::tests::test_add_multiply_ambiguous ... ok
+test my_math::tests::test_add_zero ... ok
+test my_math::tests::test_multiply ... ok
+test my_math::tests::test_multiply_zero ... ok
+test shadowing::tests::test_shadow ... ok
+test shadowing::tests::test_shadow_string_length ... ok
+
+test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+Saturday, November 23, 2024 11:09:33 AM
+Saturday, November 23, 2024 11:09:33 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Saturday, November 23, 2024 11:09:33 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Saturday, November 23, 2024 11:09:34 AM
+From github.com:kusl/hellorust20240711
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Already up to date.
+Saturday, November 23, 2024 11:09:34 AM
+Pushing to github.com:kusl/hellorust20240711.git
+To github.com:kusl/hellorust20240711.git
+ = [up to date]      master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Everything up-to-date
+Saturday, November 23, 2024 11:09:35 AM
+warning: in the working copy of 'docs/icon_cube.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_fork.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_sponsor.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir_active.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_wrench.svg', LF will be replaced by CRLF the next time Git touches it
+Saturday, November 23, 2024 11:11:05 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/hellolib_BabysFirstDynamicProgrammingMethods.html
+        modified:   docs/hellolib_BubbleSort.html
+        modified:   docs/hellolib_CurrentWeather.html
+        modified:   docs/hellolib_DesignDynamicArray.html
+        modified:   docs/hellolib_DotnetNineGuid.html
+        modified:   docs/hellolib_Entity.html
+        modified:   docs/hellolib_FindClosestNumberToZero.html
+        modified:   docs/hellolib_Graph.html
+        modified:   docs/hellolib_Knapsack.html
+        modified:   docs/hellolib_KnapsackItem.html
+        modified:   docs/hellolib_ListNode.html
+        modified:   docs/hellolib_MergeSort.html
+        modified:   docs/hellolib_MergeSortedArray.html
+        modified:   docs/hellolib_MergeStringsAlternately.html
+        modified:   docs/hellolib_MinimumCoin.html
+        modified:   docs/hellolib_MyCleaner.html
+        modified:   docs/hellolib_MySearch.html
+        modified:   docs/hellolib_PascalTriangle.html
+        modified:   docs/hellolib_PasswordSettings.html
+        modified:   docs/hellolib_Person.html
+        modified:   docs/hellolib_PersonFactory.html
+        modified:   docs/hellolib_Revocation.html
+        modified:   docs/hellolib_RomanToInteger.html
+        modified:   docs/hellolib_SinglyLinkedList.html
+        modified:   docs/hellolib_SinglyLinkedListAddTwoNumbers.html
+        modified:   docs/hellolib_SinglyLinkedListNode.html
+        modified:   docs/hellolib_TwoSum.html
+        modified:   docs/hellolib_Weather.html
+        modified:   docs/hellolib_WeatherFetchException.html
+        modified:   docs/index.htm
+        modified:   docs/index.html
+        modified:   dotnet.txt
+        modified:   tests/coverage.cobertura.xml
+        modified:   tests/dotnet.txt
+
+Saturday, November 23, 2024 11:11:05 AM
+[master c9b20c0] build application
+ 34 files changed, 481 insertions(+), 449 deletions(-)
+Saturday, November 23, 2024 11:11:05 AM
+From github.com:patstha/mydotnet
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Current branch master is up to date.
+Saturday, November 23, 2024 11:11:06 AM
+Pushing to github.com:patstha/mydotnet.git
+Enumerating objects: 73, done.
+Counting objects: 100% (73/73), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (37/37), done.
+Writing objects: 100% (37/37), 6.18 KiB | 2.06 MiB/s, done.
+Total 37 (delta 36), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (36/36), completed with 36 local objects.
+To github.com:patstha/mydotnet.git
+   89aab3f..c9b20c0  master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Saturday, November 23, 2024 11:11:07 AM
+Saturday, November 23, 2024 11:11:07 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.06s.
+Saturday, November 23, 2024 11:11:07 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 5 modules transformed.
+docs/index.html                0.27 kB │ gzip: 0.22 kB
+docs/assets/index-D1OKu7AJ.js  8.63 kB │ gzip: 3.19 kB
+✓ built in 120ms
+Done in 1.10s.
+Saturday, November 23, 2024 11:11:08 AM
+warning: in the working copy of 'docs/assets/index-D1OKu7AJ.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Saturday, November 23, 2024 11:11:08 AM
+On branch kus-2024-10-30-modules
+nothing to commit, working tree clean
+Saturday, November 23, 2024 11:11:08 AM
+On branch kus-2024-10-30-modules
+nothing to commit, working tree clean
+Saturday, November 23, 2024 11:11:08 AM
+From github.com:matchthree/matchthree.github.io
+ * branch            master     -> FETCH_HEAD
+Current branch kus-2024-10-30-modules is up to date.
+Saturday, November 23, 2024 11:11:09 AM
+Everything up-to-date
+Saturday, November 23, 2024 11:11:09 AM
+Saturday, November 23, 2024 11:11:09 AM
+Saturday, November 23, 2024 11:11:09 AM
+On branch main
+nothing to commit, working tree clean
+Saturday, November 23, 2024 11:11:09 AM
+Saturday, November 23, 2024 11:11:09 AM
+Saturday, November 23, 2024 11:11:11 AM
+Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
+Saturday, November 23, 2024 11:11:11 AM
+Saturday, November 23, 2024 11:11:11 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Saturday, November 23, 2024 11:11:11 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.11 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-C7fM1CLc.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-CG30pmQG.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 3.80s
+Done in 4.59s.
+Saturday, November 23, 2024 11:11:16 AM
+Transcript stopped, output file is C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt
+warning: in the working copy of 'docs/assets/index-C7fM1CLc.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-CG30pmQG.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/hybridcache.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/l1-show.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/modernwinforms.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/myvtt.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/myvtt.en.vtt.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/nyt-podcasts-trump-cabinet-picks.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/tldr-global.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/.gitattributes', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/build.gradle.kts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/gradle/wrapper/gradle-wrapper.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/settings.gradle.kts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/main/kotlin/com/github/kusl/november2024a/November2024aApplication.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/main/resources/application.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/test/kotlin/com/github/kusl/november2024a/November2024aApplicationTests.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/requirements.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/A3B318B569046159E1DD6616D2E646D9434350E6.asc', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/Nationalism, Explained [AXz0kbMKPu0].en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/favicon_io/about.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/3-blue-1-brown-llm-LPZh9BOjkQs.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/aoc-Eh7bFt7oUto.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/aoc-WoP9BJiItSI.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/asianometry-mm-wave-5g.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/bravos-ILJ41tmQAQ8.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/coffee-software-DSbuyscXX7I.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/continuous-delivery-_zUkNrUp0Ok.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/continuous-delivery-pair-programming-5TTsIkmtKUg.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/countries-explained-poland-d6LW1iLFXkc.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/dark-brandon-DDp_tb5bs-0.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/diabetes-PsQj2Hg1oFM.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/diabetes-PsQj2Hg1oFM.hi.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/diabetes-Yys5zeoDi2E.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/dotnet-9-new-jit-1bsTnaLchi4.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/dotnet-async-challenges-ef-core-7iuUh0BIAuE.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/dotnet-new-c-sharp-13-japXYFS9YPQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/enrico-7nnyv4yJGJc.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/escuela-XdI2e8QqzbQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/first-ring-wnfcFflmvLo.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/germany-_ywqDbHiMrs.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/hankschannel-nuclear-16203Tks_0I.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/l1-icydock-3KCaS7EK6Rc.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/l1show-EI5iZ4LNsyQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/mileage-mike-ring-road-DhZH0KbcwX4.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/mit-rto-4ec_yZCWOCY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/msnbc-EmvYGLySOVE.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/ndc-oA7xeRyxMSo.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-Dj05EvWQ8NY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-X_gotjGG4ug.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-daily-bernie-xvYvfOcEFXI.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-l7s8QizovG8.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-ukraine-c_z8OoYWjQ0.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/otago-kotlin-multiplatform.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/road-guy-rob-K1TFOK4_07s.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/the-economist-kyiv-xn-AnTYs2H8.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/the-millitary-show-china-hellscape.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/tldr-global-Lj0J3ioOnIY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/tldr-news-eu-COEfdZVTFCQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/tldr-news-global-2024-11-16-a8NmPDUdzhU.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/trudeau-immigration-vOB7-dbYuCc.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/ufd-amd-BJjdGxRRh2E.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/versed-h_rsF8eVPqY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/vivienne-yang-FR6hhULZLfw.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/william-spaniel-polling-hhaNiF5aCCY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/ytotago-kotlin-multiplatform.en.vtt', LF will be replaced by CRLF the next time Git touches it
+Saturday, November 23, 2024 11:11:36 AM
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   docs/notes/2024/11/23/synapse.html
+        new file:   docs/notes/2024/11/23/synapse.txt
+        new file:   docs/notes/2024/11/23/uVWr1o9.mp4
+        modified:   docs/notes/earth.jpeg
+        modified:   docs/notes/output.txt
+        modified:   docs/powershell.txt
+        new file:   public/notes/2024/11/23/synapse.html
+        modified:   public/notes/earth.jpeg
+        modified:   public/notes/output.txt
+        modified:   public/powershell.txt
+
+Saturday, November 23, 2024 11:11:36 AM
+[main 380058c1] build application
+ 10 files changed, 1428 insertions(+), 64 deletions(-)
+ create mode 100644 docs/notes/2024/11/23/synapse.html
+ create mode 100644 docs/notes/2024/11/23/synapse.txt
+ create mode 100644 docs/notes/2024/11/23/uVWr1o9.mp4
+ create mode 100644 public/notes/2024/11/23/synapse.html
+Saturday, November 23, 2024 11:11:36 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch              main       -> FETCH_HEAD
+Current branch main is up to date.
+Saturday, November 23, 2024 11:11:37 AM
+Enumerating objects: 52, done.
+Counting objects: 100% (50/50), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (39/39), done.
+Writing objects: 100% (39/39), 27.20 MiB | 6.17 MiB/s, done.
+Total 39 (delta 31), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (31/31), completed with 10 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   4c6c9138..380058c1  main -> main
+Saturday, November 23, 2024 11:11:44 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_videos.ps1  -url "https://v.redd.it/mknw5bq6mdu81"^C
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_videos.ps1  -url "https://v.redd.it/mknw5bq6mdu81"
+Create new folder for yt-dlp
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          11/23/2024 11:47 AM                yt-dlp
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 11
+Kind        : Local
+Millisecond : 948
+Microsecond : 562
+Nanosecond  : 600
+Minute      : 47
+Month       : 11
+Second      : 2
+Ticks       : 638679592229485626
+TimeOfDay   : 11:47:02.9485626
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 11:47:02 AM
+
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 11
+Kind        : Local
+Millisecond : 964
+Microsecond : 887
+Nanosecond  : 200
+Minute      : 47
+Month       : 11
+Second      : 2
+Ticks       : 638679592229648872
+TimeOfDay   : 11:47:02.9648872
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 11:47:02 AM
+
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241123114702.%(ext)s', 'https://v.redd.it/mknw5bq6mdu81']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.11.18 from yt-dlp/yt-dlp [7ea278792] (win_exe)
+[debug] Python 3.10.11 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1t  7 Feb 2023)
+[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.40.1, urllib3-2.2.3, websockets-13.1
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1837 extractors
+[generic] Extracting URL: https://v.redd.it/mknw5bq6mdu81
+[generic] mknw5bq6mdu81: Downloading webpage
+[redirect] Following redirect to https://www.reddit.com/r/ukraine/comments/u6reas/no_one_left_behind_in_ukraine_these_pups_were/?rdt=54589
+[Reddit] Extracting URL: https://www.reddit.com/r/ukraine/comments/u6reas/no_one_left_behind_in_ukraine_these_pups_were/?rdt=54589
+[Reddit] u6reas: Downloading JSON metadata
+[Reddit] u6reas: Downloading m3u8 information
+[Reddit] u6reas: Downloading MPD manifest
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec, channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Reddit
+[info] mknw5bq6mdu81: Downloading 1 format(s): hls-1885+dash-audio_0_119454
+[debug] Invoking hlsnative downloader on "https://v.redd.it/mknw5bq6mdu81/HLS_576.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 7
+[download] Destination: C:\Temp\yt-dlp\20241123114702.fhls-1885.mp4
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of    8.54MiB in 00:00:00 at 14.52MiB/s
+[debug] Invoking http downloader on "https://v.redd.it/mknw5bq6mdu81/DASH_audio.mp4"
+[download] Destination: C:\Temp\yt-dlp\20241123114702.fdash-audio_0_119454.m4a
+[download] 100% of  602.45KiB in 00:00:00 at 16.43MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\20241123114702.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241123114702.fhls-1885.mp4 -i file:C:\Temp\yt-dlp\20241123114702.fdash-audio_0_119454.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241123114702.temp.mp4
+Deleting original file C:\Temp\yt-dlp\20241123114702.fhls-1885.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\20241123114702.fdash-audio_0_119454.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241123114702.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241123114702.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=No one left behind in Ukraine: These pups were found protecting newborn kittens 😍❤😭" -metadata "date=20220419" -metadata "purl=https://www.reddit.com/r/ukraine/comments/u6reas/no_one_left_behind_in_ukraine_these_pups_were/?rdt=54589" -metadata "comment=https://www.reddit.com/r/ukraine/comments/u6reas/no_one_left_behind_in_ukraine_these_pups_were/?rdt=54589" -metadata "artist=thefathermucker" -movflags +faststart file:C:\Temp\yt-dlp\20241123114702.temp.mp4
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 11
+Kind        : Local
+Millisecond : 506
+Microsecond : 378
+Nanosecond  : 800
+Minute      : 47
+Month       : 11
+Second      : 8
+Ticks       : 638679592285063788
+TimeOfDay   : 11:47:08.5063788
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 11:47:08 AM
+
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 11
+Kind        : Local
+Millisecond : 510
+Microsecond : 150
+Nanosecond  : 300
+Minute      : 47
+Month       : 11
+Second      : 8
+Ticks       : 638679592285101503
+TimeOfDay   : 11:47:08.5101503
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 11:47:08 AM
+
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 11
+Kind        : Local
+Millisecond : 511
+Microsecond : 698
+Nanosecond  : 0
+Minute      : 47
+Month       : 11
+Second      : 8
+Ticks       : 638679592285116980
+TimeOfDay   : 11:47:08.5116980
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 11:47:08 AM
+
+
+    Directory: C:\Temp\yt-dlp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---           4/18/2022  8:02 PM        9372852 20241123114702.mp4
+-a---           4/18/2022  8:02 PM        9372852 20241123114702.mp4
+Cleaned video name: 20241123114702mp4
+Cleaned video path: C:\Temp\yt-dlp\20241123114702mp4
+Running ffmpeg
+ffmpeg -i "C:\Temp\yt-dlp\20241123114702mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241123114702mp4_reencoded.mp4"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241123114702mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : No one left behind in Ukraine: These pups were found protecting newborn kittens 😍❤😭
+    artist          : thefathermucker
+    date            : 20220419
+    encoder         : Lavf61.7.100
+    comment         : https://www.reddit.com/r/ukraine/comments/u6reas/no_one_left_behind_in_ukraine_these_pups_were/?rdt=54589
+  Duration: 00:00:41.30, start: 0.000000, bitrate: 1815 kb/s
+  Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, smpte170m/bt470bg/smpte170m, progressive), 432x768 [SAR 1:1 DAR 9:16], 1693 kb/s, 29.90 fps, 29.92 tbr, 90k tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 116 kb/s (default)
+      Metadata:
+        handler_name    : Bento4 Sound Handler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 0000013e2b87fd40] using SAR=1/1
+[libx264 @ 0000013e2b87fd40] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000013e2b87fd40] profile High, level 3.0, 4:2:0, 8-bit
+[libx264 @ 0000013e2b87fd40] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\20241123114702mp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : No one left behind in Ukraine: These pups were found protecting newborn kittens 😍❤😭
+    artist          : thefathermucker
+    date            : 20220419
+    comment         : https://www.reddit.com/r/ukraine/comments/u6reas/no_one_left_behind_in_ukraine_these_pups_were/?rdt=54589
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, smpte170m/bt470bg/smpte170m, progressive), 432x768 [SAR 1:1 DAR 9:16], q=2-31, 29.92 fps, 11488 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : Bento4 Sound Handler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 aac
+[mp4 @ 0000013e2bd8a040] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000013e2b852240] video:6213KiB audio:589KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.660891%
+frame= 1234 fps=638 q=-1.0 Lsize=    6847KiB time=00:00:41.21 bitrate=1360.9kbits/s speed=21.3x
+[libx264 @ 0000013e2b87fd40] frame I:6     Avg QP:20.59  size: 37754
+[libx264 @ 0000013e2b87fd40] frame P:432   Avg QP:25.17  size:  9998
+[libx264 @ 0000013e2b87fd40] frame B:796   Avg QP:28.94  size:  2282
+[libx264 @ 0000013e2b87fd40] consecutive B-frames: 10.0%  8.3% 10.7% 71.0%
+[libx264 @ 0000013e2b87fd40] mb I  I16..4: 18.7% 43.8% 37.4%
+[libx264 @ 0000013e2b87fd40] mb P  I16..4:  1.1%  8.7%  2.9%  P16..4: 35.5% 25.0% 13.3%  0.0%  0.0%    skip:13.4%
+[libx264 @ 0000013e2b87fd40] mb B  I16..4:  0.2%  0.8%  0.3%  B16..8: 44.9%  9.9%  1.6%  direct: 1.6%  skip:40.7%  L0:49.7% L1:40.7% BI: 9.6%
+[libx264 @ 0000013e2b87fd40] 8x8 transform intra:65.9% inter:65.9%
+[libx264 @ 0000013e2b87fd40] coded y,uvDC,uvAC intra: 72.1% 60.1% 7.9% inter: 19.2% 11.5% 0.2%
+[libx264 @ 0000013e2b87fd40] i16 v,h,dc,p: 28% 21%  7% 45%
+[libx264 @ 0000013e2b87fd40] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 17% 16% 11%  7% 10% 11% 10%  9%  9%
+[libx264 @ 0000013e2b87fd40] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 19% 17% 12%  7% 11% 11% 10%  8%  6%
+[libx264 @ 0000013e2b87fd40] i8c dc,h,v,p: 61% 18% 16%  5%
+[libx264 @ 0000013e2b87fd40] Weighted P-Frames: Y:13.9% UV:2.1%
+[libx264 @ 0000013e2b87fd40] ref P L0: 68.9% 23.0%  6.5%  1.4%  0.2%
+[libx264 @ 0000013e2b87fd40] ref B L0: 97.6%  2.1%  0.3%
+[libx264 @ 0000013e2b87fd40] ref B L1: 99.3%  0.7%
+[libx264 @ 0000013e2b87fd40] kb/s:1232.88
+[aac @ 0000013e2bde1b40] Qavg: 7248.170
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 11
+Kind        : Local
+Millisecond : 546
+Microsecond : 17
+Nanosecond  : 900
+Minute      : 47
+Month       : 11
+Second      : 10
+Ticks       : 638679592305460179
+TimeOfDay   : 11:47:10.5460179
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 11:47:10 AM
+
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 11
+Kind        : Local
+Millisecond : 377
+Microsecond : 346
+Nanosecond  : 200
+Minute      : 47
+Month       : 11
+Second      : 12
+Ticks       : 638679592323773462
+TimeOfDay   : 11:47:12.3773462
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 11:47:12 AM
+
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 11
+Kind        : Local
+Millisecond : 382
+Microsecond : 42
+Nanosecond  : 100
+Minute      : 47
+Month       : 11
+Second      : 12
+Ticks       : 638679592323820421
+TimeOfDay   : 11:47:12.3820421
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 11:47:12 AM
+
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_videos.ps1  -url "https://youtu.be/6XXjKV37gSk", "https://youtu.be/_Lp609WxF0Y"
+Create new folder for yt-dlp
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          11/23/2024 12:47 PM                yt-dlp
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 12
+Kind        : Local
+Millisecond : 131
+Microsecond : 346
+Nanosecond  : 100
+Minute      : 47
+Month       : 11
+Second      : 23
+Ticks       : 638679628431313461
+TimeOfDay   : 12:47:23.1313461
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 12:47:23 PM
+
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 12
+Kind        : Local
+Millisecond : 133
+Microsecond : 983
+Nanosecond  : 0
+Minute      : 47
+Month       : 11
+Second      : 23
+Ticks       : 638679628431339830
+TimeOfDay   : 12:47:23.1339830
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 12:47:23 PM
+
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241123124723.%(ext)s', 'https://youtu.be/6XXjKV37gSk']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.11.18 from yt-dlp/yt-dlp [7ea278792] (win_exe)
+[debug] Python 3.10.11 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1t  7 Feb 2023)
+[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.40.1, urllib3-2.2.3, websockets-13.1
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1837 extractors
+[youtube] Extracting URL: https://youtu.be/6XXjKV37gSk
+[youtube] 6XXjKV37gSk: Downloading webpage
+[youtube] 6XXjKV37gSk: Downloading ios player API JSON
+[youtube] 6XXjKV37gSk: Downloading mweb player API JSON
+[debug] Loading youtube-nsig.89dfc5b3 from cache
+[debug] [youtube] Decrypted nsig 67bXuh012FX1x4 => RC8F64qumQkCLw
+[debug] Loading youtube-nsig.89dfc5b3 from cache
+[debug] [youtube] Decrypted nsig tpqDBJ9mHploY9 => E4z-i1UG0BBtYQ
+[youtube] 6XXjKV37gSk: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec, channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/2bfc?service=YouTube&categories=%5B%22outro%22%2C+%22selfpromo%22%2C+%22intro%22%2C+%22sponsor%22%2C+%22preview%22%2C+%22interaction%22%2C+%22poi_highlight%22%2C+%22chapter%22%2C+%22filler%22%2C+%22music_offtopic%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+[SponsorBlock] No matching segments were found in the SponsorBlock database
+[info] 6XXjKV37gSk: Downloading 1 format(s): 616+140
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1732405643/ei/KxVCZ7KgLpq0kucP3t2t2Q0/ip/70.104.195.206/id/e975e3295dfb8129/itag/616/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D314835567%3Bdur%3D705.404%3Bgir%3Dyes%3Bitag%3D356%3Blmt%3D1717257538972134/rqh/1/hls_chunk_host/rr1---sn-8xgp1vo-gpjl.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/met/1732384043,/mh/12/mm/31,29/mn/sn-8xgp1vo-gpjl,sn-8xgp1vo-p5qy/ms/au,rdu/mv/m/mvi/1/pl/20/rms/au,au/initcwndbps/1148750/spc/qtApAYosaK4qBt9cRTsd6WUlDJmvA23hLoDMnvGhmogilt1y7A/vprv/1/playlist_type/DVR/dover/13/txp/5532434/mt/1732383698/fvip/5/short_key/1/keepalive/yes/fexp/51326932,51335594/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,spc,vprv,playlist_type/sig/AJfQdSswQwIgCBfUOEA7MsnvMJW3jkDj1b5LwGoTTz7u1UiW7iVEkSgCHwTLsYNzJGoizaGn90f5ughdEFkzRiIOaKuaUVHgVNA%3D/lsparams/hls_chunk_host,met,mh,mm,mn,ms,mv,mvi,pl,rms,initcwndbps/lsig/AGluJ3MwRgIhAKiJt1bWkpj2Bt3AWDDDB_9vFbHwVnWdipTIGNhS7-ytAiEApBeLzK-ZvMdje4M3L_vuB7Xi-IAxGEyCIIqlUL9OtkA%3D/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 138
+[download] Destination: C:\Temp\yt-dlp\20241123124723.f616.mp4
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of  300.36MiB in 00:00:22 at 13.40MiB/s
+[debug] Invoking http downloader on "https://rr1---sn-8xgp1vo-gpjl.googlevideo.com/videoplayback?expire=1732405643&ei=KxVCZ7KgLpq0kucP3t2t2Q0&ip=70.104.195.206&id=o-AG5hv58Uu2tnKhiG_-zwnV8SrQAqOTJKW5xi6dgA_R7E&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&met=1732384043%2C&mh=12&mm=31%2C29&mn=sn-8xgp1vo-gpjl%2Csn-8xgp1vo-p5qy&ms=au%2Crdu&mv=m&mvi=1&pl=20&rms=au%2Cau&initcwndbps=1148750&bui=AQn3pFT_FpmYMF2uOODFGUADBXbMNiwxQ0NPABhf5s4EDgo11YWKgGEhcgVJmFMUoNVWKAwxz33AciJA&spc=qtApAYovaK4qBt9cRTsd6WUlDJmvA23hLoDMnvGhmogipt4&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=11418017&dur=705.468&lmt=1717254590097010&mt=1732383698&fvip=5&keepalive=yes&fexp=51326932%2C51335594&c=IOS&txp=5532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRgIhAKjX6Ic2j9h8RLXhQqe3yfOgqughkc-RslmeNaGfR4yZAiEApjQvQvp6UqoWK2JIf0taY0KRXl47rL8gStgUXpwsHV8%3D&lsparams=met%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=AGluJ3MwRQIgWq4AJig5TUwDBBjfiDHVtql8WHY7_3mG5XuTjbnlM9ICIQCMXyqJaIEa4YflCXwnMFdZ9LfalZFz6DCFmDJ_6QDgmw%3D%3D"
+[download] Destination: C:\Temp\yt-dlp\20241123124723.f140.m4a
+[download] 100% of   10.89MiB in 00:00:00 at 14.14MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\20241123124723.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241123124723.f616.mp4 -i file:C:\Temp\yt-dlp\20241123124723.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241123124723.temp.mp4
+Deleting original file C:\Temp\yt-dlp\20241123124723.f616.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\20241123124723.f140.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[debug] ffprobe command line: ffprobe -hide_banner -show_format -show_streams -print_format json file:C:\Temp\yt-dlp\20241123124723.mp4
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241123124723.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241123124723.mp4 -i file:C:\Temp\yt-dlp\20241123124723.meta -map 0 -dn -ignore_unknown -c copy -map_metadata 1 -write_id3v1 1 -metadata "title=NEVER Buy These Types of Houses" -metadata "date=20240430" -metadata "description=Searching for a home is daunting, and when you come across one that checks the boxes, people will turn the other way when red flags pop up. This is the largest investment you will ever make in your lifetime. So I want to tell you the type of home never to buy so you don’t make a huge financial mistake.
+
+Thanks for being here to get your dose of real estate reality!  🏡
+
+🏡 NEED A REALTOR IN YOUR AREA?  Click the link below to get connected with an agent!
+
+✅If you'd like to work with me to help you with your real estate needs in Northern NJ or need an agent referral in your area, click here: https://jackie-baker.com/
+
+==================================================================
+
+🏡 If you're interested in purchasing a foreclosed home, visit Foreclosure.com to see all of the available homes:  https://www.foreclosure.com/?rsp=3655
+
+====================================================================
+
+🛏  If you're looking for the best mattress in your new or current home, check out Saatva: https://saatva.prf.hn/click/camref:1101l3IByk
+As an affiliate partner with Saatva, I earn from qualifying purchases at no extra cost to you.
+
+====================================================================
+
+Be sure to subscribe!
+
+✅ SUBSCIRBE  youtube.com/jackiebakersellsnj?sub_confirmation=1
+
+
+Jacqueline \"Jackie\" Baker
+NJ License 1541448
+Coldwell Banker Realty
+Allendale/Saddle River
+
+#realestate #jackiebakerrealtor #jackiebakersellsnj #homebuyingtips #homesellingtips #realestateinvesting
+
+All images and additional video segments contained in the Thumbnails and/or B-roll segments are used in strict compliance with the appropriate permissions and licenses required from https://pixabay.com and in accordance with the YouTube Partner Program, Community guidelines & YouTube terms of service." -metadata "synopsis=Searching for a home is daunting, and when you come across one that checks the boxes, people will turn the other way when red flags pop up. This is the largest investment you will ever make in your lifetime. So I want to tell you the type of home never to buy so you don’t make a huge financial mistake.
+
+Thanks for being here to get your dose of real estate reality!  🏡
+
+🏡 NEED A REALTOR IN YOUR AREA?  Click the link below to get connected with an agent!
+
+✅If you'd like to work with me to help you with your real estate needs in Northern NJ or need an agent referral in your area, click here: https://jackie-baker.com/
+
+==================================================================
+
+🏡 If you're interested in purchasing a foreclosed home, visit Foreclosure.com to see all of the available homes:  https://www.foreclosure.com/?rsp=3655
+
+====================================================================
+
+🛏  If you're looking for the best mattress in your new or current home, check out Saatva: https://saatva.prf.hn/click/camref:1101l3IByk
+As an affiliate partner with Saatva, I earn from qualifying purchases at no extra cost to you.
+
+====================================================================
+
+Be sure to subscribe!
+
+✅ SUBSCIRBE  youtube.com/jackiebakersellsnj?sub_confirmation=1
+
+
+Jacqueline \"Jackie\" Baker
+NJ License 1541448
+Coldwell Banker Realty
+Allendale/Saddle River
+
+#realestate #jackiebakerrealtor #jackiebakersellsnj #homebuyingtips #homesellingtips #realestateinvesting
+
+All images and additional video segments contained in the Thumbnails and/or B-roll segments are used in strict compliance with the appropriate permissions and licenses required from https://pixabay.com and in accordance with the YouTube Partner Program, Community guidelines & YouTube terms of service." -metadata "purl=https://www.youtube.com/watch?v=6XXjKV37gSk" -metadata "comment=https://www.youtube.com/watch?v=6XXjKV37gSk" -metadata "artist=Jackie Baker" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\20241123124723.temp.mp4
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 12
+Kind        : Local
+Millisecond : 971
+Microsecond : 967
+Nanosecond  : 100
+Minute      : 47
+Month       : 11
+Second      : 51
+Ticks       : 638679628719719671
+TimeOfDay   : 12:47:51.9719671
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 12:47:51 PM
+
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 12
+Kind        : Local
+Millisecond : 975
+Microsecond : 104
+Nanosecond  : 900
+Minute      : 47
+Month       : 11
+Second      : 51
+Ticks       : 638679628719751049
+TimeOfDay   : 12:47:51.9751049
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 12:47:51 PM
+
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 12
+Kind        : Local
+Millisecond : 977
+Microsecond : 173
+Nanosecond  : 500
+Minute      : 47
+Month       : 11
+Second      : 51
+Ticks       : 638679628719771735
+TimeOfDay   : 12:47:51.9771735
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 12:47:51 PM
+
+
+    Directory: C:\Temp\yt-dlp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---            6/1/2024 11:09 AM      326695752 20241123124723.mp4
+-a---            6/1/2024 11:09 AM      326695752 20241123124723.mp4
+Cleaned video name: 20241123124723mp4
+Cleaned video path: C:\Temp\yt-dlp\20241123124723mp4
+Running ffmpeg
+ffmpeg -i "C:\Temp\yt-dlp\20241123124723mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241123124723mp4_reencoded.mp4"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241123124723mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : NEVER Buy These Types of Houses
+    artist          : Jackie Baker
+    date            : 20240430
+    encoder         : Lavf61.7.100
+    comment         : https://www.youtube.com/watch?v=6XXjKV37gSk
+    description     : Searching for a home is daunting, and when you come across one that checks the boxes, people will turn the other way when red flags pop up. This is the largest investment you will ever make in your lifetime. So I want to tell you the type of home never to
+                    :
+                    : Thanks for being here to get your dose of real estate reality!  🏡
+                    :
+                    : 🏡 NEED A REALTOR IN YOUR AREA?  Click the link below to get connected with an agent!
+                    :
+                    : ✅If you'd like to work with me to help you with your real estate needs in Northern NJ or need an agent referral in your area, click here: https://jackie-baker.com/
+                    :
+                    : ==================================================================
+                    :
+                    : 🏡 If you're interested in purchasing a foreclosed home, visit Foreclosure.com to see all of the available homes:  https://www.foreclosure.com/?rsp=3655
+                    :
+                    : ====================================================================
+                    :
+                    : 🛏  If you're looking for the best mattress in your new or current home, check out Saatva: https://saatva.prf.hn/click/camref:1101l3IByk
+                    : As an affiliate partner with Saatva, I earn from qualifying purchases at no extra cost to you.
+                    :
+                    : ====================================================================
+                    :
+                    : Be sure to subscribe!
+                    :
+                    : ✅ SUBSCIRBE  youtube.com/jackiebakersellsnj?sub_confirmation=1
+                    :
+                    :
+                    : Jacqueline "Jackie" Baker
+                    : NJ License 1541448
+                    : Coldwell Banker Realty
+                    : Allendale/Saddle River
+                    :
+                    : #realestate #jackiebakerrealtor #jackiebakersellsnj #homebuyingtips #homesellingtips #realestateinvesting
+                    :
+                    : All images and additional video segments contained in the Thumbnails and/or B-roll segments are used in strict compliance with the appropriate permissions and licenses required from https://pixabay.com and in accordance with the YouTube Partner Program, C
+    synopsis        : Searching for a home is daunting, and when you come across one that checks the boxes, people will turn the other way when red flags pop up. This is the largest investment you will ever make in your lifetime. So I want to tell you the type of home never to
+                    :
+                    : Thanks for being here to get your dose of real estate reality!  🏡
+                    :
+                    : 🏡 NEED A REALTOR IN YOUR AREA?  Click the link below to get connected with an agent!
+                    :
+                    : ✅If you'd like to work with me to help you with your real estate needs in Northern NJ or need an agent referral in your area, click here: https://jackie-baker.com/
+                    :
+                    : ==================================================================
+                    :
+                    : 🏡 If you're interested in purchasing a foreclosed home, visit Foreclosure.com to see all of the available homes:  https://www.foreclosure.com/?rsp=3655
+                    :
+                    : ====================================================================
+                    :
+                    : 🛏  If you're looking for the best mattress in your new or current home, check out Saatva: https://saatva.prf.hn/click/camref:1101l3IByk
+                    : As an affiliate partner with Saatva, I earn from qualifying purchases at no extra cost to you.
+                    :
+                    : ====================================================================
+                    :
+                    : Be sure to subscribe!
+                    :
+                    : ✅ SUBSCIRBE  youtube.com/jackiebakersellsnj?sub_confirmation=1
+                    :
+                    :
+                    : Jacqueline "Jackie" Baker
+                    : NJ License 1541448
+                    : Coldwell Banker Realty
+                    : Allendale/Saddle River
+                    :
+                    : #realestate #jackiebakerrealtor #jackiebakersellsnj #homebuyingtips #homesellingtips #realestateinvesting
+                    :
+                    : All images and additional video segments contained in the Thumbnails and/or B-roll segments are used in strict compliance with the appropriate permissions and licenses required from https://pixabay.com and in accordance with the YouTube Partner Program, C
+  Duration: 00:11:45.47, start: 0.000000, bitrate: 3704 kb/s
+  Chapters:
+    Chapter #0:0: start 0.000000, end 55.000000
+      Metadata:
+        title           : Intro
+    Chapter #0:1: start 55.000000, end 235.000000
+      Metadata:
+        title           : Old Homes
+    Chapter #0:2: start 235.000000, end 318.000000
+      Metadata:
+        title           : Flood Zones
+    Chapter #0:3: start 318.000000, end 437.000000
+      Metadata:
+        title           : Oil Tanks
+    Chapter #0:4: start 437.000000, end 637.000000
+      Metadata:
+        title           : Flipping
+    Chapter #0:5: start 637.000000, end 705.000000
+      Metadata:
+        title           : Tip
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1920x1080, 3568 kb/s, 29.97 fps, 29.97 tbr, 16k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 11/23/2024.
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 127 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+  Stream #0:2[0x3](eng): Data: bin_data (text / 0x74786574), 0 kb/s
+      Metadata:
+        handler_name    : SubtitleHandler
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 00000207e926fac0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 00000207e926fac0] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 00000207e926fac0] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\20241123124723mp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : NEVER Buy These Types of Houses
+    artist          : Jackie Baker
+    date            : 20240430
+    synopsis        : Searching for a home is daunting, and when you come across one that checks the boxes, people will turn the other way when red flags pop up. This is the largest investment you will ever make in your lifetime. So I want to tell you the type of home never to
+                    :
+                    : Thanks for being here to get your dose of real estate reality!  🏡
+                    :
+                    : 🏡 NEED A REALTOR IN YOUR AREA?  Click the link below to get connected with an agent!
+                    :
+                    : ✅If you'd like to work with me to help you with your real estate needs in Northern NJ or need an agent referral in your area, click here: https://jackie-baker.com/
+                    :
+                    : ==================================================================
+                    :
+                    : 🏡 If you're interested in purchasing a foreclosed home, visit Foreclosure.com to see all of the available homes:  https://www.foreclosure.com/?rsp=3655
+                    :
+                    : ====================================================================
+                    :
+                    : 🛏  If you're looking for the best mattress in your new or current home, check out Saatva: https://saatva.prf.hn/click/camref:1101l3IByk
+                    : As an affiliate partner with Saatva, I earn from qualifying purchases at no extra cost to you.
+                    :
+                    : ====================================================================
+                    :
+                    : Be sure to subscribe!
+                    :
+                    : ✅ SUBSCIRBE  youtube.com/jackiebakersellsnj?sub_confirmation=1
+                    :
+                    :
+                    : Jacqueline "Jackie" Baker
+                    : NJ License 1541448
+                    : Coldwell Banker Realty
+                    : Allendale/Saddle River
+                    :
+                    : #realestate #jackiebakerrealtor #jackiebakersellsnj #homebuyingtips #homesellingtips #realestateinvesting
+                    :
+                    : All images and additional video segments contained in the Thumbnails and/or B-roll segments are used in strict compliance with the appropriate permissions and licenses required from https://pixabay.com and in accordance with the YouTube Partner Program, C
+    comment         : https://www.youtube.com/watch?v=6XXjKV37gSk
+    description     : Searching for a home is daunting, and when you come across one that checks the boxes, people will turn the other way when red flags pop up. This is the largest investment you will ever make in your lifetime. So I want to tell you the type of home never to
+                    :
+                    : Thanks for being here to get your dose of real estate reality!  🏡
+                    :
+                    : 🏡 NEED A REALTOR IN YOUR AREA?  Click the link below to get connected with an agent!
+                    :
+                    : ✅If you'd like to work with me to help you with your real estate needs in Northern NJ or need an agent referral in your area, click here: https://jackie-baker.com/
+                    :
+                    : ==================================================================
+                    :
+                    : 🏡 If you're interested in purchasing a foreclosed home, visit Foreclosure.com to see all of the available homes:  https://www.foreclosure.com/?rsp=3655
+                    :
+                    : ====================================================================
+                    :
+                    : 🛏  If you're looking for the best mattress in your new or current home, check out Saatva: https://saatva.prf.hn/click/camref:1101l3IByk
+                    : As an affiliate partner with Saatva, I earn from qualifying purchases at no extra cost to you.
+                    :
+                    : ====================================================================
+                    :
+                    : Be sure to subscribe!
+                    :
+                    : ✅ SUBSCIRBE  youtube.com/jackiebakersellsnj?sub_confirmation=1
+                    :
+                    :
+                    : Jacqueline "Jackie" Baker
+                    : NJ License 1541448
+                    : Coldwell Banker Realty
+                    : Allendale/Saddle River
+                    :
+                    : #realestate #jackiebakerrealtor #jackiebakersellsnj #homebuyingtips #homesellingtips #realestateinvesting
+                    :
+                    : All images and additional video segments contained in the Thumbnails and/or B-roll segments are used in strict compliance with the appropriate permissions and licenses required from https://pixabay.com and in accordance with the YouTube Partner Program, C
+    encoder         : Lavf61.7.100
+  Chapters:
+    Chapter #0:0: start 0.000000, end 55.000000
+      Metadata:
+        title           : Intro
+    Chapter #0:1: start 55.000000, end 235.000000
+      Metadata:
+        title           : Old Homes
+    Chapter #0:2: start 235.000000, end 318.000000
+      Metadata:
+        title           : Flood Zones
+    Chapter #0:3: start 318.000000, end 437.000000
+      Metadata:
+        title           : Oil Tanks
+    Chapter #0:4: start 437.000000, end 637.000000
+      Metadata:
+        title           : Flipping
+    Chapter #0:5: start 637.000000, end 705.000000
+      Metadata:
+        title           : Tip
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080, q=2-31, 29.97 fps, 30k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 11/23/2024.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 aac
+[mp4 @ 00000207e9a30040] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 00000207e9a30dc0] video:224903KiB audio:10995KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.317112%
+frame=21141 fps=160 q=-1.0 Lsize=  236647KiB time=00:11:45.33 bitrate=2748.5kbits/s speed=5.33x
+[libx264 @ 00000207e926fac0] frame I:245   Avg QP:18.25  size:108425
+[libx264 @ 00000207e926fac0] frame P:6016  Avg QP:21.39  size: 23525
+[libx264 @ 00000207e926fac0] frame B:14880 Avg QP:25.80  size:  4181
+[libx264 @ 00000207e926fac0] consecutive B-frames:  5.1%  2.3%  2.8% 89.9%
+[libx264 @ 00000207e926fac0] mb I  I16..4: 15.8% 69.6% 14.6%
+[libx264 @ 00000207e926fac0] mb P  I16..4:  3.5% 10.9%  0.7%  P16..4: 26.8%  7.6%  4.1%  0.0%  0.0%    skip:46.3%
+[libx264 @ 00000207e926fac0] mb B  I16..4:  0.3%  0.4%  0.0%  B16..8: 24.1%  1.1%  0.2%  direct: 0.8%  skip:73.1%  L0:45.5% L1:50.1% BI: 4.4%
+[libx264 @ 00000207e926fac0] 8x8 transform intra:70.7% inter:78.6%
+[libx264 @ 00000207e926fac0] coded y,uvDC,uvAC intra: 33.2% 35.9% 8.2% inter: 5.2% 5.8% 0.1%
+[libx264 @ 00000207e926fac0] i16 v,h,dc,p: 32% 34%  7% 27%
+[libx264 @ 00000207e926fac0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 37% 18% 22%  3%  4%  5%  4%  4%  4%
+[libx264 @ 00000207e926fac0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 31% 20% 11%  4%  9%  9%  7%  5%  4%
+[libx264 @ 00000207e926fac0] i8c dc,h,v,p: 58% 19% 19%  4%
+[libx264 @ 00000207e926fac0] Weighted P-Frames: Y:7.1% UV:6.4%
+[libx264 @ 00000207e926fac0] ref P L0: 62.1% 13.0% 17.8%  7.0%  0.1%
+[libx264 @ 00000207e926fac0] ref B L0: 89.2%  8.8%  2.0%
+[libx264 @ 00000207e926fac0] ref B L1: 96.0%  4.0%
+[libx264 @ 00000207e926fac0] kb/s:2611.84
+[aac @ 00000207e92ec640] Qavg: 786.608
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 12
+Kind        : Local
+Millisecond : 355
+Microsecond : 475
+Nanosecond  : 100
+Minute      : 50
+Month       : 11
+Second      : 4
+Ticks       : 638679630043554751
+TimeOfDay   : 12:50:04.3554751
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 12:50:04 PM
+
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 12
+Kind        : Local
+Millisecond : 943
+Microsecond : 142
+Nanosecond  : 200
+Minute      : 50
+Month       : 11
+Second      : 43
+Ticks       : 638679630439431422
+TimeOfDay   : 12:50:43.9431422
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 12:50:43 PM
+
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 12
+Kind        : Local
+Millisecond : 965
+Microsecond : 227
+Nanosecond  : 900
+Minute      : 50
+Month       : 11
+Second      : 43
+Ticks       : 638679630439652279
+TimeOfDay   : 12:50:43.9652279
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 12:50:43 PM
+
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 12
+Kind        : Local
+Millisecond : 967
+Microsecond : 259
+Nanosecond  : 800
+Minute      : 50
+Month       : 11
+Second      : 43
+Ticks       : 638679630439672598
+TimeOfDay   : 12:50:43.9672598
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 12:50:43 PM
+
+Get-ChildItem: C:\Users\kushal\src\myhtml\fromnepal\public\notes\download_videos.ps1:26
+Line |
+  26 |      Get-ChildItem $tempDir
+     |      ~~~~~~~~~~~~~~~~~~~~~~
+     | Cannot find path 'C:\Temp\yt-dlp' because it does not exist.
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 12
+Kind        : Local
+Millisecond : 29
+Microsecond : 760
+Nanosecond  : 0
+Minute      : 50
+Month       : 11
+Second      : 44
+Ticks       : 638679630440297600
+TimeOfDay   : 12:50:44.0297600
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 12:50:44 PM
+
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241123125043.%(ext)s', 'https://youtu.be/_Lp609WxF0Y']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.11.18 from yt-dlp/yt-dlp [7ea278792] (win_exe)
+[debug] Python 3.10.11 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1t  7 Feb 2023)
+[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.40.1, urllib3-2.2.3, websockets-13.1
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1837 extractors
+[youtube] Extracting URL: https://youtu.be/_Lp609WxF0Y
+[youtube] _Lp609WxF0Y: Downloading webpage
+[youtube] _Lp609WxF0Y: Downloading ios player API JSON
+[youtube] _Lp609WxF0Y: Downloading mweb player API JSON
+[debug] Loading youtube-nsig.89dfc5b3 from cache
+[debug] [youtube] Decrypted nsig TksxC1F9H92CdB => Ml86qph_5MGZEg
+[debug] Loading youtube-nsig.89dfc5b3 from cache
+[debug] [youtube] Decrypted nsig HNj8kLDHzJi3Us => U52IkEA89ILdEw
+[youtube] _Lp609WxF0Y: Downloading m3u8 information
+[debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec, channels, acodec, lang, proto
+[debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec, channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
+[SponsorBlock] Fetching SponsorBlock segments
+[debug] SponsorBlock query: https://sponsor.ajay.app/api/skipSegments/931a?service=YouTube&categories=%5B%22outro%22%2C+%22interaction%22%2C+%22intro%22%2C+%22chapter%22%2C+%22filler%22%2C+%22music_offtopic%22%2C+%22sponsor%22%2C+%22poi_highlight%22%2C+%22selfpromo%22%2C+%22preview%22%5D&actionTypes=%5B%22skip%22%2C+%22poi%22%2C+%22chapter%22%5D
+[SponsorBlock] No matching segments were found in the SponsorBlock database
+[info] _Lp609WxF0Y: Downloading 1 format(s): 616+140
+[debug] Invoking hlsnative downloader on "https://manifest.googlevideo.com/api/manifest/hls_playlist/expire/1732405844/ei/9BVCZ6q8DoKpkucPqaLBwA8/ip/70.104.195.206/id/fcba7ad3d5b11746/itag/616/source/youtube/requiressl/yes/ratebypass/yes/pfa/1/wft/1/sgovp/clen%3D377451775%3Bdur%3D809.708%3Bgir%3Dyes%3Bitag%3D356%3Blmt%3D1732361115093917/rqh/1/hls_chunk_host/rr4---sn-8xgp1vo-gpje.googlevideo.com/xpc/EgVo2aDSNQ%3D%3D/met/1732384244,/mh/j1/mm/31,29/mn/sn-8xgp1vo-gpje,sn-8xgp1vo-p5qy/ms/au,rdu/mv/m/mvi/4/pl/20/rms/au,au/initcwndbps/1072500/spc/qtApAf8YMsW-8AaxmFam0692hk3KLMv3qHPuQJpXF_Dz01RO8A/vprv/1/playlist_type/DVR/dover/13/txp/5532434/mt/1732383698/fvip/6/short_key/1/keepalive/yes/fexp/51326932,51335594/sparams/expire,ei,ip,id,itag,source,requiressl,ratebypass,pfa,wft,sgovp,rqh,xpc,spc,vprv,playlist_type/sig/AJfQdSswRAIgR8qBWfkagxVazqGPy7PoYi54AKyZYsbgkdAhaqcsaqcCIHw6F1AfS8FPIfvv4eWaSvbPpbtOH37w_bsDYu12ARKd/lsparams/hls_chunk_host,met,mh,mm,mn,ms,mv,mvi,pl,rms,initcwndbps/lsig/AGluJ3MwRQIgLEux1gnQjv06bYkc9wNMwFLB3Ha1oaDivXwXlngKGoICIQD7WkhbIcA_KHFGWHMTm0Tfv8e3XD3dKcowkc3Ih8qvfg%3D%3D/playlist/index.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 156
+[download] Destination: C:\Temp\yt-dlp\20241123125043.f616.mp4
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of  360.09MiB in 00:01:16 at 4.69MiB/s
+[debug] Invoking http downloader on "https://rr4---sn-8xgp1vo-gpje.googlevideo.com/videoplayback?expire=1732405844&ei=9BVCZ6q8DoKpkucPqaLBwA8&ip=70.104.195.206&id=o-AF1r2wmHZvWIaqo8NeiI-wE2CAYrOCZT6wdemjHim4u1&itag=140&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&met=1732384244%2C&mh=j1&mm=31%2C29&mn=sn-8xgp1vo-gpje%2Csn-8xgp1vo-p5qy&ms=au%2Crdu&mv=m&mvi=4&pl=20&rms=au%2Cau&initcwndbps=1072500&bui=AQn3pFRJbkVv5QCQ76NpjKGYZy--QTlTK1n-AzBeE5EPkF9lvlVUJjV1fZMvg1h7Jh4Kr9JeBOC40r1V&spc=qtApAf8bMsW-8AaxmFam0692hk3KLMv3qHPuQJpXF_Dz41c&vprv=1&svpuc=1&mime=audio%2Fmp4&rqh=1&gir=yes&clen=13106156&dur=809.772&lmt=1732354829386271&mt=1732383698&fvip=6&keepalive=yes&fexp=51326932%2C51335594&c=IOS&txp=5532434&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgUGgt0n_ce14kuvx6NSUyDtWOYOg9a3GO-PKDiFf3z5kCIQDkDctesMdKIppwETfZDBqnujDKhlzMjr2A4SEDk79J7w%3D%3D&lsparams=met%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=AGluJ3MwRQIhAJhVw7-n6VbSZ9df46_ojzi-aOjaOqW3JjWb2XOXGHfqAiAWu_PHtyn2VGmF-SKTbcQF2SrBhch9cjpJgaPUPPm3rg%3D%3D"
+[download] Destination: C:\Temp\yt-dlp\20241123125043.f140.m4a
+[download] 100% of   12.50MiB in 00:00:01 at 6.29MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\20241123125043.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241123125043.f616.mp4 -i file:C:\Temp\yt-dlp\20241123125043.f140.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241123125043.temp.mp4
+Deleting original file C:\Temp\yt-dlp\20241123125043.f616.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\20241123125043.f140.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241123125043.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241123125043.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=NEVER Buy a New Construction Home" -metadata "date=20240723" -metadata "description=New Construction is not what it’s cracked up to be. I know many would like a brand new home without any issues or headaches. But I can tell you there will be headaches. So in this video I’m going to tell you why should never buy a new construction home.
+
+CHECK OUT THESE VIDEOS NEXT:
+NEVER Buy These Types of Homes ➡️ https://youtu.be/6XXjKV37gSk
+
+NEVER Buy a Condo ➡️ https://youtu.be/Ym1327fMrpk
+
+NEVER Buy a Manufactured Home ➡️ https://youtu.be/Ym1327fMrpk
+
+
+Thanks for being here to get your dose of real estate reality!  🏡
+
+🏡 NEED A REALTOR IN YOUR AREA?  Click the link below to get connected with an agent!
+
+✅If you'd like to work with me to help you with your real estate needs in Northern NJ or need an agent referral in your area, click here: https://jackie-baker.com/
+
+==================================================================
+
+🏡 If you're interested in purchasing a foreclosed home, visit Foreclosure.com to see all of the available homes:  https://www.foreclosure.com/?rsp=3655
+
+====================================================================
+
+🛏  If you're looking for the best mattress in your new or current home, check out Saatva: https://saatva.prf.hn/click/camref:1101l3IByk
+As an affiliate partner with Saatva, I earn from qualifying purchases at no extra cost to you.
+
+====================================================================
+
+Be sure to subscribe!
+
+✅ SUBSCIRBE  youtube.com/jackiebakersellsnj?sub_confirmation=1
+
+
+Jacqueline \"Jackie\" Baker
+NJ License 1541448
+Coldwell Banker Realty
+Allendale/Saddle River
+
+#realestate #jackiebakerrealtor #jackiebakersellsnj #homebuyingtips #homesellingtips #realestateinvesting
+
+All images and additional video segments contained in the Thumbnails and/or B-roll segments are used in strict compliance with the appropriate permissions and licenses required from https://pixabay.com and in accordance with the YouTube Partner Program, Community guidelines & YouTube terms of service." -metadata "synopsis=New Construction is not what it’s cracked up to be. I know many would like a brand new home without any issues or headaches. But I can tell you there will be headaches. So in this video I’m going to tell you why should never buy a new construction home.
+
+CHECK OUT THESE VIDEOS NEXT:
+NEVER Buy These Types of Homes ➡️ https://youtu.be/6XXjKV37gSk
+
+NEVER Buy a Condo ➡️ https://youtu.be/Ym1327fMrpk
+
+NEVER Buy a Manufactured Home ➡️ https://youtu.be/Ym1327fMrpk
+
+
+Thanks for being here to get your dose of real estate reality!  🏡
+
+🏡 NEED A REALTOR IN YOUR AREA?  Click the link below to get connected with an agent!
+
+✅If you'd like to work with me to help you with your real estate needs in Northern NJ or need an agent referral in your area, click here: https://jackie-baker.com/
+
+==================================================================
+
+🏡 If you're interested in purchasing a foreclosed home, visit Foreclosure.com to see all of the available homes:  https://www.foreclosure.com/?rsp=3655
+
+====================================================================
+
+🛏  If you're looking for the best mattress in your new or current home, check out Saatva: https://saatva.prf.hn/click/camref:1101l3IByk
+As an affiliate partner with Saatva, I earn from qualifying purchases at no extra cost to you.
+
+====================================================================
+
+Be sure to subscribe!
+
+✅ SUBSCIRBE  youtube.com/jackiebakersellsnj?sub_confirmation=1
+
+
+Jacqueline \"Jackie\" Baker
+NJ License 1541448
+Coldwell Banker Realty
+Allendale/Saddle River
+
+#realestate #jackiebakerrealtor #jackiebakersellsnj #homebuyingtips #homesellingtips #realestateinvesting
+
+All images and additional video segments contained in the Thumbnails and/or B-roll segments are used in strict compliance with the appropriate permissions and licenses required from https://pixabay.com and in accordance with the YouTube Partner Program, Community guidelines & YouTube terms of service." -metadata "purl=https://www.youtube.com/watch?v=_Lp609WxF0Y" -metadata "comment=https://www.youtube.com/watch?v=_Lp609WxF0Y" -metadata "artist=Jackie Baker" -metadata:s:1 "language=eng" -movflags +faststart file:C:\Temp\yt-dlp\20241123125043.temp.mp4
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 12
+Kind        : Local
+Millisecond : 862
+Microsecond : 457
+Nanosecond  : 700
+Minute      : 52
+Month       : 11
+Second      : 7
+Ticks       : 638679631278624577
+TimeOfDay   : 12:52:07.8624577
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 12:52:07 PM
+
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 12
+Kind        : Local
+Millisecond : 865
+Microsecond : 37
+Nanosecond  : 100
+Minute      : 52
+Month       : 11
+Second      : 7
+Ticks       : 638679631278650371
+TimeOfDay   : 12:52:07.8650371
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 12:52:07 PM
+
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 12
+Kind        : Local
+Millisecond : 866
+Microsecond : 608
+Nanosecond  : 900
+Minute      : 52
+Month       : 11
+Second      : 7
+Ticks       : 638679631278666089
+TimeOfDay   : 12:52:07.8666089
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 12:52:07 PM
+
+-a---          11/23/2024  4:40 AM      391064154 20241123125043.mp4
+-a---          11/23/2024  4:40 AM      391064154 20241123125043.mp4
+Cleaned video name: 20241123125043mp4
+Cleaned video path: C:\Temp\yt-dlp\20241123125043mp4
+Running ffmpeg
+ffmpeg -i "C:\Temp\yt-dlp\20241123125043mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241123125043mp4_reencoded.mp4"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241123125043mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : NEVER Buy a New Construction Home
+    artist          : Jackie Baker
+    date            : 20240723
+    encoder         : Lavf61.7.100
+    comment         : https://www.youtube.com/watch?v=_Lp609WxF0Y
+    description     : New Construction is not what it’s cracked up to be. I know many would like a brand new home without any issues or headaches. But I can tell you there will be headaches. So in this video I’m going to tell you why should never buy a new construction hom
+                    :
+                    : CHECK OUT THESE VIDEOS NEXT:
+                    : NEVER Buy These Types of Homes ➡️ https://youtu.be/6XXjKV37gSk
+                    :
+                    : NEVER Buy a Condo ➡️ https://youtu.be/Ym1327fMrpk
+                    :
+                    : NEVER Buy a Manufactured Home ➡️ https://youtu.be/Ym1327fMrpk
+                    :
+                    :
+                    : Thanks for being here to get your dose of real estate reality!  🏡
+                    :
+                    : 🏡 NEED A REALTOR IN YOUR AREA?  Click the link below to get connected with an agent!
+                    :
+                    : ✅If you'd like to work with me to help you with your real estate needs in Northern NJ or need an agent referral in your area, click here: https://jackie-baker.com/
+                    :
+                    : ==================================================================
+                    :
+                    : 🏡 If you're interested in purchasing a foreclosed home, visit Foreclosure.com to see all of the available homes:  https://www.foreclosure.com/?rsp=3655
+                    :
+                    : ====================================================================
+                    :
+                    : 🛏  If you're looking for the best mattress in your new or current home, check out Saatva: https://saatva.prf.hn/click/camref:1101l3IByk
+                    : As an affiliate partner with Saatva, I earn from qualifying purchases at no extra cost to you.
+                    :
+                    : ====================================================================
+                    :
+                    : Be sure to subscribe!
+                    :
+                    : ✅ SUBSCIRBE  youtube.com/jackiebakersellsnj?sub_confirmation=1
+                    :
+                    :
+                    : Jacqueline "Jackie" Baker
+                    : NJ License 1541448
+                    : Coldwell Banker Realty
+                    : Allendale/Saddle River
+                    :
+                    : #realestate #jackiebakerrealtor #jackiebakersellsnj #homebuyingtips #homesellingtips #realestateinvesting
+                    :
+                    : All images and additional video segments contained in the Thumbnails and/or B-roll segments are used in strict compliance with the appropriate permissions and licenses required from https://pixabay.com and in accordance with the YouTube Partner Program, C
+    synopsis        : New Construction is not what it’s cracked up to be. I know many would like a brand new home without any issues or headaches. But I can tell you there will be headaches. So in this video I’m going to tell you why should never buy a new construction hom
+                    :
+                    : CHECK OUT THESE VIDEOS NEXT:
+                    : NEVER Buy These Types of Homes ➡️ https://youtu.be/6XXjKV37gSk
+                    :
+                    : NEVER Buy a Condo ➡️ https://youtu.be/Ym1327fMrpk
+                    :
+                    : NEVER Buy a Manufactured Home ➡️ https://youtu.be/Ym1327fMrpk
+                    :
+                    :
+                    : Thanks for being here to get your dose of real estate reality!  🏡
+                    :
+                    : 🏡 NEED A REALTOR IN YOUR AREA?  Click the link below to get connected with an agent!
+                    :
+                    : ✅If you'd like to work with me to help you with your real estate needs in Northern NJ or need an agent referral in your area, click here: https://jackie-baker.com/
+                    :
+                    : ==================================================================
+                    :
+                    : 🏡 If you're interested in purchasing a foreclosed home, visit Foreclosure.com to see all of the available homes:  https://www.foreclosure.com/?rsp=3655
+                    :
+                    : ====================================================================
+                    :
+                    : 🛏  If you're looking for the best mattress in your new or current home, check out Saatva: https://saatva.prf.hn/click/camref:1101l3IByk
+                    : As an affiliate partner with Saatva, I earn from qualifying purchases at no extra cost to you.
+                    :
+                    : ====================================================================
+                    :
+                    : Be sure to subscribe!
+                    :
+                    : ✅ SUBSCIRBE  youtube.com/jackiebakersellsnj?sub_confirmation=1
+                    :
+                    :
+                    : Jacqueline "Jackie" Baker
+                    : NJ License 1541448
+                    : Coldwell Banker Realty
+                    : Allendale/Saddle River
+                    :
+                    : #realestate #jackiebakerrealtor #jackiebakersellsnj #homebuyingtips #homesellingtips #realestateinvesting
+                    :
+                    : All images and additional video segments contained in the Thumbnails and/or B-roll segments are used in strict compliance with the appropriate permissions and licenses required from https://pixabay.com and in accordance with the YouTube Partner Program, C
+  Duration: 00:13:29.77, start: 0.000000, bitrate: 3863 kb/s
+  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1920x1080, 3727 kb/s, 29.97 fps, 29.97 tbr, 16k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 11/23/2024.
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000001fbac2efb40] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001fbac2efb40] profile High, level 4.0, 4:2:0, 8-bit
+[libx264 @ 000001fbac2efb40] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\20241123125043mp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2mp41
+    title           : NEVER Buy a New Construction Home
+    artist          : Jackie Baker
+    date            : 20240723
+    synopsis        : New Construction is not what it’s cracked up to be. I know many would like a brand new home without any issues or headaches. But I can tell you there will be headaches. So in this video I’m going to tell you why should never buy a new construction hom
+                    :
+                    : CHECK OUT THESE VIDEOS NEXT:
+                    : NEVER Buy These Types of Homes ➡️ https://youtu.be/6XXjKV37gSk
+                    :
+                    : NEVER Buy a Condo ➡️ https://youtu.be/Ym1327fMrpk
+                    :
+                    : NEVER Buy a Manufactured Home ➡️ https://youtu.be/Ym1327fMrpk
+                    :
+                    :
+                    : Thanks for being here to get your dose of real estate reality!  🏡
+                    :
+                    : 🏡 NEED A REALTOR IN YOUR AREA?  Click the link below to get connected with an agent!
+                    :
+                    : ✅If you'd like to work with me to help you with your real estate needs in Northern NJ or need an agent referral in your area, click here: https://jackie-baker.com/
+                    :
+                    : ==================================================================
+                    :
+                    : 🏡 If you're interested in purchasing a foreclosed home, visit Foreclosure.com to see all of the available homes:  https://www.foreclosure.com/?rsp=3655
+                    :
+                    : ====================================================================
+                    :
+                    : 🛏  If you're looking for the best mattress in your new or current home, check out Saatva: https://saatva.prf.hn/click/camref:1101l3IByk
+                    : As an affiliate partner with Saatva, I earn from qualifying purchases at no extra cost to you.
+                    :
+                    : ====================================================================
+                    :
+                    : Be sure to subscribe!
+                    :
+                    : ✅ SUBSCIRBE  youtube.com/jackiebakersellsnj?sub_confirmation=1
+                    :
+                    :
+                    : Jacqueline "Jackie" Baker
+                    : NJ License 1541448
+                    : Coldwell Banker Realty
+                    : Allendale/Saddle River
+                    :
+                    : #realestate #jackiebakerrealtor #jackiebakersellsnj #homebuyingtips #homesellingtips #realestateinvesting
+                    :
+                    : All images and additional video segments contained in the Thumbnails and/or B-roll segments are used in strict compliance with the appropriate permissions and licenses required from https://pixabay.com and in accordance with the YouTube Partner Program, C
+    comment         : https://www.youtube.com/watch?v=_Lp609WxF0Y
+    description     : New Construction is not what it’s cracked up to be. I know many would like a brand new home without any issues or headaches. But I can tell you there will be headaches. So in this video I’m going to tell you why should never buy a new construction hom
+                    :
+                    : CHECK OUT THESE VIDEOS NEXT:
+                    : NEVER Buy These Types of Homes ➡️ https://youtu.be/6XXjKV37gSk
+                    :
+                    : NEVER Buy a Condo ➡️ https://youtu.be/Ym1327fMrpk
+                    :
+                    : NEVER Buy a Manufactured Home ➡️ https://youtu.be/Ym1327fMrpk
+                    :
+                    :
+                    : Thanks for being here to get your dose of real estate reality!  🏡
+                    :
+                    : 🏡 NEED A REALTOR IN YOUR AREA?  Click the link below to get connected with an agent!
+                    :
+                    : ✅If you'd like to work with me to help you with your real estate needs in Northern NJ or need an agent referral in your area, click here: https://jackie-baker.com/
+                    :
+                    : ==================================================================
+                    :
+                    : 🏡 If you're interested in purchasing a foreclosed home, visit Foreclosure.com to see all of the available homes:  https://www.foreclosure.com/?rsp=3655
+                    :
+                    : ====================================================================
+                    :
+                    : 🛏  If you're looking for the best mattress in your new or current home, check out Saatva: https://saatva.prf.hn/click/camref:1101l3IByk
+                    : As an affiliate partner with Saatva, I earn from qualifying purchases at no extra cost to you.
+                    :
+                    : ====================================================================
+                    :
+                    : Be sure to subscribe!
+                    :
+                    : ✅ SUBSCIRBE  youtube.com/jackiebakersellsnj?sub_confirmation=1
+                    :
+                    :
+                    : Jacqueline "Jackie" Baker
+                    : NJ License 1541448
+                    : Coldwell Banker Realty
+                    : Allendale/Saddle River
+                    :
+                    : #realestate #jackiebakerrealtor #jackiebakersellsnj #homebuyingtips #homesellingtips #realestateinvesting
+                    :
+                    : All images and additional video segments contained in the Thumbnails and/or B-roll segments are used in strict compliance with the appropriate permissions and licenses required from https://pixabay.com and in accordance with the YouTube Partner Program, C
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080, q=2-31, 29.97 fps, 30k tbn (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc. Created on: 11/23/2024.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : ISO Media file produced by Google Inc.
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 aac
+[mp4 @ 000001fbac9d0c80] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001fbac2f0b80] video:262880KiB audio:12637KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.311846%
+frame=24267 fps=145 q=-1.0 Lsize=  276377KiB time=00:13:29.64 bitrate=2796.4kbits/s speed=4.84x
+[libx264 @ 000001fbac2efb40] frame I:199   Avg QP:18.05  size: 96179
+[libx264 @ 000001fbac2efb40] frame P:6764  Avg QP:21.49  size: 23506
+[libx264 @ 000001fbac2efb40] frame B:17304 Avg QP:25.66  size:  5262
+[libx264 @ 000001fbac2efb40] consecutive B-frames:  3.6%  3.0%  3.4% 90.1%
+[libx264 @ 000001fbac2efb40] mb I  I16..4: 18.6% 63.3% 18.2%
+[libx264 @ 000001fbac2efb40] mb P  I16..4:  5.4% 11.6%  0.7%  P16..4: 30.1%  8.7%  4.3%  0.0%  0.0%    skip:39.2%
+[libx264 @ 000001fbac2efb40] mb B  I16..4:  0.7%  1.1%  0.0%  B16..8: 27.6%  1.7%  0.2%  direct: 0.8%  skip:67.8%  L0:46.4% L1:49.6% BI: 4.0%
+[libx264 @ 000001fbac2efb40] 8x8 transform intra:64.2% inter:78.0%
+[libx264 @ 000001fbac2efb40] coded y,uvDC,uvAC intra: 24.1% 25.4% 5.5% inter: 5.6% 5.3% 0.0%
+[libx264 @ 000001fbac2efb40] i16 v,h,dc,p: 32% 33%  9% 26%
+[libx264 @ 000001fbac2efb40] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 31% 17% 32%  2%  4%  4%  4%  3%  3%
+[libx264 @ 000001fbac2efb40] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 34% 19% 13%  4%  8%  9%  5%  4%  3%
+[libx264 @ 000001fbac2efb40] i8c dc,h,v,p: 67% 15% 15%  3%
+[libx264 @ 000001fbac2efb40] Weighted P-Frames: Y:2.3% UV:1.5%
+[libx264 @ 000001fbac2efb40] ref P L0: 61.6% 12.1% 18.7%  7.6%  0.1%
+[libx264 @ 000001fbac2efb40] ref B L0: 86.8% 10.3%  2.9%
+[libx264 @ 000001fbac2efb40] ref B L1: 95.5%  4.5%
+[libx264 @ 000001fbac2efb40] kb/s:2659.61
+[aac @ 000001fbac36fa80] Qavg: 737.662
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 12
+Kind        : Local
+Millisecond : 403
+Microsecond : 292
+Nanosecond  : 900
+Minute      : 54
+Month       : 11
+Second      : 55
+Ticks       : 638679632954032929
+TimeOfDay   : 12:54:55.4032929
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 12:54:55 PM
+
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 12
+Kind        : Local
+Millisecond : 2
+Microsecond : 538
+Nanosecond  : 0
+Minute      : 55
+Month       : 11
+Second      : 26
+Ticks       : 638679633260025380
+TimeOfDay   : 12:55:26.0025380
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 12:55:26 PM
+
+
+DisplayHint : DateTime
+Date        : 11/23/2024 12:00:00 AM
+Day         : 23
+DayOfWeek   : Saturday
+DayOfYear   : 328
+Hour        : 12
+Kind        : Local
+Millisecond : 24
+Microsecond : 939
+Nanosecond  : 800
+Minute      : 55
+Month       : 11
+Second      : 26
+Ticks       : 638679633260249398
+TimeOfDay   : 12:55:26.0249398
+Year        : 2024
+DateTime    : Saturday, November 23, 2024 12:55:26 PM
+
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> date; c:\src\omnibus.ps1; date;
+
+Saturday, November 23, 2024 1:07:09 PM
+Saturday, November 23, 2024 1:07:09 PM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 31, done.
+Counting objects: 100% (31/31), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (16/16), 17.01 MiB | 6.10 MiB/s, done.
+Total 16 (delta 12), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (12/12), completed with 12 local objects.
+To github.com:kusl/ping5800x2023.git
+   73fce31dd86..f30717f6950  main -> main
+3.96326289833333
+Saturday, November 23, 2024 1:11:07 PM
+HTTP/1.1 200 OK
+Date: Sat, 23 Nov 2024 18:11:06 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: 855adc0dae816f7fbdc785c6ba1d7c3d
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.4081284
+Saturday, November 23, 2024 1:11:07 PM
+Saturday, November 23, 2024 1:11:07 PM
+Saturday, November 23, 2024 1:11:12 PM
+On branch master
+
+It took 61.92 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, November 23, 2024 1:12:16 PM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, November 23, 2024 1:12:29 PM
+Everything up-to-date
+Saturday, November 23, 2024 1:12:29 PM
+Saturday, November 23, 2024 1:12:29 PM
+Saturday, November 23, 2024 1:12:29 PM
+Saturday, November 23, 2024 1:12:29 PM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.39 KiB | 2.39 MiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   f30717f6950..a6b83d21d52  main -> main
+3.91483686333333
+Saturday, November 23, 2024 1:16:24 PM
+HTTP/1.1 200 OK
+Date: Sat, 23 Nov 2024 18:16:23 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: 4f24af770363263ff9cf7792ff9b6d5e
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.3712677
+Saturday, November 23, 2024 1:16:25 PM
+Saturday, November 23, 2024 1:16:25 PM
+Saturday, November 23, 2024 1:16:34 PM
+On branch master
+
+It took 34.77 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, November 23, 2024 1:17:11 PM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, November 23, 2024 1:17:22 PM
+Everything up-to-date
+Saturday, November 23, 2024 1:17:22 PM
+Saturday, November 23, 2024 1:17:22 PM
+Saturday, November 23, 2024 1:17:22 PM
+Saturday, November 23, 2024 1:17:22 PM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 31, done.
+Counting objects: 100% (31/31), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (16/16), 16.97 MiB | 7.13 MiB/s, done.
+Total 16 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   a6b83d21d52..64554624954  main -> main
+3.95063415833333
+Saturday, November 23, 2024 1:21:19 PM
+HTTP/1.1 200 OK
+Date: Sat, 23 Nov 2024 18:21:18 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: b2cd77b23e2f2e1c348b1990520f0976
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.3668735
+Saturday, November 23, 2024 1:21:19 PM
+Saturday, November 23, 2024 1:21:19 PM
+Saturday, November 23, 2024 1:21:30 PM
+On branch master
+
+It took 34.69 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, November 23, 2024 1:22:07 PM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, November 23, 2024 1:22:18 PM
+Everything up-to-date
+Saturday, November 23, 2024 1:22:18 PM
+Saturday, November 23, 2024 1:22:18 PM
+Saturday, November 23, 2024 1:22:18 PM
+Saturday, November 23, 2024 1:22:18 PM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.34 KiB | 2.34 MiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   64554624954..ad68b42dfc8  main -> main
+3.91928622
+Saturday, November 23, 2024 1:26:13 PM
+HTTP/1.1 200 OK
+Date: Sat, 23 Nov 2024 18:26:12 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: 4d61461edf7542173062328c97064fc8
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.3706063
+Saturday, November 23, 2024 1:26:14 PM
+Saturday, November 23, 2024 1:26:14 PM
+Saturday, November 23, 2024 1:26:24 PM
+On branch master
+
+It took 21.69 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, November 23, 2024 1:26:48 PM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, November 23, 2024 1:26:58 PM
+Everything up-to-date
+Saturday, November 23, 2024 1:26:58 PM
+Saturday, November 23, 2024 1:26:58 PM
+Saturday, November 23, 2024 1:26:58 PM
+Saturday, November 23, 2024 1:26:58 PM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 31, done.
+Counting objects: 100% (31/31), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (16/16), 16.94 MiB | 7.43 MiB/s, done.
+Total 16 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   ad68b42dfc8..37042eb01bf  main -> main
+3.95769573833333
+Saturday, November 23, 2024 1:30:55 PM
+HTTP/1.1 200 OK
+Date: Sat, 23 Nov 2024 18:30:54 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: c9ad47d6d8dac2fece44c21cbb23d502
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.3674076
+Saturday, November 23, 2024 1:30:56 PM
+Saturday, November 23, 2024 1:30:56 PM
+Saturday, November 23, 2024 1:31:00 PM
+On branch master
+
+It took 5.40 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, November 23, 2024 1:31:06 PM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, November 23, 2024 1:31:15 PM
+Everything up-to-date
+Saturday, November 23, 2024 1:31:15 PM
+Saturday, November 23, 2024 1:31:15 PM
+Saturday, November 23, 2024 1:31:15 PM
+Saturday, November 23, 2024 1:31:15 PM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.32 KiB | 2.32 MiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   37042eb01bf..f2df603cf74  main -> main
+3.88240921166667
+Saturday, November 23, 2024 1:35:08 PM
+HTTP/1.1 200 OK
+Date: Sat, 23 Nov 2024 18:35:07 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: eb8a6a2dfb89e4c6ea38e09cc732446c
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.3762934
+Saturday, November 23, 2024 1:35:09 PM
+Saturday, November 23, 2024 1:35:09 PM
+Saturday, November 23, 2024 1:35:13 PM
+On branch master
+
+It took 2.46 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, November 23, 2024 1:35:16 PM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, November 23, 2024 1:35:25 PM
+Everything up-to-date
+Saturday, November 23, 2024 1:35:25 PM
+Saturday, November 23, 2024 1:35:25 PM
+Saturday, November 23, 2024 1:35:25 PM
+Saturday, November 23, 2024 1:35:25 PM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 29, done.
+Counting objects: 100% (29/29), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.29 KiB | 2.29 MiB/s, done.
+Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   f2df603cf74..acfe8fe0e9c  main -> main
+3.884696725
+Saturday, November 23, 2024 1:39:18 PM
+HTTP/1.1 200 OK
+Date: Sat, 23 Nov 2024 18:39:17 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: 0ce8ac4746c018b8958e3f6cb9b053b3
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.369433
+Saturday, November 23, 2024 1:39:19 PM
+Saturday, November 23, 2024 1:39:19 PM
+Saturday, November 23, 2024 1:39:22 PM
+On branch master
+
+It took 2.43 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, November 23, 2024 1:39:26 PM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, November 23, 2024 1:39:34 PM
+Everything up-to-date
+Saturday, November 23, 2024 1:39:35 PM
+Saturday, November 23, 2024 1:39:35 PM
+Saturday, November 23, 2024 1:39:35 PM
+Saturday, November 23, 2024 1:39:35 PM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
+google1: 8.8.8.8
+google2: 8.8.4.4
+quad91: 9.9.9.9
+quad92: 149.112.112.112
+opendns1: 208.67.222.222
+opendns2: 208.67.220.220
+comodo1: 8.26.56.26
+comodo2: 8.20.247.20
+Enumerating objects: 31, done.
+Counting objects: 100% (31/31), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (16/16), 16.89 MiB | 7.60 MiB/s, done.
+Total 16 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+To github.com:kusl/ping5800x2023.git
+   acfe8fe0e9c..0221d7dd129  main -> main
+3.94773773333333
+Saturday, November 23, 2024 1:43:31 PM
+HTTP/1.1 200 OK
+Date: Sat, 23 Nov 2024 18:43:30 GMT
+Connection: keep-alive
+Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
+X-Request-ID: 6ca08a8ab28a2328805e1ddb152413fc
+Content-Type: application/json; charset=utf-8
+Content-Length: 89
+
+{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
+0.3687982
+Saturday, November 23, 2024 1:43:32 PM
+Saturday, November 23, 2024 1:43:32 PM
+Saturday, November 23, 2024 1:43:36 PM
+On branch master
+
+It took 3.88 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Saturday, November 23, 2024 1:43:42 PM
+On branch master
+nothing to commit, working tree clean
+* remote mine
+  Fetch URL: \\tp-share\G\shared\git\mymail
+  Push  URL: \\tp-share\G\shared\git\mymail
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+Saturday, November 23, 2024 1:43:51 PM
+Everything up-to-date
+Saturday, November 23, 2024 1:43:51 PM
+Saturday, November 23, 2024 1:43:51 PM
+Saturday, November 23, 2024 1:43:51 PM
+Saturday, November 23, 2024 1:43:51 PM
+home: 127.0.0.1
+tplinkverizon: 192.168.0.1
+cloudflare1: 1.1.1.1
+cloudflare2: 1.0.0.1
