@@ -1,10 +1,3 @@
- rename {Userland/Libraries => Libraries}/LibJS/Tests/builtins/TypedArray/TypedArray.prototype.length.js (97%)
- rename {Userland/Libraries => Libraries}/LibJS/Tests/builtins/TypedArray/TypedArray.prototype.map.js (99%)
- rename {Userland/Libraries => Libraries}/LibJS/Tests/builtins/TypedArray/TypedArray.prototype.reduce.js (99%)
- rename {Userland/Libraries => Libraries}/LibJS/Tests/builtins/TypedArray/TypedArray.prototype.reduceRight.js (99%)
- rename {Userland/Libraries => Libraries}/LibJS/Tests/builtins/TypedArray/TypedArray.prototype.reverse.js (99%)
- rename {Userland/Libraries => Libraries}/LibJS/Tests/builtins/TypedArray/TypedArray.prototype.set.js (98%)
- rename {Userland/Libraries => Libraries}/LibJS/Tests/builtins/TypedArray/TypedArray.prototype.slice.js (99%)
  rename {Userland/Libraries => Libraries}/LibJS/Tests/builtins/TypedArray/TypedArray.prototype.some.js (99%)
  rename {Userland/Libraries => Libraries}/LibJS/Tests/builtins/TypedArray/TypedArray.prototype.sort.js (99%)
  rename {Userland/Libraries => Libraries}/LibJS/Tests/builtins/TypedArray/TypedArray.prototype.subarray.js (99%)
@@ -9061,3 +9054,11 @@ qt.qpa.wayland: Wayland does not support QWindow::requestActivate()
 109326.970 WebContent(62117): ResourceLoader: Failed load of: "https://fromnepal.github.io/favicon.ico", Error: Load failed (status: 404 Not Found), Duration: 147ms
 109330.661 WebContent(62117): (js log) "Visit data saved:" "Message received at 11/25/2024 10:19:55 AM from IP: 70.104.195.206."
 109331.174 WebContent(62117): (js log) "Verification successful, retrieved data:" Object{ "id": 1880, "dataKey": "visit2024-11-25-05-19-54", "data": "{"timestamp":"2024-11-25-05-19-54","userAgent":"Mozilla/5.0 (Linux; x86_64) Ladybird/1.0"}", "referer": "https://fromnepal.github.io/", "ipAddress": "70.104.195.206", "createdAt": "2024-11-25T10:19:55.988352Z" }
+The Wayland connection broke. Did the Wayland compositor die?
+110592.883 WebContent(62117): Destroying Thread ""(140302052800064) while it is still running undetached!
+
+real    470m36.576s
+user    189m4.361s
+sys     10m34.265s
+Mon Nov 25 05:42:27 EST 2024
+kushal@kus2023:~/src/ladybird$ time sudo apt update; time apt list --upgradable; time sudo apt upgrade -y; cd ~/src/ladybird/; time git status; time git fetch origin; time git pull origin master; time git status; date; time ./Meta/ladybird.sh run ladybird; date;
