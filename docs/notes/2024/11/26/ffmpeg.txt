@@ -1,0 +1,129 @@
+S C:\Users\kushal> cd "C:\Users\kushal\src\mywyzepreview\"; C:\Users\kushal\src\mywyzepreview\pstapo.ps1
+On branch master
+nothing to commit, working tree clean
+Transcript started, output file is C:\Users\kushal\src\mywyzepreview\logs.txt
+Let us begin our quest.
+The current time is 2024-11-24T11-28-00
+The current time is 2024-11-24T11-28-00
+We are about to begin writing a file.
+the current time is 2024-11-24T11-28-00
+[h264 @ 000002ab874c7640] SEI type 207 size 153 truncated at 99
+The current time is 2024-11-24T15-28-02
+We just finished writing a file.
+[master ed94146] add all files
+ 1 file changed, 7 insertions(+), 41 deletions(-)
+The current time is 2024-11-24T15-28-02
+We are about to begin writing a file.
+the current time is 2024-11-24T15-28-02
+The current time is 2024-11-24T19-28-02
+We just finished writing a file.
+[master c704ae8] add all files
+ 1 file changed, 9 insertions(+)
+The current time is 2024-11-24T19-28-02
+We are about to begin writing a file.
+the current time is 2024-11-24T19-28-02
+The current time is 2024-11-24T23-28-03
+We just finished writing a file.
+[master 38c3c7d] add all files
+ 1 file changed, 9 insertions(+)
+The current time is 2024-11-24T23-28-03
+We are about to begin writing a file.
+the current time is 2024-11-24T23-28-03
+The current time is 2024-11-25T03-28-03
+We just finished writing a file.
+[master 92581ea] add all files
+ 1 file changed, 9 insertions(+)
+The current time is 2024-11-25T03-28-03
+We are about to begin writing a file.
+the current time is 2024-11-25T03-28-03
+[h264 @ 000001ac1f8ca700] SEI type 245 size 160 truncated at 153
+[h264 @ 000001ac1f8ca700] SEI type 52 size 142 truncated at 41
+[in#0/rtsp @ 000001ac1f826700] Error during demuxing: Error number -10054 occurred
+The current time is 2024-11-25T06-11-41
+We just finished writing a file.
+[master 5f93e6f] add all files
+ 1 file changed, 11 insertions(+)
+The current time is 2024-11-25T06-11-41
+We are about to begin writing a file.
+the current time is 2024-11-25T06-11-41
+[h264 @ 000002809c30c5c0] SEI type 140 size 115 truncated at 77
+[h264 @ 000002809c30c5c0] SEI type 143 size 193 truncated at 24
+[h264 @ 000002809c30c5c0] SEI type 165 size 71 truncated at 65
+[in#0/rtsp @ 000002809af86700] Error during demuxing: Error number -10054 occurred
+The current time is 2024-11-25T06-15-26
+We just finished writing a file.
+[master d824c39] add all files
+ 1 file changed, 12 insertions(+)
+The current time is 2024-11-25T06-15-26
+We are about to begin writing a file.
+the current time is 2024-11-25T06-15-26
+
+
+
+
+
+
+
+
+
+
+
+```powershell
+$streamUrl = "rtsp://[redacted]:[redacted]@192.168.0.[redacted]/stream1"
+$outputDir = "\\TP-Share\G\shared\jellyfin\security"
+$segmentTime = 14400  # Duration of each recording in seconds
+$initialDelay = 10  # Initial delay in seconds
+$maxDelay = 300  # Maximum delay in seconds
+
+function RecordStream {
+    param (
+        [string]$url,
+        [string]$output,
+        [int]$segmentTime
+    )
+    $timestamp = Get-Date -Format "yyyy-MM-ddTHH-mm-ss"
+    Write-Host "the current time is $timestamp"
+    $safeTimestamp = $timestamp -replace ":", "-"
+    $outputFile = "$output\output-$safeTimestamp.mov"
+    # ffmpeg -i $url -t $segmentTime  -acodec copy -vcodec copy $outputFile -loglevel warning
+    ffmpeg -i $url -t $segmentTime -c copy $outputFile -loglevel error
+}
+
+# cd $outputDir
+git add .;
+git commit --message "add all files" --message "from the terminal"
+
+Start-Transcript -path "C:\Users\kushal\src\mywyzepreview\logs.txt"
+
+Write-Host "Let us begin our quest."
+$currentTime = Get-Date -Format "yyyy-MM-ddTHH-mm-ss"
+Write-Host "The current time is $currentTime"
+
+$retryCount = 0
+$delay = $initialDelay
+while ($true) {
+    try {
+        $currentTime = Get-Date -Format "yyyy-MM-ddTHH-mm-ss"
+        Write-Host "The current time is $currentTime"
+        Write-Host "We are about to begin writing a file."
+        RecordStream -url $streamUrl -output $outputDir -segmentTime $segmentTime
+        $retryCount = 0  # Reset retry count on success
+        $delay = $initialDelay  # Reset delay on success
+        $currentTime = Get-Date -Format "yyyy-MM-ddTHH-mm-ss"
+        Write-Host "The current time is $currentTime"
+        Write-Host "We just finished writing a file."
+    } catch {
+        $currentTime = Get-Date -Format "yyyy-MM-ddTHH-mm-ss"
+        Write-Host "The current time is $currentTime"
+        Write-Host "We just entered the catch block."
+        Write-Host "Stream failed. Retrying in $delay seconds... Retry count $retryCount"
+        Write-Host "Stream failed: $_. Exception.Message. Retrying in $delay seconds... Retry count $retryCount"
+        
+        Start-Sleep -Seconds $delay
+        $retryCount++
+        $delay = [math]::Min($delay * 2, $maxDelay)  # Exponential backoff with a cap
+    }
+    git add .;
+    git commit --message "add all files" --message "from the terminal"
+}
+```
