@@ -1,1053 +1,51 @@
 PowerShell 7.4.6
-PS C:\Users\kushal> cargo update
-error: could not find `Cargo.toml` in `C:\Users\kushal` or any parent directory
-PS C:\Users\kushal> cargo install dura
-    Updating crates.io index
-  Downloaded dura v0.2.0
-  Downloaded 1 crate (29.3 KB) in 0.30s
-  Installing dura v0.2.0
-    Updating crates.io index
-     Locking 147 packages to latest compatible versions
-      Adding bitflags v1.3.2 (latest: v2.6.0)
-      Adding clap v3.2.25 (latest: v4.5.21)
-      Adding clap_lex v0.2.4 (latest: v0.7.3)
-      Adding dirs v4.0.0 (latest: v5.0.1)
-      Adding dirs-sys v0.3.7 (latest: v0.4.1)
-      Adding git2 v0.13.25 (latest: v0.19.0)
-      Adding hashbrown v0.12.3 (latest: v0.15.2)
-      Adding hermit-abi v0.1.19 (latest: v0.4.0)
-      Adding hermit-abi v0.3.9 (latest: v0.4.0)
-      Adding indexmap v1.9.3 (latest: v2.6.0)
-      Adding libgit2-sys v0.12.26+1.3.0 (latest: v0.17.0+1.8.1)
-      Adding libssh2-sys v0.2.23 (latest: v0.3.0)
-      Adding matchers v0.1.0 (latest: v0.2.0)
-      Adding nu-ansi-term v0.46.0 (latest: v0.50.1)
-      Adding os_str_bytes v6.6.1 (latest: v7.0.0)
-      Adding regex-automata v0.1.10 (latest: v0.4.9)
-      Adding regex-syntax v0.6.29 (latest: v0.8.5)
-      Adding strsim v0.10.0 (latest: v0.11.1)
-      Adding thiserror v1.0.69 (latest: v2.0.3)
-      Adding thiserror-impl v1.0.69 (latest: v2.0.3)
-      Adding tinystr v0.7.6 (latest: v0.8.0)
-      Adding toml v0.5.11 (latest: v0.8.19)
-      Adding wasi v0.11.0+wasi-snapshot-preview1 (latest: v0.13.3+wasi-0.2.2)
-      Adding windows-core v0.52.0 (latest: v0.58.0)
-      Adding windows-sys v0.52.0 (latest: v0.59.0)
-      Adding writeable v0.5.5 (latest: v0.6.0)
-      Adding zerovec v0.10.4 (latest: v0.11.0)
-      Adding zerovec-derive v0.10.3 (latest: v0.11.0)
-  Downloaded clap_lex v0.2.4
-  Downloaded dirs v4.0.0
-  Downloaded displaydoc v0.2.5
-  Downloaded dirs-sys v0.3.7
-  Downloaded icu_locid v1.5.0
-  Downloaded icu_locid_transform v1.5.0
-  Downloaded pkg-config v0.3.31
-  Downloaded matchers v0.1.0
-  Downloaded zerofrom v0.1.5
-  Downloaded write16 v1.0.0
-  Downloaded proc-macro2 v1.0.92
-  Downloaded zerovec-derive v0.10.3
-  Downloaded tracing-attributes v0.1.28
-  Downloaded unicode-ident v1.0.14
-  Downloaded tracing-core v0.1.33
-  Downloaded url v2.5.4
-  Downloaded regex-automata v0.1.10
-  Downloaded zerovec v0.10.4
-  Downloaded tracing-subscriber v0.3.18
-  Downloaded regex-syntax v0.6.29
-  Downloaded syn v2.0.89
-  Downloaded regex-syntax v0.8.5
-  Downloaded tokio v1.41.1
-  Downloaded regex-automata v0.4.9
-  Downloaded libz-sys v1.1.20
-  Downloaded libc v0.2.166
-  Downloaded libssh2-sys v0.2.23
-  Downloaded libgit2-sys v0.12.26+1.3.0
-  Downloaded regex v1.11.1
-  Downloaded serde_json v1.0.133
-  Downloaded icu_properties_data v1.5.0
-  Downloaded idna v1.0.3
-  Downloaded tracing v0.1.41
-  Downloaded sharded-slab v0.1.7
-  Downloaded serde_derive v1.0.215
-  Downloaded serde v1.0.215
-  Downloaded indexmap v1.9.3
-  Downloaded textwrap v0.16.1
-  Downloaded zerofrom-derive v0.1.5
-  Downloaded yoke-derive v0.7.5
-  Downloaded yoke v0.7.5
-  Downloaded writeable v0.5.5
-  Downloaded winapi-util v0.1.9
-  Downloaded tinystr v0.7.6
-  Downloaded itoa v1.0.14
-  Downloaded icu_locid_transform_data v1.5.0
-  Downloaded parking_lot v0.12.3
-  Downloaded utf8_iter v1.0.4
-  Downloaded utf16_iter v1.0.5
-  Downloaded tracing-log v0.2.0
-  Downloaded tokio-macros v2.4.0
-  Downloaded thread_local v1.1.8
-  Downloaded synstructure v0.13.1
-  Downloaded strsim v0.10.0
-  Downloaded scopeguard v1.2.0
-  Downloaded parking_lot_core v0.9.10
-  Downloaded overload v0.1.1
-  Downloaded os_str_bytes v6.6.1
-  Downloaded nu-ansi-term v0.46.0
-  Downloaded litemap v0.7.4
-  Downloaded jobserver v0.1.32
-  Downloaded icu_normalizer_data v1.5.0
-  Downloaded lock_api v0.4.12
-  Downloaded idna_adapter v1.2.0
-  Downloaded icu_provider_macros v1.5.0
-  Downloaded icu_provider v1.5.0
-  Downloaded icu_properties v1.5.1
-  Downloaded icu_normalizer v1.5.0
-  Downloaded git2 v0.13.25
-  Downloaded clap v3.2.25
-  Downloaded icu_collections v1.5.0
-  Downloaded hashbrown v0.12.3
-  Downloaded cc v1.2.1
-  Downloaded 73 crates (9.4 MB) in 3.42s (largest was `libgit2-sys` at 1.5 MB)
-   Compiling proc-macro2 v1.0.92
-   Compiling unicode-ident v1.0.14
-   Compiling windows_x86_64_msvc v0.52.6
-   Compiling stable_deref_trait v1.2.0
-   Compiling autocfg v1.4.0
-   Compiling shlex v1.3.0
-   Compiling jobserver v0.1.32
-   Compiling pkg-config v0.3.31
-   Compiling litemap v0.7.4
-   Compiling smallvec v1.13.2
-   Compiling vcpkg v0.2.15
-   Compiling writeable v0.5.5
-   Compiling winapi v0.3.9
-   Compiling icu_locid_transform_data v1.5.0
-   Compiling once_cell v1.20.2
-   Compiling libc v0.2.166
-   Compiling icu_properties_data v1.5.0
-   Compiling utf8_iter v1.0.4
-   Compiling utf16_iter v1.0.5
-   Compiling cc v1.2.1
-   Compiling cfg-if v1.0.0
-   Compiling icu_normalizer_data v1.5.0
-   Compiling write16 v1.0.0
-   Compiling serde v1.0.215
-   Compiling parking_lot_core v0.9.10
-   Compiling tracing-core v0.1.33
-   Compiling regex-syntax v0.6.29
-   Compiling scopeguard v1.2.0
-   Compiling percent-encoding v2.3.1
-   Compiling log v0.4.22
-   Compiling regex-syntax v0.8.5
-   Compiling lock_api v0.4.12
-   Compiling num-traits v0.2.19
-   Compiling indexmap v1.9.3
-   Compiling pin-project-lite v0.2.15
-   Compiling form_urlencoded v1.2.1
-   Compiling hashbrown v0.12.3
-   Compiling serde_json v1.0.133
-   Compiling os_str_bytes v6.6.1
-   Compiling bitflags v1.3.2
-   Compiling windows-targets v0.52.6
-   Compiling lazy_static v1.5.0
-   Compiling overload v0.1.1
-   Compiling windows-sys v0.52.0
-   Compiling windows-sys v0.59.0
-   Compiling sharded-slab v0.1.7
-   Compiling tracing-log v0.2.0
-   Compiling thread_local v1.1.8
-   Compiling clap_lex v0.2.4
-   Compiling quote v1.0.37
-   Compiling parking_lot v0.12.3
-   Compiling textwrap v0.16.1
-   Compiling syn v2.0.89
-   Compiling regex-automata v0.4.9
-   Compiling ryu v1.0.18
-   Compiling strsim v0.10.0
-   Compiling regex-automata v0.1.10
-   Compiling itoa v1.0.14
-   Compiling bytes v1.8.0
-   Compiling memchr v2.7.4
-   Compiling winapi-util v0.1.9
-   Compiling chrono v0.4.38
-   Compiling termcolor v1.4.1
-   Compiling libz-sys v1.1.20
-   Compiling libssh2-sys v0.2.23
-   Compiling libgit2-sys v0.12.26+1.3.0
-   Compiling regex v1.11.1
-   Compiling matchers v0.1.0
-   Compiling mio v1.0.2
-   Compiling socket2 v0.5.7
-   Compiling atty v0.2.14
-   Compiling nu-ansi-term v0.46.0
-   Compiling dirs-sys v0.3.7
-   Compiling clap v3.2.25
-   Compiling dirs v4.0.0
-   Compiling synstructure v0.13.1
-   Compiling zerofrom-derive v0.1.5
-   Compiling yoke-derive v0.7.5
-   Compiling zerovec-derive v0.10.3
-   Compiling displaydoc v0.2.5
-   Compiling icu_provider_macros v1.5.0
-   Compiling serde_derive v1.0.215
-   Compiling tracing-attributes v0.1.28
-   Compiling tokio-macros v2.4.0
-   Compiling tokio v1.41.1
-   Compiling zerofrom v0.1.5
-   Compiling tracing v0.1.41
-   Compiling yoke v0.7.5
-   Compiling tracing-subscriber v0.3.18
-   Compiling zerovec v0.10.4
-   Compiling tinystr v0.7.6
-   Compiling icu_collections v1.5.0
-   Compiling icu_locid v1.5.0
-   Compiling icu_provider v1.5.0
-   Compiling icu_locid_transform v1.5.0
-   Compiling icu_properties v1.5.1
-   Compiling toml v0.5.11
-   Compiling icu_normalizer v1.5.0
-   Compiling idna_adapter v1.2.0
-   Compiling idna v1.0.3
-   Compiling url v2.5.4
-   Compiling git2 v0.13.25
-   Compiling dura v0.2.0
-    Finished `release` profile [optimized] target(s) in 35.25s
-  Installing C:\Users\kushal\.cargo\bin\dura.exe
-   Installed package `dura v0.2.0` (executable `dura.exe`)
-PS C:\Users\kushal> dura --version
-dura 0.2.0
-PS C:\Users\kushal> ssh colorado
-Linux colorado 6.1.0-28-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.119-1 (2024-11-22) x86_64
-
-The programs included with the Debian GNU/Linux system are free software;
-the exact distribution terms for each program are described in the
-individual files in /usr/share/doc/*/copyright.
-
-Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
-permitted by applicable law.
-Last login: Tue Nov 26 07:23:29 2024 from fe80::975c:f636:bfb:5026%enp3s0
-kushal@colorado:~$ cargo
--bash: cargo: command not found
-kushal@colorado:~$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-info: downloading installer
-
-Welcome to Rust!
-
-This will download and install the official compiler for the Rust
-programming language, and its package manager, Cargo.
-
-Rustup metadata and toolchains will be installed into the Rustup
-home directory, located at:
-
-  /home/kushal/.rustup
-
-This can be modified with the RUSTUP_HOME environment variable.
-
-The Cargo home directory is located at:
-
-  /home/kushal/.cargo
-
-This can be modified with the CARGO_HOME environment variable.
-
-The cargo, rustc, rustup and other commands will be added to
-Cargo's bin directory, located at:
-
-  /home/kushal/.cargo/bin
-
-This path will then be added to your PATH environment variable by
-modifying the profile files located at:
-
-  /home/kushal/.profile
-  /home/kushal/.bashrc
-
-You can uninstall at any time with rustup self uninstall and
-these changes will be reverted.
-
-Current installation options:
-
-
-   default host triple: x86_64-unknown-linux-gnu
-     default toolchain: stable (default)
-               profile: default
-  modify PATH variable: yes
-
-1) Proceed with standard installation (default - just press enter)
-2) Customize installation
-3) Cancel installation
->
-
-info: profile set to 'default'
-info: default host triple is x86_64-unknown-linux-gnu
-info: syncing channel updates for 'stable-x86_64-unknown-linux-gnu'
-info: latest update on 2024-10-17, rust version 1.82.0 (f6e511eec 2024-10-15)
-info: downloading component 'cargo'
-info: downloading component 'clippy'
-info: downloading component 'rust-docs'
- 16.3 MiB /  16.3 MiB (100 %)  11.1 MiB/s in  1s ETA:  0s
-info: downloading component 'rust-std'
- 26.0 MiB /  26.0 MiB (100 %)  11.0 MiB/s in  2s ETA:  0s
-info: downloading component 'rustc'
- 70.8 MiB /  70.8 MiB (100 %)  10.1 MiB/s in  7s ETA:  0s
-info: downloading component 'rustfmt'
-info: installing component 'cargo'
-info: installing component 'clippy'
-info: installing component 'rust-docs'
- 16.3 MiB /  16.3 MiB (100 %)   4.5 MiB/s in  3s ETA:  0s
-info: installing component 'rust-std'
- 26.0 MiB /  26.0 MiB (100 %)   9.8 MiB/s in  2s ETA:  0s
-info: installing component 'rustc'
- 70.8 MiB /  70.8 MiB (100 %)  11.5 MiB/s in  6s ETA:  0s
-info: installing component 'rustfmt'
-info: default toolchain set to 'stable-x86_64-unknown-linux-gnu'
-
-  stable-x86_64-unknown-linux-gnu installed - rustc 1.82.0 (f6e511eec 2024-10-15)
-
-
-Rust is installed now. Great!
-
-To get started you may need to restart your current shell.
-This would reload your PATH environment variable to include
-Cargo's bin directory ($HOME/.cargo/bin).
-
-To configure your current shell, you need to source
-the corresponding env file under $HOME/.cargo.
-
-This is usually done by running one of the following (note the leading DOT):
-. "$HOME/.cargo/env"            # For sh/bash/zsh/ash/dash/pdksh
-source "$HOME/.cargo/env.fish"  # For fish
-kushal@colorado:~$ crontab -e
-crontab: installing new crontab
-crontab: installing new crontab
-kushal@colorado:~$ crontab -e
-crontab: installing new crontab
-kushal@colorado:~$ sudo echo "Current date and time: $(date)"; free -h; df -h; sudo ip addr; time ping -c 20 pcna.duckdns.org; time ping -c 20 kalimati.duckdns.org; time ping -c 20 colorado.duckdns.org; sudo echo "Current date and time: $(date)"; export DEBIAN_FRONTEND=noninteractive; time sudo apt update; time sudo apt -y upgrade; time sudo apt -y full-upgrade; time sudo apt -y autoremove; time sudo reboot;
-[sudo] password for kushal:
-Current date and time: Wed Nov 27 12:59:40 PM EST 2024
-               total        used        free      shared  buff/cache   available
-Mem:           3.7Gi       2.0Gi       500Mi        38Mi       1.6Gi       1.7Gi
-Swap:          975Mi        47Mi       928Mi
-Filesystem                     Size  Used Avail Use% Mounted on
-udev                           1.9G     0  1.9G   0% /dev
-tmpfs                          381M  1.5M  380M   1% /run
-/dev/mapper/colorado--vg-root  915G  416G  452G  48% /
-tmpfs                          1.9G     0  1.9G   0% /dev/shm
-tmpfs                          5.0M  8.0K  5.0M   1% /run/lock
-/dev/sda1                      455M  149M  282M  35% /boot
-tmpfs                          381M   60K  381M   1% /run/user/113
-tmpfs                          381M   52K  381M   1% /run/user/1000
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    inet 127.0.0.1/8 scope host lo
-       valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host noprefixroute
-       valid_lft forever preferred_lft forever
-2: enp3s0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
-    link/ether d0:67:e5:18:40:c1 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.0.102/24 brd 192.168.0.255 scope global dynamic noprefixroute enp3s0
-       valid_lft 6618sec preferred_lft 6618sec
-    inet6 fe80::d267:e5ff:fe18:40c1/64 scope link noprefixroute
-       valid_lft forever preferred_lft forever
-3: wlx34e894d0564e: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 1000
-    link/ether 34:e8:94:d0:56:4e brd ff:ff:ff:ff:ff:ff
-4: br-2f8ddf5bc2ec: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
-    link/ether 02:42:da:a5:c9:25 brd ff:ff:ff:ff:ff:ff
-    inet 172.19.0.1/16 brd 172.19.255.255 scope global br-2f8ddf5bc2ec
-       valid_lft forever preferred_lft forever
-5: br-44e2aa3623ed: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
-    link/ether 02:42:ec:bf:05:23 brd ff:ff:ff:ff:ff:ff
-    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-44e2aa3623ed
-       valid_lft forever preferred_lft forever
-6: docker0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
-    link/ether 02:42:f8:f3:1e:12 brd ff:ff:ff:ff:ff:ff
-    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
-       valid_lft forever preferred_lft forever
-    inet6 fe80::42:f8ff:fef3:1e12/64 scope link
-       valid_lft forever preferred_lft forever
-8: veth6ec46fd@if7: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default
-    link/ether 7a:c4:10:08:b3:3d brd ff:ff:ff:ff:ff:ff link-netnsid 1
-    inet6 fe80::78c4:10ff:fe08:b33d/64 scope link
-       valid_lft forever preferred_lft forever
-10: vethbb643a3@if9: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master docker0 state UP group default
-    link/ether be:d3:e1:d2:4c:35 brd ff:ff:ff:ff:ff:ff link-netnsid 0
-    inet6 fe80::bcd3:e1ff:fed2:4c35/64 scope link
-       valid_lft forever preferred_lft forever
-PING pcna.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=1.02 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=1.21 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=1.26 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=1.05 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=1.81 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=1.29 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=1.59 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=3.98 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=2.05 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=1.13 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=1.53 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=1.19 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=1.08 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=1.08 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=1.72 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=1.15 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=1.93 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=1.80 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=2.53 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=1.10 ms
-
---- pcna.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19030ms
-rtt min/avg/max/mdev = 1.023/1.574/3.975/0.680 ms
-
-real    0m19.097s
-user    0m0.004s
-sys     0m0.006s
-PING kalimati.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=2.08 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=1.15 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=10.7 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=1.01 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=2.50 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=1.83 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=1.51 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=1.13 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=14.1 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=1.05 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=1.40 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=1.11 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=1.39 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=2.37 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=1.27 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=1.39 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=1.15 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=0.998 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=1.08 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=1.09 ms
-
---- kalimati.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19029ms
-rtt min/avg/max/mdev = 0.998/2.513/14.077/3.363 ms
-
-real    0m20.071s
-user    0m0.010s
-sys     0m0.000s
-PING colorado.duckdns.org (70.104.195.206) 56(84) bytes of data.
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=1 ttl=64 time=1.06 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=2 ttl=64 time=1.65 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=3 ttl=64 time=10.5 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=4 ttl=64 time=1.15 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=5 ttl=64 time=1.12 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=6 ttl=64 time=1.45 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=7 ttl=64 time=2.61 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=8 ttl=64 time=1.71 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=9 ttl=64 time=1.13 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=10 ttl=64 time=1.45 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=11 ttl=64 time=2.48 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=12 ttl=64 time=1.13 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=13 ttl=64 time=1.11 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=14 ttl=64 time=1.80 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=15 ttl=64 time=34.0 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=16 ttl=64 time=1.09 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=17 ttl=64 time=1.32 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=18 ttl=64 time=1.12 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=19 ttl=64 time=1.07 ms
-64 bytes from pool-70-104-195-206.nrflva.fios.verizon.net (70.104.195.206): icmp_seq=20 ttl=64 time=3.85 ms
-
---- colorado.duckdns.org ping statistics ---
-20 packets transmitted, 20 received, 0% packet loss, time 19028ms
-rtt min/avg/max/mdev = 1.059/3.639/33.976/7.258 ms
-
-real    0m19.079s
-user    0m0.000s
-sys     0m0.009s
-Current date and time: Wed Nov 27 01:00:44 PM EST 2024
-Hit:1 http://deb.debian.org/debian bookworm InRelease
-Get:2 http://security.debian.org/debian-security bookworm-security InRelease [48.0 kB]
-Get:3 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
-Get:4 http://deb.debian.org/debian bookworm-updates/main Sources.diff/Index [12.8 kB]
-Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages.diff/Index [12.8 kB]
-Get:6 http://deb.debian.org/debian bookworm-updates/main Translation-en.diff/Index [12.8 kB]
-Get:7 http://deb.debian.org/debian bookworm-updates/main Sources T-2024-11-27-1405.46-F-2024-11-27-1405.46.pdiff [722 B]
-Get:8 http://deb.debian.org/debian bookworm-updates/main amd64 Packages T-2024-11-27-1405.46-F-2024-11-27-1405.46.pdiff [435 B]
-Get:7 http://deb.debian.org/debian bookworm-updates/main Sources T-2024-11-27-1405.46-F-2024-11-27-1405.46.pdiff [722 B]
-Get:8 http://deb.debian.org/debian bookworm-updates/main amd64 Packages T-2024-11-27-1405.46-F-2024-11-27-1405.46.pdiff [435 B]
-Get:9 http://deb.debian.org/debian bookworm-updates/main Translation-en T-2024-11-27-1405.46-F-2024-11-27-1405.46.pdiff [277 B]
-Get:9 http://deb.debian.org/debian bookworm-updates/main Translation-en T-2024-11-27-1405.46-F-2024-11-27-1405.46.pdiff [277 B]
-Fetched 143 kB in 1s (250 kB/s)
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-1 package can be upgraded. Run 'apt list --upgradable' to see it.
-
-real    0m1.819s
-user    0m0.002s
-sys     0m0.008s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-The following packages will be upgraded:
-  tzdata
-1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-Need to get 298 kB of archives.
-After this operation, 1,024 B of additional disk space will be used.
-Get:1 http://deb.debian.org/debian bookworm-updates/main amd64 tzdata all 2024b-0+deb12u1 [298 kB]
-Fetched 298 kB in 0s (2,541 kB/s)
-apt-listchanges: Reading changelogs...
-Preconfiguring packages ...
-(Reading database ... 160032 files and directories currently installed.)
-Preparing to unpack .../tzdata_2024b-0+deb12u1_all.deb ...
-Unpacking tzdata (2024b-0+deb12u1) over (2024a-0+deb12u1) ...
-Setting up tzdata (2024b-0+deb12u1) ...
-
-Current default time zone: 'US/Eastern'
-Local time is now:      Wed Nov 27 13:00:48 EST 2024.
-Universal Time is now:  Wed Nov 27 18:00:48 UTC 2024.
-Run 'dpkg-reconfigure tzdata' if you wish to change it.
-
-Scanning processes...
-Scanning processor microcode...
-Scanning linux images...
-
-Running kernel seems to be up-to-date.
-
-The processor microcode seems to be up-to-date.
-
-No services need to be restarted.
-
-No containers need to be restarted.
-
-No user sessions are running outdated binaries.
-
-No VM guests are running outdated hypervisor (qemu) binaries on this host.
-
-real    0m3.953s
-user    0m0.012s
-sys     0m0.005s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Calculating upgrade... Done
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-
-real    0m0.566s
-user    0m0.002s
-sys     0m0.006s
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-
-real    0m0.487s
-user    0m0.004s
-sys     0m0.004s
-
-Broadcast message from root@colorado on pts/2 (Wed 2024-11-27 13:00:51 EST):
-
-The system will reboot now!
-
-
-real    0m0.044s
-user    0m0.007s
-sys     0m0.000s
-kushal@colorado:~$ Connection to colorado closed by remote host.
-Connection to colorado closed.
-PS C:\Users\kushal> ssh colorado
-Linux colorado 6.1.0-28-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.119-1 (2024-11-22) x86_64
-
-The programs included with the Debian GNU/Linux system are free software;
-the exact distribution terms for each program are described in the
-individual files in /usr/share/doc/*/copyright.
-
-Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
-permitted by applicable law.
-Last login: Wed Nov 27 12:34:50 2024 from fe80::975c:f636:bfb:5026%enp3s0
-kushal@colorado:~$ crontab -e
-crontab: installing new crontab
-kushal@colorado:~$ exit
-logout
-Connection to colorado closed.
-PS C:\Users\kushal> C:\Users\kushal\src\myhtml\fromnepal\public\omnibus.ps1
-Transcript started, output file is C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt
-
-Wednesday, November 27, 2024 1:08:13 PM
-     Removed 926 files, 454.2MiB total
-Wednesday, November 27, 2024 1:08:13 PM
-   Compiling windows_x86_64_msvc v0.52.6
-   Compiling proc-macro2 v1.0.89
-   Compiling unicode-ident v1.0.13
-   Compiling pin-project-lite v0.2.15
-   Compiling bytes v1.8.0
-   Compiling itoa v1.0.11
-   Compiling autocfg v1.4.0
-   Compiling futures-core v0.3.31
-   Compiling futures-sink v0.3.31
-   Compiling fnv v1.0.7
-   Compiling once_cell v1.20.2
-   Compiling memchr v2.7.4
-   Compiling cfg-if v1.0.0
-   Compiling futures-io v0.3.31
-   Compiling pin-utils v0.1.0
-   Compiling futures-task v0.3.31
-   Compiling httparse v1.9.5
-   Compiling equivalent v1.0.1
-   Compiling hashbrown v0.15.0
-   Compiling tinyvec_macros v0.1.1
-   Compiling try-lock v0.2.5
-   Compiling atomic-waker v1.1.2
-   Compiling tracing-core v0.1.32
-   Compiling windows_x86_64_msvc v0.48.5
-   Compiling serde v1.0.213
-   Compiling native-tls v0.2.12
-   Compiling want v0.3.1
-   Compiling tinyvec v1.8.0
-   Compiling futures-channel v0.3.31
-   Compiling byteorder v1.5.0
-   Compiling percent-encoding v2.3.1
-   Compiling smallvec v1.13.2
-   Compiling http v1.1.0
-   Compiling form_urlencoded v1.2.1
-   Compiling getrandom v0.2.15
-   Compiling unicode-bidi v0.3.17
-   Compiling serde_json v1.0.132
-   Compiling ryu v1.0.18
-   Compiling windows-targets v0.52.6
-   Compiling slab v0.4.9
-   Compiling tower-service v0.3.3
-   Compiling windows-sys v0.52.0
-   Compiling windows-sys v0.59.0
-   Compiling tracing v0.1.40
-   Compiling windows-result v0.2.0
-   Compiling rand_core v0.6.4
-   Compiling windows-targets v0.48.5
-   Compiling thiserror v1.0.65
-   Compiling indexmap v2.6.0
-   Compiling windows-strings v0.1.0
-   Compiling futures-util v0.3.31
-   Compiling rustls-pki-types v1.10.0
-   Compiling windows-sys v0.48.0
-   Compiling quote v1.0.37
-   Compiling sync_wrapper v1.0.1
-   Compiling encoding_rs v0.8.35
-   Compiling windows-registry v0.2.0
-   Compiling syn v2.0.85
-   Compiling unicode-normalization v0.1.24
-   Compiling ipnet v2.10.1
-   Compiling log v0.4.22
-   Compiling rustls-pemfile v2.2.0
-   Compiling http-body v1.0.1
-   Compiling base64 v0.22.1
-   Compiling mime v0.3.17
-   Compiling dotenv v0.15.0
-   Compiling idna v0.5.0
-   Compiling url v2.5.2
-   Compiling serde_derive v1.0.213
-   Compiling zerocopy-derive v0.7.35
-   Compiling thiserror-impl v1.0.65
-   Compiling mio v1.0.2
-   Compiling socket2 v0.5.7
-   Compiling home v0.5.9
-   Compiling etcetera v0.8.0
-   Compiling tokio v1.41.0
-   Compiling zerocopy v0.7.35
-   Compiling ppv-lite86 v0.2.20
-   Compiling schannel v0.1.26
-   Compiling rand_chacha v0.3.1
-   Compiling http-body-util v0.1.2
-   Compiling rand v0.8.5
-   Compiling serde_urlencoded v0.7.1
-   Compiling tokio-util v0.7.12
-   Compiling tokio-native-tls v0.3.1
-   Compiling h2 v0.4.6
-   Compiling hyper v1.5.0
-   Compiling hyper-util v0.1.9
-   Compiling hyper-tls v0.6.0
-   Compiling reqwest v0.12.8
-   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
-warning: struct `Graph` is never constructed
- --> src\graph.rs:3:12
-  |
-3 | pub struct Graph {
-  |            ^^^^^
-  |
-  = note: `#[warn(dead_code)]` on by default
-
-warning: associated items `new`, `add_node`, `add_edge`, `bfs`, `dfs`, and `dfs_recursive` are never used
-  --> src\graph.rs:8:12
-   |
-7  | impl Graph {
-   | ---------- associated items in this implementation
-8  |     pub fn new() -> Self {
-   |            ^^^
-...
-14 |     pub fn add_node(&mut self, value: &str) {
-   |            ^^^^^^^^
-...
-18 |     pub fn add_edge(&mut self, from: &str, to: &str) {
-   |            ^^^^^^^^
-...
-24 |     pub fn bfs(&self, start: &str) -> Vec<String> {
-   |            ^^^
-...
-48 |     pub fn dfs(&self, start: &str) -> Vec<String> {
-   |            ^^^
-...
-55 |     fn dfs_recursive(&self, node: &str, visited: &mut HashMap<String, bool>, result: &mut Vec<String>) {
-   |        ^^^^^^^^^^^^^
-
-warning: `helloworld` (bin "helloworld") generated 2 warnings
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 16.13s
-Wednesday, November 27, 2024 1:08:30 PM
-   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
-    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.73s
-     Running unittests src/main.rs (target\debug\deps\helloworld-358f72777eb128ff.exe)
-
-running 24 tests
-test greatest_common_divisor::tests::test_large_numbers ... ok
-test graph::tests::test_dfs ... ok
-test graph::tests::test_bfs ... ok
-test greatest_common_divisor::tests::test_large_numbers_performance_single ... ok
-test greatest_common_divisor::tests::test_one_is_one ... ok
-test greatest_common_divisor::tests::test_zero_input_3 ... ok
-test greatest_common_divisor::tests::test_gcd ... ok
-test greatest_common_divisor::tests::test_large_prime_numbers ... ok
-test greatest_common_divisor::tests::test_mixed_numbers ... ok
-test greatest_common_divisor::tests::test_large_numbers_performance_multiple ... ok
-test greatest_common_divisor::tests::test_both_are_zero ... ok
-test greatest_common_divisor::tests::test_one_is_zero ... ok
-test greatest_common_divisor::tests::test_prime_numbers ... ok
-test greatest_common_divisor::tests::test_zero_input ... ok
-test greatest_common_divisor::tests::test_large_numbers_performance ... ok
-test greatest_common_divisor::tests::test_large_composite_numbers ... ok
-test my_data_types::tests::test_not_a_number ... ok
-test my_math::tests::test_add ... ok
-test my_math::tests::test_add_multiply_ambiguous ... ok
-test my_math::tests::test_add_zero ... ok
-test my_math::tests::test_multiply ... ok
-test my_math::tests::test_multiply_zero ... ok
-test shadowing::tests::test_shadow ... ok
-test shadowing::tests::test_shadow_string_length ... ok
-
-test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
-Wednesday, November 27, 2024 1:08:30 PM
-Wednesday, November 27, 2024 1:08:30 PM
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-Wednesday, November 27, 2024 1:08:30 PM
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-Wednesday, November 27, 2024 1:08:31 PM
-From github.com:kusl/hellorust20240711
- * branch            master     -> FETCH_HEAD
- = [up to date]      master     -> origin/master
-Already up to date.
-Wednesday, November 27, 2024 1:08:31 PM
-Pushing to github.com:kusl/hellorust20240711.git
-To github.com:kusl/hellorust20240711.git
- = [up to date]      master -> master
-updating local tracking ref 'refs/remotes/origin/master'
-Everything up-to-date
-Wednesday, November 27, 2024 1:08:32 PM
-warning: in the working copy of 'docs/icon_cube.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_fork.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_info-circled.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_info-circled_dark.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_minus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_plus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_search-minus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_search-plus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_sponsor.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_star.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_star_dark.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-dir.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-dir_active.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-down-dir.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-down-dir_dark.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_wrench.svg', LF will be replaced by CRLF the next time Git touches it
-Wednesday, November 27, 2024 1:10:03 PM
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        modified:   docs/hellolib_BabysFirstDynamicProgrammingMethods.html
-        modified:   docs/hellolib_BubbleSort.html
-        modified:   docs/hellolib_CurrentWeather.html
-        modified:   docs/hellolib_DesignDynamicArray.html
-        modified:   docs/hellolib_DotnetNineGuid.html
-        modified:   docs/hellolib_Entity.html
-        modified:   docs/hellolib_FindClosestNumberToZero.html
-        modified:   docs/hellolib_Graph.html
-        modified:   docs/hellolib_Knapsack.html
-        modified:   docs/hellolib_KnapsackItem.html
-        modified:   docs/hellolib_ListNode.html
-        modified:   docs/hellolib_MergeSort.html
-        modified:   docs/hellolib_MergeSortedArray.html
-        modified:   docs/hellolib_MergeStringsAlternately.html
-        modified:   docs/hellolib_MinimumCoin.html
-        modified:   docs/hellolib_MyCleaner.html
-        modified:   docs/hellolib_MySearch.html
-        modified:   docs/hellolib_PascalTriangle.html
-        modified:   docs/hellolib_PasswordSettings.html
-        modified:   docs/hellolib_Person.html
-        modified:   docs/hellolib_PersonFactory.html
-        modified:   docs/hellolib_Revocation.html
-        modified:   docs/hellolib_RomanToInteger.html
-        modified:   docs/hellolib_SinglyLinkedList.html
-        modified:   docs/hellolib_SinglyLinkedListAddTwoNumbers.html
-        modified:   docs/hellolib_SinglyLinkedListNode.html
-        modified:   docs/hellolib_TwoSum.html
-        modified:   docs/hellolib_Weather.html
-        modified:   docs/hellolib_WeatherFetchException.html
-        modified:   docs/index.htm
-        modified:   docs/index.html
-        modified:   dotnet.txt
-        modified:   tests/coverage.cobertura.xml
-        modified:   tests/dotnet.txt
-
-Wednesday, November 27, 2024 1:10:03 PM
-[master ed402bd] build application
- 34 files changed, 518 insertions(+), 517 deletions(-)
-Wednesday, November 27, 2024 1:10:03 PM
-From github.com:patstha/mydotnet
- * branch            master     -> FETCH_HEAD
- = [up to date]      master     -> origin/master
-Current branch master is up to date.
-Wednesday, November 27, 2024 1:10:04 PM
-Pushing to github.com:patstha/mydotnet.git
-Enumerating objects: 73, done.
-Counting objects: 100% (73/73), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (37/37), done.
-Writing objects: 100% (37/37), 6.07 KiB | 2.02 MiB/s, done.
-Total 37 (delta 36), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (36/36), completed with 36 local objects.
-To github.com:patstha/mydotnet.git
-   f1b6735..ed402bd  master -> master
-updating local tracking ref 'refs/remotes/origin/master'
-Wednesday, November 27, 2024 1:10:05 PM
-Wednesday, November 27, 2024 1:10:05 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.07s.
-Wednesday, November 27, 2024 1:10:06 PM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.4.8 building for production...
-✓ 5 modules transformed.
-docs/index.html                0.27 kB │ gzip: 0.22 kB
-docs/assets/index-D1OKu7AJ.js  8.63 kB │ gzip: 3.19 kB
-✓ built in 118ms
-Done in 1.10s.
-Wednesday, November 27, 2024 1:10:07 PM
-warning: in the working copy of 'docs/assets/index-D1OKu7AJ.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Wednesday, November 27, 2024 1:10:07 PM
-On branch kus-2024-10-30-modules
-nothing to commit, working tree clean
-Wednesday, November 27, 2024 1:10:07 PM
-On branch kus-2024-10-30-modules
-nothing to commit, working tree clean
-Wednesday, November 27, 2024 1:10:07 PM
-From github.com:matchthree/matchthree.github.io
- * branch            master     -> FETCH_HEAD
-Current branch kus-2024-10-30-modules is up to date.
-Wednesday, November 27, 2024 1:10:08 PM
-Everything up-to-date
-Wednesday, November 27, 2024 1:10:08 PM
-Wednesday, November 27, 2024 1:10:08 PM
-Wednesday, November 27, 2024 1:10:08 PM
-On branch main
-nothing to commit, working tree clean
-Wednesday, November 27, 2024 1:10:08 PM
-Wednesday, November 27, 2024 1:10:08 PM
-Wednesday, November 27, 2024 1:10:12 PM
-Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
-Wednesday, November 27, 2024 1:10:12 PM
-Wednesday, November 27, 2024 1:10:12 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.09s.
-Wednesday, November 27, 2024 1:10:12 PM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.4.11 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-C7fM1CLc.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-CG30pmQG.js   2.94 kB │ gzip: 1.31 kB
-✓ built in 4.23s
-Done in 5.84s.
-Wednesday, November 27, 2024 1:10:18 PM
-Transcript stopped, output file is C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt
-warning: in the working copy of 'docs/assets/index-C7fM1CLc.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-CG30pmQG.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/hybridcache.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/l1-show.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/modernwinforms.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/myvtt.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/myvtt.en.vtt.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/nyt-podcasts-trump-cabinet-picks.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/tldr-global.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/.gitattributes', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/.gitignore', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/build.gradle.kts', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/gradle/wrapper/gradle-wrapper.properties', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/settings.gradle.kts', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/main/kotlin/com/github/kusl/november2024a/November2024aApplication.kt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/main/resources/application.properties', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/test/kotlin/com/github/kusl/november2024a/November2024aApplicationTests.kt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/requirements.txt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/A3B318B569046159E1DD6616D2E646D9434350E6.asc', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/Nationalism, Explained [AXz0kbMKPu0].en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/favicon_io/about.txt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/3-blue-1-brown-llm-LPZh9BOjkQs.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/abc-news-empty-w4LOqOSi6Tk.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/animation-recapped-J1QiZ7KDXik.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/aoc-Eh7bFt7oUto.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/aoc-WoP9BJiItSI.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/asianometry-mm-wave-5g.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/bravos-ILJ41tmQAQ8.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/coffee-software-DSbuyscXX7I.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/continuous-delivery-_zUkNrUp0Ok.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/continuous-delivery-pair-programming-5TTsIkmtKUg.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/countries-explained-poland-d6LW1iLFXkc.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/dark-brandon-DDp_tb5bs-0.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/diabetes-PsQj2Hg1oFM.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/diabetes-PsQj2Hg1oFM.hi.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/diabetes-Yys5zeoDi2E.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/dotnet-9-new-jit-1bsTnaLchi4.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/dotnet-async-challenges-ef-core-7iuUh0BIAuE.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/dotnet-new-c-sharp-13-japXYFS9YPQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/dr-ben-miles-JCt2MhOzWVE.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/drama-league-37kU-zxhG18.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/enrico-7nnyv4yJGJc.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/escuela-XdI2e8QqzbQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/first-ring-wnfcFflmvLo.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/germany-_ywqDbHiMrs.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/hankschannel-nuclear-16203Tks_0I.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/l1-icydock-3KCaS7EK6Rc.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/l1show-EI5iZ4LNsyQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/last-week-tonight-medicare-for-all-UZtEBXLDssQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/mileage-mike-ring-road-DhZH0KbcwX4.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/millitary-show-M_yjnIFGQ70.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/mit-rto-4ec_yZCWOCY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/msnbc-EmvYGLySOVE.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/ndc-oA7xeRyxMSo.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-Dj05EvWQ8NY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-X_gotjGG4ug.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-daily-bernie-xvYvfOcEFXI.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-l7s8QizovG8.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-ukraine-c_z8OoYWjQ0.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/otago-kotlin-multiplatform.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/real-life-lore-africa.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/road-guy-rob-K1TFOK4_07s.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/second-school-india-u2vzX_MgCI8.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/the-economist-kyiv-xn-AnTYs2H8.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/the-millitary-show-china-hellscape.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/tldr-global-Lj0J3ioOnIY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/tldr-news-eu-COEfdZVTFCQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/tldr-news-global-2024-11-16-a8NmPDUdzhU.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/tldr-news-global-hong-kong-kRmSBS1yqWo.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/trudeau-immigration-vOB7-dbYuCc.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/ufd-amd-BJjdGxRRh2E.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/versed-h_rsF8eVPqY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/vivienne-yang-FR6hhULZLfw.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/william-spaniel-polling-hhaNiF5aCCY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/ytotago-kotlin-multiplatform.en.vtt', LF will be replaced by CRLF the next time Git touches it
-Wednesday, November 27, 2024 1:10:40 PM
-On branch main
-Your branch is ahead of 'origin/main' by 2 commits.
-  (use "git push" to publish your local commits)
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        new file:   docs/notes/2024/11/26/ffmpeg.txt
-        new file:   docs/notes/2024/11/27/techmeme.png
-        modified:   docs/notes/earth.jpeg
-        modified:   docs/notes/output.txt
-        modified:   docs/powershell.txt
-        new file:   public/notes/2024/11/27/techmeme.png
-        modified:   public/notes/earth.jpeg
-        modified:   public/notes/output.txt
-
-Wednesday, November 27, 2024 1:10:40 PM
-[main 23d682f7] build application
- 8 files changed, 5849 insertions(+), 3256 deletions(-)
- create mode 100644 docs/notes/2024/11/26/ffmpeg.txt
- create mode 100644 docs/notes/2024/11/27/techmeme.png
- create mode 100644 public/notes/2024/11/27/techmeme.png
-Wednesday, November 27, 2024 1:10:41 PM
-From github.com:fromnepal/fromnepal.github.io
- * branch              main       -> FETCH_HEAD
-Current branch main is up to date.
-Wednesday, November 27, 2024 1:10:42 PM
-Enumerating objects: 38, done.
-Counting objects: 100% (36/36), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (24/24), done.
-Writing objects: 100% (25/25), 17.59 MiB | 5.72 MiB/s, done.
-Total 25 (delta 16), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (16/16), completed with 8 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   589a035f..23d682f7  main -> main
-Wednesday, November 27, 2024 1:10:48 PM
-
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_videos.ps1  -url "https://www.instagram.com/reel/DCik_bDpxXa"
+PS C:\Users\kushal> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_videos.ps1  -url "https://v.redd.it/8yvwxtab0l3e1"
 Create new folder for yt-dlp
 
     Directory: C:\Temp
 
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
-d----          11/27/2024  3:40 PM                yt-dlp
+d----          11/28/2024  9:25 AM                yt-dlp
 
 DisplayHint : DateTime
-Date        : 11/27/2024 12:00:00 AM
-Day         : 27
-DayOfWeek   : Wednesday
-DayOfYear   : 332
-Hour        : 15
+Date        : 11/28/2024 12:00:00 AM
+Day         : 28
+DayOfWeek   : Thursday
+DayOfYear   : 333
+Hour        : 9
 Kind        : Local
-Millisecond : 715
-Microsecond : 50
-Nanosecond  : 100
-Minute      : 40
+Millisecond : 655
+Microsecond : 312
+Nanosecond  : 300
+Minute      : 25
 Month       : 11
-Second      : 48
-Ticks       : 638683188487150501
-TimeOfDay   : 15:40:48.7150501
+Second      : 42
+Ticks       : 638683827426553123
+TimeOfDay   : 09:25:42.6553123
 Year        : 2024
-DateTime    : Wednesday, November 27, 2024 3:40:48 PM
+DateTime    : Thursday, November 28, 2024 9:25:42 AM
 
 
 DisplayHint : DateTime
-Date        : 11/27/2024 12:00:00 AM
-Day         : 27
-DayOfWeek   : Wednesday
-DayOfYear   : 332
-Hour        : 15
+Date        : 11/28/2024 12:00:00 AM
+Day         : 28
+DayOfWeek   : Thursday
+DayOfYear   : 333
+Hour        : 9
 Kind        : Local
-Millisecond : 740
-Microsecond : 983
+Millisecond : 684
+Microsecond : 160
 Nanosecond  : 500
-Minute      : 40
+Minute      : 25
 Month       : 11
-Second      : 48
-Ticks       : 638683188487409835
-TimeOfDay   : 15:40:48.7409835
+Second      : 42
+Ticks       : 638683827426841605
+TimeOfDay   : 09:25:42.6841605
 Year        : 2024
-DateTime    : Wednesday, November 27, 2024 3:40:48 PM
+DateTime    : Thursday, November 28, 2024 9:25:42 AM
 
-[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241127154048.%(ext)s', 'https://www.instagram.com/reel/DCik_bDpxXa']
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241128092542.%(ext)s', 'https://v.redd.it/8yvwxtab0l3e1']
 [debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
 [debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
 [debug] yt-dlp version stable@2024.11.18 from yt-dlp/yt-dlp [7ea278792] (win_exe)
@@ -1057,94 +55,100 @@ DateTime    : Wednesday, November 27, 2024 3:40:48 PM
 [debug] Proxy map: {}
 [debug] Request Handlers: urllib, requests, websockets, curl_cffi
 [debug] Loaded 1837 extractors
-[Instagram] Extracting URL: https://www.instagram.com/reel/DCik_bDpxXa
-[Instagram] DCik_bDpxXa: Setting up session
-[Instagram] DCik_bDpxXa: Downloading JSON metadata
+[generic] Extracting URL: https://v.redd.it/8yvwxtab0l3e1
+[generic] 8yvwxtab0l3e1: Downloading webpage
+[redirect] Following redirect to https://www.reddit.com/r/Satisfyingasfuck/comments/1h1p80j/i_cant_tell_if_that_was_accidental_or_not/?rdt=53262
+[Reddit] Extracting URL: https://www.reddit.com/r/Satisfyingasfuck/comments/1h1p80j/i_cant_tell_if_that_was_accidental_or_not/?rdt=53262
+[Reddit] 1h1p80j: Downloading JSON metadata
+[Reddit] 1h1p80j: Downloading m3u8 information
+[Reddit] 1h1p80j: Downloading MPD manifest
 [debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec, channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
-[SponsorBlock] SponsorBlock is not supported for Instagram
-[info] DCik_bDpxXa: Downloading 1 format(s): dash-1072015894555036v+dash-463541812983872ad
-[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/o1/v/t16/f2/m69/AQMcSlRuCqdPjaB-IaGzcJB4NrmrAIKAOy0bFIrwnnHTSNHX32XXjSiZPNDaQXLbVufDGZiG1Q0MY0Eq3hfWLkDk.mp4?strext=1&_nc_cat=1&_nc_sid=9ca052&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_ohc=V6tqr-HSHvsQ7kNvgHdk1EQ&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfcjJldmV2cDktcjFnZW4ydnA5X3E5MCIsInZpZGVvX2lkIjpudWxsLCJjbGllbnRfbmFtZSI6ImlnIiwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=9-4&oh=00_AYDpVMAdlYUOgEHMo19saz6WFMZMKSruwPzDAEslAh2ELA&oe=674D5115"
+[SponsorBlock] SponsorBlock is not supported for Reddit
+[info] 8yvwxtab0l3e1: Downloading 1 format(s): hls-988+dash-6
+[debug] Invoking hlsnative downloader on "https://v.redd.it/8yvwxtab0l3e1/HLS_480.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 4
+[download] Destination: C:\Temp\yt-dlp\20241128092542.fhls-988.mp4
 [debug] File locking is not supported. Proceeding without locking
-[download] Destination: C:\Temp\yt-dlp\20241127154048.fdash-1072015894555036v.mp4
-[download] 100% of   10.42MiB in 00:00:00 at 15.71MiB/s
-[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/o1/v/t16/f2/m69/AQPaCZt72sAO4eraxtTDQtgDWWB9oPICyg391K8I9x11wow1GeGYAKnX749D-kuZndeA3OyETPhGjlgkx_dJwX3A.mp4?strext=1&_nc_cat=104&_nc_sid=9ca052&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_ohc=417UJngdhPwQ7kNvgH0nWPz&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsLCJjbGllbnRfbmFtZSI6ImlnIiwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=9-4&oh=00_AYCJijs6bHZzPm6I2a9g5rYLCRXj_q5UrhHoN6PcxanCkw&oe=674D44D1"
-[download] Destination: C:\Temp\yt-dlp\20241127154048.fdash-463541812983872ad.m4a
-[download] 100% of  519.27KiB in 00:00:00 at 2.25MiB/s
-[Merger] Merging formats into "C:\Temp\yt-dlp\20241127154048.mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241127154048.fdash-1072015894555036v.mp4 -i file:C:\Temp\yt-dlp\20241127154048.fdash-463541812983872ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241127154048.temp.mp4
-Deleting original file C:\Temp\yt-dlp\20241127154048.fdash-463541812983872ad.m4a (pass -k to keep)
-Deleting original file C:\Temp\yt-dlp\20241127154048.fdash-1072015894555036v.mp4 (pass -k to keep)
+[download] 100% of    1.37MiB in 00:00:00 at 6.73MiB/s
+[debug] Invoking http downloader on "https://v.redd.it/8yvwxtab0l3e1/DASH_AUDIO_128.mp4"
+[download] Destination: C:\Temp\yt-dlp\20241128092542.fdash-6.m4a
+[download] 100% of  224.79KiB in 00:00:00 at 8.21MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\20241128092542.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241128092542.fhls-988.mp4 -i file:C:\Temp\yt-dlp\20241128092542.fdash-6.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241128092542.temp.mp4
+Deleting original file C:\Temp\yt-dlp\20241128092542.fdash-6.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\20241128092542.fhls-988.mp4 (pass -k to keep)
 [ModifyChapters] SponsorBlock information is unavailable
-[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241127154048.mp4"
-[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241127154048.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by faruqe1992" -metadata "date=20241119" -metadata "description=#cats #dogs #catsofinstagram" -metadata "synopsis=#cats #dogs #catsofinstagram" -metadata "purl=https://www.instagram.com/reel/DCik_bDpxXa" -metadata "comment=https://www.instagram.com/reel/DCik_bDpxXa" -metadata "artist=CatsLover" -movflags +faststart file:C:\Temp\yt-dlp\20241127154048.temp.mp4
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241128092542.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241128092542.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=I can’t tell if that was accidental or not" -metadata "date=20241128" -metadata "purl=https://www.reddit.com/r/Satisfyingasfuck/comments/1h1p80j/i_cant_tell_if_that_was_accidental_or_not/?rdt=53262" -metadata "comment=https://www.reddit.com/r/Satisfyingasfuck/comments/1h1p80j/i_cant_tell_if_that_was_accidental_or_not/?rdt=53262" -metadata "artist=Mitudy1a" -movflags +faststart file:C:\Temp\yt-dlp\20241128092542.temp.mp4
 
 DisplayHint : DateTime
-Date        : 11/27/2024 12:00:00 AM
-Day         : 27
-DayOfWeek   : Wednesday
-DayOfYear   : 332
-Hour        : 15
+Date        : 11/28/2024 12:00:00 AM
+Day         : 28
+DayOfWeek   : Thursday
+DayOfYear   : 333
+Hour        : 9
 Kind        : Local
-Millisecond : 79
-Microsecond : 257
+Millisecond : 71
+Microsecond : 33
+Nanosecond  : 300
+Minute      : 25
+Month       : 11
+Second      : 47
+Ticks       : 638683827470710333
+TimeOfDay   : 09:25:47.0710333
+Year        : 2024
+DateTime    : Thursday, November 28, 2024 9:25:47 AM
+
+
+DisplayHint : DateTime
+Date        : 11/28/2024 12:00:00 AM
+Day         : 28
+DayOfWeek   : Thursday
+DayOfYear   : 333
+Hour        : 9
+Kind        : Local
+Millisecond : 76
+Microsecond : 170
+Nanosecond  : 700
+Minute      : 25
+Month       : 11
+Second      : 47
+Ticks       : 638683827470761707
+TimeOfDay   : 09:25:47.0761707
+Year        : 2024
+DateTime    : Thursday, November 28, 2024 9:25:47 AM
+
+
+DisplayHint : DateTime
+Date        : 11/28/2024 12:00:00 AM
+Day         : 28
+DayOfWeek   : Thursday
+DayOfYear   : 333
+Hour        : 9
+Kind        : Local
+Millisecond : 78
+Microsecond : 278
 Nanosecond  : 800
-Minute      : 40
+Minute      : 25
 Month       : 11
-Second      : 53
-Ticks       : 638683188530792578
-TimeOfDay   : 15:40:53.0792578
+Second      : 47
+Ticks       : 638683827470782788
+TimeOfDay   : 09:25:47.0782788
 Year        : 2024
-DateTime    : Wednesday, November 27, 2024 3:40:53 PM
-
-
-DisplayHint : DateTime
-Date        : 11/27/2024 12:00:00 AM
-Day         : 27
-DayOfWeek   : Wednesday
-DayOfYear   : 332
-Hour        : 15
-Kind        : Local
-Millisecond : 84
-Microsecond : 78
-Nanosecond  : 0
-Minute      : 40
-Month       : 11
-Second      : 53
-Ticks       : 638683188530840780
-TimeOfDay   : 15:40:53.0840780
-Year        : 2024
-DateTime    : Wednesday, November 27, 2024 3:40:53 PM
-
-
-DisplayHint : DateTime
-Date        : 11/27/2024 12:00:00 AM
-Day         : 27
-DayOfWeek   : Wednesday
-DayOfYear   : 332
-Hour        : 15
-Kind        : Local
-Millisecond : 85
-Microsecond : 738
-Nanosecond  : 900
-Minute      : 40
-Month       : 11
-Second      : 53
-Ticks       : 638683188530857389
-TimeOfDay   : 15:40:53.0857389
-Year        : 2024
-DateTime    : Wednesday, November 27, 2024 3:40:53 PM
+DateTime    : Thursday, November 28, 2024 9:25:47 AM
 
 
     Directory: C:\Temp\yt-dlp
 
 Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
--a---          11/27/2024  3:40 PM       11479204 20241127154048.mp4
--a---          11/27/2024  3:40 PM       11479204 20241127154048.mp4
-Cleaned video name: 20241127154048mp4
-Cleaned video path: C:\Temp\yt-dlp\20241127154048mp4
+-a---          11/28/2024 12:53 AM        1603378 20241128092542.mp4
+-a---          11/28/2024 12:53 AM        1603378 20241128092542.mp4
+Cleaned video name: 20241128092542mp4
+Cleaned video path: C:\Temp\yt-dlp\20241128092542mp4
 Running ffmpeg
-ffmpeg -i "C:\Temp\yt-dlp\20241127154048mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241127154048mp4_reencoded.mp4"
+ffmpeg -i "C:\Temp\yt-dlp\20241128092542mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241128092542mp4_reencoded.mp4"
 ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
   built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
   configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
@@ -1156,592 +160,133 @@ ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg de
   libswscale      8.  3.100 /  8.  3.100
   libswresample   5.  3.100 /  5.  3.100
   libpostproc    58.  3.100 / 58.  3.100
-Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241127154048mp4':
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241128092542mp4':
   Metadata:
     major_brand     : isom
     minor_version   : 512
-    compatible_brands: isomiso2mp41
-    title           : Video by faruqe1992
-    artist          : CatsLover
-    date            : 20241119
+    compatible_brands: isomiso2avc1mp41
+    title           : I can’t tell if that was accidental or not
+    artist          : Mitudy1a
+    date            : 20241128
     encoder         : Lavf61.7.100
-    comment         : https://www.instagram.com/reel/DCik_bDpxXa
-    description     : #cats #dogs #catsofinstagram
-    synopsis        : #cats #dogs #catsofinstagram
-  Duration: 00:01:05.69, start: 0.000000, bitrate: 1397 kb/s
-  Stream #0:0[0x1](und): Video: vp9 (Profile 0) (vp09 / 0x39307076), yuv420p(tv, bt709), 1080x1920, 1332 kb/s, 30 fps, 30 tbr, 15360 tbn (default)
+    comment         : https://www.reddit.com/r/Satisfyingasfuck/comments/1h1p80j/i_cant_tell_if_that_was_accidental_or_not/?rdt=53262
+  Duration: 00:00:14.27, start: 0.000000, bitrate: 899 kb/s
+  Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(progressive), 480x854 [SAR 1:1 DAR 240:427], 762 kb/s, 30 fps, 30 tbr, 90k tbn (default)
       Metadata:
         handler_name    : VideoHandler
         vendor_id       : [0][0][0][0]
-        encoder         : VPC Coding
-  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 63 kb/s (default)
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 127 kb/s (default)
       Metadata:
         handler_name    : SoundHandler
         vendor_id       : [0][0][0][0]
 Stream mapping:
-  Stream #0:0 -> #0:0 (vp9 (native) -> h264 (libx264))
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
   Stream #0:1 -> #0:1 (aac (native) -> aac (native))
 Press [q] to stop, [?] for help
-[libx264 @ 000001ded4719d00] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
-[libx264 @ 000001ded4719d00] profile High, level 4.0, 4:2:0, 8-bit
-[libx264 @ 000001ded4719d00] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
-Output #0, mp4, to 'C:\Temp\yt-dlp\20241127154048mp4_reencoded.mp4':
+[libx264 @ 0000025fcf5fdb80] using SAR=1/1
+[libx264 @ 0000025fcf5fdb80] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0000025fcf5fdb80] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 0000025fcf5fdb80] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\20241128092542mp4_reencoded.mp4':
   Metadata:
     major_brand     : isom
     minor_version   : 512
-    compatible_brands: isomiso2mp41
-    title           : Video by faruqe1992
-    artist          : CatsLover
-    date            : 20241119
-    synopsis        : #cats #dogs #catsofinstagram
-    comment         : https://www.instagram.com/reel/DCik_bDpxXa
-    description     : #cats #dogs #catsofinstagram
+    compatible_brands: isomiso2avc1mp41
+    title           : I can’t tell if that was accidental or not
+    artist          : Mitudy1a
+    date            : 20241128
+    comment         : https://www.reddit.com/r/Satisfyingasfuck/comments/1h1p80j/i_cant_tell_if_that_was_accidental_or_not/?rdt=53262
     encoder         : Lavf61.7.100
-  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920, q=2-31, 30 fps, 15360 tbn (default)
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, progressive), 480x854 [SAR 1:1 DAR 240:427], q=2-31, 30 fps, 15360 tbn (default)
       Metadata:
         handler_name    : VideoHandler
         vendor_id       : [0][0][0][0]
         encoder         : Lavc61.19.100 libx264
       Side data:
         cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
-  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
       Metadata:
         handler_name    : SoundHandler
         vendor_id       : [0][0][0][0]
         encoder         : Lavc61.19.100 aac
-[mp4 @ 000001ded46e8400] Starting second pass: moving the moov atom to the beginning of the file
-[out#0/mp4 @ 000001ded472fc80] video:28207KiB audio:1034KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.240838%
-frame= 1967 fps=118 q=-1.0 Lsize=   29311KiB time=00:01:05.50 bitrate=3665.9kbits/s speed=3.93x
-[libx264 @ 000001ded4719d00] frame I:14    Avg QP:19.51  size: 82139
-[libx264 @ 000001ded4719d00] frame P:608   Avg QP:23.05  size: 28432
-[libx264 @ 000001ded4719d00] frame B:1345  Avg QP:25.57  size:  7767
-[libx264 @ 000001ded4719d00] consecutive B-frames:  6.3%  6.0%  5.2% 82.6%
-[libx264 @ 000001ded4719d00] mb I  I16..4: 15.2% 77.6%  7.2%
-[libx264 @ 000001ded4719d00] mb P  I16..4:  8.7% 21.1%  0.5%  P16..4: 37.7%  9.1%  2.6%  0.0%  0.0%    skip:20.3%
-[libx264 @ 000001ded4719d00] mb B  I16..4:  1.0%  1.9%  0.0%  B16..8: 34.7%  2.1%  0.2%  direct: 1.1%  skip:58.9%  L0:47.9% L1:49.3% BI: 2.7%
-[libx264 @ 000001ded4719d00] 8x8 transform intra:69.0% inter:90.1%
-[libx264 @ 000001ded4719d00] coded y,uvDC,uvAC intra: 33.6% 42.1% 5.7% inter: 8.1% 10.5% 0.0%
-[libx264 @ 000001ded4719d00] i16 v,h,dc,p: 21% 25%  6% 48%
-[libx264 @ 000001ded4719d00] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 28% 21% 19%  4%  6%  6%  6%  5%  5%
-[libx264 @ 000001ded4719d00] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26% 23% 12%  4% 11%  8%  8%  4%  3%
-[libx264 @ 000001ded4719d00] i8c dc,h,v,p: 52% 21% 19%  8%
-[libx264 @ 000001ded4719d00] Weighted P-Frames: Y:0.8% UV:0.5%
-[libx264 @ 000001ded4719d00] ref P L0: 67.0% 14.1% 14.7%  4.3%  0.0%
-[libx264 @ 000001ded4719d00] ref B L0: 93.6%  5.4%  1.0%
-[libx264 @ 000001ded4719d00] ref B L1: 97.7%  2.3%
-[libx264 @ 000001ded4719d00] kb/s:3524.14
-[aac @ 000001ded475b400] Qavg: 695.222
+[mp4 @ 0000025fcfbced00] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 0000025fcf65fd80] video:1250KiB audio:219KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 1.150441%
+frame=  428 fps=0.0 q=-1.0 Lsize=    1485KiB time=00:00:14.12 bitrate= 861.6kbits/s speed=20.3x
+[libx264 @ 0000025fcf5fdb80] frame I:2     Avg QP:20.68  size: 25338
+[libx264 @ 0000025fcf5fdb80] frame P:118   Avg QP:22.11  size:  6649
+[libx264 @ 0000025fcf5fdb80] frame B:308   Avg QP:24.79  size:  1441
+[libx264 @ 0000025fcf5fdb80] consecutive B-frames:  0.7%  8.4%  4.9% 86.0%
+[libx264 @ 0000025fcf5fdb80] mb I  I16..4: 32.2% 39.6% 28.2%
+[libx264 @ 0000025fcf5fdb80] mb P  I16..4: 14.4% 11.3%  0.9%  P16..4: 39.7% 12.3%  5.1%  0.0%  0.0%    skip:16.2%
+[libx264 @ 0000025fcf5fdb80] mb B  I16..4:  1.5%  1.4%  0.0%  B16..8: 33.5%  3.2%  0.3%  direct: 1.4%  skip:58.8%  L0:44.1% L1:51.5% BI: 4.4%
+[libx264 @ 0000025fcf5fdb80] 8x8 transform intra:43.3% inter:68.6%
+[libx264 @ 0000025fcf5fdb80] coded y,uvDC,uvAC intra: 14.3% 50.0% 5.0% inter: 6.7% 13.5% 0.1%
+[libx264 @ 0000025fcf5fdb80] i16 v,h,dc,p: 20% 41% 12% 27%
+[libx264 @ 0000025fcf5fdb80] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 29% 40%  1%  1%  1%  2%  1%  1%
+[libx264 @ 0000025fcf5fdb80] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 19% 34% 17%  4%  5%  5%  7%  4%  6%
+[libx264 @ 0000025fcf5fdb80] i8c dc,h,v,p: 53% 29% 14%  4%
+[libx264 @ 0000025fcf5fdb80] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0000025fcf5fdb80] ref P L0: 65.1% 13.1% 16.4%  5.4%
+[libx264 @ 0000025fcf5fdb80] ref B L0: 86.9% 10.4%  2.7%
+[libx264 @ 0000025fcf5fdb80] ref B L1: 95.8%  4.2%
+[libx264 @ 0000025fcf5fdb80] kb/s:717.19
+[aac @ 0000025fcf5f0380] Qavg: 9987.144
 
 DisplayHint : DateTime
-Date        : 11/27/2024 12:00:00 AM
-Day         : 27
-DayOfWeek   : Wednesday
-DayOfYear   : 332
-Hour        : 15
+Date        : 11/28/2024 12:00:00 AM
+Day         : 28
+DayOfWeek   : Thursday
+DayOfYear   : 333
+Hour        : 9
 Kind        : Local
 Millisecond : 869
-Microsecond : 481
-Nanosecond  : 100
-Minute      : 41
+Microsecond : 780
+Nanosecond  : 900
+Minute      : 25
 Month       : 11
-Second      : 9
-Ticks       : 638683188698694811
-TimeOfDay   : 15:41:09.8694811
+Second      : 47
+Ticks       : 638683827478697809
+TimeOfDay   : 09:25:47.8697809
 Year        : 2024
-DateTime    : Wednesday, November 27, 2024 3:41:09 PM
+DateTime    : Thursday, November 28, 2024 9:25:47 AM
 
 
 DisplayHint : DateTime
-Date        : 11/27/2024 12:00:00 AM
-Day         : 27
-DayOfWeek   : Wednesday
-DayOfYear   : 332
-Hour        : 15
+Date        : 11/28/2024 12:00:00 AM
+Day         : 28
+DayOfWeek   : Thursday
+DayOfYear   : 333
+Hour        : 9
 Kind        : Local
-Millisecond : 583
-Microsecond : 763
-Nanosecond  : 100
-Minute      : 41
+Millisecond : 375
+Microsecond : 608
+Nanosecond  : 400
+Minute      : 25
 Month       : 11
-Second      : 13
-Ticks       : 638683188735837631
-TimeOfDay   : 15:41:13.5837631
+Second      : 48
+Ticks       : 638683827483756084
+TimeOfDay   : 09:25:48.3756084
 Year        : 2024
-DateTime    : Wednesday, November 27, 2024 3:41:13 PM
+DateTime    : Thursday, November 28, 2024 9:25:48 AM
 
 
 DisplayHint : DateTime
-Date        : 11/27/2024 12:00:00 AM
-Day         : 27
-DayOfWeek   : Wednesday
-DayOfYear   : 332
-Hour        : 15
+Date        : 11/28/2024 12:00:00 AM
+Day         : 28
+DayOfWeek   : Thursday
+DayOfYear   : 333
+Hour        : 9
 Kind        : Local
-Millisecond : 593
-Microsecond : 115
-Nanosecond  : 300
-Minute      : 41
+Millisecond : 380
+Microsecond : 286
+Nanosecond  : 800
+Minute      : 25
 Month       : 11
-Second      : 13
-Ticks       : 638683188735931153
-TimeOfDay   : 15:41:13.5931153
+Second      : 48
+Ticks       : 638683827483802868
+TimeOfDay   : 09:25:48.3802868
 Year        : 2024
-DateTime    : Wednesday, November 27, 2024 3:41:13 PM
+DateTime    : Thursday, November 28, 2024 9:25:48 AM
 
 
-PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> C:\Users\kushal\src\myhtml\fromnepal\public\omnibus.ps1
-Transcript started, output file is C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt
-
-Wednesday, November 27, 2024 6:20:43 PM
-     Removed 926 files, 454.2MiB total
-Wednesday, November 27, 2024 6:20:43 PM
-   Compiling windows_x86_64_msvc v0.52.6
-   Compiling proc-macro2 v1.0.89
-   Compiling unicode-ident v1.0.13
-   Compiling pin-project-lite v0.2.15
-   Compiling bytes v1.8.0
-   Compiling futures-core v0.3.31
-   Compiling autocfg v1.4.0
-   Compiling itoa v1.0.11
-   Compiling futures-sink v0.3.31
-   Compiling fnv v1.0.7
-   Compiling once_cell v1.20.2
-   Compiling memchr v2.7.4
-   Compiling cfg-if v1.0.0
-   Compiling futures-task v0.3.31
-   Compiling pin-utils v0.1.0
-   Compiling httparse v1.9.5
-   Compiling futures-io v0.3.31
-   Compiling equivalent v1.0.1
-   Compiling hashbrown v0.15.0
-   Compiling atomic-waker v1.1.2
-   Compiling try-lock v0.2.5
-   Compiling windows_x86_64_msvc v0.48.5
-   Compiling serde v1.0.213
-   Compiling tracing-core v0.1.32
-   Compiling native-tls v0.2.12
-   Compiling tinyvec_macros v0.1.1
-   Compiling want v0.3.1
-   Compiling futures-channel v0.3.31
-   Compiling tinyvec v1.8.0
-   Compiling byteorder v1.5.0
-   Compiling smallvec v1.13.2
-   Compiling percent-encoding v2.3.1
-   Compiling getrandom v0.2.15
-   Compiling serde_json v1.0.132
-   Compiling tower-service v0.3.3
-   Compiling http v1.1.0
-   Compiling form_urlencoded v1.2.1
-   Compiling slab v0.4.9
-   Compiling ryu v1.0.18
-   Compiling unicode-bidi v0.3.17
-   Compiling rand_core v0.6.4
-   Compiling windows-targets v0.52.6
-   Compiling tracing v0.1.40
-   Compiling windows-targets v0.48.5
-   Compiling windows-sys v0.52.0
-   Compiling windows-sys v0.59.0
-   Compiling indexmap v2.6.0
-   Compiling windows-result v0.2.0
-   Compiling rustls-pki-types v1.10.0
-   Compiling thiserror v1.0.65
-   Compiling windows-sys v0.48.0
-   Compiling futures-util v0.3.31
-   Compiling sync_wrapper v1.0.1
-   Compiling windows-strings v0.1.0
-   Compiling quote v1.0.37
-   Compiling unicode-normalization v0.1.24
-   Compiling encoding_rs v0.8.35
-   Compiling base64 v0.22.1
-   Compiling rustls-pemfile v2.2.0
-   Compiling syn v2.0.85
-   Compiling windows-registry v0.2.0
-   Compiling ipnet v2.10.1
-   Compiling http-body v1.0.1
-   Compiling mime v0.3.17
-   Compiling log v0.4.22
-   Compiling dotenv v0.15.0
-   Compiling idna v0.5.0
-   Compiling url v2.5.2
-   Compiling serde_derive v1.0.213
-   Compiling zerocopy-derive v0.7.35
-   Compiling thiserror-impl v1.0.65
-   Compiling mio v1.0.2
-   Compiling socket2 v0.5.7
-   Compiling home v0.5.9
-   Compiling etcetera v0.8.0
-   Compiling zerocopy v0.7.35
-   Compiling tokio v1.41.0
-   Compiling schannel v0.1.26
-   Compiling ppv-lite86 v0.2.20
-   Compiling http-body-util v0.1.2
-   Compiling rand_chacha v0.3.1
-   Compiling rand v0.8.5
-   Compiling serde_urlencoded v0.7.1
-   Compiling tokio-util v0.7.12
-   Compiling tokio-native-tls v0.3.1
-   Compiling h2 v0.4.6
-   Compiling hyper v1.5.0
-   Compiling hyper-util v0.1.9
-   Compiling hyper-tls v0.6.0
-   Compiling reqwest v0.12.8
-   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
-warning: struct `Graph` is never constructed
- --> src\graph.rs:3:12
-  |
-3 | pub struct Graph {
-  |            ^^^^^
-  |
-  = note: `#[warn(dead_code)]` on by default
-
-warning: associated items `new`, `add_node`, `add_edge`, `bfs`, `dfs`, and `dfs_recursive` are never used
-  --> src\graph.rs:8:12
-   |
-7  | impl Graph {
-   | ---------- associated items in this implementation
-8  |     pub fn new() -> Self {
-   |            ^^^
-...
-14 |     pub fn add_node(&mut self, value: &str) {
-   |            ^^^^^^^^
-...
-18 |     pub fn add_edge(&mut self, from: &str, to: &str) {
-   |            ^^^^^^^^
-...
-24 |     pub fn bfs(&self, start: &str) -> Vec<String> {
-   |            ^^^
-...
-48 |     pub fn dfs(&self, start: &str) -> Vec<String> {
-   |            ^^^
-...
-55 |     fn dfs_recursive(&self, node: &str, visited: &mut HashMap<String, bool>, result: &mut Vec<String>) {
-   |        ^^^^^^^^^^^^^
-
-warning: `helloworld` (bin "helloworld") generated 2 warnings
-    Finished `dev` profile [unoptimized + debuginfo] target(s) in 16.72s
-Wednesday, November 27, 2024 6:21:00 PM
-   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
-    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.74s
-     Running unittests src/main.rs (target\debug\deps\helloworld-358f72777eb128ff.exe)
-
-running 24 tests
-test greatest_common_divisor::tests::test_both_are_zero ... ok
-test graph::tests::test_bfs ... ok
-test greatest_common_divisor::tests::test_gcd ... ok
-test graph::tests::test_dfs ... ok
-test greatest_common_divisor::tests::test_large_numbers_performance_single ... ok
-test greatest_common_divisor::tests::test_mixed_numbers ... ok
-test greatest_common_divisor::tests::test_large_numbers_performance ... ok
-test greatest_common_divisor::tests::test_large_composite_numbers ... ok
-test greatest_common_divisor::tests::test_large_numbers_performance_multiple ... ok
-test greatest_common_divisor::tests::test_large_prime_numbers ... ok
-test greatest_common_divisor::tests::test_one_is_one ... ok
-test greatest_common_divisor::tests::test_one_is_zero ... ok
-test greatest_common_divisor::tests::test_zero_input ... ok
-test greatest_common_divisor::tests::test_large_numbers ... ok
-test greatest_common_divisor::tests::test_prime_numbers ... ok
-test greatest_common_divisor::tests::test_zero_input_3 ... ok
-test my_data_types::tests::test_not_a_number ... ok
-test my_math::tests::test_add ... ok
-test my_math::tests::test_add_multiply_ambiguous ... ok
-test my_math::tests::test_add_zero ... ok
-test my_math::tests::test_multiply ... ok
-test my_math::tests::test_multiply_zero ... ok
-test shadowing::tests::test_shadow ... ok
-test shadowing::tests::test_shadow_string_length ... ok
-
-test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
-
-Wednesday, November 27, 2024 6:21:01 PM
-Wednesday, November 27, 2024 6:21:01 PM
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-Wednesday, November 27, 2024 6:21:01 PM
-On branch master
-Your branch is up to date with 'origin/master'.
-
-nothing to commit, working tree clean
-Wednesday, November 27, 2024 6:21:01 PM
-From github.com:kusl/hellorust20240711
- * branch            master     -> FETCH_HEAD
- = [up to date]      master     -> origin/master
-Already up to date.
-Wednesday, November 27, 2024 6:21:02 PM
-Pushing to github.com:kusl/hellorust20240711.git
-To github.com:kusl/hellorust20240711.git
- = [up to date]      master -> master
-updating local tracking ref 'refs/remotes/origin/master'
-Everything up-to-date
-Wednesday, November 27, 2024 6:21:02 PM
-warning: in the working copy of 'docs/icon_cube.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_fork.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_info-circled.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_info-circled_dark.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_minus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_plus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_search-minus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_search-plus.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_sponsor.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_star.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_star_dark.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-dir.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-dir_active.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-down-dir.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_up-down-dir_dark.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/icon_wrench.svg', LF will be replaced by CRLF the next time Git touches it
-Wednesday, November 27, 2024 6:22:44 PM
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        modified:   docs/hellolib_BabysFirstDynamicProgrammingMethods.html
-        modified:   docs/hellolib_BubbleSort.html
-        modified:   docs/hellolib_CurrentWeather.html
-        modified:   docs/hellolib_DesignDynamicArray.html
-        modified:   docs/hellolib_DotnetNineGuid.html
-        modified:   docs/hellolib_Entity.html
-        modified:   docs/hellolib_FindClosestNumberToZero.html
-        modified:   docs/hellolib_Graph.html
-        modified:   docs/hellolib_Knapsack.html
-        modified:   docs/hellolib_KnapsackItem.html
-        modified:   docs/hellolib_ListNode.html
-        modified:   docs/hellolib_MergeSort.html
-        modified:   docs/hellolib_MergeSortedArray.html
-        modified:   docs/hellolib_MergeStringsAlternately.html
-        modified:   docs/hellolib_MinimumCoin.html
-        modified:   docs/hellolib_MyCleaner.html
-        modified:   docs/hellolib_MySearch.html
-        modified:   docs/hellolib_PascalTriangle.html
-        modified:   docs/hellolib_PasswordSettings.html
-        modified:   docs/hellolib_Person.html
-        modified:   docs/hellolib_PersonFactory.html
-        modified:   docs/hellolib_Revocation.html
-        modified:   docs/hellolib_RomanToInteger.html
-        modified:   docs/hellolib_SinglyLinkedList.html
-        modified:   docs/hellolib_SinglyLinkedListAddTwoNumbers.html
-        modified:   docs/hellolib_SinglyLinkedListNode.html
-        modified:   docs/hellolib_TwoSum.html
-        modified:   docs/hellolib_Weather.html
-        modified:   docs/hellolib_WeatherFetchException.html
-        modified:   docs/index.htm
-        modified:   docs/index.html
-        modified:   dotnet.txt
-        modified:   tests/coverage.cobertura.xml
-        modified:   tests/dotnet.txt
-
-Wednesday, November 27, 2024 6:22:44 PM
-[master 57ec5cb] build application
- 34 files changed, 515 insertions(+), 458 deletions(-)
-Wednesday, November 27, 2024 6:22:44 PM
-From github.com:patstha/mydotnet
- * branch            master     -> FETCH_HEAD
- = [up to date]      master     -> origin/master
-Current branch master is up to date.
-Wednesday, November 27, 2024 6:22:45 PM
-Pushing to github.com:patstha/mydotnet.git
-Enumerating objects: 73, done.
-Counting objects: 100% (73/73), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (37/37), done.
-Writing objects: 100% (37/37), 5.84 KiB | 2.92 MiB/s, done.
-Total 37 (delta 36), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (36/36), completed with 36 local objects.
-To github.com:patstha/mydotnet.git
-   ed402bd..57ec5cb  master -> master
-updating local tracking ref 'refs/remotes/origin/master'
-Wednesday, November 27, 2024 6:22:45 PM
-Wednesday, November 27, 2024 6:22:45 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.07s.
-Wednesday, November 27, 2024 6:22:46 PM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.4.8 building for production...
-✓ 5 modules transformed.
-docs/index.html                0.27 kB │ gzip: 0.22 kB
-docs/assets/index-D1OKu7AJ.js  8.63 kB │ gzip: 3.19 kB
-✓ built in 119ms
-Done in 1.15s.
-Wednesday, November 27, 2024 6:22:47 PM
-warning: in the working copy of 'docs/assets/index-D1OKu7AJ.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-Wednesday, November 27, 2024 6:22:47 PM
-On branch kus-2024-10-30-modules
-nothing to commit, working tree clean
-Wednesday, November 27, 2024 6:22:48 PM
-On branch kus-2024-10-30-modules
-nothing to commit, working tree clean
-Wednesday, November 27, 2024 6:22:48 PM
-From github.com:matchthree/matchthree.github.io
- * branch            master     -> FETCH_HEAD
-Current branch kus-2024-10-30-modules is up to date.
-Wednesday, November 27, 2024 6:22:48 PM
-Everything up-to-date
-Wednesday, November 27, 2024 6:22:49 PM
-Wednesday, November 27, 2024 6:22:49 PM
-Wednesday, November 27, 2024 6:22:49 PM
-On branch main
-nothing to commit, working tree clean
-Wednesday, November 27, 2024 6:22:49 PM
-Wednesday, November 27, 2024 6:22:49 PM
-Wednesday, November 27, 2024 6:22:52 PM
-Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
-Wednesday, November 27, 2024 6:22:52 PM
-Wednesday, November 27, 2024 6:22:52 PM
-yarn install v1.22.21
-[1/4] Resolving packages...
-success Already up-to-date.
-Done in 0.09s.
-Wednesday, November 27, 2024 6:22:52 PM
-yarn run v1.22.21
-$ tsc && vite build
-vite v5.4.11 building for production...
-✓ 5 modules transformed.
-docs/index.html                 0.53 kB │ gzip: 0.32 kB
-docs/assets/index-C7fM1CLc.css  4.60 kB │ gzip: 1.63 kB
-docs/assets/index-CG30pmQG.js   2.94 kB │ gzip: 1.31 kB
-✓ built in 4.31s
-Done in 5.93s.
-Wednesday, November 27, 2024 6:22:58 PM
-Transcript stopped, output file is C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt
-warning: in the working copy of 'docs/assets/index-C7fM1CLc.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/assets/index-CG30pmQG.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/hybridcache.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/l1-show.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/modernwinforms.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/myvtt.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/myvtt.en.vtt.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/nyt-podcasts-trump-cabinet-picks.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/15/tldr-global.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/.gitattributes', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/.gitignore', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/build.gradle.kts', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/gradle/wrapper/gradle-wrapper.properties', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/settings.gradle.kts', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/main/kotlin/com/github/kusl/november2024a/November2024aApplication.kt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/main/resources/application.properties', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/test/kotlin/com/github/kusl/november2024a/November2024aApplicationTests.kt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/2024/11/18/requirements.txt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/A3B318B569046159E1DD6616D2E646D9434350E6.asc', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/Nationalism, Explained [AXz0kbMKPu0].en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/favicon_io/about.txt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/3-blue-1-brown-llm-LPZh9BOjkQs.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/abc-news-empty-w4LOqOSi6Tk.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/animation-recapped-J1QiZ7KDXik.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/aoc-Eh7bFt7oUto.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/aoc-WoP9BJiItSI.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/asianometry-mm-wave-5g.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/bravos-ILJ41tmQAQ8.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/coffee-software-DSbuyscXX7I.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/continuous-delivery-_zUkNrUp0Ok.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/continuous-delivery-pair-programming-5TTsIkmtKUg.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/countries-explained-poland-d6LW1iLFXkc.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/dark-brandon-DDp_tb5bs-0.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/diabetes-PsQj2Hg1oFM.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/diabetes-PsQj2Hg1oFM.hi.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/diabetes-Yys5zeoDi2E.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/dotnet-9-new-jit-1bsTnaLchi4.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/dotnet-async-challenges-ef-core-7iuUh0BIAuE.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/dotnet-new-c-sharp-13-japXYFS9YPQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/dr-ben-miles-JCt2MhOzWVE.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/drama-league-37kU-zxhG18.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/enrico-7nnyv4yJGJc.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/escuela-XdI2e8QqzbQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/first-ring-wnfcFflmvLo.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/germany-_ywqDbHiMrs.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/hankschannel-nuclear-16203Tks_0I.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/l1-icydock-3KCaS7EK6Rc.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/l1show-EI5iZ4LNsyQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/last-week-tonight-medicare-for-all-UZtEBXLDssQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/mileage-mike-ring-road-DhZH0KbcwX4.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/millitary-show-M_yjnIFGQ70.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/mit-rto-4ec_yZCWOCY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/msnbc-EmvYGLySOVE.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/ndc-oA7xeRyxMSo.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-Dj05EvWQ8NY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-X_gotjGG4ug.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-daily-bernie-xvYvfOcEFXI.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-l7s8QizovG8.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/nytimes-ukraine-c_z8OoYWjQ0.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/otago-kotlin-multiplatform.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/real-life-lore-africa.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/road-guy-rob-K1TFOK4_07s.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/second-school-india-u2vzX_MgCI8.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/the-economist-kyiv-xn-AnTYs2H8.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/the-millitary-show-china-hellscape.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/tldr-global-Lj0J3ioOnIY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/tldr-news-eu-COEfdZVTFCQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/tldr-news-global-2024-11-16-a8NmPDUdzhU.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/tldr-news-global-hong-kong-kRmSBS1yqWo.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/trudeau-immigration-vOB7-dbYuCc.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/ufd-amd-BJjdGxRRh2E.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/versed-h_rsF8eVPqY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/vivienne-yang-FR6hhULZLfw.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/yt/william-spaniel-polling-hhaNiF5aCCY.en.vtt', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'docs/notes/ytotago-kotlin-multiplatform.en.vtt', LF will be replaced by CRLF the next time Git touches it
-Wednesday, November 27, 2024 6:23:21 PM
-On branch main
-Your branch is ahead of 'origin/main' by 3 commits.
-  (use "git push" to publish your local commits)
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        new file:   docs/notes/2024/11/27/dallas-norfolk-15-12-2024-non-stop-one-way.png
-        new file:   docs/notes/2024/11/27/norfolk-dallas-12-15-12-2024-non-stop-round-trip.png
-        new file:   docs/notes/2024/11/27/norfolk-dallas-12-15-12-2024.png
-        modified:   docs/notes/earth.jpeg
-        modified:   docs/notes/output.txt
-        modified:   docs/powershell.txt
-        modified:   public/notes/earth.jpeg
-        modified:   public/notes/output.txt
-        modified:   public/powershell.txt
-
-Wednesday, November 27, 2024 6:23:21 PM
-[main 2c100b92] build application
- 9 files changed, 2646 insertions(+), 11906 deletions(-)
- create mode 100644 docs/notes/2024/11/27/dallas-norfolk-15-12-2024-non-stop-one-way.png
- create mode 100644 docs/notes/2024/11/27/norfolk-dallas-12-15-12-2024-non-stop-round-trip.png
- create mode 100644 docs/notes/2024/11/27/norfolk-dallas-12-15-12-2024.png
-Wednesday, November 27, 2024 6:23:21 PM
-From github.com:fromnepal/fromnepal.github.io
- * branch              main       -> FETCH_HEAD
-Current branch main is up to date.
-Wednesday, November 27, 2024 6:23:22 PM
-Enumerating objects: 44, done.
-Counting objects: 100% (42/42), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (31/31), done.
-Writing objects: 100% (31/31), 11.55 MiB | 10.68 MiB/s, done.
-Total 31 (delta 21), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (21/21), completed with 9 local objects.
-To github.com:fromnepal/fromnepal.github.io.git
-   23d682f7..2c100b92  main -> main
-Wednesday, November 27, 2024 6:23:26 PM
-
-PS C:\Users\kushal\src\myhtml\fromnepal> cd "\\TP-Share\G\shared\backup\flex14\listen"; Get-Date; yt-dlp.exe -x --audio-format mp3 --add-metadata --sponsorblock-remove sponsor,intro,outro "https://youtu.be/d5E2AQKuCyU"; Get-Date;
-
-Thursday, November 28, 2024 7:01:01 AM
-[youtube] Extracting URL: https://youtu.be/d5E2AQKuCyU
-[youtube] d5E2AQKuCyU: Downloading webpage
-[youtube] d5E2AQKuCyU: Downloading ios player API JSON
-[youtube] d5E2AQKuCyU: Downloading mweb player API JSON
-[youtube] d5E2AQKuCyU: Downloading player b46bb280
-[youtube] d5E2AQKuCyU: Downloading m3u8 information
-[SponsorBlock] Fetching SponsorBlock segments
-[SponsorBlock] No matching segments were found in the SponsorBlock database
-[info] d5E2AQKuCyU: Downloading 1 format(s): 251
-[download] Destination: Marcus Aurelius - Meditations - (My Narration) [d5E2AQKuCyU].webm
-[download] 100% of  268.14MiB in 00:00:20 at 13.01MiB/s
-[ExtractAudio] Destination: Marcus Aurelius - Meditations - (My Narration) [d5E2AQKuCyU].mp3
-Deleting original file Marcus Aurelius - Meditations - (My Narration) [d5E2AQKuCyU].webm (pass -k to keep)
-[ModifyChapters] SponsorBlock information is unavailable
-[Metadata] Adding metadata to "Marcus Aurelius - Meditations - (My Narration) [d5E2AQKuCyU].mp3"
-Thursday, November 28, 2024 7:03:53 AM
-
-PS Microsoft.PowerShell.Core\FileSystem::\\TP-Share\G\shared\backup\flex14\listen>
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes>
