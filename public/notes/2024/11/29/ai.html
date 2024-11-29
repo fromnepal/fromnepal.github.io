@@ -50,3 +50,65 @@
     </script>
 </body>
 </html>
+
+<!-- take a look at this code 
+
+            const result = await session.prompt("Write me a poem");
+
+
+this context is here: 
+
+now instead of hard coding the prompt write me a poem, I want a textbox in the html and two buttons submit and reset. reset will clear the textbox. submit will send the prompt to session.prompt. These buttons should only appear if myAi is true. 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, ai</title>
+</head>
+<body>
+    <script type="module">
+        const myAi = checkAi();
+        if (myAi === false) {
+            alert("sorry, unable to use artificial intelligence at this time");
+        }
+        if (myAi) {
+            // Start by checking if it's possible to create a session based on the availability of the model, and the characteristics of the device.
+            const {available, defaultTemperature, defaultTopK, maxTopK } = await ai.languageModel.capabilities();
+
+            if (available !== "no") {
+            const session = await ai.languageModel.create();
+
+            // Prompt the model and wait for the whole result to come back.  
+            const result = await session.prompt("Write me a poem");
+            console.log(result);
+            }
+        }
+        async function checkAi() {
+            if (window === undefined || window === null) {
+                return false;
+            }
+            if (window.ai === undefined || window.ai === null) {
+                return false;
+            }
+            if (window.ai.languageModel === undefined || window.ai.languageModel === null) {
+                return false;
+            }
+            const myAiStatus = await window.ai.languageModel.capabilities();
+            console.info({ myAiStatus });
+            if (myAiStatus === undefined || myAiStatus === null) {
+                return false;
+            }
+            if (myAiStatus.available === undefined || myAiStatus.available === null) {
+                return false;
+            }
+            console.info({ x: myAiStatus.available.toLowerCase()});
+            if (myAiStatus.available.trim().toLowerCase() !== "readily") {
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html> -->
