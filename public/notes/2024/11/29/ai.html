@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello, ai</title>
+</head>
+<body>
+    <script type="module">
+        const myAi = checkAi();
+        if (myAi === false) {
+            alert("sorry, unable to use artificial intelligence at this time");
+        }
+        
+        async function checkAi() {
+            if (window === undefined || window === null) {
+                return false;
+            }
+            if (window.ai === undefined || window.ai === null) {
+                return false;
+            }
+            if (window.ai.languageModel === undefined || window.ai.languageModel === null) {
+                return false;
+            }
+            const myAiStatus = await window.ai.languageModel.capabilities();
+            console.info({ myAiStatus });
+            if (myAiStatus === undefined || myAiStatus === null) {
+                return false;
+            }
+            if (myAiStatus.available === undefined || myAiStatus.available === null) {
+                return false;
+            }
+            console.info({ x: myAiStatus.available.toLowerCase()});
+            if (myAiStatus.available.trim().toLowerCase() !== "readily") {
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
