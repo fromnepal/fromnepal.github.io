@@ -44,6 +44,7 @@
                     <button id="submitBtn">Submit</button>
                     <button id="resetBtn">Reset</button>
                 </div>
+                <div id="result"></div>
             `;
 
             document.getElementById('submitBtn').addEventListener('click', async () => {
@@ -54,11 +55,13 @@
                     const session = await ai.languageModel.create();
                     const result = await session.prompt(prompt);
                     console.log(result);
+                    document.getElementById('result').innerText = result;
                 }
             });
 
             document.getElementById('resetBtn').addEventListener('click', () => {
                 document.getElementById('promptInput').value = '';
+                document.getElementById('result').innerText = '';
             });
         }
     </script>
