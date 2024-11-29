@@ -1,1194 +1,445 @@
 PowerShell 7.4.6
-PS C:\Users\kushal>
-PS C:\Users\kushal> date; c:\src\omnibus.ps1; date;
+PS C:\Users\kushal> C:\Users\kushal\src\myhtml\fromnepal\public\omnibus.ps1
+Transcript started, output file is C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt
 
-Friday, November 29, 2024 8:24:30 AM
-Friday, November 29, 2024 8:24:30 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 31, done.
-Counting objects: 100% (31/31), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (16/16), done.
-Writing objects: 100% (16/16), 14.25 MiB | 10.12 MiB/s, done.
-Total 16 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   3361c166e91..ab8f43445b8  main -> main
-3.948878055
-Friday, November 29, 2024 8:28:27 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 13:28:27 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: f49127e72946b61046d63f2741c120cf
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
+Friday, November 29, 2024 8:25:07 AM
+     Removed 926 files, 454.2MiB total
+Friday, November 29, 2024 8:25:07 AM
+   Compiling windows_x86_64_msvc v0.52.6
+   Compiling proc-macro2 v1.0.89
+   Compiling unicode-ident v1.0.13
+   Compiling bytes v1.8.0
+   Compiling pin-project-lite v0.2.15
+   Compiling futures-core v0.3.31
+   Compiling itoa v1.0.11
+   Compiling autocfg v1.4.0
+   Compiling futures-sink v0.3.31
+   Compiling fnv v1.0.7
+   Compiling memchr v2.7.4
+   Compiling cfg-if v1.0.0
+   Compiling once_cell v1.20.2
+   Compiling futures-task v0.3.31
+   Compiling httparse v1.9.5
+   Compiling futures-io v0.3.31
+   Compiling hashbrown v0.15.0
+   Compiling pin-utils v0.1.0
+   Compiling equivalent v1.0.1
+   Compiling tinyvec_macros v0.1.1
+   Compiling windows_x86_64_msvc v0.48.5
+   Compiling atomic-waker v1.1.2
+   Compiling try-lock v0.2.5
+   Compiling native-tls v0.2.12
+   Compiling tracing-core v0.1.32
+   Compiling serde v1.0.213
+   Compiling tinyvec v1.8.0
+   Compiling want v0.3.1
+   Compiling futures-channel v0.3.31
+   Compiling byteorder v1.5.0
+   Compiling smallvec v1.13.2
+   Compiling percent-encoding v2.3.1
+   Compiling getrandom v0.2.15
+   Compiling http v1.1.0
+   Compiling form_urlencoded v1.2.1
+   Compiling serde_json v1.0.132
+   Compiling unicode-bidi v0.3.17
+   Compiling slab v0.4.9
+   Compiling windows-targets v0.52.6
+   Compiling ryu v1.0.18
+   Compiling tower-service v0.3.3
+   Compiling windows-targets v0.48.5
+   Compiling windows-sys v0.52.0
+   Compiling tracing v0.1.40
+   Compiling windows-sys v0.59.0
+   Compiling windows-result v0.2.0
+   Compiling indexmap v2.6.0
+   Compiling rand_core v0.6.4
+   Compiling thiserror v1.0.65
+   Compiling windows-strings v0.1.0
+   Compiling futures-util v0.3.31
+   Compiling rustls-pki-types v1.10.0
+   Compiling windows-sys v0.48.0
+   Compiling quote v1.0.37
+   Compiling sync_wrapper v1.0.1
+   Compiling encoding_rs v0.8.35
+   Compiling mime v0.3.17
+   Compiling unicode-normalization v0.1.24
+   Compiling windows-registry v0.2.0
+   Compiling syn v2.0.85
+   Compiling rustls-pemfile v2.2.0
+   Compiling http-body v1.0.1
+   Compiling ipnet v2.10.1
+   Compiling log v0.4.22
+   Compiling base64 v0.22.1
+   Compiling dotenv v0.15.0
+   Compiling idna v0.5.0
+   Compiling url v2.5.2
+   Compiling serde_derive v1.0.213
+   Compiling zerocopy-derive v0.7.35
+   Compiling thiserror-impl v1.0.65
+   Compiling mio v1.0.2
+   Compiling socket2 v0.5.7
+   Compiling home v0.5.9
+   Compiling etcetera v0.8.0
+   Compiling zerocopy v0.7.35
+   Compiling tokio v1.41.0
+   Compiling schannel v0.1.26
+   Compiling ppv-lite86 v0.2.20
+   Compiling http-body-util v0.1.2
+   Compiling rand_chacha v0.3.1
+   Compiling rand v0.8.5
+   Compiling serde_urlencoded v0.7.1
+   Compiling tokio-util v0.7.12
+   Compiling tokio-native-tls v0.3.1
+   Compiling h2 v0.4.6
+   Compiling hyper v1.5.0
+   Compiling hyper-util v0.1.9
+   Compiling hyper-tls v0.6.0
+   Compiling reqwest v0.12.8
+   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
+warning: struct `Graph` is never constructed
+ --> src\graph.rs:3:12
+  |
+3 | pub struct Graph {
+  |            ^^^^^
+  |
+  = note: `#[warn(dead_code)]` on by default
 
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.4079055
-Friday, November 29, 2024 8:28:28 AM
-Friday, November 29, 2024 8:28:28 AM
-Friday, November 29, 2024 8:28:32 AM
+warning: associated items `new`, `add_node`, `add_edge`, `bfs`, `dfs`, and `dfs_recursive` are never used
+  --> src\graph.rs:8:12
+   |
+7  | impl Graph {
+   | ---------- associated items in this implementation
+8  |     pub fn new() -> Self {
+   |            ^^^
+...
+14 |     pub fn add_node(&mut self, value: &str) {
+   |            ^^^^^^^^
+...
+18 |     pub fn add_edge(&mut self, from: &str, to: &str) {
+   |            ^^^^^^^^
+...
+24 |     pub fn bfs(&self, start: &str) -> Vec<String> {
+   |            ^^^
+...
+48 |     pub fn dfs(&self, start: &str) -> Vec<String> {
+   |            ^^^
+...
+55 |     fn dfs_recursive(&self, node: &str, visited: &mut HashMap<String, bool>, result: &mut Vec<String>) {
+   |        ^^^^^^^^^^^^^
+
+warning: `helloworld` (bin "helloworld") generated 2 warnings
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 16.59s
+Friday, November 29, 2024 8:25:24 AM
+   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.86s
+     Running unittests src/main.rs (target\debug\deps\helloworld-358f72777eb128ff.exe)
+
+running 24 tests
+test graph::tests::test_bfs ... ok
+test graph::tests::test_dfs ... ok
+test greatest_common_divisor::tests::test_large_composite_numbers ... ok
+test greatest_common_divisor::tests::test_large_numbers ... ok
+test greatest_common_divisor::tests::test_mixed_numbers ... ok
+test greatest_common_divisor::tests::test_prime_numbers ... ok
+test greatest_common_divisor::tests::test_gcd ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance_single ... ok
+test greatest_common_divisor::tests::test_large_prime_numbers ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance_multiple ... ok
+test greatest_common_divisor::tests::test_both_are_zero ... ok
+test greatest_common_divisor::tests::test_one_is_one ... ok
+test greatest_common_divisor::tests::test_one_is_zero ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance ... ok
+test greatest_common_divisor::tests::test_zero_input ... ok
+test greatest_common_divisor::tests::test_zero_input_3 ... ok
+test my_data_types::tests::test_not_a_number ... ok
+test my_math::tests::test_add ... ok
+test my_math::tests::test_add_multiply_ambiguous ... ok
+test my_math::tests::test_add_zero ... ok
+test my_math::tests::test_multiply ... ok
+test my_math::tests::test_multiply_zero ... ok
+test shadowing::tests::test_shadow ... ok
+test shadowing::tests::test_shadow_string_length ... ok
+
+test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+Friday, November 29, 2024 8:25:26 AM
+Friday, November 29, 2024 8:25:26 AM
 On branch master
-
-It took 50.74 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
+Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
-Friday, November 29, 2024 8:29:24 AM
+Friday, November 29, 2024 8:25:26 AM
 On branch master
+Your branch is up to date with 'origin/master'.
+
 nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 8:29:52 AM
+Friday, November 29, 2024 8:25:26 AM
+From github.com:kusl/hellorust20240711
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Already up to date.
+Friday, November 29, 2024 8:25:27 AM
+Pushing to github.com:kusl/hellorust20240711.git
+To github.com:kusl/hellorust20240711.git
+ = [up to date]      master -> master
+updating local tracking ref 'refs/remotes/origin/master'
 Everything up-to-date
-Friday, November 29, 2024 8:29:52 AM
-Friday, November 29, 2024 8:29:52 AM
-Friday, November 29, 2024 8:29:52 AM
-Friday, November 29, 2024 8:29:52 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 31, done.
-Counting objects: 100% (31/31), done.
+Friday, November 29, 2024 8:25:28 AM
+warning: in the working copy of 'docs/icon_cube.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_fork.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_sponsor.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir_active.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_wrench.svg', LF will be replaced by CRLF the next time Git touches it
+Friday, November 29, 2024 8:27:02 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/hellolib_BabysFirstDynamicProgrammingMethods.html
+        modified:   docs/hellolib_BubbleSort.html
+        modified:   docs/hellolib_CurrentWeather.html
+        modified:   docs/hellolib_DesignDynamicArray.html
+        modified:   docs/hellolib_DotnetNineGuid.html
+        modified:   docs/hellolib_Entity.html
+        modified:   docs/hellolib_FindClosestNumberToZero.html
+        modified:   docs/hellolib_Graph.html
+        modified:   docs/hellolib_Knapsack.html
+        modified:   docs/hellolib_KnapsackItem.html
+        modified:   docs/hellolib_ListNode.html
+        modified:   docs/hellolib_MergeSort.html
+        modified:   docs/hellolib_MergeSortedArray.html
+        modified:   docs/hellolib_MergeStringsAlternately.html
+        modified:   docs/hellolib_MinimumCoin.html
+        modified:   docs/hellolib_MyCleaner.html
+        modified:   docs/hellolib_MySearch.html
+        modified:   docs/hellolib_PascalTriangle.html
+        modified:   docs/hellolib_PasswordSettings.html
+        modified:   docs/hellolib_Person.html
+        modified:   docs/hellolib_PersonFactory.html
+        modified:   docs/hellolib_Revocation.html
+        modified:   docs/hellolib_RomanToInteger.html
+        modified:   docs/hellolib_SinglyLinkedList.html
+        modified:   docs/hellolib_SinglyLinkedListAddTwoNumbers.html
+        modified:   docs/hellolib_SinglyLinkedListNode.html
+        modified:   docs/hellolib_TwoSum.html
+        modified:   docs/hellolib_Weather.html
+        modified:   docs/hellolib_WeatherFetchException.html
+        modified:   docs/index.htm
+        modified:   docs/index.html
+        modified:   dotnet.txt
+        modified:   tests/coverage.cobertura.xml
+        modified:   tests/dotnet.txt
+
+Friday, November 29, 2024 8:27:02 AM
+[master abc32b9] build application
+ 34 files changed, 515 insertions(+), 482 deletions(-)
+Friday, November 29, 2024 8:27:02 AM
+From github.com:patstha/mydotnet
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Current branch master is up to date.
+Friday, November 29, 2024 8:27:03 AM
+Pushing to github.com:patstha/mydotnet.git
+Enumerating objects: 73, done.
+Counting objects: 100% (73/73), done.
 Delta compression using up to 16 threads
-Compressing objects: 100% (16/16), done.
-Writing objects: 100% (16/16), 14.43 MiB | 3.83 MiB/s, done.
-Total 16 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   ab8f43445b8..0b217f2bcda  main -> main
-3.983154845
-Friday, November 29, 2024 8:33:51 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 13:33:50 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: a3eab98eb253645022fb99103aba0cf1
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
-
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.3867508
-Friday, November 29, 2024 8:33:51 AM
-Friday, November 29, 2024 8:33:51 AM
-Friday, November 29, 2024 8:33:54 AM
-On branch master
-
-It took 2.70 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
+Compressing objects: 100% (37/37), done.
+Writing objects: 100% (37/37), 6.15 KiB | 2.05 MiB/s, done.
+Total 37 (delta 36), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (36/36), completed with 36 local objects.
+To github.com:patstha/mydotnet.git
+   2eee79e..abc32b9  master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Friday, November 29, 2024 8:27:04 AM
+Friday, November 29, 2024 8:27:04 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Friday, November 29, 2024 8:27:05 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 5 modules transformed.
+docs/index.html                0.27 kB │ gzip: 0.22 kB
+docs/assets/index-D1OKu7AJ.js  8.63 kB │ gzip: 3.19 kB
+✓ built in 118ms
+Done in 1.00s.
+Friday, November 29, 2024 8:27:06 AM
+warning: in the working copy of 'docs/assets/index-D1OKu7AJ.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, November 29, 2024 8:27:06 AM
+On branch kus-2024-10-30-modules
 nothing to commit, working tree clean
-Friday, November 29, 2024 8:33:58 AM
-On branch master
+Friday, November 29, 2024 8:27:06 AM
+On branch kus-2024-10-30-modules
 nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 8:34:08 AM
+Friday, November 29, 2024 8:27:06 AM
+From github.com:matchthree/matchthree.github.io
+ * branch            master     -> FETCH_HEAD
+Current branch kus-2024-10-30-modules is up to date.
+Friday, November 29, 2024 8:27:07 AM
 Everything up-to-date
-Friday, November 29, 2024 8:34:08 AM
-Friday, November 29, 2024 8:34:08 AM
-Friday, November 29, 2024 8:34:08 AM
-Friday, November 29, 2024 8:34:08 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 29, done.
-Counting objects: 100% (29/29), done.
+Friday, November 29, 2024 8:27:07 AM
+Friday, November 29, 2024 8:27:07 AM
+Friday, November 29, 2024 8:27:07 AM
+On branch main
+nothing to commit, working tree clean
+Friday, November 29, 2024 8:27:07 AM
+Friday, November 29, 2024 8:27:07 AM
+Friday, November 29, 2024 8:27:10 AM
+Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
+Friday, November 29, 2024 8:27:10 AM
+Friday, November 29, 2024 8:27:10 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.09s.
+Friday, November 29, 2024 8:27:10 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.11 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-C7fM1CLc.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-CG30pmQG.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 3.80s
+Done in 5.34s.
+Friday, November 29, 2024 8:27:15 AM
+Transcript stopped, output file is C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt
+warning: in the working copy of 'docs/assets/index-C7fM1CLc.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-CG30pmQG.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/hybridcache.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/l1-show.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/modernwinforms.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/myvtt.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/myvtt.en.vtt.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/nyt-podcasts-trump-cabinet-picks.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/tldr-global.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/.gitattributes', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/build.gradle.kts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/gradle/wrapper/gradle-wrapper.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/settings.gradle.kts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/main/kotlin/com/github/kusl/november2024a/November2024aApplication.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/main/resources/application.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/test/kotlin/com/github/kusl/november2024a/November2024aApplicationTests.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/requirements.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/A3B318B569046159E1DD6616D2E646D9434350E6.asc', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/Nationalism, Explained [AXz0kbMKPu0].en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/favicon_io/about.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/3-blue-1-brown-llm-LPZh9BOjkQs.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/abc-news-empty-w4LOqOSi6Tk.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/animation-recapped-J1QiZ7KDXik.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/aoc-Eh7bFt7oUto.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/aoc-WoP9BJiItSI.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/asianometry-mm-wave-5g.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/bravos-ILJ41tmQAQ8.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/coffee-software-DSbuyscXX7I.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/continuous-delivery-_zUkNrUp0Ok.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/continuous-delivery-pair-programming-5TTsIkmtKUg.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/countries-explained-poland-d6LW1iLFXkc.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/dark-brandon-DDp_tb5bs-0.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/diabetes-PsQj2Hg1oFM.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/diabetes-PsQj2Hg1oFM.hi.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/diabetes-Yys5zeoDi2E.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/dotnet-9-new-jit-1bsTnaLchi4.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/dotnet-async-challenges-ef-core-7iuUh0BIAuE.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/dotnet-new-c-sharp-13-japXYFS9YPQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/dr-ben-miles-JCt2MhOzWVE.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/drama-league-37kU-zxhG18.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/enrico-7nnyv4yJGJc.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/escuela-XdI2e8QqzbQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/first-ring-wnfcFflmvLo.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/germany-_ywqDbHiMrs.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/hankschannel-nuclear-16203Tks_0I.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/l1-icydock-3KCaS7EK6Rc.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/l1show-EI5iZ4LNsyQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/last-week-tonight-medicare-for-all-UZtEBXLDssQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/mileage-mike-ring-road-DhZH0KbcwX4.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/millitary-show-M_yjnIFGQ70.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/mit-rto-4ec_yZCWOCY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/msnbc-EmvYGLySOVE.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/ndc-oA7xeRyxMSo.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-Dj05EvWQ8NY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-X_gotjGG4ug.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-daily-bernie-xvYvfOcEFXI.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-l7s8QizovG8.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-ukraine-c_z8OoYWjQ0.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/otago-kotlin-multiplatform.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/real-life-lore-africa.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/road-guy-rob-K1TFOK4_07s.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/second-school-india-u2vzX_MgCI8.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/the-economist-kyiv-xn-AnTYs2H8.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/the-millitary-show-china-hellscape.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/tldr-global-Lj0J3ioOnIY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/tldr-news-eu-COEfdZVTFCQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/tldr-news-global-2024-11-16-a8NmPDUdzhU.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/tldr-news-global-hong-kong-kRmSBS1yqWo.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/trudeau-immigration-vOB7-dbYuCc.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/ufd-amd-BJjdGxRRh2E.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/versed-h_rsF8eVPqY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/vivienne-yang-FR6hhULZLfw.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/william-spaniel-polling-hhaNiF5aCCY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/ytotago-kotlin-multiplatform.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/29/about-gpu-2024-11-29T13-20-09-716Z.txt', LF will be replaced by CRLF the next time Git touches it
+Friday, November 29, 2024 8:27:36 AM
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   docs/notes/2024/11/29/about-gpu-2024-11-29T13-20-09-716Z.txt
+        new file:   docs/notes/2024/11/29/chrome-canary-ai-language-model-create.png
+        new file:   docs/notes/2024/11/29/chrome-canary-available-no.png
+        new file:   docs/notes/2024/11/29/chrome-canary-full-desktop-free-space.png
+        new file:   docs/notes/2024/11/29/chrome-canary-full-desktop.png
+        new file:   docs/notes/2024/11/29/chrome-canary-readily.png
+        new file:   docs/notes/2024/11/29/chrome-canary-task-manager-network.png
+        modified:   docs/notes/earth.jpeg
+        modified:   docs/notes/output.txt
+        modified:   docs/powershell.txt
+        modified:   public/notes/earth.jpeg
+        modified:   public/notes/output.txt
+
+Friday, November 29, 2024 8:27:37 AM
+[main edde9176] build application
+ 12 files changed, 5991 insertions(+), 5008 deletions(-)
+ create mode 100644 docs/notes/2024/11/29/about-gpu-2024-11-29T13-20-09-716Z.txt
+ create mode 100644 docs/notes/2024/11/29/chrome-canary-ai-language-model-create.png
+ create mode 100644 docs/notes/2024/11/29/chrome-canary-available-no.png
+ create mode 100644 docs/notes/2024/11/29/chrome-canary-full-desktop-free-space.png
+ create mode 100644 docs/notes/2024/11/29/chrome-canary-full-desktop.png
+ create mode 100644 docs/notes/2024/11/29/chrome-canary-readily.png
+ create mode 100644 docs/notes/2024/11/29/chrome-canary-task-manager-network.png
+Friday, November 29, 2024 8:27:37 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch              main       -> FETCH_HEAD
+Current branch main is up to date.
+Friday, November 29, 2024 8:27:39 AM
+Enumerating objects: 45, done.
+Counting objects: 100% (45/45), done.
 Delta compression using up to 16 threads
-Compressing objects: 100% (15/15), done.
-Writing objects: 100% (15/15), 2.34 KiB | 2.34 MiB/s, done.
-Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   0b217f2bcda..e28c6bfd5e7  main -> main
-3.90184929833333
-Friday, November 29, 2024 8:38:03 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 13:38:02 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: 560c45c883d1817d8e4265117902750b
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
+Compressing objects: 100% (35/35), done.
+Writing objects: 100% (35/35), 18.96 MiB | 6.86 MiB/s, done.
+Total 35 (delta 19), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (19/19), completed with 8 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   7207c3af..edde9176  main -> main
+Friday, November 29, 2024 8:27:44 AM
 
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.3912823
-Friday, November 29, 2024 8:38:03 AM
-Friday, November 29, 2024 8:38:03 AM
-Friday, November 29, 2024 8:38:06 AM
-On branch master
-
-It took 2.72 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
-nothing to commit, working tree clean
-Friday, November 29, 2024 8:38:10 AM
-On branch master
-nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 8:38:20 AM
-Everything up-to-date
-Friday, November 29, 2024 8:38:20 AM
-Friday, November 29, 2024 8:38:20 AM
-Friday, November 29, 2024 8:38:20 AM
-Friday, November 29, 2024 8:38:20 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 31, done.
-Counting objects: 100% (31/31), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (16/16), done.
-Writing objects: 100% (16/16), 14.59 MiB | 8.47 MiB/s, done.
-Total 16 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   e28c6bfd5e7..133817faef5  main -> main
-3.94322895666667
-Friday, November 29, 2024 8:42:17 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 13:42:16 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: 62da936e298145546f4326ad34e75c89
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
-
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.3665285
-Friday, November 29, 2024 8:42:17 AM
-Friday, November 29, 2024 8:42:17 AM
-Friday, November 29, 2024 8:42:20 AM
-On branch master
-
-It took 2.69 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
-nothing to commit, working tree clean
-Friday, November 29, 2024 8:42:24 AM
-On branch master
-nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 8:42:35 AM
-Everything up-to-date
-Friday, November 29, 2024 8:42:36 AM
-Friday, November 29, 2024 8:42:36 AM
-Friday, November 29, 2024 8:42:36 AM
-Friday, November 29, 2024 8:42:36 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 29, done.
-Counting objects: 100% (29/29), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (15/15), done.
-Writing objects: 100% (15/15), 2.44 KiB | 2.44 MiB/s, done.
-Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   133817faef5..1396a952f49  main -> main
-3.90066221
-Friday, November 29, 2024 8:46:30 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 13:46:29 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: cf0ea7fd841489ff2f30b8c1349d95be
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
-
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.3531752
-Friday, November 29, 2024 8:46:30 AM
-Friday, November 29, 2024 8:46:30 AM
-Friday, November 29, 2024 8:46:33 AM
-On branch master
-
-It took 2.70 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
-nothing to commit, working tree clean
-Friday, November 29, 2024 8:46:37 AM
-On branch master
-nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 8:46:46 AM
-Everything up-to-date
-Friday, November 29, 2024 8:46:46 AM
-Friday, November 29, 2024 8:46:46 AM
-Friday, November 29, 2024 8:46:46 AM
-Friday, November 29, 2024 8:46:46 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 29, done.
-Counting objects: 100% (29/29), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (15/15), done.
-Writing objects: 100% (15/15), 2.37 KiB | 2.37 MiB/s, done.
-Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   1396a952f49..18c7b317247  main -> main
-3.90059553666667
-Friday, November 29, 2024 8:50:40 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 13:50:39 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: 38c7edcbb71f846973d4c36e92f0e968
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
-
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.3918328
-Friday, November 29, 2024 8:50:40 AM
-Friday, November 29, 2024 8:50:40 AM
-Friday, November 29, 2024 8:50:43 AM
-On branch master
-
-It took 2.69 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
-nothing to commit, working tree clean
-Friday, November 29, 2024 8:50:47 AM
-On branch master
-nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 8:50:57 AM
-Everything up-to-date
-Friday, November 29, 2024 8:50:57 AM
-Friday, November 29, 2024 8:50:57 AM
-Friday, November 29, 2024 8:50:57 AM
-Friday, November 29, 2024 8:50:57 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 31, done.
-Counting objects: 100% (31/31), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (16/16), done.
-Writing objects: 100% (16/16), 14.76 MiB | 9.03 MiB/s, done.
-Total 16 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   18c7b317247..63313195585  main -> main
-3.96808441333333
-Friday, November 29, 2024 8:54:55 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 13:54:55 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: 8c8c009ac0fcc328d84ef6243f44e678
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
-
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.3810079
-Friday, November 29, 2024 8:54:56 AM
-Friday, November 29, 2024 8:54:56 AM
-Friday, November 29, 2024 8:54:59 AM
-On branch master
-
-It took 2.56 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
-nothing to commit, working tree clean
-Friday, November 29, 2024 8:55:03 AM
-On branch master
-nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 8:55:13 AM
-Everything up-to-date
-Friday, November 29, 2024 8:55:13 AM
-Friday, November 29, 2024 8:55:13 AM
-Friday, November 29, 2024 8:55:13 AM
-Friday, November 29, 2024 8:55:13 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 29, done.
-Counting objects: 100% (29/29), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (15/15), done.
-Writing objects: 100% (15/15), 2.43 KiB | 2.43 MiB/s, done.
-Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   63313195585..8c8b399b3e6  main -> main
-3.86668363333333
-Friday, November 29, 2024 8:59:05 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 13:59:04 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: 15f4c9705d5a1bc1234dc0a2aadc47b1
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
-
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.41331
-Friday, November 29, 2024 8:59:05 AM
-Friday, November 29, 2024 8:59:05 AM
-Friday, November 29, 2024 8:59:08 AM
-On branch master
-
-It took 2.46 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
-nothing to commit, working tree clean
-Friday, November 29, 2024 8:59:12 AM
-On branch master
-nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 8:59:21 AM
-Everything up-to-date
-Friday, November 29, 2024 8:59:21 AM
-Friday, November 29, 2024 8:59:21 AM
-Friday, November 29, 2024 8:59:21 AM
-Friday, November 29, 2024 8:59:21 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 31, done.
-Counting objects: 100% (31/31), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (16/16), done.
-Writing objects: 100% (16/16), 14.94 MiB | 7.27 MiB/s, done.
-Total 16 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   8c8b399b3e6..1456b23ff4c  main -> main
-3.93478487166667
-Friday, November 29, 2024 9:03:17 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 14:03:17 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: 3054436162e7a394bbdb984670deed91
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
-
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.366621
-Friday, November 29, 2024 9:03:17 AM
-Friday, November 29, 2024 9:03:17 AM
-Friday, November 29, 2024 9:03:21 AM
-On branch master
-
-It took 2.43 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
-nothing to commit, working tree clean
-Friday, November 29, 2024 9:03:24 AM
-On branch master
-nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 9:03:34 AM
-Everything up-to-date
-Friday, November 29, 2024 9:03:34 AM
-Friday, November 29, 2024 9:03:34 AM
-Friday, November 29, 2024 9:03:34 AM
-Friday, November 29, 2024 9:03:34 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 29, done.
-Counting objects: 100% (29/29), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (15/15), done.
-Writing objects: 100% (15/15), 2.47 KiB | 2.47 MiB/s, done.
-Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   1456b23ff4c..771e42a7238  main -> main
-3.87231294166667
-Friday, November 29, 2024 9:07:27 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 14:07:26 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: 74051facca8df9b984988ea3a8d8718b
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
-
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.3835152
-Friday, November 29, 2024 9:07:27 AM
-Friday, November 29, 2024 9:07:27 AM
-Friday, November 29, 2024 9:07:30 AM
-On branch master
-
-It took 2.45 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
-nothing to commit, working tree clean
-Friday, November 29, 2024 9:07:34 AM
-On branch master
-nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 9:07:44 AM
-Everything up-to-date
-Friday, November 29, 2024 9:07:44 AM
-Friday, November 29, 2024 9:07:44 AM
-Friday, November 29, 2024 9:07:44 AM
-Friday, November 29, 2024 9:07:44 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 31, done.
-Counting objects: 100% (31/31), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (16/16), done.
-Writing objects: 100% (16/16), 15.12 MiB | 7.58 MiB/s, done.
-Total 16 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   771e42a7238..2c24dd0ab0d  main -> main
-3.92907443833333
-Friday, November 29, 2024 9:11:39 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 14:11:39 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: 09951e35c038b6c9ef7d884208ff639f
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
-
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.368478
-Friday, November 29, 2024 9:11:40 AM
-Friday, November 29, 2024 9:11:40 AM
-Friday, November 29, 2024 9:11:43 AM
-On branch master
-
-It took 2.43 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
-nothing to commit, working tree clean
-Friday, November 29, 2024 9:11:47 AM
-On branch master
-nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 9:11:56 AM
-Everything up-to-date
-Friday, November 29, 2024 9:11:57 AM
-Friday, November 29, 2024 9:11:57 AM
-Friday, November 29, 2024 9:11:57 AM
-Friday, November 29, 2024 9:11:57 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 29, done.
-Counting objects: 100% (29/29), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (15/15), done.
-Writing objects: 100% (15/15), 2.46 KiB | 2.46 MiB/s, done.
-Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   2c24dd0ab0d..67cd82b8cad  main -> main
-3.87253702666667
-Friday, November 29, 2024 9:15:49 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 14:15:49 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: 484bcb77d720819d76024747818918e1
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
-
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.3753089
-Friday, November 29, 2024 9:15:49 AM
-Friday, November 29, 2024 9:15:49 AM
-Friday, November 29, 2024 9:15:52 AM
-On branch master
-
-It took 2.44 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
-nothing to commit, working tree clean
-Friday, November 29, 2024 9:15:56 AM
-On branch master
-nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 9:16:07 AM
-Everything up-to-date
-Friday, November 29, 2024 9:16:07 AM
-Friday, November 29, 2024 9:16:07 AM
-Friday, November 29, 2024 9:16:07 AM
-Friday, November 29, 2024 9:16:07 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 29, done.
-Counting objects: 100% (29/29), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (15/15), done.
-Writing objects: 100% (15/15), 2.36 KiB | 2.36 MiB/s, done.
-Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   67cd82b8cad..8d0b5de8705  main -> main
-3.87304287333333
-Friday, November 29, 2024 9:20:00 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 14:19:59 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: ab1a8ae64923f4914e76b704775b5763
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
-
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.3748701
-Friday, November 29, 2024 9:20:00 AM
-Friday, November 29, 2024 9:20:00 AM
-Friday, November 29, 2024 9:20:03 AM
-On branch master
-
-It took 2.43 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
-nothing to commit, working tree clean
-Friday, November 29, 2024 9:20:07 AM
-On branch master
-nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 9:20:17 AM
-Everything up-to-date
-Friday, November 29, 2024 9:20:17 AM
-Friday, November 29, 2024 9:20:17 AM
-Friday, November 29, 2024 9:20:17 AM
-Friday, November 29, 2024 9:20:17 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 31, done.
-Counting objects: 100% (31/31), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (16/16), done.
-Writing objects: 100% (16/16), 15.33 MiB | 7.85 MiB/s, done.
-Total 16 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   8d0b5de8705..18b23addeeb  main -> main
-3.934789715
-Friday, November 29, 2024 9:24:13 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 14:24:13 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: 1ca935ed52fffa9f1c9705a6da4d134d
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
-
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.3953017
-Friday, November 29, 2024 9:24:13 AM
-Friday, November 29, 2024 9:24:13 AM
-Friday, November 29, 2024 9:24:17 AM
-On branch master
-
-It took 2.42 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
-nothing to commit, working tree clean
-Friday, November 29, 2024 9:24:20 AM
-On branch master
-nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 9:24:32 AM
-Everything up-to-date
-Friday, November 29, 2024 9:24:32 AM
-Friday, November 29, 2024 9:24:32 AM
-Friday, November 29, 2024 9:24:32 AM
-Friday, November 29, 2024 9:24:32 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 29, done.
-Counting objects: 100% (29/29), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (15/15), done.
-Writing objects: 100% (15/15), 2.36 KiB | 2.36 MiB/s, done.
-Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   18b23addeeb..318da5c8a95  main -> main
-3.88110923666667
-Friday, November 29, 2024 9:28:25 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 14:28:24 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: dd715694284e30e3fe5e84959816b36a
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
-
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.398518
-Friday, November 29, 2024 9:28:25 AM
-Friday, November 29, 2024 9:28:25 AM
-Friday, November 29, 2024 9:28:28 AM
-On branch master
-
-It took 2.43 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
-nothing to commit, working tree clean
-Friday, November 29, 2024 9:28:32 AM
-On branch master
-nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 9:28:43 AM
-Everything up-to-date
-Friday, November 29, 2024 9:28:43 AM
-Friday, November 29, 2024 9:28:43 AM
-Friday, November 29, 2024 9:28:43 AM
-Friday, November 29, 2024 9:28:43 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 31, done.
-Counting objects: 100% (31/31), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (16/16), done.
-Writing objects: 100% (16/16), 15.57 MiB | 6.61 MiB/s, done.
-Total 16 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   318da5c8a95..0c0b5bf8b3d  main -> main
-3.961239025
-Friday, November 29, 2024 9:32:41 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 14:32:40 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: d569b19315fa86f6d43b6e394b535dce
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
-
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.3673784
-Friday, November 29, 2024 9:32:41 AM
-Friday, November 29, 2024 9:32:41 AM
-Friday, November 29, 2024 9:32:44 AM
-On branch master
-
-It took 2.42 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
-nothing to commit, working tree clean
-Friday, November 29, 2024 9:32:48 AM
-On branch master
-nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 9:32:59 AM
-Everything up-to-date
-Friday, November 29, 2024 9:33:00 AM
-Friday, November 29, 2024 9:33:00 AM
-Friday, November 29, 2024 9:33:00 AM
-Friday, November 29, 2024 9:33:00 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 29, done.
-Counting objects: 100% (29/29), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (15/15), done.
-Writing objects: 100% (15/15), 2.42 KiB | 2.42 MiB/s, done.
-Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   0c0b5bf8b3d..6b0b5bb6ca2  main -> main
-3.92072411666667
-Friday, November 29, 2024 9:36:55 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 14:36:55 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: 6dbcbf00b277b7447d3f30ef7b9734cd
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
-
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.3849252
-Friday, November 29, 2024 9:36:56 AM
-Friday, November 29, 2024 9:36:56 AM
-Friday, November 29, 2024 9:36:59 AM
-On branch master
-
-It took 2.53 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
-nothing to commit, working tree clean
-Friday, November 29, 2024 9:37:03 AM
-On branch master
-nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 9:37:13 AM
-Everything up-to-date
-Friday, November 29, 2024 9:37:13 AM
-Friday, November 29, 2024 9:37:13 AM
-Friday, November 29, 2024 9:37:13 AM
-Friday, November 29, 2024 9:37:13 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 31, done.
-Counting objects: 100% (31/31), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (16/16), done.
-Writing objects: 100% (16/16), 15.82 MiB | 5.28 MiB/s, done.
-Total 16 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   6b0b5bb6ca2..e8136df3fe8  main -> main
-3.975101315
-Friday, November 29, 2024 9:41:11 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 14:41:11 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: 10ef148c80d517da5c28f02803e5e443
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
-
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.3880718
-Friday, November 29, 2024 9:41:12 AM
-Friday, November 29, 2024 9:41:12 AM
-Friday, November 29, 2024 9:41:16 AM
-On branch master
-
-It took 2.51 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
-nothing to commit, working tree clean
-Friday, November 29, 2024 9:41:20 AM
-On branch master
-nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 9:41:29 AM
-Everything up-to-date
-Friday, November 29, 2024 9:41:29 AM
-Friday, November 29, 2024 9:41:29 AM
-Friday, November 29, 2024 9:41:29 AM
-Friday, November 29, 2024 9:41:29 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
-comodo1: 8.26.56.26
-comodo2: 8.20.247.20
-Enumerating objects: 29, done.
-Counting objects: 100% (29/29), done.
-Delta compression using up to 16 threads
-Compressing objects: 100% (15/15), done.
-Writing objects: 100% (15/15), 2.44 KiB | 2.44 MiB/s, done.
-Total 15 (delta 13), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
-To github.com:kusl/ping5800x2023.git
-   e8136df3fe8..013de163f1a  main -> main
-3.92977559666667
-Friday, November 29, 2024 9:45:25 AM
-HTTP/1.1 200 OK
-Date: Fri, 29 Nov 2024 14:45:24 GMT
-Connection: keep-alive
-Access-Control-Allow-Origin: https://scjtjchderaiebobcpvp.hasura.eu-central-1.nhost.run
-Access-Control-Allow-Credentials: true
-Access-Control-Allow-Methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
-Access-Control-Expose-Headers: X-Hasura-Query-Cache-Key,X-Hasura-Query-Family-Cache-Key,Warning
-X-Request-ID: 8f698c07fc044a4f5e14f69293e544cb
-Content-Type: application/json; charset=utf-8
-Content-Length: 89
-
-{"person":[{"id":"716fefdd-967b-41ef-b4c5-529d5549cc53","legal_name":"abraham lincoln"}]}
-0.3736919
-Friday, November 29, 2024 9:45:25 AM
-Friday, November 29, 2024 9:45:25 AM
-Friday, November 29, 2024 9:45:28 AM
-On branch master
-
-It took 2.59 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
-nothing to commit, working tree clean
-Friday, November 29, 2024 9:45:32 AM
-On branch master
-nothing to commit, working tree clean
-* remote mine
-  Fetch URL: \\tp-share\G\shared\git\mymail
-  Push  URL: \\tp-share\G\shared\git\mymail
-  HEAD branch: master
-  Remote branch:
-    master tracked
-  Local ref configured for 'git push':
-    master pushes to master (up to date)
-Friday, November 29, 2024 9:45:48 AM
-Everything up-to-date
-Friday, November 29, 2024 9:45:48 AM
-Friday, November 29, 2024 9:45:48 AM
-Friday, November 29, 2024 9:45:48 AM
-Friday, November 29, 2024 9:45:48 AM
-home: 127.0.0.1
-tplinkverizon: 192.168.0.1
-cloudflare1: 1.1.1.1
-cloudflare2: 1.0.0.1
-google1: 8.8.8.8
-google2: 8.8.4.4
-quad91: 9.9.9.9
-quad92: 149.112.112.112
-opendns1: 208.67.222.222
-opendns2: 208.67.220.220
+PS C:\Users\kushal\src\myhtml\fromnepal> C:\Users\kushal\src\myhtml\fromnepal\public\omnibus.ps1
