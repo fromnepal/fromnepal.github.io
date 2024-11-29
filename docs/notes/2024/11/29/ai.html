@@ -3,26 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello, ai</title>
-</head>
-<body>
-    <script type="module">
-        const myAi = checkAi();
-        if (myAi === false) {
-            alert("sorry, unable to use artificial intelligence at this time");
+    <title>Hello, AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-        if (myAi) {
-            // Start by checking if it's possible to create a session based on the availability of the model, and the characteristics of the device.
-            const {available, defaultTemperature, defaultTopK, maxTopK } = await ai.languageModel.capabilities();
-
-            if (available !== "no") {
-            const session = await ai.languageModel.create();
-
-            // Prompt the model and wait for the whole result to come back.  
-            const result = await session.prompt("Write me a poem");
-            console.log(result);
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #submitBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #resetBtn {
+            background-color: #f44336;
+            color: white;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            border-radius: 4px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            button:last-child {
+                margin-right: 0;
             }
         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <textarea id="promptInput" placeholder="Enter your prompt here"></textarea>
+        <button id="submitBtn">Submit</button>
+        <button id="resetBtn">Reset</button>
+        <div id="result"></div>
+    </div>
+    <script type="module">
         async function checkAi() {
             if (window === undefined || window === null) {
                 return false;
@@ -46,6 +98,30 @@
                 return false;
             }
             return true;
+        }
+
+        const myAi = await checkAi();
+        if (myAi === false) {
+            alert("Sorry, unable to use artificial intelligence at this time");
+        }
+
+        if (myAi) {
+            document.getElementById('submitBtn').addEventListener('click', async () => {
+                const prompt = document.getElementById('promptInput').value;
+                const { available, defaultTemperature, defaultTopK, maxTopK } = await ai.languageModel.capabilities();
+
+                if (available !== "no") {
+                    const session = await ai.languageModel.create();
+                    const result = await session.prompt(prompt);
+                    console.log(result);
+                    document.getElementById('result').innerText = result;
+                }
+            });
+
+            document.getElementById('resetBtn').addEventListener('click', () => {
+                document.getElementById('promptInput').value = '';
+                document.getElementById('result').innerText = '';
+            });
         }
     </script>
 </body>
