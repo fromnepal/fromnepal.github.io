@@ -5001,3 +5001,1024 @@ Conversion complete!
 Thursday, November 28, 2024 8:22:53 PM
 
 PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> C:\Users\kushal\src\myhtml\fromnepal\public\omnibus.ps1
+Transcript started, output file is C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt
+
+Friday, November 29, 2024 7:36:03 AM
+     Removed 926 files, 454.2MiB total
+Friday, November 29, 2024 7:36:04 AM
+   Compiling windows_x86_64_msvc v0.52.6
+   Compiling proc-macro2 v1.0.89
+   Compiling unicode-ident v1.0.13
+   Compiling bytes v1.8.0
+   Compiling pin-project-lite v0.2.15
+   Compiling itoa v1.0.11
+   Compiling futures-core v0.3.31
+   Compiling autocfg v1.4.0
+   Compiling futures-sink v0.3.31
+   Compiling fnv v1.0.7
+   Compiling memchr v2.7.4
+   Compiling once_cell v1.20.2
+   Compiling cfg-if v1.0.0
+   Compiling futures-io v0.3.31
+   Compiling httparse v1.9.5
+   Compiling pin-utils v0.1.0
+   Compiling futures-task v0.3.31
+   Compiling hashbrown v0.15.0
+   Compiling equivalent v1.0.1
+   Compiling native-tls v0.2.12
+   Compiling serde v1.0.213
+   Compiling tinyvec_macros v0.1.1
+   Compiling try-lock v0.2.5
+   Compiling windows_x86_64_msvc v0.48.5
+   Compiling tracing-core v0.1.32
+   Compiling atomic-waker v1.1.2
+   Compiling want v0.3.1
+   Compiling tinyvec v1.8.0
+   Compiling futures-channel v0.3.31
+   Compiling smallvec v1.13.2
+   Compiling percent-encoding v2.3.1
+   Compiling byteorder v1.5.0
+   Compiling form_urlencoded v1.2.1
+   Compiling http v1.1.0
+   Compiling getrandom v0.2.15
+   Compiling tower-service v0.3.3
+   Compiling slab v0.4.9
+   Compiling unicode-bidi v0.3.17
+   Compiling serde_json v1.0.132
+   Compiling windows-targets v0.52.6
+   Compiling ryu v1.0.18
+   Compiling rand_core v0.6.4
+   Compiling windows-sys v0.52.0
+   Compiling tracing v0.1.40
+   Compiling windows-sys v0.59.0
+   Compiling indexmap v2.6.0
+   Compiling windows-result v0.2.0
+   Compiling windows-targets v0.48.5
+   Compiling rustls-pki-types v1.10.0
+   Compiling thiserror v1.0.65
+   Compiling futures-util v0.3.31
+   Compiling windows-strings v0.1.0
+   Compiling windows-sys v0.48.0
+   Compiling quote v1.0.37
+   Compiling unicode-normalization v0.1.24
+   Compiling sync_wrapper v1.0.1
+   Compiling rustls-pemfile v2.2.0
+   Compiling windows-registry v0.2.0
+   Compiling encoding_rs v0.8.35
+   Compiling syn v2.0.85
+   Compiling http-body v1.0.1
+   Compiling base64 v0.22.1
+   Compiling ipnet v2.10.1
+   Compiling log v0.4.22
+   Compiling mime v0.3.17
+   Compiling dotenv v0.15.0
+   Compiling idna v0.5.0
+   Compiling url v2.5.2
+   Compiling socket2 v0.5.7
+   Compiling mio v1.0.2
+   Compiling home v0.5.9
+   Compiling serde_derive v1.0.213
+   Compiling zerocopy-derive v0.7.35
+   Compiling thiserror-impl v1.0.65
+   Compiling etcetera v0.8.0
+   Compiling zerocopy v0.7.35
+   Compiling tokio v1.41.0
+   Compiling schannel v0.1.26
+   Compiling ppv-lite86 v0.2.20
+   Compiling http-body-util v0.1.2
+   Compiling rand_chacha v0.3.1
+   Compiling rand v0.8.5
+   Compiling serde_urlencoded v0.7.1
+   Compiling tokio-util v0.7.12
+   Compiling tokio-native-tls v0.3.1
+   Compiling h2 v0.4.6
+   Compiling hyper v1.5.0
+   Compiling hyper-util v0.1.9
+   Compiling hyper-tls v0.6.0
+   Compiling reqwest v0.12.8
+   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
+warning: struct `Graph` is never constructed
+ --> src\graph.rs:3:12
+  |
+3 | pub struct Graph {
+  |            ^^^^^
+  |
+  = note: `#[warn(dead_code)]` on by default
+
+warning: associated items `new`, `add_node`, `add_edge`, `bfs`, `dfs`, and `dfs_recursive` are never used
+  --> src\graph.rs:8:12
+   |
+7  | impl Graph {
+   | ---------- associated items in this implementation
+8  |     pub fn new() -> Self {
+   |            ^^^
+...
+14 |     pub fn add_node(&mut self, value: &str) {
+   |            ^^^^^^^^
+...
+18 |     pub fn add_edge(&mut self, from: &str, to: &str) {
+   |            ^^^^^^^^
+...
+24 |     pub fn bfs(&self, start: &str) -> Vec<String> {
+   |            ^^^
+...
+48 |     pub fn dfs(&self, start: &str) -> Vec<String> {
+   |            ^^^
+...
+55 |     fn dfs_recursive(&self, node: &str, visited: &mut HashMap<String, bool>, result: &mut Vec<String>) {
+   |        ^^^^^^^^^^^^^
+
+warning: `helloworld` (bin "helloworld") generated 2 warnings
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 17.23s
+Friday, November 29, 2024 7:36:21 AM
+   Compiling helloworld v0.1.1 (C:\Users\kushal\RustroverProjects\helloworld)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.73s
+     Running unittests src/main.rs (target\debug\deps\helloworld-358f72777eb128ff.exe)
+
+running 24 tests
+test greatest_common_divisor::tests::test_both_are_zero ... ok
+test graph::tests::test_dfs ... ok
+test graph::tests::test_bfs ... ok
+test greatest_common_divisor::tests::test_gcd ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance_single ... ok
+test greatest_common_divisor::tests::test_mixed_numbers ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance ... ok
+test greatest_common_divisor::tests::test_large_composite_numbers ... ok
+test greatest_common_divisor::tests::test_large_prime_numbers ... ok
+test greatest_common_divisor::tests::test_large_numbers_performance_multiple ... ok
+test greatest_common_divisor::tests::test_one_is_one ... ok
+test greatest_common_divisor::tests::test_one_is_zero ... ok
+test greatest_common_divisor::tests::test_zero_input ... ok
+test greatest_common_divisor::tests::test_zero_input_3 ... ok
+test greatest_common_divisor::tests::test_large_numbers ... ok
+test my_data_types::tests::test_not_a_number ... ok
+test greatest_common_divisor::tests::test_prime_numbers ... ok
+test my_math::tests::test_add ... ok
+test my_math::tests::test_add_multiply_ambiguous ... ok
+test my_math::tests::test_add_zero ... ok
+test my_math::tests::test_multiply ... ok
+test my_math::tests::test_multiply_zero ... ok
+test shadowing::tests::test_shadow ... ok
+test shadowing::tests::test_shadow_string_length ... ok
+
+test result: ok. 24 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+Friday, November 29, 2024 7:36:22 AM
+Friday, November 29, 2024 7:36:22 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Friday, November 29, 2024 7:36:22 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Friday, November 29, 2024 7:36:22 AM
+From github.com:kusl/hellorust20240711
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Already up to date.
+Friday, November 29, 2024 7:36:23 AM
+Pushing to github.com:kusl/hellorust20240711.git
+To github.com:kusl/hellorust20240711.git
+ = [up to date]      master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Everything up-to-date
+Friday, November 29, 2024 7:36:23 AM
+warning: in the working copy of 'docs/icon_cube.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_fork.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_info-circled_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-minus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_search-plus.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_sponsor.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_star_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-dir_active.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_up-down-dir_dark.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/icon_wrench.svg', LF will be replaced by CRLF the next time Git touches it
+Friday, November 29, 2024 7:37:57 AM
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   docs/hellolib_BabysFirstDynamicProgrammingMethods.html
+        modified:   docs/hellolib_BubbleSort.html
+        modified:   docs/hellolib_CurrentWeather.html
+        modified:   docs/hellolib_DesignDynamicArray.html
+        modified:   docs/hellolib_DotnetNineGuid.html
+        modified:   docs/hellolib_Entity.html
+        modified:   docs/hellolib_FindClosestNumberToZero.html
+        modified:   docs/hellolib_Graph.html
+        modified:   docs/hellolib_Knapsack.html
+        modified:   docs/hellolib_KnapsackItem.html
+        modified:   docs/hellolib_ListNode.html
+        modified:   docs/hellolib_MergeSort.html
+        modified:   docs/hellolib_MergeSortedArray.html
+        modified:   docs/hellolib_MergeStringsAlternately.html
+        modified:   docs/hellolib_MinimumCoin.html
+        modified:   docs/hellolib_MyCleaner.html
+        modified:   docs/hellolib_MySearch.html
+        modified:   docs/hellolib_PascalTriangle.html
+        modified:   docs/hellolib_PasswordSettings.html
+        modified:   docs/hellolib_Person.html
+        modified:   docs/hellolib_PersonFactory.html
+        modified:   docs/hellolib_Revocation.html
+        modified:   docs/hellolib_RomanToInteger.html
+        modified:   docs/hellolib_SinglyLinkedList.html
+        modified:   docs/hellolib_SinglyLinkedListAddTwoNumbers.html
+        modified:   docs/hellolib_SinglyLinkedListNode.html
+        modified:   docs/hellolib_TwoSum.html
+        modified:   docs/hellolib_Weather.html
+        modified:   docs/hellolib_WeatherFetchException.html
+        modified:   docs/index.htm
+        modified:   docs/index.html
+        modified:   dotnet.txt
+        modified:   tests/coverage.cobertura.xml
+        modified:   tests/dotnet.txt
+
+Friday, November 29, 2024 7:37:57 AM
+[master 2eee79e] build application
+ 34 files changed, 510 insertions(+), 472 deletions(-)
+Friday, November 29, 2024 7:37:57 AM
+From github.com:patstha/mydotnet
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Current branch master is up to date.
+Friday, November 29, 2024 7:37:58 AM
+Pushing to github.com:patstha/mydotnet.git
+Enumerating objects: 73, done.
+Counting objects: 100% (73/73), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (37/37), done.
+Writing objects: 100% (37/37), 6.33 KiB | 1.58 MiB/s, done.
+Total 37 (delta 36), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (36/36), completed with 36 local objects.
+To github.com:patstha/mydotnet.git
+   da9c023..2eee79e  master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Friday, November 29, 2024 7:37:59 AM
+Friday, November 29, 2024 7:37:59 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.07s.
+Friday, November 29, 2024 7:37:59 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.8 building for production...
+✓ 5 modules transformed.
+docs/index.html                0.27 kB │ gzip: 0.22 kB
+docs/assets/index-D1OKu7AJ.js  8.63 kB │ gzip: 3.19 kB
+✓ built in 117ms
+Done in 1.02s.
+Friday, November 29, 2024 7:38:00 AM
+warning: in the working copy of 'docs/assets/index-D1OKu7AJ.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+Friday, November 29, 2024 7:38:00 AM
+On branch kus-2024-10-30-modules
+nothing to commit, working tree clean
+Friday, November 29, 2024 7:38:01 AM
+On branch kus-2024-10-30-modules
+nothing to commit, working tree clean
+Friday, November 29, 2024 7:38:01 AM
+From github.com:matchthree/matchthree.github.io
+ * branch            master     -> FETCH_HEAD
+Current branch kus-2024-10-30-modules is up to date.
+Friday, November 29, 2024 7:38:01 AM
+Everything up-to-date
+Friday, November 29, 2024 7:38:02 AM
+Friday, November 29, 2024 7:38:02 AM
+Friday, November 29, 2024 7:38:02 AM
+On branch main
+nothing to commit, working tree clean
+Friday, November 29, 2024 7:38:02 AM
+Friday, November 29, 2024 7:38:02 AM
+Friday, November 29, 2024 7:38:06 AM
+Image downloaded successfully to C:\Users\kushal\src\myhtml\fromnepal\public\notes\earth.jpeg
+Friday, November 29, 2024 7:38:06 AM
+Friday, November 29, 2024 7:38:06 AM
+yarn install v1.22.21
+[1/4] Resolving packages...
+success Already up-to-date.
+Done in 0.09s.
+Friday, November 29, 2024 7:38:06 AM
+yarn run v1.22.21
+$ tsc && vite build
+vite v5.4.11 building for production...
+✓ 5 modules transformed.
+docs/index.html                 0.53 kB │ gzip: 0.32 kB
+docs/assets/index-C7fM1CLc.css  4.60 kB │ gzip: 1.63 kB
+docs/assets/index-CG30pmQG.js   2.94 kB │ gzip: 1.31 kB
+✓ built in 4.29s
+Done in 5.84s.
+Friday, November 29, 2024 7:38:12 AM
+Transcript stopped, output file is C:\Users\kushal\src\myhtml\fromnepal\public\notes\output.txt
+warning: in the working copy of 'docs/assets/index-C7fM1CLc.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/assets/index-CG30pmQG.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/hybridcache.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/l1-show.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/modernwinforms.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/myvtt.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/myvtt.en.vtt.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/nyt-podcasts-trump-cabinet-picks.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/15/tldr-global.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/.gitattributes', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/build.gradle.kts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/gradle/wrapper/gradle-wrapper.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/settings.gradle.kts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/main/kotlin/com/github/kusl/november2024a/November2024aApplication.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/main/resources/application.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/november2024a/src/test/kotlin/com/github/kusl/november2024a/November2024aApplicationTests.kt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/2024/11/18/requirements.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/A3B318B569046159E1DD6616D2E646D9434350E6.asc', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/Nationalism, Explained [AXz0kbMKPu0].en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/favicon_io/about.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/3-blue-1-brown-llm-LPZh9BOjkQs.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/abc-news-empty-w4LOqOSi6Tk.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/animation-recapped-J1QiZ7KDXik.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/aoc-Eh7bFt7oUto.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/aoc-WoP9BJiItSI.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/asianometry-mm-wave-5g.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/bravos-ILJ41tmQAQ8.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/coffee-software-DSbuyscXX7I.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/continuous-delivery-_zUkNrUp0Ok.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/continuous-delivery-pair-programming-5TTsIkmtKUg.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/countries-explained-poland-d6LW1iLFXkc.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/dark-brandon-DDp_tb5bs-0.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/diabetes-PsQj2Hg1oFM.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/diabetes-PsQj2Hg1oFM.hi.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/diabetes-Yys5zeoDi2E.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/dotnet-9-new-jit-1bsTnaLchi4.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/dotnet-async-challenges-ef-core-7iuUh0BIAuE.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/dotnet-new-c-sharp-13-japXYFS9YPQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/dr-ben-miles-JCt2MhOzWVE.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/drama-league-37kU-zxhG18.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/enrico-7nnyv4yJGJc.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/escuela-XdI2e8QqzbQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/first-ring-wnfcFflmvLo.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/germany-_ywqDbHiMrs.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/hankschannel-nuclear-16203Tks_0I.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/l1-icydock-3KCaS7EK6Rc.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/l1show-EI5iZ4LNsyQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/last-week-tonight-medicare-for-all-UZtEBXLDssQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/mileage-mike-ring-road-DhZH0KbcwX4.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/millitary-show-M_yjnIFGQ70.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/mit-rto-4ec_yZCWOCY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/msnbc-EmvYGLySOVE.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/ndc-oA7xeRyxMSo.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-Dj05EvWQ8NY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-X_gotjGG4ug.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-daily-bernie-xvYvfOcEFXI.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-l7s8QizovG8.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/nytimes-ukraine-c_z8OoYWjQ0.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/otago-kotlin-multiplatform.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/real-life-lore-africa.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/road-guy-rob-K1TFOK4_07s.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/second-school-india-u2vzX_MgCI8.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/the-economist-kyiv-xn-AnTYs2H8.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/the-millitary-show-china-hellscape.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/tldr-global-Lj0J3ioOnIY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/tldr-news-eu-COEfdZVTFCQ.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/tldr-news-global-2024-11-16-a8NmPDUdzhU.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/tldr-news-global-hong-kong-kRmSBS1yqWo.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/trudeau-immigration-vOB7-dbYuCc.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/ufd-amd-BJjdGxRRh2E.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/versed-h_rsF8eVPqY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/vivienne-yang-FR6hhULZLfw.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/yt/william-spaniel-polling-hhaNiF5aCCY.en.vtt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/notes/ytotago-kotlin-multiplatform.en.vtt', LF will be replaced by CRLF the next time Git touches it
+Friday, November 29, 2024 7:38:36 AM
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   docs/notes/2024/11/28/chrome-canary.png
+        new file:   docs/notes/2024/11/28/links.md
+        modified:   docs/notes/earth.jpeg
+        modified:   docs/notes/output.txt
+        modified:   docs/powershell.txt
+        modified:   public/notes/earth.jpeg
+        modified:   public/notes/output.txt
+
+Friday, November 29, 2024 7:38:36 AM
+[main 7207c3af] build application
+ 7 files changed, 3116 insertions(+), 64 deletions(-)
+ create mode 100644 docs/notes/2024/11/28/chrome-canary.png
+ create mode 100644 docs/notes/2024/11/28/links.md
+Friday, November 29, 2024 7:38:36 AM
+From github.com:fromnepal/fromnepal.github.io
+ * branch              main       -> FETCH_HEAD
+Current branch main is up to date.
+Friday, November 29, 2024 7:38:37 AM
+Enumerating objects: 55, done.
+Counting objects: 100% (53/53), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (42/42), done.
+Writing objects: 100% (42/42), 13.65 MiB | 7.71 MiB/s, done.
+Total 42 (delta 32), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (32/32), completed with 8 local objects.
+To github.com:fromnepal/fromnepal.github.io.git
+   007760ba..7207c3af  main -> main
+Friday, November 29, 2024 7:38:41 AM
+
+PS C:\Users\kushal\src\myhtml\fromnepal> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_videos.ps1  -url "https://v.redd.it/bqzvifm7ms3e1"
+Create new folder for yt-dlp
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          11/29/2024  7:46 AM                yt-dlp
+
+DisplayHint : DateTime
+Date        : 11/29/2024 12:00:00 AM
+Day         : 29
+DayOfWeek   : Friday
+DayOfYear   : 334
+Hour        : 7
+Kind        : Local
+Millisecond : 904
+Microsecond : 224
+Nanosecond  : 800
+Minute      : 46
+Month       : 11
+Second      : 4
+Ticks       : 638684631649042248
+TimeOfDay   : 07:46:04.9042248
+Year        : 2024
+DateTime    : Friday, November 29, 2024 7:46:04 AM
+
+
+DisplayHint : DateTime
+Date        : 11/29/2024 12:00:00 AM
+Day         : 29
+DayOfWeek   : Friday
+DayOfYear   : 334
+Hour        : 7
+Kind        : Local
+Millisecond : 906
+Microsecond : 790
+Nanosecond  : 500
+Minute      : 46
+Month       : 11
+Second      : 4
+Ticks       : 638684631649067905
+TimeOfDay   : 07:46:04.9067905
+Year        : 2024
+DateTime    : Friday, November 29, 2024 7:46:04 AM
+
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241129074604.%(ext)s', 'https://v.redd.it/bqzvifm7ms3e1']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.11.18 from yt-dlp/yt-dlp [7ea278792] (win_exe)
+[debug] Python 3.10.11 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1t  7 Feb 2023)
+[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.40.1, urllib3-2.2.3, websockets-13.1
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1837 extractors
+[generic] Extracting URL: https://v.redd.it/bqzvifm7ms3e1
+[generic] bqzvifm7ms3e1: Downloading webpage
+[redirect] Following redirect to https://www.reddit.com/r/Satisfyingasfuck/comments/1h2gh1s/respect/?rdt=46852
+[Reddit] Extracting URL: https://www.reddit.com/r/Satisfyingasfuck/comments/1h2gh1s/respect/?rdt=46852
+[Reddit] 1h2gh1s: Downloading JSON metadata
+[Reddit] 1h2gh1s: Downloading m3u8 information
+[Reddit] 1h2gh1s: Downloading MPD manifest
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec, channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Reddit
+[info] bqzvifm7ms3e1: Downloading 1 format(s): hls-696+dash-6
+[debug] Invoking hlsnative downloader on "https://v.redd.it/bqzvifm7ms3e1/HLS_480.m3u8"
+[hlsnative] Downloading m3u8 manifest
+[hlsnative] Total fragments: 5
+[download] Destination: C:\Temp\yt-dlp\20241129074604.fhls-696.mp4
+[debug] File locking is not supported. Proceeding without locking
+[download] 100% of    1.45MiB in 00:00:00 at 5.70MiB/s
+[debug] Invoking http downloader on "https://v.redd.it/bqzvifm7ms3e1/DASH_AUDIO_128.mp4"
+[download] Destination: C:\Temp\yt-dlp\20241129074604.fdash-6.m4a
+[download] 100% of  378.94KiB in 00:00:00 at 11.74MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\20241129074604.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241129074604.fhls-696.mp4 -i file:C:\Temp\yt-dlp\20241129074604.fdash-6.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241129074604.temp.mp4
+Deleting original file C:\Temp\yt-dlp\20241129074604.fhls-696.mp4 (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\20241129074604.fdash-6.m4a (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241129074604.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241129074604.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Respect 🙏 ❤️" -metadata "date=20241129" -metadata "purl=https://www.reddit.com/r/Satisfyingasfuck/comments/1h2gh1s/respect/?rdt=46852" -metadata"comment=https://www.reddit.com/r/Satisfyingasfuck/comments/1h2gh1s/respect/?rdt=46852" -metadata "artist=esmedream" -movflags +faststart file:C:\Temp\yt-dlp\20241129074604.temp.mp4
+
+DisplayHint : DateTime
+Date        : 11/29/2024 12:00:00 AM
+Day         : 29
+DayOfWeek   : Friday
+DayOfYear   : 334
+Hour        : 7
+Kind        : Local
+Millisecond : 40
+Microsecond : 108
+Nanosecond  : 800
+Minute      : 46
+Month       : 11
+Second      : 9
+Ticks       : 638684631690401088
+TimeOfDay   : 07:46:09.0401088
+Year        : 2024
+DateTime    : Friday, November 29, 2024 7:46:09 AM
+
+
+DisplayHint : DateTime
+Date        : 11/29/2024 12:00:00 AM
+Day         : 29
+DayOfWeek   : Friday
+DayOfYear   : 334
+Hour        : 7
+Kind        : Local
+Millisecond : 45
+Microsecond : 394
+Nanosecond  : 900
+Minute      : 46
+Month       : 11
+Second      : 9
+Ticks       : 638684631690453949
+TimeOfDay   : 07:46:09.0453949
+Year        : 2024
+DateTime    : Friday, November 29, 2024 7:46:09 AM
+
+
+DisplayHint : DateTime
+Date        : 11/29/2024 12:00:00 AM
+Day         : 29
+DayOfWeek   : Friday
+DayOfYear   : 334
+Hour        : 7
+Kind        : Local
+Millisecond : 46
+Microsecond : 833
+Nanosecond  : 900
+Minute      : 46
+Month       : 11
+Second      : 9
+Ticks       : 638684631690468339
+TimeOfDay   : 07:46:09.0468339
+Year        : 2024
+DateTime    : Friday, November 29, 2024 7:46:09 AM
+
+
+    Directory: C:\Temp\yt-dlp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          11/29/2024  2:28 AM        1812368 20241129074604.mp4
+-a---          11/29/2024  2:28 AM        1812368 20241129074604.mp4
+Cleaned video name: 20241129074604mp4
+Cleaned video path: C:\Temp\yt-dlp\20241129074604mp4
+Running ffmpeg
+ffmpeg -i "C:\Temp\yt-dlp\20241129074604mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241129074604mp4_reencoded.mp4"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241129074604mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Respect 🙏 ❤️
+    artist          : esmedream
+    date            : 20241129
+    encoder         : Lavf61.7.100
+    comment         : https://www.reddit.com/r/Satisfyingasfuck/comments/1h2gh1s/respect/?rdt=46852
+  Duration: 00:00:23.74, start: 0.000000, bitrate: 610 kb/s
+  Stream #0:0[0x1](und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 512x480, 473 kb/s, 30 fps, 30 tbr, 90k tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000001d70fdd0f00] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000001d70fdd0f00] profile High, level 3.0, 4:2:0, 8-bit
+[libx264 @ 000001d70fdd0f00] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=15 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\20241129074604mp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Respect 🙏 ❤️
+    artist          : esmedream
+    date            : 20241129
+    comment         : https://www.reddit.com/r/Satisfyingasfuck/comments/1h2gh1s/respect/?rdt=46852
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 512x480, q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 aac
+[mp4 @ 000001d70fd97c40] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000001d70fd78400] video:1033KiB audio:373KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 1.922095%
+frame=  711 fps=0.0 q=-1.0 Lsize=    1433KiB time=00:00:23.63 bitrate= 496.8kbits/s speed=32.6x
+[libx264 @ 000001d70fdd0f00] frame I:6     Avg QP:18.70  size: 14417
+[libx264 @ 000001d70fdd0f00] frame P:268   Avg QP:22.12  size:  2950
+[libx264 @ 000001d70fdd0f00] frame B:437   Avg QP:27.69  size:   412
+[libx264 @ 000001d70fdd0f00] consecutive B-frames:  1.8% 47.5%  3.4% 47.3%
+[libx264 @ 000001d70fdd0f00] mb I  I16..4: 15.4% 35.7% 48.9%
+[libx264 @ 000001d70fdd0f00] mb P  I16..4:  1.0%  3.5%  1.0%  P16..4: 34.5% 15.1%  6.8%  0.0%  0.0%    skip:38.0%
+[libx264 @ 000001d70fdd0f00] mb B  I16..4:  0.1%  0.2%  0.0%  B16..8: 20.6%  1.6%  0.3%  direct: 0.7%  skip:76.5%  L0:35.1% L1:60.9% BI: 4.0%
+[libx264 @ 000001d70fdd0f00] 8x8 transform intra:55.2% inter:72.3%
+[libx264 @ 000001d70fdd0f00] coded y,uvDC,uvAC intra: 59.3% 54.5% 12.3% inter: 7.6% 7.9% 0.1%
+[libx264 @ 000001d70fdd0f00] i16 v,h,dc,p: 25% 29% 12% 33%
+[libx264 @ 000001d70fdd0f00] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 20% 16%  5%  7%  8%  7%  7%  6%
+[libx264 @ 000001d70fdd0f00] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 21% 10%  6%  8%  9%  7%  7%  5%
+[libx264 @ 000001d70fdd0f00] i8c dc,h,v,p: 53% 18% 20%  8%
+[libx264 @ 000001d70fdd0f00] Weighted P-Frames: Y:5.2% UV:5.2%
+[libx264 @ 000001d70fdd0f00] ref P L0: 71.0% 15.9% 10.2%  2.9%  0.0%
+[libx264 @ 000001d70fdd0f00] ref B L0: 92.7%  6.2%  1.1%
+[libx264 @ 000001d70fdd0f00] ref B L1: 98.9%  1.1%
+[libx264 @ 000001d70fdd0f00] kb/s:356.88
+[aac @ 000001d7103beb40] Qavg: 531.569
+
+DisplayHint : DateTime
+Date        : 11/29/2024 12:00:00 AM
+Day         : 29
+DayOfWeek   : Friday
+DayOfYear   : 334
+Hour        : 7
+Kind        : Local
+Millisecond : 849
+Microsecond : 403
+Nanosecond  : 400
+Minute      : 46
+Month       : 11
+Second      : 9
+Ticks       : 638684631698494034
+TimeOfDay   : 07:46:09.8494034
+Year        : 2024
+DateTime    : Friday, November 29, 2024 7:46:09 AM
+
+
+DisplayHint : DateTime
+Date        : 11/29/2024 12:00:00 AM
+Day         : 29
+DayOfWeek   : Friday
+DayOfYear   : 334
+Hour        : 7
+Kind        : Local
+Millisecond : 407
+Microsecond : 379
+Nanosecond  : 900
+Minute      : 46
+Month       : 11
+Second      : 14
+Ticks       : 638684631744073799
+TimeOfDay   : 07:46:14.4073799
+Year        : 2024
+DateTime    : Friday, November 29, 2024 7:46:14 AM
+
+
+DisplayHint : DateTime
+Date        : 11/29/2024 12:00:00 AM
+Day         : 29
+DayOfWeek   : Friday
+DayOfYear   : 334
+Hour        : 7
+Kind        : Local
+Millisecond : 410
+Microsecond : 637
+Nanosecond  : 0
+Minute      : 46
+Month       : 11
+Second      : 14
+Ticks       : 638684631744106370
+TimeOfDay   : 07:46:14.4106370
+Year        : 2024
+DateTime    : Friday, November 29, 2024 7:46:14 AM
+
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes> cd "C:\Users\kushal\src\myhtml\fromnepal\public\notes\"; .\download_videos.ps1  -url "https://www.instagram.com/reel/C89q7Uqs6sL"
+Create new folder for yt-dlp
+
+    Directory: C:\Temp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          11/29/2024  7:46 AM                yt-dlp
+
+DisplayHint : DateTime
+Date        : 11/29/2024 12:00:00 AM
+Day         : 29
+DayOfWeek   : Friday
+DayOfYear   : 334
+Hour        : 7
+Kind        : Local
+Millisecond : 799
+Microsecond : 367
+Nanosecond  : 900
+Minute      : 46
+Month       : 11
+Second      : 29
+Ticks       : 638684631897993679
+TimeOfDay   : 07:46:29.7993679
+Year        : 2024
+DateTime    : Friday, November 29, 2024 7:46:29 AM
+
+
+DisplayHint : DateTime
+Date        : 11/29/2024 12:00:00 AM
+Day         : 29
+DayOfWeek   : Friday
+DayOfYear   : 334
+Hour        : 7
+Kind        : Local
+Millisecond : 801
+Microsecond : 250
+Nanosecond  : 400
+Minute      : 46
+Month       : 11
+Second      : 29
+Ticks       : 638684631898012504
+TimeOfDay   : 07:46:29.8012504
+Year        : 2024
+DateTime    : Friday, November 29, 2024 7:46:29 AM
+
+[debug] Command-line config: ['--verbose', '--restrict-filenames', '--add-metadata', '-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4', '--sponsorblock-mark', 'all', '--sponsorblock-remove', 'all', '--merge-output-format', 'mp4', '-o', 'C:\\Temp\\yt-dlp\\20241129074629.%(ext)s', 'https://www.instagram.com/reel/C89q7Uqs6sL']
+[debug] Portable config "C:\Users\kushal\scoop\apps\yt-dlp\current\yt-dlp.conf": []
+[debug] Encodings: locale cp1252, fs utf-8, pref cp1252, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version stable@2024.11.18 from yt-dlp/yt-dlp [7ea278792] (win_exe)
+[debug] Python 3.10.11 (CPython AMD64 64bit) - Windows-10-10.0.22631-SP0 (OpenSSL 1.1.1t  7 Feb 2023)
+[debug] exe versions: ffmpeg 7.1-full_build-www.gyan.dev (setts), ffprobe 7.1-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.21.0, brotli-1.1.0, certifi-2024.08.30, curl_cffi-0.5.10, mutagen-1.47.0, requests-2.32.3, sqlite3-3.40.1, urllib3-2.2.3, websockets-13.1
+[debug] Proxy map: {}
+[debug] Request Handlers: urllib, requests, websockets, curl_cffi
+[debug] Loaded 1837 extractors
+[Instagram] Extracting URL: https://www.instagram.com/reel/C89q7Uqs6sL
+[Instagram] C89q7Uqs6sL: Setting up session
+[Instagram] C89q7Uqs6sL: Downloading JSON metadata
+[debug] Formats sorted by: hasvid, ie_pref, lang, quality, res, fps, hdr:12(7), vcodec, channels, acodec, size, br, asr, proto, vext, aext, hasaud, source, id
+[SponsorBlock] SponsorBlock is not supported for Instagram
+[info] C89q7Uqs6sL: Downloading 1 format(s): dash-1925058214614431vd+dash-1223735805453203ad
+[debug] Invoking http downloader on "https://scontent-iad3-2.cdninstagram.com/o1/v/t16/f1/m86/CD4EE8F2C23C564F8E0A8B79A8A724B4_video_dashinit.mp4?_nc_cat=111&_nc_sid=9ca052&_nc_ht=scontent-iad3-2.cdninstagram.com&_nc_ohc=31o6PX-KzFkQ7kNvgG4RpVo&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfYmFzZWxpbmVfMV92MSIsInZpZGVvX2lkIjpudWxsLCJjbGllbnRfbmFtZSI6ImlnIiwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=9-4&oh=00_AYD1ozxEYBUW8reQboKDX6nMCNXHBWwCGVgRUMg5KLSpcQ&oe=674BAEBB"
+[debug] File locking is not supported. Proceeding without locking
+[download] Destination: C:\Temp\yt-dlp\20241129074629.fdash-1925058214614431vd.mp4
+[download] 100% of    8.09MiB in 00:00:00 at 10.51MiB/s
+[debug] Invoking http downloader on "https://scontent-iad3-1.cdninstagram.com/o1/v/t16/f2/m69/AQO8afrd-U1dZkD3rQHeiV8VfKKUUnoe3SnYdis-tPt6m9U5C48MYqePirY_zCQsLtQZ8uPo8GmjksXGJhpUiDB3.mp4?strext=1&_nc_cat=101&_nc_sid=9ca052&_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_ohc=aZ-D-2fYD9IQ7kNvgH_0Oz7&efg=eyJ2ZW5jb2RlX3RhZyI6ImlnLXhwdmRzLmNsaXBzLmMyLUMzLmRhc2hfbG5faGVhYWNfdmJyM19hdWRpbyIsInZpZGVvX2lkIjpudWxsLCJjbGllbnRfbmFtZSI6ImlnIiwib2lsX3VybGdlbl9hcHBfaWQiOjkzNjYxOTc0MzM5MjQ1OSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=9-4&oh=00_AYADx_s7k6KIrmFyvVbRx58myBBxEyF1ZihfumqDD7BgSg&oe=674F9186"
+[download] Destination: C:\Temp\yt-dlp\20241129074629.fdash-1223735805453203ad.m4a
+[download] 100% of  448.33KiB in 00:00:00 at 2.38MiB/s
+[Merger] Merging formats into "C:\Temp\yt-dlp\20241129074629.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241129074629.fdash-1925058214614431vd.mp4 -i file:C:\Temp\yt-dlp\20241129074629.fdash-1223735805453203ad.m4a -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart file:C:\Temp\yt-dlp\20241129074629.temp.mp4
+Deleting original file C:\Temp\yt-dlp\20241129074629.fdash-1223735805453203ad.m4a (pass -k to keep)
+Deleting original file C:\Temp\yt-dlp\20241129074629.fdash-1925058214614431vd.mp4 (pass -k to keep)
+[ModifyChapters] SponsorBlock information is unavailable
+[Metadata] Adding metadata to "C:\Temp\yt-dlp\20241129074629.mp4"
+[debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i file:C:\Temp\yt-dlp\20241129074629.mp4 -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata "title=Video by acornunion" -metadata "date=20240703" -metadata "description=We asked some random people in the street to guess how rich the richest person in Britain is. This is what they said.
+
+Don’t let the next government tell you that there’s no money left. Tax the rich." -metadata "synopsis=We asked some random people in the street to guess how rich the richest person in Britain is. This is what they said.
+
+Don’t let the next government tell you that there’s no money left. Tax the rich." -metadata "purl=https://www.instagram.com/reel/C89q7Uqs6sL" -metadata "comment=https://www.instagram.com/reel/C89q7Uqs6sL" -metadata "artist=ACORN the union" -movflags +faststart file:C:\Temp\yt-dlp\20241129074629.temp.mp4
+
+DisplayHint : DateTime
+Date        : 11/29/2024 12:00:00 AM
+Day         : 29
+DayOfWeek   : Friday
+DayOfYear   : 334
+Hour        : 7
+Kind        : Local
+Millisecond : 847
+Microsecond : 483
+Nanosecond  : 500
+Minute      : 46
+Month       : 11
+Second      : 32
+Ticks       : 638684631928474835
+TimeOfDay   : 07:46:32.8474835
+Year        : 2024
+DateTime    : Friday, November 29, 2024 7:46:32 AM
+
+
+DisplayHint : DateTime
+Date        : 11/29/2024 12:00:00 AM
+Day         : 29
+DayOfWeek   : Friday
+DayOfYear   : 334
+Hour        : 7
+Kind        : Local
+Millisecond : 850
+Microsecond : 8
+Nanosecond  : 600
+Minute      : 46
+Month       : 11
+Second      : 32
+Ticks       : 638684631928500086
+TimeOfDay   : 07:46:32.8500086
+Year        : 2024
+DateTime    : Friday, November 29, 2024 7:46:32 AM
+
+
+DisplayHint : DateTime
+Date        : 11/29/2024 12:00:00 AM
+Day         : 29
+DayOfWeek   : Friday
+DayOfYear   : 334
+Hour        : 7
+Kind        : Local
+Millisecond : 851
+Microsecond : 376
+Nanosecond  : 100
+Minute      : 46
+Month       : 11
+Second      : 32
+Ticks       : 638684631928513761
+TimeOfDay   : 07:46:32.8513761
+Year        : 2024
+DateTime    : Friday, November 29, 2024 7:46:32 AM
+
+
+    Directory: C:\Temp\yt-dlp
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          11/29/2024  7:46 AM        8958866 20241129074629.mp4
+-a---          11/29/2024  7:46 AM        8958866 20241129074629.mp4
+Cleaned video name: 20241129074629mp4
+Cleaned video path: C:\Temp\yt-dlp\20241129074629mp4
+Running ffmpeg
+ffmpeg -i "C:\Temp\yt-dlp\20241129074629mp4" -c:v libx264 -c:a aac -strict experimental -movflags +faststart "C:\Temp\yt-dlp\20241129074629mp4_reencoded.mp4"
+ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers
+  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)
+  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint
+  libavutil      59. 39.100 / 59. 39.100
+  libavcodec     61. 19.100 / 61. 19.100
+  libavformat    61.  7.100 / 61.  7.100
+  libavdevice    61.  3.100 / 61.  3.100
+  libavfilter    10.  4.100 / 10.  4.100
+  libswscale      8.  3.100 /  8.  3.100
+  libswresample   5.  3.100 /  5.  3.100
+  libpostproc    58.  3.100 / 58.  3.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\Temp\yt-dlp\20241129074629mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Video by acornunion
+    artist          : ACORN the union
+    date            : 20240703
+    encoder         : Lavf61.7.100
+    comment         : https://www.instagram.com/reel/C89q7Uqs6sL
+    description     : We asked some random people in the street to guess how rich the richest person in Britain is. This is what they said.
+                    :
+                    : Don’t let the next government tell you that there’s no money left. Tax the rich.
+    synopsis        : We asked some random people in the street to guess how rich the richest person in Britain is. This is what they said.
+                    :
+                    : Don’t let the next government tell you that there’s no money left. Tax the rich.
+  Duration: 00:00:58.59, start: 0.000000, bitrate: 1223 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 720x1280, 1156 kb/s, 24 fps, 24 tbr, 12288 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : AVC Coding
+  Stream #0:1[0x2](und): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 61 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> aac (native))
+Press [q] to stop, [?] for help
+[libx264 @ 000002320e3c9bc0] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 000002320e3c9bc0] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 000002320e3c9bc0] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=24 lookahead_threads=4 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=24 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\Temp\yt-dlp\20241129074629mp4_reencoded.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : Video by acornunion
+    artist          : ACORN the union
+    date            : 20240703
+    synopsis        : We asked some random people in the street to guess how rich the richest person in Britain is. This is what they said.
+                    :
+                    : Don’t let the next government tell you that there’s no money left. Tax the rich.
+    comment         : https://www.instagram.com/reel/C89q7Uqs6sL
+    description     : We asked some random people in the street to guess how rich the richest person in Britain is. This is what they said.
+                    :
+                    : Don’t let the next government tell you that there’s no money left. Tax the rich.
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 720x1280, q=2-31, 24 fps, 12288 tbn (default)
+      Metadata:
+        handler_name    : VideoHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 128 kb/s (default)
+      Metadata:
+        handler_name    : SoundHandler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 aac
+[mp4 @ 000002320d9c3b40] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 000002320e09ee00] video:9390KiB audio:915KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.447534%
+frame= 1406 fps=349 q=-1.0 Lsize=   10351KiB time=00:00:58.50 bitrate=1449.5kbits/s speed=14.5x
+[libx264 @ 000002320e3c9bc0] frame I:6     Avg QP:17.12  size: 86123
+[libx264 @ 000002320e3c9bc0] frame P:355   Avg QP:19.62  size: 19180
+[libx264 @ 000002320e3c9bc0] frame B:1045  Avg QP:22.99  size:  2191
+[libx264 @ 000002320e3c9bc0] consecutive B-frames:  0.5%  1.0%  0.6% 97.9%
+[libx264 @ 000002320e3c9bc0] mb I  I16..4: 18.7% 46.0% 35.3%
+[libx264 @ 000002320e3c9bc0] mb P  I16..4:  1.6%  3.6%  1.0%  P16..4: 30.4% 16.5%  9.5%  0.0%  0.0%    skip:37.4%
+[libx264 @ 000002320e3c9bc0] mb B  I16..4:  0.0%  0.1%  0.0%  B16..8: 27.7%  1.6%  0.3%  direct: 0.7%  skip:69.6%  L0:43.8% L1:49.4% BI: 6.8%
+[libx264 @ 000002320e3c9bc0] 8x8 transform intra:55.5% inter:69.0%
+[libx264 @ 000002320e3c9bc0] coded y,uvDC,uvAC intra: 48.3% 40.3% 12.5% inter: 8.0% 4.1% 0.1%
+[libx264 @ 000002320e3c9bc0] i16 v,h,dc,p: 20% 41% 15% 24%
+[libx264 @ 000002320e3c9bc0] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 14% 25% 34%  5%  4%  3%  5%  4%  8%
+[libx264 @ 000002320e3c9bc0] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26% 27% 13%  5%  5%  4%  7%  5%  7%
+[libx264 @ 000002320e3c9bc0] i8c dc,h,v,p: 54% 25% 15%  6%
+[libx264 @ 000002320e3c9bc0] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 000002320e3c9bc0] ref P L0: 70.7% 14.2% 12.0%  3.1%
+[libx264 @ 000002320e3c9bc0] ref B L0: 90.3%  8.6%  1.0%
+[libx264 @ 000002320e3c9bc0] ref B L1: 96.6%  3.4%
+[libx264 @ 000002320e3c9bc0] kb/s:1313.00
+[aac @ 000002320da45300] Qavg: 818.039
+
+DisplayHint : DateTime
+Date        : 11/29/2024 12:00:00 AM
+Day         : 29
+DayOfWeek   : Friday
+DayOfYear   : 334
+Hour        : 7
+Kind        : Local
+Millisecond : 974
+Microsecond : 23
+Nanosecond  : 600
+Minute      : 46
+Month       : 11
+Second      : 36
+Ticks       : 638684631969740236
+TimeOfDay   : 07:46:36.9740236
+Year        : 2024
+DateTime    : Friday, November 29, 2024 7:46:36 AM
+
+
+DisplayHint : DateTime
+Date        : 11/29/2024 12:00:00 AM
+Day         : 29
+DayOfWeek   : Friday
+DayOfYear   : 334
+Hour        : 7
+Kind        : Local
+Millisecond : 457
+Microsecond : 76
+Nanosecond  : 900
+Minute      : 46
+Month       : 11
+Second      : 37
+Ticks       : 638684631974570769
+TimeOfDay   : 07:46:37.4570769
+Year        : 2024
+DateTime    : Friday, November 29, 2024 7:46:37 AM
+
+
+DisplayHint : DateTime
+Date        : 11/29/2024 12:00:00 AM
+Day         : 29
+DayOfWeek   : Friday
+DayOfYear   : 334
+Hour        : 7
+Kind        : Local
+Millisecond : 460
+Microsecond : 95
+Nanosecond  : 100
+Minute      : 46
+Month       : 11
+Second      : 37
+Ticks       : 638684631974600951
+TimeOfDay   : 07:46:37.4600951
+Year        : 2024
+DateTime    : Friday, November 29, 2024 7:46:37 AM
+
+
+PS C:\Users\kushal\src\myhtml\fromnepal\public\notes>
