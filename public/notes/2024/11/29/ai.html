@@ -4,8 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello, AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: none;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #submitBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #resetBtn {
+            background-color: #f44336;
+            color: white;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            border-radius: 4px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            button:last-child {
+                margin-right: 0;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <textarea id="promptInput" placeholder="Enter your prompt here"></textarea>
+        <button id="submitBtn">Submit</button>
+        <button id="resetBtn">Reset</button>
+        <div id="result"></div>
+    </div>
     <script type="module">
         async function checkAi() {
             if (window === undefined || window === null) {
@@ -38,15 +106,6 @@
         }
 
         if (myAi) {
-            document.body.innerHTML += `
-                <div>
-                    <textarea id="promptInput" placeholder="Enter your prompt here"></textarea>
-                    <button id="submitBtn">Submit</button>
-                    <button id="resetBtn">Reset</button>
-                </div>
-                <div id="result"></div>
-            `;
-
             document.getElementById('submitBtn').addEventListener('click', async () => {
                 const prompt = document.getElementById('promptInput').value;
                 const { available, defaultTemperature, defaultTopK, maxTopK } = await ai.languageModel.capabilities();
